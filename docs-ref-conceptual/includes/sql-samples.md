@@ -1,0 +1,1 @@
+- [Database SQL di Azure: usare Node.js per connettersi ai dati ed eseguire query](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs)
