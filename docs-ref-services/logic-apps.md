@@ -1,25 +1,23 @@
 ---
 title: Moduli di App per la logica di Azure per Node.js
 description: Informazioni di riferimento sui moduli di App per la logica di Azure per Node.js
-keywords: Azure, SDK, API, App per la logica, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Logic Apps
-ms.openlocfilehash: 70380dbf1fd199ba4909975b05ade72efaa4e0ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 37e485bea316ebd7fb4a064e1919da5501d96eac
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-logic-apps-modules-for-nodejs"></a>Moduli di App per la logica di Azure per Node.js
 
-## <a name="overview"></a>Panoramica
 Le app per la logica consentono di semplificare e implementare flussi di lavoro e integrazioni scalabili nel cloud. Offrono una finestra di progettazione visiva per modellare e automatizzare il processo come una serie di passaggi definita flusso di lavoro. Nel cloud e in locale sono disponibili numerosi connettori per una rapida integrazione in servizi e protocolli. Un'app per la logica viene avviata con un trigger (corrispondente ad esempio all'aggiunta di un account a Dynamics CRM) e dopo l'attivazione può avviare molte combinazioni di azioni, conversioni e logica condizionale.
 
 Ecco alcuni vantaggi dell'uso delle app per la logica:

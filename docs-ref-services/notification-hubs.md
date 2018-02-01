@@ -1,25 +1,22 @@
 ---
 title: Moduli di Hub di notifica di Azure per Node.js
 description: Informazioni di riferimento sui moduli di Hub di notifica di Azure per Node.js
-keywords: Azure, SDK, API, Hub di notifica, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Notification Hubs
-ms.openlocfilehash: 0141760cb93c77faed4a04893fe1376e4e75c361
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: c353bdc0fff7784881b5cd4f1d3b4dda5268f1ea
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-notification-hubs-modules-for-nodejs"></a>Moduli di Hub di notifica di Azure per Node.js
-
-## <a name="overview"></a>Panoramica
 
 Hub di notifica di Azure offre un motore di push di facile uso, multipiattaforma e con scalabilità orizzontale. Con una sola chiamata all'API multipiattaforma, è possibile inviare facilmente notifiche push mirate e personalizzate a qualsiasi piattaforma mobile da qualsiasi cloud o back-end locale.
 

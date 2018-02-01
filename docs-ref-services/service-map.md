@@ -1,25 +1,22 @@
 ---
 title: Moduli di Mapping dei servizi di Azure per Node.js
 description: Informazioni di riferimento sui moduli di Mapping dei servizi di Azure per Node.js
-keywords: Azure, SDK, API, Mapping dei servizi, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Map
-ms.openlocfilehash: 330cbceb07ba8bea65c1059a1edb3cd9c69653bc
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 3f858e52f7a97ff77959825a1be993ef52f96e57
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-service-map-modules-for-nodejs"></a>Moduli di Mapping dei servizi di Azure per Node.js
-
-## <a name="overview"></a>Panoramica
 
 Mapping dei servizi individua automaticamente i componenti delle applicazioni nei sistemi Windows e Linux ed esegue la mappatura della comunicazione fra i servizi. Il Mapping dei servizi mostra le connessioni fra i server, i processi e le porte di tutte le architetture connesse via TCP senza il bisogno di alcuna configurazione a parte l'installazione di un agente.
 

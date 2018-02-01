@@ -1,25 +1,22 @@
 ---
 title: "Moduli di Utilità di pianificazione di Azure per Node.js"
 description: "Informazioni di riferimento sui moduli di Utilità di pianificazione di Azure per Node.js"
-keywords: "Azure, SDK, API, utilità di pianificazione, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Scheduler
-ms.openlocfilehash: 3070612721dc434b8c3d7c3200f0666755fd4ce8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 539337abd2fff3830cb022a49aff374e877a08ee
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-scheduler-modules-for-nodejs"></a>Moduli di Utilità di pianificazione di Azure per Node.js
-
-## <a name="overview"></a>Panoramica
 
 Utilità di pianificazione di Azure crea, gestisce e richiama il lavoro pianificato tramite HTTP, HTTPS, una coda di archiviazione o il [bus di servizio di Azure](/azure/service-bus-messaging/service-bus-messaging-overview).
 

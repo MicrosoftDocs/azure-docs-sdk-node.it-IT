@@ -1,25 +1,22 @@
 ---
 title: Moduli di Registro contenitori di Azure per Node.js
 description: Informazioni di riferimento sui moduli di Registro contenitori di Azure per Node.js
-keywords: Azure, SDK, API, registro contenitori, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Container Registry
-ms.openlocfilehash: 6ded68c19971a8fe580f440862d0fe05a1def6a2
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: dda0e9bbfaa8a3e060f3b8f820d5bab315662629
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-container-registry-modules-for-nodejs"></a>Moduli di Registro contenitori di Azure per Node.js
-
-## <a name="overview"></a>Panoramica
 
 Registro contenitori di Azure è un servizio gestito di registri Docker basato sull'applicazione open source Docker Registry 2.0. Creare e gestire registri contenitori di Azure per archiviare e gestire immagini contenitore Docker private. È possibile usare i registri contenitori in Azure con la pipeline di sviluppo e distribuzione di contenitori esistente e attingere alle competenze della community Docker.
 

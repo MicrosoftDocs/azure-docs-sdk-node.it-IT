@@ -1,25 +1,22 @@
 ---
 title: Moduli di Servizi multimediali di Azure per Node.js
 description: Informazioni di riferimento sui moduli di Servizi multimediali di Azure per Node.js
-keywords: Azure, SDK, API, Servizi multimediali, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Media Services
-ms.openlocfilehash: 9b304ceb0c2d0580534ae1bee5a44d01fd4d8b33
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 77a6716d4ef0d566690325a86e85d66c5ac234d6
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-media-services-modules-for-nodejs"></a>Moduli di Servizi multimediali di Azure per Node.js
-
-## <a name="overview"></a>Panoramica
 
 Servizi multimediali di Azure costituisce una piattaforma estensibile basata sul cloud che consente agli sviluppatori di creare applicazioni di distribuzione e gestione di contenuti multimediali altamente scalabili. Servizi multimediali si basa su API REST che consentono di caricare, archiviare e codificare contenuti video o audio in modo sicuro, nonché creare pacchetti di tali contenuti per la distribuzione in streaming live e on demand a vari client (ad esempio, TV, PC e dispositivi mobili).
 

@@ -1,25 +1,22 @@
 ---
 title: Moduli SQL di Azure per Node.js
 description: Informazioni di riferimento sui moduli SQL di Azure per Node.js
-keywords: Azure, Node, SDK, API, nodejs, javascript, sql
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: sql-database
-ms.openlocfilehash: 65ee90b4e6ca248b9d19a3685163211ca547cad4
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 8ebcfbcbf39def1774a702c9f18a4e3f5ab86931
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-sql-modules-for-nodejs"></a>Moduli SQL di Azure per Node.js
-
-## <a name="overview"></a>Panoramica
 
 Usare i dati archiviati nel [database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) da Node.js.
 La libreria di gestione fornisce un'interfaccia che facilita la gestione dei database SQL di Microsoft Azure.

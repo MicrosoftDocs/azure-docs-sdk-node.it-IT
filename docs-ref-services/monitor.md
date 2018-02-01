@@ -1,25 +1,23 @@
 ---
 title: Moduli di Monitoraggio di Azure per Node.js
 description: Informazioni di riferimento sui moduli di Monitoraggio di Azure per Node.js
-keywords: Azure, SDK, API, Monitoraggio, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Monitor
-ms.openlocfilehash: 8d27d837bddaa5258dde47b769cf601f6f5a861f
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 37caeb2d7b6d757cbe8bb14b6d4909a7c67a37db
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-monitor-modules-for-nodejs"></a>Moduli di Monitoraggio di Azure per Node.js
 
-## <a name="overview"></a>Panoramica
 Le applicazioni cloud sono complesse e hanno molte parti mobili. Il monitoraggio offre la possibilità di garantire il funzionamento e l'integrità dell'applicazione. Consente anche di prevenire i problemi potenziali o di risolvere quelli precedenti. Inoltre, è possibile usare i dati di monitoraggio per ottenere informazioni approfondite sull'applicazione, utili per migliorarne le prestazioni o la manutenibilità oppure per automatizzare azioni che altrimenti richiederebbero un intervento manuale.
 
 ## <a name="management-package"></a>Pacchetto di gestione

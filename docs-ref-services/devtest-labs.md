@@ -1,25 +1,22 @@
 ---
 title: Moduli di Azure DevTest Labs per Node.js
 description: Informazioni di riferimento sui moduli di Azure DevTest Labs per Node.js
-keywords: Azure, SDK, API, DevTest Labs, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: DevTest Labs
-ms.openlocfilehash: 933ce8971e02c2898d296112282169b8c7dca1c7
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 7754280741c09d47e138518d33628c667944c651
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-devtest-labs-modules-for-nodejs"></a>Moduli di Azure DevTest Labs per Node.js
-
-## <a name="overview"></a>Panoramica
 
 Lab di sviluppo e test di Azure è un servizio che consente agli sviluppatori e ai tester di creare rapidamente ambienti in Azure riducendo al minimo gli sprechi e i costi di controllo. È possibile provare la versione più recente dell'applicazione eseguendo rapidamente il provisioning di ambienti Windows e Linux tramite modelli ed elementi riutilizzabili. Consente di integrare facilmente la pipeline di distribuzione in lab di sviluppo e test per effettuare il provisioning di ambienti su richiesta. Aumentare i propri test di carico tramite il provisioning di più agenti di test e creare ambienti di pre-provisioning per training e demo.
 

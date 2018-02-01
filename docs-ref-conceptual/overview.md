@@ -1,20 +1,19 @@
 ---
 title: Moduli di Azure per Node.js
 description: Panoramica dei moduli di gestione e di servizi di Azure per Node.js
-keywords: Azure, Node.js, SDK, API, gestione, client, servizi
-author: TomArcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 06/17/2017
 ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 56dc4f4f36d4e0e9a2d40b38ff8f0b1f9690818c
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 6041303dcb8734cc17052756d291efa6b4c2269e
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-modules-for-nodejs"></a>Moduli di Azure per Node.js
 
@@ -106,4 +105,4 @@ Gli esempi seguenti sono relativi ad attività comuni con i moduli di gestione d
 - [App Web](node-samples-services-web-and-mobile.md)
 - [Database SQL](node-samples-services-database.md)
    
-Le [informazioni di riferimento](https://docs.microsoft.com/nodejs/api) sono disponibili per tutti i moduli nei moduli di gestione e di servizi. Le nuove funzionalità, le modifiche di rilievo e le istruzioni per la migrazione dalle versioni precedenti sono disponibili nelle [note sulla versione](https://github.com/Azure/azure-sdk-for-node/releases).
+Le [informazioni di riferimento](https://docs.microsoft.com/javascript/api) sono disponibili per tutti i moduli nei moduli di gestione e di servizi. Le nuove funzionalità, le modifiche di rilievo e le istruzioni per la migrazione dalle versioni precedenti sono disponibili nelle [note sulla versione](https://github.com/Azure/azure-sdk-for-node/releases).
