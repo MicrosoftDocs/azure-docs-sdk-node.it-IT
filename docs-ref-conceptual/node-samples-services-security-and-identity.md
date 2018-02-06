@@ -1,20 +1,20 @@
 ---
-title: "Codice di esempio per usare la sicurezza e la gestione delle identità di Azure con Node.js"
-description: "Codice di esempio che illustra l'uso della sicurezza e la gestione delle identità di Azure con Node.js."
-author: tomarcher
-manager: douge
+title: "Esempi di codice per la sicurezza e la gestione delle identità di Azure con Node.js"
+description: "Codice di esempio che illustra come usare la sicurezza e la gestione delle identità di Azure con Node.js."
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 9bd49a6daaee0abdac84a00c89ba326abcbe253f
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 860539cf309acf4c4dd09f0924700bf93193195f
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-security-and-identity-with-nodejs"></a>Codice di esempio per usare la sicurezza e la gestione delle identità di Azure con Node.js
+# <a name="azure-security-and-identity-with-nodejs-code-samples"></a>Esempi di codice per la sicurezza e la gestione delle identità di Azure con Node.js
 
 Il codice di esempio seguente illustra l'uso della sicurezza e la gestione delle identità di Azure con Node.js.
 

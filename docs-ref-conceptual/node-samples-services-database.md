@@ -1,22 +1,22 @@
 ---
-title: Codice di esempio per l'uso di database di Azure con Node.js
-description: Codice di esempio che illustra l'uso di database di Azure con Node.js.
-author: tomarcher
-manager: douge
+title: Esempi di codice per database di Azure con Node.js
+description: Codice di esempio che illustra come usare database di Azure con Node.js.
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 8292a8fd0353ae84ac2b1622e5c622e60be04c9b
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: f721bb1c4d8a84009b850c52cb26eeb0a16abca9
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-databases-with-nodejs"></a>Codice di esempio per l'uso di database di Azure con Node.js
+# <a name="azure-databases-with-nodejs-code-samples"></a>Esempi di codice per database di Azure con Node.js
 
-Il codice di esempio seguente illustra l'uso di database di Azure con Node.js.
+Gli esempi di codice seguenti illustrano come usare database di Azure con Node.js.
 
 Per ottenere il codice per altre attività, esplorare l'elenco completo di [esempi di Azure per Node.js](https://azure.microsoft.com/resources/samples/?term=nodejs).
 

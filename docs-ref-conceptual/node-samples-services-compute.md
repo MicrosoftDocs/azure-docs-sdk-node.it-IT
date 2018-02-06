@@ -1,20 +1,20 @@
 ---
-title: "Codice di esempio per l'aggiunta della funzionalità Calcolo di Azure con Node.js"
-description: "Codice di esempio che illustra l'aggiunta della funzionalità Calcolo di Azure con Node.js."
-author: tomarcher
-manager: douge
+title: "Esempi di codice per la funzionalità di calcolo di Azure per Node.js"
+description: "Codice di esempio che illustra come aggiungere la funzionalità di calcolo di Azure con Node.js."
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 454c32463422eaaf06d83590f3aba149942773db
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 5ad0935349583a2db1d844bd5a1e0e58e3b3e039
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-adding-azure-compute-functionality-with-nodejs"></a>Codice di esempio per l'aggiunta della funzionalità Calcolo di Azure con Node.js
+# <a name="azure-compute-with-nodejs-code-samples"></a>Esempi di codice per la funzionalità di calcolo di Azure con Node.js
 
 Il codice di esempio seguente illustra l'aggiunta della funzionalità Calcolo di Azure con Node.js.
 

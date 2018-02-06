@@ -1,22 +1,22 @@
 ---
-title: Codice di esempio per la creazione di app Web e per dispositivi mobili di Azure con Node.js
-description: Codice di esempio che illustra la creazione di app Web e per dispositivi mobili di Azure con Node.js.
-author: tomarcher
-manager: douge
+title: Esempi di codice per app Web e per dispositivi mobili di Azure con Node.js
+description: Esempi di codice per applicazioni Web e per dispositivi mobili di Azure in Node.js
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: fab798da79c630b605f0a401b7e6b13cccdbd808
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: ee886b216ca9521a6173af0bd272233b959ad38e
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-building-azure-web-and-mobile-apps-with-nodejs"></a>Codice di esempio per la creazione di app Web e per dispositivi mobili di Azure con Node.js
+# <a name="azure-web-and-mobile-apps-with-nodejs-code-samples"></a>Esempi di codice per app Web e per dispositivi mobili di Azure con Node.js
 
-Il codice di esempio seguente illustra come creare app Web e per dispositivi mobili di Azure con Node.js.
+Gli esempi di codice seguenti illustrano come creare app Web e per dispositivi mobili di Azure con Node.js.
 
 Per ottenere il codice per altre attività, esplorare l'elenco completo di [esempi di Azure per Node.js](https://azure.microsoft.com/resources/samples/?term=nodejs).
 
