@@ -1,1 +1,1 @@
-- [Database SQL di Azure: usare Node.js per connettersi ai dati ed eseguire query](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs)
+- [<span data-ttu-id="200ca-101">Database SQL di Azure: usare Node.js per connettersi ai dati ed eseguire query</span><span class="sxs-lookup"><span data-stu-id="200ca-101">Azure SQL Database: Use Node.js to connect and query data</span></span>](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs)
