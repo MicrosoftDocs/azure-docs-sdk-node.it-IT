@@ -2,19 +2,19 @@
 title: Strumenti per gli sviluppatori Node.js in Azure | Microsoft Docs
 description: Installare i singoli strumenti per lo sviluppo con Node.js in Azure
 services: multiple
-author: craigshoemaker
+author: rloutlaw
 manager: routlaw
 ms.service: azure-nodejs
 ms.tgt_pltfrm: na
 ms.devlang: nodejs
 ms.topic: article
 ms.date: 11/07/2017
-ms.author: cshoe
-ms.openlocfilehash: e9fe95ce6c02d50a70ea51284174c938796148fe
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.author: routlaw
+ms.openlocfilehash: 172cc3e1bff763cbf768dce5aa85065da0dd4927
+ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-tools-for-nodejs-developers"></a>Strumenti di Azure per sviluppatori Node.js
 Di seguito sono riportati gli strumenti consigliati per lo sviluppo con Azure in Node.js.

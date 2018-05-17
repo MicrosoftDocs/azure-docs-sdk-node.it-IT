@@ -1,19 +1,19 @@
 ---
 title: Moduli di Azure per Node.js
 description: Panoramica dei moduli di gestione e di servizi di Azure per Node.js
-author: craigshoemaker
-ms.author: cshoe
+author: rloutlaw
+ms.author: routlaw
 manager: routlaw
 ms.date: 06/17/2017
 ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 6041303dcb8734cc17052756d291efa6b4c2269e
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 165e1580e408b71b6147e51c41e22bc8fe7277a1
+ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-modules-for-nodejs"></a>Moduli di Azure per Node.js
 
