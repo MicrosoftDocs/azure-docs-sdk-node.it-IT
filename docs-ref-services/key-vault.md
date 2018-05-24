@@ -1,40 +1,40 @@
 ---
 title: Moduli di Azure Key Vault per Node.js
 description: Informazioni di riferimento sui moduli di Azure Key Vault per Node.js
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Key Vault
-ms.openlocfilehash: aacc02088236ee5b6a941dfb266b9b198b04ad3a
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 72bf4bc5443618f5f1bb9b4d1bb4d905669ff8c8
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="azure-key-vault-modules-for-nodejs"></a><span data-ttu-id="a69e1-103">Moduli di Azure Key Vault per Node.js</span><span class="sxs-lookup"><span data-stu-id="a69e1-103">Azure Key Vault modules for Node.js</span></span>
+# <a name="azure-key-vault-modules-for-nodejs"></a><span data-ttu-id="23011-103">Moduli di Azure Key Vault per Node.js</span><span class="sxs-lookup"><span data-stu-id="23011-103">Azure Key Vault modules for Node.js</span></span>
 
-<span data-ttu-id="a69e1-104">L'insieme di credenziali delle chiavi di Azure consente di proteggere le chiavi e i segreti di crittografia usati da servizi e applicazioni cloud.</span><span class="sxs-lookup"><span data-stu-id="a69e1-104">Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services.</span></span> <span data-ttu-id="a69e1-105">Con l'insieme di credenziali delle chiavi è possibile crittografare chiavi e segreti (ad esempio, chiavi di autenticazione, chiavi dell'account di archiviazione, chiavi di crittografia dati, file PFX e password) usando chiavi protette da moduli di protezione hardware (HSM).</span><span class="sxs-lookup"><span data-stu-id="a69e1-105">By using Key Vault, you can encrypt keys and secrets (such as authentication keys, storage account keys, data encryption keys, .PFX files, and passwords) by using keys that are protected by hardware security modules (HSMs).</span></span> <span data-ttu-id="a69e1-106">Per una maggiore sicurezza, è possibile importare o generare le chiavi in moduli di protezione hardware.</span><span class="sxs-lookup"><span data-stu-id="a69e1-106">For added assurance, you can import or generate keys in HSMs.</span></span> <span data-ttu-id="a69e1-107">Se si sceglie di eseguire questa operazione, Microsoft elabora le chiavi in moduli di protezione hardware FIPS 140-2 livello 2 convalidati (hardware e firmware).</span><span class="sxs-lookup"><span data-stu-id="a69e1-107">If you choose to do this, Microsoft processes your keys in FIPS 140-2 Level 2 validated HSMs (hardware and firmware).</span></span>
+<span data-ttu-id="23011-104">L'insieme di credenziali delle chiavi di Azure consente di proteggere le chiavi e i segreti di crittografia usati da servizi e applicazioni cloud.</span><span class="sxs-lookup"><span data-stu-id="23011-104">Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services.</span></span> <span data-ttu-id="23011-105">Con l'insieme di credenziali delle chiavi è possibile crittografare chiavi e segreti (ad esempio, chiavi di autenticazione, chiavi dell'account di archiviazione, chiavi di crittografia dati, file PFX e password) usando chiavi protette da moduli di protezione hardware (HSM).</span><span class="sxs-lookup"><span data-stu-id="23011-105">By using Key Vault, you can encrypt keys and secrets (such as authentication keys, storage account keys, data encryption keys, .PFX files, and passwords) by using keys that are protected by hardware security modules (HSMs).</span></span> <span data-ttu-id="23011-106">Per una maggiore sicurezza, è possibile importare o generare le chiavi in moduli di protezione hardware.</span><span class="sxs-lookup"><span data-stu-id="23011-106">For added assurance, you can import or generate keys in HSMs.</span></span> <span data-ttu-id="23011-107">Se si sceglie di eseguire questa operazione, Microsoft elabora le chiavi in moduli di protezione hardware FIPS 140-2 livello 2 convalidati (hardware e firmware).</span><span class="sxs-lookup"><span data-stu-id="23011-107">If you choose to do this, Microsoft processes your keys in FIPS 140-2 Level 2 validated HSMs (hardware and firmware).</span></span>
 
-<span data-ttu-id="a69e1-108">L'insieme di credenziali chiave semplifica il processo di gestione delle chiavi e consente di mantenere il controllo delle chiavi che accedono ai dati e li crittografano.</span><span class="sxs-lookup"><span data-stu-id="a69e1-108">Key Vault streamlines the key management process and enables you to maintain control of keys that access and encrypt your data.</span></span> <span data-ttu-id="a69e1-109">Gli sviluppatori possono creare chiavi per lo sviluppo e il test in pochi minuti e quindi eseguirne facilmente la migrazione alle chiavi di produzione.</span><span class="sxs-lookup"><span data-stu-id="a69e1-109">Developers can create keys for development and testing in minutes, and then seamlessly migrate them to production keys.</span></span> <span data-ttu-id="a69e1-110">Gli amministratori della sicurezza possono concedere (e revocare) le autorizzazioni per chiavi, in base alle esigenze.</span><span class="sxs-lookup"><span data-stu-id="a69e1-110">Security administrators can grant (and revoke) permission to keys, as needed.</span></span>
+<span data-ttu-id="23011-108">L'insieme di credenziali chiave semplifica il processo di gestione delle chiavi e consente di mantenere il controllo delle chiavi che accedono ai dati e li crittografano.</span><span class="sxs-lookup"><span data-stu-id="23011-108">Key Vault streamlines the key management process and enables you to maintain control of keys that access and encrypt your data.</span></span> <span data-ttu-id="23011-109">Gli sviluppatori possono creare chiavi per lo sviluppo e il test in pochi minuti e quindi eseguirne facilmente la migrazione alle chiavi di produzione.</span><span class="sxs-lookup"><span data-stu-id="23011-109">Developers can create keys for development and testing in minutes, and then seamlessly migrate them to production keys.</span></span> <span data-ttu-id="23011-110">Gli amministratori della sicurezza possono concedere (e revocare) le autorizzazioni per chiavi, in base alle esigenze.</span><span class="sxs-lookup"><span data-stu-id="23011-110">Security administrators can grant (and revoke) permission to keys, as needed.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="a69e1-111">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="a69e1-111">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="23011-111">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="23011-111">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="a69e1-112">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="a69e1-112">Install the npm module</span></span> 
+### <a name="install-the-npm-module"></a><span data-ttu-id="23011-112">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="23011-112">Install the npm module</span></span> 
 
-<span data-ttu-id="a69e1-113">Installare il modulo npm di Azure Key Vault</span><span class="sxs-lookup"><span data-stu-id="a69e1-113">Install the Azure Key Vault npm module</span></span>
+<span data-ttu-id="23011-113">Installare il modulo npm di Azure Key Vault</span><span class="sxs-lookup"><span data-stu-id="23011-113">Install the Azure Key Vault npm module</span></span>
 
 ```bash
 npm install azure-arm-keyvault
 ```
 
-### <a name="example"></a><span data-ttu-id="a69e1-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="a69e1-114">Example</span></span>
+### <a name="example"></a><span data-ttu-id="23011-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="23011-114">Example</span></span>
 
-<span data-ttu-id="a69e1-115">Questo esempio crea un nuovo servizio Key Vault in Azure.</span><span class="sxs-lookup"><span data-stu-id="a69e1-115">This example creates a new Key Vault service in Azure.</span></span>
+<span data-ttu-id="23011-115">Questo esempio crea un nuovo servizio Key Vault in Azure.</span><span class="sxs-lookup"><span data-stu-id="23011-115">This example creates a new Key Vault service in Azure.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -75,10 +75,10 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="a69e1-116">Esempi</span><span class="sxs-lookup"><span data-stu-id="a69e1-116">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="23011-116">Esempi</span><span class="sxs-lookup"><span data-stu-id="23011-116">Samples</span></span>
 
-- [<span data-ttu-id="a69e1-117">Introduzione a Key Vault in Node.js</span><span class="sxs-lookup"><span data-stu-id="a69e1-117">Getting started with Key Vault in Node.js</span></span>](https://azure.microsoft.com/resources/samples/key-vault-node-getting-started/)
-- [<span data-ttu-id="a69e1-118">Gestire risorse e gruppi di risorse di Azure con Node.js</span><span class="sxs-lookup"><span data-stu-id="a69e1-118">Manage Azure resources and resource groups with Node.js</span></span>](https://azure.microsoft.com/resources/samples/resource-manager-node-resources-and-groups/) 
-- <span data-ttu-id="a69e1-119">[Integrating Azure AD into a NodeJS web application](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) (Integrazione di Azure AD in un'applicazione Web NodeJS)</span><span class="sxs-lookup"><span data-stu-id="a69e1-119">[Integrating Azure AD into a NodeJS web application](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/)</span></span> 
+- [<span data-ttu-id="23011-117">Introduzione a Key Vault in Node.js</span><span class="sxs-lookup"><span data-stu-id="23011-117">Getting started with Key Vault in Node.js</span></span>](https://azure.microsoft.com/resources/samples/key-vault-node-getting-started/)
+- [<span data-ttu-id="23011-118">Gestire risorse e gruppi di risorse di Azure con Node.js</span><span class="sxs-lookup"><span data-stu-id="23011-118">Manage Azure resources and resource groups with Node.js</span></span>](https://azure.microsoft.com/resources/samples/resource-manager-node-resources-and-groups/) 
+- <span data-ttu-id="23011-119">[Integrating Azure AD into a NodeJS web application](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) (Integrazione di Azure AD in un'applicazione Web NodeJS)</span><span class="sxs-lookup"><span data-stu-id="23011-119">[Integrating Azure AD into a NodeJS web application](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/)</span></span> 
 
-<span data-ttu-id="a69e1-120">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="a69e1-120">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="23011-120">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="23011-120">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
