@@ -1,6 +1,6 @@
 ---
 title: Esempi di codice di fatturazione di Azure per Node.js
-description: "Codice di esempio che illustra come aggiungere la funzionalità di fatturazione di Azure con Node.js."
+description: Codice di esempio che illustra come aggiungere la funzionalità di fatturazione di Azure con Node.js.
 author: ityer
 manager: limorl
 ms.devlang: nodejs
@@ -13,6 +13,7 @@ ms.sourcegitcommit: 37edf026ed6d21abd1cf45a65b3b0329a8bdf18d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29781777"
 ---
 # <a name="azure-billing-with-nodejs-code-samples"></a>Esempi di codice di fatturazione di Azure con Node.js
 

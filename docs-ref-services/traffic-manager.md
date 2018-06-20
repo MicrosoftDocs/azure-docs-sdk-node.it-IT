@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34262705"
 ---
 # <a name="azure-traffic-manager-modules-for-nodejs"></a>Moduli di Gestione traffico di Azure per Node.js
 

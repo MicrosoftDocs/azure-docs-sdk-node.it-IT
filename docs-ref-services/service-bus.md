@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260304"
 ---
 # <a name="azure-service-bus-modules-for-nodejs"></a>Moduli del bus di servizio di Azure per Node.js
 

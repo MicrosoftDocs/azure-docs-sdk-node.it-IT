@@ -15,6 +15,7 @@ ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "20908141"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a>Sviluppo di Node.js con Visual Studio Code e Azure
 
