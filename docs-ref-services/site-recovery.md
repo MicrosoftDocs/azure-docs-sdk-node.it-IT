@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259392"
 ---
 # <a name="azure-site-recovery-modules-for-nodejs"></a><span data-ttu-id="c8012-103">Moduli di Azure Site Recovery per Node.js</span><span class="sxs-lookup"><span data-stu-id="c8012-103">Azure Site Recovery modules for Node.js</span></span>
 

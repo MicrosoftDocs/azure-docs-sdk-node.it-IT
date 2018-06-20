@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260757"
 ---
 # <a name="azure-cosmos-db-modules-for-nodejs"></a><span data-ttu-id="9bf69-103">Moduli di Azure Cosmos DB per Node.js</span><span class="sxs-lookup"><span data-stu-id="9bf69-103">Azure Cosmos DB Modules for Node.js</span></span>
 

@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220723"
 ---
 # <a name="tutorials-for-using-azure-enterprise-services-with-nodejs"></a><span data-ttu-id="6870f-103">Esercitazioni sull'uso dei servizi di classe enterprise di Azure con Node.js</span><span class="sxs-lookup"><span data-stu-id="6870f-103">Tutorials for using Azure enterprise services with Node.js</span></span>
 

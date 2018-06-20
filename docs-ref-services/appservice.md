@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34266612"
 ---
 # <a name="azure-app-service-modules-for-nodejs"></a><span data-ttu-id="07a02-103">Moduli del servizio app di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="07a02-103">Azure App Service modules for Node.js</span></span>
 

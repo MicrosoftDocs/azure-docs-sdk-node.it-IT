@@ -15,6 +15,7 @@ ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/26/2018
+ms.locfileid: "28117126"
 ---
 # <a name="azure-data-lake-store-modules-for-nodejs"></a><span data-ttu-id="37e85-103">Moduli di Azure Data Lake Store per Node.js</span><span class="sxs-lookup"><span data-stu-id="37e85-103">Azure Data Lake Store modules for Node.js</span></span>
 

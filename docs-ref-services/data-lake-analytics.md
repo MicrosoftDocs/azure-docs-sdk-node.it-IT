@@ -15,6 +15,7 @@ ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/26/2018
+ms.locfileid: "28116966"
 ---
 # <a name="azure-data-lake-analytics-modules-for-nodejs"></a><span data-ttu-id="a24fb-103">Moduli di Azure Data Lake Analytics per Node.js</span><span class="sxs-lookup"><span data-stu-id="a24fb-103">Azure Data Lake Analytics modules for Node.js</span></span>
 

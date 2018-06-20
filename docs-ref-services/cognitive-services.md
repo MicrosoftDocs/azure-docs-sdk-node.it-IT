@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259970"
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a><span data-ttu-id="8101f-103">Moduli di Servizi cognitivi di Azure per JavaScript</span><span class="sxs-lookup"><span data-stu-id="8101f-103">JavaScript Azure Cognitive Services modules</span></span>
 

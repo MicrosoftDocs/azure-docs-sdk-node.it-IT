@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259920"
 ---
 # <a name="azure-active-directory-modules-for-nodejs"></a><span data-ttu-id="49e55-103">Moduli di Azure Active Directory per Node.js</span><span class="sxs-lookup"><span data-stu-id="49e55-103">Azure Active Directory modules for Node.js</span></span>
 

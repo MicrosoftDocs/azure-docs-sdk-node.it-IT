@@ -15,6 +15,7 @@ ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/26/2018
+ms.locfileid: "28116898"
 ---
 # <a name="azure-storage-modules-for-nodejs"></a><span data-ttu-id="def58-103">Moduli di Archiviazione di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="def58-103">Azure Storage modules for Node.js</span></span>
 

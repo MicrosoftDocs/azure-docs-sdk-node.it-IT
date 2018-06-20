@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34264712"
 ---
 # <a name="azure-automation-modules-for-nodejs"></a><span data-ttu-id="c7301-103">Moduli di Automazione di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="c7301-103">Azure Automation Modules for Node.js</span></span>
 
