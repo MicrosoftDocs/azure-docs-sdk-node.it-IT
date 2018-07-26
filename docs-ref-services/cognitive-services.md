@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: fd0870f4b38928c23145a50d4c71456b4c94c3e9
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 7941d3850ef6c3518ff0ab13fe1b1ea239ab1828
+ms.sourcegitcommit: 99a36d08455760a0436fb6a8fffb542518e3cb2f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259970"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39188997"
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a>Moduli di Servizi cognitivi di Azure per JavaScript
 
@@ -29,7 +29,7 @@ Restituisce informazioni sul contenuto visivo presente in un'immagine:
 - Applicare le impostazioni relative ai contenuti per adulti per limitare automaticamente i contenuti di questo tipo.
 - Identificare i tipi di immagine e le combinazioni colori nelle immagini.
 
-[Provare Visione artificiale](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) gratuitamente nel browser.
+[Provare Visione artificiale](https://azure.microsoft.com/services/cognitive-services/computer-vision/) gratuitamente nel browser.
 
 Ottenere il modulo JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -55,7 +55,7 @@ npm install azure-cognitiveservices-contentmoderator
 
 Rilevare, identificare, analizzare, organizzare e contrassegnare con tag i visi nelle foto. 
 
-[Provare l'API Viso](https://azure.microsoft.com/en-us/services/cognitive-services/face/) nel browser.
+[Provare l'API Viso](https://azure.microsoft.com/services/cognitive-services/face/) nel browser.
 
 Ottenere il modulo JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -71,7 +71,7 @@ Vedere [altre informazioni](/azure/cognitive-services/face/overview) sull'API Vi
 
 Recuperare documenti Web indicizzati dall'API Ricerca Web Bing e limitare i risultati filtrandoli in base a tipo, aggiornamento e altro. 
 
-[Provare l'API Ricerca Web](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/) nel browser.
+[Provare l'API Ricerca Web](https://azure.microsoft.com/services/cognitive-services/bing-web-search-api/) nel browser.
 
 Ottenere il modulo JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -85,7 +85,7 @@ Vedere [altre informazioni](/azure/cognitive-services/bing-web-search/overview) 
 
 Cercare immagini e ottenere anteprime, URL di immagini completi, metadati delle immagini e molto altro.
 
-[Provare l'API Ricerca immagini](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/) nel browser.
+[Provare l'API Ricerca immagini](https://azure.microsoft.com/services/cognitive-services/bing-image-search-api/) nel browser.
 
 Ottenere il modulo JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -162,7 +162,7 @@ L'API Analisi del testo è un servizio basato su cloud che fornisce l'elaborazio
 - Estrazione di frasi chiave
 - Rilevamento della lingua
 
-[Provare l'API Analisi del testo](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/) nel browser.
+[Provare l'API Analisi del testo](https://azure.microsoft.com/services/cognitive-services/text-analytics/) nel browser.
 
 Ottenere il modulo JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -177,7 +177,7 @@ Vedere [altre informazioni](/azure/cognitive-services/text-analytics/overview) s
 
 Eseguire il controllo grammaticale e ortografico contestuale con l'API Controllo ortografico Bing.
 
-[Provare l'API Controllo ortografico](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/) nel browser.
+[Provare l'API Controllo ortografico](https://azure.microsoft.com/services/cognitive-services/spell-check/) nel browser.
 
 Ottenere il modulo JavaScript con [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
