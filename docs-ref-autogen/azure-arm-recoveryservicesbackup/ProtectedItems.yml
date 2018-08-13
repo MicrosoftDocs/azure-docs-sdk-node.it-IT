@@ -1,0 +1,584 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5d7b19e346f90daa5225c91be1f675ce8ac5adcc
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40069901"
+items:
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems
+  name: ProtectedItems
+  fullName: ProtectedItems
+  children:
+  - azure-arm-recoveryservicesbackup.ProtectedItems.createOrUpdate
+  - azure-arm-recoveryservicesbackup.ProtectedItems.createOrUpdate_2
+  - azure-arm-recoveryservicesbackup.ProtectedItems.createOrUpdate_1
+  - azure-arm-recoveryservicesbackup.ProtectedItems.createOrUpdateWithHttpOperationResponse
+  - azure-arm-recoveryservicesbackup.ProtectedItems.deleteMethod
+  - azure-arm-recoveryservicesbackup.ProtectedItems.deleteMethod_1
+  - azure-arm-recoveryservicesbackup.ProtectedItems.deleteMethod_2
+  - azure-arm-recoveryservicesbackup.ProtectedItems.deleteMethodWithHttpOperationResponse
+  - azure-arm-recoveryservicesbackup.ProtectedItems.get
+  - azure-arm-recoveryservicesbackup.ProtectedItems.get_1
+  - azure-arm-recoveryservicesbackup.ProtectedItems.get_2
+  - azure-arm-recoveryservicesbackup.ProtectedItems.getWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.createOrUpdate
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-101">Abilita il backup di un elemento o a modifica le informazioni di criteri di backup di un elemento già sottoposto a backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-101">Enables backup of an item or to modifies the backup policy information of an already backed up item.</span></span> <span data-ttu-id="a7018-102">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-102">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-103">Per conoscere lo stato dell'operazione, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-103">To know the status of the operation, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-104">Il nome dell'insieme di credenziali di servizi di ripristino.</span><span class="sxs-lookup"><span data-stu-id="a7018-104">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-105">Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.</span><span class="sxs-lookup"><span data-stu-id="a7018-105">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-106">Nome dell'infrastruttura associata all'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-106">Fabric name associated with the backup item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-107">Nome del contenitore associato all'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-107">Container name associated with the backup item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-108">Nome dell'elemento per il backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-108">Item name to be backed up.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ProtectedItemResource
+      description: >
+        <span data-ttu-id="a7018-109">risorse sottoposti a backup elemento</span><span class="sxs-lookup"><span data-stu-id="a7018-109">resource backed up item</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.createOrUpdate_2
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-110">Abilita il backup di un elemento o a modifica le informazioni di criteri di backup di un elemento già sottoposto a backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-110">Enables backup of an item or to modifies the backup policy information of an already backed up item.</span></span> <span data-ttu-id="a7018-111">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-111">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-112">Per conoscere lo stato dell'operazione, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-112">To know the status of the operation, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ProtectedItemResource
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.createOrUpdate_1
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-113">Abilita il backup di un elemento o a modifica le informazioni di criteri di backup di un elemento già sottoposto a backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-113">Enables backup of an item or to modifies the backup policy information of an already backed up item.</span></span> <span data-ttu-id="a7018-114">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-114">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-115">Per conoscere lo stato dell'operazione, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-115">To know the status of the operation, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ProtectedItemResource
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-116">Abilita il backup di un elemento o a modifica le informazioni di criteri di backup di un elemento già sottoposto a backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-116">Enables backup of an item or to modifies the backup policy information of an already backed up item.</span></span> <span data-ttu-id="a7018-117">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-117">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-118">Per conoscere lo stato dell'operazione, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-118">To know the status of the operation, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function createOrUpdateWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-119">Il nome dell'insieme di credenziali di servizi di ripristino.</span><span class="sxs-lookup"><span data-stu-id="a7018-119">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-120">Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.</span><span class="sxs-lookup"><span data-stu-id="a7018-120">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-121">Nome dell'infrastruttura associata all'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-121">Fabric name associated with the backup item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-122">Nome del contenitore associato all'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-122">Container name associated with the backup item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-123">Nome dell'elemento per il backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-123">Item name to be backed up.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ProtectedItemResource
+      description: >
+        <span data-ttu-id="a7018-124">risorse sottoposti a backup elemento</span><span class="sxs-lookup"><span data-stu-id="a7018-124">resource backed up item</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.deleteMethod
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-125">Consente di disabilitare il backup di un elemento all'interno di un contenitore.</span><span class="sxs-lookup"><span data-stu-id="a7018-125">Used to disable backup of an item within a container.</span></span> <span data-ttu-id="a7018-126">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-126">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-127">Per conoscere lo stato della richiesta, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-127">To know the status of the request, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function deleteMethod(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-128">Il nome dell'insieme di credenziali di servizi di ripristino.</span><span class="sxs-lookup"><span data-stu-id="a7018-128">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-129">Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.</span><span class="sxs-lookup"><span data-stu-id="a7018-129">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-130">Nome dell'infrastruttura associata all'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-130">Fabric name associated with the backed up item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-131">Nome del contenitore associato all'elemento sottoposto a backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-131">Container name associated with the backed up item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-132">Elemento da eliminare il backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-132">Backed up item to be deleted.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.deleteMethod_1
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-133">Consente di disabilitare il backup di un elemento all'interno di un contenitore.</span><span class="sxs-lookup"><span data-stu-id="a7018-133">Used to disable backup of an item within a container.</span></span> <span data-ttu-id="a7018-134">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-134">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-135">Per conoscere lo stato della richiesta, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-135">To know the status of the request, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function deleteMethod(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.deleteMethod_2
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-136">Consente di disabilitare il backup di un elemento all'interno di un contenitore.</span><span class="sxs-lookup"><span data-stu-id="a7018-136">Used to disable backup of an item within a container.</span></span> <span data-ttu-id="a7018-137">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-137">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-138">Per conoscere lo stato della richiesta, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-138">To know the status of the request, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function deleteMethod(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-139">Consente di disabilitare il backup di un elemento all'interno di un contenitore.</span><span class="sxs-lookup"><span data-stu-id="a7018-139">Used to disable backup of an item within a container.</span></span> <span data-ttu-id="a7018-140">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-140">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-141">Per conoscere lo stato della richiesta, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-141">To know the status of the request, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-142">Il nome dell'insieme di credenziali di servizi di ripristino.</span><span class="sxs-lookup"><span data-stu-id="a7018-142">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-143">Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.</span><span class="sxs-lookup"><span data-stu-id="a7018-143">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-144">Nome dell'infrastruttura associata all'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-144">Fabric name associated with the backed up item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-145">Nome del contenitore associato all'elemento sottoposto a backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-145">Container name associated with the backed up item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-146">Elemento da eliminare il backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-146">Backed up item to be deleted.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-147">Fornisce i dettagli dell'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-147">Provides the details of the backed up item.</span></span> <span data-ttu-id="a7018-148">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-148">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-149">Per conoscere lo stato dell'operazione, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-149">To know the status of the operation, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-150">Il nome dell'insieme di credenziali di servizi di ripristino.</span><span class="sxs-lookup"><span data-stu-id="a7018-150">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-151">Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.</span><span class="sxs-lookup"><span data-stu-id="a7018-151">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-152">Nome dell'infrastruttura associata all'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-152">Fabric name associated with the backed up item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-153">Nome del contenitore associato all'elemento sottoposto a backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-153">Container name associated with the backed up item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-154">Backup del nome dell'elemento i cui dettagli devono essere recuperati.</span><span class="sxs-lookup"><span data-stu-id="a7018-154">Backed up item name whose details are to be fetched.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.ProtectedItemResource>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.get_1
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-155">Fornisce i dettagli dell'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-155">Provides the details of the backed up item.</span></span> <span data-ttu-id="a7018-156">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-156">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-157">Per conoscere lo stato dell'operazione, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-157">To know the status of the operation, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, callback: ServiceCallback<ProtectedItemResource>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.ProtectedItemResource>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.ProtectedItemResource>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.get_2
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-158">Fornisce i dettagli dell'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-158">Provides the details of the backed up item.</span></span> <span data-ttu-id="a7018-159">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-159">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-160">Per conoscere lo stato dell'operazione, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-160">To know the status of the operation, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options: function, callback: ServiceCallback<ProtectedItemResource>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.ProtectedItemResource>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.ProtectedItemResource>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItems.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a7018-161">Fornisce i dettagli dell'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-161">Provides the details of the backed up item.</span></span> <span data-ttu-id="a7018-162">Si tratta di un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="a7018-162">This is an asynchronous operation.</span></span> <span data-ttu-id="a7018-163">Per conoscere lo stato dell'operazione, chiamare l'API GetItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="a7018-163">To know the status of the operation, call the GetItemOperationResult API.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-164">Il nome dell'insieme di credenziali di servizi di ripristino.</span><span class="sxs-lookup"><span data-stu-id="a7018-164">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-165">Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.</span><span class="sxs-lookup"><span data-stu-id="a7018-165">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-166">Nome dell'infrastruttura associata all'elemento di backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-166">Fabric name associated with the backed up item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-167">Nome del contenitore associato all'elemento sottoposto a backup.</span><span class="sxs-lookup"><span data-stu-id="a7018-167">Container name associated with the backed up item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a7018-168">Backup del nome dell'elemento i cui dettagli devono essere recuperati.</span><span class="sxs-lookup"><span data-stu-id="a7018-168">Backed up item name whose details are to be fetched.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.ProtectedItemResource>>
+  package: azure-arm-recoveryservicesbackup
+references:
+- uid: azure-arm-recoveryservicesbackup.ProtectedItemResource
+  spec.typeScript:
+  - name: ProtectedItemResource
+    fullName: ProtectedItemResource
+    uid: azure-arm-recoveryservicesbackup.ProtectedItemResource
+- uid: Promise<azure-arm-recoveryservicesbackup.ProtectedItemResource>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ProtectedItemResource
+    fullName: ProtectedItemResource
+    uid: azure-arm-recoveryservicesbackup.ProtectedItemResource
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-recoveryservicesbackup.ProtectedItemResource>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ProtectedItemResource
+    fullName: ProtectedItemResource
+    uid: azure-arm-recoveryservicesbackup.ProtectedItemResource
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.ProtectedItemResource>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ProtectedItemResource
+    fullName: ProtectedItemResource
+    uid: azure-arm-recoveryservicesbackup.ProtectedItemResource
+  - name: '>>'
+    fullName: '>>'
