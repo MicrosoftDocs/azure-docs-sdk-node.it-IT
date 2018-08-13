@@ -1,0 +1,133 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7841c592ad6afc580c445ce09e12afdedd274858
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40067490"
+items:
+- uid: azure-iot-device.DeviceMethodResponse
+  name: DeviceMethodResponse
+  fullName: DeviceMethodResponse
+  children:
+  - azure-iot-device.DeviceMethodResponse.constructor
+  - azure-iot-device.DeviceMethodResponse.isResponseComplete
+  - azure-iot-device.DeviceMethodResponse.payload
+  - azure-iot-device.DeviceMethodResponse.requestId
+  - azure-iot-device.DeviceMethodResponse.send
+  - azure-iot-device.DeviceMethodResponse.status
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    una <xref:azure-iot-device.DeviceMethodResponse> viene fornito all'utente con ogni oggetto <xref:azure-iot-device.DeviceMethodRequest> consentendo all'utente di creare e inviare una risposta formattato in modo corretto al servizio per ogni chiamata al metodo dispositivo.
+
+    Un'istanza di questa classe viene passata come secondo parametro al metodo di callback registrato tramite <xref:azure-iot-device.Client.onDeviceMethod>.
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceMethodResponse.constructor
+  name: DeviceMethodResponse
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new DeviceMethodResponse(requestId: string, transport: DeviceTransport)'
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: ''
+    - id: transport
+      type:
+      - azure-iot-device.DeviceTransport
+      description: ''
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceMethodResponse.isResponseComplete
+  name: isResponseComplete
+  fullName: isResponseComplete
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Valore booleano che indica se la risposta è già stata inviata.
+  syntax:
+    content: 'isResponseComplete: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceMethodResponse.payload
+  name: payload
+  fullName: payload
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Il payload della risposta inviata al chiamante sul lato del servizio.
+  syntax:
+    content: 'payload: any'
+    return:
+      type:
+      - any
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceMethodResponse.requestId
+  name: requestId
+  fullName: requestId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Identificatore della richiesta fornita dal servizio per questa chiamata al metodo dispositivo.
+  syntax:
+    content: 'requestId: string'
+    return:
+      type:
+      - string
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceMethodResponse.send
+  name: send
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Invia la risposta del metodo del dispositivo al servizio tramite l'oggetto di trasporto sottostante utilizzando il parametro di stato come lo stato della chiamata al metodo.
+  syntax:
+    content: 'function send(status: number, payload?: any, done?: (err?: Error) => void)'
+    parameters:
+    - id: status
+      type:
+      - number
+      description: Un codice di stato numerico da inviare al servizio.
+    - id: payload
+      type:
+      - any
+      description: Il payload della risposta del metodo.
+      optional: true
+    - id: done
+      type:
+      - '(err?: Error) => void'
+      description: >
+        Una funzione di callback che verrà chiamata una volta la risposta è stata inviata al servizio. Un oggetto errore viene passato come argomento alla funzione nel caso in cui si verifica un errore.
+      optional: true
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceMethodResponse.status
+  name: status
+  fullName: status
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Codice di stato che indica se il metodo ha avuto esito positivo (200) o No (qualsiasi altro numero che non è 200).
+  syntax:
+    content: 'status: number'
+    return:
+      type:
+      - number
+  package: azure-iot-device
+references:
+- uid: azure-iot-device.DeviceTransport
+  spec.typeScript:
+  - name: DeviceTransport
+    fullName: DeviceTransport
+    uid: azure-iot-device.DeviceTransport

@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: fc9b23253ca4ce2e6ab56c856509d5e5dd75f750
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40067483"
+items:
+- uid: azure-event-hubs.retry
+  name: retry
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: Verrà eseguito un tentativo in modo lineare Ritenta un'operazione specificata numero di tentativi con un periodo di tempo tra ogni tentativo. Il numero di tentativi si verifica solo se l'errore è irreversibile.
+  syntax:
+    content: 'function retry<T>(operation: () => Promise<T>, times?: number, delayInSeconds?: number)'
+    parameters:
+    - id: operation
+      type:
+      - () => Promise<T>
+      description: L'operazione che deve essere riprovata.
+    - id: times
+      type:
+      - number
+      description: ''
+      optional: true
+    - id: delayInSeconds
+      type:
+      - number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<T>
+  package: azure-event-hubs

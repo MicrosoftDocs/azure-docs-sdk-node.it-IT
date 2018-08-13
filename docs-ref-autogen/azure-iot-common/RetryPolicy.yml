@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6bdf12f37e564aaac17b43d3d18abd4acfc689ad
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40067346"
+items:
+- uid: azure-iot-common.RetryPolicy
+  name: RetryPolicy
+  fullName: RetryPolicy
+  children:
+  - azure-iot-common.RetryPolicy.nextRetryTimeout
+  - azure-iot-common.RetryPolicy.shouldRetry
+  langs:
+  - typeScript
+  type: interface
+  summary: >
+    Interfaccia che descrive un oggetto Criteri di ripetizione dei tentativi.
+
+    I criteri di ripetizione dei tentativi sono costituiti da 2 operazioni
+
+    - Un algoritmo che calcola al successivo tentativo in base al numero corrente o di ripetizione dei tentativi.
+
+    - Un filtro di errori che decide, in base al tipo di errore ricevuto, se un nuovo tentativo dovrebbe verificarsi o non.
+
+    Tali 2 componenti nascondono dietro 2 chiamate ai metodi descritti in questa interfaccia.
+  package: azure-iot-common
+- uid: azure-iot-common.RetryPolicy.nextRetryTimeout
+  name: nextRetryTimeout
+  fullName: nextRetryTimeout
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Calcola l'intervallo di attesa prima di riprovare a ogni nuovo tentativo provvisorio.
+  syntax:
+    content: 'nextRetryTimeout: (retryCount: number, isThrottled: boolean) => number'
+    return:
+      type:
+      - '(retryCount: number, isThrottled: boolean) => number'
+  package: azure-iot-common
+- uid: azure-iot-common.RetryPolicy.shouldRetry
+  name: shouldRetry
+  fullName: shouldRetry
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: In base all'errore passato come argomento, determina se un errore è temporaneo e, se l'operazione dovrebbe essere ritentata o No.
+  syntax:
+    content: 'shouldRetry: (error: Error) => boolean'
+    return:
+      type:
+      - '(error: Error) => boolean'
+  package: azure-iot-common

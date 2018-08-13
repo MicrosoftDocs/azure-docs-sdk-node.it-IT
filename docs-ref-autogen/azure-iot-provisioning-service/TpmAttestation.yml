@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0a5bc610a2934b397637cbefb775b255740fbddd
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40070369"
+items:
+- uid: azure-iot-provisioning-service.TpmAttestation
+  name: TpmAttestation
+  fullName: TpmAttestation
+  children:
+  - azure-iot-provisioning-service.TpmAttestation.endorsementKey
+  - azure-iot-provisioning-service.TpmAttestation.storageRootKey
+  langs:
+  - typeScript
+  type: interface
+  summary: Attestazione tramite TPM.
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.TpmAttestation.endorsementKey
+  name: endorsementKey
+  fullName: endorsementKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    La chiave di verifica dell'autenticità è una chiave di crittografia che viene incorporata in modo permanente nell'hardware di protezione modulo TPM (Trusted Platform), in genere in fase di produzione. La parte privata della chiave di verifica dell'autenticità non viene mai rilasciata di fuori del TPM. La parte pubblica della chiave di verifica dell'autenticità consente di riconoscere un TPM originale.
+
+    La chiave di verifica dell'autenticità è un valore con codificata base64.
+  syntax:
+    content: 'endorsementKey: string'
+    return:
+      type:
+      - string
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.TpmAttestation.storageRootKey
+  name: storageRootKey
+  fullName: storageRootKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    La chiave radice di archiviazione è incorporata nell'hardware di protezione modulo TPM (Trusted Platform).
+
+    Viene utilizzato per proteggere le chiavi TPM create dalle applicazioni, in modo che queste chiavi non possono essere usate senza il TPM.
+
+    A differenza di tale chiave (che in genere viene creata quando viene prodotto il TPM), la chiave radice di archiviazione viene creata quando si acquisisce la proprietà del TPM. Ciò significa che, se si cancella il TPM e un nuovo utente accetta la proprietà, viene creata una nuova chiave radice di archiviazione.
+
+    Questa proprietà non è in genere modificata mediante il client del servizio.
+
+
+    Il storageRootKey è un valore con codificata base64.
+  syntax:
+    content: 'storageRootKey: string'
+    return:
+      type:
+      - string
+  package: azure-iot-provisioning-service

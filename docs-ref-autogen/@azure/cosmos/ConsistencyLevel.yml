@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 345d4aba2a62e1299bfbc896e1d6304120aa5fc2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40058908"
+items:
+- uid: '@azure/cosmos.ConsistencyLevel'
+  name: ConsistencyLevel
+  fullName: ConsistencyLevel
+  children:
+  - '@azure/cosmos.ConsistencyLevel.BoundedStaleness'
+  - '@azure/cosmos.ConsistencyLevel.ConsistentPrefix'
+  - '@azure/cosmos.ConsistencyLevel.Eventual'
+  - '@azure/cosmos.ConsistencyLevel.Session'
+  - '@azure/cosmos.ConsistencyLevel.Strong'
+  langs:
+  - typeScript
+  type: enum
+  summary: >
+    Rappresenta i livelli di coerenza supportati per le operazioni client di Azure Cosmos DB.<br>
+
+    La richiesta ConsistencyLevel deve corrispondere o essere più debole rispetto a provisioning per l'account del database.
+
+    Livelli di coerenza.
+
+    Livelli di coerenza in ordine di complessità sono sicuri, BoundedStaleness, sessione, prefisso coerente e finale.
+
+
+    Vedere https://aka.ms/cosmos-consistency per la documentazione sui livelli di coerenza dettagliata.
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.BoundedStaleness'
+  name: BoundedStaleness
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    Decadimento ristretto garantisce che le letture non siano troppo obsoleti.
+
+    Questa configurazione basata sul numero di operazioni (MaxStalenessPrefix) o l'ora (MaxStalenessIntervalInSeconds).
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.ConsistentPrefix'
+  name: ConsistentPrefix
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    La coerenza ConsistentPrefix garantisce che le letture restituirà un prefisso di tutte le scritture senza interruzioni.
+
+    Tutte le scritture da risulteranno infine disponibili per le letture.'
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Eventual'
+  name: Eventual
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    La coerenza finale garantisce che le letture restituirà un sottoinsieme di operazioni di scrittura.
+
+    Tutte le scritture da risulteranno infine disponibili per le letture.
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Session'
+  name: Session
+  children: []
+  langs:
+  - typeScript
+  summary: La coerenza di sessione garantisce letture monotone (mai letto i dati precedenti, nuovo e quindi precedente anche in questo caso), scritture monotone (operazioni di scrittura vengono ordinati) e lettura delle scritture (delle scritture sono immediatamente visibili per le operazioni di lettura) all'interno di una singola sessione.
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Strong'
+  name: Strong
+  children: []
+  langs:
+  - typeScript
+  summary: Garanzie di coerenza strong sempre le operazioni di lettura restituiscono il valore dell'ultima scrittura.
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'

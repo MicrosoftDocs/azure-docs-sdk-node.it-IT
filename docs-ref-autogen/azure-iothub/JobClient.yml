@@ -1,0 +1,275 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7cb17321fac415a5f2a5a07d198cddac0ebcfde8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40069625"
+items:
+- uid: azure-iothub.JobClient
+  name: JobClient
+  fullName: JobClient
+  children:
+  - azure-iothub.JobClient.cancelJob
+  - azure-iothub.JobClient.createQuery
+  - azure-iothub.JobClient.fromConnectionString
+  - azure-iothub.JobClient.fromSharedAccessSignature
+  - azure-iothub.JobClient.getJob
+  - azure-iothub.JobClient.JobCallback
+  - azure-iothub.JobClient.scheduleDeviceMethod
+  - azure-iothub.JobClient.scheduleTwinUpdate
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    Fornisce metodi per creare, aggiornare, monitorare e annullare processi con esecuzione prolungata in un'istanza dell'IoT Hub, nonché eseguire query sui processi esistenti.
+
+    L'API di processi in IoT Hub di Azure consente di pianificare le chiamate di metodo diretto e aggiornamenti dei dispositivi gemelli in più dispositivi.
+
+    Gli utenti SDK sono previsti per creare <xref:azure-iothub.JobClient> istanze usando i metodi factory <xref:azure-iothub.JobClient.fromConnectionString> e <xref:azure-iothub.JobClient.fromSharedAccessSignature>.
+  package: azure-iothub
+- uid: azure-iothub.JobClient.cancelJob
+  name: cancelJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Annulla un processo esistente.
+  syntax:
+    content: 'function cancelJob(jobId: string | number, done: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: L'identificatore di un processo esistente.
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        La funzione da chiamare quando l'operazione è stata completata. `done` verrà chiamato con tre argomenti: un oggetto di errore (può essere null), un oggetto processo e un oggetto specifico del trasporto risposta utile per la registrazione e debug.
+  package: azure-iothub
+- uid: azure-iothub.JobClient.createQuery
+  name: createQuery
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea una query che può essere utilizzata per restituire le pagine di processo esistente basato sul tipo e stato.
+  syntax:
+    content: 'function createQuery(jobType?: JobType, jobStatus?: JobStatus, pageSize?: number)'
+    parameters:
+    - id: jobType
+      type:
+      - azure-iothub.JobType
+      description: Tipo che deve essere utilizzato per filtrare i risultati.
+      optional: true
+    - id: jobStatus
+      type:
+      - azure-iothub.JobStatus
+      description: Stato che deve essere utilizzato per filtrare i risultati.
+      optional: true
+    - id: pageSize
+      type:
+      - number
+      description: >
+        Il numero di elementi da restituire per ogni pagina.
+      optional: true
+    return:
+      type:
+      - azure-iothub.Query
+  package: azure-iothub
+- uid: azure-iothub.JobClient.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Costruisce un oggetto JobClient dalla stringa di connessione specificata.
+  syntax:
+    content: 'static function fromConnectionString(connectionString: string)'
+    parameters:
+    - id: connectionString
+      type:
+      - string
+      description: >
+        Una stringa di connessione che incapsula l'oggetto appropriato (leggere e/o scrittura) le autorizzazioni del Registro di sistema.
+    return:
+      type:
+      - azure-iothub.JobClient
+  package: azure-iothub
+- uid: azure-iothub.JobClient.fromSharedAccessSignature
+  name: fromSharedAccessSignature
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Costruisce un oggetto JobClient dalla firma di accesso condiviso specificata.
+  syntax:
+    content: 'static function fromSharedAccessSignature(sharedAccessSignature: string)'
+    parameters:
+    - id: sharedAccessSignature
+      type:
+      - string
+      description: >
+        Una firma di accesso condiviso che incapsula l'oggetto appropriato (leggere e/o scrittura) le autorizzazioni del Registro di sistema.
+    return:
+      type:
+      - azure-iothub.JobClient
+  package: azure-iothub
+- uid: azure-iothub.JobClient.getJob
+  name: getJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Informazioni richieste su un processo esistente.
+  syntax:
+    content: 'function getJob(jobId: string | number, done: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: L'identificatore di un processo esistente.
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        La funzione da chiamare quando l'operazione è stata completata. `done` verrà chiamato con tre argomenti: un oggetto di errore (può essere null), un oggetto processo e un oggetto specifico del trasporto risposta utile per la registrazione e debug.
+  package: azure-iothub
+- uid: azure-iothub.JobClient.JobCallback
+  name: JobCallback
+  fullName: JobCallback
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n"
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod
+  name: scheduleDeviceMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Consente di pianificare un processo che verrà eseguito un metodo del dispositivo su un set di dispositivi.
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime?: Date | JobClient.JobCallback, maxExecutionTimeInSeconds?: number | JobClient.JobCallback, done?: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: Identificatore univoco che deve essere utilizzato per questo processo.
+    - id: queryCondition
+      type:
+      - string
+      description: Una clausola WHERE utilizzata per calcolare l'elenco dei dispositivi in cui deve essere eseguito il processo di query SQL.
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: >-
+        Un oggetto che descrive il metodo e devono avere le proprietà seguenti:-methodName il nome del metodo che deve essere richiamato.
+
+        -payload [facoltativo] il payload da utilizzare per la chiamata al metodo.
+
+        -responseTimeoutInSeconds [facoltativo] il numero di secondi dell'IoT Hub deve attendere che il dispositivo
+    - id: jobStartTime
+      type:
+      - Date | azure-iothub.JobClient.JobCallback
+      description: Ora ora in cui deve iniziare il processo
+      optional: true
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number | azure-iothub.JobClient.JobCallback
+      description: Entro il tempo massimo per questo processo per l'esecuzione in secondi.
+      optional: true
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        La funzione da chiamare quando l'operazione è stata completata. `done` verrà chiamato con tre argomenti: un oggetto di errore (può essere null), un oggetto processo e un oggetto specifico del trasporto risposta utile per la registrazione e debug.
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate
+  name: scheduleTwinUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Pianificare un processo in grado di aggiornare un set di dispositivi gemelli con patch fornita come parametro.
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime?: Date | JobClient.JobCallback, maxExecutionTimeInSeconds?: number | JobClient.JobCallback, done?: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: Identificatore univoco che deve essere utilizzato per questo processo.
+    - id: queryCondition
+      type:
+      - string
+      description: Una clausola WHERE utilizzata per calcolare l'elenco dei dispositivi in cui deve essere eseguito il processo di query SQL.
+    - id: patch
+      type:
+      - any
+      description: La patch di dispositivo gemello che deve essere applicata per i dispositivi gemelli.
+    - id: jobStartTime
+      type:
+      - Date | azure-iothub.JobClient.JobCallback
+      description: Ora ora in cui deve iniziare il processo
+      optional: true
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number | azure-iothub.JobClient.JobCallback
+      description: Entro il tempo massimo per questo processo per l'esecuzione in secondi.
+      optional: true
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        La funzione da chiamare quando l'operazione è stata completata. `done` verrà chiamato con tre argomenti: un oggetto di errore (può essere null), un oggetto processo e un oggetto specifico del trasporto risposta utile per la registrazione e debug.
+      optional: true
+  package: azure-iothub
+references:
+- uid: azure-iothub.JobClient.JobCallback
+  spec.typeScript:
+  - name: JobCallback
+    fullName: JobCallback
+    uid: azure-iothub.JobClient.JobCallback
+- uid: azure-iothub.JobType
+  spec.typeScript:
+  - name: JobType
+    fullName: JobType
+    uid: azure-iothub.JobType
+- uid: azure-iothub.JobStatus
+  spec.typeScript:
+  - name: JobStatus
+    fullName: JobStatus
+    uid: azure-iothub.JobStatus
+- uid: azure-iothub.Query
+  spec.typeScript:
+  - name: Query
+    fullName: Query
+    uid: azure-iothub.Query
+- uid: azure-iothub.DeviceMethodParams
+  spec.typeScript:
+  - name: DeviceMethodParams
+    fullName: DeviceMethodParams
+    uid: azure-iothub.DeviceMethodParams
+- uid: Date | azure-iothub.JobClient.JobCallback
+  spec.typeScript:
+  - name: 'Date | '
+    fullName: 'Date | '
+  - name: JobCallback
+    fullName: JobCallback
+    uid: azure-iothub.JobClient.JobCallback
+- uid: number | azure-iothub.JobClient.JobCallback
+  spec.typeScript:
+  - name: 'number | '
+    fullName: 'number | '
+  - name: JobCallback
+    fullName: JobCallback
+    uid: azure-iothub.JobClient.JobCallback
+- uid: azure-iothub.JobClient
+  spec.typeScript:
+  - name: JobClient
+    fullName: JobClient
+    uid: azure-iothub.JobClient
