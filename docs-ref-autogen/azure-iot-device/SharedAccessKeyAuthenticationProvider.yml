@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6890ca673f5547d4d21b68536ffd65b95c31c606
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40068569"
+items:
+- uid: azure-iot-device.SharedAccessKeyAuthenticationProvider
+  name: SharedAccessKeyAuthenticationProvider
+  fullName: SharedAccessKeyAuthenticationProvider
+  children:
+  - azure-iot-device.SharedAccessKeyAuthenticationProvider.fromConnectionString
+  - azure-iot-device.SharedAccessKeyAuthenticationProvider.getDeviceCredentials
+  - azure-iot-device.SharedAccessKeyAuthenticationProvider.stop
+  - azure-iot-device.SharedAccessKeyAuthenticationProvider.type
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    <span data-ttu-id="677e9-101">Fornisce un `AuthenticationProvider` oggetto che può essere creato semplicemente con una stringa di connessione e viene quindi usato dai client del dispositivo e trasporti per eseguire l'autenticazione con l'istanza dell'hub IoT di Azure.</span><span class="sxs-lookup"><span data-stu-id="677e9-101">Provides an `AuthenticationProvider` object that can be created simply with a connection string and is then used by the device client and transports to authenticate with the Azure IoT hub instance.</span></span>
+
+    <span data-ttu-id="677e9-102">Il `SharedAccessKeyAuthenticationProvider` oggetto si occupa della creazione di token di firma di accesso condiviso in una cadenza regolare e genera il `newTokenAvailable` eventi per i trasporti rinnovare le credenziali con l'istanza dell'hub IoT di Azure e restare connessi.</span><span class="sxs-lookup"><span data-stu-id="677e9-102">The `SharedAccessKeyAuthenticationProvider` object takes care of creating shared access signature tokens on a regular cadence and emits the `newTokenAvailable` event for the transports to renew their credentials with the Azure IoT hub instance and stay connected.</span></span>
+  extends:
+    name: EventEmitter
+  package: azure-iot-device
+- uid: azure-iot-device.SharedAccessKeyAuthenticationProvider.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="677e9-103">Crea un nuovo `SharedAccessKeyAuthenticationProvider` da una stringa di connessione</span><span class="sxs-lookup"><span data-stu-id="677e9-103">Creates a new `SharedAccessKeyAuthenticationProvider` from a connection string</span></span>
+  syntax:
+    content: 'static function fromConnectionString(connectionString: string, tokenValidTimeInSeconds?: number, tokenRenewalMarginInSeconds?: number)'
+    parameters:
+    - id: connectionString
+      type:
+      - string
+      description: <span data-ttu-id="677e9-104">Una stringa di connessione di dispositivi contenente i parametri obbligatori per l'autenticazione con l'hub IoT.</span><span class="sxs-lookup"><span data-stu-id="677e9-104">A device connection string containing the required parameters for authentication with the IoT hub.</span></span>
+    - id: tokenValidTimeInSeconds
+      type:
+      - number
+      description: <span data-ttu-id="677e9-105">Il numero di secondi per cui si suppone che un token sia valido.</span><span class="sxs-lookup"><span data-stu-id="677e9-105">The number of seconds for which a token is supposed to be valid.</span></span>
+      optional: true
+    - id: tokenRenewalMarginInSeconds
+      type:
+      - number
+      description: >
+        <span data-ttu-id="677e9-106">Il numero di secondi prima della fine del periodo di validità durante il quale il `SharedAccessKeyAuthenticationProvider` deve rinnovare il token.</span><span class="sxs-lookup"><span data-stu-id="677e9-106">The number of seconds before the end of the validity period during which the `SharedAccessKeyAuthenticationProvider` should renew the token.</span></span>
+      optional: true
+    return:
+      type:
+      - azure-iot-device.SharedAccessKeyAuthenticationProvider
+  package: azure-iot-device
+- uid: azure-iot-device.SharedAccessKeyAuthenticationProvider.getDeviceCredentials
+  name: getDeviceCredentials
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="677e9-107">Questo metodo viene utilizzato per i trasporti a ottenere il dispositivo più recente delle credenziali sotto forma di un `TransportConfig` oggetto.</span><span class="sxs-lookup"><span data-stu-id="677e9-107">This method is used by the transports to gets the most current device credentials in the form of a `TransportConfig` object.</span></span>
+  syntax:
+    content: 'function getDeviceCredentials(callback: (err: Error, credentials?: TransportConfig) => void)'
+    parameters:
+    - id: callback
+      type:
+      - '(err: Error, credentials?: TransportConfig) => void'
+      description: >
+        <span data-ttu-id="677e9-108">funzione che verrà chiamato con un errore o un insieme di credenziali del dispositivo che può essere utilizzato per eseguire l'autenticazione con l'hub IoT.</span><span class="sxs-lookup"><span data-stu-id="677e9-108">function that will be called with either an error or a set of device credentials that can be used to authenticate with the IoT hub.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.SharedAccessKeyAuthenticationProvider.stop
+  name: stop
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="677e9-109">Arresta il timer usato per rinnovare il token di firma di accesso condiviso.</span><span class="sxs-lookup"><span data-stu-id="677e9-109">Stops the timer used to renew to SAS token.</span></span>
+  syntax:
+    content: function stop()
+    parameters: []
+  package: azure-iot-device
+- uid: azure-iot-device.SharedAccessKeyAuthenticationProvider.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'type: AuthenticationType'
+    return:
+      type:
+      - AuthenticationType
+  package: azure-iot-device
+references:
+- uid: azure-iot-device.SharedAccessKeyAuthenticationProvider
+  spec.typeScript:
+  - name: SharedAccessKeyAuthenticationProvider
+    fullName: SharedAccessKeyAuthenticationProvider
+    uid: azure-iot-device.SharedAccessKeyAuthenticationProvider
