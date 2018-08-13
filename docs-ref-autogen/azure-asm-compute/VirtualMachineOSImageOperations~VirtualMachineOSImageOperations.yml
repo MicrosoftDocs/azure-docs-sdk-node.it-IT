@@ -1,0 +1,519 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0fa91a962ed248c95b5964118e06e0fda3ca6528
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055824"
+items:
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: VirtualMachineOSImageOperations
+  summary: >-
+    API gestione dei servizi include operazioni per gestire le immagini del sistema operativo nella sottoscrizione.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157175.aspx per altre informazioni) __nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    Vedere [virtualMachineOSImages] {@link ComputeManagementClient ~ ComputeManagementClient #virtualMachineOSImages}.
+
+    Inizializza una nuova istanza della classe VirtualMachineOSImageOperations.
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations
+  type: Class
+  children:
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.#ctor
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.#ctor
+  uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.#ctor
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: VirtualMachineOSImageOperations(client)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations.VirtualMachineOSImageOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Riferimento al client del servizio.
+    content: new VirtualMachineOSImageOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: beginSharing(imageName, permission, callback)
+  summary: Condividere un'immagine del sistema operativo già replicata. Questa operazione è solo per i server di pubblicazione. Devi essere registrato come editore di immagini con Windows Azure sia in grado di chiamare questo metodo.
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.beginSharing(imageName, permission, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Il nome dell'immagine di macchina virtuale da condividere.
+    - id: permission
+      type:
+      - string
+      description: "L'autorizzazione di condivisione: pubblico, msdn o privato."
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginSharing(imageName, permission, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: beginUnreplicating(imageName, callback)
+  summary: "Unreplicate un'immagine del sistema operativo in più posizioni di destinazione. Questa operazione è solo per i server di pubblicazione. Devi essere registrato come editore di immagini con Windows Azure sia in grado di chiamare questo metodo. Nota: L'operazione rimuove le copie dell'immagine del sistema operativo utente pubblicate. Non rimuove l'utente effettivo immagine del sistema operativo. Per rimuovere l'utente effettivo immagine del sistema operativo, il server di pubblicazione dovrà chiamare Elimina immagine del sistema operativo."
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.beginUnreplicating(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: "Il nome dell'immagine di macchina virtuale da replicare. Nota: Il nome dell'immagine del sistema operativo deve essere l'utente, immagine del sistema operativo, non il nome dell'immagine del sistema operativo pubblicato."
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginUnreplicating(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: create(parameters, callback)
+  summary: >-
+    L'operazione di creazione di immagine del sistema operativo aggiunge un'immagine del sistema operativo che viene archiviata in un account di archiviazione ed è disponibile dal repository immagini.
+
+    (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157192.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineOSImageCreateParameters
+      description: Parametri forniti all'operazione Crea immagine macchina virtuale.
+    - id: parameters.label
+      type:
+      - string
+      description: Specifica il nome descrittivo dell'immagine.
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: "Specifica il percorso del blob in archiviazione di Azure. Il percorso del blob deve appartenere a un account di archiviazione nella sottoscrizione specificata dal valore SubscriptionId nella chiamata all'operazione. Esempio: http://example.blob.core.windows.net/disks/mydisk.vhd."
+    - id: parameters.name
+      type:
+      - string
+      description: Specifica un nome che Azure Usa per identificare l'immagine durante la creazione di uno o più macchine virtuali.
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: "Il tipo di sistema operativo dell'immagine del sistema operativo. I valori possibili sono: Linux o Windows."
+    - id: parameters.eula
+      type:
+      - string
+      description: Specifica il contratto di licenza utente finale associato con l'immagine. Il valore di questo elemento è una stringa, ma è consigliabile che il valore sia un URL che punta a un contratto di licenza.
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: Specifica la descrizione dell'immagine del sistema operativo.
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: Specifica un valore che può essere usato per raggruppare le immagini del sistema operativo.
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: Specifica la data quando l'immagine del sistema operativo è stato aggiunto all'archivio immagini.
+      optional: true
+    - id: parameters.isPremium
+      type:
+      - boolean
+      description: Indica se l'immagine contiene software o servizi associati che comporteranno spese superiori al prezzo di base per la macchina virtuale.
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: Specifica se l'immagine deve essere visualizzato nella raccolta immagini.
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: Specifica l'URI che punta a un documento contenente l'informativa sulla privacy correlata all'immagine del sistema operativo.
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: Specifica l'URI dell'icona visualizzata per l'immagine nel portale di gestione.
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: Specifica la dimensione da utilizzare per la macchina virtuale creata dall'immagine del sistema operativo.
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: Specifica l'URI dell'icona piccola visualizzata quando l'immagine viene presentata nel portale di gestione di Azure. L'elemento SmallIconUri è solo disponibile Usa la versione 2013-03-01 o versione successiva.
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: >-
+        Specifica la lingua dell'immagine.
+
+        L'elemento di linguaggio è disponibile solo Usa la versione 2013-03-01 o versione successiva.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: deleteMethod(imageName, deleteFromStorage, callback)
+  summary: L'operazione di eliminazione del sistema operativo immagine Elimina immagine del sistema operativo specificato dal repository immagini.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157203.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.deleteMethod(imageName, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Il nome dell'immagine da eliminare.
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: Specifica che il blob di origine per l'immagine deve anche essere eliminato dall'archivio.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function deleteMethod(imageName, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: get(imageName, callback)
+  summary: L'operazione Ottieni immagine del sistema operativo recupera i dettagli per un'immagine del sistema operativo dall'archivio immagini.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157191.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.get(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Il nome dell'immagine del sistema operativo da recuperare.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function get(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: getDetails(imageName, callback)
+  summary: Ottiene le proprietà dell'immagine del sistema operativo e i relativi dettagli di replica. Questa operazione è solo per i server di pubblicazione. Devi essere registrato come editore di immagini con Windows Azure sia in grado di chiamare questo metodo.
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.getDetails(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Il nome dell'immagine di macchina virtuale da replicare.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function getDetails(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: list(callback)
+  summary: L'operazione di elencare le immagini del sistema operativo recupera un elenco di immagini del sistema operativo dall'archivio immagini.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157191.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: replicate(imageName, parameters, callback)
+  summary: Eseguire la replica di un'immagine del sistema operativo in più posizioni di destinazione. Questa operazione è solo per i server di pubblicazione. Devi essere registrato come editore di immagini con Windows Azure sia in grado di chiamare questo metodo.
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.replicate(imageName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Il nome dell'immagine del sistema operativo della macchina virtuale da replicare.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineOSImageReplicateParameters
+      description: Parametri forniti all'operazione di immagine di macchina virtuale di replica.
+    - id: parameters.targetLocations
+      type:
+      - array
+      description: "I percorsi a livello di area destinazione di replica. Nota: Le aree nel corpo della richiesta non sono additive. Se un'immagine del sistema operativo è stato già replicata in aree A, B e C e viene effettuata una richiesta per la replica in aree A e D, l'immagine di macchina virtuale rimarrà nell'area A, verranno replicate nell'area D e sarà non replicate dal aree B e C."
+      optional: true
+    - id: parameters.computeImageAttributes
+      type:
+      - azure-asm-compute.ComputeImageAttributes
+      description: Gli attributi di immagine di calcolo. I metadati che è necessario per questa immagine per essere useablein la combinazione di Microsoft. COMPUTE Provider.The dei valori fornita per l'offerta, Sku e versione devono essere univoco per un server di pubblicazione.
+    - id: parameters.computeImageAttributes.offer
+      type:
+      - string
+      description: Ottiene o imposta il nome dell'autore definito dell'offerta. I caratteri consentiti sono lettere maiuscole o minuscole, cifre, hypen(-), punto (.). La lunghezza massima consentita è di 64 caratteri.
+    - id: parameters.computeImageAttributes.sku
+      type:
+      - string
+      description: Ottiene o imposta il nome dell'autore definito dello Sku. I caratteri consentiti sono lettere maiuscole o minuscole, cifre, hypen(-), punto (.). La lunghezza massima consentita è di 64 caratteri.
+    - id: parameters.computeImageAttributes.version
+      type:
+      - string
+      description: "Ottiene o imposta la versione del server di pubblicazione definito dell'immagine. I caratteri consentiti sono cifre e periodo. Formato: <MajorVersion>.<MinorVersion>.<Patch>Esempio: '1.0.0' o '1.1.0' 3 il numero di versione seguire standard della maggior parte di RPs.See http://semver.org/."
+    - id: parameters.marketplaceImageAttributes
+      type:
+      - azure-asm-compute.MarketplaceImageAttributes
+      description: Gli attributi di immagine di Marketplace. I metadati che è necessario per Marketplace per macchine Virtuali originato imagesto essere facile da usare nel Provider di Microsoft. COMPUTE.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.publisherId
+      type:
+      - string
+      description: Ottiene o imposta l'ID editore Si tratta del nome del server di pubblicazione di Provider Microsoft. COMPUTE da utilizzare per l'immagine.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan
+      type:
+      - azure-asm-compute.Plan
+      description: Ottiene o imposta il contesto di acquisto di qualsiasi elemento di terze parti 3rd.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.name
+      type:
+      - string
+      description: Ottiene o imposta un nome definito dall'utente dell'elemento 3rd party che in cui si ottiene.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.publisher
+      type:
+      - string
+      description: Ottiene o imposta il server di pubblicazione dell'artefatto 3rd party che è in corso bought.E.g. Contoso.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.product
+      type:
+      - string
+      description: Ottiene o imposta l'elemento di terze parti 3rd che è in corso procured.E.g. Northwind.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function replicate(imageName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: share(imageName, permission, callback)
+  summary: Condividere un'immagine del sistema operativo già replicata. Questa operazione è solo per i server di pubblicazione. Devi essere registrato come editore di immagini con Windows Azure sia in grado di chiamare questo metodo.
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.share(imageName, permission, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Il nome dell'immagine di macchina virtuale da condividere.
+    - id: permission
+      type:
+      - string
+      description: "L'autorizzazione di condivisione: pubblico, msdn o privato."
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function share(imageName, permission, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: unreplicate(imageName, callback)
+  summary: "Unreplicate un'immagine del sistema operativo in più posizioni di destinazione. Questa operazione è solo per i server di pubblicazione. Devi essere registrato come editore di immagini con Windows Azure sia in grado di chiamare questo metodo. Nota: L'operazione rimuove le copie dell'immagine del sistema operativo utente pubblicate. Non rimuove l'utente effettivo immagine del sistema operativo. Per rimuovere l'utente effettivo immagine del sistema operativo, il server di pubblicazione dovrà chiamare Elimina immagine del sistema operativo."
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.unreplicate(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: "Il nome dell'immagine di macchina virtuale da replicare. Nota: Il nome dell'immagine del sistema operativo deve essere l'utente, immagine del sistema operativo, non il nome dell'immagine del sistema operativo pubblicato."
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function unreplicate(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: update(imageName, parameters, callback)
+  summary: Gli aggiornamenti di operazione di aggiornamento del sistema operativo immagine un sistema operativo che dell'immagine nel repository immagini.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157198.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.update(imageName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Il nome dell'immagine della macchina virtuale da aggiornare.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineOSImageUpdateParameters
+      description: Parametri forniti all'operazione di aggiornamento immagine di macchina virtuale.
+    - id: parameters.label
+      type:
+      - string
+      description: Specifica il nome descrittivo dell'immagine da aggiornare. È possibile utilizzare questa operazione per aggiornare le immagini fornite dalla piattaforma Azure.
+    - id: parameters.eula
+      type:
+      - string
+      description: Specifica il contratto di licenza utente finale associato con l'immagine. Il valore di questo elemento è una stringa, ma è consigliabile che il valore sia un URL che punta a un contratto di licenza.
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: Specifica la descrizione dell'immagine del sistema operativo.
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: Specifica un valore che può essere usato per raggruppare le immagini del sistema operativo.
+      optional: true
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: Quando pubblicato, deve questa immagine visualizzati nella raccolta di azure immagini di windows oppure No. True per impostazione predefinita.
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: Specifica la data quando l'immagine del sistema operativo è stato aggiunto all'archivio immagini.
+      optional: true
+    - id: parameters.isPremium
+      type:
+      - boolean
+      description: Indica se l'immagine contiene software o servizi associati che comporteranno spese superiori al prezzo di base per la macchina virtuale.
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: Specifica l'URI che punta a un documento contenente l'informativa sulla privacy correlata all'immagine del sistema operativo.
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: Specifica l'URI dell'icona visualizzata per l'immagine nel portale di gestione.
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: Specifica la dimensione da utilizzare per la macchina virtuale creata dall'immagine del sistema operativo.
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: Specifica l'URI dell'icona piccola visualizzata quando l'immagine viene presentata nel portale di gestione di Azure. L'elemento SmallIconUri è solo disponibile Usa la versione 2013-03-01 o versione successiva.
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: >-
+        Specifica la lingua dell'immagine.
+
+        L'elemento di linguaggio è disponibile solo Usa la versione 2013-03-01 o versione successiva.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function update(imageName, parameters, callback)
+  langs:
+  - js
