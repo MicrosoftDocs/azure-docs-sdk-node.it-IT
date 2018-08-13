@@ -1,0 +1,210 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5c821692ec408af0a872de276d63a516edf2f3ac
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056093"
+items:
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: FirewallRuleOperations
+  summary: >-
+    <span data-ttu-id="a8aa6-101">L'API di gestione Database SQL di Azure include operazioni per gestire le regole del Firewall a livello di server per i server di Database SQL di Azure.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-101">The Azure SQL Database Management API includes operations for managing the server-level Firewall Rules for Azure SQL Database Servers.</span></span> <span data-ttu-id="a8aa6-102">Non è possibile gestire le regole del firewall a livello di database usando l'API di gestione Database SQL di Azure; essi possono essere gestite solo eseguendo le istruzioni Transact-SQL nel database master o singoli utenti.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-102">You cannot manage the database-level firewall rules using the Azure SQL Database Management API; they can only be managed by running the Transact-SQL statements against the master or individual user databases.</span></span>
+
+    <span data-ttu-id="a8aa6-103">__Nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-103">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="a8aa6-104">Vedere [firewallRules] {@link SqlManagementClient ~ SqlManagementClient #firewallRules}.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-104">See [firewallRules] {@link SqlManagementClient~SqlManagementClient#firewallRules}.</span></span>
+
+    <span data-ttu-id="a8aa6-105">Inizializza una nuova istanza della classe FirewallRuleOperations.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-105">Initializes a new instance of the FirewallRuleOperations class.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations
+  type: Class
+  children:
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: FirewallRuleOperations(client)
+  fullName: azure-asm-sql.FirewallRuleOperations.FirewallRuleOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="a8aa6-106">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-106">Reference to the service client.</span></span>
+    content: new FirewallRuleOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: create(serverName, parameters, callback)
+  summary: <span data-ttu-id="a8aa6-107">Aggiunge una nuova regola del Firewall a livello di server per un Server di Database SQL di Azure.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-107">Adds a new server-level Firewall Rule for an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.create(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-108">Il nome del Server di Database SQL di Azure a cui verrà applicata questa regola.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-108">The name of the Azure SQL Database Server to which this rule will be applied.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.FirewallRuleCreateParameters
+      description: <span data-ttu-id="a8aa6-109">I parametri per l'operazione Create Firewall Rule.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-109">The parameters for the Create Firewall Rule operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-110">Ottiene o imposta il nome della nuova regola Firewall.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-110">Gets or sets the name for the new Firewall Rule.</span></span>
+    - id: parameters.startIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-111">Ottiene o imposta l'indirizzo IP di inizio per la nuova regola del Firewall.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-111">Gets or sets the beginning IP address for the new Firewall Rule.</span></span>
+    - id: parameters.endIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-112">Ottiene o imposta l'indirizzo IP finale per la nuova regola del Firewall.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-112">Gets or sets the ending IP address for the new Firewall Rule.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="a8aa6-113">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-113">The response stream.</span></span>
+    content: function create(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: deleteMethod(serverName, ruleName, callback)
+  summary: <span data-ttu-id="a8aa6-114">Elimina una regola del Firewall a livello di server da un Server di Database SQL di Azure.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-114">Deletes a server-level Firewall Rule from an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.deleteMethod(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-115">Il nome del Server di Database SQL Azure che avrà la regola di Firewall rimossi da essa.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-115">The name of the Azure SQL Database Server that will have the Firewall Fule removed from it.</span></span>
+    - id: ruleName
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-116">Nome della regola di Firewall da eliminare.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-116">The name of the Firewall Fule to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="a8aa6-117">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-117">The response stream.</span></span>
+    content: function deleteMethod(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: get(serverName, ruleName, callback)
+  summary: <span data-ttu-id="a8aa6-118">Restituisce la regola del Firewall per un Server di Database SQL di Azure con un nome corrispondente.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-118">Returns the Firewall rule for an Azure SQL Database Server with a matching name.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.get(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-119">Il nome del Server di Database SQL di Azure per eseguire query per la regola del Firewall.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-119">The name of the Azure SQL Database Server to query for the Firewall Rule.</span></span>
+    - id: ruleName
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-120">Il nome della regola da recuperare.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-120">The name of the rule to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="a8aa6-121">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-121">The response stream.</span></span>
+    content: function get(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: list(serverName, callback)
+  summary: <span data-ttu-id="a8aa6-122">Restituisce un elenco di regole del Firewall a livello di server per un Server di Database SQL di Azure.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-122">Returns a list of server-level Firewall Rules for an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-123">Il nome del Server di Database SQL di Azure da cui elencare le regole del Firewall.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-123">The name of the Azure SQL Database Server from which to list the Firewall Rules.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="a8aa6-124">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-124">The response stream.</span></span>
+    content: function list(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: update(serverName, ruleName, parameters, callback)
+  summary: <span data-ttu-id="a8aa6-125">Aggiorna una regola Firewall a livello di server esistente per un Server di Database SQL di Azure.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-125">Updates an existing server-level Firewall Rule for an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.update(serverName, ruleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-126">Il nome del Server di Database SQL Azure con la regola del Firewall da aggiornare.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-126">The name of the Azure SQL Database Server that has the Firewall Rule to be updated.</span></span>
+    - id: ruleName
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-127">Il nome della regola del Firewall da aggiornare.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-127">The name of the Firewall Rule to be updated.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.FirewallRuleUpdateParameters
+      description: <span data-ttu-id="a8aa6-128">I parametri per l'operazione Aggiorna regola Firewall.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-128">The parameters for the Update Firewall Rule operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-129">Ottiene o imposta il nuovo nome della regola del Firewall.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-129">Gets or sets the new name of the Firewall Rule.</span></span>
+    - id: parameters.startIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-130">Ottiene o imposta il nuovo indirizzo IP di inizio per la regola del Firewall.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-130">Gets or sets the new beginning IP address for this Firewall Rule.</span></span>
+    - id: parameters.endIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="a8aa6-131">Ottiene o imposta il nuovo indirizzo IP finale per la regola del Firewall.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-131">Gets or sets the new ending IP address for this Firewall Rule.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="a8aa6-132">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="a8aa6-132">The response stream.</span></span>
+    content: function update(serverName, ruleName, parameters, callback)
+  langs:
+  - js

@@ -1,0 +1,139 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7a2c7b1fab19483fd1d2af2a16334cf6e7c396b7
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056064"
+items:
+- uid: azure-asm-sql.SqlService
+  id: azure-asm-sql.SqlService
+  name: SqlService
+  summary: <span data-ttu-id="84835-101">L'oggetto SqlService consente di eseguire operazioni di gestione per i database creati mediante il Database SQL di Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="84835-101">The SqlService object allows you to perform management operations against databases created using Microsoft Azure SQL Database.</span></span>
+  fullName: azure-asm-sql.SqlService
+  type: Class
+  children:
+  - azure-asm-sql.SqlService.#ctor
+  - azure-asm-sql.SqlService#createServerDatabase
+  - azure-asm-sql.SqlService#deleteServerDatabase
+  - azure-asm-sql.SqlService#listServerDatabases
+  langs:
+  - js
+- id: azure-asm-sql.SqlService.#ctor
+  uid: azure-asm-sql.SqlService.#ctor
+  parent: azure-asm-sql.SqlService
+  name: SqlService(serverName, administratorLogin, administratorLoginPassword, host, acsHost, authenticationProvider)
+  fullName: azure-asm-sql.SqlService.SqlService(serverName, administratorLogin, administratorLoginPassword, host, acsHost, authenticationProvider)
+  summary: <span data-ttu-id="84835-102">Crea un nuovo oggetto SqlService</span><span class="sxs-lookup"><span data-stu-id="84835-102">Creates a new SqlService object</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="84835-103">Il nome del server SQL.</span><span class="sxs-lookup"><span data-stu-id="84835-103">The SQL server name.</span></span>
+    - id: administratorLogin
+      type:
+      - string
+      description: <span data-ttu-id="84835-104">L'accesso di amministratore di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="84835-104">The SQL Server administrator login.</span></span>
+    - id: administratorLoginPassword
+      type:
+      - string
+      description: <span data-ttu-id="84835-105">La password di accesso amministratore di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="84835-105">The SQL Server administrator login password.</span></span>
+    - id: host
+      type:
+      - string
+      description: <span data-ttu-id="84835-106">L'host del servizio.</span><span class="sxs-lookup"><span data-stu-id="84835-106">The host for the service.</span></span>
+      optional: true
+    - id: acsHost
+      type:
+      - string
+      description: <span data-ttu-id="84835-107">L'host del servizio contenitore di Azure.</span><span class="sxs-lookup"><span data-stu-id="84835-107">The acs host.</span></span>
+      optional: true
+    - id: authenticationProvider
+      type:
+      - object
+      description: <span data-ttu-id="84835-108">Il provider di autenticazione.</span><span class="sxs-lookup"><span data-stu-id="84835-108">The authentication provider.</span></span>
+      optional: true
+    content: new SqlService(serverName, administratorLogin, administratorLoginPassword, host, acsHost, authenticationProvider)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlService#createServerDatabase
+  id: azure-asm-sql.SqlService#createServerDatabase
+  parent: azure-asm-sql.SqlService
+  name: createServerDatabase(databaseName, options, callback)
+  summary: <span data-ttu-id="84835-109">Crea un database di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="84835-109">Creates a SQL Server database.</span></span>
+  fullName: azure-asm-sql.SqlService.createServerDatabase(databaseName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="84835-110">Il nome del database.</span><span class="sxs-lookup"><span data-stu-id="84835-110">The database name.</span></span>
+    - id: options
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="84835-111">La funzione di callback o opzioni get.</span><span class="sxs-lookup"><span data-stu-id="84835-111">The get options or callback function.</span></span>
+      optional: true
+    - id: options.collation
+      type:
+      - string
+      description: <span data-ttu-id="84835-112">Regole di confronto del database da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="84835-112">The database collation to be used.</span></span>
+      optional: true
+    - id: options.edition
+      type:
+      - string
+      description: <span data-ttu-id="84835-113">L'edizione del database da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="84835-113">The database edition to be used.</span></span>
+      optional: true
+    - id: options.maxSizeInGB
+      type:
+      - string
+      description: <span data-ttu-id="84835-114">Le dimensioni massime del database in gigabyte.</span><span class="sxs-lookup"><span data-stu-id="84835-114">The database maximum size in gigabytes.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="84835-115">`error` conterrà informazioni se si verifica un errore; in caso contrario `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="84835-115">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function createServerDatabase(databaseName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlService#deleteServerDatabase
+  id: azure-asm-sql.SqlService#deleteServerDatabase
+  parent: azure-asm-sql.SqlService
+  name: deleteServerDatabase(databaseId, callback)
+  summary: <span data-ttu-id="84835-116">Elimina un database di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="84835-116">Deletes a SQL Server database.</span></span>
+  fullName: azure-asm-sql.SqlService.deleteServerDatabase(databaseId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseId
+      type:
+      - string
+      description: <span data-ttu-id="84835-117">L'identificatore del database.</span><span class="sxs-lookup"><span data-stu-id="84835-117">The database identifier.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="84835-118">`error` conterrà informazioni se si verifica un errore; in caso contrario `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="84835-118">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    content: function deleteServerDatabase(databaseId, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlService#listServerDatabases
+  id: azure-asm-sql.SqlService#listServerDatabases
+  parent: azure-asm-sql.SqlService
+  name: listServerDatabases(callback)
+  summary: <span data-ttu-id="84835-119">Elenca i database di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="84835-119">Lists the SQL Server databases.</span></span>
+  fullName: azure-asm-sql.SqlService.listServerDatabases(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="84835-120">`error` conterrà informazioni se si verifica un errore; in caso contrario `results` conterrà l'elenco dei database.</span><span class="sxs-lookup"><span data-stu-id="84835-120">`error` will contain information if an error occurs; otherwise `results` will contain the list of databases.</span></span>
+                                                                 <span data-ttu-id="84835-121">`response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="84835-121">`response` will contain information related to this operation.</span></span>
+    content: function listServerDatabases(callback)
+  langs:
+  - js

@@ -1,0 +1,471 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4e46f0fcf1c3a688b4a2234840c62b9c527faea6
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055812"
+items:
+- uid: azure-asm-sb.QueueOperations~QueueOperations
+  id: azure-asm-sb.QueueOperations~QueueOperations
+  name: QueueOperations
+  summary: >-
+    <span data-ttu-id="0c0bf-101">L'API di gestione del Bus di servizio include operazioni per gestire le code del Bus di servizio.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-101">The Service Bus Management API includes operations for managing Service Bus queues.</span></span>
+
+    <span data-ttu-id="0c0bf-102">__Nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [ServiceBusManagementClient] {@link ServiceBusManagementClient ~ ServiceBusManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-102">__NOTE__: An instance of this class is automatically created for an instance of the [ServiceBusManagementClient] {@link ServiceBusManagementClient~ServiceBusManagementClient}.</span></span>
+
+    <span data-ttu-id="0c0bf-103">Vedere [code] {@link ServiceBusManagementClient ~ ServiceBusManagementClient #queues}.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-103">See [queues] {@link ServiceBusManagementClient~ServiceBusManagementClient#queues}.</span></span>
+
+    <span data-ttu-id="0c0bf-104">Inizializza una nuova istanza della classe QueueOperations.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-104">Initializes a new instance of the QueueOperations class.</span></span>
+  fullName: azure-asm-sb.QueueOperations
+  type: Class
+  children:
+  - azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  - azure-asm-sb.QueueOperations~QueueOperations#create
+  - azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  - azure-asm-sb.QueueOperations~QueueOperations#get
+  - azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  - azure-asm-sb.QueueOperations~QueueOperations#list
+  - azure-asm-sb.QueueOperations~QueueOperations#update
+  langs:
+  - js
+- id: azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  uid: azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: QueueOperations(client)
+  fullName: azure-asm-sb.QueueOperations.QueueOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: <span data-ttu-id="0c0bf-105">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-105">Reference to the service client.</span></span>
+    content: new QueueOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#create
+  id: azure-asm-sb.QueueOperations~QueueOperations#create
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: create(namespaceName, queue, callback)
+  summary: <span data-ttu-id="0c0bf-106">Crea una nuova coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-106">Creates a new queue.</span></span> <span data-ttu-id="0c0bf-107">Una volta creato, manifesto delle risorse di questa coda è non modificabile.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-107">Once created, this queue's resource manifest is immutable.</span></span> <span data-ttu-id="0c0bf-108">Questa operazione è idempotente.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-108">This operation is idempotent.</span></span> <span data-ttu-id="0c0bf-109">Si ripete la chiamata di creazione dopo che è stata creata una coda con lo stesso nome, verrà generato un messaggio di errore di conflitto 409.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-109">Repeating the create call, after a queue with same name has been created successfully, will result in a 409 Conflict error message.</span></span>  <span data-ttu-id="0c0bf-110">(vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj856295.aspx per altre informazioni)</span><span class="sxs-lookup"><span data-stu-id="0c0bf-110">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj856295.aspx for more information)</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.create(namespaceName, queue, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-111">Lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-111">The namespace name.</span></span>
+    - id: queue
+      type:
+      - azure-asm-sb.ServiceBusQueueCreateParameters
+      description: <span data-ttu-id="0c0bf-112">Coda del bus di servizio.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-112">The service bus queue.</span></span>
+    - id: queue.name
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-113">Nome della coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-113">The name of the queue.</span></span>
+    - id: queue.lockDuration
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="0c0bf-114">Determina la quantità di tempo in secondi in cui un messaggio deve essere bloccato per l'elaborazione da un ricevitore.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-114">Determines the amount of time in seconds in which a message should be locked for processing by a receiver.</span></span>
+
+        <span data-ttu-id="0c0bf-115">Dopo questo periodo, il messaggio viene sbloccato ed è disponibile per il ricevitore successivo.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-115">After this period, the message is unlocked and available for consumption by the next receiver.</span></span> <span data-ttu-id="0c0bf-116">Può essere impostata solo al momento della creazione della coda: \* intervallo: 0 - 5 minuti.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-116">Settable only at queue creation time:\* Range: 0 - 5 minutes.</span></span> <span data-ttu-id="0c0bf-117">il valore 0 indica che il messaggio non sia bloccato \* predefinito: 30 secondi</span><span class="sxs-lookup"><span data-stu-id="0c0bf-117">0 means that the message is not locked\* Default: 30 seconds</span></span>
+      optional: true
+    - id: queue.maxSizeInMegabytes
+      type:
+      - number
+      description: '<span data-ttu-id="0c0bf-118">Specifica la dimensione massima della coda in megabyte.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-118">Specifies the maximum queue size in megabytes.</span></span> <span data-ttu-id="0c0bf-119">Qualsiasi tentativo di accodare un messaggio che causa la coda di superare questo valore avrà esito negativo.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-119">Any attempt to enqueue a message that will cause the queue to exceed this value will fail.</span></span> <span data-ttu-id="0c0bf-120">È possibile impostare questo parametro solo al momento della creazione della coda usando i valori seguenti: \* intervallo: 1-1024 (i valori validi sono 1024, 2048, 3072, 4096, 5120) \* predefinito: 1 \* 1024 (i valori validi sono 1024, 2048, 3072, 4096, 5120)</span><span class="sxs-lookup"><span data-stu-id="0c0bf-120">You can only set this parameter at queue creation time using the following values: \* Range: 1 - 1024 (valid values are 1024, 2048, 3072, 4096, 5120) \* Default: 1\*1024 (valid values are 1024, 2048, 3072, 4096, 5120)</span></span>'
+      optional: true
+    - id: queue.requiresDuplicateDetection
+      type:
+      - boolean
+      description: '<span data-ttu-id="0c0bf-121">Può essere impostata solo al videochiamate di creazione della coda predefinita per una coda permanente: false</span><span class="sxs-lookup"><span data-stu-id="0c0bf-121">Settable only at queue creation time.\* Default for durable queue: false</span></span>'
+      optional: true
+    - id: queue.requiresSession
+      type:
+      - boolean
+      description: '<span data-ttu-id="0c0bf-122">Può essere impostata solo al momento della creazione della coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-122">Settable only at queue creation time.</span></span> <span data-ttu-id="0c0bf-123">Se impostato su true, la coda sarà riconoscere la sessione e sarà supportato solo SessionReceiver.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-123">If set to true, the queue will be session-aware and only SessionReceiver will be supported.</span></span> <span data-ttu-id="0c0bf-124">Le code di riconoscere le sessioni non sono supportate tramite REST.\* predefinito per una coda permanente: false</span><span class="sxs-lookup"><span data-stu-id="0c0bf-124">Session-aware queues are not supported through REST.\* Default for durable queue: false</span></span>'
+      optional: true
+    - id: queue.defaultMessageTimeToLive
+      type:
+      - string
+      description: '<span data-ttu-id="0c0bf-125">A seconda che sia attivato mancato recapito dei messaggi, un messaggio viene automaticamente spostato la proprietà DeadLetterQueue o eliminato se è stato archiviato nella coda per più di tempo specificato.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-125">Depending on whether DeadLettering is enabled, a message is automatically moved to the DeadLetterQueue or deleted if it has been stored in the queue for longer than the specified time.</span></span> <span data-ttu-id="0c0bf-126">Questo valore viene sovrascritto dalla durata TTL specificato nel messaggio solo se tale durata è inferiore a quella impostata sulla coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-126">This value is overwritten by a TTL specified on the message if and only if the message TTL is smaller than the TTL set on the queue.</span></span> <span data-ttu-id="0c0bf-127">Questo valore è modificabile dopo la creazione della coda: * intervallo: 1 secondo - TimeSpan.MaxValue* predefinito: MaxValue</span><span class="sxs-lookup"><span data-stu-id="0c0bf-127">This value is immutable after the Queue has been created:* Range: 1 second - TimeSpan.MaxValue* Default: TimeSpan.MaxValue</span></span>'
+      optional: true
+    - id: queue.deadLetteringOnMessageExpiration
+      type:
+      - boolean
+      description: "<span data-ttu-id=\"0c0bf-128\">Questo campo controlla come il Bus di servizio gestisce un messaggio la cui durata (TTL) scaduta.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-128\">This field controls how the Service Bus handles a message whose TTL has expired.</span></span> <span data-ttu-id=\"0c0bf-129\">Se è abilitata e un messaggio scade, il Bus di servizio sposta il messaggio dalla coda nella coda secondaria non recapitabilità della coda.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-129\">If it is enabled and a message expires, the Service Bus moves the message from the queue into the queue's dead-letter sub-queue.</span></span> <span data-ttu-id=\"0c0bf-130\">Se disabilitato, messaggio verrà eliminato definitivamente dalla coda.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-130\">If disabled, message will be permanently deleted from the queue.</span></span> <span data-ttu-id=\"0c0bf-131\">Può essere impostata solo al videochiamate di creazione della coda predefinita: false</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-131\">Settable only at queue creation time.\\* Default: false</span></span>"
+      optional: true
+    - id: queue.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: "<span data-ttu-id=\"0c0bf-132\">Specifica l'intervallo di tempo durante i quali il Bus di servizio di rilevare i messaggi duplicati: * intervallo: 1 secondo - 7 giorni * predefinito: 10 minuti</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-132\">Specifies the time span during which the Service Bus detects message duplication:* Range: 1 second - 7 days* Default: 10 minutes</span></span>"
+      optional: true
+    - id: queue.maxDeliveryCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-133">Il numero massimo di tentativi da un messaggio di Service bus per recapitare prima being dead lettered o scartati.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-133">The maximum number of times a message SB will try to deliver before being dead lettered or discarded.</span></span>
+      optional: true
+    - id: queue.enableBatchedOperations
+      type:
+      - boolean
+      description: <span data-ttu-id="0c0bf-134">Abilita o disabilita lato servizio il comportamento di invio in batch quando si eseguono operazioni per la coda specifica.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-134">Enables or disables service side batching behavior when performing operations for the specific queue.</span></span> <span data-ttu-id="0c0bf-135">Quando abilitato, il bus di servizio verrà raccolta/batch più operazioni di back-end deve essere più efficiente.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-135">When enabled, service bus will collect/batch multiple operations to the backend to be more connection efficient.</span></span> <span data-ttu-id="0c0bf-136">Se si desidera ottenere una latenza più bassa operazione è possibile disabilitare questa funzionalità.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-136">If user wants lower operation latency then they can disable this feature.</span></span>
+      optional: true
+    - id: queue.sizeInBytes
+      type:
+      - number
+      description: "<span data-ttu-id=\"0c0bf-137\">Riflette i byte effettivi che i messaggi nella coda attualmente occupati dai rispetto quota.\\* della coda intervallo: 0 - MaxTopicSizeinMegaBytes</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-137\">Reflects the actual bytes that messages in the queue currently occupy toward the queue's quota.\\* Range: 0 -MaxTopicSizeinMegaBytes</span></span>"
+      optional: true
+    - id: queue.messageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-138">Visualizza il numero di messaggi attualmente nella coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-138">Displays the number of messages currently in the queue.</span></span>
+      optional: true
+    - id: queue.isAnonymousAccessible
+      type:
+      - boolean
+      description: <span data-ttu-id="0c0bf-139">Indica se è consentito l'accesso anonimo.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-139">Gets whether anonymous access is allowed.</span></span>
+      optional: true
+    - id: queue.authorizationRules
+      type:
+      - array
+      description: <span data-ttu-id="0c0bf-140">Ottiene le regole di autorizzazione per la descrizione.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-140">Gets the authorization rules for the description.</span></span>
+      optional: true
+    - id: queue.status
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-141">Ottiene o imposta lo stato corrente della coda (abilitato o disabilitato).</span><span class="sxs-lookup"><span data-stu-id="0c0bf-141">Gets or sets the current status of the queue (enabled or disabled).</span></span> <span data-ttu-id="0c0bf-142">Quando viene disabilitata una coda, coda non è possibile inviare o ricevere messaggi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-142">When a queue is disabled, that queue cannot send or receive messages.</span></span>
+      optional: true
+    - id: queue.supportOrdering
+      type:
+      - boolean
+      description: <span data-ttu-id="0c0bf-143">Ottiene o imposta se la coda supporta l'ordinamento.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-143">Gets or sets whether the queue supports ordering.</span></span>
+      optional: true
+    - id: queue.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: <span data-ttu-id="0c0bf-144">Statistiche di coda corrente.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-144">Current queue statistics.</span></span>
+      optional: true
+    - id: queue.countDetails.activeMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-145">Il numero corrente di messaggi attivi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-145">The current number of active messages.</span></span>
+      optional: true
+    - id: queue.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-146">Il numero corrente di messaggi non recapitabili.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-146">The current number of dead letters.</span></span>
+      optional: true
+    - id: queue.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-147">Numero corrente dei messaggi pianificati.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-147">The current number of scheduled messages.</span></span>
+      optional: true
+    - id: queue.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-148">Il numero corrente di trasferimento messaggi non recapitabili.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-148">The current number of transfer dead letters.</span></span>
+      optional: true
+    - id: queue.countDetails.transferMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-149">Il numero corrente di trasferimento messaggi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-149">The current number of transfer messages.</span></span>
+      optional: true
+    - id: queue.autoDeleteOnIdle
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-150">Implementata.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-150">Implemented.</span></span>
+      optional: true
+    - id: queue.entityAvailabilityStatus
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-151">Lo stato di disponibilità corrente della coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-151">The current availability status of the queue.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0c0bf-152">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-152">The response stream.</span></span>
+    content: function create(namespaceName, queue, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  id: azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: deleteMethod(namespaceName, queueName, callback)
+  summary: <span data-ttu-id="0c0bf-153">Elimina una coda esistente.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-153">Deletes an existing queue.</span></span> <span data-ttu-id="0c0bf-154">Questa operazione rimuoverà anche tutto lo stato associato, inclusi i messaggi nella coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-154">This operation will also remove all associated state including messages in the queue.</span></span>  <span data-ttu-id="0c0bf-155">(vedere http://msdn.microsoft.com/en-us/library/hh780747.aspx per altre informazioni)</span><span class="sxs-lookup"><span data-stu-id="0c0bf-155">(see http://msdn.microsoft.com/en-us/library/hh780747.aspx for more information)</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.deleteMethod(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-156">Lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-156">The namespace name.</span></span>
+    - id: queueName
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-157">Il nome della coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-157">The queue name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0c0bf-158">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-158">The response stream.</span></span>
+    content: function deleteMethod(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#get
+  id: azure-asm-sb.QueueOperations~QueueOperations#get
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: get(namespaceName, queueName, callback)
+  summary: <span data-ttu-id="0c0bf-159">La descrizione della coda è un documento XML AtomPub che definisce la semantica desiderata per una sottoscrizione.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-159">The queue description is an XML AtomPub document that defines the desired semantics for a subscription.</span></span> <span data-ttu-id="0c0bf-160">La descrizione della coda contiene le proprietà seguenti.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-160">The queue description contains the following properties.</span></span> <span data-ttu-id="0c0bf-161">Per altre informazioni, vedere l'argomento proprietà QueueDescription.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-161">For more information, see the QueueDescription Properties topic.</span></span>  <span data-ttu-id="0c0bf-162">(vedere http://msdn.microsoft.com/en-us/library/windowsazure/hh780773.aspx per altre informazioni)</span><span class="sxs-lookup"><span data-stu-id="0c0bf-162">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh780773.aspx for more information)</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.get(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-163">Lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-163">The namespace name.</span></span>
+    - id: queueName
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-164">Il nome della coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-164">The queue name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0c0bf-165">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-165">The response stream.</span></span>
+    content: function get(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  id: azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: getConnectionDetails(namespaceName, queueName, callback)
+  summary: <span data-ttu-id="0c0bf-166">Ottiene il set delle stringhe di connessione per una coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-166">Gets the set of connection strings for a queue.</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.getConnectionDetails(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-167">Lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-167">The namespace name.</span></span>
+    - id: queueName
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-168">Il nome della coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-168">The queue name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0c0bf-169">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-169">The response stream.</span></span>
+    content: function getConnectionDetails(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#list
+  id: azure-asm-sb.QueueOperations~QueueOperations#list
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: list(namespaceName, callback)
+  summary: <span data-ttu-id="0c0bf-170">Enumerare le code nello spazio dei nomi del servizio.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-170">Enumerates the queues in the service namespace.</span></span> <span data-ttu-id="0c0bf-171">Il risultato viene restituito in pagine, ciascuna contenente fino a 100 code.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-171">The result is returned in pages, each containing up to 100 queues.</span></span> <span data-ttu-id="0c0bf-172">Se lo spazio dei nomi contiene più di 100 code, viene restituito un feed che contiene la prima pagina e un collegamento successivo con l'URI per visualizzare la pagina successiva di dati.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-172">If the namespace contains more than 100 queues, a feed is returned that contains the first page and a next link with the URI to view the next page of data.</span></span>  <span data-ttu-id="0c0bf-173">(vedere http://msdn.microsoft.com/en-us/library/windowsazure/hh780759.asp per altre informazioni)</span><span class="sxs-lookup"><span data-stu-id="0c0bf-173">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh780759.asp for more information)</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.list(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-174">Lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-174">The namespace name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0c0bf-175">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-175">The response stream.</span></span>
+    content: function list(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#update
+  id: azure-asm-sb.QueueOperations~QueueOperations#update
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: update(namespaceName, queue, callback)
+  summary: <span data-ttu-id="0c0bf-176">Aggiorna la descrizione della coda ed effettua una chiamata per aggiornare le voci di database corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-176">Updates the queue description and makes a call to update corresponding DB entries.</span></span>  <span data-ttu-id="0c0bf-177">(vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj856305.aspx per altre informazioni)</span><span class="sxs-lookup"><span data-stu-id="0c0bf-177">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj856305.aspx for more information)</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.update(namespaceName, queue, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-178">Lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-178">The namespace name.</span></span>
+    - id: queue
+      type:
+      - azure-asm-sb.ServiceBusQueue
+      description: <span data-ttu-id="0c0bf-179">Coda del bus di servizio.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-179">The service bus queue.</span></span>
+    - id: queue.name
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-180">Nome della coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-180">The name of the queue.</span></span>
+      optional: true
+    - id: queue.lockDuration
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="0c0bf-181">Determina la quantità di tempo in secondi in cui un messaggio deve essere bloccato per l'elaborazione da un ricevitore.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-181">Determines the amount of time in seconds in which a message should be locked for processing by a receiver.</span></span>
+
+        <span data-ttu-id="0c0bf-182">Dopo questo periodo, il messaggio viene sbloccato ed è disponibile per il ricevitore successivo.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-182">After this period, the message is unlocked and available for consumption by the next receiver.</span></span> <span data-ttu-id="0c0bf-183">Può essere impostata solo al momento della creazione della coda: \* intervallo: 0 - 5 minuti.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-183">Settable only at queue creation time:\* Range: 0 - 5 minutes.</span></span> <span data-ttu-id="0c0bf-184">il valore 0 indica che il messaggio non sia bloccato \* predefinito: 30 secondi</span><span class="sxs-lookup"><span data-stu-id="0c0bf-184">0 means that the message is not locked\* Default: 30 seconds</span></span>
+      optional: true
+    - id: queue.maxSizeInMegabytes
+      type:
+      - number
+      description: '<span data-ttu-id="0c0bf-185">Specifica la dimensione massima della coda in megabyte.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-185">Specifies the maximum queue size in megabytes.</span></span> <span data-ttu-id="0c0bf-186">Qualsiasi tentativo di accodare un messaggio che causa la coda di superare questo valore avrà esito negativo.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-186">Any attempt to enqueue a message that will cause the queue to exceed this value will fail.</span></span> <span data-ttu-id="0c0bf-187">È possibile impostare questo parametro solo al momento della creazione della coda usando i valori seguenti: \* intervallo: 1-1024 (i valori validi sono 1024, 2048, 3072, 4096, 5120) \* predefinito: 1 \* 1024 (i valori validi sono 1024, 2048, 3072, 4096, 5120)</span><span class="sxs-lookup"><span data-stu-id="0c0bf-187">You can only set this parameter at queue creation time using the following values: \* Range: 1 - 1024 (valid values are 1024, 2048, 3072, 4096, 5120) \* Default: 1\*1024 (valid values are 1024, 2048, 3072, 4096, 5120)</span></span>'
+      optional: true
+    - id: queue.requiresDuplicateDetection
+      type:
+      - boolean
+      description: '<span data-ttu-id="0c0bf-188">Può essere impostata solo al videochiamate di creazione della coda predefinita per una coda permanente: false</span><span class="sxs-lookup"><span data-stu-id="0c0bf-188">Settable only at queue creation time.\* Default for durable queue: false</span></span>'
+      optional: true
+    - id: queue.requiresSession
+      type:
+      - boolean
+      description: '<span data-ttu-id="0c0bf-189">Può essere impostata solo al momento della creazione della coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-189">Settable only at queue creation time.</span></span> <span data-ttu-id="0c0bf-190">Se impostato su true, la coda sarà riconoscere la sessione e sarà supportato solo SessionReceiver.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-190">If set to true, the queue will be session-aware and only SessionReceiver will be supported.</span></span> <span data-ttu-id="0c0bf-191">Le code di riconoscere le sessioni non sono supportate tramite REST.\* predefinito per una coda permanente: false</span><span class="sxs-lookup"><span data-stu-id="0c0bf-191">Session-aware queues are not supported through REST.\* Default for durable queue: false</span></span>'
+      optional: true
+    - id: queue.defaultMessageTimeToLive
+      type:
+      - string
+      description: '<span data-ttu-id="0c0bf-192">A seconda che sia attivato mancato recapito dei messaggi, un messaggio viene automaticamente spostato la proprietà DeadLetterQueue o eliminato se è stato archiviato nella coda per più di tempo specificato.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-192">Depending on whether DeadLettering is enabled, a message is automatically moved to the DeadLetterQueue or deleted if it has been stored in the queue for longer than the specified time.</span></span> <span data-ttu-id="0c0bf-193">Questo valore viene sovrascritto dalla durata TTL specificato nel messaggio solo se tale durata è inferiore a quella impostata sulla coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-193">This value is overwritten by a TTL specified on the message if and only if the message TTL is smaller than the TTL set on the queue.</span></span> <span data-ttu-id="0c0bf-194">Questo valore è modificabile dopo la creazione della coda: * intervallo: 1 secondo - TimeSpan.MaxValue* predefinito: MaxValue</span><span class="sxs-lookup"><span data-stu-id="0c0bf-194">This value is immutable after the Queue has been created:* Range: 1 second - TimeSpan.MaxValue* Default: TimeSpan.MaxValue</span></span>'
+      optional: true
+    - id: queue.deadLetteringOnMessageExpiration
+      type:
+      - boolean
+      description: "<span data-ttu-id=\"0c0bf-195\">Questo campo controlla come il Bus di servizio gestisce un messaggio la cui durata (TTL) scaduta.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-195\">This field controls how the Service Bus handles a message whose TTL has expired.</span></span> <span data-ttu-id=\"0c0bf-196\">Se è abilitata e un messaggio scade, il Bus di servizio sposta il messaggio dalla coda nella coda secondaria non recapitabilità della coda.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-196\">If it is enabled and a message expires, the Service Bus moves the message from the queue into the queue's dead-letter sub-queue.</span></span> <span data-ttu-id=\"0c0bf-197\">Se disabilitato, messaggio verrà eliminato definitivamente dalla coda.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-197\">If disabled, message will be permanently deleted from the queue.</span></span> <span data-ttu-id=\"0c0bf-198\">Può essere impostata solo al videochiamate di creazione della coda predefinita: false</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-198\">Settable only at queue creation time.\\* Default: false</span></span>"
+      optional: true
+    - id: queue.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: "<span data-ttu-id=\"0c0bf-199\">Specifica l'intervallo di tempo durante i quali il Bus di servizio di rilevare i messaggi duplicati: * intervallo: 1 secondo - 7 giorni * predefinito: 10 minuti</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-199\">Specifies the time span during which the Service Bus detects message duplication:* Range: 1 second - 7 days* Default: 10 minutes</span></span>"
+      optional: true
+    - id: queue.maxDeliveryCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-200">Il numero massimo di tentativi da un messaggio di Service bus per recapitare prima being dead lettered o scartati.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-200">The maximum number of times a message SB will try to deliver before being dead lettered or discarded.</span></span>
+      optional: true
+    - id: queue.enableBatchedOperations
+      type:
+      - boolean
+      description: <span data-ttu-id="0c0bf-201">Abilita o disabilita lato servizio il comportamento di invio in batch quando si eseguono operazioni per la coda specifica.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-201">Enables or disables service side batching behavior when performing operations for the specific queue.</span></span> <span data-ttu-id="0c0bf-202">Quando abilitato, il bus di servizio verrà raccolta/batch più operazioni di back-end deve essere più efficiente.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-202">When enabled, service bus will collect/batch multiple operations to the backend to be more connection efficient.</span></span> <span data-ttu-id="0c0bf-203">Se si desidera ottenere una latenza più bassa operazione è possibile disabilitare questa funzionalità.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-203">If user wants lower operation latency then they can disable this feature.</span></span>
+      optional: true
+    - id: queue.sizeInBytes
+      type:
+      - number
+      description: "<span data-ttu-id=\"0c0bf-204\">Riflette i byte effettivi che i messaggi nella coda attualmente occupati dai rispetto quota.\\* della coda intervallo: 0 - MaxTopicSizeinMegaBytes</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c0bf-204\">Reflects the actual bytes that messages in the queue currently occupy toward the queue's quota.\\* Range: 0 -MaxTopicSizeinMegaBytes</span></span>"
+      optional: true
+    - id: queue.messageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-205">Visualizza il numero di messaggi attualmente nella coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-205">Displays the number of messages currently in the queue.</span></span>
+      optional: true
+    - id: queue.isAnonymousAccessible
+      type:
+      - boolean
+      description: <span data-ttu-id="0c0bf-206">Indica se è consentito l'accesso anonimo.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-206">Gets whether anonymous access is allowed.</span></span>
+      optional: true
+    - id: queue.authorizationRules
+      type:
+      - array
+      description: <span data-ttu-id="0c0bf-207">Ottiene le regole di autorizzazione per la descrizione.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-207">Gets the authorization rules for the description.</span></span>
+      optional: true
+    - id: queue.status
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-208">Ottiene o imposta lo stato corrente della coda (abilitato o disabilitato).</span><span class="sxs-lookup"><span data-stu-id="0c0bf-208">Gets or sets the current status of the queue (enabled or disabled).</span></span> <span data-ttu-id="0c0bf-209">Quando viene disabilitata una coda, coda non è possibile inviare o ricevere messaggi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-209">When a queue is disabled, that queue cannot send or receive messages.</span></span>
+      optional: true
+    - id: queue.createdAt
+      type:
+      - date
+      description: <span data-ttu-id="0c0bf-210">Ora. che di creazione della coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-210">The time the queue was created at.</span></span>
+      optional: true
+    - id: queue.updatedAt
+      type:
+      - date
+      description: <span data-ttu-id="0c0bf-211">Ora che ultimo aggiornamento della coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-211">The time the queue was last updated.</span></span>
+      optional: true
+    - id: queue.accessedAt
+      type:
+      - date
+      description: <span data-ttu-id="0c0bf-212">Ora che ultimo accesso la coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-212">The time the queue was last accessed.</span></span>
+      optional: true
+    - id: queue.supportOrdering
+      type:
+      - boolean
+      description: <span data-ttu-id="0c0bf-213">Ottiene o imposta se la coda supporta l'ordinamento.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-213">Gets or sets whether the queue supports ordering.</span></span>
+      optional: true
+    - id: queue.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: <span data-ttu-id="0c0bf-214">Statistiche di coda corrente.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-214">Current queue statistics.</span></span>
+      optional: true
+    - id: queue.countDetails.activeMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-215">Il numero corrente di messaggi attivi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-215">The current number of active messages.</span></span>
+      optional: true
+    - id: queue.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-216">Il numero corrente di messaggi non recapitabili.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-216">The current number of dead letters.</span></span>
+      optional: true
+    - id: queue.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-217">Numero corrente dei messaggi pianificati.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-217">The current number of scheduled messages.</span></span>
+      optional: true
+    - id: queue.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-218">Il numero corrente di trasferimento messaggi non recapitabili.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-218">The current number of transfer dead letters.</span></span>
+      optional: true
+    - id: queue.countDetails.transferMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0c0bf-219">Il numero corrente di trasferimento messaggi.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-219">The current number of transfer messages.</span></span>
+      optional: true
+    - id: queue.autoDeleteOnIdle
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-220">Implementata.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-220">Implemented.</span></span>
+      optional: true
+    - id: queue.entityAvailabilityStatus
+      type:
+      - string
+      description: <span data-ttu-id="0c0bf-221">Lo stato di disponibilità corrente della coda.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-221">The current availability status of the queue.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0c0bf-222">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="0c0bf-222">The response stream.</span></span>
+    content: function update(namespaceName, queue, callback)
+  langs:
+  - js

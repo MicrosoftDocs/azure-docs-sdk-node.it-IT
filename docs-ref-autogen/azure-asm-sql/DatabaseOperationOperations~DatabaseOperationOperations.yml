@@ -1,0 +1,124 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 43d3f97bde82db60885553c1f3322b23ad527893
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056070"
+items:
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: DatabaseOperationOperations
+  summary: >-
+    <span data-ttu-id="932b8-101">L'API di gestione Database SQL di Azure sono incluse operazioni per ottenere le operazioni del database.</span><span class="sxs-lookup"><span data-stu-id="932b8-101">The Azure SQL Database Management API includes operations for getting database operations.</span></span> <span data-ttu-id="932b8-102">In particolare, questa API consente di ottenere un'operazione specifica o per elencare tutte le operazioni che si sono verificati in un database specifico o in tutti i database nel Server di Database SQL di Azure.</span><span class="sxs-lookup"><span data-stu-id="932b8-102">Specifically, this API allows you to get a specific operation, or to list all the operations that happened on a specific database or on all databases in the Azure SQL Database Server.</span></span>
+
+    <span data-ttu-id="932b8-103">__Nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="932b8-103">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="932b8-104">Vedere [databaseOperations] {@link SqlManagementClient ~ SqlManagementClient #databaseOperations}.</span><span class="sxs-lookup"><span data-stu-id="932b8-104">See [databaseOperations] {@link SqlManagementClient~SqlManagementClient#databaseOperations}.</span></span>
+
+    <span data-ttu-id="932b8-105">Inizializza una nuova istanza della classe DatabaseOperationOperations.</span><span class="sxs-lookup"><span data-stu-id="932b8-105">Initializes a new instance of the DatabaseOperationOperations class.</span></span>
+  fullName: azure-asm-sql.DatabaseOperationOperations
+  type: Class
+  children:
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  langs:
+  - js
+- id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: DatabaseOperationOperations(client)
+  fullName: azure-asm-sql.DatabaseOperationOperations.DatabaseOperationOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="932b8-106">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="932b8-106">Reference to the service client.</span></span>
+    content: new DatabaseOperationOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: get(serverName, operationGuid, callback)
+  summary: <span data-ttu-id="932b8-107">Restituisce informazioni su un'operazione specifica utilizzando il Guid dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="932b8-107">Returns information about a specific operation by using the operation Guid.</span></span>
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.get(serverName, operationGuid, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="932b8-108">Il nome del Server di Database SQL di Azure in cui è ospitato il database.</span><span class="sxs-lookup"><span data-stu-id="932b8-108">The name of the Azure SQL Database Server where the database is hosted.</span></span>
+    - id: operationGuid
+      type:
+      - string
+      description: <span data-ttu-id="932b8-109">Il Guid dell'operazione di Database SQL di Azure devono essere ottenuti.</span><span class="sxs-lookup"><span data-stu-id="932b8-109">The Guid of the Azure SQL Database operation to be obtained.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="932b8-110">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="932b8-110">The response stream.</span></span>
+    content: function get(serverName, operationGuid, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: listByDatabase(serverName, databaseName, callback)
+  summary: <span data-ttu-id="932b8-111">Recupera tutte le operazioni effettuate su un database specifico.</span><span class="sxs-lookup"><span data-stu-id="932b8-111">Retrieves all of the operations that took place on a specific database.</span></span>
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.listByDatabase(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="932b8-112">Il nome del Server di Database SQL Azure che ospita il database.</span><span class="sxs-lookup"><span data-stu-id="932b8-112">The name of the Azure SQL Database Server that hosts the database.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="932b8-113">Il nome del database per il quale recuperare le operazioni.</span><span class="sxs-lookup"><span data-stu-id="932b8-113">The name of the database for which the operations should be retrieved.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="932b8-114">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="932b8-114">The response stream.</span></span>
+    content: function listByDatabase(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: listByServer(serverName, callback)
+  summary: <span data-ttu-id="932b8-115">Recupera tutte le operazioni che si è verificato sul Server di Database SQL di Azure.</span><span class="sxs-lookup"><span data-stu-id="932b8-115">Retrieves all of the operations that occured on the Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.listByServer(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="932b8-116">Il nome del Server di Database SQL di Azure per eseguire una query.</span><span class="sxs-lookup"><span data-stu-id="932b8-116">The name of the Azure SQL Database Server to be queried.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="932b8-117">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="932b8-117">The response stream.</span></span>
+    content: function listByServer(serverName, callback)
+  langs:
+  - js

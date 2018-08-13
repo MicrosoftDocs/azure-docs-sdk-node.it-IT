@@ -1,0 +1,162 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 96b0b3e923a59f735d4c4f065748b06273fff3cb
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056081"
+items:
+- uid: azure-asm-sql.ServerOperations~ServerOperations
+  id: azure-asm-sql.ServerOperations~ServerOperations
+  name: ServerOperations
+  summary: >-
+    <span data-ttu-id="2e293-101">Contiene metodi per consentire varie operazioni sui server di Database SQL di Azure.</span><span class="sxs-lookup"><span data-stu-id="2e293-101">Contains methods to allow various operations on Azure SQL Database Servers.</span></span>
+
+    <span data-ttu-id="2e293-102">__Nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="2e293-102">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="2e293-103">[Server] vedere <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23servers>.</span><span class="sxs-lookup"><span data-stu-id="2e293-103">See [servers] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23servers>.</span></span>
+
+    <span data-ttu-id="2e293-104">Inizializza una nuova istanza della classe ServerOperations.</span><span class="sxs-lookup"><span data-stu-id="2e293-104">Initializes a new instance of the ServerOperations class.</span></span>
+  fullName: azure-asm-sql.ServerOperations
+  type: Class
+  children:
+  - azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  - azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  - azure-asm-sql.ServerOperations~ServerOperations#create
+  - azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  - azure-asm-sql.ServerOperations~ServerOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  uid: azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: ServerOperations(client)
+  fullName: azure-asm-sql.ServerOperations.ServerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="2e293-105">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="2e293-105">Reference to the service client.</span></span>
+    content: new ServerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  id: azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: changeAdministratorPassword(serverName, parameters, callback)
+  summary: <span data-ttu-id="2e293-106">Modifica la password amministrativa di un Server Database SQL di Azure esistente per una determinata sottoscrizione.</span><span class="sxs-lookup"><span data-stu-id="2e293-106">Changes the administrative password of an existing Azure SQL Database Server for a given subscription.</span></span>
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.changeAdministratorPassword(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="2e293-107">Il nome del Server di Database SQL Azure che sarà necessario modificare la password dell'amministratore.</span><span class="sxs-lookup"><span data-stu-id="2e293-107">The name of the Azure SQL Database Server that will have the administrator password changed.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.ServerChangeAdministratorPasswordParameters
+      description: <span data-ttu-id="2e293-108">I parametri necessari per modificare la password di amministratore per un server.</span><span class="sxs-lookup"><span data-stu-id="2e293-108">The necessary parameters for modifying the adminstrator password for a server.</span></span>
+    - id: parameters.newPassword
+      type:
+      - string
+      description: <span data-ttu-id="2e293-109">Ottiene o imposta la nuova password per l'amministratore.</span><span class="sxs-lookup"><span data-stu-id="2e293-109">Gets or sets the new password for the administrator.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="2e293-110">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="2e293-110">The response stream.</span></span>
+    content: function changeAdministratorPassword(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#create
+  id: azure-asm-sql.ServerOperations~ServerOperations#create
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: create(parameters, callback)
+  summary: <span data-ttu-id="2e293-111">Effettua il provisioning di un nuovo server di Database SQL in una sottoscrizione.</span><span class="sxs-lookup"><span data-stu-id="2e293-111">Provisions a new SQL Database server in a subscription.</span></span>
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-sql.ServerCreateParameters
+      description: <span data-ttu-id="2e293-112">I parametri necessari per eseguire il provisioning di un server.</span><span class="sxs-lookup"><span data-stu-id="2e293-112">The parameters needed to provision a server.</span></span>
+    - id: parameters.administratorUserName
+      type:
+      - string
+      description: <span data-ttu-id="2e293-113">Ottiene o imposta il nome utente amministratore che verrà usato per il nuovo server.</span><span class="sxs-lookup"><span data-stu-id="2e293-113">Gets or sets the administrator username that will be used for the new server.</span></span>
+    - id: parameters.administratorPassword
+      type:
+      - string
+      description: <span data-ttu-id="2e293-114">Ottiene o imposta la password dell'amministratore per il nuovo server.</span><span class="sxs-lookup"><span data-stu-id="2e293-114">Gets or sets the administrator password for the new server.</span></span>
+    - id: parameters.location
+      type:
+      - string
+      description: <span data-ttu-id="2e293-115">Ottiene o imposta l'area in cui verrà creato questo server.</span><span class="sxs-lookup"><span data-stu-id="2e293-115">Gets or sets the region in which this server will be created.</span></span>  <span data-ttu-id="2e293-116">Vedere http://azure.microsoft.com/en-us/regions/#services per un elenco di tutte le aree disponibili.</span><span class="sxs-lookup"><span data-stu-id="2e293-116">See http://azure.microsoft.com/en-us/regions/#services for a list of all the available regions.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: '<span data-ttu-id="2e293-117">Ottiene o imposta la versione del server da creare.</span><span class="sxs-lookup"><span data-stu-id="2e293-117">Gets or sets the version of server to create.</span></span>  <span data-ttu-id="2e293-118">I valori validi sono: le versioni 1.0, 2.0.</span><span class="sxs-lookup"><span data-stu-id="2e293-118">Valid values are: 1.0, 2.0.</span></span>'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="2e293-119">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="2e293-119">The response stream.</span></span>
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  id: azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: deleteMethod(serverName, callback)
+  summary: <span data-ttu-id="2e293-120">Elimina il Server di Database SQL di Azure specificato da una sottoscrizione.</span><span class="sxs-lookup"><span data-stu-id="2e293-120">Deletes the specified Azure SQL Database Server from a subscription.</span></span>
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.deleteMethod(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="2e293-121">Il nome del Server di Database SQL di Azure da eliminare.</span><span class="sxs-lookup"><span data-stu-id="2e293-121">The name of the Azure SQL Database Server to be deleted.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="2e293-122">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="2e293-122">The response stream.</span></span>
+    content: function deleteMethod(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#list
+  id: azure-asm-sql.ServerOperations~ServerOperations#list
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: list(callback)
+  summary: <span data-ttu-id="2e293-123">Restituisce tutti i server di Database di SQL sottoposte a provisioning per una sottoscrizione.</span><span class="sxs-lookup"><span data-stu-id="2e293-123">Returns all SQL Database Servers that are provisioned for a subscription.</span></span>
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="2e293-124">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="2e293-124">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js

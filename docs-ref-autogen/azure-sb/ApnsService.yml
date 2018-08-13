@@ -1,0 +1,442 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 94474b9236dc6e17df2e02d3d799841deb9f8621
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056297"
+items:
+- uid: azure-sb.ApnsService
+  id: azure-sb.ApnsService
+  name: ApnsService
+  summary: >-
+    <span data-ttu-id="712ec-101">La classe ApnsService viene utilizzata per inviare notifiche tramite Apple Push Notification Service (APNS).</span><span class="sxs-lookup"><span data-stu-id="712ec-101">The ApnsService class is used to send notifications using the Apple Push Notification Service (APNS).</span></span>
+
+    <span data-ttu-id="712ec-102">Questo servizio viene utilizzato per comunicare con dispositivi iOS.</span><span class="sxs-lookup"><span data-stu-id="712ec-102">This service is used to communicate with iOS device.</span></span>
+  fullName: azure-sb.ApnsService
+  type: Class
+  children:
+  - azure-sb.ApnsService.#ctor
+  - azure-sb.ApnsService#send
+  - azure-sb.ApnsService#createNativeRegistration
+  - azure-sb.ApnsService#createOrUpdateNativeRegistration
+  - azure-sb.ApnsService#createTemplateRegistration
+  - azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  - azure-sb.ApnsService#updateTemplateRegistration
+  - azure-sb.ApnsService#listRegistrationsByToken
+  langs:
+  - js
+- id: azure-sb.ApnsService.#ctor
+  uid: azure-sb.ApnsService.#ctor
+  parent: azure-sb.ApnsService
+  name: ApnsService(notificationHubService)
+  fullName: azure-sb.ApnsService.ApnsService(notificationHubService)
+  summary: >-
+    <span data-ttu-id="712ec-103">Crea un nuovo oggetto ApnsService utilizzando l'oggetto specificato <xref:azure-sb.NotificationHubService> oggetto.</span><span class="sxs-lookup"><span data-stu-id="712ec-103">Creates a new ApnsService object using the specified <xref:azure-sb.NotificationHubService> object.</span></span>
+
+
+
+    <span data-ttu-id="712ec-104">__Nota__: un'istanza di questo oggetto viene creata automaticamente quando un <xref:azure-sb.NotificationHubService> oggetto viene creato.</span><span class="sxs-lookup"><span data-stu-id="712ec-104">__Note__: An instance of this object is created automatically when a <xref:azure-sb.NotificationHubService> object is created.</span></span> <span data-ttu-id="712ec-105">Vedere <xref:azure-sb.NotificationHubService%23apns>.</span><span class="sxs-lookup"><span data-stu-id="712ec-105">See <xref:azure-sb.NotificationHubService%23apns>.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: <span data-ttu-id="712ec-106">Il servizio hub di notifica.</span><span class="sxs-lookup"><span data-stu-id="712ec-106">The notification hub service.</span></span>
+    content: new ApnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#send
+  id: azure-sb.ApnsService#send
+  parent: azure-sb.ApnsService
+  name: send(tags, payload, optionsOrCallback, callback)
+  summary: <span data-ttu-id="712ec-107">Invia una notifica APNS.</span><span class="sxs-lookup"><span data-stu-id="712ec-107">Sends an APNS notification.</span></span>
+  fullName: azure-sb.ApnsService.send(tags, payload, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="712ec-108">Singolo tag o espressione tag.</span><span class="sxs-lookup"><span data-stu-id="712ec-108">A single tag or tag expression.</span></span>
+
+        <span data-ttu-id="712ec-109">Se null trasmetterà a tutte le registrazioni nell'hub</span><span class="sxs-lookup"><span data-stu-id="712ec-109">If null it will broadcast to all registrations in this hub</span></span>
+    - id: payload
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="712ec-110">Il payload del messaggio JSON come specificato riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="712ec-110">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="712ec-111">Se il payload è una stringa, seguire il formato APNS come in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="712ec-111">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: payload.expiry
+      type:
+      - date
+      description: <span data-ttu-id="712ec-112">La data di scadenza.</span><span class="sxs-lookup"><span data-stu-id="712ec-112">The expiration date.</span></span> <span data-ttu-id="712ec-113">(in DTF W3C, aaaa-MM-DDThh:mmTZD (ad esempio, dal 1997-07-16T19:20 + 01:00))</span><span class="sxs-lookup"><span data-stu-id="712ec-113">(in W3C DTF, YYYY-MM-DDThh:mmTZD (e.g. 1997-07-16T19:20+01:00))</span></span>
+      optional: true
+    - id: payload.aps
+      type:
+      - object
+      description: <span data-ttu-id="712ec-114">Se il membro 'aps' è specificato, l'oggetto viene recapitato al servizio APN come-dopo la scadenza viene elaborata.</span><span class="sxs-lookup"><span data-stu-id="712ec-114">If the 'aps' member is provided, the object is delivered to APNS as-is after expiry is processed.</span></span> <span data-ttu-id="712ec-115">Si presuppone che l'oggetto conforme al formato APNS in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="712ec-115">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: payload.badge
+      type:
+      - number
+      description: <span data-ttu-id="712ec-116">Se il membro 'aps' non è specificato, il numero da visualizzare sull'icona dell'app.</span><span class="sxs-lookup"><span data-stu-id="712ec-116">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: payload.alert
+      type:
+      - string
+      description: <span data-ttu-id="712ec-117">Se il membro 'aps' non è specificato, il testo dell'avviso.</span><span class="sxs-lookup"><span data-stu-id="712ec-117">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: payload.sound
+      type:
+      - string
+      description: <span data-ttu-id="712ec-118">Se non viene fornito il membro 'aps', nome del file audio.</span><span class="sxs-lookup"><span data-stu-id="712ec-118">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: payload.payload
+      type:
+      - object
+      description: <span data-ttu-id="712ec-119">Se il membro 'aps' non è specificato, l'oggetto payload che contiene il testo della notifica.</span><span class="sxs-lookup"><span data-stu-id="712ec-119">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="712ec-120">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="712ec-120">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="712ec-121">Le intestazioni di apns.</span><span class="sxs-lookup"><span data-stu-id="712ec-121">The apns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="712ec-122">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="712ec-122">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function send(tags, payload, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createNativeRegistration
+  id: azure-sb.ApnsService#createNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createNativeRegistration(token, tags, options, callback)
+  summary: <span data-ttu-id="712ec-123">Crea una registrazione nativa.</span><span class="sxs-lookup"><span data-stu-id="712ec-123">Creates a native registration.</span></span>
+  fullName: azure-sb.ApnsService.createNativeRegistration(token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="712ec-124">Il token del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="712ec-124">The device token.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="712ec-125">I tag (elenco delimitato da virgole, senza spazi).</span><span class="sxs-lookup"><span data-stu-id="712ec-125">The tags (comma-separated list, no spaces).</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="712ec-126">Le opzioni di richiesta</span><span class="sxs-lookup"><span data-stu-id="712ec-126">The request options</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="712ec-127">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="712ec-127">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createNativeRegistration(token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  id: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  summary: <span data-ttu-id="712ec-128">Crea o aggiorna una registrazione nativa.</span><span class="sxs-lookup"><span data-stu-id="712ec-128">Creates or updates a native registration.</span></span>
+  fullName: azure-sb.ApnsService.createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="712ec-129">Identificatore della registrazione.</span><span class="sxs-lookup"><span data-stu-id="712ec-129">The registration identifier.</span></span>
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="712ec-130">Il token del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="712ec-130">The device token.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="712ec-131">I tag (elenco delimitato da virgole, senza spazi).</span><span class="sxs-lookup"><span data-stu-id="712ec-131">The tags (comma-separated list, no spaces).</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="712ec-132">Le opzioni di richiesta</span><span class="sxs-lookup"><span data-stu-id="712ec-132">The request options</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="712ec-133">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="712ec-133">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createTemplateRegistration
+  id: azure-sb.ApnsService#createTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  summary: <span data-ttu-id="712ec-134">Crea una registrazione modello.</span><span class="sxs-lookup"><span data-stu-id="712ec-134">Creates a template registration.</span></span>
+  fullName: azure-sb.ApnsService.createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="712ec-135">Il token del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="712ec-135">The device token.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="712ec-136">I tag.</span><span class="sxs-lookup"><span data-stu-id="712ec-136">The tags.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="712ec-137">Il payload del messaggio JSON come specificato riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="712ec-137">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="712ec-138">Se il payload è una stringa, seguire il formato APNS come in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="712ec-138">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: template.expiry
+      type:
+      - date
+      description: <span data-ttu-id="712ec-139">La data di scadenza.</span><span class="sxs-lookup"><span data-stu-id="712ec-139">The expiration date.</span></span>
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: <span data-ttu-id="712ec-140">Se il membro 'aps' è specificato, la registrazione viene recapitata alla località come-dopo la scadenza viene elaborata.</span><span class="sxs-lookup"><span data-stu-id="712ec-140">If the 'aps' member is provided, the registration is delivered to NotifcationHub as-is after expiry is processed.</span></span> <span data-ttu-id="712ec-141">Si presuppone che l'oggetto conforme al formato APNS in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="712ec-141">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: <span data-ttu-id="712ec-142">Se il membro 'aps' non è specificato, il numero da visualizzare sull'icona dell'app.</span><span class="sxs-lookup"><span data-stu-id="712ec-142">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: <span data-ttu-id="712ec-143">Se il membro 'aps' non è specificato, il testo dell'avviso.</span><span class="sxs-lookup"><span data-stu-id="712ec-143">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: <span data-ttu-id="712ec-144">Se non viene fornito il membro 'aps', nome del file audio.</span><span class="sxs-lookup"><span data-stu-id="712ec-144">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: <span data-ttu-id="712ec-145">Se il membro 'aps' non è specificato, l'oggetto payload che contiene il testo della notifica.</span><span class="sxs-lookup"><span data-stu-id="712ec-145">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="712ec-146">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="712ec-146">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="712ec-147">Le intestazioni di apns da includere.</span><span class="sxs-lookup"><span data-stu-id="712ec-147">The apns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="712ec-148">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="712ec-148">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  id: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  summary: <span data-ttu-id="712ec-149">Crea o aggiorna una registrazione di modello.</span><span class="sxs-lookup"><span data-stu-id="712ec-149">Creates or updates a template registration.</span></span>
+  fullName: azure-sb.ApnsService.createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="712ec-150">Identificatore della registrazione.</span><span class="sxs-lookup"><span data-stu-id="712ec-150">The registration identifier.</span></span>
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="712ec-151">Il token del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="712ec-151">The device token.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="712ec-152">Il payload del messaggio JSON come specificato riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="712ec-152">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="712ec-153">Se il payload è una stringa, seguire il formato APNS come in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="712ec-153">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: template.expiry
+      type:
+      - date
+      description: <span data-ttu-id="712ec-154">La data di scadenza.</span><span class="sxs-lookup"><span data-stu-id="712ec-154">The expiration date.</span></span>
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: <span data-ttu-id="712ec-155">Se il membro 'aps' è specificato, la registrazione viene recapitata alla località come-dopo la scadenza viene elaborata.</span><span class="sxs-lookup"><span data-stu-id="712ec-155">If the 'aps' member is provided, the registration is delivered to NotifcationHub as-is after expiry is processed.</span></span> <span data-ttu-id="712ec-156">Si presuppone che l'oggetto conforme al formato APNS in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="712ec-156">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: <span data-ttu-id="712ec-157">Se il membro 'aps' non è specificato, il numero da visualizzare sull'icona dell'app.</span><span class="sxs-lookup"><span data-stu-id="712ec-157">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: <span data-ttu-id="712ec-158">Se il membro 'aps' non è specificato, il testo dell'avviso.</span><span class="sxs-lookup"><span data-stu-id="712ec-158">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: <span data-ttu-id="712ec-159">Se non viene fornito il membro 'aps', nome del file audio.</span><span class="sxs-lookup"><span data-stu-id="712ec-159">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: <span data-ttu-id="712ec-160">Se il membro 'aps' non è specificato, l'oggetto payload che contiene il testo della notifica.</span><span class="sxs-lookup"><span data-stu-id="712ec-160">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="712ec-161">Le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="712ec-161">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="712ec-162">Le intestazioni di apns da includere.</span><span class="sxs-lookup"><span data-stu-id="712ec-162">The apns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="712ec-163">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="712ec-163">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#updateTemplateRegistration
+  id: azure-sb.ApnsService#updateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  summary: <span data-ttu-id="712ec-164">Aggiorna una registrazione di modello.</span><span class="sxs-lookup"><span data-stu-id="712ec-164">Updates a template registration.</span></span>
+  fullName: azure-sb.ApnsService.updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="712ec-165">Identificatore della registrazione.</span><span class="sxs-lookup"><span data-stu-id="712ec-165">The registration identifier.</span></span>
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="712ec-166">Il token del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="712ec-166">The device token.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="712ec-167">Il payload del messaggio JSON come specificato riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="712ec-167">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="712ec-168">Se il payload è una stringa, seguire il formato APNS come in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="712ec-168">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: template.expiry
+      type:
+      - date
+      description: <span data-ttu-id="712ec-169">La data di scadenza.</span><span class="sxs-lookup"><span data-stu-id="712ec-169">The expiration date.</span></span>
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: <span data-ttu-id="712ec-170">Se il membro 'aps' è specificato, la registrazione viene recapitata alla località come-dopo la scadenza viene elaborata.</span><span class="sxs-lookup"><span data-stu-id="712ec-170">If the 'aps' member is provided, the registration is delivered to NotifcationHub as-is after expiry is processed.</span></span> <span data-ttu-id="712ec-171">Si presuppone che l'oggetto conforme al formato APNS in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="712ec-171">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: <span data-ttu-id="712ec-172">Se il membro 'aps' non è specificato, il numero da visualizzare sull'icona dell'app.</span><span class="sxs-lookup"><span data-stu-id="712ec-172">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: <span data-ttu-id="712ec-173">Se il membro 'aps' non è specificato, il testo dell'avviso.</span><span class="sxs-lookup"><span data-stu-id="712ec-173">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: <span data-ttu-id="712ec-174">Se non viene fornito il membro 'aps', nome del file audio.</span><span class="sxs-lookup"><span data-stu-id="712ec-174">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: <span data-ttu-id="712ec-175">Se il membro 'aps' non è specificato, l'oggetto payload che contiene il testo della notifica.</span><span class="sxs-lookup"><span data-stu-id="712ec-175">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="712ec-176">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="712ec-176">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="712ec-177">Le intestazioni di apns da includere.</span><span class="sxs-lookup"><span data-stu-id="712ec-177">The apns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="712ec-178">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="712ec-178">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#listRegistrationsByToken
+  id: azure-sb.ApnsService#listRegistrationsByToken
+  parent: azure-sb.ApnsService
+  name: listRegistrationsByToken(token, options, callback)
+  summary: <span data-ttu-id="712ec-179">Recupera una registrazione dal token del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="712ec-179">Retrieves a registration by device token.</span></span>
+  fullName: azure-sb.ApnsService.listRegistrationsByToken(token, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="712ec-180">Il token del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="712ec-180">The device token.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="712ec-181">Le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="712ec-181">The request options.</span></span> <span data-ttu-id="712ec-182">Proprietà aggiuntive verranno passate come intestazioni.</span><span class="sxs-lookup"><span data-stu-id="712ec-182">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: <span data-ttu-id="712ec-183">Specifica il numero massimo di registrazioni da ottenere dalla chiamata.</span><span class="sxs-lookup"><span data-stu-id="712ec-183">Specifies the maximum number of registration to obtain from the call.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: <span data-ttu-id="712ec-184">Specifica il numero di registrazioni da ignorare nella chiamata.</span><span class="sxs-lookup"><span data-stu-id="712ec-184">Specifies the number of registrations to skip in the call.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="712ec-185">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="712ec-185">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function listRegistrationsByToken(token, options, callback)
+  langs:
+  - js

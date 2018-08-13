@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: da3e7585cc8649d17699a945508b1a30766024a0
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055793"
+items:
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: ServiceCertificateOperations
+  summary: >-
+    <span data-ttu-id="c72ce-101">Operazioni per gestire i certificati di servizio per la sottoscrizione.</span><span class="sxs-lookup"><span data-stu-id="c72ce-101">Operations for managing service certificates for your subscription.</span></span>  <span data-ttu-id="c72ce-102">(vedere http://msdn.microsoft.com/en-us/library/windowsazure/ee795178.aspx per altre informazioni) __nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="c72ce-102">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee795178.aspx for more information) __NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="c72ce-103">Vedere [serviceCertificates] {@link ComputeManagementClient ~ ComputeManagementClient #serviceCertificates}.</span><span class="sxs-lookup"><span data-stu-id="c72ce-103">See [serviceCertificates] {@link ComputeManagementClient~ComputeManagementClient#serviceCertificates}.</span></span>
+
+    <span data-ttu-id="c72ce-104">Inizializza una nuova istanza della classe ServiceCertificateOperations.</span><span class="sxs-lookup"><span data-stu-id="c72ce-104">Initializes a new instance of the ServiceCertificateOperations class.</span></span>
+  fullName: azure-asm-compute.ServiceCertificateOperations
+  type: Class
+  children:
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  langs:
+  - js
+- id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: ServiceCertificateOperations(client)
+  fullName: azure-asm-compute.ServiceCertificateOperations.ServiceCertificateOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="c72ce-105">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-105">Reference to the service client.</span></span>
+    content: new ServiceCertificateOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: beginCreating(serviceName, parameters, callback)
+  summary: <span data-ttu-id="c72ce-106">L'operazione di iniziare la creazione di certificato del servizio aggiunge un certificato a un servizio ospitato.</span><span class="sxs-lookup"><span data-stu-id="c72ce-106">The Begin Creating Service Certificate operation adds a certificate to a hosted service.</span></span> <span data-ttu-id="c72ce-107">Questa operazione è un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="c72ce-107">This operation is an asynchronous operation.</span></span> <span data-ttu-id="c72ce-108">Per determinare se il servizio di gestione ha terminato l'elaborazione della richiesta, chiamare Get Operation Status.</span><span class="sxs-lookup"><span data-stu-id="c72ce-108">To determine whether the management service has finished processing the request, call Get Operation Status.</span></span>  <span data-ttu-id="c72ce-109">(vedere http://msdn.microsoft.com/en-us/library/windowsazure/ee460817.aspx per altre informazioni)</span><span class="sxs-lookup"><span data-stu-id="c72ce-109">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460817.aspx for more information)</span></span>
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.beginCreating(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-110">Il nome del prefisso DNS del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-110">The DNS prefix name of your service.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateCreateParameters
+      description: <span data-ttu-id="c72ce-111">Parametri forniti all'operazione di iniziare la creazione di certificato del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-111">Parameters supplied to the Begin Creating Service Certificate operation.</span></span>
+    - id: parameters.data
+      type:
+      - azure-asm-compute.buffer
+      description: <span data-ttu-id="c72ce-112">Il file pfx o cer.</span><span class="sxs-lookup"><span data-stu-id="c72ce-112">The pfx or cer file.</span></span>
+    - id: parameters.certificateFormat
+      type:
+      - azure-asm-compute.CertificateFormat
+      description: <span data-ttu-id="c72ce-113">Il formato del certificato del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-113">The service certificate format.</span></span> <span data-ttu-id="c72ce-114">Azure supporta i formati di file pfx e cer.</span><span class="sxs-lookup"><span data-stu-id="c72ce-114">Azure supports the pfx and cer file formats.</span></span>
+    - id: parameters.password
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="c72ce-115">La password per un certificato pfx.</span><span class="sxs-lookup"><span data-stu-id="c72ce-115">The password for a pfx certificate.</span></span>
+
+        <span data-ttu-id="c72ce-116">Un certificato cer non richiede una password.</span><span class="sxs-lookup"><span data-stu-id="c72ce-116">A cer certificate does not require a password.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="c72ce-117">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="c72ce-117">The response stream.</span></span>
+    content: function beginCreating(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: beginDeleting(parameters, callback)
+  summary: <span data-ttu-id="c72ce-118">L'operazione di iniziare l'eliminazione di certificato del servizio elimina un certificato di servizio dall'archivio certificati di un servizio ospitato.</span><span class="sxs-lookup"><span data-stu-id="c72ce-118">The Begin Deleting Service Certificate operation deletes a service certificate from the certificate store of a hosted service.</span></span> <span data-ttu-id="c72ce-119">Questa operazione è un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="c72ce-119">This operation is an asynchronous operation.</span></span> <span data-ttu-id="c72ce-120">Per determinare se il servizio di gestione ha terminato l'elaborazione della richiesta, chiamare Get Operation Status.</span><span class="sxs-lookup"><span data-stu-id="c72ce-120">To determine whether the management service has finished processing the request, call Get Operation Status.</span></span>  <span data-ttu-id="c72ce-121">(vedere http://msdn.microsoft.com/en-us/library/windowsazure/ee460803.aspx per altre informazioni)</span><span class="sxs-lookup"><span data-stu-id="c72ce-121">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460803.aspx for more information)</span></span>
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.beginDeleting(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateDeleteParameters
+      description: <span data-ttu-id="c72ce-122">Parametri forniti all'operazione di iniziare l'eliminazione di certificato del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-122">Parameters supplied to the Begin Deleting Service Certificate operation.</span></span>
+    - id: parameters.serviceName
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-123">Il nome del prefisso DNS del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-123">The DNS prefix name of your service.</span></span>
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-124">L'algoritmo di identificazione personale del certificato.</span><span class="sxs-lookup"><span data-stu-id="c72ce-124">The algorithm for the certificate's thumbprint.</span></span>
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-125">La rappresentazione esadecimale dell'identificazione personale.</span><span class="sxs-lookup"><span data-stu-id="c72ce-125">The hexadecimal representation of the thumbprint.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="c72ce-126">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="c72ce-126">The response stream.</span></span>
+    content: function beginDeleting(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: create(serviceName, parameters, callback)
+  summary: <span data-ttu-id="c72ce-127">L'operazione di Crea certificato di servizio aggiunge un certificato a un servizio ospitato.</span><span class="sxs-lookup"><span data-stu-id="c72ce-127">The Create Service Certificate operation adds a certificate to a hosted service.</span></span> <span data-ttu-id="c72ce-128">Questa operazione è un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="c72ce-128">This operation is an asynchronous operation.</span></span> <span data-ttu-id="c72ce-129">Per determinare se il servizio di gestione ha terminato l'elaborazione della richiesta, chiamare Get Operation Status.</span><span class="sxs-lookup"><span data-stu-id="c72ce-129">To determine whether the management service has finished processing the request, call Get Operation Status.</span></span>  <span data-ttu-id="c72ce-130">(vedere http://msdn.microsoft.com/en-us/library/windowsazure/ee460817.aspx per altre informazioni)</span><span class="sxs-lookup"><span data-stu-id="c72ce-130">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460817.aspx for more information)</span></span>
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.create(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-131">Il nome del prefisso DNS del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-131">The DNS prefix name of your service.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateCreateParameters
+      description: <span data-ttu-id="c72ce-132">Parametri forniti all'operazione di Crea certificato di servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-132">Parameters supplied to the Create Service Certificate operation.</span></span>
+    - id: parameters.data
+      type:
+      - azure-asm-compute.buffer
+      description: <span data-ttu-id="c72ce-133">Il file pfx o cer.</span><span class="sxs-lookup"><span data-stu-id="c72ce-133">The pfx or cer file.</span></span>
+    - id: parameters.certificateFormat
+      type:
+      - azure-asm-compute.CertificateFormat
+      description: <span data-ttu-id="c72ce-134">Il formato del certificato del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-134">The service certificate format.</span></span> <span data-ttu-id="c72ce-135">Azure supporta i formati di file pfx e cer.</span><span class="sxs-lookup"><span data-stu-id="c72ce-135">Azure supports the pfx and cer file formats.</span></span>
+    - id: parameters.password
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="c72ce-136">La password per un certificato pfx.</span><span class="sxs-lookup"><span data-stu-id="c72ce-136">The password for a pfx certificate.</span></span>
+
+        <span data-ttu-id="c72ce-137">Un certificato cer non richiede una password.</span><span class="sxs-lookup"><span data-stu-id="c72ce-137">A cer certificate does not require a password.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="c72ce-138">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="c72ce-138">The response stream.</span></span>
+    content: function create(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: deleteMethod(parameters, callback)
+  summary: <span data-ttu-id="c72ce-139">L'operazione di certificato del servizio eliminazione Elimina un certificato di servizio dall'archivio certificati di un servizio ospitato.</span><span class="sxs-lookup"><span data-stu-id="c72ce-139">The Delete Service Certificate operation deletes a service certificate from the certificate store of a hosted service.</span></span> <span data-ttu-id="c72ce-140">Questa operazione è un'operazione asincrona.</span><span class="sxs-lookup"><span data-stu-id="c72ce-140">This operation is an asynchronous operation.</span></span> <span data-ttu-id="c72ce-141">Per determinare se il servizio di gestione ha terminato l'elaborazione della richiesta, chiamare Get Operation Status.</span><span class="sxs-lookup"><span data-stu-id="c72ce-141">To determine whether the management service has finished processing the request, call Get Operation Status.</span></span>  <span data-ttu-id="c72ce-142">(vedere http://msdn.microsoft.com/en-us/library/windowsazure/ee460803.aspx per altre informazioni)</span><span class="sxs-lookup"><span data-stu-id="c72ce-142">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460803.aspx for more information)</span></span>
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.deleteMethod(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateDeleteParameters
+      description: <span data-ttu-id="c72ce-143">Parametri forniti all'operazione di eliminazione certificato del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-143">Parameters supplied to the Delete Service Certificate operation.</span></span>
+    - id: parameters.serviceName
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-144">Il nome del prefisso DNS del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-144">The DNS prefix name of your service.</span></span>
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-145">L'algoritmo di identificazione personale del certificato.</span><span class="sxs-lookup"><span data-stu-id="c72ce-145">The algorithm for the certificate's thumbprint.</span></span>
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-146">La rappresentazione esadecimale dell'identificazione personale.</span><span class="sxs-lookup"><span data-stu-id="c72ce-146">The hexadecimal representation of the thumbprint.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="c72ce-147">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="c72ce-147">The response stream.</span></span>
+    content: function deleteMethod(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: get(parameters, callback)
+  summary: <span data-ttu-id="c72ce-148">L'operazione Ottieni certificato di servizio restituisce i dati pubblici del certificato X.509 specificato associato a un servizio ospitato.</span><span class="sxs-lookup"><span data-stu-id="c72ce-148">The Get Service Certificate operation returns the public data for the specified X.509 certificate associated with a hosted service.</span></span>  <span data-ttu-id="c72ce-149">(vedere http://msdn.microsoft.com/en-us/library/windowsazure/ee460792.aspx per altre informazioni)</span><span class="sxs-lookup"><span data-stu-id="c72ce-149">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460792.aspx for more information)</span></span>
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.get(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateGetParameters
+      description: <span data-ttu-id="c72ce-150">Parametri specificati per l'operazione Ottieni certificato del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-150">Parameters supplied to the Get Service Certificate operation.</span></span>
+    - id: parameters.serviceName
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-151">Il nome del prefisso DNS del servizio.</span><span class="sxs-lookup"><span data-stu-id="c72ce-151">The DNS prefix name of your service.</span></span>
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-152">L'algoritmo di identificazione personale del certificato.</span><span class="sxs-lookup"><span data-stu-id="c72ce-152">The algorithm for the certificate's thumbprint.</span></span>
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-153">La rappresentazione esadecimale dell'identificazione personale.</span><span class="sxs-lookup"><span data-stu-id="c72ce-153">The hexadecimal representation of the thumbprint.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="c72ce-154">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="c72ce-154">The response stream.</span></span>
+    content: function get(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: list(serviceName, callback)
+  summary: <span data-ttu-id="c72ce-155">L'operazione di elenco dei certificati di servizio sono elencati tutti i certificati di servizio associati al servizio ospitato specificato.</span><span class="sxs-lookup"><span data-stu-id="c72ce-155">The List Service Certificates operation lists all of the service certificates associated with the specified hosted service.</span></span>  <span data-ttu-id="c72ce-156">(vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj154105.aspx per altre informazioni)</span><span class="sxs-lookup"><span data-stu-id="c72ce-156">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154105.aspx for more information)</span></span>
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.list(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="c72ce-157">Il nome del prefisso DNS del servizio ospitato.</span><span class="sxs-lookup"><span data-stu-id="c72ce-157">The DNS prefix name of your hosted service.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="c72ce-158">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="c72ce-158">The response stream.</span></span>
+    content: function list(serviceName, callback)
+  langs:
+  - js

@@ -1,0 +1,508 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0e839634bf45a6ca21fbdf7120bdb9d631febf5b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056291"
+items:
+- uid: azure-sb.NotificationHubService
+  id: azure-sb.NotificationHubService
+  name: NotificationHubService
+  summary: >-
+    <span data-ttu-id="e41c9-101">Il NotificationHubService consente di inviare notifiche push a iOS, Android e Windows Store dispositivi.</span><span class="sxs-lookup"><span data-stu-id="e41c9-101">The NotificationHubService allows you to send push notifications to iOS, Android, and Windows Store devices.</span></span>
+
+
+    <span data-ttu-id="e41c9-102">Per altre informazioni sugli hub di notifica, nonché informazioni utili sul relativo uso da applicazioni Node. js di attività, vedere [come usare hub di notifica del Bus di servizio](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-notification-hubs/).</span><span class="sxs-lookup"><span data-stu-id="e41c9-102">For more information on Notification Hubs, as well as task focused information on using them from Node.js applications, see [How to Use Service Bus Notification Hubs](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-notification-hubs/).</span></span>
+  fullName: azure-sb.NotificationHubService
+  type: Class
+  children:
+  - azure-sb.NotificationHubService.#ctor
+  - azure-sb.NotificationHubService#wns
+  - azure-sb.NotificationHubService#apns
+  - azure-sb.NotificationHubService#gcm
+  - azure-sb.NotificationHubService#mpns
+  - azure-sb.NotificationHubService#send
+  - azure-sb.NotificationHubService#createRegistrationId
+  - azure-sb.NotificationHubService#getRegistration
+  - azure-sb.NotificationHubService#deleteRegistration
+  - azure-sb.NotificationHubService#updateRegistration
+  - azure-sb.NotificationHubService#createOrUpdateRegistration
+  - azure-sb.NotificationHubService#listRegistrations
+  - azure-sb.NotificationHubService#listRegistrationsByTag
+  - azure-sb.NotificationHubService#createOrUpdateInstallation
+  - azure-sb.NotificationHubService#patchInstallation
+  - azure-sb.NotificationHubService#deleteInstallation
+  - azure-sb.NotificationHubService#getInstallation
+  langs:
+  - js
+- id: azure-sb.NotificationHubService.#ctor
+  uid: azure-sb.NotificationHubService.#ctor
+  parent: azure-sb.NotificationHubService
+  name: NotificationHubService(hubName, endpointOrConnectionString, sharedAccessKeyName, sharedAccessKeyValue)
+  fullName: azure-sb.NotificationHubService.NotificationHubService(hubName, endpointOrConnectionString, sharedAccessKeyName, sharedAccessKeyValue)
+  summary: <span data-ttu-id="e41c9-103">Crea un nuovo oggetto NotificationHubService.</span><span class="sxs-lookup"><span data-stu-id="e41c9-103">Creates a new NotificationHubService object.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: hubName
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-104">Il nome dell'hub di notifica.</span><span class="sxs-lookup"><span data-stu-id="e41c9-104">The notification hub name.</span></span>
+    - id: endpointOrConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-105">Il servizio bus endpoint o stringa di connessione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-105">The service bus endpoint or connection string.</span></span>
+      optional: true
+    - id: sharedAccessKeyName
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-106">Il nome hub di notifica accesso chiavi.</span><span class="sxs-lookup"><span data-stu-id="e41c9-106">The notification hub shared access key name.</span></span>
+      optional: true
+    - id: sharedAccessKeyValue
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-107">Il valore di chiave della accesso condiviso dell'hub del notifica.</span><span class="sxs-lookup"><span data-stu-id="e41c9-107">The notification hub shared access key value.</span></span>
+      optional: true
+    content: new NotificationHubService(hubName, endpointOrConnectionString, sharedAccessKeyName, sharedAccessKeyValue)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#wns
+  id: azure-sb.NotificationHubService#wns
+  parent: azure-sb.NotificationHubService
+  name: wns
+  summary: <span data-ttu-id="e41c9-108">Fornisce l'accesso ai metodi per inviare notifiche a WNS (per le app Windows Store) e creare o aggiornare le registrazioni per le app di Windows Store.</span><span class="sxs-lookup"><span data-stu-id="e41c9-108">Provides access to methods to send notifications to WNS (for Windows Store apps) and create/update registrations for Windows Store apps.</span></span>
+  fullName: azure-sb.NotificationHubService.wns
+  type: Member
+  syntax:
+    return:
+      type:
+      - WnsService
+    content: wns
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#apns
+  id: azure-sb.NotificationHubService#apns
+  parent: azure-sb.NotificationHubService
+  name: apns
+  summary: <span data-ttu-id="e41c9-109">Fornisce l'accesso ai metodi per inviare notifiche al servizio APN (per le app iOS) e creare o aggiornare le registrazioni per le app iOS.</span><span class="sxs-lookup"><span data-stu-id="e41c9-109">Provides access to methods to send notifications to APNs (for iOS apps) and create/update registrations for iOS apps.</span></span>
+  fullName: azure-sb.NotificationHubService.apns
+  type: Member
+  syntax:
+    return:
+      type:
+      - ApnsService
+    content: apns
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#gcm
+  id: azure-sb.NotificationHubService#gcm
+  parent: azure-sb.NotificationHubService
+  name: gcm
+  summary: <span data-ttu-id="e41c9-110">Fornisce l'accesso ai metodi per inviare notifiche a GCM (per le app Android) e creare o aggiornare le registrazioni per le app Android.</span><span class="sxs-lookup"><span data-stu-id="e41c9-110">Provides access to methods to send notifications to GCM (for Android apps) and create/update registrations for Android apps.</span></span>
+  fullName: azure-sb.NotificationHubService.gcm
+  type: Member
+  syntax:
+    return:
+      type:
+      - GcmService
+    content: gcm
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#mpns
+  id: azure-sb.NotificationHubService#mpns
+  parent: azure-sb.NotificationHubService
+  name: mpns
+  summary: <span data-ttu-id="e41c9-111">Fornisce l'accesso ai metodi per inviare notifiche MPNS (per le app di Windows Phone) e creare o aggiornare le registrazioni per le app di Windows Phone.</span><span class="sxs-lookup"><span data-stu-id="e41c9-111">Provides access to methods to send notifications to MPNS (for Windows Phone apps) and create/update registrations for Windows Phone apps.</span></span>
+  fullName: azure-sb.NotificationHubService.mpns
+  type: Member
+  syntax:
+    return:
+      type:
+      - MpnsService
+    content: mpns
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#send
+  id: azure-sb.NotificationHubService#send
+  parent: azure-sb.NotificationHubService
+  name: send(tags, payload, options, callback)
+  summary: <span data-ttu-id="e41c9-112">Invia un messaggio modello.</span><span class="sxs-lookup"><span data-stu-id="e41c9-112">Sends a template message.</span></span>
+  fullName: azure-sb.NotificationHubService.send(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e41c9-113">Singolo tag o espressione tag.</span><span class="sxs-lookup"><span data-stu-id="e41c9-113">A single tag or tag expression.</span></span>
+
+        <span data-ttu-id="e41c9-114">Se null trasmetterà a tutte le registrazioni nell'hub</span><span class="sxs-lookup"><span data-stu-id="e41c9-114">If null it will broadcast to all registrations in this hub</span></span>
+    - id: payload
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="e41c9-115">Il payload del messaggio.</span><span class="sxs-lookup"><span data-stu-id="e41c9-115">The message's payload.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-116">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="e41c9-116">The request options or callback function.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-117">Intestazioni aggiuntive.</span><span class="sxs-lookup"><span data-stu-id="e41c9-117">Additional headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-118">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-118">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function send(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#createRegistrationId
+  id: azure-sb.NotificationHubService#createRegistrationId
+  parent: azure-sb.NotificationHubService
+  name: createRegistrationId(callback)
+  summary: <span data-ttu-id="e41c9-119">Crea un identificatore di registrazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-119">Creates a registration identifier.</span></span>
+  fullName: azure-sb.NotificationHubService.createRegistrationId(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-120">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-120">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createRegistrationId(callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#getRegistration
+  id: azure-sb.NotificationHubService#getRegistration
+  parent: azure-sb.NotificationHubService
+  name: getRegistration(registrationId, options, callback)
+  summary: <span data-ttu-id="e41c9-121">Recupera una registrazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-121">Retrieves a registration.</span></span>
+  fullName: azure-sb.NotificationHubService.getRegistration(registrationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-122">Identificatore della registrazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-122">The registration identifier.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-123">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="e41c9-123">The request options or callback function.</span></span> <span data-ttu-id="e41c9-124">Proprietà aggiuntive verranno passate come intestazioni.</span><span class="sxs-lookup"><span data-stu-id="e41c9-124">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-125">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-125">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function getRegistration(registrationId, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#deleteRegistration
+  id: azure-sb.NotificationHubService#deleteRegistration
+  parent: azure-sb.NotificationHubService
+  name: deleteRegistration(registrationId, options, callback)
+  summary: <span data-ttu-id="e41c9-126">Elimina una registrazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-126">Deletes a registration.</span></span>
+  fullName: azure-sb.NotificationHubService.deleteRegistration(registrationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-127">Identificatore della registrazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-127">The registration identifier.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-128">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="e41c9-128">The request options or callback function.</span></span> <span data-ttu-id="e41c9-129">Proprietà aggiuntive verranno passate come intestazioni.</span><span class="sxs-lookup"><span data-stu-id="e41c9-129">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-130">Il valore etag.</span><span class="sxs-lookup"><span data-stu-id="e41c9-130">The etag.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-131">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-131">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function deleteRegistration(registrationId, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#updateRegistration
+  id: azure-sb.NotificationHubService#updateRegistration
+  parent: azure-sb.NotificationHubService
+  name: updateRegistration(registration, options, callback)
+  summary: <span data-ttu-id="e41c9-132">Aggiorna una registrazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-132">Updates a registration.</span></span>
+  fullName: azure-sb.NotificationHubService.updateRegistration(registration, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registration
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-133">Registrazione da aggiornare.</span><span class="sxs-lookup"><span data-stu-id="e41c9-133">The registration to update.</span></span>
+    - id: registration.RegistrationId
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-134">Id di registrazione da aggiornare</span><span class="sxs-lookup"><span data-stu-id="e41c9-134">Registration id to update</span></span>
+    - id: registration._.ContentRootElement
+      type:
+      - object
+      description: '<span data-ttu-id="e41c9-135">Tipo di registrazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-135">Type of the registration.</span></span> <span data-ttu-id="e41c9-136">Tipi consentiti: WindowsRegistrationDescription, WindowsTemplateRegistrationDescription, AppleRegistrationDescription, AppleTemplateRegistrationDescription, GcmRegistrationDescription, GcmTemplateRegistrationDescription, MpnsRegistrationDescription, MpnsTemplateRegistrationDescription.</span><span class="sxs-lookup"><span data-stu-id="e41c9-136">Types allowed: WindowsRegistrationDescription, WindowsTemplateRegistrationDescription, AppleRegistrationDescription, AppleTemplateRegistrationDescription, GcmRegistrationDescription, GcmTemplateRegistrationDescription, MpnsRegistrationDescription, MpnsTemplateRegistrationDescription.</span></span>'
+    - id: registration.ChannelUri
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-137">Solo se la registrazione di Windows o Mpns</span><span class="sxs-lookup"><span data-stu-id="e41c9-137">Only if Windows or Mpns registration</span></span>
+    - id: registration.DeviceToken
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-138">Solo se la registrazione di Apple</span><span class="sxs-lookup"><span data-stu-id="e41c9-138">Only if Apple registration</span></span>
+    - id: registration.GcmRegistrationId
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-139">Solo se la registrazione di Gcm</span><span class="sxs-lookup"><span data-stu-id="e41c9-139">Only if Gcm registration</span></span>
+    - id: registration.Tags
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-140">Elenco delimitato da virgole di tag (senza spazi)</span><span class="sxs-lookup"><span data-stu-id="e41c9-140">Comma-separated list of tags (no spaces)</span></span>
+    - id: registration.BodyTemplate
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-141">Solo se la registrazione di modello</span><span class="sxs-lookup"><span data-stu-id="e41c9-141">Only if template registration</span></span>
+    - id: registration.WnsHeaders
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-142">Solo se la registrazione di modello di Windows</span><span class="sxs-lookup"><span data-stu-id="e41c9-142">Only if Windows template registration</span></span>
+    - id: registration.MpnsHeaders
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-143">Solo se la registrazione di modello Mpns</span><span class="sxs-lookup"><span data-stu-id="e41c9-143">Only if Mpns template registration</span></span>
+    - id: registration.Expiry
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-144">Solo se la registrazione di modello Apple</span><span class="sxs-lookup"><span data-stu-id="e41c9-144">Only if Apple template registration</span></span>
+    - id: registration.ApnsHeaders
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-145">Solo se la registrazione di modello Apple</span><span class="sxs-lookup"><span data-stu-id="e41c9-145">Only if Apple template registration</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-146">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="e41c9-146">The request options or callback function.</span></span> <span data-ttu-id="e41c9-147">Proprietà aggiuntive verranno passate come intestazioni.</span><span class="sxs-lookup"><span data-stu-id="e41c9-147">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-148">Il valore etag.</span><span class="sxs-lookup"><span data-stu-id="e41c9-148">The etag.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-149">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-149">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function updateRegistration(registration, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#createOrUpdateRegistration
+  id: azure-sb.NotificationHubService#createOrUpdateRegistration
+  parent: azure-sb.NotificationHubService
+  name: createOrUpdateRegistration(registration, options, callback)
+  summary: <span data-ttu-id="e41c9-150">Crea o aggiorna una registrazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-150">Creates or updates a registration.</span></span>
+  fullName: azure-sb.NotificationHubService.createOrUpdateRegistration(registration, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registration
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-151">Registrazione da aggiornare.</span><span class="sxs-lookup"><span data-stu-id="e41c9-151">The registration to update.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-152">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="e41c9-152">The request options or callback function.</span></span> <span data-ttu-id="e41c9-153">Proprietà aggiuntive verranno passate come intestazioni.</span><span class="sxs-lookup"><span data-stu-id="e41c9-153">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-154">Il valore etag.</span><span class="sxs-lookup"><span data-stu-id="e41c9-154">The etag.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-155">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-155">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createOrUpdateRegistration(registration, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#listRegistrations
+  id: azure-sb.NotificationHubService#listRegistrations
+  parent: azure-sb.NotificationHubService
+  name: listRegistrations(options, callback)
+  summary: <span data-ttu-id="e41c9-156">Registrazioni per l'elenco.</span><span class="sxs-lookup"><span data-stu-id="e41c9-156">List registrations.</span></span>
+  fullName: azure-sb.NotificationHubService.listRegistrations(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-157">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="e41c9-157">The request options or callback function.</span></span> <span data-ttu-id="e41c9-158">Proprietà aggiuntive verranno passate come intestazioni.</span><span class="sxs-lookup"><span data-stu-id="e41c9-158">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-159">Specifica il numero massimo di registrazioni da ottenere dalla chiamata.</span><span class="sxs-lookup"><span data-stu-id="e41c9-159">Specifies the maximum number of registration to obtain from the call.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-160">Specifica il numero di registrazioni da ignorare nella chiamata.</span><span class="sxs-lookup"><span data-stu-id="e41c9-160">Specifies the number of registrations to skip in the call.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-161">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-161">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function listRegistrations(options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#listRegistrationsByTag
+  id: azure-sb.NotificationHubService#listRegistrationsByTag
+  parent: azure-sb.NotificationHubService
+  name: listRegistrationsByTag(tag, options, callback)
+  summary: <span data-ttu-id="e41c9-162">Recupera una registrazione dal tag.</span><span class="sxs-lookup"><span data-stu-id="e41c9-162">Retrieves a registration by tag.</span></span>
+  fullName: azure-sb.NotificationHubService.listRegistrationsByTag(tag, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tag
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-163">Tag di registrazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-163">The registration tag.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-164">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="e41c9-164">The request options or callback function.</span></span> <span data-ttu-id="e41c9-165">Proprietà aggiuntive verranno passate come intestazioni.</span><span class="sxs-lookup"><span data-stu-id="e41c9-165">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-166">Specifica il numero massimo di registrazioni da ottenere dalla chiamata.</span><span class="sxs-lookup"><span data-stu-id="e41c9-166">Specifies the maximum number of registration to obtain from the call.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-167">Specifica il numero di registrazioni da ignorare nella chiamata.</span><span class="sxs-lookup"><span data-stu-id="e41c9-167">Specifies the number of registrations to skip in the call.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-168">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-168">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function listRegistrationsByTag(tag, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#createOrUpdateInstallation
+  id: azure-sb.NotificationHubService#createOrUpdateInstallation
+  parent: azure-sb.NotificationHubService
+  name: createOrUpdateInstallation(installation, options, callback)
+  summary: <span data-ttu-id="e41c9-169">Crea o aggiorna un'installazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-169">Creates or updates a installation.</span></span>
+  fullName: azure-sb.NotificationHubService.createOrUpdateInstallation(installation, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installation
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-170">L'installazione per creare o aggiornare.</span><span class="sxs-lookup"><span data-stu-id="e41c9-170">The installation to create/update.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-171">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="e41c9-171">The request options or callback function.</span></span> <span data-ttu-id="e41c9-172">Proprietà aggiuntive verranno passate come intestazioni.</span><span class="sxs-lookup"><span data-stu-id="e41c9-172">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-173">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-173">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createOrUpdateInstallation(installation, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#patchInstallation
+  id: azure-sb.NotificationHubService#patchInstallation
+  parent: azure-sb.NotificationHubService
+  name: patchInstallation(installationId, partialUpdateOperations, options, callback)
+  summary: <span data-ttu-id="e41c9-174">Patch di un'installazione esistente.</span><span class="sxs-lookup"><span data-stu-id="e41c9-174">Patches an existing installation.</span></span>
+  fullName: azure-sb.NotificationHubService.patchInstallation(installationId, partialUpdateOperations, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installationId
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-175">Id di installazione</span><span class="sxs-lookup"><span data-stu-id="e41c9-175">Installation Id</span></span>
+    - id: partialUpdateOperations
+      type:
+      - array
+      description: <span data-ttu-id="e41c9-176">Elenco di operazioni parziali da un'installazione esistente di patch</span><span class="sxs-lookup"><span data-stu-id="e41c9-176">List of partial operations to patch an existing installation</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-177">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="e41c9-177">The request options or callback function.</span></span> <span data-ttu-id="e41c9-178">Proprietà aggiuntive verranno passate come intestazioni.</span><span class="sxs-lookup"><span data-stu-id="e41c9-178">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-179">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-179">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function patchInstallation(installationId, partialUpdateOperations, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#deleteInstallation
+  id: azure-sb.NotificationHubService#deleteInstallation
+  parent: azure-sb.NotificationHubService
+  name: deleteInstallation(installationId, options, callback)
+  summary: <span data-ttu-id="e41c9-180">Elimina un'installazione esistente.</span><span class="sxs-lookup"><span data-stu-id="e41c9-180">Deletes an existing installation.</span></span>
+  fullName: azure-sb.NotificationHubService.deleteInstallation(installationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installationId
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-181">Id di installazione</span><span class="sxs-lookup"><span data-stu-id="e41c9-181">Installation Id</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-182">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="e41c9-182">The request options or callback function.</span></span> <span data-ttu-id="e41c9-183">Proprietà aggiuntive verranno passate come intestazioni.</span><span class="sxs-lookup"><span data-stu-id="e41c9-183">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-184">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-184">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function deleteInstallation(installationId, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#getInstallation
+  id: azure-sb.NotificationHubService#getInstallation
+  parent: azure-sb.NotificationHubService
+  name: getInstallation(installationId, options, callback)
+  summary: <span data-ttu-id="e41c9-185">Ottiene un'installazione dal relativo Id</span><span class="sxs-lookup"><span data-stu-id="e41c9-185">Gets an installation by its Id</span></span>
+  fullName: azure-sb.NotificationHubService.getInstallation(installationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installationId
+      type:
+      - string
+      description: <span data-ttu-id="e41c9-186">Id di installazione</span><span class="sxs-lookup"><span data-stu-id="e41c9-186">Installation Id</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="e41c9-187">La funzione di callback o le opzioni di richiesta.</span><span class="sxs-lookup"><span data-stu-id="e41c9-187">The request options or callback function.</span></span> <span data-ttu-id="e41c9-188">Proprietà aggiuntive verranno passate come intestazioni.</span><span class="sxs-lookup"><span data-stu-id="e41c9-188">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="e41c9-189">`error` conterrà informazioni se si verifica un errore; in caso contrario, `response` conterrà le informazioni correlate a questa operazione.</span><span class="sxs-lookup"><span data-stu-id="e41c9-189">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function getInstallation(installationId, options, callback)
+  langs:
+  - js

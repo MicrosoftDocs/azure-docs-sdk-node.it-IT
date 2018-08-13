@@ -1,0 +1,287 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 63f6d420f14e145be93264194c93b21fbf5288eb
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055805"
+items:
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: DNSServerOperations
+  summary: >-
+    <span data-ttu-id="ef596-101">L'API di gestione di calcolo include operazioni per gestire i server dns per la sottoscrizione.</span><span class="sxs-lookup"><span data-stu-id="ef596-101">The Compute Management API includes operations for managing the dns servers for your subscription.</span></span>
+
+    <span data-ttu-id="ef596-102">__Nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="ef596-102">__NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="ef596-103">Vedere [ServerDNS] {@link ComputeManagementClient ~ ComputeManagementClient #dnsServer}.</span><span class="sxs-lookup"><span data-stu-id="ef596-103">See [dnsServer] {@link ComputeManagementClient~ComputeManagementClient#dnsServer}.</span></span>
+
+    <span data-ttu-id="ef596-104">Inizializza una nuova istanza della classe DNSServerOperations.</span><span class="sxs-lookup"><span data-stu-id="ef596-104">Initializes a new instance of the DNSServerOperations class.</span></span>
+  fullName: azure-asm-compute.DNSServerOperations
+  type: Class
+  children:
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  langs:
+  - js
+- id: azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  uid: azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: DNSServerOperations(client)
+  fullName: azure-asm-compute.DNSServerOperations.DNSServerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="ef596-105">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="ef596-105">Reference to the service client.</span></span>
+    content: new DNSServerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: addDNSServer(serviceName, deploymentName, parameters, callback)
+  summary: <span data-ttu-id="ef596-106">Aggiungere una definizione per un server DNS per una distribuzione esistente.</span><span class="sxs-lookup"><span data-stu-id="ef596-106">Add a definition for a DNS server to an existing deployment.</span></span> <span data-ttu-id="ef596-107">Della macchina virtuale in questa distribuzione sarà essere programmata per usare questo server DNS per tutte le risoluzioni DNS</span><span class="sxs-lookup"><span data-stu-id="ef596-107">VM's in this deployment will be programmed to use this DNS server for all DNS resolutions</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.addDNSServer(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-108">Il nome del servizio.</span><span class="sxs-lookup"><span data-stu-id="ef596-108">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-109">Nome della distribuzione.</span><span class="sxs-lookup"><span data-stu-id="ef596-109">The name of the deployment.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSAddParameters
+      description: <span data-ttu-id="ef596-110">Parametri forniti all'operazione di aggiunta di Server DNS.</span><span class="sxs-lookup"><span data-stu-id="ef596-110">Parameters supplied to the Add DNS Server operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="ef596-111">Nome del server DNS.</span><span class="sxs-lookup"><span data-stu-id="ef596-111">Name of the DNS server.</span></span>
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: <span data-ttu-id="ef596-112">Indirizzo IP del server DNS</span><span class="sxs-lookup"><span data-stu-id="ef596-112">IP Address of the DNS server</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="ef596-113">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="ef596-113">The response stream.</span></span>
+    content: function addDNSServer(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  summary: <span data-ttu-id="ef596-114">Aggiungere una definizione per un server DNS per una distribuzione esistente.</span><span class="sxs-lookup"><span data-stu-id="ef596-114">Add a definition for a DNS server to an existing deployment.</span></span> <span data-ttu-id="ef596-115">Della macchina virtuale in questa distribuzione sarà essere programmata per usare questo server DNS per tutte le risoluzioni DNS</span><span class="sxs-lookup"><span data-stu-id="ef596-115">VM's in this deployment will be programmed to use this DNS server for all DNS resolutions</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-116">Il nome del servizio.</span><span class="sxs-lookup"><span data-stu-id="ef596-116">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-117">Nome della distribuzione.</span><span class="sxs-lookup"><span data-stu-id="ef596-117">The name of the deployment.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSAddParameters
+      description: <span data-ttu-id="ef596-118">Parametri forniti all'operazione di aggiunta di Server DNS.</span><span class="sxs-lookup"><span data-stu-id="ef596-118">Parameters supplied to the Add DNS Server operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="ef596-119">Nome del server DNS.</span><span class="sxs-lookup"><span data-stu-id="ef596-119">Name of the DNS server.</span></span>
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: <span data-ttu-id="ef596-120">Indirizzo IP del server DNS</span><span class="sxs-lookup"><span data-stu-id="ef596-120">IP Address of the DNS server</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="ef596-121">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="ef596-121">The response stream.</span></span>
+    content: function beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  summary: <span data-ttu-id="ef596-122">Elimina una definizione di un server DNS esistente dalla distribuzione</span><span class="sxs-lookup"><span data-stu-id="ef596-122">Deletes a definition for an existing DNS server from the deployment</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-123">Il nome del servizio.</span><span class="sxs-lookup"><span data-stu-id="ef596-123">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-124">Nome della distribuzione.</span><span class="sxs-lookup"><span data-stu-id="ef596-124">The name of the deployment.</span></span>
+    - id: dnsServerName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-125">Il nome del server dns.</span><span class="sxs-lookup"><span data-stu-id="ef596-125">The name of the dns server.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="ef596-126">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="ef596-126">The response stream.</span></span>
+    content: function beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  summary: <span data-ttu-id="ef596-127">Aggiorna una definizione di un server DNS esistente.</span><span class="sxs-lookup"><span data-stu-id="ef596-127">Updates a definition for an existing DNS server.</span></span> <span data-ttu-id="ef596-128">Gli aggiornamenti all'indirizzo è l'unica modifica consentita.</span><span class="sxs-lookup"><span data-stu-id="ef596-128">Updates to address is the only change allowed.</span></span> <span data-ttu-id="ef596-129">Nome del server DNS non può essere modificato.</span><span class="sxs-lookup"><span data-stu-id="ef596-129">DNS server name cannot be changed</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-130">Il nome del servizio.</span><span class="sxs-lookup"><span data-stu-id="ef596-130">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-131">Nome della distribuzione.</span><span class="sxs-lookup"><span data-stu-id="ef596-131">The name of the deployment.</span></span>
+    - id: dnsServerName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-132">Il nome del server dns.</span><span class="sxs-lookup"><span data-stu-id="ef596-132">The name of the dns server.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSUpdateParameters
+      description: <span data-ttu-id="ef596-133">Parametri forniti all'operazione del Server di aggiornamento DNS.</span><span class="sxs-lookup"><span data-stu-id="ef596-133">Parameters supplied to the Update DNS Server operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="ef596-134">Nome del server DNS.</span><span class="sxs-lookup"><span data-stu-id="ef596-134">Name of the DNS server.</span></span>
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: <span data-ttu-id="ef596-135">Indirizzo IP del server DNS</span><span class="sxs-lookup"><span data-stu-id="ef596-135">IP Address of the DNS server</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="ef596-136">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="ef596-136">The response stream.</span></span>
+    content: function beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  summary: <span data-ttu-id="ef596-137">Elimina una definizione di un server DNS esistente dalla distribuzione</span><span class="sxs-lookup"><span data-stu-id="ef596-137">Deletes a definition for an existing DNS server from the deployment</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-138">Il nome del servizio.</span><span class="sxs-lookup"><span data-stu-id="ef596-138">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-139">Nome della distribuzione.</span><span class="sxs-lookup"><span data-stu-id="ef596-139">The name of the deployment.</span></span>
+    - id: dnsServerName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-140">Il nome del server dns.</span><span class="sxs-lookup"><span data-stu-id="ef596-140">The name of the dns server.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="ef596-141">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="ef596-141">The response stream.</span></span>
+    content: function deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  summary: <span data-ttu-id="ef596-142">Aggiorna una definizione di un server DNS esistente.</span><span class="sxs-lookup"><span data-stu-id="ef596-142">Updates a definition for an existing DNS server.</span></span> <span data-ttu-id="ef596-143">Gli aggiornamenti all'indirizzo è l'unica modifica consentita.</span><span class="sxs-lookup"><span data-stu-id="ef596-143">Updates to address is the only change allowed.</span></span> <span data-ttu-id="ef596-144">Nome del server DNS non può essere modificato.</span><span class="sxs-lookup"><span data-stu-id="ef596-144">DNS server name cannot be changed</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-145">Il nome del servizio.</span><span class="sxs-lookup"><span data-stu-id="ef596-145">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-146">Nome della distribuzione.</span><span class="sxs-lookup"><span data-stu-id="ef596-146">The name of the deployment.</span></span>
+    - id: dnsServerName
+      type:
+      - string
+      description: <span data-ttu-id="ef596-147">Il nome del server dns.</span><span class="sxs-lookup"><span data-stu-id="ef596-147">The name of the dns server.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSUpdateParameters
+      description: <span data-ttu-id="ef596-148">Parametri forniti all'operazione del Server di aggiornamento DNS.</span><span class="sxs-lookup"><span data-stu-id="ef596-148">Parameters supplied to the Update DNS Server operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="ef596-149">Nome del server DNS.</span><span class="sxs-lookup"><span data-stu-id="ef596-149">Name of the DNS server.</span></span>
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: <span data-ttu-id="ef596-150">Indirizzo IP del server DNS</span><span class="sxs-lookup"><span data-stu-id="ef596-150">IP Address of the DNS server</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="ef596-151">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="ef596-151">The response stream.</span></span>
+    content: function updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  langs:
+  - js

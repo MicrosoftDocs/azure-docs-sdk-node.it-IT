@@ -1,0 +1,92 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5a6c2b0714170c7643a6ee33e23ae54aeab48ba5
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055733"
+items:
+- uid: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient
+  id: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient
+  name: HDInsightClusterManagementClient
+  summary: <span data-ttu-id="2d5ef-101">Inizializza una nuova istanza della classe HDInsightClusterManagementClient.</span><span class="sxs-lookup"><span data-stu-id="2d5ef-101">Initializes a new instance of the HDInsightClusterManagementClient class.</span></span>
+  fullName: azure-asm-hdinsight.HDInsightClusterManagementClient
+  type: Class
+  children:
+  - azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient.#ctor
+  - azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient#clusterManagement
+  - azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient#getOperationStatus
+  langs:
+  - js
+- id: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient.#ctor
+  uid: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient.#ctor
+  parent: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient
+  name: HDInsightClusterManagementClient(cloudServiceName, credentials, baseUri, filters)
+  fullName: azure-asm-hdinsight.HDInsightClusterManagementClient.HDInsightClusterManagementClient(cloudServiceName, credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: ''
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: <span data-ttu-id="2d5ef-102">Ottiene le credenziali di sottoscrizione che lo identificano in modo univoco la sottoscrizione di Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="2d5ef-102">Gets subscription credentials which uniquely identify Microsoft Azure subscription.</span></span> <span data-ttu-id="2d5ef-103">L'ID sottoscrizione fa parte dell'URI per ogni chiamata al servizio.</span><span class="sxs-lookup"><span data-stu-id="2d5ef-103">The subscription ID forms part of the URI for every service call.</span></span>
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: <span data-ttu-id="2d5ef-104">Ottiene l'URI utilizzato come base per tutte le richieste di servizio cloud.</span><span class="sxs-lookup"><span data-stu-id="2d5ef-104">Gets the URI used as the base for all cloud service requests.</span></span>
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new HDInsightClusterManagementClient(cloudServiceName, credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient#clusterManagement
+  id: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient#clusterManagement
+  parent: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient
+  name: clusterManagement
+  summary: <span data-ttu-id="2d5ef-105">Fornisce un'istanza di [ClusterOperations](-ClusterOperations.html) oggetto.</span><span class="sxs-lookup"><span data-stu-id="2d5ef-105">Provides an instance of the [ClusterOperations](-ClusterOperations.html) object.</span></span>
+  fullName: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient.clusterManagement
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: clusterManagement
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient#getOperationStatus
+  id: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient#getOperationStatus
+  parent: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient
+  name: getOperationStatus(requestId, callback)
+  summary: <span data-ttu-id="2d5ef-106">L'operazione Get Operation Status restituisce lo stato dell'operazione specificata.</span><span class="sxs-lookup"><span data-stu-id="2d5ef-106">The Get Operation Status operation returns the status of the specified operation.</span></span> <span data-ttu-id="2d5ef-107">Dopo la chiamata di un'operazione asincrona, è possibile chiamare Get Operation Status per determinare se l'operazione ha avuto esito positivo, non è riuscita o è ancora in corso.</span><span class="sxs-lookup"><span data-stu-id="2d5ef-107">After calling an asynchronous operation, you can call Get Operation Status to determine whether the operation has succeeded, failed, or is still in progress.</span></span>
+  fullName: azure-asm-hdinsight.HDInsightClusterManagementClient~HDInsightClusterManagementClient.getOperationStatus(requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: <span data-ttu-id="2d5ef-108">L'ID della richiesta per la richiesta a cui si vuole tenere traccia. L'ID richiesta viene restituito nell'intestazione della risposta x-ms-request-id per ogni richiesta.</span><span class="sxs-lookup"><span data-stu-id="2d5ef-108">The request ID for the request you wish to track. The request ID is returned in the x-ms-request-id response header for every request.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-hdinsight.Stream
+      description: <span data-ttu-id="2d5ef-109">Il flusso di risposta.</span><span class="sxs-lookup"><span data-stu-id="2d5ef-109">The response stream.</span></span>
+    content: function getOperationStatus(requestId, callback)
+  langs:
+  - js
