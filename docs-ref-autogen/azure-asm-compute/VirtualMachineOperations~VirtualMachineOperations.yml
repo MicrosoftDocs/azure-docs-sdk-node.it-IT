@@ -1,0 +1,2195 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4e6a7588c696df257654810f771efaba1e9c2907
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055848"
+items:
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: VirtualMachineOperations
+  summary: >-
+    API gestione dei servizi include operazioni per gestire le macchine virtuali nella sottoscrizione.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157206.aspx per altre informazioni) __nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    Vedere [virtualMachines] {@link ComputeManagementClient ~ ComputeManagementClient #virtualMachines}.
+
+    Inizializza una nuova istanza della classe VirtualMachineOperations.
+  fullName: azure-asm-compute.VirtualMachineOperations
+  type: Class
+  children:
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.#ctor
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingOSImage
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingVMImage
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreating
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreatingDeployment
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginDeleting
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginInitiatingMaintenance
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRedeploying
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRestarting
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShutdown
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShuttingDownRoles
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStarting
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStartingRoles
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdating
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdatingLoadBalancedEndpointSet
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureOSImage
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureVMImage
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#create
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#createDeployment
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#deleteMethod
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#get
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#getRemoteDesktopFile
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#initiateMaintenance
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#redeploy
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#restart
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdown
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdownRoles
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#start
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#startRoles
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#update
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#updateLoadBalancedEndpointSet
+  langs:
+  - js
+- id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.#ctor
+  uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.#ctor
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: VirtualMachineOperations(client)
+  fullName: azure-asm-compute.VirtualMachineOperations.VirtualMachineOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Riferimento al client del servizio.
+    content: new VirtualMachineOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingOSImage
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingOSImage
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginCapturingOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: >-
+    L'operazione di iniziare l'acquisizione ruolo crea una copia del sistema operativo disco rigido virtuale (VHD) che viene distribuito nella macchina virtuale, Salva la copia del disco rigido virtuale nella stessa posizione di archiviazione come il VHD del sistema operativo e registra la copia come immagine nella raccolta immagini . Dall'immagine acquisita, è possibile creare macchine virtuali personalizzate aggiuntive.
+
+    Per altre informazioni sulle immagini e dischi, vedere Gestione di dischi e immagini con http://msdn.microsoft.com/en-us/library/windowsazure/jj672979.aspx.
+
+    Per altre informazioni sull'acquisizione di immagini, informazioni su come acquisire un'immagine di una macchina virtuale che esegue Windows Server 2008 R2 alla http://www.windowsazure.com/en-us/documentation/articles/virtual-machines-capture-image-windows-server/ o come acquisire un'immagine di una macchina virtuale che esegue Linux in http://www.windowsazure.com/en-us/documentation/articles/virtual-machines-linux-capture-image/.
+
+    (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157201.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginCapturingOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da riavviare.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCaptureOSImageParameters
+      description: Parametri forniti all'operazione Begin macchina virtuale di acquisizione.
+    - id: parameters.postCaptureAction
+      type:
+      - azure-asm-compute.PostCaptureAction
+      description: "Specifica l'azione che viene eseguita al termine dell'operazione di acquisizione. I valori possibili sono: Delete - questo valore fa sì che la macchina virtuale deve essere eliminato dopo che l'immagine è stata acquisita; o eseguire il Reprovisioning - questo valore fa sì che la macchina virtuale ridistribuzione dopo l'acquisizione dell'immagine usando le informazioni specificate in ProvisioningConfiguration."
+    - id: parameters.provisioningConfiguration
+      type:
+      - azure-asm-compute.ConfigurationSet
+      description: Fornisce informazioni da usare per ridistribuire la macchina virtuale dopo che l'immagine è stata acquisita. Questo elemento viene usato solo quando è impostato il PostCaptureAction al riavvio del provisioning.
+      optional: true
+    - id: parameters.provisioningConfiguration.configurationSetType
+      type:
+      - string
+      description: Specifica il tipo di configurazione per il set di configurazione.
+      optional: true
+    - id: parameters.provisioningConfiguration.inputEndpoints
+      type:
+      - array
+      description: Contiene una raccolta di endpoint esterni per la macchina virtuale. Questo elemento viene usato solo con il tipo NetworkConfigurationSet.
+      optional: true
+    - id: parameters.provisioningConfiguration.subnetNames
+      type:
+      - array
+      description: Elenco di nomi di subnet di rete virtuale a cui appartiene la distribuzione. Questo elemento viene usato solo con il tipo NetworkConfigurationSet.
+      optional: true
+    - id: parameters.provisioningConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: 'Specifica un indirizzo cliente, ad esempio un indirizzo IP assegnato a una macchina virtuale nella SubNet di una rete virtuale. Ad esempio: 10.0.0.4.'
+      optional: true
+    - id: parameters.provisioningConfiguration.publicIPs
+      type:
+      - array
+      description: >-
+        facoltativo.
+
+        Un set di indirizzi IP pubblici. Attualmente, solo un indirizzo IP pubblico aggiuntivo per ogni ruolo è supportato in una distribuzione IaaS. L'indirizzo IP è oltre l'indirizzo VIP predefinito per la distribuzione.
+      optional: true
+    - id: parameters.provisioningConfiguration.networkInterfaces
+      type:
+      - array
+      description: ''
+      optional: true
+    - id: parameters.provisioningConfiguration.networkSecurityGroup
+      type:
+      - string
+      description: Ottiene o imposta il gruppo di sicurezza di rete associato con questo ruolo. Facoltativo
+      optional: true
+    - id: parameters.provisioningConfiguration.iPForwarding
+      type:
+      - string
+      description: Ottiene o imposta lo stato dell'inoltro IP per questo ruolo. Facoltativo
+      optional: true
+    - id: parameters.provisioningConfiguration.computerName
+      type:
+      - string
+      description: >-
+        Specifica il nome del computer per la macchina virtuale. Se il nome del computer non è specificato, viene creato un nome in base al nome del ruolo.
+
+        I nomi di computer devono essere 1 e 15 caratteri. Questo elemento viene usato solo con il WindowsProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.adminPassword
+      type:
+      - string
+      description: Specifica la stringa che rappresenta la password amministratore da utilizzare per la macchina virtuale. Se la macchina virtuale verrà creata da un'immagine di macchina virtuale 'Specializzata', la password non è obbligatoria.
+      optional: true
+    - id: parameters.provisioningConfiguration.resetPasswordOnFirstLogon
+      type:
+      - boolean
+      description: Specifica se la password deve essere reimpostata la prima volta che l'amministratore accede in.
+      optional: true
+    - id: parameters.provisioningConfiguration.enableAutomaticUpdates
+      type:
+      - boolean
+      description: Specifica se aggiornamenti automatici sono abilitati per la macchina virtuale. Questo elemento viene usato solo con il WindowsProvisioningConfiguration impostato. Il valore predefinito è False.
+      optional: true
+    - id: parameters.provisioningConfiguration.timeZone
+      type:
+      - string
+      description: Specifica il fuso orario per la macchina virtuale. Questo elemento viene usato solo con il WindowsProvisioningConfiguration impostato. Per un elenco completo delle voci di fuso orario supportate, è possibile fare riferimento ai valori elencati nella voce del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones in un computer che esegue Windows 7, Windows Server 2008 e Windows Server 2008 R2 oppure è possibile utilizzare lo strumento da riga di comando tzutil per l'orario valido. Lo strumento tzutil viene installato per impostazione predefinita in Windows 7, Windows Server 2008 e Windows Server 2008 R2.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin
+      type:
+      - azure-asm-compute.DomainJoinSettings
+      description: Contiene proprietà che specificano un dominio a cui verrà aggiunta la macchina virtuale. Questo elemento viene usato solo con il WindowsProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials
+      type:
+      - azure-asm-compute.DomainJoinCredentials
+      description: Specifica i valori da utilizzare per aggiungere la macchina virtuale al dominio.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.domain
+      type:
+      - string
+      description: 'Specifica il nome del dominio usato per autenticare un account. Il valore è un dominio DNS completo. Se non viene specificato il nome di dominio, nome utente deve specificare il formato user principal name (UPN) (user@fully-qualified-DNS-domain) o il formato completamente-qualified-DNS-dominio\nome utente. Esempio: example.com.'
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.userName
+      type:
+      - string
+      description: Specifica un nome utente nel dominio che può essere utilizzato per accedere al dominio.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.password
+      type:
+      - string
+      description: Specifica la password da usare per accedere al dominio.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.domainToJoin
+      type:
+      - string
+      description: Specifica il dominio da aggiungere.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.ldapMachineObjectOU
+      type:
+      - string
+      description: >-
+        Specifica il nome distinto X 500 Lightweight Directory Access Protocol (LDAP) dell'unità organizzativa (OU) in cui viene creato l'account del computer. Questo account è in Active Directory in un controller di dominio nel dominio a cui il computer è unito.
+
+        Esempio: OU=MyOu,OU=MyParentOu,DC=example.com,DC=MyCompany,DC=com.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.provisioning
+      type:
+      - azure-asm-compute.DomainJoinProvisioning
+      description: Informazioni aggiuntive per il provisioning di join di dominio.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.provisioning.accountData
+      type:
+      - string
+      description: Le informazioni sull'account per il dominio.
+      optional: true
+    - id: parameters.provisioningConfiguration.storedCertificateSettings
+      type:
+      - array
+      description: >-
+        Contiene un elenco dei certificati di servizio con cui eseguire il provisioning per il nuovo ruolo.
+
+        Questo elemento viene usato solo con il WindowsProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.windowsRemoteManagement
+      type:
+      - azure-asm-compute.WindowsRemoteManagementSettings
+      description: Consente di configurare il servizio Gestione remota Windows nella macchina virtuale, che Abilita remoto Windows PowerShell.
+      optional: true
+    - id: parameters.provisioningConfiguration.windowsRemoteManagement.listeners
+      type:
+      - array
+      description: Contiene una raccolta di informazioni per l'attivazione remota Windows PowerShell.
+      optional: true
+    - id: parameters.provisioningConfiguration.adminUserName
+      type:
+      - string
+      description: Specifica il nome utilizzato per rinominare l'account amministratore predefinito. Se la macchina virtuale verrà creata da un'immagine di macchina virtuale 'Specializzata', il nome utente non è obbligatorio.
+      optional: true
+    - id: parameters.provisioningConfiguration.additionalUnattendContent
+      type:
+      - azure-asm-compute.AdditionalUnattendContentSettings
+      description: Specifica base 64 codificata in formato XML informazioni aggiuntiva che può essere inclusi nel file Unattend. XML, che viene usato dal programma di installazione di Windows.
+      optional: true
+    - id: parameters.provisioningConfiguration.additionalUnattendContent.unattendPasses
+      type:
+      - array
+      description: Specifica i passaggi di installazione automatica
+      optional: true
+    - id: parameters.provisioningConfiguration.hostName
+      type:
+      - string
+      description: Specifica il nome host per macchina virtuale. I nomi host sono stringhe costituite da 1 a 64 caratteri ASCII in lunghezza. Questo elemento viene usato solo con il LinuxProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.userName
+      type:
+      - string
+      description: Specifica il nome di un utente deve essere creato nel gruppo sudoer della macchina virtuale. I nomi utente sono stringhe costituite da 1 a 32 caratteri ASCII in lunghezza. Questo elemento viene usato solo con il LinuxProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.userPassword
+      type:
+      - string
+      description: Specifica la password per il nome utente. Le password sono stringhe costituite da 6 a 72 caratteri ASCII in lunghezza. Questo elemento viene usato solo con il LinuxProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.disableSshPasswordAuthentication
+      type:
+      - boolean
+      description: >-
+        Specifica se l'autenticazione SSH è disabilitata per la password.
+
+        Questo elemento viene usato solo con il LinuxProvisioningConfiguration impostato. Per impostazione predefinita questo valore è impostato su true.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings
+      type:
+      - azure-asm-compute.SshSettings
+      description: Specifica le chiavi pubbliche SSH e coppie di chiavi per popolare l'immagine durante il provisioning. Questo elemento viene usato solo con il LinuxProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings.publicKeys
+      type:
+      - array
+      description: Specifica la raccolta di chiavi pubbliche SSH.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings.keyPairs
+      type:
+      - array
+      description: Specifica la raccolta di coppie di chiavi SSH.
+      optional: true
+    - id: parameters.provisioningConfiguration.customData
+      type:
+      - string
+      description: facoltativo. Fornisce dati personalizzati da passare alla macchina virtuale con codifica base64.
+      optional: true
+    - id: parameters.targetImageLabel
+      type:
+      - string
+      description: Specifica il nome descrittivo dell'immagine acquisita. Questo è il valore visualizzato nella colonna nome per l'immagine nel portale di gestione di Azure.
+    - id: parameters.targetImageName
+      type:
+      - string
+      description: Specifica il nome dell'immagine dell'immagine acquisita.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginCapturingOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingVMImage
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingVMImage
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginCapturingVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: Avviare l'acquisizione di ruolo come modello di macchina virtuale.
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginCapturingVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da riavviare.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCaptureVMImageParameters
+      description: Parametri forniti all'operazione Acquisisci macchina virtuale.
+    - id: parameters.operationType
+      type:
+      - string
+      description: Richiesto. Deve essere impostata su CaptureRoleOperation.
+      optional: true
+    - id: parameters.oSState
+      type:
+      - string
+      description: 'Richiesto. Lo stato del sistema operativo: generalizzato | Specializzati.'
+      optional: true
+    - id: parameters.vMImageName
+      type:
+      - string
+      description: Richiesto. Il nome del modello di macchina virtuale.
+      optional: true
+    - id: parameters.vMImageLabel
+      type:
+      - string
+      description: Richiesto. L'etichetta di modello di macchina virtuale.
+      optional: true
+    - id: parameters.statusCode
+      type:
+      - azure-asm-compute.HttpStatusCode
+      description: ''
+      optional: true
+    - id: parameters.requestId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginCapturingVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreating
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreating
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginCreating(serviceName, deploymentName, parameters, callback)
+  summary: "L'operazione di iniziare la creazione di ruoli aggiunge una macchina virtuale a una distribuzione esistente. È possibile fare riferimento a OSDisk nell'operazione Add Role nei modi seguenti: un'immagine utente/piattaforma: impostare il SourceImageName a un'immagine di piattaforma o un utente. È facoltativamente possibile specificare i valori di collegamento multimediale e DiskName durante l'operazione per controllare il nome e il percorso del disco di destinazione. Quando DiskName e MediaLink vengono specificate in questa modalità, è necessario non esistono già nel sistema, in caso contrario che verrà restituito un errore di conflitto. Disco - DiskName insieme a un utente specificato immagine nel repository immagini. SourceImageName deve essere impostato su NULL. Tutte le altre proprietà vengono ignorati. o i Blob in un Account di archiviazione: impostare MediaLink su un blob che contiene l'immagine. SourceImageName e DiskName vengono impostati su NULL.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157186.aspx per altre informazioni)"
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginCreating(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCreateParameters
+      description: Parametri forniti all'operazione di iniziare la creazione di VM.
+    - id: parameters.roleName
+      type:
+      - string
+      description: Specifica il nome per la macchina virtuale. Il nome deve essere univoco all'interno della distribuzione.
+    - id: parameters.availabilitySetName
+      type:
+      - string
+      description: Specifica il nome di un set di disponibilità per cui si desidera aggiungere la macchina virtuale. Questo valore determina l'allocazione macchina virtuale nell'ambiente Azure. Le macchine virtuali specificate nello stesso set di disponibilità vengono allocate a nodi diversi per ottimizzare la disponibilità.
+      optional: true
+    - id: parameters.roleSize
+      type:
+      - string
+      description: Le dimensioni della macchina virtuale.
+      optional: true
+    - id: parameters.configurationSets
+      type:
+      - array
+      description: Contiene la raccolta di set di configurazione che contengono le impostazioni di configurazione di sistema e dell'applicazione.
+      optional: true
+    - id: parameters.resourceExtensionReferences
+      type:
+      - array
+      description: Contiene una raccolta di estensioni di risorsa da installare nella macchina virtuale. Questo elemento viene usato se ProvisionGuestAgent è impostato su true.
+      optional: true
+    - id: parameters.vMImageName
+      type:
+      - string
+      description: Nome dell'immagine di macchina virtuale da cui questo ruolo deve essere creata. Se il disco del sistema operativo nell'immagine di macchina virtuale è stato specializzato, quindi nessun WindowsProvisioningConfigurationSet o LinuxProvisioningConfigurationSet deve essere specificato. Nessun elemento OSVirtualHardDisk o l'oggetto DataVirtualHardDisk deve essere specificato quando si usa questo argomento.
+      optional: true
+    - id: parameters.dataVirtualHardDisks
+      type:
+      - array
+      description: Contiene i parametri utilizzati da Azure per creare il disco dati per la macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk
+      type:
+      - azure-asm-compute.OSVirtualHardDisk
+      description: Contiene i parametri utilizzati da Azure per creare il disco del sistema operativo per la macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.hostCaching
+      type:
+      - string
+      description: Specifica il comportamento di memorizzazione nella cache della piattaforma del blob per l'efficienza di lettura/scrittura disco del sistema operativo.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.label
+      type:
+      - string
+      description: Specifica il nome descrittivo di un'immagine del sistema operativo nel repository immagini.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.name
+      type:
+      - string
+      description: Specifica il nome di un'immagine del sistema operativo nel repository immagini.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.mediaLink
+      type:
+      - string
+      description: Specifica il percorso del disco del sistema operativo in archiviazione di Azure.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.sourceImageName
+      type:
+      - string
+      description: Specifica il nome dell'immagine di origine che è stato usato per effettuare il provisioning della macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.operatingSystem
+      type:
+      - string
+      description: Il sistema operativo in esecuzione nella macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.remoteSourceImageLink
+      type:
+      - string
+      description: URI dell'immagine di origine del sistema operativo che verrà copiato all'account di archiviazione del cliente della creazione della VM. Se viene specificato RemoteSourceImageLink, MediaLink deve anche essere specificato. Se viene specificato RemoteSourceImageLink, thenSourceIamgeName non deve essere specificato.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.iOType
+      type:
+      - string
+      description: Ottiene o imposta il tipo dei / o.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.resizedSizeInGB
+      type:
+      - number
+      description: Quando un'immagine del sistema operativo o un elemento RemoteSourceImage viene usato per creare un elemento OSVirtualHardDisk, questo parametro è utilizzabile per ridimensionare il nuovo elemento OSVirtualHardDisk a dimensioni maggiori. ResizedSizeInGB deve essere maggiore dell'elemento LogicalSizeInGB dell'immagine del sistema operativo sottostante.
+      optional: true
+    - id: parameters.provisionGuestAgent
+      type:
+      - boolean
+      description: Indica se il servizio WindowsAzureGuestAgent è installato nella macchina virtuale. Per eseguire un'estensione di risorsa in una macchina virtuale, questo servizio deve essere installato.
+      optional: true
+    - id: parameters.mediaLocation
+      type:
+      - string
+      description: Posizione in cui devono essere copiati i dischi rigidi virtuali VMImage, per Vmimage pubblicato.
+      optional: true
+    - id: parameters.vMImageInput
+      type:
+      - azure-asm-compute.VMImageInput
+      description: Quando un'immagine di macchina virtuale viene usata per creare un nuovo elemento PersistantVMRole, gli elementi DiskConfigurations nell'immagine di macchina virtuale vengono utilizzati per creare nuovi dischi per la nuova macchina virtuale. Questo parametro è utilizzabile per ridimensionare i dischi appena creati a dimensioni maggiori rispetto agli elementi DiskConfigurations sottostanti nella proprietà della macchina virtuale Image.This viene restituito solo con un'intestazione di versione del 2014-10-01 o versione successiva.
+      optional: true
+    - id: parameters.vMImageInput.oSDiskConfiguration
+      type:
+      - azure-asm-compute.OSDiskConfiguration
+      description: Corrisponde all'elemento OSDiskConfiguration dell'immagine di macchina virtuale usata per creare un nuovo ruolo. L'elemento gli elementi OSDiskConfiguration è solo disponibile con versione 2014-10-01 o versione successiva.
+      optional: true
+    - id: parameters.vMImageInput.oSDiskConfiguration.resizedSizeInGB
+      type:
+      - number
+      description: Specifica la nuova dimensione (maggiore) dell'elemento OSVirtualHardDisk creato usando un'immagine di macchina virtuale. L'elemento ResizedSizeInGB è solo disponibile con versione 2014-10-01 o versione successiva.
+      optional: true
+    - id: parameters.vMImageInput.dataDiskConfigurations
+      type:
+      - azure-asm-compute.IEnumerable
+      description: Corrisponde all'elemento DataDiskConfigurations dell'immagine di macchina virtuale usata per creare un nuovo ruolo. L'elemento DataDiskConfigurations è solo disponibile con versione 2014-10-01 o versione successiva.
+      optional: true
+    - id: parameters.debugSettings
+      type:
+      - azure-asm-compute.DebugSettings
+      description: Impostazioni per l'output di console di debug.
+      optional: true
+    - id: parameters.debugSettings.bootDiagnosticsEnabled
+      type:
+      - boolean
+      description: Abilitare o disabilitare la diagnostica di avvio.
+      optional: true
+    - id: parameters.debugSettings.consoleScreenshotBlobUri
+      type:
+      - string
+      description: Uri del BLOB per la schermata di console.
+      optional: true
+    - id: parameters.debugSettings.serialOutputBlobUri
+      type:
+      - string
+      description: Uri del BLOB per l'output seriale.
+      optional: true
+    - id: parameters.licenseType
+      type:
+      - string
+      description: "Specifica che l'immagine o il disco in cui è in uso sia stata concessa in licenza in locale. Questo elemento viene usato solo per le immagini che contengono il sistema operativo Windows Server. I valori possibili sono: Windows_Client, Windows_Server"
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginCreating(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreatingDeployment
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreatingDeployment
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginCreatingDeployment(serviceName, parameters, callback)
+  summary: L'operazione di iniziare la creazione di distribuzione della macchina virtuale esegue il provisioning di una macchina virtuale in base alla configurazione fornita. Quando si crea una distribuzione di una macchina virtuale, è necessario assicurarsi che il servizio cloud e il disco o l'immagine da usare si trovino nella stessa area. Ad esempio, se il servizio cloud è stato creato nell'area Stati Uniti occidentali, il disco o l'immagine da usare deve anche trovarsi in un account di archiviazione nell'area Stati Uniti occidentali.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157194.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginCreatingDeployment(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCreateDeploymentParameters
+      description: Parametri forniti all'operazione di iniziare la creazione di distribuzione della macchina virtuale.
+    - id: parameters.name
+      type:
+      - string
+      description: Un nome per la distribuzione. Il nome della distribuzione deve essere univoco tra le distribuzioni per il servizio ospitato.
+    - id: parameters.deploymentSlot
+      type:
+      - azure-asm-compute.DeploymentSlot
+      description: "Specifica l'ambiente in cui distribuire la macchina virtuale. I valori possibili sono: gestione temporanea o produzione."
+    - id: parameters.label
+      type:
+      - string
+      description: Un nome per il servizio ospitato. Il nome può essere fino a 100 caratteri. È consigliabile che l'etichetta sia univoco all'interno della sottoscrizione. Il nome può essere utilizzato identificare il servizio ospitato per motivi di rilevamento.
+    - id: parameters.roles
+      type:
+      - array
+      description: Contiene i dettagli di provisioning per la nuova distribuzione di macchina virtuale.
+    - id: parameters.virtualNetworkName
+      type:
+      - string
+      description: Specifica il nome di una rete virtuale esistente a cui apparterrà la distribuzione. Le reti virtuali vengono create chiamando l'operazione di configurazione di rete impostato.
+      optional: true
+    - id: parameters.dnsSettings
+      type:
+      - azure-asm-compute.DnsSettings
+      description: Contiene un elenco di server DNS da associare alla macchina.
+      optional: true
+    - id: parameters.dnsSettings.dnsServers
+      type:
+      - array
+      description: Contiene una raccolta di oggetti che definiscono le impostazioni del server DNS.
+      optional: true
+    - id: parameters.reservedIPName
+      type:
+      - string
+      description: facoltativo. Specifica il nome di un indirizzo IP riservato esistente a cui apparterrà la distribuzione. Gli indirizzi IP riservati vengono creati chiamando l'operazione di creare un indirizzo IP riservato.
+      optional: true
+    - id: parameters.loadBalancers
+      type:
+      - azure-asm-compute.IEnumerable
+      description: Elenco di servizi di bilanciamento del carico interno che associa ogni bilanciamento del carico in un indirizzo VIP privato.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginCreatingDeployment(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginDeleting
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginDeleting
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginDeleting(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  summary: >-
+    L'operazione di iniziare l'eliminazione di ruolo consente di eliminare la macchina virtuale specificata.
+
+    (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157184.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginDeleting(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da eliminare.
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: Specifica che i BLOB di origine per la macchina virtuale devono anche essere eliminati dall'archivio.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginDeleting(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginInitiatingMaintenance
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginInitiatingMaintenance
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginInitiatingMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  summary: Iniziare avviare manutenzione sull'operazione ruolo avvia la manutenzione sulla macchina virtuale specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginInitiatingMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale per avviare la manutenzione.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginInitiatingMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRedeploying
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRedeploying
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginRedeploying(serviceName, deploymentName, virtualMachineName, callback)
+  summary: L'operazione di ruolo iniziare ridistribuire ridistribuisce la macchina virtuale specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginRedeploying(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da ridistribuire.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginRedeploying(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRestarting
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRestarting
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginRestarting(serviceName, deploymentName, virtualMachineName, callback)
+  summary: L'operazione di ruolo iniziare il riavvio si riavvia la macchina virtuale specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginRestarting(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da riavviare.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginRestarting(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShutdown
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShutdown
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginShutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: >-
+    L'operazione Shutdown Role si arresta la macchina virtuale specificata.
+
+    (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157195.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginShutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da arrestare.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineShutdownParameters
+      description: I parametri per l'operazione di arresto della macchina virtuale.
+    - id: parameters.postShutdownAction
+      type:
+      - azure-asm-compute.PostShutdownAction
+      description: Lo stato della macchina virtuale dopo l'arresto (arresto o StoppedDeallocated).
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginShutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShuttingDownRoles
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShuttingDownRoles
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginShuttingDownRoles(serviceName, deploymentName, parameters, callback)
+  summary: L'operazione Begin in corso l'arresto a discesa ruoli Arresta il set specificato di macchine virtuali.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/dn469421.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginShuttingDownRoles(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineShutdownRolesParameters
+      description: Parametri da passare all'operazione Begin in corso l'arresto a discesa ruoli.
+    - id: parameters.roles
+      type:
+      - array
+      description: Il set di ruoli da arrestare.
+      optional: true
+    - id: parameters.postShutdownAction
+      type:
+      - azure-asm-compute.PostShutdownAction
+      description: Lo stato dei ruoli dopo l'arresto. I valori possibili includono StoppedDeallocated o arrestato.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginShuttingDownRoles(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStarting
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStarting
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginStarting(serviceName, deploymentName, virtualMachineName, callback)
+  summary: >-
+    L'operazione di ruolo di avvio iniziano avvia la macchina virtuale specificata.
+
+    (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157189.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginStarting(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da avviare.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginStarting(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStartingRoles
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStartingRoles
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginStartingRoles(serviceName, deploymentName, parameters, callback)
+  summary: Inizia l'operazione di ruoli di avvio iniziano il set specificato di macchine virtuali.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/dn469419.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginStartingRoles(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineStartRolesParameters
+      description: Parametri da passare all'operazione di iniziare a ruoli di avvio.
+    - id: parameters.roles
+      type:
+      - array
+      description: Il set di ruoli da arrestare.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginStartingRoles(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdating
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdating
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginUpdating(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: L'operazione di iniziare l'aggiornamento ruolo aggiunge una macchina virtuale a una distribuzione esistente.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157187.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginUpdating(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineUpdateParameters
+      description: Parametri forniti all'operazione di iniziare l'aggiornamento di Virtual Machine.
+    - id: parameters.roleName
+      type:
+      - string
+      description: Specifica il nome per la macchina virtuale. Il nome deve essere univoco all'interno della distribuzione.
+    - id: parameters.label
+      type:
+      - string
+      description: Specifica il nome descrittivo per la macchina virtuale.
+      optional: true
+    - id: parameters.availabilitySetName
+      type:
+      - string
+      description: Specifica il nome di un set di disponibilità per cui si desidera aggiungere la macchina virtuale. Questo valore determina l'allocazione macchina virtuale nell'ambiente Azure. Le macchine virtuali specificate nello stesso set di disponibilità vengono allocate a nodi diversi per ottimizzare la disponibilità.
+      optional: true
+    - id: parameters.roleSize
+      type:
+      - string
+      description: Le dimensioni della macchina virtuale.
+      optional: true
+    - id: parameters.configurationSets
+      type:
+      - array
+      description: Contiene la raccolta di set di configurazione che contengono le impostazioni di configurazione di sistema e dell'applicazione.
+      optional: true
+    - id: parameters.resourceExtensionReferences
+      type:
+      - array
+      description: Contiene una raccolta di estensioni di risorsa da installare nella macchina virtuale. Questo elemento viene usato se ProvisionGuestAgent è impostato su true.
+      optional: true
+    - id: parameters.dataVirtualHardDisks
+      type:
+      - array
+      description: Contiene i parametri utilizzati da Azure per creare il disco dati per la macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk
+      type:
+      - azure-asm-compute.OSVirtualHardDisk
+      description: Contiene i parametri utilizzati da Azure per creare il disco del sistema operativo per la macchina virtuale.
+    - id: parameters.oSVirtualHardDisk.hostCaching
+      type:
+      - string
+      description: Specifica il comportamento di memorizzazione nella cache della piattaforma del blob per l'efficienza di lettura/scrittura disco del sistema operativo.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.label
+      type:
+      - string
+      description: Specifica il nome descrittivo di un'immagine del sistema operativo nel repository immagini.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.name
+      type:
+      - string
+      description: Specifica il nome di un'immagine del sistema operativo nel repository immagini.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.mediaLink
+      type:
+      - string
+      description: Specifica il percorso del disco del sistema operativo in archiviazione di Azure.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.sourceImageName
+      type:
+      - string
+      description: Specifica il nome dell'immagine di origine che è stato usato per effettuare il provisioning della macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.operatingSystem
+      type:
+      - string
+      description: Il sistema operativo in esecuzione nella macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.remoteSourceImageLink
+      type:
+      - string
+      description: URI dell'immagine di origine del sistema operativo che verrà copiato all'account di archiviazione del cliente della creazione della VM. Se viene specificato RemoteSourceImageLink, MediaLink deve anche essere specificato. Se viene specificato RemoteSourceImageLink, thenSourceIamgeName non deve essere specificato.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.iOType
+      type:
+      - string
+      description: Ottiene o imposta il tipo dei / o.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.resizedSizeInGB
+      type:
+      - number
+      description: Quando un'immagine del sistema operativo o un elemento RemoteSourceImage viene usato per creare un elemento OSVirtualHardDisk, questo parametro è utilizzabile per ridimensionare il nuovo elemento OSVirtualHardDisk a dimensioni maggiori. ResizedSizeInGB deve essere maggiore dell'elemento LogicalSizeInGB dell'immagine del sistema operativo sottostante.
+      optional: true
+    - id: parameters.provisionGuestAgent
+      type:
+      - boolean
+      description: Indica se il servizio WindowsAzureGuestAgent è installato nella macchina virtuale. Per eseguire un'estensione di risorsa in una macchina virtuale, questo servizio deve essere installato.
+      optional: true
+    - id: parameters.debugSettings
+      type:
+      - azure-asm-compute.DebugSettings
+      description: Impostazioni per l'output di console di debug.
+      optional: true
+    - id: parameters.debugSettings.bootDiagnosticsEnabled
+      type:
+      - boolean
+      description: Abilitare o disabilitare la diagnostica di avvio.
+      optional: true
+    - id: parameters.debugSettings.consoleScreenshotBlobUri
+      type:
+      - string
+      description: Uri del BLOB per la schermata di console.
+      optional: true
+    - id: parameters.debugSettings.serialOutputBlobUri
+      type:
+      - string
+      description: Uri del BLOB per l'output seriale.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginUpdating(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdatingLoadBalancedEndpointSet
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdatingLoadBalancedEndpointSet
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginUpdatingLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  summary: L'operazione di iniziare l'aggiornamento di caricare Set con bilanciamento Endpoint viene modificato il InputEndpoints con bilanciamento del carico specificato in tutti i ruoli di un'infrastruttura come una distribuzione del servizio. Gli endpoint non con carico bilanciato devono essere modificati mediante UpdateRole.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/dn469417.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginUpdatingLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineUpdateLoadBalancedSetParameters
+      description: Parametri forniti all'operazione di iniziare l'aggiornamento di Endpoint Set con carico bilanciato.
+    - id: parameters.loadBalancedEndpoints
+      type:
+      - array
+      description: Un elenco di carico bilanciato InputEndpoints da aggiornare.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginUpdatingLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureOSImage
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureOSImage
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: captureOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: >-
+    L'operazione di acquisizione ruolo crea una copia del sistema operativo disco rigido virtuale (VHD) che viene distribuito nella macchina virtuale, Salva la copia del disco rigido virtuale nella stessa posizione di archiviazione come il VHD del sistema operativo e registra la copia come immagine nella raccolta immagini. Dall'immagine acquisita, è possibile creare macchine virtuali personalizzate aggiuntive. Per altre informazioni sulle immagini e dischi, vedere Gestione di dischi e immagini con http://msdn.microsoft.com/en-us/library/windowsazure/jj672979.aspx. Per altre informazioni sull'acquisizione di immagini, informazioni su come acquisire un'immagine di una macchina virtuale che esegue Windows Server 2008 R2 alla http://www.windowsazure.com/en-us/documentation/articles/virtual-machines-capture-image-windows-server/ o come acquisire un'immagine di una macchina virtuale che esegue Linux in http://www.windowsazure.com/en-us/documentation/articles/virtual-machines-linux-capture-image/.
+
+    (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157201.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.captureOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da riavviare.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCaptureOSImageParameters
+      description: Parametri forniti all'operazione Acquisisci macchina virtuale.
+    - id: parameters.postCaptureAction
+      type:
+      - azure-asm-compute.PostCaptureAction
+      description: "Specifica l'azione che viene eseguita al termine dell'operazione di acquisizione. I valori possibili sono: Delete - questo valore fa sì che la macchina virtuale deve essere eliminato dopo che l'immagine è stata acquisita; o eseguire il Reprovisioning - questo valore fa sì che la macchina virtuale ridistribuzione dopo l'acquisizione dell'immagine usando le informazioni specificate in ProvisioningConfiguration."
+    - id: parameters.provisioningConfiguration
+      type:
+      - azure-asm-compute.ConfigurationSet
+      description: Fornisce informazioni da usare per ridistribuire la macchina virtuale dopo che l'immagine è stata acquisita. Questo elemento viene usato solo quando è impostato il PostCaptureAction al riavvio del provisioning.
+      optional: true
+    - id: parameters.provisioningConfiguration.configurationSetType
+      type:
+      - string
+      description: Specifica il tipo di configurazione per il set di configurazione.
+      optional: true
+    - id: parameters.provisioningConfiguration.inputEndpoints
+      type:
+      - array
+      description: Contiene una raccolta di endpoint esterni per la macchina virtuale. Questo elemento viene usato solo con il tipo NetworkConfigurationSet.
+      optional: true
+    - id: parameters.provisioningConfiguration.subnetNames
+      type:
+      - array
+      description: Elenco di nomi di subnet di rete virtuale a cui appartiene la distribuzione. Questo elemento viene usato solo con il tipo NetworkConfigurationSet.
+      optional: true
+    - id: parameters.provisioningConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: 'Specifica un indirizzo cliente, ad esempio un indirizzo IP assegnato a una macchina virtuale nella SubNet di una rete virtuale. Ad esempio: 10.0.0.4.'
+      optional: true
+    - id: parameters.provisioningConfiguration.publicIPs
+      type:
+      - array
+      description: >-
+        facoltativo.
+
+        Un set di indirizzi IP pubblici. Attualmente, solo un indirizzo IP pubblico aggiuntivo per ogni ruolo è supportato in una distribuzione IaaS. L'indirizzo IP è oltre l'indirizzo VIP predefinito per la distribuzione.
+      optional: true
+    - id: parameters.provisioningConfiguration.networkInterfaces
+      type:
+      - array
+      description: ''
+      optional: true
+    - id: parameters.provisioningConfiguration.networkSecurityGroup
+      type:
+      - string
+      description: Ottiene o imposta il gruppo di sicurezza di rete associato con questo ruolo. Facoltativo
+      optional: true
+    - id: parameters.provisioningConfiguration.iPForwarding
+      type:
+      - string
+      description: Ottiene o imposta lo stato dell'inoltro IP per questo ruolo. Facoltativo
+      optional: true
+    - id: parameters.provisioningConfiguration.computerName
+      type:
+      - string
+      description: >-
+        Specifica il nome del computer per la macchina virtuale. Se il nome del computer non è specificato, viene creato un nome in base al nome del ruolo.
+
+        I nomi di computer devono essere 1 e 15 caratteri. Questo elemento viene usato solo con il WindowsProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.adminPassword
+      type:
+      - string
+      description: Specifica la stringa che rappresenta la password amministratore da utilizzare per la macchina virtuale. Se la macchina virtuale verrà creata da un'immagine di macchina virtuale 'Specializzata', la password non è obbligatoria.
+      optional: true
+    - id: parameters.provisioningConfiguration.resetPasswordOnFirstLogon
+      type:
+      - boolean
+      description: Specifica se la password deve essere reimpostata la prima volta che l'amministratore accede in.
+      optional: true
+    - id: parameters.provisioningConfiguration.enableAutomaticUpdates
+      type:
+      - boolean
+      description: Specifica se aggiornamenti automatici sono abilitati per la macchina virtuale. Questo elemento viene usato solo con il WindowsProvisioningConfiguration impostato. Il valore predefinito è False.
+      optional: true
+    - id: parameters.provisioningConfiguration.timeZone
+      type:
+      - string
+      description: Specifica il fuso orario per la macchina virtuale. Questo elemento viene usato solo con il WindowsProvisioningConfiguration impostato. Per un elenco completo delle voci di fuso orario supportate, è possibile fare riferimento ai valori elencati nella voce del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones in un computer che esegue Windows 7, Windows Server 2008 e Windows Server 2008 R2 oppure è possibile utilizzare lo strumento da riga di comando tzutil per l'orario valido. Lo strumento tzutil viene installato per impostazione predefinita in Windows 7, Windows Server 2008 e Windows Server 2008 R2.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin
+      type:
+      - azure-asm-compute.DomainJoinSettings
+      description: Contiene proprietà che specificano un dominio a cui verrà aggiunta la macchina virtuale. Questo elemento viene usato solo con il WindowsProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials
+      type:
+      - azure-asm-compute.DomainJoinCredentials
+      description: Specifica i valori da utilizzare per aggiungere la macchina virtuale al dominio.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.domain
+      type:
+      - string
+      description: 'Specifica il nome del dominio usato per autenticare un account. Il valore è un dominio DNS completo. Se non viene specificato il nome di dominio, nome utente deve specificare il formato user principal name (UPN) (user@fully-qualified-DNS-domain) o il formato completamente-qualified-DNS-dominio\nome utente. Esempio: example.com.'
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.userName
+      type:
+      - string
+      description: Specifica un nome utente nel dominio che può essere utilizzato per accedere al dominio.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.password
+      type:
+      - string
+      description: Specifica la password da usare per accedere al dominio.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.domainToJoin
+      type:
+      - string
+      description: Specifica il dominio da aggiungere.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.ldapMachineObjectOU
+      type:
+      - string
+      description: >-
+        Specifica il nome distinto X 500 Lightweight Directory Access Protocol (LDAP) dell'unità organizzativa (OU) in cui viene creato l'account del computer. Questo account è in Active Directory in un controller di dominio nel dominio a cui il computer è unito.
+
+        Esempio: OU=MyOu,OU=MyParentOu,DC=example.com,DC=MyCompany,DC=com.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.provisioning
+      type:
+      - azure-asm-compute.DomainJoinProvisioning
+      description: Informazioni aggiuntive per il provisioning di join di dominio.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.provisioning.accountData
+      type:
+      - string
+      description: Le informazioni sull'account per il dominio.
+      optional: true
+    - id: parameters.provisioningConfiguration.storedCertificateSettings
+      type:
+      - array
+      description: >-
+        Contiene un elenco dei certificati di servizio con cui eseguire il provisioning per il nuovo ruolo.
+
+        Questo elemento viene usato solo con il WindowsProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.windowsRemoteManagement
+      type:
+      - azure-asm-compute.WindowsRemoteManagementSettings
+      description: Consente di configurare il servizio Gestione remota Windows nella macchina virtuale, che Abilita remoto Windows PowerShell.
+      optional: true
+    - id: parameters.provisioningConfiguration.windowsRemoteManagement.listeners
+      type:
+      - array
+      description: Contiene una raccolta di informazioni per l'attivazione remota Windows PowerShell.
+      optional: true
+    - id: parameters.provisioningConfiguration.adminUserName
+      type:
+      - string
+      description: Specifica il nome utilizzato per rinominare l'account amministratore predefinito. Se la macchina virtuale verrà creata da un'immagine di macchina virtuale 'Specializzata', il nome utente non è obbligatorio.
+      optional: true
+    - id: parameters.provisioningConfiguration.additionalUnattendContent
+      type:
+      - azure-asm-compute.AdditionalUnattendContentSettings
+      description: Specifica base 64 codificata in formato XML informazioni aggiuntiva che può essere inclusi nel file Unattend. XML, che viene usato dal programma di installazione di Windows.
+      optional: true
+    - id: parameters.provisioningConfiguration.additionalUnattendContent.unattendPasses
+      type:
+      - array
+      description: Specifica i passaggi di installazione automatica
+      optional: true
+    - id: parameters.provisioningConfiguration.hostName
+      type:
+      - string
+      description: Specifica il nome host per macchina virtuale. I nomi host sono stringhe costituite da 1 a 64 caratteri ASCII in lunghezza. Questo elemento viene usato solo con il LinuxProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.userName
+      type:
+      - string
+      description: Specifica il nome di un utente deve essere creato nel gruppo sudoer della macchina virtuale. I nomi utente sono stringhe costituite da 1 a 32 caratteri ASCII in lunghezza. Questo elemento viene usato solo con il LinuxProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.userPassword
+      type:
+      - string
+      description: Specifica la password per il nome utente. Le password sono stringhe costituite da 6 a 72 caratteri ASCII in lunghezza. Questo elemento viene usato solo con il LinuxProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.disableSshPasswordAuthentication
+      type:
+      - boolean
+      description: >-
+        Specifica se l'autenticazione SSH è disabilitata per la password.
+
+        Questo elemento viene usato solo con il LinuxProvisioningConfiguration impostato. Per impostazione predefinita questo valore è impostato su true.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings
+      type:
+      - azure-asm-compute.SshSettings
+      description: Specifica le chiavi pubbliche SSH e coppie di chiavi per popolare l'immagine durante il provisioning. Questo elemento viene usato solo con il LinuxProvisioningConfiguration impostato.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings.publicKeys
+      type:
+      - array
+      description: Specifica la raccolta di chiavi pubbliche SSH.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings.keyPairs
+      type:
+      - array
+      description: Specifica la raccolta di coppie di chiavi SSH.
+      optional: true
+    - id: parameters.provisioningConfiguration.customData
+      type:
+      - string
+      description: facoltativo. Fornisce dati personalizzati da passare alla macchina virtuale con codifica base64.
+      optional: true
+    - id: parameters.targetImageLabel
+      type:
+      - string
+      description: Specifica il nome descrittivo dell'immagine acquisita. Questo è il valore visualizzato nella colonna nome per l'immagine nel portale di gestione di Azure.
+    - id: parameters.targetImageName
+      type:
+      - string
+      description: Specifica il nome dell'immagine dell'immagine acquisita.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function captureOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureVMImage
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureVMImage
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: captureVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: Acquisire un ruolo come modello di macchina virtuale.
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.captureVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da riavviare.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCaptureVMImageParameters
+      description: Parametri forniti all'operazione Acquisisci macchina virtuale.
+    - id: parameters.operationType
+      type:
+      - string
+      description: Richiesto. Deve essere impostata su CaptureRoleOperation.
+      optional: true
+    - id: parameters.oSState
+      type:
+      - string
+      description: 'Richiesto. Lo stato del sistema operativo: generalizzato | Specializzati.'
+      optional: true
+    - id: parameters.vMImageName
+      type:
+      - string
+      description: Richiesto. Il nome del modello di macchina virtuale.
+      optional: true
+    - id: parameters.vMImageLabel
+      type:
+      - string
+      description: Richiesto. L'etichetta di modello di macchina virtuale.
+      optional: true
+    - id: parameters.statusCode
+      type:
+      - azure-asm-compute.HttpStatusCode
+      description: ''
+      optional: true
+    - id: parameters.requestId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function captureVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#create
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#create
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: create(serviceName, deploymentName, parameters, callback)
+  summary: "L'operazione Create Role aggiunge una macchina virtuale a una distribuzione esistente. È possibile fare riferimento a OSDisk nell'operazione Add Role nei modi seguenti: un'immagine utente/piattaforma: impostare il SourceImageName a un'immagine di piattaforma o un utente. È facoltativamente possibile specificare i valori di collegamento multimediale e DiskName durante l'operazione per controllare il nome e il percorso del disco di destinazione. Quando DiskName e MediaLink vengono specificate in questa modalità, è necessario non esistono già nel sistema, in caso contrario che verrà restituito un errore di conflitto. Disco - DiskName insieme a un utente specificato immagine nel repository immagini. SourceImageName deve essere impostato su NULL. Tutte le altre proprietà vengono ignorati. o i Blob in un Account di archiviazione: impostare MediaLink su un blob che contiene l'immagine. SourceImageName e DiskName vengono impostati su NULL.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157186.aspx per altre informazioni)"
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.create(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCreateParameters
+      description: Parametri forniti all'operazione crea macchina virtuale.
+    - id: parameters.roleName
+      type:
+      - string
+      description: Specifica il nome per la macchina virtuale. Il nome deve essere univoco all'interno della distribuzione.
+    - id: parameters.availabilitySetName
+      type:
+      - string
+      description: Specifica il nome di un set di disponibilità per cui si desidera aggiungere la macchina virtuale. Questo valore determina l'allocazione macchina virtuale nell'ambiente Azure. Le macchine virtuali specificate nello stesso set di disponibilità vengono allocate a nodi diversi per ottimizzare la disponibilità.
+      optional: true
+    - id: parameters.roleSize
+      type:
+      - string
+      description: Le dimensioni della macchina virtuale.
+      optional: true
+    - id: parameters.configurationSets
+      type:
+      - array
+      description: Contiene la raccolta di set di configurazione che contengono le impostazioni di configurazione di sistema e dell'applicazione.
+      optional: true
+    - id: parameters.resourceExtensionReferences
+      type:
+      - array
+      description: Contiene una raccolta di estensioni di risorsa da installare nella macchina virtuale. Questo elemento viene usato se ProvisionGuestAgent è impostato su true.
+      optional: true
+    - id: parameters.vMImageName
+      type:
+      - string
+      description: Nome dell'immagine di macchina virtuale da cui questo ruolo deve essere creata. Se il disco del sistema operativo nell'immagine di macchina virtuale è stato specializzato, quindi nessun WindowsProvisioningConfigurationSet o LinuxProvisioningConfigurationSet deve essere specificato. Nessun elemento OSVirtualHardDisk o l'oggetto DataVirtualHardDisk deve essere specificato quando si usa questo argomento.
+      optional: true
+    - id: parameters.dataVirtualHardDisks
+      type:
+      - array
+      description: Contiene i parametri utilizzati da Azure per creare il disco dati per la macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk
+      type:
+      - azure-asm-compute.OSVirtualHardDisk
+      description: Contiene i parametri utilizzati da Azure per creare il disco del sistema operativo per la macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.hostCaching
+      type:
+      - string
+      description: Specifica il comportamento di memorizzazione nella cache della piattaforma del blob per l'efficienza di lettura/scrittura disco del sistema operativo.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.label
+      type:
+      - string
+      description: Specifica il nome descrittivo di un'immagine del sistema operativo nel repository immagini.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.name
+      type:
+      - string
+      description: Specifica il nome di un'immagine del sistema operativo nel repository immagini.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.mediaLink
+      type:
+      - string
+      description: Specifica il percorso del disco del sistema operativo in archiviazione di Azure.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.sourceImageName
+      type:
+      - string
+      description: Specifica il nome dell'immagine di origine che è stato usato per effettuare il provisioning della macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.operatingSystem
+      type:
+      - string
+      description: Il sistema operativo in esecuzione nella macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.remoteSourceImageLink
+      type:
+      - string
+      description: URI dell'immagine di origine del sistema operativo che verrà copiato all'account di archiviazione del cliente della creazione della VM. Se viene specificato RemoteSourceImageLink, MediaLink deve anche essere specificato. Se viene specificato RemoteSourceImageLink, thenSourceIamgeName non deve essere specificato.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.iOType
+      type:
+      - string
+      description: Ottiene o imposta il tipo dei / o.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.resizedSizeInGB
+      type:
+      - number
+      description: Quando un'immagine del sistema operativo o un elemento RemoteSourceImage viene usato per creare un elemento OSVirtualHardDisk, questo parametro è utilizzabile per ridimensionare il nuovo elemento OSVirtualHardDisk a dimensioni maggiori. ResizedSizeInGB deve essere maggiore dell'elemento LogicalSizeInGB dell'immagine del sistema operativo sottostante.
+      optional: true
+    - id: parameters.provisionGuestAgent
+      type:
+      - boolean
+      description: Indica se il servizio WindowsAzureGuestAgent è installato nella macchina virtuale. Per eseguire un'estensione di risorsa in una macchina virtuale, questo servizio deve essere installato.
+      optional: true
+    - id: parameters.mediaLocation
+      type:
+      - string
+      description: Posizione in cui devono essere copiati i dischi rigidi virtuali VMImage, per Vmimage pubblicato.
+      optional: true
+    - id: parameters.vMImageInput
+      type:
+      - azure-asm-compute.VMImageInput
+      description: Quando un'immagine di macchina virtuale viene usata per creare un nuovo elemento PersistantVMRole, gli elementi DiskConfigurations nell'immagine di macchina virtuale vengono utilizzati per creare nuovi dischi per la nuova macchina virtuale. Questo parametro è utilizzabile per ridimensionare i dischi appena creati a dimensioni maggiori rispetto agli elementi DiskConfigurations sottostanti nella proprietà della macchina virtuale Image.This viene restituito solo con un'intestazione di versione del 2014-10-01 o versione successiva.
+      optional: true
+    - id: parameters.vMImageInput.oSDiskConfiguration
+      type:
+      - azure-asm-compute.OSDiskConfiguration
+      description: Corrisponde all'elemento OSDiskConfiguration dell'immagine di macchina virtuale usata per creare un nuovo ruolo. L'elemento gli elementi OSDiskConfiguration è solo disponibile con versione 2014-10-01 o versione successiva.
+      optional: true
+    - id: parameters.vMImageInput.oSDiskConfiguration.resizedSizeInGB
+      type:
+      - number
+      description: Specifica la nuova dimensione (maggiore) dell'elemento OSVirtualHardDisk creato usando un'immagine di macchina virtuale. L'elemento ResizedSizeInGB è solo disponibile con versione 2014-10-01 o versione successiva.
+      optional: true
+    - id: parameters.vMImageInput.dataDiskConfigurations
+      type:
+      - azure-asm-compute.IEnumerable
+      description: Corrisponde all'elemento DataDiskConfigurations dell'immagine di macchina virtuale usata per creare un nuovo ruolo. L'elemento DataDiskConfigurations è solo disponibile con versione 2014-10-01 o versione successiva.
+      optional: true
+    - id: parameters.debugSettings
+      type:
+      - azure-asm-compute.DebugSettings
+      description: Impostazioni per l'output di console di debug.
+      optional: true
+    - id: parameters.debugSettings.bootDiagnosticsEnabled
+      type:
+      - boolean
+      description: Abilitare o disabilitare la diagnostica di avvio.
+      optional: true
+    - id: parameters.debugSettings.consoleScreenshotBlobUri
+      type:
+      - string
+      description: Uri del BLOB per la schermata di console.
+      optional: true
+    - id: parameters.debugSettings.serialOutputBlobUri
+      type:
+      - string
+      description: Uri del BLOB per l'output seriale.
+      optional: true
+    - id: parameters.licenseType
+      type:
+      - string
+      description: "Specifica che l'immagine o il disco in cui è in uso sia stata concessa in licenza in locale. Questo elemento viene usato solo per le immagini che contengono il sistema operativo Windows Server. I valori possibili sono: Windows_Client, Windows_Server"
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function create(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#createDeployment
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#createDeployment
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: createDeployment(serviceName, parameters, callback)
+  summary: L'operazione Create Virtual Machine Deployment effettua il provisioning di una macchina virtuale in base alla configurazione fornita. Quando si crea una distribuzione di una macchina virtuale, è necessario assicurarsi che il servizio cloud e il disco o l'immagine da usare si trovino nella stessa area. Ad esempio, se il servizio cloud è stato creato nell'area Stati Uniti occidentali, il disco o l'immagine da usare deve anche trovarsi in un account di archiviazione nell'area Stati Uniti occidentali.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157194.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.createDeployment(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCreateDeploymentParameters
+      description: Parametri forniti all'operazione Create Virtual Machine Deployment.
+    - id: parameters.name
+      type:
+      - string
+      description: Un nome per la distribuzione. Il nome della distribuzione deve essere univoco tra le distribuzioni per il servizio ospitato.
+    - id: parameters.deploymentSlot
+      type:
+      - azure-asm-compute.DeploymentSlot
+      description: "Specifica l'ambiente in cui distribuire la macchina virtuale. I valori possibili sono: gestione temporanea o produzione."
+    - id: parameters.label
+      type:
+      - string
+      description: Un nome per il servizio ospitato. Il nome può essere fino a 100 caratteri. È consigliabile che l'etichetta sia univoco all'interno della sottoscrizione. Il nome può essere utilizzato identificare il servizio ospitato per motivi di rilevamento.
+    - id: parameters.roles
+      type:
+      - array
+      description: Contiene i dettagli di provisioning per la nuova distribuzione di macchina virtuale.
+    - id: parameters.virtualNetworkName
+      type:
+      - string
+      description: Specifica il nome di una rete virtuale esistente a cui apparterrà la distribuzione. Le reti virtuali vengono create chiamando l'operazione di configurazione di rete impostato.
+      optional: true
+    - id: parameters.dnsSettings
+      type:
+      - azure-asm-compute.DnsSettings
+      description: Contiene un elenco di server DNS da associare alla macchina.
+      optional: true
+    - id: parameters.dnsSettings.dnsServers
+      type:
+      - array
+      description: Contiene una raccolta di oggetti che definiscono le impostazioni del server DNS.
+      optional: true
+    - id: parameters.reservedIPName
+      type:
+      - string
+      description: facoltativo. Specifica il nome di un indirizzo IP riservato esistente a cui apparterrà la distribuzione. Gli indirizzi IP riservati vengono creati chiamando l'operazione di creare un indirizzo IP riservato.
+      optional: true
+    - id: parameters.loadBalancers
+      type:
+      - azure-asm-compute.IEnumerable
+      description: Elenco di servizi di bilanciamento del carico interno che associa ogni bilanciamento del carico in un indirizzo VIP privato.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function createDeployment(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#deleteMethod
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#deleteMethod
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: deleteMethod(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  summary: L'operazione di eliminazione ruolo Elimina la macchina virtuale specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157184.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.deleteMethod(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da eliminare.
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: Specifica che i BLOB di origine per la macchina virtuale devono anche essere eliminati dall'archivio.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function deleteMethod(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#get
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#get
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: get(serviceName, deploymentName, virtualMachineName, callback)
+  summary: L'operazione Get Role recupera le informazioni sulla macchina virtuale specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157193.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.get(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Nome della macchina virtuale.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function get(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#getRemoteDesktopFile
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#getRemoteDesktopFile
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: getRemoteDesktopFile(serviceName, deploymentName, virtualMachineName, callback)
+  summary: L'operazione di Download RDP file recupera il file di configurazione di Remote Desktop Protocol dalla macchina virtuale specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157183.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.getRemoteDesktopFile(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Nome della macchina virtuale.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function getRemoteDesktopFile(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#initiateMaintenance
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#initiateMaintenance
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: initiateMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  summary: La manutenzione avviare sull'operazione ruolo avvia la manutenzione sulla macchina virtuale specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.initiateMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale per avviare la manutenzione.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function initiateMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#redeploy
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#redeploy
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: redeploy(serviceName, deploymentName, virtualMachineName, callback)
+  summary: L'operazione di ridistribuzione ruolo ridistribuisce la macchina virtuale specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.redeploy(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da ridistribuire.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function redeploy(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#restart
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#restart
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: restart(serviceName, deploymentName, virtualMachineName, callback)
+  summary: L'operazione di riavvio del ruolo viene riavviata la macchina virtuale specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.restart(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da riavviare.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function restart(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdown
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdown
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: shutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: >-
+    L'operazione Shutdown Role si arresta la macchina virtuale specificata.
+
+    (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157195.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.shutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da arrestare.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineShutdownParameters
+      description: I parametri per l'operazione di arresto macchina virtuale.
+    - id: parameters.postShutdownAction
+      type:
+      - azure-asm-compute.PostShutdownAction
+      description: Lo stato della macchina virtuale dopo l'arresto (arresto o StoppedDeallocated).
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function shutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdownRoles
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdownRoles
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: shutdownRoles(serviceName, deploymentName, parameters, callback)
+  summary: L'operazione di arresto ruoli Arresta il set specificato di macchine virtuali.
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.shutdownRoles(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineShutdownRolesParameters
+      description: Parametri da passare all'operazione di ruoli di arresto.
+    - id: parameters.roles
+      type:
+      - array
+      description: Il set di ruoli da arrestare.
+      optional: true
+    - id: parameters.postShutdownAction
+      type:
+      - azure-asm-compute.PostShutdownAction
+      description: Lo stato dei ruoli dopo l'arresto. I valori possibili includono StoppedDeallocated o arrestato.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function shutdownRoles(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#start
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#start
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: start(serviceName, deploymentName, virtualMachineName, callback)
+  summary: L'operazione avvia ruolo avvia la macchina virtuale specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157189.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.start(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale da avviare.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function start(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#startRoles
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#startRoles
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: startRoles(serviceName, deploymentName, parameters, callback)
+  summary: Inizia l'operazione di ruoli di avviare il set specificato di macchine virtuali.
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.startRoles(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineStartRolesParameters
+      description: Parametri da passare all'operazione di avvio dei ruoli.
+    - id: parameters.roles
+      type:
+      - array
+      description: Il set di ruoli da arrestare.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function startRoles(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#update
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#update
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: update(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: L'operazione Update Role aggiunge una macchina virtuale a una distribuzione esistente.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/jj157187.aspx per altre informazioni)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.update(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Il nome della macchina virtuale.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineUpdateParameters
+      description: Parametri forniti all'operazione di modifica proprietà macchina virtuale.
+    - id: parameters.roleName
+      type:
+      - string
+      description: Specifica il nome per la macchina virtuale. Il nome deve essere univoco all'interno della distribuzione.
+    - id: parameters.label
+      type:
+      - string
+      description: Specifica il nome descrittivo per la macchina virtuale.
+      optional: true
+    - id: parameters.availabilitySetName
+      type:
+      - string
+      description: Specifica il nome di un set di disponibilità per cui si desidera aggiungere la macchina virtuale. Questo valore determina l'allocazione macchina virtuale nell'ambiente Azure. Le macchine virtuali specificate nello stesso set di disponibilità vengono allocate a nodi diversi per ottimizzare la disponibilità.
+      optional: true
+    - id: parameters.roleSize
+      type:
+      - string
+      description: Le dimensioni della macchina virtuale.
+      optional: true
+    - id: parameters.configurationSets
+      type:
+      - array
+      description: Contiene la raccolta di set di configurazione che contengono le impostazioni di configurazione di sistema e dell'applicazione.
+      optional: true
+    - id: parameters.resourceExtensionReferences
+      type:
+      - array
+      description: Contiene una raccolta di estensioni di risorsa da installare nella macchina virtuale. Questo elemento viene usato se ProvisionGuestAgent è impostato su true.
+      optional: true
+    - id: parameters.dataVirtualHardDisks
+      type:
+      - array
+      description: Contiene i parametri utilizzati da Azure per creare il disco dati per la macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk
+      type:
+      - azure-asm-compute.OSVirtualHardDisk
+      description: Contiene i parametri utilizzati da Azure per creare il disco del sistema operativo per la macchina virtuale.
+    - id: parameters.oSVirtualHardDisk.hostCaching
+      type:
+      - string
+      description: Specifica il comportamento di memorizzazione nella cache della piattaforma del blob per l'efficienza di lettura/scrittura disco del sistema operativo.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.label
+      type:
+      - string
+      description: Specifica il nome descrittivo di un'immagine del sistema operativo nel repository immagini.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.name
+      type:
+      - string
+      description: Specifica il nome di un'immagine del sistema operativo nel repository immagini.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.mediaLink
+      type:
+      - string
+      description: Specifica il percorso del disco del sistema operativo in archiviazione di Azure.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.sourceImageName
+      type:
+      - string
+      description: Specifica il nome dell'immagine di origine che è stato usato per effettuare il provisioning della macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.operatingSystem
+      type:
+      - string
+      description: Il sistema operativo in esecuzione nella macchina virtuale.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.remoteSourceImageLink
+      type:
+      - string
+      description: URI dell'immagine di origine del sistema operativo che verrà copiato all'account di archiviazione del cliente della creazione della VM. Se viene specificato RemoteSourceImageLink, MediaLink deve anche essere specificato. Se viene specificato RemoteSourceImageLink, thenSourceIamgeName non deve essere specificato.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.iOType
+      type:
+      - string
+      description: Ottiene o imposta il tipo dei / o.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.resizedSizeInGB
+      type:
+      - number
+      description: Quando un'immagine del sistema operativo o un elemento RemoteSourceImage viene usato per creare un elemento OSVirtualHardDisk, questo parametro è utilizzabile per ridimensionare il nuovo elemento OSVirtualHardDisk a dimensioni maggiori. ResizedSizeInGB deve essere maggiore dell'elemento LogicalSizeInGB dell'immagine del sistema operativo sottostante.
+      optional: true
+    - id: parameters.provisionGuestAgent
+      type:
+      - boolean
+      description: Indica se il servizio WindowsAzureGuestAgent è installato nella macchina virtuale. Per eseguire un'estensione di risorsa in una macchina virtuale, questo servizio deve essere installato.
+      optional: true
+    - id: parameters.debugSettings
+      type:
+      - azure-asm-compute.DebugSettings
+      description: Impostazioni per l'output di console di debug.
+      optional: true
+    - id: parameters.debugSettings.bootDiagnosticsEnabled
+      type:
+      - boolean
+      description: Abilitare o disabilitare la diagnostica di avvio.
+      optional: true
+    - id: parameters.debugSettings.consoleScreenshotBlobUri
+      type:
+      - string
+      description: Uri del BLOB per la schermata di console.
+      optional: true
+    - id: parameters.debugSettings.serialOutputBlobUri
+      type:
+      - string
+      description: Uri del BLOB per l'output seriale.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function update(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#updateLoadBalancedEndpointSet
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#updateLoadBalancedEndpointSet
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: updateLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  summary: L'operazione di aggiornamento caricare Set con bilanciamento Endpoint viene modificato il InputEndpoints con bilanciamento del carico specificato in tutti i ruoli di un'infrastruttura come una distribuzione del servizio. Gli endpoint non con carico bilanciato devono essere modificati mediante UpdateRole.
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.updateLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Il nome della distribuzione.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineUpdateLoadBalancedSetParameters
+      description: Parametri forniti all'operazione di aggiornamento dell'Endpoint Set con carico bilanciato.
+    - id: parameters.loadBalancedEndpoints
+      type:
+      - array
+      description: Un elenco di carico bilanciato InputEndpoints da aggiornare.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function updateLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js

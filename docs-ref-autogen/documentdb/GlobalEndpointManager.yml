@@ -1,0 +1,122 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2996643fcfbc41176e7b3b33664ea4418a97233d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056544"
+items:
+- uid: documentdb.GlobalEndpointManager
+  id: documentdb.GlobalEndpointManager
+  name: GlobalEndpointManager
+  summary: ''
+  fullName: documentdb.GlobalEndpointManager
+  type: Class
+  children:
+  - documentdb.GlobalEndpointManager.#ctor
+  - documentdb.GlobalEndpointManager#getReadEndpoint
+  - documentdb.GlobalEndpointManager#setReadEndpoint
+  - documentdb.GlobalEndpointManager#getWriteEndpoint
+  - documentdb.GlobalEndpointManager#setWriteEndpoint
+  - documentdb.GlobalEndpointManager#refreshEndpointList
+  langs:
+  - js
+- id: documentdb.GlobalEndpointManager.#ctor
+  uid: documentdb.GlobalEndpointManager.#ctor
+  parent: documentdb.GlobalEndpointManager
+  name: GlobalEndpointManager(client)
+  fullName: documentdb.GlobalEndpointManager.GlobalEndpointManager(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - object
+      description: L'istanza client del documento.
+    content: new GlobalEndpointManager(client)
+  langs:
+  - js
+- uid: documentdb.GlobalEndpointManager#getReadEndpoint
+  id: documentdb.GlobalEndpointManager#getReadEndpoint
+  parent: documentdb.GlobalEndpointManager
+  name: getReadEndpoint(callback)
+  summary: Ottiene l'endpoint corrente di lettura dalla cache dell'endpoint.
+  fullName: documentdb.GlobalEndpointManager.getReadEndpoint(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: La funzione di callback che accetta readEndpoint(string) come argomento.
+    content: function getReadEndpoint(callback)
+  langs:
+  - js
+- uid: documentdb.GlobalEndpointManager#setReadEndpoint
+  id: documentdb.GlobalEndpointManager#setReadEndpoint
+  parent: documentdb.GlobalEndpointManager
+  name: setReadEndpoint(readEndpoint)
+  summary: Set di endpoint di lettura corrente.
+  fullName: documentdb.GlobalEndpointManager.setReadEndpoint(readEndpoint)
+  type: Function
+  syntax:
+    parameters:
+    - id: readEndpoint
+      type:
+      - string
+      description: L'endpoint da impostare come readEndpoint.
+    content: function setReadEndpoint(readEndpoint)
+  langs:
+  - js
+- uid: documentdb.GlobalEndpointManager#getWriteEndpoint
+  id: documentdb.GlobalEndpointManager#getWriteEndpoint
+  parent: documentdb.GlobalEndpointManager
+  name: getWriteEndpoint(callback)
+  summary: Ottiene l'endpoint di scrittura corrente dalla cache dell'endpoint.
+  fullName: documentdb.GlobalEndpointManager.getWriteEndpoint(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: La funzione di callback che accetta writeEndpoint(string) come argomento.
+    content: function getWriteEndpoint(callback)
+  langs:
+  - js
+- uid: documentdb.GlobalEndpointManager#setWriteEndpoint
+  id: documentdb.GlobalEndpointManager#setWriteEndpoint
+  parent: documentdb.GlobalEndpointManager
+  name: setWriteEndpoint(writeEndpoint)
+  summary: Imposta l'endpoint di scrittura corrente.
+  fullName: documentdb.GlobalEndpointManager.setWriteEndpoint(writeEndpoint)
+  type: Function
+  syntax:
+    parameters:
+    - id: writeEndpoint
+      type:
+      - string
+      description: L'endpoint da impostare come writeEndpoint.
+    content: function setWriteEndpoint(writeEndpoint)
+  langs:
+  - js
+- uid: documentdb.GlobalEndpointManager#refreshEndpointList
+  id: documentdb.GlobalEndpointManager#refreshEndpointList
+  parent: documentdb.GlobalEndpointManager
+  name: refreshEndpointList(callback)
+  summary: >-
+    Aggiorna l'elenco di endpoint recuperando i percorsi leggibili e scrivibili dall'account di database con replica geografica e quindi aggiornare la cache di percorsi.
+
+    Abbiamo ignorare l'aggiornamento se EnableEndpointDiscovery è impostata su False
+  fullName: documentdb.GlobalEndpointManager.refreshEndpointList(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: La funzione di callback che accetta come argomenti writeEndpoint(string) e readEndpoint(string).
+    content: function refreshEndpointList(callback)
+  langs:
+  - js

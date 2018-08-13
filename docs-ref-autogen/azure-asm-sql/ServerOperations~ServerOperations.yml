@@ -1,0 +1,162 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 96b0b3e923a59f735d4c4f065748b06273fff3cb
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056081"
+items:
+- uid: azure-asm-sql.ServerOperations~ServerOperations
+  id: azure-asm-sql.ServerOperations~ServerOperations
+  name: ServerOperations
+  summary: >-
+    Contiene metodi per consentire varie operazioni sui server di Database SQL di Azure.
+
+    __Nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    [Server] vedere <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23servers>.
+
+    Inizializza una nuova istanza della classe ServerOperations.
+  fullName: azure-asm-sql.ServerOperations
+  type: Class
+  children:
+  - azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  - azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  - azure-asm-sql.ServerOperations~ServerOperations#create
+  - azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  - azure-asm-sql.ServerOperations~ServerOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  uid: azure-asm-sql.ServerOperations~ServerOperations.#ctor
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: ServerOperations(client)
+  fullName: azure-asm-sql.ServerOperations.ServerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Riferimento al client del servizio.
+    content: new ServerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  id: azure-asm-sql.ServerOperations~ServerOperations#changeAdministratorPassword
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: changeAdministratorPassword(serverName, parameters, callback)
+  summary: Modifica la password amministrativa di un Server Database SQL di Azure esistente per una determinata sottoscrizione.
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.changeAdministratorPassword(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Il nome del Server di Database SQL Azure che sarà necessario modificare la password dell'amministratore.
+    - id: parameters
+      type:
+      - azure-asm-sql.ServerChangeAdministratorPasswordParameters
+      description: I parametri necessari per modificare la password di amministratore per un server.
+    - id: parameters.newPassword
+      type:
+      - string
+      description: Ottiene o imposta la nuova password per l'amministratore.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function changeAdministratorPassword(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#create
+  id: azure-asm-sql.ServerOperations~ServerOperations#create
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: create(parameters, callback)
+  summary: Effettua il provisioning di un nuovo server di Database SQL in una sottoscrizione.
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-sql.ServerCreateParameters
+      description: I parametri necessari per eseguire il provisioning di un server.
+    - id: parameters.administratorUserName
+      type:
+      - string
+      description: Ottiene o imposta il nome utente amministratore che verrà usato per il nuovo server.
+    - id: parameters.administratorPassword
+      type:
+      - string
+      description: Ottiene o imposta la password dell'amministratore per il nuovo server.
+    - id: parameters.location
+      type:
+      - string
+      description: Ottiene o imposta l'area in cui verrà creato questo server.  Vedere http://azure.microsoft.com/en-us/regions/#services per un elenco di tutte le aree disponibili.
+    - id: parameters.version
+      type:
+      - string
+      description: 'Ottiene o imposta la versione del server da creare.  I valori validi sono: le versioni 1.0, 2.0.'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  id: azure-asm-sql.ServerOperations~ServerOperations#deleteMethod
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: deleteMethod(serverName, callback)
+  summary: Elimina il Server di Database SQL di Azure specificato da una sottoscrizione.
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.deleteMethod(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Il nome del Server di Database SQL di Azure da eliminare.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function deleteMethod(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.ServerOperations~ServerOperations#list
+  id: azure-asm-sql.ServerOperations~ServerOperations#list
+  parent: azure-asm-sql.ServerOperations~ServerOperations
+  name: list(callback)
+  summary: Restituisce tutti i server di Database di SQL sottoposte a provisioning per una sottoscrizione.
+  fullName: azure-asm-sql.ServerOperations~ServerOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function list(callback)
+  langs:
+  - js

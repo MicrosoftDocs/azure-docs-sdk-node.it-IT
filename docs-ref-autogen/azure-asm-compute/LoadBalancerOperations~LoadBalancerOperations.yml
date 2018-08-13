@@ -1,0 +1,347 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: baf17532e911689324ff3b6a43fc6937bdf430d8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055799"
+items:
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations
+  summary: >-
+    L'API di gestione di calcolo sono incluse operazioni per la gestione dei servizi di bilanciamento del carico per la sottoscrizione.
+
+    __Nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    Vedere [loadBalancers] {@link ComputeManagementClient ~ ComputeManagementClient #loadBalancers}.
+
+    Inizializza una nuova istanza della classe LoadBalancerOperations.
+  fullName: azure-asm-compute.LoadBalancerOperations
+  type: Class
+  children:
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations(client)
+  fullName: azure-asm-compute.LoadBalancerOperations.LoadBalancerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Riferimento al client del servizio.
+    content: new LoadBalancerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginCreating(serviceName, deploymentName, parameters, callback)
+  summary: Aggiungere un servizio di bilanciamento del carico interno per un una distribuzione esistente. Se utilizzato da un endpoint di input, il servizio di bilanciamento del carico interno fornirà un indirizzo VIP privato aggiuntivo che può essere usato per il bilanciamento del carico per i ruoli in questa distribuzione.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginCreating(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nome della distribuzione.
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: Parametri forniti all'operazione di bilanciamento del carico Create.
+    - id: parameters.name
+      type:
+      - string
+      description: Nome del servizio di bilanciamento del carico.
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: Fornisce la configurazione per l'indirizzo IP virtuale (VIP) il servizio di bilanciamento del carico.
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: Tipo di indirizzo VIP fornito da questo servizio di bilanciamento del carico. Attualmente è supportata sola 'Private'. Verrà creato il bilanciamento del carico di servizi su un indirizzo VIP privato.
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: Se la distribuzione esiste all'interno di una rete virtuale, è necessario specificare una subnet della rete virtuale per il bilanciamento del carico. L'indirizzo VIP gestito dal servizio di bilanciamento del carico potranno quindi essere un indirizzo IP dalla subnet. Se la distribuzione esiste all'esterno di una rete virtuale, è possibile specificare alcuna subnet e l'indirizzo VIP privato sarà un indirizzo IP dal pool di indirizzi privato generale.
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: Se la distribuzione esiste all'interno di una rete virtuale, è possibile specificare un indirizzo specifico dalla subnet del servizio di bilanciamento del carico. L'indirizzo VIP per bilanciamento del carico sarà quindi questo indirizzo IP specifico. Se viene fornito un indirizzo IP statico di rete virtuale, l'elemento SubnetName del bilanciamento del carico deve essere specificato anche. Se la distribuzione esiste all'esterno di una rete virtuale, è non possibile specificare alcun indirizzo IP statico di rete virtuale.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginCreating(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  summary: Eliminare un servizio di bilanciamento del carico interno dalla distribuzione.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nome della distribuzione.
+    - id: loadBalancerName
+      type:
+      - string
+      description: Il nome del servizio di bilanciamento del carico.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: Aggiorna un bilanciamento del carico interno associato a una distribuzione esistente.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nome della distribuzione.
+    - id: loadBalancerName
+      type:
+      - string
+      description: Il nome del bilanciamento del carico.
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: Parametri forniti all'operazione di bilanciamento del carico di aggiornamento.
+    - id: parameters.name
+      type:
+      - string
+      description: Nome del servizio di bilanciamento del carico.
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: Fornisce la configurazione per l'indirizzo IP virtuale (VIP) il servizio di bilanciamento del carico.
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: Tipo di indirizzo VIP fornito da questo servizio di bilanciamento del carico. Attualmente è supportata sola 'Private'. Verrà creato il bilanciamento del carico di servizi su un indirizzo VIP privato.
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: Se la distribuzione esiste all'interno di una rete virtuale, è necessario specificare una subnet della rete virtuale per il bilanciamento del carico. L'indirizzo VIP gestito dal servizio di bilanciamento del carico potranno quindi essere un indirizzo IP dalla subnet. Se la distribuzione esiste all'esterno di una rete virtuale, è possibile specificare alcuna subnet e l'indirizzo VIP privato sarà un indirizzo IP dal pool di indirizzi privato generale.
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: Se la distribuzione esiste all'interno di una rete virtuale, è possibile specificare un indirizzo specifico dalla subnet del servizio di bilanciamento del carico. L'indirizzo VIP per bilanciamento del carico sarà quindi questo indirizzo IP specifico. Se viene fornito un indirizzo IP statico di rete virtuale, l'elemento SubnetName del bilanciamento del carico deve essere specificato anche. Se la distribuzione esiste all'esterno di una rete virtuale, è non possibile specificare alcun indirizzo IP statico di rete virtuale.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: create(serviceName, deploymentName, parameters, callback)
+  summary: Aggiungere un servizio di bilanciamento del carico interno per un una distribuzione esistente. Se utilizzato da un endpoint di input, il servizio di bilanciamento del carico interno fornirà un indirizzo VIP privato aggiuntivo che può essere usato per il bilanciamento del carico per i ruoli in questa distribuzione.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.create(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nome della distribuzione.
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: Parametri forniti all'operazione di bilanciamento del carico Create.
+    - id: parameters.name
+      type:
+      - string
+      description: Nome del servizio di bilanciamento del carico.
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: Fornisce la configurazione per l'indirizzo IP virtuale (VIP) il servizio di bilanciamento del carico.
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: Tipo di indirizzo VIP fornito da questo servizio di bilanciamento del carico. Attualmente è supportata sola 'Private'. Verrà creato il bilanciamento del carico di servizi su un indirizzo VIP privato.
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: Se la distribuzione esiste all'interno di una rete virtuale, è necessario specificare una subnet della rete virtuale per il bilanciamento del carico. L'indirizzo VIP gestito dal servizio di bilanciamento del carico potranno quindi essere un indirizzo IP dalla subnet. Se la distribuzione esiste all'esterno di una rete virtuale, è possibile specificare alcuna subnet e l'indirizzo VIP privato sarà un indirizzo IP dal pool di indirizzi privato generale.
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: Se la distribuzione esiste all'interno di una rete virtuale, è possibile specificare un indirizzo specifico dalla subnet del servizio di bilanciamento del carico. L'indirizzo VIP per bilanciamento del carico sarà quindi questo indirizzo IP specifico. Se viene fornito un indirizzo IP statico di rete virtuale, l'elemento SubnetName del bilanciamento del carico deve essere specificato anche. Se la distribuzione esiste all'esterno di una rete virtuale, è non possibile specificare alcun indirizzo IP statico di rete virtuale.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function create(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  summary: Eliminare un servizio di bilanciamento del carico interno dalla distribuzione.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nome della distribuzione.
+    - id: loadBalancerName
+      type:
+      - string
+      description: Il nome del servizio di bilanciamento del carico.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: Aggiorna un bilanciamento del carico interno associato a una distribuzione esistente.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Il nome del servizio.
+    - id: deploymentName
+      type:
+      - string
+      description: Nome della distribuzione.
+    - id: loadBalancerName
+      type:
+      - string
+      description: Il nome del bilanciamento del carico.
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: Parametri forniti all'operazione di bilanciamento del carico di aggiornamento.
+    - id: parameters.name
+      type:
+      - string
+      description: Nome del servizio di bilanciamento del carico.
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: Fornisce la configurazione per l'indirizzo IP virtuale (VIP) il servizio di bilanciamento del carico.
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: Tipo di indirizzo VIP fornito da questo servizio di bilanciamento del carico. Attualmente è supportata sola 'Private'. Verrà creato il bilanciamento del carico di servizi su un indirizzo VIP privato.
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: Se la distribuzione esiste all'interno di una rete virtuale, è necessario specificare una subnet della rete virtuale per il bilanciamento del carico. L'indirizzo VIP gestito dal servizio di bilanciamento del carico potranno quindi essere un indirizzo IP dalla subnet. Se la distribuzione esiste all'esterno di una rete virtuale, è possibile specificare alcuna subnet e l'indirizzo VIP privato sarà un indirizzo IP dal pool di indirizzi privato generale.
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: Se la distribuzione esiste all'interno di una rete virtuale, è possibile specificare un indirizzo specifico dalla subnet del servizio di bilanciamento del carico. L'indirizzo VIP per bilanciamento del carico sarà quindi questo indirizzo IP specifico. Se viene fornito un indirizzo IP statico di rete virtuale, l'elemento SubnetName del bilanciamento del carico deve essere specificato anche. Se la distribuzione esiste all'esterno di una rete virtuale, è non possibile specificare alcun indirizzo IP statico di rete virtuale.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Il flusso di risposta.
+    content: function update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js

@@ -1,0 +1,190 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3433701b84a6eeb4afb19279ae12ec0bdc29c3da
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055787"
+items:
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: AffinityGroupOperations
+  summary: >-
+    Operazioni per gestire i gruppi di affinità nella sottoscrizione.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/ee460798.aspx per altre informazioni) __nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [ManagementClient] {@link ManagementClient ~ ManagementClient}.
+
+    Vedere [affinityGroups] {@link ManagementClient ~ ManagementClient #affinityGroups}.
+
+    Inizializza una nuova istanza della classe AffinityGroupOperations.
+  fullName: azure-asm-mgmt.AffinityGroupOperations
+  type: Class
+  children:
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  langs:
+  - js
+- id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: AffinityGroupOperations(client)
+  fullName: azure-asm-mgmt.AffinityGroupOperations.AffinityGroupOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedManagementClient
+      description: Riferimento al client del servizio.
+    content: new AffinityGroupOperations(client)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: create(parameters, callback)
+  summary: L'operazione di creazione gruppo di affinità consente di creare un nuovo gruppo di affinità per la sottoscrizione specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/gg715317.aspx per altre informazioni)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-mgmt.AffinityGroupCreateParameters
+      description: Parametri forniti all'operazione di creazione gruppo di affinità.
+    - id: parameters.name
+      type:
+      - string
+      description: Un nome per il gruppo di affinità univoco nella sottoscrizione.
+    - id: parameters.label
+      type:
+      - string
+      description: Un nome con codifica base 64 per il gruppo di affinità. Il nome può essere fino a 100 caratteri. Il valore con il nome del gruppo di affinità predefinito se non specificato.
+    - id: parameters.description
+      type:
+      - string
+      description: Una descrizione per il gruppo di affinità. La descrizione può contenere fino a 1024 caratteri.
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: La posizione data center in cui verrà creato il gruppo di affinità. Elenco delle località disponibili, vedere l'operazione List Locations.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Il flusso di risposta.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: deleteMethod(affinityGroupName, callback)
+  summary: L'operazione di eliminazione gruppo di affinità consente di eliminare un gruppo di affinità nella sottoscrizione specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/gg715314.aspx per altre informazioni)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.deleteMethod(affinityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: Il nome del gruppo di affinità.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Il flusso di risposta.
+    content: function deleteMethod(affinityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: get(affinityGroupName, callback)
+  summary: L'operazione Ottieni proprietà gruppo di affinità restituisce le proprietà di sistema associate al gruppo di affinità specificato.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/ee460789.aspx per altre informazioni)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.get(affinityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: Il nome del gruppo di affinità desiderato restituito dall'elemento name dell'operazione elencare i gruppi di affinità.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Il flusso di risposta.
+    content: function get(affinityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: list(callback)
+  summary: L'operazione elencare i gruppi di affinità sono elencati i gruppi di affinità associati alla sottoscrizione specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/ee460797.aspx per altre informazioni)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Il flusso di risposta.
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: update(affinityGroupName, parameters, callback)
+  summary: L'operazione Aggiorna gruppo di affinità Aggiorna l'etichetta e/o la descrizione di un gruppo di affinità per la sottoscrizione specificata.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/gg715316.aspx per altre informazioni)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.update(affinityGroupName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: Il nome del gruppo di affinità.
+    - id: parameters
+      type:
+      - azure-asm-mgmt.AffinityGroupUpdateParameters
+      description: Parametri forniti all'operazione del gruppo di affinità di aggiornamento.
+    - id: parameters.label
+      type:
+      - string
+      description: Un nome per l'affinità specificata come stringa codificata in base 64. L'etichetta può essere fino a 100 caratteri.
+    - id: parameters.description
+      type:
+      - string
+      description: Una descrizione per il gruppo di affinità. La descrizione può contenere fino a 1024 caratteri.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Il flusso di risposta.
+    content: function update(affinityGroupName, parameters, callback)
+  langs:
+  - js

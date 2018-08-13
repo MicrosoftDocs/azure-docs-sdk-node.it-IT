@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e2c2a2dff10d9f4982076baa53a89601bba97741
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056052"
+items:
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations
+  id: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: QuotaOperations
+  summary: >-
+    L'API di gestione Database SQL di Azure sono incluse operazioni per ottenere le quote di Server di Database SQL di Azure. In particolare, usando le API è possibile ottenere una quota specifica o un elenco tutte le quote per il Server di Database SQL di Azure.
+
+    __Nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    Vedere [quote] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23quotas>.
+
+    Inizializza una nuova istanza della classe QuotaOperations.
+  fullName: azure-asm-sql.QuotaOperations
+  type: Class
+  children:
+  - azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  - azure-asm-sql.QuotaOperations~QuotaOperations#get
+  - azure-asm-sql.QuotaOperations~QuotaOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  uid: azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: QuotaOperations(client)
+  fullName: azure-asm-sql.QuotaOperations.QuotaOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Riferimento al client del servizio.
+    content: new QuotaOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations#get
+  id: azure-asm-sql.QuotaOperations~QuotaOperations#get
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: get(serverName, quotaName, callback)
+  summary: Recupera la quota specificata dal server.
+  fullName: azure-asm-sql.QuotaOperations~QuotaOperations.get(serverName, quotaName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Il nome del Server di Database SQL di Azure da cui recuperare la quota.
+    - id: quotaName
+      type:
+      - string
+      description: Il nome della quota da recuperare.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function get(serverName, quotaName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations#list
+  id: azure-asm-sql.QuotaOperations~QuotaOperations#list
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: list(serverName, callback)
+  summary: Restituisce un elenco di quote dal server.
+  fullName: azure-asm-sql.QuotaOperations~QuotaOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Il nome del Server di Database SQL di Azure da cui ottenere le quote.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function list(serverName, callback)
+  langs:
+  - js

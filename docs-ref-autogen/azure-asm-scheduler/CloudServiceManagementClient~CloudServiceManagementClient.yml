@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6a04037f15b27c25cdcef1beffe07ef3ce06d8a2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055740"
+items:
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: CloudServiceManagementClient
+  summary: Inizializza una nuova istanza della classe CloudServiceManagementClient.
+  fullName: azure-asm-scheduler.CloudServiceManagementClient
+  type: Class
+  children:
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.#ctor
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#cloudServices
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#entitleResource
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus
+  langs:
+  - js
+- id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.#ctor
+  uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.#ctor
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: CloudServiceManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-scheduler.CloudServiceManagementClient.CloudServiceManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: Ottiene le credenziali di sottoscrizione che lo identificano in modo univoco la sottoscrizione di Microsoft Azure. L'ID sottoscrizione fa parte dell'URI per ogni chiamata al servizio.
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: Ottiene l'URI utilizzato come base per tutte le richieste di servizio cloud.
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new CloudServiceManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#cloudServices
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#cloudServices
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: cloudServices
+  summary: Fornisce un'istanza di [CloudServiceOperations](-CloudServiceOperations.html) oggetto.
+  fullName: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.cloudServices
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: cloudServices
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#entitleResource
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#entitleResource
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: entitleResource(parameters, callback)
+  summary: EntitleResource viene usato solo per i provider di Store 3rd party. Ogni sottoscrizione deve avere diritto per la risorsa prima di creare quel determinato tipo di risorsa.
+  fullName: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.entitleResource(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-scheduler.EntitleResourceParameters
+      description: Parametri forniti al metodo EntitleResource.
+    - id: parameters.resourceNamespace
+      type:
+      - string
+      description: Identificatore dello spazio dei nomi necessari per il provider di risorse.
+    - id: parameters.resourceType
+      type:
+      - string
+      description: Tipo richiesto per la risorsa.
+    - id: parameters.registrationDate
+      type:
+      - date
+      description: I dati necessari quando viene eseguita l'entitlement.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Il flusso di risposta.
+    content: function entitleResource(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: getOperationStatus(requestId, callback)
+  summary: L'operazione Get Operation Status restituisce lo stato dell'operazione thespecified. Dopo la chiamata di un'operazione asincrona, è possibile chiamare Get Operation Status per determinare se l'operazione ha avuto esito positivo, non è riuscita o è ancora in corso.  (vedere http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx per altre informazioni)
+  fullName: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.getOperationStatus(requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: L'ID della richiesta per la richiesta a cui si vuole tenere traccia. L'ID richiesta viene restituito nell'intestazione della risposta x-ms-request-id per ogni richiesta.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Il flusso di risposta.
+    content: function getOperationStatus(requestId, callback)
+  langs:
+  - js

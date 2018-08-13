@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4b20fab399f1641e85e211a3f1b9e7b70aab4903
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056243"
+items:
+- uid: azure-sb.SharedAccessSignature
+  id: azure-sb.SharedAccessSignature
+  name: SharedAccessSignature
+  summary: Crea un nuovo oggetto SharedAccessSignature.
+  fullName: azure-sb.SharedAccessSignature
+  type: Class
+  children:
+  - azure-sb.SharedAccessSignature.#ctor
+  - azure-sb.SharedAccessSignature#signRequest
+  langs:
+  - js
+- id: azure-sb.SharedAccessSignature.#ctor
+  uid: azure-sb.SharedAccessSignature.#ctor
+  parent: azure-sb.SharedAccessSignature
+  name: SharedAccessSignature(keyName, keyValue)
+  fullName: azure-sb.SharedAccessSignature.SharedAccessSignature(keyName, keyValue)
+  summary: Crea un nuovo oggetto SharedAccessSignature.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: keyName
+      type:
+      - string
+      description: Nome chiave di firma di accesso condiviso.
+    - id: keyValue
+      type:
+      - array
+      description: Il valore chiave firma di accesso condiviso.
+    content: new SharedAccessSignature(keyName, keyValue)
+  langs:
+  - js
+- uid: azure-sb.SharedAccessSignature#signRequest
+  id: azure-sb.SharedAccessSignature#signRequest
+  parent: azure-sb.SharedAccessSignature
+  name: signRequest(The, callback)
+  summary: Effettua una richiesta con l'intestazione di firma.
+  fullName: azure-sb.SharedAccessSignature.signRequest(The, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: The
+      type:
+      - azure-sb.WebResource
+      description: WebResource da firmare.
+    - id: callback
+      type:
+      - function
+      description: La funzione di callback.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function signRequest(The, callback)
+  langs:
+  - js

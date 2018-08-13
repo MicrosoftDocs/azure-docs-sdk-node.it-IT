@@ -1,0 +1,286 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 10ec832091f323e528abe455cf35dd220c726912
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056105"
+items:
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: DatabaseOperations
+  summary: >-
+    Rappresenta tutte le operazioni per l'uso di database SQL di Azure.
+
+    Contiene operazioni a: creare, recuperare, aggiornare, eliminare i database e include anche la possibilità di recuperare i registri eventi per un database.
+
+    __Nota__: un'istanza di questa classe viene creata automaticamente per un'istanza di [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    Vedere l'argomento [database] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23databases>.
+
+    Inizializza una nuova istanza della classe DatabaseOperations.
+  fullName: azure-asm-sql.DatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  uid: azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: DatabaseOperations(client)
+  fullName: azure-asm-sql.DatabaseOperations.DatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Riferimento al client del servizio.
+    content: new DatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: create(serverName, parameters, callback)
+  summary: Crea un database in un Server di Database SQL di Azure.
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.create(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Il nome del Server di Database SQL di Azure in cui verrà creato il database.
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseCreateParameters
+      description: I parametri per l'operazione di creazione del database.
+    - id: parameters.name
+      type:
+      - string
+      description: Ottiene o imposta il nome per il nuovo database.
+    - id: parameters.edition
+      type:
+      - string
+      description: Ottiene o imposta l'edizione per il nuovo database.  L'enumerazione DatabaseEditions contiene i valori validi per questa proprietà.
+      optional: true
+    - id: parameters.maximumDatabaseSizeInGB
+      type:
+      - number
+      description: Ottiene o imposta le dimensioni massime del database espressa in gigabyte.  Se viene utilizzato in combinazione con MaximumDatabaseSizeInBytes queste devono concordare.
+      optional: true
+    - id: parameters.collationName
+      type:
+      - string
+      description: Ottiene o imposta il nome delle regole di confronto per il nuovo database.
+      optional: true
+    - id: parameters.maximumDatabaseSizeInBytes
+      type:
+      - number
+      description: Ottiene o imposta le dimensioni massime del database espressa in byte.  Se viene utilizzato in combinazione con MaximumDatabaseSizeInGB queste devono concordare.
+      optional: true
+    - id: parameters.serviceObjectiveId
+      type:
+      - string
+      description: Ottiene o imposta l'ID obiettivo di servizio da applicare al database.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function create(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: deleteMethod(serverName, databaseName, callback)
+  summary: Elimina un database da un Server di Database SQL di Azure.
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.deleteMethod(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Il nome del Server di Database SQL di Azure in cui è ospitato il database.
+    - id: databaseName
+      type:
+      - string
+      description: Nome del Database SQL di Azure da eliminare.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function deleteMethod(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: get(serverName, databaseName, callback)
+  summary: Restituisce informazioni su un Database SQL di Azure.
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.get(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Il nome del Server di Database SQL di Azure in cui è ospitato il database.
+    - id: databaseName
+      type:
+      - string
+      description: Nome del Database SQL di Azure da recuperare.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function get(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: getEventLogs(serverName, databaseName, parameters, callback)
+  summary: Restituisce informazioni su un log eventi di Database SQL di Azure.
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.getEventLogs(serverName, databaseName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Il nome del Server di Database SQL di Azure in cui è ospitato il database.
+    - id: databaseName
+      type:
+      - string
+      description: Nome del Database SQL di Azure da recuperare.
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseGetEventLogsParameters
+      description: I parametri per l'operazione Get Database Event Logs.
+    - id: parameters.startDate
+      type:
+      - date
+      description: Ottiene o imposta la data di inizio per il log eventi.
+    - id: parameters.intervalSizeInMinutes
+      type:
+      - number
+      description: Ottiene o imposta la dimensione di intervallo in minuti.
+    - id: parameters.eventTypes
+      type:
+      - string
+      description: Ottiene o imposta i tipi di evento da recuperare.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function getEventLogs(serverName, databaseName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: list(serverName, callback)
+  summary: Restituisce una raccolta di database SQL di Azure.
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Il nome del Server di Database SQL di Azure da cui recuperare il database.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function list(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: update(serverName, databaseName, parameters, callback)
+  summary: Aggiorna le proprietà di un Database SQL di Azure.
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.update(serverName, databaseName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Il nome del Server di Database SQL di Azure in cui è ospitato il database.
+    - id: databaseName
+      type:
+      - string
+      description: Nome del Database SQL di Azure da aggiornare.
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseUpdateParameters
+      description: I parametri per l'operazione di aggiornamento del Database.
+    - id: parameters.name
+      type:
+      - string
+      description: Ottiene o imposta il nuovo nome del database.
+      optional: true
+    - id: parameters.edition
+      type:
+      - string
+      description: Ottiene o imposta la nuova edizione del database.
+    - id: parameters.maximumDatabaseSizeInGB
+      type:
+      - number
+      description: Ottiene o imposta le dimensioni massime del database espressa in gigabyte.  Se viene utilizzato con queste devono concordare MaximumDatabaseSizeInBytes.
+      optional: true
+    - id: parameters.maximumDatabaseSizeInBytes
+      type:
+      - number
+      description: Ottiene o imposta le dimensioni massime del database espressa in byte.  Se viene utilizzato con queste devono concordare MaximumDatabaseSizeInGB.
+      optional: true
+    - id: parameters.serviceObjectiveId
+      type:
+      - string
+      description: Ottiene o imposta l'identificatore univoco per l'obiettivo di servizio da applicare al database.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Il flusso di risposta.
+    content: function update(serverName, databaseName, parameters, callback)
+  langs:
+  - js
