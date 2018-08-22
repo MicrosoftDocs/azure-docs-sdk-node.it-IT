@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: f7bd73b1e22b76513c5e5e8c633dc18760567b58
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: a927f0e321294933af7ce24216ab4b5b85da0e38
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40057366"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41683631"
 items:
 - uid: azure-event-hubs.MessageHeader
   name: MessageHeader
@@ -20,8 +20,9 @@ items:
   langs:
   - typeScript
   type: module
-  summary: Descrive il set definito di proprietà di intestazione standard del messaggio.
+  summary: Descrive le operazioni che possono essere eseguite nell'intestazione del messaggio.
   package: azure-event-hubs
+  module: MessageHeader
 - uid: azure-event-hubs.MessageHeader.deliveryCount
   name: deliveryCount
   fullName: deliveryCount
@@ -29,7 +30,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{number} [deliveryCount] Il numero di tentativi di recapito non riuscito precedente.'
   optional: true
   syntax:
     content: 'deliveryCount?: number'
@@ -44,7 +45,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{boolean} [durevole] Specifica i requisiti di durabilità.'
   optional: true
   syntax:
     content: 'durable?: boolean'
@@ -59,7 +60,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{boolean} [firstAcquirer] Se questo valore è true, questo messaggio è stato acquisito non da qualsiasi altro tipo di collegamento. Valore se è false, quindi questo messaggio potrebbe essere già stato acquisito da un altro collegamento o collegamenti.'
   optional: true
   syntax:
     content: 'firstAcquirer?: boolean'
@@ -73,14 +74,14 @@ items:
   type: function
   langs:
   - typeScript
-  summary: ''
+  summary: Converte AmqpMessageHeader MessageHeader.
   syntax:
     content: 'function fromAmqpMessageProperties(props: AmqpMessageHeader)'
     parameters:
     - id: props
       type:
       - AmqpMessageHeader
-      description: ''
+      description: Intestazione del messaggio Amqp
     return:
       type:
       - azure-event-hubs.MessageHeader
@@ -92,7 +93,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{number} [priorità] La priorità del messaggio relativo. I valori più alti indicano messaggi con priorità più alta.'
   optional: true
   syntax:
     content: 'priority?: number'
@@ -106,14 +107,14 @@ items:
   type: function
   langs:
   - typeScript
-  summary: ''
+  summary: Converte MessageHeader AmqpMessageHeader.
   syntax:
     content: 'function toAmqpMessageHeader(props: MessageHeader)'
     parameters:
     - id: props
       type:
       - azure-event-hubs.MessageHeader
-      description: ''
+      description: Intestazione del messaggio.
     return:
       type:
       - AmqpMessageHeader
@@ -125,7 +126,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{number} [durata (TTL)] durata in ms.'
   optional: true
   syntax:
     content: 'ttl?: number'
