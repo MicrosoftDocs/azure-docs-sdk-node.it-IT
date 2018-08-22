@@ -1,19 +1,19 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: fac3478480f0f9eadbf0a7a5c10206693a696c5c
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 901829822b46ccfc26e7afb338fd07d8b7799312
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40057713"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41695730"
 items:
 - uid: azure-arm-datafactory.Factories
   name: Factories
   fullName: Factories
   children:
-  - azure-arm-datafactory.Factories.cancelPipelineRun
-  - azure-arm-datafactory.Factories.cancelPipelineRun_1
-  - azure-arm-datafactory.Factories.cancelPipelineRun_2
-  - azure-arm-datafactory.Factories.cancelPipelineRunWithHttpOperationResponse
+  - azure-arm-datafactory.Factories.configureFactoryRepo
+  - azure-arm-datafactory.Factories.configureFactoryRepo_1
+  - azure-arm-datafactory.Factories.configureFactoryRepo_2
+  - azure-arm-datafactory.Factories.configureFactoryRepoWithHttpOperationResponse
   - azure-arm-datafactory.Factories.createOrUpdate
   - azure-arm-datafactory.Factories.createOrUpdate_2
   - azure-arm-datafactory.Factories.createOrUpdate_1
@@ -51,137 +51,119 @@ items:
   type: interface
   summary: ''
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.Factories.cancelPipelineRun
-  name: cancelPipelineRun
+- uid: azure-arm-datafactory.Factories.configureFactoryRepo
+  name: configureFactoryRepo
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-101">Annulla una pipeline di esecuzione dal relativo ID esecuzione.</span><span class="sxs-lookup"><span data-stu-id="313c3-101">Cancel a pipeline run by its run ID.</span></span>
+  summary: <span data-ttu-id="12618-101">Aggiorna le informazioni di repository della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-101">Updates a factory's repo information.</span></span>
   syntax:
-    content: 'function cancelPipelineRun(resourceGroupName: string, factoryName: string, runId: string, options?: function)'
+    content: 'function configureFactoryRepo(locationId: string, factoryRepoUpdate: FactoryRepoUpdate, options?: Object)'
     parameters:
-    - id: resourceGroupName
+    - id: locationId
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-102">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-102">The resource group name.</span></span>
-    - id: factoryName
+        <span data-ttu-id="12618-102">Identificatore della posizione.</span><span class="sxs-lookup"><span data-stu-id="12618-102">The location identifier.</span></span>
+    - id: factoryRepoUpdate
       type:
-      - string
+      - azure-arm-datafactory.FactoryRepoUpdate
       description: >
-        <span data-ttu-id="313c3-103">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-103">The factory name.</span></span>
-    - id: runId
-      type:
-      - string
-      description: >
-        <span data-ttu-id="313c3-104">Esecuzione della pipeline identificatore.</span><span class="sxs-lookup"><span data-stu-id="313c3-104">The pipeline run identifier.</span></span>
+        <span data-ttu-id="12618-103">Aggiorna definizione del factory repository richiesta.</span><span class="sxs-lookup"><span data-stu-id="12618-103">Update factory repo request definition.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-datafactory.Factory>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.Factories.cancelPipelineRun_1
-  name: cancelPipelineRun
+- uid: azure-arm-datafactory.Factories.configureFactoryRepo_1
+  name: configureFactoryRepo
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-105">Annulla una pipeline di esecuzione dal relativo ID esecuzione.</span><span class="sxs-lookup"><span data-stu-id="313c3-105">Cancel a pipeline run by its run ID.</span></span>
+  summary: <span data-ttu-id="12618-104">Aggiorna le informazioni di repository della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-104">Updates a factory's repo information.</span></span>
   syntax:
-    content: 'function cancelPipelineRun(resourceGroupName: string, factoryName: string, runId: string, callback: ServiceCallback<void>)'
+    content: 'function configureFactoryRepo(locationId: string, factoryRepoUpdate: FactoryRepoUpdate, callback: ServiceCallback<Factory>)'
     parameters:
-    - id: resourceGroupName
+    - id: locationId
       type:
       - string
       description: ''
-    - id: factoryName
+    - id: factoryRepoUpdate
       type:
-      - string
-      description: ''
-    - id: runId
-      type:
-      - string
+      - azure-arm-datafactory.FactoryRepoUpdate
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-datafactory.Factory>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-datafactory.Factory>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.Factories.cancelPipelineRun_2
-  name: cancelPipelineRun
+- uid: azure-arm-datafactory.Factories.configureFactoryRepo_2
+  name: configureFactoryRepo
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-106">Annulla una pipeline di esecuzione dal relativo ID esecuzione.</span><span class="sxs-lookup"><span data-stu-id="313c3-106">Cancel a pipeline run by its run ID.</span></span>
+  summary: <span data-ttu-id="12618-105">Aggiorna le informazioni di repository della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-105">Updates a factory's repo information.</span></span>
   syntax:
-    content: 'function cancelPipelineRun(resourceGroupName: string, factoryName: string, runId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function configureFactoryRepo(locationId: string, factoryRepoUpdate: FactoryRepoUpdate, options: Object, callback: ServiceCallback<Factory>)'
     parameters:
-    - id: resourceGroupName
+    - id: locationId
       type:
       - string
       description: ''
-    - id: factoryName
+    - id: factoryRepoUpdate
       type:
-      - string
-      description: ''
-    - id: runId
-      type:
-      - string
+      - azure-arm-datafactory.FactoryRepoUpdate
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-datafactory.Factory>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-datafactory.Factory>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.Factories.cancelPipelineRunWithHttpOperationResponse
-  name: cancelPipelineRunWithHttpOperationResponse
+- uid: azure-arm-datafactory.Factories.configureFactoryRepoWithHttpOperationResponse
+  name: configureFactoryRepoWithHttpOperationResponse
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-107">Annulla una pipeline di esecuzione dal relativo ID esecuzione.</span><span class="sxs-lookup"><span data-stu-id="313c3-107">Cancel a pipeline run by its run ID.</span></span>
+  summary: <span data-ttu-id="12618-106">Aggiorna le informazioni di repository della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-106">Updates a factory's repo information.</span></span>
   syntax:
-    content: 'function cancelPipelineRunWithHttpOperationResponse(resourceGroupName: string, factoryName: string, runId: string, options?: function)'
+    content: 'function configureFactoryRepoWithHttpOperationResponse(locationId: string, factoryRepoUpdate: FactoryRepoUpdate, options?: Object)'
     parameters:
-    - id: resourceGroupName
+    - id: locationId
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-108">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-108">The resource group name.</span></span>
-    - id: factoryName
+        <span data-ttu-id="12618-107">Identificatore della posizione.</span><span class="sxs-lookup"><span data-stu-id="12618-107">The location identifier.</span></span>
+    - id: factoryRepoUpdate
       type:
-      - string
+      - azure-arm-datafactory.FactoryRepoUpdate
       description: >
-        <span data-ttu-id="313c3-109">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-109">The factory name.</span></span>
-    - id: runId
-      type:
-      - string
-      description: >
-        <span data-ttu-id="313c3-110">Esecuzione della pipeline identificatore.</span><span class="sxs-lookup"><span data-stu-id="313c3-110">The pipeline run identifier.</span></span>
+        <span data-ttu-id="12618-108">Aggiorna definizione del factory repository richiesta.</span><span class="sxs-lookup"><span data-stu-id="12618-108">Update factory repo request definition.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<void>>
+      - Promise<HttpOperationResponse<azure-arm-datafactory.Factory>>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.Factories.createOrUpdate
   name: createOrUpdate
@@ -189,28 +171,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-111">Crea o aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-111">Creates or updates a factory.</span></span>
+  summary: <span data-ttu-id="12618-109">Crea o aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-109">Creates or updates a factory.</span></span>
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, factory: Factory, options?: function)'
+    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, factory: Factory, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-112">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-112">The resource group name.</span></span>
+        <span data-ttu-id="12618-110">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="12618-110">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-113">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-113">The factory name.</span></span>
+        <span data-ttu-id="12618-111">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-111">The factory name.</span></span>
     - id: factory
       type:
       - azure-arm-datafactory.Factory
       description: >
-        <span data-ttu-id="313c3-114">Definizione di risorsa factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-114">Factory resource definition.</span></span>
+        <span data-ttu-id="12618-112">Definizione di risorsa factory.</span><span class="sxs-lookup"><span data-stu-id="12618-112">Factory resource definition.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -223,9 +205,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-115">Crea o aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-115">Creates or updates a factory.</span></span>
+  summary: <span data-ttu-id="12618-113">Crea o aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-113">Creates or updates a factory.</span></span>
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, factory: Factory, options: function, callback: ServiceCallback<Factory>)'
+    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, factory: Factory, options: Object, callback: ServiceCallback<Factory>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -241,7 +223,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -257,7 +239,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-116">Crea o aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-116">Creates or updates a factory.</span></span>
+  summary: <span data-ttu-id="12618-114">Crea o aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-114">Creates or updates a factory.</span></span>
   syntax:
     content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, factory: Factory, callback: ServiceCallback<Factory>)'
     parameters:
@@ -287,28 +269,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-117">Crea o aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-117">Creates or updates a factory.</span></span>
+  summary: <span data-ttu-id="12618-115">Crea o aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-115">Creates or updates a factory.</span></span>
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, factory: Factory, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, factory: Factory, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-118">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-118">The resource group name.</span></span>
+        <span data-ttu-id="12618-116">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="12618-116">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-119">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-119">The factory name.</span></span>
+        <span data-ttu-id="12618-117">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-117">The factory name.</span></span>
     - id: factory
       type:
       - azure-arm-datafactory.Factory
       description: >
-        <span data-ttu-id="313c3-120">Definizione di risorsa factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-120">Factory resource definition.</span></span>
+        <span data-ttu-id="12618-118">Definizione di risorsa factory.</span><span class="sxs-lookup"><span data-stu-id="12618-118">Factory resource definition.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -321,7 +303,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-121">Elimina una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-121">Deletes a factory.</span></span>
+  summary: <span data-ttu-id="12618-119">Elimina una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-119">Deletes a factory.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, factoryName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -347,23 +329,23 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-122">Elimina una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-122">Deletes a factory.</span></span>
+  summary: <span data-ttu-id="12618-120">Elimina una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-120">Deletes a factory.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-123">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-123">The resource group name.</span></span>
+        <span data-ttu-id="12618-121">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="12618-121">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-124">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-124">The factory name.</span></span>
+        <span data-ttu-id="12618-122">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-122">The factory name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -376,9 +358,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-125">Elimina una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-125">Deletes a factory.</span></span>
+  summary: <span data-ttu-id="12618-123">Elimina una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-123">Deletes a factory.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -390,7 +372,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -406,23 +388,23 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-126">Elimina una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-126">Deletes a factory.</span></span>
+  summary: <span data-ttu-id="12618-124">Elimina una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-124">Deletes a factory.</span></span>
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-127">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-127">The resource group name.</span></span>
+        <span data-ttu-id="12618-125">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="12618-125">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-128">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-128">The factory name.</span></span>
+        <span data-ttu-id="12618-126">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-126">The factory name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -435,23 +417,23 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-129">Ottiene una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-129">Gets a factory.</span></span>
+  summary: <span data-ttu-id="12618-127">Ottiene una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-127">Gets a factory.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-130">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-130">The resource group name.</span></span>
+        <span data-ttu-id="12618-128">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="12618-128">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-131">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-131">The factory name.</span></span>
+        <span data-ttu-id="12618-129">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-129">The factory name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -464,7 +446,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-132">Ottiene una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-132">Gets a factory.</span></span>
+  summary: <span data-ttu-id="12618-130">Ottiene una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-130">Gets a factory.</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, factoryName: string, callback: ServiceCallback<Factory>)'
     parameters:
@@ -490,9 +472,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-133">Ottiene una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-133">Gets a factory.</span></span>
+  summary: <span data-ttu-id="12618-131">Ottiene una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-131">Gets a factory.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, options: function, callback: ServiceCallback<Factory>)'
+    content: 'function get(resourceGroupName: string, factoryName: string, options: Object, callback: ServiceCallback<Factory>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -504,7 +486,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -520,23 +502,23 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-134">Ottiene una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-134">Gets a factory.</span></span>
+  summary: <span data-ttu-id="12618-132">Ottiene una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-132">Gets a factory.</span></span>
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-135">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-135">The resource group name.</span></span>
+        <span data-ttu-id="12618-133">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="12618-133">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-136">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-136">The factory name.</span></span>
+        <span data-ttu-id="12618-134">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-134">The factory name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -549,13 +531,13 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-137">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="313c3-137">Lists factories under the specified subscription.</span></span>
+  summary: <span data-ttu-id="12618-135">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="12618-135">Lists factories under the specified subscription.</span></span>
   syntax:
-    content: 'function list(options?: function)'
+    content: 'function list(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -568,7 +550,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-138">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="313c3-138">Lists factories under the specified subscription.</span></span>
+  summary: <span data-ttu-id="12618-136">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="12618-136">Lists factories under the specified subscription.</span></span>
   syntax:
     content: 'function list(callback: ServiceCallback<FactoryListResponse>)'
     parameters:
@@ -586,13 +568,13 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-139">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="313c3-139">Lists factories under the specified subscription.</span></span>
+  summary: <span data-ttu-id="12618-137">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="12618-137">Lists factories under the specified subscription.</span></span>
   syntax:
-    content: 'function list(options: function, callback: ServiceCallback<FactoryListResponse>)'
+    content: 'function list(options: Object, callback: ServiceCallback<FactoryListResponse>)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -608,18 +590,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-140">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-140">Lists factories.</span></span>
+  summary: <span data-ttu-id="12618-138">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="12618-138">Lists factories.</span></span>
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-141">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-141">The resource group name.</span></span>
+        <span data-ttu-id="12618-139">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="12618-139">The resource group name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -632,9 +614,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-142">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-142">Lists factories.</span></span>
+  summary: <span data-ttu-id="12618-140">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="12618-140">Lists factories.</span></span>
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options: function, callback: ServiceCallback<FactoryListResponse>)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<FactoryListResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -642,7 +624,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -658,7 +640,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-143">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-143">Lists factories.</span></span>
+  summary: <span data-ttu-id="12618-141">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="12618-141">Lists factories.</span></span>
   syntax:
     content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<FactoryListResponse>)'
     parameters:
@@ -680,18 +662,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-144">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-144">Lists factories.</span></span>
+  summary: <span data-ttu-id="12618-142">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="12618-142">Lists factories.</span></span>
   syntax:
-    content: 'function listByResourceGroupNext(nextPageLink: string, options?: function)'
+    content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-145">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="313c3-145">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="12618-143">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="12618-143">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -704,7 +686,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-146">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-146">Lists factories.</span></span>
+  summary: <span data-ttu-id="12618-144">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="12618-144">Lists factories.</span></span>
   syntax:
     content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<FactoryListResponse>)'
     parameters:
@@ -726,9 +708,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-147">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-147">Lists factories.</span></span>
+  summary: <span data-ttu-id="12618-145">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="12618-145">Lists factories.</span></span>
   syntax:
-    content: 'function listByResourceGroupNext(nextPageLink: string, options: function, callback: ServiceCallback<FactoryListResponse>)'
+    content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<FactoryListResponse>)'
     parameters:
     - id: nextPageLink
       type:
@@ -736,7 +718,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -752,18 +734,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-148">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-148">Lists factories.</span></span>
+  summary: <span data-ttu-id="12618-146">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="12618-146">Lists factories.</span></span>
   syntax:
-    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-149">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="313c3-149">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="12618-147">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="12618-147">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -776,18 +758,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-150">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-150">Lists factories.</span></span>
+  summary: <span data-ttu-id="12618-148">Elenca le factory.</span><span class="sxs-lookup"><span data-stu-id="12618-148">Lists factories.</span></span>
   syntax:
-    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-151">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-151">The resource group name.</span></span>
+        <span data-ttu-id="12618-149">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="12618-149">The resource group name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -800,18 +782,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-152">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="313c3-152">Lists factories under the specified subscription.</span></span>
+  summary: <span data-ttu-id="12618-150">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="12618-150">Lists factories under the specified subscription.</span></span>
   syntax:
-    content: 'function listNext(nextPageLink: string, options?: function)'
+    content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-153">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="313c3-153">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="12618-151">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="12618-151">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -824,7 +806,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-154">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="313c3-154">Lists factories under the specified subscription.</span></span>
+  summary: <span data-ttu-id="12618-152">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="12618-152">Lists factories under the specified subscription.</span></span>
   syntax:
     content: 'function listNext(nextPageLink: string, callback: ServiceCallback<FactoryListResponse>)'
     parameters:
@@ -846,9 +828,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-155">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="313c3-155">Lists factories under the specified subscription.</span></span>
+  summary: <span data-ttu-id="12618-153">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="12618-153">Lists factories under the specified subscription.</span></span>
   syntax:
-    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<FactoryListResponse>)'
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<FactoryListResponse>)'
     parameters:
     - id: nextPageLink
       type:
@@ -856,7 +838,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -872,18 +854,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-156">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="313c3-156">Lists factories under the specified subscription.</span></span>
+  summary: <span data-ttu-id="12618-154">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="12618-154">Lists factories under the specified subscription.</span></span>
   syntax:
-    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-157">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="313c3-157">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="12618-155">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="12618-155">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -896,13 +878,13 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-158">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="313c3-158">Lists factories under the specified subscription.</span></span>
+  summary: <span data-ttu-id="12618-156">Elenca le factory nella sottoscrizione specificata.</span><span class="sxs-lookup"><span data-stu-id="12618-156">Lists factories under the specified subscription.</span></span>
   syntax:
-    content: 'function listWithHttpOperationResponse(options?: function)'
+    content: 'function listWithHttpOperationResponse(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -915,28 +897,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-159">Aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-159">Updates a factory.</span></span>
+  summary: <span data-ttu-id="12618-157">Aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-157">Updates a factory.</span></span>
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options?: function)'
+    content: 'function update(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-160">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-160">The resource group name.</span></span>
+        <span data-ttu-id="12618-158">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="12618-158">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-161">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-161">The factory name.</span></span>
+        <span data-ttu-id="12618-159">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-159">The factory name.</span></span>
     - id: factoryUpdateParameters
       type:
       - azure-arm-datafactory.FactoryUpdateParameters
       description: >
-        <span data-ttu-id="313c3-162">I parametri per l'aggiornamento di una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-162">The parameters for updating a factory.</span></span>
+        <span data-ttu-id="12618-160">I parametri per l'aggiornamento di una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-160">The parameters for updating a factory.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -949,7 +931,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-163">Aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-163">Updates a factory.</span></span>
+  summary: <span data-ttu-id="12618-161">Aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-161">Updates a factory.</span></span>
   syntax:
     content: 'function update(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, callback: ServiceCallback<Factory>)'
     parameters:
@@ -979,9 +961,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-164">Aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-164">Updates a factory.</span></span>
+  summary: <span data-ttu-id="12618-162">Aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-162">Updates a factory.</span></span>
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options: function, callback: ServiceCallback<Factory>)'
+    content: 'function update(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options: Object, callback: ServiceCallback<Factory>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -997,7 +979,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1013,28 +995,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="313c3-165">Aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-165">Updates a factory.</span></span>
+  summary: <span data-ttu-id="12618-163">Aggiorna una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-163">Updates a factory.</span></span>
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-166">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="313c3-166">The resource group name.</span></span>
+        <span data-ttu-id="12618-164">Il nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="12618-164">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="313c3-167">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-167">The factory name.</span></span>
+        <span data-ttu-id="12618-165">Il nome della factory.</span><span class="sxs-lookup"><span data-stu-id="12618-165">The factory name.</span></span>
     - id: factoryUpdateParameters
       type:
       - azure-arm-datafactory.FactoryUpdateParameters
       description: >
-        <span data-ttu-id="313c3-168">I parametri per l'aggiornamento di una factory.</span><span class="sxs-lookup"><span data-stu-id="313c3-168">The parameters for updating a factory.</span></span>
+        <span data-ttu-id="12618-166">I parametri per l'aggiornamento di una factory.</span><span class="sxs-lookup"><span data-stu-id="12618-166">The parameters for updating a factory.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1042,11 +1024,11 @@ items:
       - Promise<HttpOperationResponse<azure-arm-datafactory.Factory>>
   package: azure-arm-datafactory
 references:
-- uid: azure-arm-datafactory.Factory
+- uid: azure-arm-datafactory.FactoryRepoUpdate
   spec.typeScript:
-  - name: Factory
-    fullName: Factory
-    uid: azure-arm-datafactory.Factory
+  - name: FactoryRepoUpdate
+    fullName: FactoryRepoUpdate
+    uid: azure-arm-datafactory.FactoryRepoUpdate
 - uid: Promise<azure-arm-datafactory.Factory>
   spec.typeScript:
   - name: Promise<
@@ -1074,6 +1056,11 @@ references:
     uid: azure-arm-datafactory.Factory
   - name: '>>'
     fullName: '>>'
+- uid: azure-arm-datafactory.Factory
+  spec.typeScript:
+  - name: Factory
+    fullName: Factory
+    uid: azure-arm-datafactory.Factory
 - uid: Promise<azure-arm-datafactory.FactoryListResponse>
   spec.typeScript:
   - name: Promise<

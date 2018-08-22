@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 4beb3e4403ee3d2adac43843b0b8f717f13d012a
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: f65057c5254ef5765a4d0c94c31ba22cce8ecae5
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40058914"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41695700"
 items:
 - uid: '@azure/cosmos.Database'
   name: Database
@@ -23,7 +23,7 @@ items:
   langs:
   - typeScript
   type: class
-  summary: <span data-ttu-id="bcad1-101">Operazioni per la lettura o l'eliminazione di un database esistente.</span><span class="sxs-lookup"><span data-stu-id="bcad1-101">Operations for reading or deleting an existing database.</span></span>
+  summary: <span data-ttu-id="23472-101">Operazioni per la lettura o l'eliminazione di un database esistente.</span><span class="sxs-lookup"><span data-stu-id="23472-101">Operations for reading or deleting an existing database.</span></span>
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Database.client'
   name: client
@@ -46,7 +46,7 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="bcad1-102">Consente di leggere, sostituire o eliminare un oggetto specifico esistente <xref:Database> dall'id. Usare `.containers` creazione di nuovi contenitori o l'esecuzione di query/lettura di tutti i contenitori.</span><span class="sxs-lookup"><span data-stu-id="bcad1-102">Used to read, replace, or delete a specific, existing <xref:Database> by id. Use `.containers` creating new containers, or querying/reading all containers.</span></span>
+    <span data-ttu-id="23472-102">Consente di leggere, sostituire o eliminare un oggetto specifico esistente <xref:Database> dall'id. Usare `.containers` creazione di nuovi contenitori o l'esecuzione di query/lettura di tutti i contenitori.</span><span class="sxs-lookup"><span data-stu-id="23472-102">Used to read, replace, or delete a specific, existing <xref:Database> by id. Use `.containers` creating new containers, or querying/reading all containers.</span></span>
   syntax:
     content: 'function container(id: string)'
     parameters:
@@ -66,9 +66,9 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="bcad1-103">Utilizzato per la creazione di nuovi contenitori o l'esecuzione di query/lettura di tutti i contenitori.</span><span class="sxs-lookup"><span data-stu-id="bcad1-103">Used for creating new containers, or querying/reading all containers.</span></span>
+    <span data-ttu-id="23472-103">Utilizzato per la creazione di nuovi contenitori o l'esecuzione di query/lettura di tutti i contenitori.</span><span class="sxs-lookup"><span data-stu-id="23472-103">Used for creating new containers, or querying/reading all containers.</span></span>
 
-    <span data-ttu-id="bcad1-104">Uso `.container(id)` per leggere, sostituire o eliminare un oggetto specifico esistente <xref:Database> dall'id.</span><span class="sxs-lookup"><span data-stu-id="bcad1-104">Use `.container(id)` to read, replace, or delete a specific, existing <xref:Database> by id.</span></span>
+    <span data-ttu-id="23472-104">Uso `.container(id)` per leggere, sostituire o eliminare un oggetto specifico esistente <xref:Database> dall'id.</span><span class="sxs-lookup"><span data-stu-id="23472-104">Use `.container(id)` to read, replace, or delete a specific, existing <xref:Database> by id.</span></span>
   syntax:
     content: 'containers: Containers'
     return:
@@ -82,11 +82,11 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="bcad1-105">Restituisce un nuovo <xref:Database> istanza.</span><span class="sxs-lookup"><span data-stu-id="bcad1-105">Returns a new <xref:Database> instance.</span></span>
+    <span data-ttu-id="23472-105">Restituisce un nuovo <xref:Database> istanza.</span><span class="sxs-lookup"><span data-stu-id="23472-105">Returns a new <xref:Database> instance.</span></span>
 
-    <span data-ttu-id="bcad1-106">Nota: l'obiettivo consiste nell'ottenere oggetto dalla <xref:CosmosClient> tramite `client.databsae(id)`, non per creare istanze, se stessi.</span><span class="sxs-lookup"><span data-stu-id="bcad1-106">Note: the intention is to get this object from <xref:CosmosClient> via `client.databsae(id)`, not to instaniate it yourself.</span></span>
+    <span data-ttu-id="23472-106">Nota: l'obiettivo consiste nell'ottenere oggetto dalla <xref:CosmosClient> tramite `client.databsae(id)`, non per creare istanze, se stessi.</span><span class="sxs-lookup"><span data-stu-id="23472-106">Note: the intention is to get this object from <xref:CosmosClient> via `client.databsae(id)`, not to instaniate it yourself.</span></span>
   syntax:
-    content: 'new Database(client: CosmosClient, id: string)'
+    content: 'new Database(client: CosmosClient, id: string, clientContext: ClientContext)'
     parameters:
     - id: client
       type:
@@ -96,6 +96,10 @@ items:
       type:
       - string
       description: ''
+    - id: clientContext
+      type:
+      - ClientContext
+      description: ''
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Database.delete'
   name: delete
@@ -103,7 +107,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="bcad1-107">Eliminare il Database specificato.</span><span class="sxs-lookup"><span data-stu-id="bcad1-107">Delete the given Database.</span></span>
+  summary: <span data-ttu-id="23472-107">Eliminare il Database specificato.</span><span class="sxs-lookup"><span data-stu-id="23472-107">Delete the given Database.</span></span>
   syntax:
     content: 'function delete(options?: RequestOptions)'
     parameters:
@@ -136,7 +140,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="bcad1-108">Lettura della definizione del Database specificato.</span><span class="sxs-lookup"><span data-stu-id="bcad1-108">Read the definition of the given Database.</span></span>
+  summary: <span data-ttu-id="23472-108">Lettura della definizione del Database specificato.</span><span class="sxs-lookup"><span data-stu-id="23472-108">Read the definition of the given Database.</span></span>
   syntax:
     content: 'function read(options?: RequestOptions)'
     parameters:
@@ -156,7 +160,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="bcad1-109">Restituisce un riferimento URL alla risorsa.</span><span class="sxs-lookup"><span data-stu-id="bcad1-109">Returns a reference URL to the resource.</span></span> <span data-ttu-id="bcad1-110">Utilizzato per il collegamento nelle autorizzazioni.</span><span class="sxs-lookup"><span data-stu-id="bcad1-110">Used for linking in Permissions.</span></span>
+  summary: <span data-ttu-id="23472-109">Restituisce un riferimento URL alla risorsa.</span><span class="sxs-lookup"><span data-stu-id="23472-109">Returns a reference URL to the resource.</span></span> <span data-ttu-id="23472-110">Utilizzato per il collegamento nelle autorizzazioni.</span><span class="sxs-lookup"><span data-stu-id="23472-110">Used for linking in Permissions.</span></span>
   syntax:
     content: 'url: string'
     return:
@@ -170,7 +174,7 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="bcad1-111">Consente di leggere, sostituire o eliminare un oggetto specifico esistente <xref:User> dall'id. Usare `.users` per la creazione di nuovi utenti o l'esecuzione di query/lettura di tutti gli utenti.</span><span class="sxs-lookup"><span data-stu-id="bcad1-111">Used to read, replace, or delete a specific, existing <xref:User> by id. Use `.users` for creating new users, or querying/reading all users.</span></span>
+    <span data-ttu-id="23472-111">Consente di leggere, sostituire o eliminare un oggetto specifico esistente <xref:User> dall'id. Usare `.users` per la creazione di nuovi utenti o l'esecuzione di query/lettura di tutti gli utenti.</span><span class="sxs-lookup"><span data-stu-id="23472-111">Used to read, replace, or delete a specific, existing <xref:User> by id. Use `.users` for creating new users, or querying/reading all users.</span></span>
   syntax:
     content: 'function user(id: string)'
     parameters:
@@ -190,9 +194,9 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="bcad1-112">Utilizzato per la creazione di nuovi utenti o l'esecuzione di query/lettura di tutti gli utenti.</span><span class="sxs-lookup"><span data-stu-id="bcad1-112">Used for creating new users, or querying/reading all users.</span></span>
+    <span data-ttu-id="23472-112">Utilizzato per la creazione di nuovi utenti o l'esecuzione di query/lettura di tutti gli utenti.</span><span class="sxs-lookup"><span data-stu-id="23472-112">Used for creating new users, or querying/reading all users.</span></span>
 
-    <span data-ttu-id="bcad1-113">Uso `.user(id)` per leggere, sostituire o eliminare un oggetto specifico esistente <xref:User> dall'id.</span><span class="sxs-lookup"><span data-stu-id="bcad1-113">Use `.user(id)` to read, replace, or delete a specific, existing <xref:User> by id.</span></span>
+    <span data-ttu-id="23472-113">Uso `.user(id)` per leggere, sostituire o eliminare un oggetto specifico esistente <xref:User> dall'id.</span><span class="sxs-lookup"><span data-stu-id="23472-113">Use `.user(id)` to read, replace, or delete a specific, existing <xref:User> by id.</span></span>
   syntax:
     content: 'users: Users'
     return:
