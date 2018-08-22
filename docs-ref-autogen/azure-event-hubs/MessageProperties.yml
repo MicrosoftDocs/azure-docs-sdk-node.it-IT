@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: bd874ce388034b805a320a89a740251dd509574f
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 9718d42180fa2fd371115cc08f2f96e837161b2e
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40068611"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41690095"
 items:
 - uid: azure-event-hubs.MessageProperties
   name: MessageProperties
@@ -28,8 +28,9 @@ items:
   langs:
   - typeScript
   type: module
-  summary: Descrive il set definito di proprietà standard del messaggio.
+  summary: Descrive le operazioni che possono essere eseguite nelle proprietà del messaggio amqp.
   package: azure-event-hubs
+  module: MessageProperties
 - uid: azure-event-hubs.MessageProperties.absoluteExpiryTime
   name: absoluteExpiryTime
   fullName: absoluteExpiryTime
@@ -37,7 +38,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{number} [absoluteExpiryTime] Il tempo quando questo messaggio è considerato scaduto.'
   optional: true
   syntax:
     content: 'absoluteExpiryTime?: number'
@@ -52,7 +53,10 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: >-
+    {string} [contentEncoding] La proprietà di codifica di contenuto è usata come modificatore di content-type.
+
+    Quando presente, relativo valueindicates quali altre codifiche del contenuto sono stati applicati ai dati dell'applicazione.
   optional: true
   syntax:
     content: 'contentEncoding?: string'
@@ -67,7 +71,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{string} [contentType] Tipo MIME del messaggio.'
   optional: true
   syntax:
     content: 'contentType?: string'
@@ -82,7 +86,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: "{stringa | numero | Buffer} [correlationId] l'id che può essere utilizzato per contrassegnare o identificare i messaggi tra i client."
   optional: true
   syntax:
     content: 'correlationId?: string | number | Buffer'
@@ -97,7 +101,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: "{number} [creationTime] L'ora di questo messaggio è stato creato."
   optional: true
   syntax:
     content: 'creationTime?: number'
@@ -111,14 +115,14 @@ items:
   type: function
   langs:
   - typeScript
-  summary: ''
+  summary: Converte AmqpMessageProperties MessageProperties.
   syntax:
     content: 'function fromAmqpMessageProperties(props: AmqpMessageProperties)'
     parameters:
     - id: props
       type:
       - AmqpMessageProperties
-      description: ''
+      description: Proprietà del messaggio Amqp.
     return:
       type:
       - azure-event-hubs.MessageProperties
@@ -130,7 +134,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{string} [groupId] Il gruppo che cui appartiene questo messaggio.'
   optional: true
   syntax:
     content: 'groupId?: string'
@@ -145,7 +149,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{number} [groupSequence] Il numero di sequenza del messaggio con il gruppo.'
   optional: true
   syntax:
     content: 'groupSequence?: number'
@@ -160,7 +164,10 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: >-
+    {stringa | numero | Buffer} [messageId] l'identificatore di messaggio dell'applicazione idenitifes che identifica in modo univoco un messaggio.
+
+    L'utente è responsabile di garantire che questo sia univoco nel contesto specificato. I GUID in genere eseguono una scelta ideale.
   optional: true
   syntax:
     content: 'messageId?: string | number | Buffer'
@@ -175,7 +182,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: "{string} [replyTo] L'indirizzo del nodo per inviare le risposte a."
   optional: true
   syntax:
     content: 'replyTo?: string'
@@ -190,7 +197,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{string} [replyToGroupId] Il messaggio di risposta gruppo appartiene.'
   optional: true
   syntax:
     content: 'replyToGroupId?: string'
@@ -205,7 +212,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '{string} [argomento] Un campo comune per le informazioni di riepilogo sul contenuto del messaggio e lo scopo.'
   optional: true
   syntax:
     content: 'subject?: string'
@@ -220,7 +227,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: "{string} [a] L'indirizzo del nodo a cui è destinato il messaggio."
   optional: true
   syntax:
     content: 'to?: string'
@@ -234,14 +241,14 @@ items:
   type: function
   langs:
   - typeScript
-  summary: ''
+  summary: Converte MessageProperties AmqpMessageProperties.
   syntax:
     content: 'function toAmqpMessageProperties(props: MessageProperties)'
     parameters:
     - id: props
       type:
       - azure-event-hubs.MessageProperties
-      description: ''
+      description: Proprietà del messaggio.
     return:
       type:
       - AmqpMessageProperties
@@ -253,7 +260,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: "{string} [userId] L'identità dell'utente responsabile della creazione del messaggio."
   optional: true
   syntax:
     content: 'userId?: string'

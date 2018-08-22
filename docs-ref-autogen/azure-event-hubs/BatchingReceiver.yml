@@ -1,0 +1,126 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d4ac025f0d9bcf9ac402041803f2242eaf32f50f
+ms.sourcegitcommit: 6341d50df9591697ca6d5ae0e657a9840289d8c9
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "40479500"
+items:
+- uid: azure-event-hubs.BatchingReceiver
+  name: BatchingReceiver
+  fullName: BatchingReceiver
+  children:
+  - azure-event-hubs.BatchingReceiver.constructor
+  - azure-event-hubs.BatchingReceiver.create
+  - azure-event-hubs.BatchingReceiver.receive
+  langs:
+  - typeScript
+  type: class
+  summary: Viene descritto il ricevitore di invio in batch in cui l'utente può ricevere un numero specificato di messaggi per un periodo di tempo predefinito.
+  extends:
+    name: azure-event-hubs.EventHubReceiver
+  package: azure-event-hubs
+- uid: azure-event-hubs.BatchingReceiver.constructor
+  name: BatchingReceiver
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Creare un'istanza di un nuovo ricevitore dal protocollo AMQP `Receiver`. Usato da `EventHubClient`.
+  syntax:
+    content: 'new BatchingReceiver(context: ConnectionContext, partitionId: string | number, options?: ReceiveOptions)'
+    parameters:
+    - id: context
+      type:
+      - azure-event-hubs.ConnectionContext
+      description: Il contesto di connessione.
+    - id: partitionId
+      type:
+      - string | number
+      description: ID di partizione da cui ricevere.
+    - id: options
+      type:
+      - azure-event-hubs.ReceiveOptions
+      description: ''
+      optional: true
+  package: azure-event-hubs
+- uid: azure-event-hubs.BatchingReceiver.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crea un ricevitore di invio in batch.
+  syntax:
+    content: 'static function create(context: ConnectionContext, partitionId: string | number, options?: ReceiveOptions)'
+    parameters:
+    - id: context
+      type:
+      - azure-event-hubs.ConnectionContext
+      description: Il contesto di connessione.
+    - id: partitionId
+      type:
+      - string | number
+      description: PartitionId per ricevere eventi da.
+    - id: options
+      type:
+      - azure-event-hubs.ReceiveOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.BatchingReceiver
+  package: azure-event-hubs
+- uid: azure-event-hubs.BatchingReceiver.receive
+  name: receive
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ricezione di un batch di oggetti EventData da una partizione di hub eventi per un conteggio specificato e un determinato massimo tempo di attesa in secondi, a seconda di quale si verifica per primo. Questo metodo può essere utilizzato direttamente dopo la creazione dell'oggetto destinatario.
+  syntax:
+    content: 'function receive(maxMessageCount: number, maxWaitTimeInSeconds?: number)'
+    parameters:
+    - id: maxMessageCount
+      type:
+      - number
+      description: Il numero massimo di messaggi. Deve essere un valore maggiore di 0.
+    - id: maxWaitTimeInSeconds
+      type:
+      - number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-event-hubs.EventData[]>
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.EventHubReceiver
+  spec.typeScript:
+  - name: EventHubReceiver
+    fullName: EventHubReceiver
+    uid: azure-event-hubs.EventHubReceiver
+- uid: azure-event-hubs.ConnectionContext
+  spec.typeScript:
+  - name: ConnectionContext
+    fullName: ConnectionContext
+    uid: azure-event-hubs.ConnectionContext
+- uid: azure-event-hubs.ReceiveOptions
+  spec.typeScript:
+  - name: ReceiveOptions
+    fullName: ReceiveOptions
+    uid: azure-event-hubs.ReceiveOptions
+- uid: Promise<azure-event-hubs.EventData[]>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventData
+    fullName: EventData
+    uid: azure-event-hubs.EventData
+  - name: '[]>'
+    fullName: '[]>'
+- uid: azure-event-hubs.BatchingReceiver
+  spec.typeScript:
+  - name: BatchingReceiver
+    fullName: BatchingReceiver
+    uid: azure-event-hubs.BatchingReceiver
