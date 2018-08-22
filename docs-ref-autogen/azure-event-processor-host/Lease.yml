@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 6372d6412f2080ab5989793a57c7477d2efb00b4
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: e41ae36df7d4f66c03e756d3501d8b0c5ef37b4e
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40067489"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41692379"
 items:
 - uid: azure-event-processor-host.Lease
   name: Lease
@@ -21,7 +21,7 @@ items:
   langs:
   - typeScript
   type: interface
-  summary: <span data-ttu-id="f9467-101">Viene descritto il lease usato per definire un checkpoint l'offset dei dati ricevuto da un ricevitore per una determinata partizione in un gruppo di consumer per un hub eventi.</span><span class="sxs-lookup"><span data-stu-id="f9467-101">Describes the lease used to checkpoint the offset of data received by a receiver for a given partition in a consumer group for an EventHub.</span></span>
+  summary: <span data-ttu-id="c9ee9-101">Viene descritto il lease usato per definire un checkpoint l'offset dei dati ricevuto da un ricevitore per una determinata partizione in un gruppo di consumer per un hub eventi.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-101">Describes the lease used to checkpoint the offset of data received by a receiver for a given partition in a consumer group for an EventHub.</span></span>
   package: azure-event-processor-host
 - uid: azure-event-processor-host.Lease.acquire
   name: acquire
@@ -29,14 +29,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f9467-102">Acquisisce il lease.</span><span class="sxs-lookup"><span data-stu-id="f9467-102">Acquires the lease.</span></span>
+  summary: <span data-ttu-id="c9ee9-102">Acquisisce il lease.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-102">Acquires the lease.</span></span>
   syntax:
     content: 'function acquire(options: any)'
     parameters:
     - id: options
       type:
       - any
-      description: <span data-ttu-id="f9467-103">Le opzioni che devono essere passati per acquisire il lease.</span><span class="sxs-lookup"><span data-stu-id="f9467-103">Any options that need to be passed to acquire the lease.</span></span>
+      description: <span data-ttu-id="c9ee9-103">Le opzioni che devono essere passati per acquisire il lease.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-103">Any options that need to be passed to acquire the lease.</span></span>
     return:
       type:
       - Promise<azure-event-processor-host.Lease>
@@ -47,7 +47,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f9467-104">Ottiene il contenuto.</span><span class="sxs-lookup"><span data-stu-id="f9467-104">Gets the content.</span></span>
+  summary: <span data-ttu-id="c9ee9-104">Ottiene il contenuto.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-104">Gets the content.</span></span>
   syntax:
     content: 'function getContent(options?: any)'
     parameters:
@@ -67,7 +67,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '<span data-ttu-id="c9ee9-105">{boolean} isHeld determina se il lease viene mantenuto attivo.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-105">{boolean} isHeld Determines whether the lease is held.</span></span> <span data-ttu-id="c9ee9-106">Valore predefinito: false.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-106">Default: false.</span></span>'
   syntax:
     content: 'isHeld: boolean'
     return:
@@ -81,7 +81,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c9ee9-107">{string} [leaseId] Identificatore univoco per il lease.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-107">{string} [leaseId] The unqiue identifier for the lease.</span></span> <span data-ttu-id="c9ee9-108">Nel BlobLease verrà impostata questa proprietà dopo aver ottenuto un lease dall'archivio Blob di Azure.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-108">In the BlobLease this property will be set after getting a lease from the Azure Blob storage.</span></span>
   optional: true
   syntax:
     content: 'leaseId?: string'
@@ -96,7 +96,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c9ee9-109">{string} [partitionId] PartitionId associati per il quale il lease viene mantenuto attivo.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-109">{string} [partitionId] The associated partitionId for which the lease is held.</span></span>
   optional: true
   syntax:
     content: 'partitionId?: string'
@@ -110,14 +110,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f9467-105">Rilascia il lease.</span><span class="sxs-lookup"><span data-stu-id="f9467-105">Releases the lease.</span></span>
+  summary: <span data-ttu-id="c9ee9-110">Rilascia il lease.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-110">Releases the lease.</span></span>
   syntax:
     content: 'function release(options: any)'
     parameters:
     - id: options
       type:
       - any
-      description: <span data-ttu-id="f9467-106">Le opzioni che devono essere passati per rilasciare il lease.</span><span class="sxs-lookup"><span data-stu-id="f9467-106">Any options that need to be passed to release the lease.</span></span>
+      description: <span data-ttu-id="c9ee9-111">Le opzioni che devono essere passati per rilasciare il lease.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-111">Any options that need to be passed to release the lease.</span></span>
     return:
       type:
       - Promise<azure-event-processor-host.Lease>
@@ -128,14 +128,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f9467-107">Rinnova il lease.</span><span class="sxs-lookup"><span data-stu-id="f9467-107">Renews the lease.</span></span>
+  summary: <span data-ttu-id="c9ee9-112">Rinnova il lease.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-112">Renews the lease.</span></span>
   syntax:
     content: 'function renew(options: any)'
     parameters:
     - id: options
       type:
       - any
-      description: <span data-ttu-id="f9467-108">Le opzioni che devono essere passati per rinnovare il lease.</span><span class="sxs-lookup"><span data-stu-id="f9467-108">Any options that need to be passed to renew the lease.</span></span>
+      description: <span data-ttu-id="c9ee9-113">Le opzioni che devono essere passati per rinnovare il lease.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-113">Any options that need to be passed to renew the lease.</span></span>
     return:
       type:
       - Promise<azure-event-processor-host.Lease>
@@ -146,7 +146,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f9467-109">Aggiorna il contenuto</span><span class="sxs-lookup"><span data-stu-id="f9467-109">Updates the content</span></span>
+  summary: <span data-ttu-id="c9ee9-114">Aggiorna il contenuto</span><span class="sxs-lookup"><span data-stu-id="c9ee9-114">Updates the content</span></span>
   syntax:
     content: 'function updateContent(text: string, options?: any)'
     parameters:
@@ -157,7 +157,7 @@ items:
     - id: options
       type:
       - any
-      description: <span data-ttu-id="f9467-110">Le opzioni che devono essere passati per aggiornare il contenuto del blob.</span><span class="sxs-lookup"><span data-stu-id="f9467-110">Any options that need to be passed to update the blob content.</span></span>
+      description: <span data-ttu-id="c9ee9-115">Le opzioni che devono essere passati per aggiornare il contenuto del blob.</span><span class="sxs-lookup"><span data-stu-id="c9ee9-115">Any options that need to be passed to update the blob content.</span></span>
       optional: true
     return:
       type:
