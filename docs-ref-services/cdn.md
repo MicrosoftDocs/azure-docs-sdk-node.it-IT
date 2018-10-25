@@ -10,32 +10,32 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: CDN
-ms.openlocfilehash: b330eeedc178f20064b4a6b1c3f4f7d266590f11
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 1117f8fabfe364d3e5602ee89f652fe98851fef4
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34266626"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49661086"
 ---
-# <a name="azure-cdn-modules-for-nodejs"></a><span data-ttu-id="a3ea6-103">Moduli della rete CDN di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="a3ea6-103">Azure CDN modules for Node.js</span></span>
+# <a name="azure-cdn-modules-for-nodejs"></a><span data-ttu-id="f9c2d-103">Moduli della rete CDN di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="f9c2d-103">Azure CDN modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="a3ea6-104">Panoramica</span><span class="sxs-lookup"><span data-stu-id="a3ea6-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="f9c2d-104">Panoramica</span><span class="sxs-lookup"><span data-stu-id="f9c2d-104">Overview</span></span>
 
-<span data-ttu-id="a3ea6-105">La rete per la distribuzione di contenuti di Azure (rete CDN) offre agli sviluppatori una soluzione globale per distribuire contenuti a larghezza di banda elevata ospitati in Azure o in altre posizioni.</span><span class="sxs-lookup"><span data-stu-id="a3ea6-105">The Azure Content Delivery Network (CDN) offers developers a global solution for delivering high-bandwidth content that is hosted in Azure or any other location.</span></span> <span data-ttu-id="a3ea6-106">Con la rete CDN è possibile memorizzare nella cache gli oggetti disponibili pubblicamente caricati dall'archivio BLOB di Azure un'applicazione Web, una macchina virtuale, una cartella dell'applicazione o altre posizioni HTTP/HTTPS.</span><span class="sxs-lookup"><span data-stu-id="a3ea6-106">Using the CDN, you can cache publicly available objects loaded from Azure blob storage, a web application, virtual machine, application folder, or other HTTP/HTTPS location.</span></span> <span data-ttu-id="a3ea6-107">La cache della rete CDN può essere mantenuta in posizioni strategiche per fornire la larghezza di banda massima per la distribuzione di contenuto agli utenti.</span><span class="sxs-lookup"><span data-stu-id="a3ea6-107">The CDN cache can be held at strategic locations to provide maximum bandwidth for delivering content to users.</span></span> <span data-ttu-id="a3ea6-108">In genere, la rete CDN viene usata per recapitare contenuto statico come immagini, fogli di stile, documenti, file script sul lato client e pagine HTML.</span><span class="sxs-lookup"><span data-stu-id="a3ea6-108">The CDN is typically used for delivering static content such as images, style sheets, documents, files, client-side scripts, and HTML pages.</span></span>
+<span data-ttu-id="f9c2d-105">La rete per la distribuzione di contenuti di Azure (rete CDN) offre agli sviluppatori una soluzione globale per distribuire contenuti a larghezza di banda elevata ospitati in Azure o in altre posizioni.</span><span class="sxs-lookup"><span data-stu-id="f9c2d-105">The Azure Content Delivery Network (CDN) offers developers a global solution for delivering high-bandwidth content that is hosted in Azure or any other location.</span></span> <span data-ttu-id="f9c2d-106">Con la rete CDN è possibile memorizzare nella cache gli oggetti disponibili pubblicamente caricati dall'archivio BLOB di Azure un'applicazione Web, una macchina virtuale, una cartella dell'applicazione o altre posizioni HTTP/HTTPS.</span><span class="sxs-lookup"><span data-stu-id="f9c2d-106">Using the CDN, you can cache publicly available objects loaded from Azure blob storage, a web application, virtual machine, application folder, or other HTTP/HTTPS location.</span></span> <span data-ttu-id="f9c2d-107">La cache della rete CDN può essere mantenuta in posizioni strategiche per fornire la larghezza di banda massima per la distribuzione di contenuto agli utenti.</span><span class="sxs-lookup"><span data-stu-id="f9c2d-107">The CDN cache can be held at strategic locations to provide maximum bandwidth for delivering content to users.</span></span> <span data-ttu-id="f9c2d-108">In genere, la rete CDN viene usata per recapitare contenuto statico come immagini, fogli di stile, documenti, file script sul lato client e pagine HTML.</span><span class="sxs-lookup"><span data-stu-id="f9c2d-108">The CDN is typically used for delivering static content such as images, style sheets, documents, files, client-side scripts, and HTML pages.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="a3ea6-109">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="a3ea6-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="f9c2d-109">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="f9c2d-109">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="a3ea6-110">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="a3ea6-110">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="f9c2d-110">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="f9c2d-110">Install the npm module</span></span>
 
-<span data-ttu-id="a3ea6-111">Installare il modulo npm della rete CDN</span><span class="sxs-lookup"><span data-stu-id="a3ea6-111">Install the Azure CDN npm module</span></span>
+<span data-ttu-id="f9c2d-111">Installare il modulo npm della rete CDN</span><span class="sxs-lookup"><span data-stu-id="f9c2d-111">Install the Azure CDN npm module</span></span>
 
 ```bash
 npm install azure-arm-cdn
 ```
 
-### <a name="example"></a><span data-ttu-id="a3ea6-112">Esempio</span><span class="sxs-lookup"><span data-stu-id="a3ea6-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="f9c2d-112">Esempio</span><span class="sxs-lookup"><span data-stu-id="f9c2d-112">Example</span></span>
 
-<span data-ttu-id="a3ea6-113">Questo esempio elenca tutti i profili della rete CDN.</span><span class="sxs-lookup"><span data-stu-id="a3ea6-113">This example lists all of the CDN profiles.</span></span>
+<span data-ttu-id="f9c2d-113">Questo esempio elenca tutti i profili della rete CDN.</span><span class="sxs-lookup"><span data-stu-id="f9c2d-113">This example lists all of the CDN profiles.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -51,6 +51,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="a3ea6-114">Esempi</span><span class="sxs-lookup"><span data-stu-id="a3ea6-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="f9c2d-114">Esempi</span><span class="sxs-lookup"><span data-stu-id="f9c2d-114">Samples</span></span>
 
-<span data-ttu-id="a3ea6-115">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="a3ea6-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="f9c2d-115">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="f9c2d-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

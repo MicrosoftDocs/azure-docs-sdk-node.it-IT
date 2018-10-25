@@ -10,30 +10,30 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: DevTest Labs
-ms.openlocfilehash: 5bd010d26ca11f9909191f25128b9bdb89811fd5
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 4528bf6a09bc86d23bfec982988added1aa3e257
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260747"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49694916"
 ---
-# <a name="azure-devtest-labs-modules-for-nodejs"></a><span data-ttu-id="7067d-103">Moduli di Azure DevTest Labs per Node.js</span><span class="sxs-lookup"><span data-stu-id="7067d-103">Azure DevTest Labs modules for Node.js</span></span>
+# <a name="azure-devtest-labs-modules-for-nodejs"></a><span data-ttu-id="33c3f-103">Moduli di Azure DevTest Labs per Node.js</span><span class="sxs-lookup"><span data-stu-id="33c3f-103">Azure DevTest Labs modules for Node.js</span></span>
 
-<span data-ttu-id="7067d-104">Lab di sviluppo e test di Azure è un servizio che consente agli sviluppatori e ai tester di creare rapidamente ambienti in Azure riducendo al minimo gli sprechi e i costi di controllo.</span><span class="sxs-lookup"><span data-stu-id="7067d-104">Azure DevTest Labs is a service that helps developers and testers quickly create environments in Azure while minimizing waste and controlling cost.</span></span> <span data-ttu-id="7067d-105">È possibile provare la versione più recente dell'applicazione eseguendo rapidamente il provisioning di ambienti Windows e Linux tramite modelli ed elementi riutilizzabili.</span><span class="sxs-lookup"><span data-stu-id="7067d-105">You can test the latest version of your application by quickly provisioning Windows and Linux environments using reusable templates and artifacts.</span></span> <span data-ttu-id="7067d-106">Consente di integrare facilmente la pipeline di distribuzione in lab di sviluppo e test per effettuare il provisioning di ambienti su richiesta.</span><span class="sxs-lookup"><span data-stu-id="7067d-106">Easily integrate your deployment pipeline with DevTest Labs to provision on-demand environments.</span></span> <span data-ttu-id="7067d-107">Aumentare i propri test di carico tramite il provisioning di più agenti di test e creare ambienti di pre-provisioning per training e demo.</span><span class="sxs-lookup"><span data-stu-id="7067d-107">Scale up your load testing by provisioning multiple test agents, and create pre-provisioned environments for training and demos.</span></span>
+<span data-ttu-id="33c3f-104">Lab di sviluppo e test di Azure è un servizio che consente agli sviluppatori e ai tester di creare rapidamente ambienti in Azure riducendo al minimo gli sprechi e i costi di controllo.</span><span class="sxs-lookup"><span data-stu-id="33c3f-104">Azure DevTest Labs is a service that helps developers and testers quickly create environments in Azure while minimizing waste and controlling cost.</span></span> <span data-ttu-id="33c3f-105">È possibile provare la versione più recente dell'applicazione eseguendo rapidamente il provisioning di ambienti Windows e Linux tramite modelli ed elementi riutilizzabili.</span><span class="sxs-lookup"><span data-stu-id="33c3f-105">You can test the latest version of your application by quickly provisioning Windows and Linux environments using reusable templates and artifacts.</span></span> <span data-ttu-id="33c3f-106">Consente di integrare facilmente la pipeline di distribuzione in lab di sviluppo e test per effettuare il provisioning di ambienti su richiesta.</span><span class="sxs-lookup"><span data-stu-id="33c3f-106">Easily integrate your deployment pipeline with DevTest Labs to provision on-demand environments.</span></span> <span data-ttu-id="33c3f-107">Aumentare i propri test di carico tramite il provisioning di più agenti di test e creare ambienti di pre-provisioning per training e demo.</span><span class="sxs-lookup"><span data-stu-id="33c3f-107">Scale up your load testing by provisioning multiple test agents, and create pre-provisioned environments for training and demos.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="7067d-108">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="7067d-108">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="33c3f-108">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="33c3f-108">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="7067d-109">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="7067d-109">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="33c3f-109">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="33c3f-109">Install the npm module</span></span>
 
-<span data-ttu-id="7067d-110">Installare il modulo npm di Azure DevTest Labs</span><span class="sxs-lookup"><span data-stu-id="7067d-110">Install the Azure DevTest Labs npm module</span></span>
+<span data-ttu-id="33c3f-110">Installare il modulo npm di Azure DevTest Labs</span><span class="sxs-lookup"><span data-stu-id="33c3f-110">Install the Azure DevTest Labs npm module</span></span>
 
 ```bash
 npm install azure-arm-devtestlabs
 ```
 
-### <a name="example"></a><span data-ttu-id="7067d-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="7067d-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="33c3f-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="33c3f-111">Example</span></span>
 
-<span data-ttu-id="7067d-112">Questo esempio ottiene e visualizza i dettagli di un lab.</span><span class="sxs-lookup"><span data-stu-id="7067d-112">This example gets and prints the details of a lab.</span></span>
+<span data-ttu-id="33c3f-112">Questo esempio ottiene e visualizza i dettagli di un lab.</span><span class="sxs-lookup"><span data-stu-id="33c3f-112">This example gets and prints the details of a lab.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -53,10 +53,8 @@ msRestAzure
     console.log('Details of lab:');
     console.dir(lab, { depth: null, colors: true });
   });
-
-
 ```
 
-## <a name="samples"></a><span data-ttu-id="7067d-113">Esempi</span><span class="sxs-lookup"><span data-stu-id="7067d-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="33c3f-113">Esempi</span><span class="sxs-lookup"><span data-stu-id="33c3f-113">Samples</span></span>
 
-<span data-ttu-id="7067d-114">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="7067d-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="33c3f-114">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="33c3f-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
