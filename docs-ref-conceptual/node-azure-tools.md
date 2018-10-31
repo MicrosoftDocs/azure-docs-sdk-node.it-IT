@@ -1,6 +1,6 @@
 ---
-title: Strumenti per gli sviluppatori Node.js in Azure | Microsoft Docs
-description: Installare i singoli strumenti per lo sviluppo con Node.js in Azure
+title: Strumenti per sviluppatori JavaScript in Azure | Microsoft Docs
+description: Installare i singoli strumenti per lo sviluppo con JavaScript in Azure
 services: multiple
 author: rloutlaw
 manager: routlaw
@@ -10,15 +10,15 @@ ms.devlang: nodejs
 ms.topic: article
 ms.date: 11/07/2017
 ms.author: routlaw
-ms.openlocfilehash: 172cc3e1bff763cbf768dce5aa85065da0dd4927
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 1c676b1f31fde7b14a16031b78f767a2c59edd5a
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220733"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49726666"
 ---
-# <a name="azure-tools-for-nodejs-developers"></a>Strumenti di Azure per sviluppatori Node.js
-Di seguito sono riportati gli strumenti consigliati per lo sviluppo con Azure in Node.js.
+# <a name="azure-tools-for-javascript-developers"></a>Strumenti di Azure per sviluppatori JavaScript
+Di seguito sono riportati gli strumenti consigliati per lo sviluppo di app JavaScript in Azure.
 
 ## <a name="azure-cli"></a>Interfaccia della riga di comando di Azure
 L'interfaccia della riga di comando di Azure è ottimizzata per la gestione delle risorse di Azure dalla riga di comando.
@@ -29,7 +29,7 @@ L'interfaccia della riga di comando di Azure è ottimizzata per la gestione dell
 > [Installare l'interfaccia della riga di comando di Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)
 
 ## <a name="visual-studio-code"></a>Visual Studio Code
-È possibile modificare ed eseguire il debug delle app Node.js in qualsiasi sistema operativo.
+Modificare ed eseguire il debug delle app JavaScript in qualsiasi sistema operativo.
 
 ![Visual Studio Code](media/node-azure-tools/vs-code.png)
 
@@ -42,7 +42,7 @@ Per interagire con i servizi di Azure direttamente in Visual Studio Code, usare 
 | Strumento | DESCRIZIONE  |
 |:---------:|---------|
 | [Funzioni di Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) <br> [![Strumenti: Funzioni di Azure](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) | Creare, gestire, visualizzare e distribuire funzioni ed eseguirne il debug|
-| [Servizio app di Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![Strumenti: Servizio app](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | Esplorare siti e il portale di Azure, creare nuovi siti (solo Linux in Node.js) ed eseguire la distribuzione in slot |
+| [Servizio app di Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![Strumenti: Servizio app](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | Esplorare siti e il portale di Azure, creare nuovi siti ed eseguire la distribuzione in slot |
 | [Cosmos DB ](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)  <br> [![Strumenti: Cosmos DB](media/node-azure-tools/icon-cosmos-db.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)| Creare, esplorare e aggiornare database multimodello distribuiti a livello globale in Azure |
 | [Docker](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)   <br> [![Strumenti: Cosmos DB](media/node-azure-tools/icon-docker.png)](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)| Gestire immagini e contenitori Docker, l'hub Docker e Registro contenitori di Azure |
 

@@ -1,6 +1,6 @@
 ---
-title: Moduli di Azure per Node.js
-description: Panoramica dei moduli di gestione e di servizi di Azure per Node.js
+title: Moduli di Azure per JavaScript
+description: Panoramica dei moduli di gestione e di servizi di Azure per JavaScript
 author: rloutlaw
 ms.author: routlaw
 manager: routlaw
@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 165e1580e408b71b6147e51c41e22bc8fe7277a1
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 1d97df65f12c465cf6c790d1e3c016a9ff4aa5ba
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220533"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49672996"
 ---
-# <a name="azure-modules-for-nodejs"></a>Moduli di Azure per Node.js
+# <a name="azure-modules-for-javascript"></a>Moduli di Azure per JavaScript
 
-Gestire le risorse di Azure e connettersi ai servizi dalle applicazioni Node.js con i moduli di Azure per Node.js. Il codice è disponibile come [moduli npm](node-sdk-azure-install.md) da usare nei progetti. 
+Gestire le risorse di Azure e connettersi ai servizi dalle applicazioni JavaScript con i moduli di Azure per JavaScript. Il codice è disponibile come [moduli npm](node-sdk-azure-install.md) da usare nei progetti. 
 
 ## <a name="manage-azure-resources"></a>Gestire le risorse di Azure
 
@@ -85,7 +85,7 @@ Vedere le [istruzioni di installazione](node-sdk-azure-install.md) per ottenere 
 
 ## <a name="connect-to-azure-services"></a>Connettersi ai servizi di Azure
 
-Oltre a usare i moduli di Azure per creare e gestire risorse in Azure, è possibile usare pacchetti per connettersi ai servizi cloud di Azure e usarli nelle app. È ad esempio possibile aggiornare una tabella di un database SQL o caricare file in Archiviazione di Azure. Selezionare il pacchetto necessario per un servizio specifico dall'[elenco completo](node-sdk-azure-install.md) e passare al [centro per sviluppatori Node.js](https://azure.microsoft.com/develop/nodejs/) per ottenere esercitazioni e codice di esempio per scoprire come usare i moduli nelle app.
+Oltre a usare i moduli di Azure per creare e gestire risorse in Azure, è possibile usare pacchetti per connettersi ai servizi cloud di Azure e usarli nelle app. È ad esempio possibile aggiornare una tabella di un database SQL o caricare file in Archiviazione di Azure. Selezionare il pacchetto necessario per un servizio specifico dall'[elenco completo](node-sdk-azure-install.md) e passare al [centro per sviluppatori JavaScript](https://azure.microsoft.com/develop/nodejs/) per ottenere esercitazioni e codice di esempio e apprendere l'uso dei moduli nelle app.
 
 Per stampare, ad esempio, i contenuti di ogni BLOB in un contenitore di archiviazione di Azure:
 
