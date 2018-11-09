@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Site Recovery
 ms.openlocfilehash: f8cddf806b921d5445cd0757b64aeb0dc5df03cf
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50273414"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51053710"
 ---
-# <a name="azure-site-recovery-modules-for-nodejs"></a><span data-ttu-id="7f1dc-103">Moduli di Azure Site Recovery per Node.js</span><span class="sxs-lookup"><span data-stu-id="7f1dc-103">Azure Site Recovery modules for Node.js</span></span>
+# <a name="azure-site-recovery-modules-for-nodejs"></a><span data-ttu-id="53e47-103">Moduli di Azure Site Recovery per Node.js</span><span class="sxs-lookup"><span data-stu-id="53e47-103">Azure Site Recovery modules for Node.js</span></span>
 
-<span data-ttu-id="7f1dc-104">Site Recovery consente di automatizzare la replica delle VM di Azure tra aree, macchine virtuali locali e server fisici in Azure e tra computer locali in un data center secondario.</span><span class="sxs-lookup"><span data-stu-id="7f1dc-104">Site Recovery allows you to automate replication of Azure VMs between regions, on-premises virtual machines and physical servers to Azure, and on-premises machines to a secondary datacenter.</span></span>
+<span data-ttu-id="53e47-104">Site Recovery consente di automatizzare la replica delle VM di Azure tra aree, macchine virtuali locali e server fisici in Azure e tra computer locali in un data center secondario.</span><span class="sxs-lookup"><span data-stu-id="53e47-104">Site Recovery allows you to automate replication of Azure VMs between regions, on-premises virtual machines and physical servers to Azure, and on-premises machines to a secondary datacenter.</span></span>
 
-<span data-ttu-id="7f1dc-105">Altre informazioni su [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview).</span><span class="sxs-lookup"><span data-stu-id="7f1dc-105">Learn more about [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview).</span></span>
+<span data-ttu-id="53e47-105">Altre informazioni su [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview).</span><span class="sxs-lookup"><span data-stu-id="53e47-105">Learn more about [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="7f1dc-106">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="7f1dc-106">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="53e47-106">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="53e47-106">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="7f1dc-107">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="7f1dc-107">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="53e47-107">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="53e47-107">Install the npm module</span></span>
 
-<span data-ttu-id="7f1dc-108">Installare il modulo npm del servizio Azure Site Recovery</span><span class="sxs-lookup"><span data-stu-id="7f1dc-108">Install the Azure Site Recovery service npm module</span></span>
+<span data-ttu-id="53e47-108">Installare il modulo npm del servizio Azure Site Recovery</span><span class="sxs-lookup"><span data-stu-id="53e47-108">Install the Azure Site Recovery service npm module</span></span>
 
 ```bash
 npm install azure-arm-recoveryservices
 ```
 
-### <a name="example"></a><span data-ttu-id="7f1dc-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="7f1dc-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="53e47-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="53e47-109">Example</span></span>
 
-<span data-ttu-id="7f1dc-110">Questo esempio elenca il servizio Site Recovery per un gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="7f1dc-110">This example lists the Site Recovery service for a resource group.</span></span>
+<span data-ttu-id="53e47-110">Questo esempio elenca il servizio Site Recovery per un gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="53e47-110">This example lists the Site Recovery service for a resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +56,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="7f1dc-111">Esempi</span><span class="sxs-lookup"><span data-stu-id="7f1dc-111">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="53e47-111">Esempi</span><span class="sxs-lookup"><span data-stu-id="53e47-111">Samples</span></span>
 
-<span data-ttu-id="7f1dc-112">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="7f1dc-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="53e47-112">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="53e47-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

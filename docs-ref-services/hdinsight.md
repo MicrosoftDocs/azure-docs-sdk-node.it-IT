@@ -9,31 +9,31 @@ ms.topic: article
 ms.devlang: nodejs
 ms.date: 07/18/2017
 ms.openlocfilehash: e35e0d487efce2a591130403f8b72a43c638fdec
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50264994"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51148922"
 ---
-# <a name="azure-hdinsight-modules-for-nodejs"></a><span data-ttu-id="39184-103">Moduli di Azure HDInsight per Node.js</span><span class="sxs-lookup"><span data-stu-id="39184-103">Azure HDInsight Modules for Node.js</span></span>
+# <a name="azure-hdinsight-modules-for-nodejs"></a><span data-ttu-id="cb993-103">Moduli di Azure HDInsight per Node.js</span><span class="sxs-lookup"><span data-stu-id="cb993-103">Azure HDInsight Modules for Node.js</span></span>
 
-<span data-ttu-id="39184-104">Azure HDInsight è una distribuzione cloud dei componenti Hadoop di Hortonworks Data Platform (HDP).</span><span class="sxs-lookup"><span data-stu-id="39184-104">Azure HDInsight is a cloud distribution of the Hadoop components from the Hortonworks Data Platform (HDP).</span></span> <span data-ttu-id="39184-105">Apache Hadoop era il framework open source originale per l'elaborazione distribuita e l'analisi di set di Big Data in cluster di computer.</span><span class="sxs-lookup"><span data-stu-id="39184-105">Apache Hadoop was the original open-source framework for distributed processing and analysis of big data sets on clusters of computers.</span></span>
+<span data-ttu-id="cb993-104">Azure HDInsight è una distribuzione cloud dei componenti Hadoop di Hortonworks Data Platform (HDP).</span><span class="sxs-lookup"><span data-stu-id="cb993-104">Azure HDInsight is a cloud distribution of the Hadoop components from the Hortonworks Data Platform (HDP).</span></span> <span data-ttu-id="cb993-105">Apache Hadoop era il framework open source originale per l'elaborazione distribuita e l'analisi di set di Big Data in cluster di computer.</span><span class="sxs-lookup"><span data-stu-id="cb993-105">Apache Hadoop was the original open-source framework for distributed processing and analysis of big data sets on clusters of computers.</span></span>
 
-<span data-ttu-id="39184-106">HDInsight rende le tecnologie Hadoop più semplici di usare offrendo i vantaggi seguenti:</span><span class="sxs-lookup"><span data-stu-id="39184-106">HDInsight makes Hadoop technologies easier to use, with:</span></span>
-- <span data-ttu-id="39184-107">Meno attività di installazione e configurazione.</span><span class="sxs-lookup"><span data-stu-id="39184-107">Less setup and configuration.</span></span> <span data-ttu-id="39184-108">Vedere Effettuare il provisioning di cluster Hadoop in HDInsight.</span><span class="sxs-lookup"><span data-stu-id="39184-108">See Provision Hadoop clusters in HDInsight.</span></span>
-- <span data-ttu-id="39184-109">Disponibilità e affidabilità elevate.</span><span class="sxs-lookup"><span data-stu-id="39184-109">High availability and reliability.</span></span> <span data-ttu-id="39184-110">Vedere Disponibilità e affidabilità di HDInsight.</span><span class="sxs-lookup"><span data-stu-id="39184-110">See HDInsight availability and reliability.</span></span>
-- <span data-ttu-id="39184-111">Sicurezza e la governance grazie all'integrazione con Active Directory.</span><span class="sxs-lookup"><span data-stu-id="39184-111">Security and governance through integration with Active Directory.</span></span> <span data-ttu-id="39184-112">Vedere Cluster aggiunti al dominio.</span><span class="sxs-lookup"><span data-stu-id="39184-112">See Domain-joined clusters.</span></span>
-- <span data-ttu-id="39184-113">Scalabilità dinamica senza interruzione dei processi</span><span class="sxs-lookup"><span data-stu-id="39184-113">Dynamic scaling without interrupting jobs</span></span>
-- <span data-ttu-id="39184-114">Componenti e versioni aggiornati.</span><span class="sxs-lookup"><span data-stu-id="39184-114">Component updates and current versions.</span></span> <span data-ttu-id="39184-115">Vedere Versioni di HDInsight e componenti di Hadoop.</span><span class="sxs-lookup"><span data-stu-id="39184-115">See Hadoop components and versions on HDInsight.</span></span>
-- <span data-ttu-id="39184-116">Integrazione con altri servizi di Azure, inclusi App Web e Database SQL</span><span class="sxs-lookup"><span data-stu-id="39184-116">Integration with other Azure services, including Web apps and SQL Database</span></span>
+<span data-ttu-id="cb993-106">HDInsight rende le tecnologie Hadoop più semplici di usare offrendo i vantaggi seguenti:</span><span class="sxs-lookup"><span data-stu-id="cb993-106">HDInsight makes Hadoop technologies easier to use, with:</span></span>
+- <span data-ttu-id="cb993-107">Meno attività di installazione e configurazione.</span><span class="sxs-lookup"><span data-stu-id="cb993-107">Less setup and configuration.</span></span> <span data-ttu-id="cb993-108">Vedere Effettuare il provisioning di cluster Hadoop in HDInsight.</span><span class="sxs-lookup"><span data-stu-id="cb993-108">See Provision Hadoop clusters in HDInsight.</span></span>
+- <span data-ttu-id="cb993-109">Disponibilità e affidabilità elevate.</span><span class="sxs-lookup"><span data-stu-id="cb993-109">High availability and reliability.</span></span> <span data-ttu-id="cb993-110">Vedere Disponibilità e affidabilità di HDInsight.</span><span class="sxs-lookup"><span data-stu-id="cb993-110">See HDInsight availability and reliability.</span></span>
+- <span data-ttu-id="cb993-111">Sicurezza e la governance grazie all'integrazione con Active Directory.</span><span class="sxs-lookup"><span data-stu-id="cb993-111">Security and governance through integration with Active Directory.</span></span> <span data-ttu-id="cb993-112">Vedere Cluster aggiunti al dominio.</span><span class="sxs-lookup"><span data-stu-id="cb993-112">See Domain-joined clusters.</span></span>
+- <span data-ttu-id="cb993-113">Scalabilità dinamica senza interruzione dei processi</span><span class="sxs-lookup"><span data-stu-id="cb993-113">Dynamic scaling without interrupting jobs</span></span>
+- <span data-ttu-id="cb993-114">Componenti e versioni aggiornati.</span><span class="sxs-lookup"><span data-stu-id="cb993-114">Component updates and current versions.</span></span> <span data-ttu-id="cb993-115">Vedere Versioni di HDInsight e componenti di Hadoop.</span><span class="sxs-lookup"><span data-stu-id="cb993-115">See Hadoop components and versions on HDInsight.</span></span>
+- <span data-ttu-id="cb993-116">Integrazione con altri servizi di Azure, inclusi App Web e Database SQL</span><span class="sxs-lookup"><span data-stu-id="cb993-116">Integration with other Azure services, including Web apps and SQL Database</span></span>
 
-<span data-ttu-id="39184-117">Lo stack di tecnologie Hadoop include software e utilità correlate, tra cui Apache Hive, HBase, Spark, Kafka e molti altri.</span><span class="sxs-lookup"><span data-stu-id="39184-117">The Hadoop technology stack includes related software and utilities, including Apache Hive, HBase, Spark, Kafka, and many others.</span></span> 
+<span data-ttu-id="cb993-117">Lo stack di tecnologie Hadoop include software e utilità correlate, tra cui Apache Hive, HBase, Spark, Kafka e molti altri.</span><span class="sxs-lookup"><span data-stu-id="cb993-117">The Hadoop technology stack includes related software and utilities, including Apache Hive, HBase, Spark, Kafka, and many others.</span></span> 
 
-## <a name="management-package"></a><span data-ttu-id="39184-118">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="39184-118">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="cb993-118">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="cb993-118">Management package</span></span>
 
-### <a name="install-the-npm-modules"></a><span data-ttu-id="39184-119">Installare i moduli npm</span><span class="sxs-lookup"><span data-stu-id="39184-119">Install the npm modules</span></span>
+### <a name="install-the-npm-modules"></a><span data-ttu-id="cb993-119">Installare i moduli npm</span><span class="sxs-lookup"><span data-stu-id="cb993-119">Install the npm modules</span></span>
 
-<span data-ttu-id="39184-120">Usare npm per installare i moduli di Azure HDInsight per Node.js</span><span class="sxs-lookup"><span data-stu-id="39184-120">Use npm to install the Azure HDInsight modules for Node.js</span></span>
+<span data-ttu-id="cb993-120">Usare npm per installare i moduli di Azure HDInsight per Node.js</span><span class="sxs-lookup"><span data-stu-id="cb993-120">Use npm to install the Azure HDInsight modules for Node.js</span></span>
 
 ```bash
 npm install azure-arm-hdinsight
@@ -43,9 +43,9 @@ npm install azure-arm-hdinsight
 azure-arm-hdinsight-jobs
 ```
 
-### <a name="example"></a><span data-ttu-id="39184-121">Esempio</span><span class="sxs-lookup"><span data-stu-id="39184-121">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="cb993-121">Esempio</span><span class="sxs-lookup"><span data-stu-id="cb993-121">Example</span></span> 
 
-<span data-ttu-id="39184-122">Questo esempio crea un client HDInsight e quindi elenca tutti i cluster disponibili.</span><span class="sxs-lookup"><span data-stu-id="39184-122">This example creates an HD Insight client and then lists all of the available clusters.</span></span> 
+<span data-ttu-id="cb993-122">Questo esempio crea un client HDInsight e quindi elenca tutti i cluster disponibili.</span><span class="sxs-lookup"><span data-stu-id="cb993-122">This example creates an HD Insight client and then lists all of the available clusters.</span></span> 
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -66,6 +66,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="39184-123">Esempi</span><span class="sxs-lookup"><span data-stu-id="39184-123">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="cb993-123">Esempi</span><span class="sxs-lookup"><span data-stu-id="cb993-123">Samples</span></span>
 
-<span data-ttu-id="39184-124">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="39184-124">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="cb993-124">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="cb993-124">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
