@@ -11,37 +11,37 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: IoT Hub
 ms.openlocfilehash: 1f83e016023722f149384ac015726e9257a9f3af
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51121880"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51410415"
 ---
-# <a name="azure-iot-hub-modules-for-nodejs"></a><span data-ttu-id="19ce0-103">Moduli di Hub IoT di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="19ce0-103">Azure IoT Hub modules for Node.js</span></span>
+# <a name="azure-iot-hub-modules-for-nodejs"></a><span data-ttu-id="5a6d6-103">Moduli di Hub IoT di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="5a6d6-103">Azure IoT Hub modules for Node.js</span></span>
 
-<span data-ttu-id="19ce0-104">L'hub IoT di Azure è un servizio completamente gestito che consente comunicazioni bidirezionali affidabili e sicure tra milioni di dispositivi IoT e un back-end della soluzione.</span><span class="sxs-lookup"><span data-stu-id="19ce0-104">Azure IoT Hub is a fully managed service that enables reliable and secure bidirectional communications between millions of IoT devices and a solution back end.</span></span> <span data-ttu-id="19ce0-105">L'hub IoT di Azure:</span><span class="sxs-lookup"><span data-stu-id="19ce0-105">Azure IoT Hub:</span></span>
-- <span data-ttu-id="19ce0-106">Offre più opzioni di comunicazione dispositivo a cloud e cloud a dispositivo, inclusi la messaggistica unidirezionale, il trasferimento di file e i metodi di risposta alle richieste.</span><span class="sxs-lookup"><span data-stu-id="19ce0-106">Provides multiple device-to-cloud and cloud-to-device communication options, including one-way messaging, file transfer, and request-reply methods.</span></span>
-- <span data-ttu-id="19ce0-107">Fornisce routing incorporato dichiarativo dei messaggi ad altri servizi di Azure.</span><span class="sxs-lookup"><span data-stu-id="19ce0-107">Provides built-in declarative message routing to other Azure services.</span></span>
-- <span data-ttu-id="19ce0-108">Offre un archivio in cui eseguire query sui metadati e informazioni di stato sincronizzate.</span><span class="sxs-lookup"><span data-stu-id="19ce0-108">Provides a queryable store for device metadata and synchronized state information.</span></span>
-- <span data-ttu-id="19ce0-109">Abilita comunicazioni sicure e controllo di accesso tramite chiavi di sicurezza o certificati X.509 per dispositivo.</span><span class="sxs-lookup"><span data-stu-id="19ce0-109">Enables secure communications and access control using per-device security keys or X.509 certificates.</span></span>
-- <span data-ttu-id="19ce0-110">Fornisce un monitoraggio esteso per gli eventi relativi alla connettività dei dispositivi e alla gestione delle identità dei dispositivi.</span><span class="sxs-lookup"><span data-stu-id="19ce0-110">Provides extensive monitoring for device connectivity and device identity management events.</span></span>
-- <span data-ttu-id="19ce0-111">Comprende librerie di dispositivi per i linguaggi e le piattaforme più diffusi.</span><span class="sxs-lookup"><span data-stu-id="19ce0-111">Includes device libraries for the most popular languages and platforms.</span></span>
+<span data-ttu-id="5a6d6-104">L'hub IoT di Azure è un servizio completamente gestito che consente comunicazioni bidirezionali affidabili e sicure tra milioni di dispositivi IoT e un back-end della soluzione.</span><span class="sxs-lookup"><span data-stu-id="5a6d6-104">Azure IoT Hub is a fully managed service that enables reliable and secure bidirectional communications between millions of IoT devices and a solution back end.</span></span> <span data-ttu-id="5a6d6-105">L'hub IoT di Azure:</span><span class="sxs-lookup"><span data-stu-id="5a6d6-105">Azure IoT Hub:</span></span>
+- <span data-ttu-id="5a6d6-106">Offre più opzioni di comunicazione dispositivo a cloud e cloud a dispositivo, inclusi la messaggistica unidirezionale, il trasferimento di file e i metodi di risposta alle richieste.</span><span class="sxs-lookup"><span data-stu-id="5a6d6-106">Provides multiple device-to-cloud and cloud-to-device communication options, including one-way messaging, file transfer, and request-reply methods.</span></span>
+- <span data-ttu-id="5a6d6-107">Fornisce routing incorporato dichiarativo dei messaggi ad altri servizi di Azure.</span><span class="sxs-lookup"><span data-stu-id="5a6d6-107">Provides built-in declarative message routing to other Azure services.</span></span>
+- <span data-ttu-id="5a6d6-108">Offre un archivio in cui eseguire query sui metadati e informazioni di stato sincronizzate.</span><span class="sxs-lookup"><span data-stu-id="5a6d6-108">Provides a queryable store for device metadata and synchronized state information.</span></span>
+- <span data-ttu-id="5a6d6-109">Abilita comunicazioni sicure e controllo di accesso tramite chiavi di sicurezza o certificati X.509 per dispositivo.</span><span class="sxs-lookup"><span data-stu-id="5a6d6-109">Enables secure communications and access control using per-device security keys or X.509 certificates.</span></span>
+- <span data-ttu-id="5a6d6-110">Fornisce un monitoraggio esteso per gli eventi relativi alla connettività dei dispositivi e alla gestione delle identità dei dispositivi.</span><span class="sxs-lookup"><span data-stu-id="5a6d6-110">Provides extensive monitoring for device connectivity and device identity management events.</span></span>
+- <span data-ttu-id="5a6d6-111">Comprende librerie di dispositivi per i linguaggi e le piattaforme più diffusi.</span><span class="sxs-lookup"><span data-stu-id="5a6d6-111">Includes device libraries for the most popular languages and platforms.</span></span>
 
-<span data-ttu-id="19ce0-112">Usare npm per installare i moduli di Hub IoT di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="19ce0-112">Use npm to install the Azure IoT Hub modules for Node.js</span></span>
+<span data-ttu-id="5a6d6-112">Usare npm per installare i moduli di Hub IoT di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="5a6d6-112">Use npm to install the Azure IoT Hub modules for Node.js</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="19ce0-113">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="19ce0-113">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="5a6d6-113">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="5a6d6-113">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="19ce0-114">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="19ce0-114">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="5a6d6-114">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="5a6d6-114">Install the npm module</span></span>
 
-<span data-ttu-id="19ce0-115">Installare il modulo npm di Hub IoT di Azure</span><span class="sxs-lookup"><span data-stu-id="19ce0-115">Install the Azure IoT Hub npm module</span></span>
+<span data-ttu-id="5a6d6-115">Installare il modulo npm di Hub IoT di Azure</span><span class="sxs-lookup"><span data-stu-id="5a6d6-115">Install the Azure IoT Hub npm module</span></span>
 
 ```bash
 npm install azure-arm-iothub
 ```
 
-### <a name="example"></a><span data-ttu-id="19ce0-116">Esempio</span><span class="sxs-lookup"><span data-stu-id="19ce0-116">Example</span></span>
+### <a name="example"></a><span data-ttu-id="5a6d6-116">Esempio</span><span class="sxs-lookup"><span data-stu-id="5a6d6-116">Example</span></span>
 
-<span data-ttu-id="19ce0-117">Questo esempio crea e assegna un nome a un hub IoT.</span><span class="sxs-lookup"><span data-stu-id="19ce0-117">This example creates and names an IoT hub.</span></span>
+<span data-ttu-id="5a6d6-117">Questo esempio crea e assegna un nome a un hub IoT.</span><span class="sxs-lookup"><span data-stu-id="5a6d6-117">This example creates and names an IoT hub.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -84,7 +84,7 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-<span data-ttu-id="19ce0-118">Questo esempio ottiene l'hub IoT esistente, in base al nome.</span><span class="sxs-lookup"><span data-stu-id="19ce0-118">This example gets the existing IoT hub, by name.</span></span>
+<span data-ttu-id="5a6d6-118">Questo esempio ottiene l'hub IoT esistente, in base al nome.</span><span class="sxs-lookup"><span data-stu-id="5a6d6-118">This example gets the existing IoT hub, by name.</span></span>
 
 ```javascript
 const subscriptionId = 'your-subscription-id';
@@ -101,9 +101,9 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="19ce0-119">Esempi</span><span class="sxs-lookup"><span data-stu-id="19ce0-119">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="5a6d6-119">Esempi</span><span class="sxs-lookup"><span data-stu-id="5a6d6-119">Samples</span></span>
 
-- [<span data-ttu-id="19ce0-120">Introduzione allo starter kit di Azure IoT per Raspberry Pi</span><span class="sxs-lookup"><span data-stu-id="19ce0-120">Get started with the Raspberry Pi Azure IoT Starter Kit</span></span>](https://azure.microsoft.com/resources/samples/iot-remote-monitoring-node-raspberrypi-getstartedkit/)
-- <span data-ttu-id="19ce0-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/) (Anomalie nella vibrazione dei tweet rilevate dai servizi IoT di Azure nei dati di Intel Edison che esegue Node.js)</span><span class="sxs-lookup"><span data-stu-id="19ce0-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/)</span></span>
+- [<span data-ttu-id="5a6d6-120">Introduzione allo starter kit di Azure IoT per Raspberry Pi</span><span class="sxs-lookup"><span data-stu-id="5a6d6-120">Get started with the Raspberry Pi Azure IoT Starter Kit</span></span>](https://azure.microsoft.com/resources/samples/iot-remote-monitoring-node-raspberrypi-getstartedkit/)
+- <span data-ttu-id="5a6d6-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/) (Anomalie nella vibrazione dei tweet rilevate dai servizi IoT di Azure nei dati di Intel Edison che esegue Node.js)</span><span class="sxs-lookup"><span data-stu-id="5a6d6-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/)</span></span>
 
-<span data-ttu-id="19ce0-122">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="19ce0-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="5a6d6-122">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="5a6d6-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

@@ -11,29 +11,29 @@ ms.service: billing
 ms.product: ''
 ms.technology: ''
 ms.openlocfilehash: 7be64d01c1bf8d247694735b8581f72678f55983
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51172970"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51501975"
 ---
-# <a name="azure-billing-modules-for-nodejs"></a><span data-ttu-id="5f87d-103">Moduli di fatturazione di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="5f87d-103">Azure Billing modules for Node.js</span></span>
+# <a name="azure-billing-modules-for-nodejs"></a><span data-ttu-id="a609b-103">Moduli di fatturazione di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="a609b-103">Azure Billing modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="5f87d-104">Panoramica</span><span class="sxs-lookup"><span data-stu-id="5f87d-104">Overview</span></span>
-<span data-ttu-id="5f87d-105">Le API di fatturazione di Azure forniscono l'accesso alle informazioni di fatturazione e alle fatture di Azure.</span><span class="sxs-lookup"><span data-stu-id="5f87d-105">The Azure Billing APIs provide access to your Azure billing information and invoices.</span></span>
+## <a name="overview"></a><span data-ttu-id="a609b-104">Panoramica</span><span class="sxs-lookup"><span data-stu-id="a609b-104">Overview</span></span>
+<span data-ttu-id="a609b-105">Le API di fatturazione di Azure forniscono l'accesso alle informazioni di fatturazione e alle fatture di Azure.</span><span class="sxs-lookup"><span data-stu-id="a609b-105">The Azure Billing APIs provide access to your Azure billing information and invoices.</span></span>
 
-<span data-ttu-id="5f87d-106">Per usare questa API, l'amministratore account deve acconsentire esplicitamente tramite il portale di Azure.</span><span class="sxs-lookup"><span data-stu-id="5f87d-106">To use this API, the account admin must opt in via the Azure portal.</span></span> <span data-ttu-id="5f87d-107">Vedere [Gestire l'accesso alla fatturazione di Azure tramite i ruoli](https://docs.microsoft.com/azure/billing/billing-manage-access).</span><span class="sxs-lookup"><span data-stu-id="5f87d-107">See [Manage access to Azure billing using roles](https://docs.microsoft.com/azure/billing/billing-manage-access).</span></span>
+<span data-ttu-id="a609b-106">Per usare questa API, l'amministratore account deve acconsentire esplicitamente tramite il portale di Azure.</span><span class="sxs-lookup"><span data-stu-id="a609b-106">To use this API, the account admin must opt in via the Azure portal.</span></span> <span data-ttu-id="a609b-107">Vedere [Gestire l'accesso alla fatturazione di Azure tramite i ruoli](https://docs.microsoft.com/azure/billing/billing-manage-access).</span><span class="sxs-lookup"><span data-stu-id="a609b-107">See [Manage access to Azure billing using roles](https://docs.microsoft.com/azure/billing/billing-manage-access).</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="5f87d-108">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="5f87d-108">Install the npm module</span></span> 
+### <a name="install-the-npm-module"></a><span data-ttu-id="a609b-108">Installare il modulo npm</span><span class="sxs-lookup"><span data-stu-id="a609b-108">Install the npm module</span></span> 
 
-<span data-ttu-id="5f87d-109">Installare il modulo di npm di fatturazione di Azure</span><span class="sxs-lookup"><span data-stu-id="5f87d-109">Install the Azure Billing npm module</span></span> 
+<span data-ttu-id="a609b-109">Installare il modulo di npm di fatturazione di Azure</span><span class="sxs-lookup"><span data-stu-id="a609b-109">Install the Azure Billing npm module</span></span> 
 
 ```bash
 npm install azure-arm-billing
 ```
-### <a name="example"></a><span data-ttu-id="5f87d-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="5f87d-110">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="a609b-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="a609b-110">Example</span></span> 
  
-<span data-ttu-id="5f87d-111">Questo esempio visualizza un elenco di tutte le fatture precedenti.</span><span class="sxs-lookup"><span data-stu-id="5f87d-111">This example prints a list of all of your past invoices.</span></span>
+<span data-ttu-id="a609b-111">Questo esempio visualizza un elenco di tutte le fatture precedenti.</span><span class="sxs-lookup"><span data-stu-id="a609b-111">This example prints a list of all of your past invoices.</span></span>
  
 ```javascript 
 const msRestAzure = require('ms-rest-azure');
@@ -54,6 +54,6 @@ msRestAzure
 ``` 
 
 
-## <a name="samples"></a><span data-ttu-id="5f87d-112">Esempi</span><span class="sxs-lookup"><span data-stu-id="5f87d-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="a609b-112">Esempi</span><span class="sxs-lookup"><span data-stu-id="a609b-112">Samples</span></span>
 
-<span data-ttu-id="5f87d-113">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="5f87d-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="a609b-113">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="a609b-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
