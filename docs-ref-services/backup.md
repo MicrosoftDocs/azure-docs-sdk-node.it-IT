@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Backup
 ms.openlocfilehash: bf3e66ac8341cebd28dee20b6370ed3e5fbfbfa0
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51465767"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52038216"
 ---
-# <a name="azure-backup-modules-for-nodejs"></a><span data-ttu-id="f3e0b-103">Moduli di Backup di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="f3e0b-103">Azure Backup Modules for Node.js</span></span>
+# <a name="azure-backup-modules-for-nodejs"></a><span data-ttu-id="fd89a-103">Moduli di Backup di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="fd89a-103">Azure Backup Modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="f3e0b-104">Panoramica</span><span class="sxs-lookup"><span data-stu-id="f3e0b-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="fd89a-104">Panoramica</span><span class="sxs-lookup"><span data-stu-id="fd89a-104">Overview</span></span>
 
-<span data-ttu-id="f3e0b-105">Backup di Azure è il servizio basato su Azure che consente di eseguire il backup, la protezione e il ripristino dei dati in Microsoft Cloud.</span><span class="sxs-lookup"><span data-stu-id="f3e0b-105">Azure Backup is the Azure-based service you can use to back up (or protect) and restore your data in the Microsoft cloud.</span></span> <span data-ttu-id="f3e0b-106">Backup di Azure sostituisce la soluzione di backup locale o esterna esistente con una soluzione basata sul cloud affidabile, sicura e conveniente.</span><span class="sxs-lookup"><span data-stu-id="f3e0b-106">Azure Backup replaces your existing on-premises or off-site backup solution with a cloud-based solution that is reliable, secure, and cost-competitive.</span></span> <span data-ttu-id="f3e0b-107">Backup di Azure offre più componenti che vengono scaricati e distribuiti nel computer o server appropriato o nel cloud.</span><span class="sxs-lookup"><span data-stu-id="f3e0b-107">Azure Backup offers multiple components that you download and deploy on the appropriate computer, server, or in the cloud.</span></span> <span data-ttu-id="f3e0b-108">Il componente o l'agente distribuito dipende da ciò che si intende proteggere.</span><span class="sxs-lookup"><span data-stu-id="f3e0b-108">The component, or agent, that you deploy depends on what you want to protect.</span></span> <span data-ttu-id="f3e0b-109">Tutti i componenti di Backup di Azure consentono di eseguire il backup dei dati in un insieme di credenziali di Servizi di ripristino, a prescindere che i dati da proteggere si trovino in locale o nel cloud.</span><span class="sxs-lookup"><span data-stu-id="f3e0b-109">All Azure Backup components (no matter whether you're protecting data on-premises or in the cloud) can be used to back up data to a Recovery Services vault in Azure.</span></span> 
+<span data-ttu-id="fd89a-105">Backup di Azure è il servizio basato su Azure che consente di eseguire il backup, la protezione e il ripristino dei dati in Microsoft Cloud.</span><span class="sxs-lookup"><span data-stu-id="fd89a-105">Azure Backup is the Azure-based service you can use to back up (or protect) and restore your data in the Microsoft cloud.</span></span> <span data-ttu-id="fd89a-106">Backup di Azure sostituisce la soluzione di backup locale o esterna esistente con una soluzione basata sul cloud affidabile, sicura e conveniente.</span><span class="sxs-lookup"><span data-stu-id="fd89a-106">Azure Backup replaces your existing on-premises or off-site backup solution with a cloud-based solution that is reliable, secure, and cost-competitive.</span></span> <span data-ttu-id="fd89a-107">Backup di Azure offre più componenti che vengono scaricati e distribuiti nel computer o server appropriato o nel cloud.</span><span class="sxs-lookup"><span data-stu-id="fd89a-107">Azure Backup offers multiple components that you download and deploy on the appropriate computer, server, or in the cloud.</span></span> <span data-ttu-id="fd89a-108">Il componente o l'agente distribuito dipende da ciò che si intende proteggere.</span><span class="sxs-lookup"><span data-stu-id="fd89a-108">The component, or agent, that you deploy depends on what you want to protect.</span></span> <span data-ttu-id="fd89a-109">Tutti i componenti di Backup di Azure consentono di eseguire il backup dei dati in un insieme di credenziali di Servizi di ripristino, a prescindere che i dati da proteggere si trovino in locale o nel cloud.</span><span class="sxs-lookup"><span data-stu-id="fd89a-109">All Azure Backup components (no matter whether you're protecting data on-premises or in the cloud) can be used to back up data to a Recovery Services vault in Azure.</span></span> 
 
-## <a name="management-package"></a><span data-ttu-id="f3e0b-110">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="f3e0b-110">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="fd89a-110">Pacchetto di gestione</span><span class="sxs-lookup"><span data-stu-id="fd89a-110">Management package</span></span>
 
-### <a name="install-the-modules-with-npm"></a><span data-ttu-id="f3e0b-111">Installare i moduli con npm</span><span class="sxs-lookup"><span data-stu-id="f3e0b-111">Install the modules with npm</span></span>
+### <a name="install-the-modules-with-npm"></a><span data-ttu-id="fd89a-111">Installare i moduli con npm</span><span class="sxs-lookup"><span data-stu-id="fd89a-111">Install the modules with npm</span></span>
 
-<span data-ttu-id="f3e0b-112">Usare npm per installare i moduli di Backup di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="f3e0b-112">Use npm to install the Azure Backup modules for Node.js</span></span>
+<span data-ttu-id="fd89a-112">Usare npm per installare i moduli di Backup di Azure per Node.js</span><span class="sxs-lookup"><span data-stu-id="fd89a-112">Use npm to install the Azure Backup modules for Node.js</span></span>
 
 ```bash
 npm install azure-arm-recoveryservicesbackup
 ```
 
-### <a name="example"></a><span data-ttu-id="f3e0b-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="f3e0b-113">Example</span></span>
+### <a name="example"></a><span data-ttu-id="fd89a-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="fd89a-113">Example</span></span>
 
-<span data-ttu-id="f3e0b-114">Questo esempio elenca i processi di ripristino per un determinato insieme di credenziali e gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="f3e0b-114">This example lists the recovery jobs for a given vault and resource group.</span></span>
+<span data-ttu-id="fd89a-114">Questo esempio elenca i processi di ripristino per un determinato insieme di credenziali e gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="fd89a-114">This example lists the recovery jobs for a given vault and resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -58,6 +58,6 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a><span data-ttu-id="f3e0b-115">Esempi</span><span class="sxs-lookup"><span data-stu-id="f3e0b-115">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="fd89a-115">Esempi</span><span class="sxs-lookup"><span data-stu-id="fd89a-115">Samples</span></span>
 
-<span data-ttu-id="f3e0b-116">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="f3e0b-116">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="fd89a-116">Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.</span><span class="sxs-lookup"><span data-stu-id="fd89a-116">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
