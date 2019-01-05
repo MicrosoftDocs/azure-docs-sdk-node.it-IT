@@ -1,0 +1,227 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c5a170bce18d0f22c09bb0d14887d042029a3023
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52089546"
+items:
+- uid: '@azure/cosmos.CosmosClient'
+  name: CosmosClient
+  fullName: CosmosClient
+  children:
+  - '@azure/cosmos.CosmosClient.constructor'
+  - '@azure/cosmos.CosmosClient.database'
+  - '@azure/cosmos.CosmosClient.databases'
+  - '@azure/cosmos.CosmosClient.getDatabaseAccount'
+  - '@azure/cosmos.CosmosClient.getReadEndpoint'
+  - '@azure/cosmos.CosmosClient.getWriteEndpoint'
+  - '@azure/cosmos.CosmosClient.offer'
+  - '@azure/cosmos.CosmosClient.offers'
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    <span data-ttu-id="a8eba-101">Fornisce una rappresentazione logica sul lato client dell'account del database Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="a8eba-101">Provides a client-side logical representation of the Azure Cosmos DB database account.</span></span>
+
+    <span data-ttu-id="a8eba-102">Il client viene usato per configurare ed eseguire le richieste nel servizio di database Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="a8eba-102">This client is used to configure and execute requests in the Azure Cosmos DB database service.</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.constructor'
+  name: CosmosClient(CosmosClientOptions)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new CosmosClient(options: CosmosClientOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.CosmosClientOptions'
+      description: ''
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.database'
+  name: database(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="a8eba-103">Utilizzato per la lettura, aggiornamento, o l'eliminazione di un database esistente per id o l'accesso ai contenitori che appartengono a tale database.</span><span class="sxs-lookup"><span data-stu-id="a8eba-103">Used for reading, updating, or deleting a existing database by id or accessing containers belonging to that database.</span></span>
+
+    <span data-ttu-id="a8eba-104">Questo non viene apportata una rete chiamata.</span><span class="sxs-lookup"><span data-stu-id="a8eba-104">This does not make a network call.</span></span> <span data-ttu-id="a8eba-105">Uso `.read` per ottenere informazioni relative al database dopo aver ottenuto il <xref:Database> oggetto.</span><span class="sxs-lookup"><span data-stu-id="a8eba-105">Use `.read` to get info about the database after getting the <xref:Database> object.</span></span>
+  syntax:
+    content: 'function database(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: <span data-ttu-id="a8eba-106">L'id del database.</span><span class="sxs-lookup"><span data-stu-id="a8eba-106">The id of the database.</span></span>
+    return:
+      type:
+      - '@azure/cosmos.Database'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.databases'
+  name: databases
+  fullName: databases
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="a8eba-107">Utilizzato per la creazione di nuovi database o l'esecuzione di query/lettura di tutti i database.</span><span class="sxs-lookup"><span data-stu-id="a8eba-107">Used for creating new databases, or querying/reading all databases.</span></span>
+
+    <span data-ttu-id="a8eba-108">Usare `.database(id)` per leggere, sostituire o eliminare un database esistente e specifico per id.</span><span class="sxs-lookup"><span data-stu-id="a8eba-108">Use `.database(id)` to read, replace, or delete a specific, existing database by id.</span></span>
+  syntax:
+    content: 'databases: Databases'
+    return:
+      type:
+      - '@azure/cosmos.Databases'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.getDatabaseAccount'
+  name: getDatabaseAccount(RequestOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8eba-109">Ottenere informazioni su corrente <xref:DatabaseAccount> (incluso in quali aree sono supportate e così via).</span><span class="sxs-lookup"><span data-stu-id="a8eba-109">Get information about the current <xref:DatabaseAccount> (including which regions are supported, etc.)</span></span>
+  syntax:
+    content: 'function getDatabaseAccount(options?: RequestOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.CosmosResponse<@azure/cosmos.DatabaseAccount, @azure/cosmos.CosmosClient>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.getReadEndpoint'
+  name: getReadEndpoint()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="a8eba-110">Ottiene l'oggetto attualmente utilizzato endpoint di lettura.</span><span class="sxs-lookup"><span data-stu-id="a8eba-110">Gets the currently used read endpoint.</span></span> <span data-ttu-id="a8eba-111">È utile per la risoluzione dei problemi.</span><span class="sxs-lookup"><span data-stu-id="a8eba-111">Useful for troubleshooting purposes.</span></span>
+
+    <span data-ttu-id="a8eba-112">L'url può contenere un suffisso di area (ad esempio, "-eastus") se utilizzassimo endpoint specifici di percorso.</span><span class="sxs-lookup"><span data-stu-id="a8eba-112">The url may contain a region suffix (e.g. "-eastus") if we're using location specific endpoints.</span></span>
+  syntax:
+    content: function getReadEndpoint()
+    parameters: []
+    return:
+      type:
+      - Promise<string>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.getWriteEndpoint'
+  name: getWriteEndpoint()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="a8eba-113">Ottiene l'url dell'endpoint scrittura attualmente in uso.</span><span class="sxs-lookup"><span data-stu-id="a8eba-113">Gets the currently used write endpoint url.</span></span> <span data-ttu-id="a8eba-114">È utile per la risoluzione dei problemi.</span><span class="sxs-lookup"><span data-stu-id="a8eba-114">Useful for troubleshooting purposes.</span></span>
+
+    <span data-ttu-id="a8eba-115">L'url può contenere un suffisso di area (ad esempio, "-eastus") se utilizzassimo endpoint specifici di percorso.</span><span class="sxs-lookup"><span data-stu-id="a8eba-115">The url may contain a region suffix (e.g. "-eastus") if we're using location specific endpoints.</span></span>
+  syntax:
+    content: function getWriteEndpoint()
+    parameters: []
+    return:
+      type:
+      - Promise<string>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.offer'
+  name: offer(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a8eba-116">Utilizzato per la lettura o l'aggiornamento di un'offerta esistente tramite id.</span><span class="sxs-lookup"><span data-stu-id="a8eba-116">Used for reading, or updating a existing offer by id.</span></span>
+  syntax:
+    content: 'function offer(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a8eba-117">L'id dell'offerta.</span><span class="sxs-lookup"><span data-stu-id="a8eba-117">The id of the offer.</span></span>
+    return:
+      type:
+      - '@azure/cosmos.Offer'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.offers'
+  name: offers
+  fullName: offers
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="a8eba-118">Usato per l'esecuzione di query e la lettura di tutte le offerte.</span><span class="sxs-lookup"><span data-stu-id="a8eba-118">Used for querying & reading all offers.</span></span>
+
+    <span data-ttu-id="a8eba-119">Usare `.offer(id)` per leggere o sostituire offerte esistenti.</span><span class="sxs-lookup"><span data-stu-id="a8eba-119">Use `.offer(id)` to read, or replace existing offers.</span></span>
+  syntax:
+    content: 'offers: Offers'
+    return:
+      type:
+      - '@azure/cosmos.Offers'
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.CosmosClientOptions'
+  name: CosmosClientOptions
+  spec.typeScript:
+  - name: CosmosClientOptions
+    fullName: CosmosClientOptions
+    uid: '@azure/cosmos.CosmosClientOptions'
+- uid: '@azure/cosmos.Databases'
+  name: Databases
+  spec.typeScript:
+  - name: Databases
+    fullName: Databases
+    uid: '@azure/cosmos.Databases'
+- uid: '@azure/cosmos.Offers'
+  name: Offers
+  spec.typeScript:
+  - name: Offers
+    fullName: Offers
+    uid: '@azure/cosmos.Offers'
+- uid: '@azure/cosmos.Database'
+  name: Database
+  spec.typeScript:
+  - name: Database
+    fullName: Database
+    uid: '@azure/cosmos.Database'
+- uid: '@azure/cosmos.RequestOptions'
+  name: RequestOptions
+  spec.typeScript:
+  - name: RequestOptions
+    fullName: RequestOptions
+    uid: '@azure/cosmos.RequestOptions'
+- uid: Promise<@azure/cosmos.CosmosResponse<@azure/cosmos.DatabaseAccount, @azure/cosmos.CosmosClient>>
+  name: CosmosClient>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CosmosResponse
+    fullName: CosmosResponse
+    uid: '@azure/cosmos.CosmosResponse'
+  - name: <
+    fullName: <
+  - name: DatabaseAccount
+    fullName: DatabaseAccount
+    uid: '@azure/cosmos.DatabaseAccount'
+  - name: ', '
+    fullName: ', '
+  - name: CosmosClient
+    fullName: CosmosClient
+    uid: '@azure/cosmos.CosmosClient'
+  - name: '>>'
+    fullName: '>>'
+- uid: '@azure/cosmos.Offer'
+  name: Offer
+  spec.typeScript:
+  - name: Offer
+    fullName: Offer
+    uid: '@azure/cosmos.Offer'
