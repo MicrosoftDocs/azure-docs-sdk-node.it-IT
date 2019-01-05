@@ -1,25 +1,32 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 70f7fdced044f28d0c42ea199dc464034747e39c
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: c2b93dacc7cedb9cb424f2fd53eb419a9b4b1a63
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41476672"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53710506"
 items:
 - uid: azure-iot-device.ModuleClient
   name: ModuleClient
   fullName: ModuleClient
   children:
+  - azure-iot-device.ModuleClient.close_1
   - azure-iot-device.ModuleClient.close
   - azure-iot-device.ModuleClient.fromAuthenticationProvider
   - azure-iot-device.ModuleClient.fromConnectionString
+  - azure-iot-device.ModuleClient.fromEnvironment_1
   - azure-iot-device.ModuleClient.fromEnvironment
   - azure-iot-device.ModuleClient.fromSharedAccessSignature
+  - azure-iot-device.ModuleClient.invokeMethod_2
   - azure-iot-device.ModuleClient.invokeMethod
+  - azure-iot-device.ModuleClient.invokeMethod_3
   - azure-iot-device.ModuleClient.invokeMethod_1
   - azure-iot-device.ModuleClient.onMethod
+  - azure-iot-device.ModuleClient.sendOutputEvent_1
   - azure-iot-device.ModuleClient.sendOutputEvent
+  - azure-iot-device.ModuleClient.sendOutputEventBatch_1
   - azure-iot-device.ModuleClient.sendOutputEventBatch
+  - azure-iot-device.ModuleClient.setOptions_1
   - azure-iot-device.ModuleClient.setOptions
   langs:
   - typeScript
@@ -31,8 +38,8 @@ items:
   extends:
     name: InternalClient
   package: azure-iot-device
-- uid: azure-iot-device.ModuleClient.close
-  name: close
+- uid: azure-iot-device.ModuleClient.close_1
+  name: close()
   children: []
   type: method
   langs:
@@ -42,17 +49,32 @@ items:
 
     *Nota: Dopo aver chiamato questo metodo il ModuleClient oggetto non può essere riutilizzato.*
   syntax:
-    content: 'function close(closeCallback?: (err?: Error, result?: Disconnected) => void)'
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<Disconnected>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.close
+  name: close(Callback<Disconnected>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Chiude la connessione di trasporto ed Elimina le risorse del cliente.
+
+    *Nota: Dopo aver chiamato questo metodo il ModuleClient oggetto non può essere riutilizzato.*
+  syntax:
+    content: 'function close(closeCallback: Callback<Disconnected>)'
     parameters:
     - id: closeCallback
       type:
-      - '(err?: Error, result?: Disconnected) => void'
-      description: >
-        Funzione da chiamare dopo il trasporto è disconnesso e il client è chiuso.
-      optional: true
+      - Callback<Disconnected>
+      description: ''
   package: azure-iot-device
 - uid: azure-iot-device.ModuleClient.fromAuthenticationProvider
-  name: fromAuthenticationProvider
+  name: fromAuthenticationProvider(AuthenticationProvider, any)
   children: []
   type: method
   langs:
@@ -72,10 +94,10 @@ items:
         Trasporto di protocollo utilizzato per connettersi all'hub IoT.
     return:
       type:
-      - any
+      - azure-iot-device.ModuleClient
   package: azure-iot-device
 - uid: azure-iot-device.ModuleClient.fromConnectionString
-  name: fromConnectionString
+  name: fromConnectionString(string, any)
   children: []
   type: method
   langs:
@@ -97,8 +119,8 @@ items:
       type:
       - azure-iot-device.ModuleClient
   package: azure-iot-device
-- uid: azure-iot-device.ModuleClient.fromEnvironment
-  name: fromEnvironment
+- uid: azure-iot-device.ModuleClient.fromEnvironment_1
+  name: fromEnvironment(any)
   children: []
   type: method
   langs:
@@ -115,7 +137,35 @@ items:
         - Nome host dell'IoT Hub IOTEDGE_IOTHUBHOSTNAME
         - Schema di autenticazione IOTEDGE_AUTHSCHEME usare; deve essere "sasToken"
   syntax:
-    content: 'static function fromEnvironment(transportCtor: any, callback: (err?: Error, client?: ModuleClient) => void)'
+    content: 'static function fromEnvironment(transportCtor: any)'
+    parameters:
+    - id: transportCtor
+      type:
+      - any
+      description: ''
+    return:
+      type:
+      - Promise<azure-iot-device.ModuleClient>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.fromEnvironment
+  name: fromEnvironment(any, Callback<ModuleClient>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Crea un client modulo dell'IoT Hub usando le informazioni di configurazione dall'ambiente.
+
+    Se una variabile di ambiente denominata `EdgeHubConnectionString` oppure `IotHubConnectionString` esiste, tale valore viene utilizzato e il comportamento è identico alla chiamata al metodo `fromConnectionString` passando che in. Se tali variabili di ambiente non sono disponibili le variabili seguenti devono essere definite:
+
+        - URI IOTEDGE_WORKLOADURI per carico di lavoro dell'iotedged API
+        - Identificatore dispositivo IOTEDGE_DEVICEID
+        - Identificatore del modulo IOTEDGE_MODULEID
+        - Identificatore del modulo di IOTEDGE_MODULEGENERATIONID generazione
+        - Nome host dell'IoT Hub IOTEDGE_IOTHUBHOSTNAME
+        - Schema di autenticazione IOTEDGE_AUTHSCHEME usare; deve essere "sasToken"
+  syntax:
+    content: 'static function fromEnvironment(transportCtor: any, callback: Callback<ModuleClient>)'
     parameters:
     - id: transportCtor
       type:
@@ -123,12 +173,11 @@ items:
       description: Trasporto di protocollo utilizzato per connettersi all'hub IoT.
     - id: callback
       type:
-      - '(err?: Error, client?: ModuleClient) => void'
-      description: >
-        Callback da richiamare quando il ModuleClient è stata constructured o se si verifica un errore durante la creazione del client.
+      - Callback<azure-iot-device.ModuleClient>
+      description: ''
   package: azure-iot-device
 - uid: azure-iot-device.ModuleClient.fromSharedAccessSignature
-  name: fromSharedAccessSignature
+  name: fromSharedAccessSignature(string, any)
   children: []
   type: method
   langs:
@@ -147,17 +196,39 @@ items:
       description: ''
     return:
       type:
-      - any
+      - azure-iot-device.ModuleClient
   package: azure-iot-device
-- uid: azure-iot-device.ModuleClient.invokeMethod
-  name: invokeMethod
+- uid: azure-iot-device.ModuleClient.invokeMethod_2
+  name: invokeMethod(string, MethodParams)
   children: []
   type: method
   langs:
   - typeScript
   summary: Richiama un metodo in un dispositivo downstream o un altro modulo sullo stesso dispositivo Edge. Si noti che questa funzionalità funziona solo quando il modulo è in esecuzione come parte di un dispositivo perimetrale.
   syntax:
-    content: 'function invokeMethod(deviceId: string, methodParams: MethodParams, callback: MethodCallback)'
+    content: 'function invokeMethod(deviceId: string, methodParams: MethodParams)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iot-device.MethodParams
+      description: ''
+    return:
+      type:
+      - Promise<azure-iot-device.MethodResult>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.invokeMethod
+  name: invokeMethod(string, MethodParams, Callback<MethodResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Richiama un metodo in un dispositivo downstream o un altro modulo sullo stesso dispositivo Edge. Si noti che questa funzionalità funziona solo quando il modulo è in esecuzione come parte di un dispositivo perimetrale.
+  syntax:
+    content: 'function invokeMethod(deviceId: string, methodParams: MethodParams, callback: Callback<MethodResult>)'
     parameters:
     - id: deviceId
       type:
@@ -169,19 +240,44 @@ items:
       description: parametri della chiamata al metodo diretto
     - id: callback
       type:
-      - azure-iot-device.MethodCallback
-      description: >
-        callback che verrà richiamato con un oggetto di errore o il risultato della chiamata al metodo.
+      - Callback<azure-iot-device.MethodResult>
+      description: ''
   package: azure-iot-device
-- uid: azure-iot-device.ModuleClient.invokeMethod_1
-  name: invokeMethod
+- uid: azure-iot-device.ModuleClient.invokeMethod_3
+  name: invokeMethod(string, string, MethodParams)
   children: []
   type: method
   langs:
   - typeScript
   summary: Richiama un metodo in un dispositivo downstream o un altro modulo sullo stesso dispositivo Edge. Si noti che questa funzionalità funziona solo quando il modulo è in esecuzione come parte di un dispositivo perimetrale.
   syntax:
-    content: 'function invokeMethod(deviceId: string, moduleId: string, methodParams: MethodParams, callback: MethodCallback)'
+    content: 'function invokeMethod(deviceId: string, moduleId: string, methodParams: MethodParams)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: ''
+    - id: moduleId
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iot-device.MethodParams
+      description: ''
+    return:
+      type:
+      - Promise<azure-iot-device.MethodResult>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.invokeMethod_1
+  name: invokeMethod(string, string, MethodParams, Callback<MethodResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Richiama un metodo in un dispositivo downstream o un altro modulo sullo stesso dispositivo Edge. Si noti che questa funzionalità funziona solo quando il modulo è in esecuzione come parte di un dispositivo perimetrale.
+  syntax:
+    content: 'function invokeMethod(deviceId: string, moduleId: string, methodParams: MethodParams, callback: Callback<MethodResult>)'
     parameters:
     - id: deviceId
       type:
@@ -197,18 +293,18 @@ items:
       description: ''
     - id: callback
       type:
-      - azure-iot-device.MethodCallback
+      - Callback<azure-iot-device.MethodResult>
       description: ''
   package: azure-iot-device
 - uid: azure-iot-device.ModuleClient.onMethod
-  name: onMethod
+  name: onMethod(string, DoubleValueCallback<DeviceMethodRequest, DeviceMethodResponse>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Registra un callback per un metodo denominato `methodName`.
   syntax:
-    content: 'function onMethod(methodName: string, callback: (request: DeviceMethodRequest, response: DeviceMethodResponse) => void)'
+    content: 'function onMethod(methodName: string, callback: DoubleValueCallback<DeviceMethodRequest, DeviceMethodResponse>)'
     parameters:
     - id: methodName
       type:
@@ -216,19 +312,41 @@ items:
       description: Nome del metodo che verrà gestito dal callback
     - id: callback
       type:
-      - '(request: DeviceMethodRequest, response: DeviceMethodResponse) => void'
+      - DoubleValueCallback<azure-iot-device.DeviceMethodRequest, azure-iot-device.DeviceMethodResponse>
       description: >
         Funzione che deve essere chiamato ogni volta che una richiesta del metodo per il metodo chiamato `methodName` viene ricevuto.
   package: azure-iot-device
-- uid: azure-iot-device.ModuleClient.sendOutputEvent
-  name: sendOutputEvent
+- uid: azure-iot-device.ModuleClient.sendOutputEvent_1
+  name: sendOutputEvent(string, Message)
   children: []
   type: method
   langs:
   - typeScript
   summary: Invia un evento all'output del modulo specificato
   syntax:
-    content: 'function sendOutputEvent(outputName: string, message: Message, callback: (err?: Error, result?: MessageEnqueued) => void)'
+    content: 'function sendOutputEvent(outputName: string, message: Message)'
+    parameters:
+    - id: outputName
+      type:
+      - string
+      description: ''
+    - id: message
+      type:
+      - Message
+      description: ''
+    return:
+      type:
+      - Promise<MessageEnqueued>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.sendOutputEvent
+  name: sendOutputEvent(string, Message, Callback<MessageEnqueued>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Invia un evento all'output del modulo specificato
+  syntax:
+    content: 'function sendOutputEvent(outputName: string, message: Message, callback: Callback<MessageEnqueued>)'
     parameters:
     - id: outputName
       type:
@@ -240,19 +358,40 @@ items:
       description: Messaggio da inviare all'output specificato
     - id: callback
       type:
-      - '(err?: Error, result?: MessageEnqueued) => void'
-      description: >
-        Funzione da chiamare quando l'operazione è stata accodata.
+      - Callback<MessageEnqueued>
+      description: ''
   package: azure-iot-device
-- uid: azure-iot-device.ModuleClient.sendOutputEventBatch
-  name: sendOutputEventBatch
+- uid: azure-iot-device.ModuleClient.sendOutputEventBatch_1
+  name: sendOutputEventBatch(string, Message[])
   children: []
   type: method
   langs:
   - typeScript
   summary: Invia una serie di eventi all'output del modulo specificato
   syntax:
-    content: 'function sendOutputEventBatch(outputName: string, messages: Message[], callback: (err?: Error, result?: MessageEnqueued) => void)'
+    content: 'function sendOutputEventBatch(outputName: string, messages: Message[])'
+    parameters:
+    - id: outputName
+      type:
+      - string
+      description: ''
+    - id: messages
+      type:
+      - Message[]
+      description: ''
+    return:
+      type:
+      - Promise<MessageEnqueued>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.sendOutputEventBatch
+  name: sendOutputEventBatch(string, Message[], Callback<MessageEnqueued>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Invia una serie di eventi all'output del modulo specificato
+  syntax:
+    content: 'function sendOutputEventBatch(outputName: string, messages: Message[], callback: Callback<MessageEnqueued>)'
     parameters:
     - id: outputName
       type:
@@ -264,49 +403,117 @@ items:
       description: ''
     - id: callback
       type:
-      - '(err?: Error, result?: MessageEnqueued) => void'
-      description: >
-        Funzione da chiamare quando le operazioni sono state accodate.
+      - Callback<MessageEnqueued>
+      description: ''
   package: azure-iot-device
-- uid: azure-iot-device.ModuleClient.setOptions
-  name: setOptions
+- uid: azure-iot-device.ModuleClient.setOptions_1
+  name: setOptions(DeviceClientOptions)
   children: []
   type: method
   langs:
   - typeScript
   summary: Passa le opzioni per il `ModuleClient` oggetto che può essere usato per configurare il trasporto.
   syntax:
-    content: 'function setOptions(options: DeviceClientOptions, done?: (err?: Error, result?: TransportConfigured) => void)'
+    content: 'function setOptions(options: DeviceClientOptions)'
     parameters:
     - id: options
       type:
       - azure-iot-device.DeviceClientOptions
-      description: Oggetto <xref:DeviceClientOptions> oggetto.
+      description: ''
+    return:
+      type:
+      - Promise<TransportConfigured>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.setOptions
+  name: setOptions(DeviceClientOptions, Callback<TransportConfigured>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Passa le opzioni per il `ModuleClient` oggetto che può essere usato per configurare il trasporto.
+  syntax:
+    content: 'function setOptions(options: DeviceClientOptions, done: Callback<TransportConfigured>)'
+    parameters:
+    - id: options
+      type:
+      - azure-iot-device.DeviceClientOptions
+      description: Oggetto <xref:DeviceClientOptions>.
     - id: done
       type:
-      - '(err?: Error, result?: TransportConfigured) => void'
-      description: >
-        Callback da chiamare dopo che sono state impostate le opzioni.
-      optional: true
+      - Callback<TransportConfigured>
+      description: ''
   package: azure-iot-device
 references:
 - uid: azure-iot-device.MethodParams
+  name: MethodParams
   spec.typeScript:
   - name: MethodParams
     fullName: MethodParams
     uid: azure-iot-device.MethodParams
-- uid: azure-iot-device.MethodCallback
+- uid: Callback<azure-iot-device.MethodResult>
+  name: MethodResult>
   spec.typeScript:
-  - name: MethodCallback
-    fullName: MethodCallback
-    uid: azure-iot-device.MethodCallback
+  - name: Callback<
+    fullName: Callback<
+  - name: MethodResult
+    fullName: MethodResult
+    uid: azure-iot-device.MethodResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<azure-iot-device.MethodResult>
+  name: MethodResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: MethodResult
+    fullName: MethodResult
+    uid: azure-iot-device.MethodResult
+  - name: '>'
+    fullName: '>'
+- uid: DoubleValueCallback<azure-iot-device.DeviceMethodRequest, azure-iot-device.DeviceMethodResponse>
+  name: DeviceMethodResponse>
+  spec.typeScript:
+  - name: DoubleValueCallback<
+    fullName: DoubleValueCallback<
+  - name: DeviceMethodRequest
+    fullName: DeviceMethodRequest
+    uid: azure-iot-device.DeviceMethodRequest
+  - name: ', '
+    fullName: ', '
+  - name: DeviceMethodResponse
+    fullName: DeviceMethodResponse
+    uid: azure-iot-device.DeviceMethodResponse
+  - name: '>'
+    fullName: '>'
 - uid: azure-iot-device.DeviceClientOptions
+  name: DeviceClientOptions
   spec.typeScript:
   - name: DeviceClientOptions
     fullName: DeviceClientOptions
     uid: azure-iot-device.DeviceClientOptions
 - uid: azure-iot-device.ModuleClient
+  name: ModuleClient
   spec.typeScript:
   - name: ModuleClient
     fullName: ModuleClient
     uid: azure-iot-device.ModuleClient
+- uid: Callback<azure-iot-device.ModuleClient>
+  name: ModuleClient>
+  spec.typeScript:
+  - name: Callback<
+    fullName: Callback<
+  - name: ModuleClient
+    fullName: ModuleClient
+    uid: azure-iot-device.ModuleClient
+  - name: '>'
+    fullName: '>'
+- uid: Promise<azure-iot-device.ModuleClient>
+  name: ModuleClient>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ModuleClient
+    fullName: ModuleClient
+    uid: azure-iot-device.ModuleClient
+  - name: '>'
+    fullName: '>'

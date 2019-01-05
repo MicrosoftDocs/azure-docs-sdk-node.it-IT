@@ -1,0 +1,206 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 03fb8e5e95ef0b56ef5b2c6b220ba08a0489136a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53669415"
+items:
+- uid: azure-batch.JobPreparationTaskExecutionInformation
+  name: JobPreparationTaskExecutionInformation
+  fullName: JobPreparationTaskExecutionInformation
+  children:
+  - azure-batch.JobPreparationTaskExecutionInformation.containerInfo
+  - azure-batch.JobPreparationTaskExecutionInformation.endTime
+  - azure-batch.JobPreparationTaskExecutionInformation.exitCode
+  - azure-batch.JobPreparationTaskExecutionInformation.failureInfo
+  - azure-batch.JobPreparationTaskExecutionInformation.lastRetryTime
+  - azure-batch.JobPreparationTaskExecutionInformation.result
+  - azure-batch.JobPreparationTaskExecutionInformation.retryCount
+  - azure-batch.JobPreparationTaskExecutionInformation.startTime
+  - azure-batch.JobPreparationTaskExecutionInformation.state
+  - azure-batch.JobPreparationTaskExecutionInformation.taskRootDirectory
+  - azure-batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.containerInfo
+  name: containerInfo
+  fullName: containerInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Questa proprietà è impostata solo se l'attività viene eseguita in un contesto del contenitore.
+  optional: true
+  syntax:
+    content: 'containerInfo?: TaskContainerExecutionInformation'
+    return:
+      type:
+      - azure-batch.TaskContainerExecutionInformation
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.endTime
+  name: endTime
+  fullName: endTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Questa proprietà è impostata solo se l'attività è stato completato.
+  optional: true
+  syntax:
+    content: 'endTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.exitCode
+  name: exitCode
+  fullName: exitCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Questo parametro viene restituito solo se l'attività è in stato completato. Il codice di uscita per un processo riflette la convenzione specifica implementata dallo sviluppatore dell'applicazione per tale processo. Se si usa il valore di codice di uscita per prendere decisioni nel codice, assicurarsi di conoscere la convenzione di codice di uscita usata dal processo di applicazione. Si noti che il codice di uscita può inoltre essere generato dal sistema operativo di nodo di calcolo, ad esempio quando un processo viene forzatamente terminato.
+  optional: true
+  syntax:
+    content: 'exitCode?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.failureInfo
+  name: failureInfo
+  fullName: failureInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Questa proprietà viene impostata solo se l'attività è in stato completato e si è verificato un errore.
+  optional: true
+  syntax:
+    content: 'failureInfo?: TaskFailureInformation'
+    return:
+      type:
+      - azure-batch.TaskFailureInformation
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.lastRetryTime
+  name: lastRetryTime
+  fullName: lastRetryTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Questa proprietà è impostata solo se l'attività è stata ritentata (vale a dire retryCount è diverso da zero).
+
+    Se presente, questo viene in genere lo stesso come startTime, ma potrebbe essere diverso se l'attività è stato riavviato per motivi diversi da tentativi; ad esempio, se il nodo di calcolo è stato riavviato durante un tentativo, quindi ora di inizio viene aggiornato ma non la lastRetryTime.
+  optional: true
+  syntax:
+    content: 'lastRetryTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.result
+  name: result
+  fullName: result
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Se il valore è \"non riuscito\", quindi i dettagli dell'errore sono reperibile nella proprietà failureInfo. I valori possibili sono: 'success', 'errore'"
+  optional: true
+  syntax:
+    content: 'result?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.retryCount
+  name: retryCount
+  fullName: retryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Errori delle attività dell'applicazione (codice di uscita diverso da zero) vengono ripetuti, gli errori (l'attività non è stato possibile eseguire) di pre-elaborazione e gli errori di caricamento file non vengono ripetuti. Il servizio Batch ritenterà l'attività fino al limite specificato tramite i vincoli.
+  syntax:
+    content: 'retryCount: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.startTime
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se l'attività è stata riavviata o ritentata, la data e l'ora indicate saranno quelle di inizio dell'ultima esecuzione dell'attività.
+  syntax:
+    content: 'startTime: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "I valori possibili sono: 'in esecuzione', 'completed'"
+  syntax:
+    content: 'state: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.taskRootDirectory
+  name: taskRootDirectory
+  fullName: taskRootDirectory
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'taskRootDirectory?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl
+  name: taskRootDirectoryUrl
+  fullName: taskRootDirectoryUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'taskRootDirectoryUrl?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.TaskContainerExecutionInformation
+  name: TaskContainerExecutionInformation
+  spec.typeScript:
+  - name: TaskContainerExecutionInformation
+    fullName: TaskContainerExecutionInformation
+    uid: azure-batch.TaskContainerExecutionInformation
+- uid: azure-batch.TaskFailureInformation
+  name: TaskFailureInformation
+  spec.typeScript:
+  - name: TaskFailureInformation
+    fullName: TaskFailureInformation
+    uid: azure-batch.TaskFailureInformation
