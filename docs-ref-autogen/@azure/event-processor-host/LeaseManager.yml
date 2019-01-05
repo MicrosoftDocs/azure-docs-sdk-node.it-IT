@@ -1,0 +1,288 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ed7f92526f273477e153fad3fe0ab03db0704f34
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52104226"
+items:
+- uid: '@azure/event-processor-host.LeaseManager'
+  name: LeaseManager
+  fullName: LeaseManager
+  children:
+  - '@azure/event-processor-host.LeaseManager.acquireLease'
+  - '@azure/event-processor-host.LeaseManager.createAllLeasesIfNotExists'
+  - '@azure/event-processor-host.LeaseManager.createLeaseStoreIfNotExists'
+  - '@azure/event-processor-host.LeaseManager.deleteLease'
+  - '@azure/event-processor-host.LeaseManager.deleteLeaseStore'
+  - '@azure/event-processor-host.LeaseManager.getAllLeases'
+  - '@azure/event-processor-host.LeaseManager.getLease'
+  - '@azure/event-processor-host.LeaseManager.leaseDuration'
+  - '@azure/event-processor-host.LeaseManager.leaseRenewInterval'
+  - '@azure/event-processor-host.LeaseManager.leaseStoreExists'
+  - '@azure/event-processor-host.LeaseManager.releaseLease'
+  - '@azure/event-processor-host.LeaseManager.renewLease'
+  - '@azure/event-processor-host.LeaseManager.updateLease'
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.acquireLease'
+  name: acquireLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Acquisire il lease per la partizione desiderata per questa EventProcessorHost.
+
+    Si noti che è consentito di acquisire un lease già appartenente a un altro host.
+
+    Acquisizione del lease è come le partizioni vengono ridistribuite quando vengono avviati altri host.
+
+
+    Implementazione dell'archiviazione di Azure esistente possono essere soggetti concorrenze tra due istanze dell'host si prova ad acquisire o rubare il lease nello stesso momento. Per evitare situazioni in cui due istanze dell'host sia ritiene che possiedono il lease, acquisizione può avere esito negativo senza errori restituendo false e deve eseguire in modo che quando vi è alcun dubbio: il peggiore che possono verificarsi che alcuna istanza host non proprietario del lease per un breve periodo di tempo. Ciò è qualitativo diverso, ad esempio, nell'archivio sottostante, generare un'eccezione di accesso, ovvero un errore.
+  syntax:
+    content: 'function acquireLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: Informazioni per la partizione desiderata ottenuta in precedenza da assegnare in lease `getLease()`.
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.createAllLeasesIfNotExists'
+  name: createAllLeasesIfNotExists(string[])
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Creare l'archivio le info di lease per partizione specificata, se non esiste. Non eseguire alcuna operazione se esiste già nell'archivio.
+  syntax:
+    content: 'function createAllLeasesIfNotExists(partitionIds: string[])'
+    parameters:
+    - id: partitionIds
+      type:
+      - string[]
+      description: ID delle partizioni da creare informazioni di lease per
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.createLeaseStoreIfNotExists'
+  name: createLeaseStoreIfNotExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Creare l'archivio di lease se non esiste. Non eseguire alcuna operazione se esiste.
+  syntax:
+    content: function createLeaseStoreIfNotExists()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.deleteLease'
+  name: deleteLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Elimina le info di lease per partizione specificata dall'archivio. Se è presente alcun lease archiviato per la partizione specifica, che viene considerata come completata.
+  syntax:
+    content: 'function deleteLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: Informazioni per la partizione desiderata ottenuta in precedenza da assegnare in lease `getLease()`.
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.deleteLeaseStore'
+  name: deleteLeaseStore()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Eliminare l'archivio di lease.
+  syntax:
+    content: function deleteLeaseStore()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.getAllLeases'
+  name: getAllLeases()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Restituisce BaseLease leggero per tutti i lease, che include il nome del proprietario host e se lease è scaduto. Un'implementazione è gratuita restituire CompleteLease o la propria classe derivata da CompleteLease, ma è importante che getAllLeases eseguito più velocemente possibile. Se è più veloce per ottenere solo le informazioni necessarie per un BaseLease, è fortemente consigliabile farlo.
+  syntax:
+    content: function getAllLeases()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/event-processor-host.BaseLease[]>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.getLease'
+  name: getLease(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ottiene le informazioni di lease per la partizione specificata. Può restituire `undefined` se nessun lease è stato creato nell'archivio per la partizione specificata.
+  syntax:
+    content: 'function getLease(partitionId: string)'
+    parameters:
+    - id: partitionId
+      type:
+      - string
+      description: Id di partizione per ottenere il lease.
+    return:
+      type:
+      - Promise<@azure/event-processor-host.CompleteLease | undefined>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseDuration'
+  name: leaseDuration
+  fullName: leaseDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number} leaseDuration durata del lease **in pochi secondi** prima della scadenza, a meno che rinnovato.'
+  syntax:
+    content: 'leaseDuration: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseRenewInterval'
+  name: leaseRenewInterval
+  fullName: leaseRenewInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {number} leaseRenewInterval l'intervallo di sospensione **in pochi secondi** tra le analisi.
+
+
+    Consente a un'implementazione di manager di lease specificare a PartitionManager frequenza dovrebbe analizzare i lease e rinnovarli. Per ridistribuire i lease in modo tempestivo dopo che un host non è più operativo, è consigliabile un intervallo relativamente breve, ad esempio dieci secondi. Ovviamente è necessario renderla meno della metà della lunghezza del lease, per impedire la scadenza accidentale.
+  syntax:
+    content: 'leaseRenewInterval: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseStoreExists'
+  name: leaseStoreExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Esiste nell'archivio di lease?
+  syntax:
+    content: function leaseStoreExists()
+    parameters: []
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.releaseLease'
+  name: releaseLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Tralasciare un lease utilizzato attualmente da questo host.
+
+    Se il lease è stato rubato o se scaduto, rilascio non è necessario e avrà esito negativo se si tenta.
+  syntax:
+    content: 'function releaseLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: Informazioni per la partizione desiderata ottenuta in precedenza da assegnare in lease `getLease()`.
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.renewLease'
+  name: renewLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Rinnovare un lease utilizzato attualmente da questo host.
+
+    Se il lease è stato usato da un'altra istanza dell'host (rubata o dopo la scadenza) o rilasciato in modo esplicito, renewLease deve restituire false. Con l'implementazione basata su archiviazione di Azure, è possibile rinnovare un lease scaduto che non è stato eseguito da un altro host, pertanto è possibile consentire che l'implementazione oppure No, a seconda del valore è comodo. Se non esiste, renewLease deve restituire false.
+  syntax:
+    content: 'function renewLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: lease da rinnovare.
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.updateLease'
+  name: updateLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Aggiornare l'archivio con le informazioni contenute nel lease specificato.
+
+    È necessario contenere attualmente un lease per aggiornarla. Se il lease è stato rubato o scaduti o il rilascio, non può essere aggiornata. Le implementazioni di manager di lease devono rinnovare il lease prima di eseguire l'aggiornamento per evitare la scadenza del lease durante il processo.
+  syntax:
+    content: 'function updateLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: Nuove informazioni di lease da archiviare.
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+- uid: Promise<@azure/event-processor-host.BaseLease[]>
+  name: BaseLease[]>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: BaseLease
+    fullName: BaseLease
+    uid: '@azure/event-processor-host.BaseLease'
+  - name: '[]>'
+    fullName: '[]>'
+- uid: Promise<@azure/event-processor-host.CompleteLease | undefined>
+  name: CompleteLease | undefined>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+  - name: " | undefined>"
+    fullName: " | undefined>"

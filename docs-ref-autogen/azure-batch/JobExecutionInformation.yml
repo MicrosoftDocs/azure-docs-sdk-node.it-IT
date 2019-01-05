@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6bbb9505d435a21dcf41dc096a35474a7dcf52e5
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53660471"
+items:
+- uid: azure-batch.JobExecutionInformation
+  name: JobExecutionInformation
+  fullName: JobExecutionInformation
+  children:
+  - azure-batch.JobExecutionInformation.endTime
+  - azure-batch.JobExecutionInformation.poolId
+  - azure-batch.JobExecutionInformation.schedulingError
+  - azure-batch.JobExecutionInformation.startTime
+  - azure-batch.JobExecutionInformation.terminateReason
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobExecutionInformation.endTime
+  name: endTime
+  fullName: endTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Questa proprietà è impostata solo se il processo è in stato completato.
+  optional: true
+  syntax:
+    content: 'endTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobExecutionInformation.poolId
+  name: poolId
+  fullName: poolId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Questo elemento contiene il pool effettivo in cui il processo è assegnato. Quando si ottengono i dettagli del processo dal servizio, contengono anche un elemento poolInfo, che contiene i dati di configurazione del pool quando il processo è stato aggiunto o aggiornato. Tale elemento poolInfo può contenere anche un elemento poolId. In caso affermativo, i due ID sono uguali. Se non è presente, significa che è stato eseguito il processo in un pool automatico e questa proprietà contiene l'ID del pool automatico.
+  optional: true
+  syntax:
+    content: 'poolId?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobExecutionInformation.schedulingError
+  name: schedulingError
+  fullName: schedulingError
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Questa proprietà non è impostata se si è verificato alcun errore di avvio del processo.
+  optional: true
+  syntax:
+    content: 'schedulingError?: JobSchedulingError'
+    return:
+      type:
+      - azure-batch.JobSchedulingError
+  package: azure-batch
+- uid: azure-batch.JobExecutionInformation.startTime
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Questo è il tempo in cui è stato creato il processo.
+  syntax:
+    content: 'startTime: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobExecutionInformation.terminateReason
+  name: terminateReason
+  fullName: terminateReason
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Questa proprietà è impostata solo se il processo è in stato completato. Se il servizio Batch termina il processo, imposta il motivo, come indicato di seguito: JMComplete - completamento dell'attività di gestore di processi e killJobOnCompletion è stata impostata su true. MaxWallClockTimeExpiry - il processo ha raggiunto il vincolo maxWallClockTime. TerminateJobSchedule - è stato eseguito il processo come parte di una pianificazione e la pianificazione è terminata. AllTasksComplete - attributo onAllTasksComplete del processo è impostato su terminatejob e tutte le attività nel processo sono state completate. Operazionenon riuscita - attributo onTaskFailure del processo è impostata su performExitOptionsJobAction e un'attività del processo non riuscito con una condizione di uscita specificato un jobAction di terminatejob. Qualsiasi altra stringa è un motivo definito dall'utente specificato in una chiamata all'operazione 'Terminare un processo'."
+  optional: true
+  syntax:
+    content: 'terminateReason?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.JobSchedulingError
+  name: JobSchedulingError
+  spec.typeScript:
+  - name: JobSchedulingError
+    fullName: JobSchedulingError
+    uid: azure-batch.JobSchedulingError
