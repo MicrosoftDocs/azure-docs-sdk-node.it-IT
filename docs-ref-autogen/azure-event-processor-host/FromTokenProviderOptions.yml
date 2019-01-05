@@ -1,0 +1,183 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f2330e2bd1258fd6eefab59a5b4f46810c64b5a1
+ms.sourcegitcommit: 094b6aa16c2ee9aa1418d36ce033f1d99151d913
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45961084"
+items:
+- uid: azure-event-processor-host.FromTokenProviderOptions
+  name: FromTokenProviderOptions
+  fullName: FromTokenProviderOptions
+  children:
+  - azure-event-processor-host.FromTokenProviderOptions.consumerGroup
+  - azure-event-processor-host.FromTokenProviderOptions.fastScanInterval
+  - azure-event-processor-host.FromTokenProviderOptions.initialOffset
+  - azure-event-processor-host.FromTokenProviderOptions.leaseDuration
+  - azure-event-processor-host.FromTokenProviderOptions.leaseRenewInterval
+  - azure-event-processor-host.FromTokenProviderOptions.onEphError
+  - azure-event-processor-host.FromTokenProviderOptions.slowScanInterval
+  - azure-event-processor-host.FromTokenProviderOptions.startupScanDelay
+  - azure-event-processor-host.FromTokenProviderOptions.storageBlobPrefix
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="cfb8a-101">Vengono descritti i parametri facoltativi che possono essere specificati per la creazione di un EventProcessorHost durante la creazione del provider di token specificato</span><span class="sxs-lookup"><span data-stu-id="cfb8a-101">Describes the optional parameters that can be provided for creating an EventProcessorHost while creating from the given token provider</span></span>
+  extends:
+    name: ClientOptionsBase
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.FromTokenProviderOptions.consumerGroup
+  name: consumerGroup
+  fullName: consumerGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"cfb8a-102\">{string} [gruppo di consumer] Il nome del gruppo di consumer all'interno dell'Hub eventi.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cfb8a-102\">{string} [consumerGroup] The name of the consumer group within the Event Hub.</span></span> <span data-ttu-id=\"cfb8a-103\">Il valore predefinito: \\*\\* `\"$default\"` \\*\\*.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cfb8a-103\">Default value: **`\"$default\"`**.</span></span>"
+  optional: true
+  syntax:
+    content: 'consumerGroup?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.FromTokenProviderOptions.fastScanInterval
+  name: fastScanInterval
+  fullName: fastScanInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="cfb8a-104">{number} [fastScanInterval] Esistono due possibili intervallo volte tra le analisi per le partizioni disponibili, veloci e lente.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-104">{number} [fastScanInterval] There are two possible interval times between scans for available partitions, fast and slow.</span></span> <span data-ttu-id="cfb8a-105">L'intervallo di fast (breve) \*\* `in seconds` \*\* viene utilizzata dopo un'analisi in cui lease furto è stata eseguita, per alzare di livello il ribilanciamento più veloce.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-105">The fast (short) interval **`in seconds`** is used after a scan in which lease stealing has occurred, to promote quicker rebalancing.</span></span>
+
+    <span data-ttu-id="cfb8a-106">Valore predefinito: \*\* `3` secondi\*\*.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-106">Default: **`3` seconds**.</span></span>
+  optional: true
+  syntax:
+    content: 'fastScanInterval?: number'
+    return:
+      type:
+      - number
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.FromTokenProviderOptions.initialOffset
+  name: initialOffset
+  fullName: initialOffset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="cfb8a-107">{EventPosition} initialOffset solo quando utilizzato quindi ricevitore viene creato per la prima volta e non sono presenti dati di checkpoint nel blob.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-107">{EventPosition} initialOffset This is only used when then receiver is being created for the very first time and there is no checkpoint data in the blob.</span></span> <span data-ttu-id="cfb8a-108">Per questa opzione per essere efficace, assicurarsi di fornire un nuovo nome host che non è stato usato in precedenza.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-108">For this option to be effective please make sure to provide a new hostName that was not used previously.</span></span>
+  optional: true
+  syntax:
+    content: 'initialOffset?: EventPosition'
+    return:
+      type:
+      - EventPosition
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.FromTokenProviderOptions.leaseDuration
+  name: leaseDuration
+  fullName: leaseDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="cfb8a-109">{number} [leaseDuration] Durata del lease \*\* `in seconds` \*\* prima della scadenza, a meno che rinnovato.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-109">{number} [leaseDuration] Duration of a lease **`in seconds`** before it expires unless renewed.</span></span> <span data-ttu-id="cfb8a-110">Valore predefinito: \*\* `30` secondi**, il valore minimo: \*\* `15` secondi**, il valore massimo: \*\* `60` secondi\*\*.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-110">Default: **`30` seconds**, Min Value: **`15` seconds**, Max value: **`60` seconds**.</span></span>'
+  optional: true
+  syntax:
+    content: 'leaseDuration?: number'
+    return:
+      type:
+      - number
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.FromTokenProviderOptions.leaseRenewInterval
+  name: leaseRenewInterval
+  fullName: leaseRenewInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="cfb8a-111">{number} [leaseRenewInterval] L'intervallo di sospensione \*\* `in seconds` \*\* tra le analisi.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-111">{number} [leaseRenewInterval] The sleep interval **`in seconds`** between scans.</span></span>
+
+    <span data-ttu-id="cfb8a-112">Valore predefinito: \*\* `10` secondi\*\*.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-112">Default: **`10` seconds**.</span></span>
+
+
+    <span data-ttu-id="cfb8a-113">Consente a un'implementazione di manager di lease specificare a PartitionManager frequenza dovrebbe analizzare i lease e rinnovarli.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-113">Allows a lease manager implementation to specify to PartitionManager how often it should scan leases and renew them.</span></span> <span data-ttu-id="cfb8a-114">Per ridistribuire i lease in modo tempestivo dopo che un host non è più operativo, è consigliabile un intervallo relativamente breve, ad esempio dieci secondi.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-114">In order to redistribute leases in a timely fashion after a host ceases operating, we recommend a relatively short interval, such as ten seconds.</span></span> <span data-ttu-id="cfb8a-115">Ovviamente è necessario renderla meno della metà della lunghezza del lease, per impedire la scadenza accidentale.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-115">Obviously it should be less than half of the lease length, to prevent accidental expiration.</span></span>
+  optional: true
+  syntax:
+    content: 'leaseRenewInterval?: number'
+    return:
+      type:
+      - number
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.FromTokenProviderOptions.onEphError
+  name: onEphError
+  fullName: onEphError
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="cfb8a-116">{OnEphError} [onEphError] Gestore degli errori che può essere fornite per la ricezione di notifica per gli errori generali.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-116">{OnEphError} [onEphError] Error handler that can be provided to receive notifcation for general errors.</span></span>
+
+
+    <span data-ttu-id="cfb8a-117">Errori che si verificano durante l'elaborazione di eventi da una determinata partizione di hub eventi vengono recapitati al `onError` gestori forniti nel `start()` (metodo).</span><span class="sxs-lookup"><span data-stu-id="cfb8a-117">Errors which occur while processing events from a particular EventHub partition are delivered to the `onError` handler provided in the `start()` method.</span></span> <span data-ttu-id="cfb8a-118">Questo gestore viene chiamato in occasioni, quando si verifica un errore durante la gestione di partizioni o dei lease per le partizioni.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-118">This handler is called on occasions when an error occurs while managing partitions or leases for the partitions.</span></span>
+  optional: true
+  syntax:
+    content: 'onEphError?: OnEphError'
+    return:
+      type:
+      - azure-event-processor-host.OnEphError
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.FromTokenProviderOptions.slowScanInterval
+  name: slowScanInterval
+  fullName: slowScanInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"cfb8a-119\">{number} [slowScanInterval] L'intervallo (long) lenta \\*\\* `in seconds` \\*\\* viene utilizzata dopo un'analisi in cui lease stealing non si è verificato, per ridurre l'analisi non necessarie quando il sistema è in stato stabile.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cfb8a-119\">{number} [slowScanInterval] The slow (long) interval **`in seconds`** is used after a scan in which lease stealing did not occur, to reduce unnecessary scanning when the system is in steady state.</span></span> <span data-ttu-id=\"cfb8a-120\">Valore predefinito: \\*\\* `5` secondi\\*\\*.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cfb8a-120\">Default: **`5` seconds**.</span></span>"
+  optional: true
+  syntax:
+    content: 'slowScanInterval?: number'
+    return:
+      type:
+      - number
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.FromTokenProviderOptions.startupScanDelay
+  name: startupScanDelay
+  fullName: startupScanDelay
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"cfb8a-121\">{number} [startupScanDelay] Il tempo di ritardo \\*\\* `in seconds` \\*\\* tra la prima analisi per le partizioni disponibili e il secondo.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cfb8a-121\">{number} [startupScanDelay] The delay time **`in seconds`** between the first scan for available partitions and the second.</span></span> <span data-ttu-id=\"cfb8a-122\">Ciò fa parte di un'ottimizzazione di avvio che consente a singoli host diventano visibili ad altri host e in tal modo ottenere un conteggio più preciso del numero di host nel sistema, prima che tentano di stimare il numero di partizioni che dovrebbero disporre.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cfb8a-122\">This is part of a startup optimization which allows individual hosts to become visible to other hosts, and thereby get a more accurate count of the number of hosts in the system, before they try to estimate how many partitions they should own.</span></span> <span data-ttu-id=\"cfb8a-123\">Valore predefinito: \\*\\* `30` secondi\\*\\*.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cfb8a-123\">Default: **`30` seconds**.</span></span>"
+  optional: true
+  syntax:
+    content: 'startupScanDelay?: number'
+    return:
+      type:
+      - number
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.FromTokenProviderOptions.storageBlobPrefix
+  name: storageBlobPrefix
+  fullName: storageBlobPrefix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="cfb8a-124">{string} [storageBlobPrefix] Prefisso usato per la denominazione dei blob all'interno del contenitore di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="cfb8a-124">{string} [storageBlobPrefix] Prefix used when naming blobs within the storage container.</span></span>
+  optional: true
+  syntax:
+    content: 'storageBlobPrefix?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+references:
+- uid: azure-event-processor-host.OnEphError
+  name: OnEphError
+  spec.typeScript:
+  - name: OnEphError
+    fullName: OnEphError
+    uid: azure-event-processor-host.OnEphError
