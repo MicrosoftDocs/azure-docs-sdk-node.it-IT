@@ -1,0 +1,159 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 40ab24bc4a436fcca78acf8030a30b78c7a91565
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53659225"
+items:
+- uid: azure-arm-containerregistry.EncodedTaskRunRequest
+  name: EncodedTaskRunRequest
+  fullName: EncodedTaskRunRequest
+  children:
+  - azure-arm-containerregistry.EncodedTaskRunRequest.agentConfiguration
+  - azure-arm-containerregistry.EncodedTaskRunRequest.encodedTaskContent
+  - azure-arm-containerregistry.EncodedTaskRunRequest.encodedValuesContent
+  - azure-arm-containerregistry.EncodedTaskRunRequest.platform
+  - azure-arm-containerregistry.EncodedTaskRunRequest.sourceLocation
+  - azure-arm-containerregistry.EncodedTaskRunRequest.timeout
+  - azure-arm-containerregistry.EncodedTaskRunRequest.values
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="a5b6f-101">I parametri per una richiesta dell'esecuzione dell'attività rapide.</span><span class="sxs-lookup"><span data-stu-id="a5b6f-101">The parameters for a quick task run request.</span></span>
+  extends:
+    name: azure-arm-containerregistry.RunRequest
+  package: azure-arm-containerregistry
+- uid: azure-arm-containerregistry.EncodedTaskRunRequest.agentConfiguration
+  name: agentConfiguration
+  fullName: agentConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a5b6f-102">Configurazione del computer dell'agente di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="a5b6f-102">The machine configuration of the run agent.</span></span>
+  optional: true
+  syntax:
+    content: 'agentConfiguration?: AgentProperties'
+    return:
+      type:
+      - azure-arm-containerregistry.AgentProperties
+  package: azure-arm-containerregistry
+- uid: azure-arm-containerregistry.EncodedTaskRunRequest.encodedTaskContent
+  name: encodedTaskContent
+  fullName: encodedTaskContent
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a5b6f-103">Valore del contenuto del file di definizione del modello/con codifica Base64.</span><span class="sxs-lookup"><span data-stu-id="a5b6f-103">Base64 encoded value of the template/definition file content.</span></span>
+  syntax:
+    content: 'encodedTaskContent: string'
+    return:
+      type:
+      - string
+  package: azure-arm-containerregistry
+- uid: azure-arm-containerregistry.EncodedTaskRunRequest.encodedValuesContent
+  name: encodedValuesContent
+  fullName: encodedValuesContent
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a5b6f-104">Valore del contenuto del file o i valori dei parametri con codifica Base64.</span><span class="sxs-lookup"><span data-stu-id="a5b6f-104">Base64 encoded value of the parameters/values file content.</span></span>
+  optional: true
+  syntax:
+    content: 'encodedValuesContent?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-containerregistry
+- uid: azure-arm-containerregistry.EncodedTaskRunRequest.platform
+  name: platform
+  fullName: platform
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a5b6f-105">Le proprietà di piattaforma sulla quale deve essere eseguita l'esecuzione.</span><span class="sxs-lookup"><span data-stu-id="a5b6f-105">The platform properties against which the run has to happen.</span></span>
+  syntax:
+    content: 'platform: PlatformProperties'
+    return:
+      type:
+      - azure-arm-containerregistry.PlatformProperties
+  package: azure-arm-containerregistry
+- uid: azure-arm-containerregistry.EncodedTaskRunRequest.sourceLocation
+  name: sourceLocation
+  fullName: sourceLocation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="a5b6f-106">URL del contesto di origine (assoluto o relativo).</span><span class="sxs-lookup"><span data-stu-id="a5b6f-106">The URL(absolute or relative) of the source context.</span></span> <span data-ttu-id="a5b6f-107">Può essere un URL a un repository git o con estensione tar.</span><span class="sxs-lookup"><span data-stu-id="a5b6f-107">It can be an URL to a tar or git repository.</span></span>
+
+    <span data-ttu-id="a5b6f-108">Se è relativo URL, il percorso relativo deve essere ottenuto dalla chiamata all'API listBuildSourceUploadUrl.</span><span class="sxs-lookup"><span data-stu-id="a5b6f-108">If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.</span></span>
+  optional: true
+  syntax:
+    content: 'sourceLocation?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-containerregistry
+- uid: azure-arm-containerregistry.EncodedTaskRunRequest.timeout
+  name: timeout
+  fullName: timeout
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a5b6f-109">Timeout di esecuzione in secondi.</span><span class="sxs-lookup"><span data-stu-id="a5b6f-109">Run timeout in seconds.</span></span>
+  optional: true
+  syntax:
+    content: 'timeout?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-containerregistry
+- uid: azure-arm-containerregistry.EncodedTaskRunRequest.values
+  name: values
+  fullName: values
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a5b6f-110">La raccolta di valori sottoponibile a override che possono essere passati quando si esegue un'attività.</span><span class="sxs-lookup"><span data-stu-id="a5b6f-110">The collection of overridable values that can be passed when running a task.</span></span>
+  optional: true
+  syntax:
+    content: 'values?: SetValue[]'
+    return:
+      type:
+      - azure-arm-containerregistry.SetValue[]
+  package: azure-arm-containerregistry
+references:
+- uid: azure-arm-containerregistry.RunRequest
+  name: RunRequest
+  spec.typeScript:
+  - name: RunRequest
+    fullName: RunRequest
+    uid: azure-arm-containerregistry.RunRequest
+- uid: azure-arm-containerregistry.AgentProperties
+  name: AgentProperties
+  spec.typeScript:
+  - name: AgentProperties
+    fullName: AgentProperties
+    uid: azure-arm-containerregistry.AgentProperties
+- uid: azure-arm-containerregistry.PlatformProperties
+  name: PlatformProperties
+  spec.typeScript:
+  - name: PlatformProperties
+    fullName: PlatformProperties
+    uid: azure-arm-containerregistry.PlatformProperties
+- uid: azure-arm-containerregistry.SetValue[]
+  name: SetValue[]
+  spec.typeScript:
+  - name: SetValue
+    fullName: SetValue
+    uid: azure-arm-containerregistry.SetValue
+  - name: '[]'
+    fullName: '[]'

@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a3a31dfcc2dac96a682e046f65aa5f1b05b5d4e0
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52037196"
+items:
+- uid: azure-servicefabric.ChaosEventsSegment
+  name: ChaosEventsSegment
+  fullName: ChaosEventsSegment
+  children:
+  - azure-servicefabric.ChaosEventsSegment.continuationToken
+  - azure-servicefabric.ChaosEventsSegment.history
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="b0bdd-101">Contiene l'elenco di eventi di Chaos e il token di continuazione per ottenere il segmento successivo.</span><span class="sxs-lookup"><span data-stu-id="b0bdd-101">Contains the list of Chaos events and the continuation token to get the next segment.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ChaosEventsSegment.continuationToken
+  name: continuationToken
+  fullName: continuationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b0bdd-102">Il parametro del token di continuazione viene utilizzato per ottenere il set di risultati successivo.</span><span class="sxs-lookup"><span data-stu-id="b0bdd-102">The continuation token parameter is used to obtain next set of results.</span></span> <span data-ttu-id="b0bdd-103">Il token di continuazione è incluso nella risposta dell'API quando i risultati dal sistema non rientrano in una singola risposta.</span><span class="sxs-lookup"><span data-stu-id="b0bdd-103">The continuation token is included in the response of the API when the results from the system do not fit in a single response.</span></span> <span data-ttu-id="b0bdd-104">Quando questo valore viene passato alla successiva chiamata API, l'API restituisce il set di risultati successivo.</span><span class="sxs-lookup"><span data-stu-id="b0bdd-104">When this value is passed to the next API call, the API returns next set of results.</span></span>
+
+    <span data-ttu-id="b0bdd-105">Se non sono presenti altri risultati, il token di continuazione non è incluso nella risposta.</span><span class="sxs-lookup"><span data-stu-id="b0bdd-105">If there are no further results, then the continuation token is not included in the response.</span></span>
+  optional: true
+  syntax:
+    content: 'continuationToken?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ChaosEventsSegment.history
+  name: history
+  fullName: history
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b0bdd-106">Elenco di eventi che soddisfano i criteri specificati dall'utente.</span><span class="sxs-lookup"><span data-stu-id="b0bdd-106">List of Chaos events that meet the user-supplied criteria.</span></span>
+  optional: true
+  syntax:
+    content: 'history?: ChaosEventWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.ChaosEventWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ChaosEventWrapper[]
+  name: ChaosEventWrapper[]
+  spec.typeScript:
+  - name: ChaosEventWrapper
+    fullName: ChaosEventWrapper
+    uid: azure-servicefabric.ChaosEventWrapper
+  - name: '[]'
+    fullName: '[]'

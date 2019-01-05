@@ -1,0 +1,186 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2090d5bda50a2464481a0f67ad8861bb0ab8db0d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52098896"
+items:
+- uid: '@azure/cosmos.ConnectionPolicy'
+  name: ConnectionPolicy
+  fullName: ConnectionPolicy
+  children:
+  - '@azure/cosmos.ConnectionPolicy.ConnectionMode'
+  - '@azure/cosmos.ConnectionPolicy.DisableSSLVerification'
+  - '@azure/cosmos.ConnectionPolicy.EnableEndpointDiscovery'
+  - '@azure/cosmos.ConnectionPolicy.MediaReadMode'
+  - '@azure/cosmos.ConnectionPolicy.MediaRequestTimeout'
+  - '@azure/cosmos.ConnectionPolicy.PreferredLocations'
+  - '@azure/cosmos.ConnectionPolicy.ProxyUrl'
+  - '@azure/cosmos.ConnectionPolicy.RequestTimeout'
+  - '@azure/cosmos.ConnectionPolicy.RetryOptions'
+  - '@azure/cosmos.ConnectionPolicy.UseMultipleWriteLocations'
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="389d6-101">Rappresenta i criteri di connessione associato a un CosmosClient nel servizio di database Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="389d6-101">Represents the Connection policy associated with a CosmosClient in the Azure Cosmos DB database service.</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConnectionPolicy.ConnectionMode'
+  name: ConnectionMode
+  fullName: ConnectionMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="389d6-102">Determina la modalità per connettersi a Cosmos con.</span><span class="sxs-lookup"><span data-stu-id="389d6-102">Determines which mode to connect to Cosmos with.</span></span> <span data-ttu-id="389d6-103">(Attualmente supporta solo l'opzione Gateway)</span><span class="sxs-lookup"><span data-stu-id="389d6-103">(Currently only supports Gateway option)</span></span>
+  syntax:
+    content: 'ConnectionMode: ConnectionMode'
+    return:
+      type:
+      - '@azure/cosmos.ConnectionPolicy.ConnectionMode'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConnectionPolicy.DisableSSLVerification'
+  name: DisableSSLVerification
+  fullName: DisableSSLVerification
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="389d6-104">Flag per disabilitare la verifica SSL per le richieste.</span><span class="sxs-lookup"><span data-stu-id="389d6-104">Flag to disable SSL verification for the requests.</span></span> <span data-ttu-id="389d6-105">Verifica SSL è abilitata per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="389d6-105">SSL verification is enabled by default.</span></span> <span data-ttu-id="389d6-106">Non impostare quando la destinazione degli endpoint di produzione.</span><span class="sxs-lookup"><span data-stu-id="389d6-106">Don't set this when targeting production endpoints.</span></span>
+
+    <span data-ttu-id="389d6-107">Questo deve essere usato solo quando l'errore relativo a come destinazione di endpoint dell'emulatore per evitare errori delle richieste con SSL.</span><span class="sxs-lookup"><span data-stu-id="389d6-107">This is intended to be used only when targeting emulator endpoint to avoid failing your requests with SSL related error.</span></span>
+  syntax:
+    content: 'DisableSSLVerification: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConnectionPolicy.EnableEndpointDiscovery'
+  name: EnableEndpointDiscovery
+  fullName: EnableEndpointDiscovery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="389d6-108">Flag per abilitare o disabilitare il reindirizzamento automatico delle richieste basate sulle operazioni di lettura/scrittura.</span><span class="sxs-lookup"><span data-stu-id="389d6-108">Flag to enable/disable automatic redirecting of requests based on read/write operations.</span></span>
+  syntax:
+    content: 'EnableEndpointDiscovery: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConnectionPolicy.MediaReadMode'
+  name: MediaReadMode
+  fullName: MediaReadMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="389d6-109">Modalità di download di contenuto dell'allegato (noto anche come supporti).</span><span class="sxs-lookup"><span data-stu-id="389d6-109">Attachment content (aka media) download mode.</span></span> <span data-ttu-id="389d6-110">Deve essere uno dei valori di <xref:MediaReadMode></span><span class="sxs-lookup"><span data-stu-id="389d6-110">Should be one of the values of <xref:MediaReadMode></span></span>
+  syntax:
+    content: 'MediaReadMode: Object'
+    return:
+      type:
+      - Object
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConnectionPolicy.MediaRequestTimeout'
+  name: MediaRequestTimeout
+  fullName: MediaRequestTimeout
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="389d6-111">Tempo di attesa di risposta dal peer di rete per le operazioni (noto anche come supporti) contenuto allegato.</span><span class="sxs-lookup"><span data-stu-id="389d6-111">Time to wait for response from network peer for attachment content (aka media) operations.</span></span> <span data-ttu-id="389d6-112">Rappresentato in millisecondi.</span><span class="sxs-lookup"><span data-stu-id="389d6-112">Represented in milliseconds.</span></span>
+  syntax:
+    content: 'MediaRequestTimeout: number'
+    return:
+      type:
+      - number
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConnectionPolicy.PreferredLocations'
+  name: PreferredLocations
+  fullName: PreferredLocations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="389d6-113">Elenco di aree di azure da usare come posizioni preferite per le richieste di lettura.</span><span class="sxs-lookup"><span data-stu-id="389d6-113">List of azure regions to be used as preferred locations for read requests.</span></span>
+  syntax:
+    content: 'PreferredLocations: string[]'
+    return:
+      type:
+      - string[]
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConnectionPolicy.ProxyUrl'
+  name: ProxyUrl
+  fullName: ProxyUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="389d6-114">Url del proxy HTTP/Https</span><span class="sxs-lookup"><span data-stu-id="389d6-114">Http/Https proxy url</span></span>
+  syntax:
+    content: 'ProxyUrl: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConnectionPolicy.RequestTimeout'
+  name: RequestTimeout
+  fullName: RequestTimeout
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="389d6-115">Timeout (tempo di attesa di risposta dal peer di rete) della richiesta.</span><span class="sxs-lookup"><span data-stu-id="389d6-115">Request timeout (time to wait for response from network peer).</span></span> <span data-ttu-id="389d6-116">Rappresentato in millisecondi.</span><span class="sxs-lookup"><span data-stu-id="389d6-116">Represented in milliseconds.</span></span>
+  syntax:
+    content: 'RequestTimeout: number'
+    return:
+      type:
+      - number
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConnectionPolicy.RetryOptions'
+  name: RetryOptions
+  fullName: RetryOptions
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="389d6-117">Istanza RetryOptions che definisce diverse proprietà configurabile utilizzate durante la ripetizione dei tentativi.</span><span class="sxs-lookup"><span data-stu-id="389d6-117">RetryOptions instance which defines several configurable properties used during retry.</span></span>
+  syntax:
+    content: 'RetryOptions: RetryOptions'
+    return:
+      type:
+      - '@azure/cosmos.RetryOptions'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConnectionPolicy.UseMultipleWriteLocations'
+  name: UseMultipleWriteLocations
+  fullName: UseMultipleWriteLocations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="389d6-118">Il flag che consente scritture su qualsiasi posizioni (aree) per gli account di database con replica geografica nel servizio di Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="389d6-118">The flag that enables writes on any locations (regions) for geo-replicated database accounts in the Azure Cosmos DB service.</span></span>
+
+    <span data-ttu-id="389d6-119">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="389d6-119">Default is `false`.</span></span>
+  syntax:
+    content: 'UseMultipleWriteLocations: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.ConnectionPolicy.ConnectionMode'
+  name: ConnectionMode
+  spec.typeScript:
+  - name: ConnectionMode
+    fullName: ConnectionMode
+    uid: '@azure/cosmos.ConnectionPolicy.ConnectionMode'
+- uid: '@azure/cosmos.RetryOptions'
+  name: RetryOptions
+  spec.typeScript:
+  - name: RetryOptions
+    fullName: RetryOptions
+    uid: '@azure/cosmos.RetryOptions'
