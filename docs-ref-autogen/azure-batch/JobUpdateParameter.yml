@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: af32c4a39fd7e794559661f55c43f5ee3c48b89e
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53662885"
+items:
+- uid: azure-batch.JobUpdateParameter
+  name: JobUpdateParameter
+  fullName: JobUpdateParameter
+  children:
+  - azure-batch.JobUpdateParameter.constraints
+  - azure-batch.JobUpdateParameter.metadata
+  - azure-batch.JobUpdateParameter.onAllTasksComplete
+  - azure-batch.JobUpdateParameter.poolInfo
+  - azure-batch.JobUpdateParameter.priority
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a7861-101">Se omesso, i vincoli vengono cancellati.</span><span class="sxs-lookup"><span data-stu-id="a7861-101">If omitted, the constraints are cleared.</span></span>
+  optional: true
+  syntax:
+    content: 'constraints?: JobConstraints'
+    return:
+      type:
+      - azure-batch.JobConstraints
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.metadata
+  name: metadata
+  fullName: metadata
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a7861-102">Se omesso, viene accettato il valore predefinito di un elenco vuoto. in effetti, eventuali metadati esistenti sono stati eliminati.</span><span class="sxs-lookup"><span data-stu-id="a7861-102">If omitted, it takes the default value of an empty list; in effect, any existing metadata is deleted.</span></span>
+  optional: true
+  syntax:
+    content: 'metadata?: MetadataItem[]'
+    return:
+      type:
+      - azure-batch.MetadataItem[]
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.onAllTasksComplete
+  name: onAllTasksComplete
+  fullName: onAllTasksComplete
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="a7861-103">Se omesso, il comportamento di completamento è impostato su noaction.</span><span class="sxs-lookup"><span data-stu-id="a7861-103">If omitted, the completion behavior is set to noaction.</span></span> <span data-ttu-id="a7861-104">Se il valore corrente è terminatejob, questo è un errore perché il comportamento di completamento del processo non può essere modificato da terminatejob a noaction.</span><span class="sxs-lookup"><span data-stu-id="a7861-104">If the current value is terminatejob, this is an error because a job's completion behavior may not be changed from terminatejob to noaction.</span></span> <span data-ttu-id="a7861-105">Non è possibile modificare il valore da terminatejob a noaction: vale a dire, una volta che si è impegnati a chiusura automatica di processi, si non è possibile disattivarla nuovamente.</span><span class="sxs-lookup"><span data-stu-id="a7861-105">You may not change the value from terminatejob to noaction - that is, once you have engaged automatic job termination, you cannot turn it off again.</span></span> <span data-ttu-id="a7861-106">Se si prova a eseguire questa operazione, la richiesta ha esito negativo e restituisce lo stato del Batch il codice 400 (Bad Request) e una risposta di errore "valore di proprietà non valido".</span><span class="sxs-lookup"><span data-stu-id="a7861-106">If you try to do this, the request fails and Batch returns status code 400 (Bad Request) and an 'invalid property value' error response.</span></span> <span data-ttu-id="a7861-107">Se non si specifica questo elemento in una richiesta PUT, è equivalente a passando noaction.</span><span class="sxs-lookup"><span data-stu-id="a7861-107">If you do not specify this element in a PUT request, it is equivalent to passing noaction.</span></span> <span data-ttu-id="a7861-108">Si tratta di un errore se il valore corrente è terminatejob.</span><span class="sxs-lookup"><span data-stu-id="a7861-108">This is an error if the current value is terminatejob.</span></span>
+
+    <span data-ttu-id="a7861-109">I valori possibili sono: 'noAction', 'terminateJob'</span><span class="sxs-lookup"><span data-stu-id="a7861-109">Possible values include: 'noAction', 'terminateJob'</span></span>
+  optional: true
+  syntax:
+    content: 'onAllTasksComplete?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.poolInfo
+  name: poolInfo
+  fullName: poolInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a7861-110">È possibile modificare il pool per un processo solo quando il processo sia disabilitato.</span><span class="sxs-lookup"><span data-stu-id="a7861-110">You may change the pool for a job only when the job is disabled.</span></span> <span data-ttu-id="a7861-111">La chiamata del processo di aggiornamento avrà esito negativo se si include l'elemento poolInfo e il processo non sia disabilitato.</span><span class="sxs-lookup"><span data-stu-id="a7861-111">The Update Job call will fail if you include the poolInfo element and the job is not disabled.</span></span> <span data-ttu-id="a7861-112">Se si specifica un autoPoolSpecification nel poolInfo, è possibile aggiornare solo la proprietà keepAlive e quindi solo se il pool automatico è un poolLifetimeOption del processo.</span><span class="sxs-lookup"><span data-stu-id="a7861-112">If you specify an autoPoolSpecification specification in the poolInfo, only the keepAlive property can be updated, and then only if the auto pool has a poolLifetimeOption of job.</span></span>
+  syntax:
+    content: 'poolInfo: PoolInformation'
+    return:
+      type:
+      - azure-batch.PoolInformation
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.priority
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a7861-113">I valori di priorità possono variare tra -1000 e 1000, dove-1000 rappresenta la priorità più bassa e 1000 la priorità più alta.</span><span class="sxs-lookup"><span data-stu-id="a7861-113">Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority.</span></span> <span data-ttu-id="a7861-114">Se omesso, si è impostato sul valore predefinito 0.</span><span class="sxs-lookup"><span data-stu-id="a7861-114">If omitted, it is set to the default value 0.</span></span>
+  optional: true
+  syntax:
+    content: 'priority?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+references:
+- uid: azure-batch.JobConstraints
+  name: JobConstraints
+  spec.typeScript:
+  - name: JobConstraints
+    fullName: JobConstraints
+    uid: azure-batch.JobConstraints
+- uid: azure-batch.MetadataItem[]
+  name: MetadataItem[]
+  spec.typeScript:
+  - name: MetadataItem
+    fullName: MetadataItem
+    uid: azure-batch.MetadataItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.PoolInformation
+  name: PoolInformation
+  spec.typeScript:
+  - name: PoolInformation
+    fullName: PoolInformation
+    uid: azure-batch.PoolInformation
