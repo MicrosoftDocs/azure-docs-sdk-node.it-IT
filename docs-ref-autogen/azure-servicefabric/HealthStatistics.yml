@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b64170fec17475e2e54e3520cb3f138a3efa2f4c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52092396"
+items:
+- uid: azure-servicefabric.HealthStatistics
+  name: HealthStatistics
+  fullName: HealthStatistics
+  children:
+  - azure-servicefabric.HealthStatistics.healthStateCountList
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="7b892-101">Le statistiche di integrità di un'entità, restituita come parte del risultato della query di integrità quando la descrizione della query è configurata per includere le statistiche.</span><span class="sxs-lookup"><span data-stu-id="7b892-101">The health statistics of an entity, returned as part of the health query result when the query description is configured to include statistics.</span></span>
+
+    <span data-ttu-id="7b892-102">Le statistiche includono i conteggi stato di integrità per tutti i tipi di elementi figlio dell'entità corrente.</span><span class="sxs-lookup"><span data-stu-id="7b892-102">The statistics include health state counts for all children types of the current entity.</span></span>
+
+    <span data-ttu-id="7b892-103">Ad esempio, per il cluster, le statistiche di integrità includono i conteggi stato di integrità per i nodi, applicazioni, servizi, partizioni, repliche, le applicazioni distribuite e pacchetti del servizio distribuiti.</span><span class="sxs-lookup"><span data-stu-id="7b892-103">For example, for cluster, the health statistics include health state counts for nodes, applications, services, partitions, replicas, deployed applications and deployed service packages.</span></span>
+
+    <span data-ttu-id="7b892-104">Per la partizione, le statistiche di integrità includono i conteggi di integrità per le repliche.</span><span class="sxs-lookup"><span data-stu-id="7b892-104">For partition, the health statistics include health counts for replicas.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthStatistics.healthStateCountList
+  name: healthStateCountList
+  fullName: healthStateCountList
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7b892-105">Elenco dello stato di integrità conta per ogni entità kind, che tiene traccia del modo in cui molti figli dell'entità sottoposti a query sono in stato Ok, avviso ed errore.</span><span class="sxs-lookup"><span data-stu-id="7b892-105">List of health state counts per entity kind, which keeps track of how many children of the queried entity are in Ok, Warning and Error state.</span></span>
+  optional: true
+  syntax:
+    content: 'healthStateCountList?: EntityKindHealthStateCount[]'
+    return:
+      type:
+      - azure-servicefabric.EntityKindHealthStateCount[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.EntityKindHealthStateCount[]
+  name: EntityKindHealthStateCount[]
+  spec.typeScript:
+  - name: EntityKindHealthStateCount
+    fullName: EntityKindHealthStateCount
+    uid: azure-servicefabric.EntityKindHealthStateCount
+  - name: '[]'
+    fullName: '[]'
