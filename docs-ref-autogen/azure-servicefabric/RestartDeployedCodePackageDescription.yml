@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d4c3989de659fb33ad86da10926024b136dc539e
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52092676"
+items:
+- uid: azure-servicefabric.RestartDeployedCodePackageDescription
+  name: RestartDeployedCodePackageDescription
+  fullName: RestartDeployedCodePackageDescription
+  children:
+  - azure-servicefabric.RestartDeployedCodePackageDescription.codePackageInstanceId
+  - azure-servicefabric.RestartDeployedCodePackageDescription.codePackageName
+  - azure-servicefabric.RestartDeployedCodePackageDescription.serviceManifestName
+  - azure-servicefabric.RestartDeployedCodePackageDescription.servicePackageActivationId
+  langs:
+  - typeScript
+  type: interface
+  summary: Definisce la descrizione per il riavvio di un pacchetto di codice distribuito nel nodo di Service Fabric.
+  package: azure-servicefabric
+- uid: azure-servicefabric.RestartDeployedCodePackageDescription.codePackageInstanceId
+  name: codePackageInstanceId
+  fullName: codePackageInstanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    ID dell'istanza attualmente in esecuzione punto di ingresso. Per una voce di programma di installazione del pacchetto di codice viene eseguito per primo punto (se specificato) e al termine della principale punto di ingresso viene avviato.
+
+    Eseguibile del punto di ingresso ogni ora viene eseguito, verrà modificato il relativo ID istanza. Se 0 viene passato come l'ID dell'istanza di pacchetto di codice, l'API verrà riavviato il pacchetto di codice con qualsiasi ID istanza è in esecuzione.
+
+    Se un'istanza ID altro rispetto a 0 viene passato, l'API verrà riavviato il pacchetto di codice solo se l'ID dell'istanza corrente corrisponde al passato, ID istanza.
+
+    Si noti che, passando l'ID istanza esatti (non 0) nell'API è più sicuro, perché se garantisce al massimo un riavvio del pacchetto di codice.
+  syntax:
+    content: 'codePackageInstanceId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RestartDeployedCodePackageDescription.codePackageName
+  name: codePackageName
+  fullName: codePackageName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Il nome del pacchetto di codice definito nel manifesto del servizio.
+  syntax:
+    content: 'codePackageName: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RestartDeployedCodePackageDescription.serviceManifestName
+  name: serviceManifestName
+  fullName: serviceManifestName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Nome del manifesto del servizio che questo pacchetto di codice specificato.
+  syntax:
+    content: 'serviceManifestName: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RestartDeployedCodePackageDescription.servicePackageActivationId
+  name: servicePackageActivationId
+  fullName: servicePackageActivationId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ActivationId di un pacchetto del servizio distribuito. Se ServicePackageActivationMode specificato al momento della creazione del servizio è 'SharedProcess' (o se non è specificato, nel qual caso per impostazione predefinita 'SharedProcess'), il valore di ServicePackageActivationId è sempre una stringa vuota.
+  optional: true
+  syntax:
+    content: 'servicePackageActivationId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
