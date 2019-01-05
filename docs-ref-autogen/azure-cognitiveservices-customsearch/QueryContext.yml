@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 79a1dc73bac7f283e0d41e39c7a918aef2d3a777
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53676922"
+items:
+- uid: azure-cognitiveservices-customsearch.QueryContext
+  name: QueryContext
+  fullName: QueryContext
+  children:
+  - azure-cognitiveservices-customsearch.QueryContext.adultIntent
+  - azure-cognitiveservices-customsearch.QueryContext.alterationOverrideQuery
+  - azure-cognitiveservices-customsearch.QueryContext.alteredQuery
+  - azure-cognitiveservices-customsearch.QueryContext.originalQuery
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="623b0-101">Definisce il contesto di query usato da Bing per la richiesta.</span><span class="sxs-lookup"><span data-stu-id="623b0-101">Defines the query context that Bing used for the request.</span></span>
+  package: azure-cognitiveservices-customsearch
+- uid: azure-cognitiveservices-customsearch.QueryContext.adultIntent
+  name: adultIntent
+  fullName: adultIntent
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="623b0-102">Valore booleano che indica se la query specificata ha finalità per adulti.</span><span class="sxs-lookup"><span data-stu-id="623b0-102">A Boolean value that indicates whether the specified query has adult intent.</span></span> <span data-ttu-id="623b0-103">Il valore è true se la query include adulti; in caso contrario, false.</span><span class="sxs-lookup"><span data-stu-id="623b0-103">The value is true if the query has adult intent; otherwise, false.</span></span>
+  optional: true
+  syntax:
+    content: 'adultIntent?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-cognitiveservices-customsearch
+- uid: azure-cognitiveservices-customsearch.QueryContext.alterationOverrideQuery
+  name: alterationOverrideQuery
+  fullName: alterationOverrideQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="623b0-104">Stringa di query da usare per forzare l'utilizzo della stringa originale in Bing.</span><span class="sxs-lookup"><span data-stu-id="623b0-104">The query string to use to force Bing to use the original string.</span></span> <span data-ttu-id="623b0-105">Ad esempio, se la stringa di query è "downwind saling", la stringa di query eseguire l'override sarà "+ saling downwind".</span><span class="sxs-lookup"><span data-stu-id="623b0-105">For example, if the query string is "saling downwind", the override query string will be "+saling downwind".</span></span> <span data-ttu-id="623b0-106">Ricordarsi di codificare la stringa di query con conseguente "2Bsaling % + downwind".</span><span class="sxs-lookup"><span data-stu-id="623b0-106">Remember to encode the query string which results in "%2Bsaling+downwind".</span></span> <span data-ttu-id="623b0-107">Questo campo viene incluso solo se la stringa di query originale contiene un errore di ortografia.</span><span class="sxs-lookup"><span data-stu-id="623b0-107">This field is included only if the original query string contains a spelling mistake.</span></span>
+  optional: true
+  syntax:
+    content: 'alterationOverrideQuery?: string'
+    return:
+      type:
+      - string
+  package: azure-cognitiveservices-customsearch
+- uid: azure-cognitiveservices-customsearch.QueryContext.alteredQuery
+  name: alteredQuery
+  fullName: alteredQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="623b0-108">La stringa di query usata da Bing per eseguire la query.</span><span class="sxs-lookup"><span data-stu-id="623b0-108">The query string used by Bing to perform the query.</span></span> <span data-ttu-id="623b0-109">Bing usa la stringa di query modificata se la stringa di query originale conteneva errori di ortografia.</span><span class="sxs-lookup"><span data-stu-id="623b0-109">Bing uses the altered query string if the original query string contained spelling mistakes.</span></span> <span data-ttu-id="623b0-110">Ad esempio, se la stringa di query è "downwind saling", la stringa di query modificato viene possibile "sailing downwind".</span><span class="sxs-lookup"><span data-stu-id="623b0-110">For example, if the query string is "saling downwind", the altered query string will be "sailing downwind".</span></span> <span data-ttu-id="623b0-111">Questo campo viene incluso solo se la stringa di query originale contiene un errore di ortografia.</span><span class="sxs-lookup"><span data-stu-id="623b0-111">This field is included only if the original query string contains a spelling mistake.</span></span>
+  optional: true
+  syntax:
+    content: 'alteredQuery?: string'
+    return:
+      type:
+      - string
+  package: azure-cognitiveservices-customsearch
+- uid: azure-cognitiveservices-customsearch.QueryContext.originalQuery
+  name: originalQuery
+  fullName: originalQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="623b0-112">La stringa di query come è stata specificata nella richiesta.</span><span class="sxs-lookup"><span data-stu-id="623b0-112">The query string as specified in the request.</span></span>
+  syntax:
+    content: 'originalQuery: string'
+    return:
+      type:
+      - string
+  package: azure-cognitiveservices-customsearch
