@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f0cfdbf2404b8afd8fc089d17b5f9c895a0dfced
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52008105"
+items:
+- uid: azure-servicefabric.ReplicaHealthStateFilter
+  name: ReplicaHealthStateFilter
+  fullName: ReplicaHealthStateFilter
+  children:
+  - azure-servicefabric.ReplicaHealthStateFilter.healthStateFilter
+  - azure-servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="944a2-101">Definisce i criteri di corrispondenza per determinare se una replica deve essere inclusa come elemento figlio di una partizione di blocco di integrità del cluster.</span><span class="sxs-lookup"><span data-stu-id="944a2-101">Defines matching criteria to determine whether a replica should be included as a child of a partition in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="944a2-102">Se l'entità padre corrisponde al filtro specificato nella descrizione di query blocco di integrità del cluster, vengono restituite solo le repliche.</span><span class="sxs-lookup"><span data-stu-id="944a2-102">The replicas are only returned if the parent entities match a filter specified in the cluster health chunk query description.</span></span> <span data-ttu-id="944a2-103">La partizione padre, servizio e l'applicazione deve essere incluso nel blocco di integrità del cluster.</span><span class="sxs-lookup"><span data-stu-id="944a2-103">The parent partition, service and application must be included in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="944a2-104">Un filtro può corrispondere a zero, uno o più repliche, a seconda delle relative proprietà.</span><span class="sxs-lookup"><span data-stu-id="944a2-104">One filter can match zero, one or multiple replicas, depending on its properties.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="944a2-105">Il filtro per lo stato di integrità delle repliche.</span><span class="sxs-lookup"><span data-stu-id="944a2-105">The filter for the health state of the replicas.</span></span> <span data-ttu-id="944a2-106">Consente la selezione di repliche se corrispondono gli stati di integrità desiderate.</span><span class="sxs-lookup"><span data-stu-id="944a2-106">It allows selecting replicas if they match the desired health states.</span></span>
+
+    <span data-ttu-id="944a2-107">I valori possibili sono il valore intero di uno dei seguenti stati di integrità.</span><span class="sxs-lookup"><span data-stu-id="944a2-107">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="944a2-108">Vengono restituite solo repliche che corrispondono al filtro.</span><span class="sxs-lookup"><span data-stu-id="944a2-108">Only replicas that match the filter are returned.</span></span> <span data-ttu-id="944a2-109">Tutte le repliche vengono utilizzate per valutare lo stato di integrità aggregati di partizione padre.</span><span class="sxs-lookup"><span data-stu-id="944a2-109">All replicas are used to evaluate the parent partition aggregated health state.</span></span>
+
+    <span data-ttu-id="944a2-110">Se non specificato, valore predefinito è None, a meno che non viene specificato l'ID di replica.</span><span class="sxs-lookup"><span data-stu-id="944a2-110">If not specified, default value is None, unless the replica ID is specified.</span></span> <span data-ttu-id="944a2-111">Se il filtro ha valore predefinito e ID replica viene specificata, viene restituita la replica corrisponda.</span><span class="sxs-lookup"><span data-stu-id="944a2-111">If the filter has default value and replica ID is specified, the matching replica is returned.</span></span>
+
+    <span data-ttu-id="944a2-112">I valori dello stato sono enumerati in base al flag, pertanto il valore potrebbe essere una combinazione di questi valori ottenuti usando l'operatore "OR" bit per bit.</span><span class="sxs-lookup"><span data-stu-id="944a2-112">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="944a2-113">Ad esempio, se il valore fornito è 6, corrisponde a repliche con valore HealthState OK (2) e Warning (4).</span><span class="sxs-lookup"><span data-stu-id="944a2-113">For example, if the provided value is 6, it matches replicas with HealthState value of OK (2) and Warning (4).</span></span>
+
+    - <span data-ttu-id="944a2-114">Default - valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="944a2-114">Default - Default value.</span></span> <span data-ttu-id="944a2-115">Consente di ricercare qualsiasi stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="944a2-115">Matches any HealthState.</span></span> <span data-ttu-id="944a2-116">Il valore predefinito è zero.</span><span class="sxs-lookup"><span data-stu-id="944a2-116">The value is zero.</span></span>
+
+    - <span data-ttu-id="944a2-117">None - filtro che non corrisponde ad alcun valore.</span><span class="sxs-lookup"><span data-stu-id="944a2-117">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="944a2-118">Usato per non restituire alcun risultato in un determinato insieme di stati.</span><span class="sxs-lookup"><span data-stu-id="944a2-118">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="944a2-119">Il valore è uguale a 1.</span><span class="sxs-lookup"><span data-stu-id="944a2-119">The value is 1.</span></span>
+
+    - <span data-ttu-id="944a2-120">OK - filtro che corrispondenze di input con valore HealthState Ok.</span><span class="sxs-lookup"><span data-stu-id="944a2-120">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="944a2-121">Il valore è 2.</span><span class="sxs-lookup"><span data-stu-id="944a2-121">The value is 2.</span></span>
+
+    - <span data-ttu-id="944a2-122">Warning - filtro che corrispondenze di input con HealthState valore avviso.</span><span class="sxs-lookup"><span data-stu-id="944a2-122">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="944a2-123">Il valore è 4.</span><span class="sxs-lookup"><span data-stu-id="944a2-123">The value is 4.</span></span>
+
+    - <span data-ttu-id="944a2-124">Error - filtro che corrisponde all'input con valore di HealthState errore.</span><span class="sxs-lookup"><span data-stu-id="944a2-124">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="944a2-125">Il valore è 8.</span><span class="sxs-lookup"><span data-stu-id="944a2-125">The value is 8.</span></span>
+
+    - <span data-ttu-id="944a2-126">All - filtro che corrisponde all'input con qualsiasi valore di HealthState.</span><span class="sxs-lookup"><span data-stu-id="944a2-126">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="944a2-127">Il valore è 65535.</span><span class="sxs-lookup"><span data-stu-id="944a2-127">The value is 65535.</span></span>
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter
+  name: replicaOrInstanceIdFilter
+  fullName: replicaOrInstanceIdFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="944a2-128">ID della replica del servizio con stato o istanza del servizio senza stato che corrisponde al filtro.</span><span class="sxs-lookup"><span data-stu-id="944a2-128">Id of the stateful service replica or stateless service instance that matches the filter.</span></span> <span data-ttu-id="944a2-129">Il filtro viene applicato solo per la replica specificata, se presente.</span><span class="sxs-lookup"><span data-stu-id="944a2-129">The filter is applied only to the specified replica, if it exists.</span></span>
+
+    <span data-ttu-id="944a2-130">Se la replica non esiste, non viene restituita alcun replica nel blocco di integrità del cluster in base a questo filtro.</span><span class="sxs-lookup"><span data-stu-id="944a2-130">If the replica doesn't exist, no replica is returned in the cluster health chunk based on this filter.</span></span>
+
+    <span data-ttu-id="944a2-131">Se è presente la replica, se rispetta le altre proprietà di filtro è incluso nel blocco di integrità del cluster.</span><span class="sxs-lookup"><span data-stu-id="944a2-131">If the replica exists, it is included in the cluster health chunk if it respects the other filter properties.</span></span>
+
+    <span data-ttu-id="944a2-132">Se non specificato, tutte le repliche che corrispondono ai filtri padre (se presenti) vengono prese in considerazione e confrontate con gli altri membri di filtro, ad esempio di filtro dello stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="944a2-132">If not specified, all replicas that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+  optional: true
+  syntax:
+    content: 'replicaOrInstanceIdFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
