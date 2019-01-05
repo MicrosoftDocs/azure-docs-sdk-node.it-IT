@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ee04e77a8c318cb4cf7acc03e58f315348bc500b
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52084026"
+items:
+- uid: azure-servicefabric.MonitoringPolicyDescription
+  name: MonitoringPolicyDescription
+  fullName: MonitoringPolicyDescription
+  children:
+  - azure-servicefabric.MonitoringPolicyDescription.failureAction
+  - azure-servicefabric.MonitoringPolicyDescription.healthCheckRetryTimeoutInMilliseconds
+  - azure-servicefabric.MonitoringPolicyDescription.healthCheckStableDurationInMilliseconds
+  - azure-servicefabric.MonitoringPolicyDescription.healthCheckWaitDurationInMilliseconds
+  - azure-servicefabric.MonitoringPolicyDescription.upgradeDomainTimeoutInMilliseconds
+  - azure-servicefabric.MonitoringPolicyDescription.upgradeTimeoutInMilliseconds
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="f3efb-101">Vengono descritti i parametri per il monitoraggio di un aggiornamento in modalità monitorata.</span><span class="sxs-lookup"><span data-stu-id="f3efb-101">Describes the parameters for monitoring an upgrade in Monitored mode.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.failureAction
+  name: failureAction
+  fullName: failureAction
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f3efb-102">L'azione di compensazione da eseguire quando un aggiornamento di monitoraggio rileva violazioni di criteri di integrità o criteri di monitoraggio.</span><span class="sxs-lookup"><span data-stu-id="f3efb-102">The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations.</span></span>
+
+    <span data-ttu-id="f3efb-103">Non valido indica che l'azione di errore non è valido.</span><span class="sxs-lookup"><span data-stu-id="f3efb-103">Invalid indicates the failure action is invalid.</span></span> <span data-ttu-id="f3efb-104">Eseguire il rollback consente di specificare che l'aggiornamento inizierà a eseguire il rollback automaticamente.</span><span class="sxs-lookup"><span data-stu-id="f3efb-104">Rollback specifies that the upgrade will start rolling back automatically.</span></span>
+
+    <span data-ttu-id="f3efb-105">Manual indica che l'aggiornamento passa alla modalità di aggiornamento UnmonitoredManual.</span><span class="sxs-lookup"><span data-stu-id="f3efb-105">Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.</span></span> <span data-ttu-id="f3efb-106">Possibili valori: 'Invalid', 'Rollback', 'Manual'</span><span class="sxs-lookup"><span data-stu-id="f3efb-106">Possible values include: 'Invalid', 'Rollback', 'Manual'</span></span>
+  optional: true
+  syntax:
+    content: 'failureAction?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.healthCheckRetryTimeoutInMilliseconds
+  name: healthCheckRetryTimeoutInMilliseconds
+  fullName: healthCheckRetryTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3efb-107">La quantità di tempo per ripetere la valutazione dell'integrità quando l'applicazione o il cluster sia integro prima dell'esecuzione di FailureAction.</span><span class="sxs-lookup"><span data-stu-id="f3efb-107">The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed.</span></span> <span data-ttu-id="f3efb-108">Viene prima interpretato come stringa che rappresenta una durata ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="f3efb-108">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="f3efb-109">Se l'esito è negativo, viene interpretato come numero che rappresenta il numero totale di millisecondi.</span><span class="sxs-lookup"><span data-stu-id="f3efb-109">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckRetryTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.healthCheckStableDurationInMilliseconds
+  name: healthCheckStableDurationInMilliseconds
+  fullName: healthCheckStableDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3efb-110">Tempo di attesa per cui l'applicazione o il cluster devono rimanere integri prima di passare al dominio di aggiornamento successivo.</span><span class="sxs-lookup"><span data-stu-id="f3efb-110">The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain.</span></span> <span data-ttu-id="f3efb-111">Viene prima interpretato come stringa che rappresenta una durata ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="f3efb-111">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="f3efb-112">Se l'esito è negativo, viene interpretato come numero che rappresenta il numero totale di millisecondi.</span><span class="sxs-lookup"><span data-stu-id="f3efb-112">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckStableDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.healthCheckWaitDurationInMilliseconds
+  name: healthCheckWaitDurationInMilliseconds
+  fullName: healthCheckWaitDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f3efb-113">Tempo di attesa dopo il completamento di un dominio di aggiornamento prima di applicare i criteri di integrità.</span><span class="sxs-lookup"><span data-stu-id="f3efb-113">The amount of time to wait after completing an upgrade domain before applying health policies.</span></span>
+
+    <span data-ttu-id="f3efb-114">Viene prima interpretato come stringa che rappresenta una durata ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="f3efb-114">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="f3efb-115">Se l'esito è negativo, viene interpretato come numero che rappresenta il numero totale di millisecondi.</span><span class="sxs-lookup"><span data-stu-id="f3efb-115">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckWaitDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.upgradeDomainTimeoutInMilliseconds
+  name: upgradeDomainTimeoutInMilliseconds
+  fullName: upgradeDomainTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3efb-116">Tempo necessario al completamento di ogni dominio di aggiornamento prima dell'esecuzione di FailureAction.</span><span class="sxs-lookup"><span data-stu-id="f3efb-116">The amount of time each upgrade domain has to complete before FailureAction is executed.</span></span> <span data-ttu-id="f3efb-117">Viene prima interpretato come stringa che rappresenta una durata ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="f3efb-117">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="f3efb-118">Se l'esito è negativo, viene interpretato come numero che rappresenta il numero totale di millisecondi.</span><span class="sxs-lookup"><span data-stu-id="f3efb-118">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeDomainTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.upgradeTimeoutInMilliseconds
+  name: upgradeTimeoutInMilliseconds
+  fullName: upgradeTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3efb-119">Tempo necessario al completamento dell'aggiornamento prima dell'esecuzione di FailureAction.</span><span class="sxs-lookup"><span data-stu-id="f3efb-119">The amount of time the overall upgrade has to complete before FailureAction is executed.</span></span> <span data-ttu-id="f3efb-120">Viene prima interpretato come stringa che rappresenta una durata ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="f3efb-120">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="f3efb-121">Se l'esito è negativo, viene interpretato come numero che rappresenta il numero totale di millisecondi.</span><span class="sxs-lookup"><span data-stu-id="f3efb-121">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
