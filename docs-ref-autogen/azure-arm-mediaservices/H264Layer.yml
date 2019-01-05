@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 75c8a0c2fd2d2e5de0ab87ce6db8876b89dbd0c0
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53683352"
+items:
+- uid: azure-arm-mediaservices.H264Layer
+  name: H264Layer
+  fullName: H264Layer
+  children:
+  - azure-arm-mediaservices.H264Layer.bufferWindow
+  - azure-arm-mediaservices.H264Layer.entropyMode
+  - azure-arm-mediaservices.H264Layer.level
+  - azure-arm-mediaservices.H264Layer.profile
+  - azure-arm-mediaservices.H264Layer.referenceFrames
+  langs:
+  - typeScript
+  type: interface
+  summary: Descrive le impostazioni da utilizzare durante la codifica di video di input a un livello di velocità in bit di output desiderato con il codec video H.264.
+  extends:
+    name: azure-arm-mediaservices.VideoLayer
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.bufferWindow
+  name: bufferWindow
+  fullName: bufferWindow
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La lunghezza dell'intervallo VBV buffer. Il valore deve essere nel formato ISO 8601. Il valore deve essere di secondi di intervallo [0,1-100]. Il valore predefinito è 5 secondi (ad esempio, PT5S).
+  optional: true
+  syntax:
+    content: 'bufferWindow?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.entropyMode
+  name: entropyMode
+  fullName: entropyMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "La modalità di entropia da utilizzare per questo livello. Se non specificato, il codificatore sceglie la modalità appropriata per il profilo e il livello. I valori possibili sono: 'Cabac', '. Cavlc'"
+  optional: true
+  syntax:
+    content: 'entropyMode?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.level
+  name: level
+  fullName: level
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Il livello dello standard H.264 deve essere usato per la codifica di questo livello. Il valore può essere automatico o un numero che corrisponde al profilo H.264. Se non specificato, il valore predefinito è automatico, che consente il codificatore di scegliere il livello appropriato per questo livello.
+  optional: true
+  syntax:
+    content: 'level?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.profile
+  name: profile
+  fullName: profile
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Quale profilo dello standard H.264 deve essere usata per la codifica di questo livello. Valore predefinito è automatico. I valori possibili sono: 'Auto', 'Base', 'Main', 'Alta', 'High422', 'High444'"
+  optional: true
+  syntax:
+    content: 'profile?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.referenceFrames
+  name: referenceFrames
+  fullName: referenceFrames
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Il numero di frame di riferimento da utilizzare quando questo livello di codifica. Se non specificato, il codificatore determina un numero appropriato in base all'impostazione di complessità del codificatore.
+  optional: true
+  syntax:
+    content: 'referenceFrames?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+references:
+- uid: azure-arm-mediaservices.VideoLayer
+  name: VideoLayer
+  spec.typeScript:
+  - name: VideoLayer
+    fullName: VideoLayer
+    uid: azure-arm-mediaservices.VideoLayer

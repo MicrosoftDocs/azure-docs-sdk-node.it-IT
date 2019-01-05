@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ccb4b418a7ce4895d1376dc2e04c1f1b1dcbdb4e
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53673595"
+items:
+- uid: azure-batch.PoolInformation
+  name: PoolInformation
+  fullName: PoolInformation
+  children:
+  - azure-batch.PoolInformation.autoPoolSpecification
+  - azure-batch.PoolInformation.poolId
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.PoolInformation.autoPoolSpecification
+  name: autoPoolSpecification
+  fullName: autoPoolSpecification
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se la creazione del pool automatico non riesce, il servizio Batch sposta il processo in uno stato completato e l'errore di creazione di pool è impostata nella proprietà error della pianificazione del processo. Il servizio Batch gestisce la durata (entrambi la creazione e, a meno che non viene specificato keepAlive, eliminazione) del pool automatico. Tutte le azioni utente che influisce sulla durata del pool automatico mentre è attivo il processo comporterà un comportamento imprevisto. È necessario specificare l'ID del pool o specifica automatica del pool, ma non entrambi.
+  optional: true
+  syntax:
+    content: 'autoPoolSpecification?: AutoPoolSpecification'
+    return:
+      type:
+      - azure-batch.AutoPoolSpecification
+  package: azure-batch
+- uid: azure-batch.PoolInformation.poolId
+  name: poolId
+  fullName: poolId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: È necessario assicurarsi che esista il pool di cui viene fatto riferimento da questa proprietà. Se il pool non esiste al momento che il servizio Batch tenta di pianificare un processo, non verrà eseguita alcuna attività per il processo fino a quando non si crea un pool con tale id. Si noti che il servizio Batch non rifiuta la richiesta di processo. è sufficiente non eseguirà attività fino a quando non è presente il pool. È necessario specificare l'ID del pool o specifica automatica del pool, ma non entrambi.
+  optional: true
+  syntax:
+    content: 'poolId?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.AutoPoolSpecification
+  name: AutoPoolSpecification
+  spec.typeScript:
+  - name: AutoPoolSpecification
+    fullName: AutoPoolSpecification
+    uid: azure-batch.AutoPoolSpecification
