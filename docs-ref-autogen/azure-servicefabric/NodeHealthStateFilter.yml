@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7cfa6c93f47756f2ca02217849d1083336f867f2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52007816"
+items:
+- uid: azure-servicefabric.NodeHealthStateFilter
+  name: NodeHealthStateFilter
+  fullName: NodeHealthStateFilter
+  children:
+  - azure-servicefabric.NodeHealthStateFilter.healthStateFilter
+  - azure-servicefabric.NodeHealthStateFilter.nodeNameFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Definisce i criteri di corrispondenza per determinare se un nodo deve essere inclusi nel blocco di integrità del cluster restituito.
+
+    Un filtro può corrispondere a zero, uno o più nodi, a seconda delle relative proprietà.
+
+    È possibile specificare la descrizione della query blocco dell'integrità del cluster.
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Il filtro per lo stato di integrità dei nodi. Consente la selezione di nodi se corrispondono gli stati di integrità desiderate.
+
+    I valori possibili sono il valore intero di uno dei seguenti stati di integrità. Vengono restituiti solo i nodi che corrispondono al filtro. Tutti i nodi vengono usati per valutare lo stato di integrità aggregato del cluster.
+
+    Se non specificato, valore predefinito è None, a meno che non viene specificato il nome del nodo. Se il filtro predefinito un valore che specifica un nome nodo, viene restituito il nodo corrispondente.
+
+    I valori dello stato sono enumerati in base al flag, pertanto il valore potrebbe essere una combinazione di questi valori ottenuti usando l'operatore "OR" bit per bit.
+
+    Ad esempio, se il valore fornito è 6, corrisponde a nodi con valore HealthState OK (2) e Warning (4).
+
+    - Default - valore predefinito. Consente di ricercare qualsiasi stato di integrità. Il valore predefinito è zero.
+
+    - None - filtro che non corrisponde ad alcun valore. Usato per non restituire alcun risultato in un determinato insieme di stati. Il valore è uguale a 1.
+
+    - OK - filtro che corrispondenze di input con valore HealthState Ok. Il valore è 2.
+
+    - Warning - filtro che corrispondenze di input con HealthState valore avviso. Il valore è 4.
+
+    - Error - filtro che corrisponde all'input con valore di HealthState errore. Il valore è 8.
+
+    - All - filtro che corrisponde all'input con qualsiasi valore di HealthState. Il valore è 65535.
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeHealthStateFilter.nodeNameFilter
+  name: nodeNameFilter
+  fullName: nodeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Nome del nodo che corrisponde al filtro. Il filtro viene applicato solo al nodo specificato, se presente.
+
+    Se il nodo non esiste, non viene restituito alcun nodo nel blocco di integrità del cluster in base a questo filtro.
+
+    Se il nodo è presente, è incluso nel blocco di integrità del cluster se lo stato di integrità corrisponde le altre proprietà di filtro.
+
+    Se non specificato, tutti i nodi che corrispondono ai filtri padre (se presenti) vengono presi in considerazione e confrontati con gli altri membri di filtro, ad esempio di filtro dello stato di integrità.
+  optional: true
+  syntax:
+    content: 'nodeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
