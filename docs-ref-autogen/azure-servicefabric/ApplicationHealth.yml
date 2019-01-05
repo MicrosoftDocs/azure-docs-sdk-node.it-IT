@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 99791089d694d9464865ba84d25d7791099dd66a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52102557"
+items:
+- uid: azure-servicefabric.ApplicationHealth
+  name: ApplicationHealth
+  fullName: ApplicationHealth
+  children:
+  - azure-servicefabric.ApplicationHealth.deployedApplicationHealthStates
+  - azure-servicefabric.ApplicationHealth.name
+  - azure-servicefabric.ApplicationHealth.serviceHealthStates
+  langs:
+  - typeScript
+  type: interface
+  summary: Rappresenta l'integrità dell'applicazione. Contiene lo stato di integrità aggregato dell'applicazione e gli stati di integrità dell'applicazione di servizio e distribuito.
+  extends:
+    name: azure-servicefabric.EntityHealth
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealth.deployedApplicationHealthStates
+  name: deployedApplicationHealthStates
+  fullName: deployedApplicationHealthStates
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Distribuire gli stati di integrità dell'applicazione, disponibile nell'archivio integrità.
+  optional: true
+  syntax:
+    content: 'deployedApplicationHealthStates?: DeployedApplicationHealthState[]'
+    return:
+      type:
+      - azure-servicefabric.DeployedApplicationHealthState[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealth.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Il nome dell'applicazione, incluso il ' fabric:' Schema URI.
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealth.serviceHealthStates
+  name: serviceHealthStates
+  fullName: serviceHealthStates
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Stati di integrità servizio come individuato nell'archivio integrità.
+  optional: true
+  syntax:
+    content: 'serviceHealthStates?: ServiceHealthState[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceHealthState[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.EntityHealth
+  name: EntityHealth
+  spec.typeScript:
+  - name: EntityHealth
+    fullName: EntityHealth
+    uid: azure-servicefabric.EntityHealth
+- uid: azure-servicefabric.DeployedApplicationHealthState[]
+  name: DeployedApplicationHealthState[]
+  spec.typeScript:
+  - name: DeployedApplicationHealthState
+    fullName: DeployedApplicationHealthState
+    uid: azure-servicefabric.DeployedApplicationHealthState
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ServiceHealthState[]
+  name: ServiceHealthState[]
+  spec.typeScript:
+  - name: ServiceHealthState
+    fullName: ServiceHealthState
+    uid: azure-servicefabric.ServiceHealthState
+  - name: '[]'
+    fullName: '[]'

@@ -1,0 +1,272 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3fb9bb21d3795eda2eef24789727f38c5c669e9c
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53658875"
+items:
+- uid: azure-cognitiveservices-imagesearch.ImageInsights
+  name: ImageInsights
+  fullName: ImageInsights
+  children:
+  - azure-cognitiveservices-imagesearch.ImageInsights.bestRepresentativeQuery
+  - azure-cognitiveservices-imagesearch.ImageInsights.imageCaption
+  - azure-cognitiveservices-imagesearch.ImageInsights.imageInsightsToken
+  - azure-cognitiveservices-imagesearch.ImageInsights.imageTags
+  - azure-cognitiveservices-imagesearch.ImageInsights.pagesIncluding
+  - azure-cognitiveservices-imagesearch.ImageInsights.recipes
+  - azure-cognitiveservices-imagesearch.ImageInsights.recognizedEntityGroups
+  - azure-cognitiveservices-imagesearch.ImageInsights.relatedCollections
+  - azure-cognitiveservices-imagesearch.ImageInsights.relatedSearches
+  - azure-cognitiveservices-imagesearch.ImageInsights.shoppingSources
+  - azure-cognitiveservices-imagesearch.ImageInsights.visuallySimilarImages
+  - azure-cognitiveservices-imagesearch.ImageInsights.visuallySimilarProducts
+  langs:
+  - typeScript
+  type: interface
+  summary: L'oggetto di primo livello che la risposta include quando una richiesta di insights immagine ha esito positivo. Per informazioni su come richiedere informazioni dettagliate sulle immagini, vedere la [insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken) parametro di query. Il parametro di query di moduli interessa i campi da Bing è include nella risposta. Se si imposta [moduli](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#modulesrequested) solo didascalia, quindi questo oggetto include solo il campo imageCaption.
+  extends:
+    name: azure-cognitiveservices-imagesearch.Response
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.bestRepresentativeQuery
+  name: bestRepresentativeQuery
+  fullName: bestRepresentativeQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Il termine di query che meglio rappresenta l'immagine. Selezionando il collegamento nell'oggetto di Query, richiede all'utente di una pagina Web con più immagini dell'immagine.
+  optional: true
+  syntax:
+    content: 'bestRepresentativeQuery?: Query'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.Query
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.imageCaption
+  name: imageCaption
+  fullName: imageCaption
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La didascalia da utilizzare per l'immagine.
+  optional: true
+  syntax:
+    content: 'imageCaption?: ImageInsightsImageCaption'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.ImageInsightsImageCaption
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.imageInsightsToken
+  name: imageInsightsToken
+  fullName: imageInsightsToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Token utilizzabili in una chiamata successiva per l'API ricerca immagini per ottenere altre informazioni sull'immagine. Per informazioni sull'uso di questo token, vedere il parametro di query insightsToken. Questo token è lo stesso utilizzo del token nell'oggetto immagine.
+  optional: true
+  syntax:
+    content: 'imageInsightsToken?: string'
+    return:
+      type:
+      - string
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.imageTags
+  name: imageTags
+  fullName: imageTags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Un elenco delle caratteristiche del contenuto trovato nell'immagine. Ad esempio, se l'immagine di una persona, i tag potrebbero indicare il sesso di una persona e il tipo di vestiti che sono in uso.
+  optional: true
+  syntax:
+    content: 'imageTags?: ImageTagsModule'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.ImageTagsModule
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.pagesIncluding
+  name: pagesIncluding
+  fullName: pagesIncluding
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Un elenco delle pagine Web che contengono l'immagine. Per accedere alla pagina Web, usare l'URL nel campo hostPageUrl dell'immagine.
+  optional: true
+  syntax:
+    content: 'pagesIncluding?: ImagesModule'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.ImagesModule
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.recipes
+  name: recipes
+  fullName: recipes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Un elenco di recipes correlata all'immagine. Ad esempio, se l'immagine è di un grafico a torta apple, l'elenco contiene le recipe per l'esecuzione di un grafico a torta apple.
+  optional: true
+  syntax:
+    content: 'recipes?: RecipesModule'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.RecipesModule
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.recognizedEntityGroups
+  name: recognizedEntityGroups
+  fullName: recognizedEntityGroups
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Un elenco di gruppi che contengono immagini dell'entità che soddisfano l'entità è stata trovata nell'immagine specificata. Ad esempio, la risposta può includere immagini dal gruppo relativo alle celebrità generale se l'entità è stata riconosciuta in tale gruppo.
+  optional: true
+  syntax:
+    content: 'recognizedEntityGroups?: RecognizedEntitiesModule'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.RecognizedEntitiesModule
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.relatedCollections
+  name: relatedCollections
+  fullName: relatedCollections
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Un elenco di collegamenti a pagine Web che contengono immagini correlate.
+  optional: true
+  syntax:
+    content: 'relatedCollections?: RelatedCollectionsModule'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.RelatedCollectionsModule
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.relatedSearches
+  name: relatedSearches
+  fullName: relatedSearches
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Elenco di query correlate apportate da altri utenti.
+  optional: true
+  syntax:
+    content: 'relatedSearches?: RelatedSearchesModule'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.RelatedSearchesModule
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.shoppingSources
+  name: shoppingSources
+  fullName: shoppingSources
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Elenco di commercianti che offrono gli elementi correlati all'immagine. Ad esempio, se l'immagine è di un grafico a torta apple, l'elenco contiene le aziende che vendono torte apple.
+  optional: true
+  syntax:
+    content: 'shoppingSources?: AggregateOffer'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.AggregateOffer
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.visuallySimilarImages
+  name: visuallySimilarImages
+  fullName: visuallySimilarImages
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Un elenco di immagini visivamente simili all'immagine originale. Ad esempio, se l'immagine specificata è un tramonto tramite un corpo di acqua, l'elenco di immagini simili sono di un tramonto tramite un corpo di acqua. Se l'immagine specificata è di una persona, immagini simili potrebbero rivelarsi la stessa persona o potrebbero essere delle persone che si presenti allo stesso modo o in un'impostazione simile. I criteri per individuarne la somiglianza continuano ad evolvere.
+  optional: true
+  syntax:
+    content: 'visuallySimilarImages?: ImagesModule'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.ImagesModule
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImageInsights.visuallySimilarProducts
+  name: visuallySimilarProducts
+  fullName: visuallySimilarProducts
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Un elenco di immagini che contengono i prodotti che sono simili a livello visivo ai prodotti trovati nell'immagine originale. Ad esempio, se l'immagine specificata contiene un distintivi, l'elenco di immagini simili contengono un disposizioni in materia. L'immagine fornisce informazioni di riepilogo sulle offerte di Bing disponibili online per il prodotto.
+  optional: true
+  syntax:
+    content: 'visuallySimilarProducts?: ImagesModule'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.ImagesModule
+  package: azure-cognitiveservices-imagesearch
+references:
+- uid: azure-cognitiveservices-imagesearch.Response
+  name: Response
+  spec.typeScript:
+  - name: Response
+    fullName: Response
+    uid: azure-cognitiveservices-imagesearch.Response
+- uid: azure-cognitiveservices-imagesearch.Query
+  name: Query
+  spec.typeScript:
+  - name: Query
+    fullName: Query
+    uid: azure-cognitiveservices-imagesearch.Query
+- uid: azure-cognitiveservices-imagesearch.ImageInsightsImageCaption
+  name: ImageInsightsImageCaption
+  spec.typeScript:
+  - name: ImageInsightsImageCaption
+    fullName: ImageInsightsImageCaption
+    uid: azure-cognitiveservices-imagesearch.ImageInsightsImageCaption
+- uid: azure-cognitiveservices-imagesearch.ImageTagsModule
+  name: ImageTagsModule
+  spec.typeScript:
+  - name: ImageTagsModule
+    fullName: ImageTagsModule
+    uid: azure-cognitiveservices-imagesearch.ImageTagsModule
+- uid: azure-cognitiveservices-imagesearch.ImagesModule
+  name: ImagesModule
+  spec.typeScript:
+  - name: ImagesModule
+    fullName: ImagesModule
+    uid: azure-cognitiveservices-imagesearch.ImagesModule
+- uid: azure-cognitiveservices-imagesearch.RecipesModule
+  name: RecipesModule
+  spec.typeScript:
+  - name: RecipesModule
+    fullName: RecipesModule
+    uid: azure-cognitiveservices-imagesearch.RecipesModule
+- uid: azure-cognitiveservices-imagesearch.RecognizedEntitiesModule
+  name: RecognizedEntitiesModule
+  spec.typeScript:
+  - name: RecognizedEntitiesModule
+    fullName: RecognizedEntitiesModule
+    uid: azure-cognitiveservices-imagesearch.RecognizedEntitiesModule
+- uid: azure-cognitiveservices-imagesearch.RelatedCollectionsModule
+  name: RelatedCollectionsModule
+  spec.typeScript:
+  - name: RelatedCollectionsModule
+    fullName: RelatedCollectionsModule
+    uid: azure-cognitiveservices-imagesearch.RelatedCollectionsModule
+- uid: azure-cognitiveservices-imagesearch.RelatedSearchesModule
+  name: RelatedSearchesModule
+  spec.typeScript:
+  - name: RelatedSearchesModule
+    fullName: RelatedSearchesModule
+    uid: azure-cognitiveservices-imagesearch.RelatedSearchesModule
+- uid: azure-cognitiveservices-imagesearch.AggregateOffer
+  name: AggregateOffer
+  spec.typeScript:
+  - name: AggregateOffer
+    fullName: AggregateOffer
+    uid: azure-cognitiveservices-imagesearch.AggregateOffer
