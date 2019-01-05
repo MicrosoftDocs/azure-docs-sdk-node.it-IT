@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4d36b30314b4f4fdefaecf924757a555ac54264c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52126006"
+items:
+- uid: ms-rest-azure.loginWithVmMSI_1
+  name: 'loginWithVmMSI(MSIVmOptions, (err: Error, credentials: MSIVmTokenCredentials) => void)'
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: >
+    Prima di questo metodo, installare az cli dal https://github.com/Azure/azure-cli/releases.
+
+    Se si dispone di una macchina virtuale di Azure eseguito il provisioning con az cli e dispone di identità del servizio gestito abilitata, è quindi possibile usare questo metodo per ottenere i token di autenticazione dalla macchina virtuale.
+
+    Per creare una nuova macchina virtuale, abilitare identità del servizio gestito, eseguire questo comando: creare -g < nome_gruppo_di_risorse > - n < vm_name > - az vm assign-identity - immagine < os_image_name > Nota: il comando precedente consente a un endpoint del servizio nell'host, con la porta predefinita 50342
+
+
+    Per abilitare l'identità del servizio gestito in una VM già sottoposte a provisioning, eseguire il comando seguente: az vm - assign-identity - g < nome_gruppo_di_risorse > -n < vm_name >, porta < custom_port_number >
+
+
+    Per altre informazioni su questo comando, eseguire: az vm - assign-identity - h
+
+
+    Esegue l'autenticazione usando il servizio di identità in esecuzione in una macchina virtuale di Azure.
+
+    Questo metodo effettua una richiesta al servizio di autenticazione ospitato nella macchina virtuale e consente di ottenere un token di accesso.
+  syntax:
+    content: 'function loginWithVmMSI(options: MSIVmOptions, callback: (err: Error, credentials: MSIVmTokenCredentials) => void)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest-azure.MSIVmOptions
+      description: ''
+    - id: callback
+      type:
+      - '(err: Error, credentials: MSIVmTokenCredentials) => void'
+      description: ''
+  package: ms-rest-azure
+references:
+- uid: ms-rest-azure.MSIVmOptions
+  name: MSIVmOptions
+  spec.typeScript:
+  - name: MSIVmOptions
+    fullName: MSIVmOptions
+    uid: ms-rest-azure.MSIVmOptions

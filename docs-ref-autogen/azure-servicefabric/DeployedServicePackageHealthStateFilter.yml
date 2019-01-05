@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 62fd16ee404efba59799d1de2f35e41f30d61e8d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52126439"
+items:
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter
+  name: DeployedServicePackageHealthStateFilter
+  fullName: DeployedServicePackageHealthStateFilter
+  children:
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Definisce i criteri di corrispondenza per determinare se un pacchetto del servizio distribuito deve essere incluso come elemento figlio di un'applicazione distribuita nel blocco di integrità del cluster.
+
+    Se l'entità padre corrisponde al filtro specificato nella descrizione di query blocco di integrità del cluster, vengono restituiti solo i pacchetti del servizio distribuito. L'elemento padre distribuito dell'applicazione e applicazione padre deve essere incluso nel blocco di integrità del cluster.
+
+    Un filtro può corrispondere a zero, distribuire uno o più pacchetti, a seconda delle relative proprietà del servizio.
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Il filtro per lo stato di integrità dei pacchetti servizio distribuiti. Consente la selezione di pacchetti del servizio distribuiti se corrispondono gli stati di integrità desiderate.
+
+    I valori possibili sono il valore intero di uno dei seguenti stati di integrità. Vengono restituiti solo i pacchetti servizio distribuiti che corrispondono al filtro. Tutti i pacchetti del servizio distribuiti vengono utilizzati per valutare lo stato di integrità aggregato dell'applicazione padre distribuita.
+
+    Se non specificato, valore predefinito è None, a meno che non viene specificato l'ID del pacchetto servizio distribuito.
+
+    Se il filtro ha valore predefinito e ID del pacchetto servizio distribuito è specificato, viene restituito il pacchetto del servizio distribuito corrispondente.
+
+    I valori dello stato sono enumerati in base al flag, pertanto il valore potrebbe essere una combinazione di questi valori ottenuti usando l'operatore "OR" bit per bit.
+
+    Ad esempio, se il valore fornito è 6, corrisponde a pacchetti del servizio distribuiti con valore HealthState OK (2) e Warning (4).
+
+    - Default - valore predefinito. Consente di ricercare qualsiasi stato di integrità. Il valore predefinito è zero.
+
+    - None - filtro che non corrisponde ad alcun valore. Usato per non restituire alcun risultato in un determinato insieme di stati. Il valore è uguale a 1.
+
+    - OK - filtro che corrispondenze di input con valore HealthState Ok. Il valore è 2.
+
+    - Warning - filtro che corrispondenze di input con HealthState valore avviso. Il valore è 4.
+
+    - Error - filtro che corrisponde all'input con valore di HealthState errore. Il valore è 8.
+
+    - All - filtro che corrisponde all'input con qualsiasi valore di HealthState. Il valore è 65535.
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  name: serviceManifestNameFilter
+  fullName: serviceManifestNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Nome del manifesto del servizio che identifica i pacchetti del servizio distribuito che corrisponde al filtro.
+
+    Se specificato, il filtro viene applicato solo ai pacchetti servizio distribuiti specificato, se presente.
+
+    Se è presente alcun pacchetto servizio distribuito con il nome di manifesto specificato, non viene restituito nel blocco di integrità del cluster in base a questo filtro.
+
+    Se è presente alcun pacchetto del servizio distribuito, se rispetta le altre proprietà di filtro sono inclusi nel blocco di integrità del cluster.
+
+    In caso contrario pacchetti del servizio specificato, tutti distribuiti che corrispondono ai filtri padre (se presenti) vengono presi in considerazione e confrontati con gli altri membri di filtro, ad esempio di filtro dello stato di integrità.
+  optional: true
+  syntax:
+    content: 'serviceManifestNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  name: servicePackageActivationIdFilter
+  fullName: servicePackageActivationIdFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    L'ID di attivazione di un pacchetto servizio distribuito che corrisponde al filtro.
+
+    Se non specificato, il filtro si applica a tutti i pacchetti del servizio distribuiti che soddisfano gli altri parametri.
+
+    Se specificato, il filtro corrisponde solo il pacchetto del servizio distribuito con l'ID di attivazione specificato.
+  optional: true
+  syntax:
+    content: 'servicePackageActivationIdFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

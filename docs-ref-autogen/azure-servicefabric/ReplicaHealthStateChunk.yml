@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 19d201239ed8575c337fe1c42f90eed04965de0e
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52152666"
+items:
+- uid: azure-servicefabric.ReplicaHealthStateChunk
+  name: ReplicaHealthStateChunk
+  fullName: ReplicaHealthStateChunk
+  children:
+  - azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Rappresenta il blocco dello stato di integrità replica di un servizio con stato o un'istanza del servizio senza stato.
+
+    Lo stato di integrità della replica contiene l'ID della replica e il relativo stato di integrità aggregato.
+  extends:
+    name: azure-servicefabric.EntityHealthStateChunk
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+  name: replicaOrInstanceId
+  fullName: replicaOrInstanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ID replica di un servizio con stato o un'istanza del servizio senza stato. Questo ID viene usato nelle query che si applicano ai servizi con stati sia senza stati. Utilizzato da Service Fabric per identificare in modo univoco una replica di una partizione di un servizio con stato a un'istanza di una partizione del servizio senza stato. È univoco all'interno di una partizione e non viene modificato per la durata della replica o istanza. Se una replica con stato Ottiene eliminata e un'altra replica viene creata nello stesso nodo per la stessa partizione, otterrà un valore diverso per l'ID. Se un'istanza senza stato viene eseguita il failover sul nodo stesso o diverso verrà visualizzato un valore diverso per l'ID.
+  optional: true
+  syntax:
+    content: 'replicaOrInstanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.EntityHealthStateChunk
+  name: EntityHealthStateChunk
+  spec.typeScript:
+  - name: EntityHealthStateChunk
+    fullName: EntityHealthStateChunk
+    uid: azure-servicefabric.EntityHealthStateChunk
