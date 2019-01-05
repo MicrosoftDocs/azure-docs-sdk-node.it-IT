@@ -1,0 +1,179 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1c5d4291ffe02ac8f86bc6d6aca1109c397d9195
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48514789"
+items:
+- uid: '@azure/event-hubs.CbsClient'
+  name: CbsClient
+  fullName: CbsClient
+  children:
+  - '@azure/event-hubs.CbsClient.constructor'
+  - '@azure/event-hubs.CbsClient.cbsLock'
+  - '@azure/event-hubs.CbsClient.close'
+  - '@azure/event-hubs.CbsClient.connection'
+  - '@azure/event-hubs.CbsClient.connectionLock'
+  - '@azure/event-hubs.CbsClient.endpoint'
+  - '@azure/event-hubs.CbsClient.init'
+  - '@azure/event-hubs.CbsClient.negotiateClaim'
+  - '@azure/event-hubs.CbsClient.replyTo'
+  langs:
+  - typeScript
+  type: class
+  summary: ''
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.constructor'
+  name: CbsClient
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new CbsClient(connection: Connection, connectionLock: string)'
+    parameters:
+    - id: connection
+      type:
+      - '@azure/event-hubs.Connection'
+      description: <span data-ttu-id="79681-101">La connessione AMQP.</span><span class="sxs-lookup"><span data-stu-id="79681-101">The AMQP conection.</span></span>
+    - id: connectionLock
+      type:
+      - string
+      description: >
+        <span data-ttu-id="79681-102">Una stringa univoca (in genere un guid) per ogni connessione.</span><span class="sxs-lookup"><span data-stu-id="79681-102">A unique string (usually a guid) per connection.</span></span>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.cbsLock'
+  name: cbsLock
+  fullName: cbsLock
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="79681-103">Il nome del blocco univoco per ogni sessione $cbs per ogni connessione che consente di acquisire il blocco per stabilire una sessione di cbs, se non ne esiste una connessione aqmp cbsLock di {stringa}.</span><span class="sxs-lookup"><span data-stu-id="79681-103">{string} cbsLock The unqiue lock name per $cbs session per connection that is used to acquire the lock for establishing a cbs session if one does not exist for an aqmp connection.</span></span>
+  syntax:
+    content: 'cbsLock: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.close'
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79681-104">Chiude la sessione di cbs AMQP per l'hub eventi/bus di servizio per questo client, la restituzione di un suggerimento che viene risolto quando viene completata la disconnessione.</span><span class="sxs-lookup"><span data-stu-id="79681-104">Closes the AMQP cbs session to the EventHub/ServiceBus for this client, returning a promise that will be resolved when disconnection is completed.</span></span>
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.connection'
+  name: connection
+  fullName: connection
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="79681-105">Connessione AMQP la connessione di {connessione}.</span><span class="sxs-lookup"><span data-stu-id="79681-105">{Connection} connection The AMQP connection.</span></span>
+  syntax:
+    content: 'connection: Connection'
+    return:
+      type:
+      - '@azure/event-hubs.Connection'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.connectionLock'
+  name: connectionLock
+  fullName: connectionLock
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="79681-106">{stringa} connectionLock il nome del blocco univoco per ogni connessione che consente di acquisire il blocco per stabilire una connessione amqp, se non esiste.</span><span class="sxs-lookup"><span data-stu-id="79681-106">{string} connectionLock The unqiue lock name per connection that is used to acquire the lock for establishing an amqp connection if one does not exist.</span></span>
+  syntax:
+    content: 'connectionLock: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.endpoint'
+  name: endpoint
+  fullName: endpoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="79681-107">endpoint CBS di endpoint {stringa}: "$cbs"</span><span class="sxs-lookup"><span data-stu-id="79681-107">{string} endpoint CBS endpoint - "$cbs"</span></span>'
+  syntax:
+    content: 'endpoint: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.init'
+  name: init
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79681-108">Crea un'istanza singleton della sessione CBS se non è stato inizializzato in precedenza per la connessione specificata.</span><span class="sxs-lookup"><span data-stu-id="79681-108">Creates a singleton instance of the CBS session if it hasn't been initialized previously on the given connection.</span></span>
+  syntax:
+    content: function init()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.negotiateClaim'
+  name: negotiateClaim
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="79681-109">Negozia l'attestazione CBS con il servizio hub eventi/bus di servizio.</span><span class="sxs-lookup"><span data-stu-id="79681-109">Negotiates the CBS claim with the EventHub/ServiceBus Service.</span></span>
+  syntax:
+    content: 'function negotiateClaim(audience: string, tokenObject: TokenInfo)'
+    parameters:
+    - id: audience
+      type:
+      - string
+      description: <span data-ttu-id="79681-110">Gruppo di destinatari per la quale viene richiesto il token.</span><span class="sxs-lookup"><span data-stu-id="79681-110">The audience for which the token is requested.</span></span>
+    - id: tokenObject
+      type:
+      - '@azure/event-hubs.TokenInfo'
+      description: <span data-ttu-id="79681-111">Oggetto token deve essere inviato nella richiesta put-token.</span><span class="sxs-lookup"><span data-stu-id="79681-111">The token object that needs to be sent in the put-token request.</span></span>
+    return:
+      type:
+      - Promise<any>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.replyTo'
+  name: replyTo
+  fullName: replyTo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="79681-112">{stringa} replyTo CBS replyTo - il nome del collegamento ricevitore che il servizio deve rispondere.</span><span class="sxs-lookup"><span data-stu-id="79681-112">{string} replyTo CBS replyTo - The reciever link name that the service should reply to.</span></span>
+  syntax:
+    content: 'replyTo: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.Connection'
+  name: Connection
+  spec.typeScript:
+  - name: Connection
+    fullName: Connection
+    uid: '@azure/event-hubs.Connection'
+- uid: '@azure/event-hubs.TokenInfo'
+  name: TokenInfo
+  spec.typeScript:
+  - name: TokenInfo
+    fullName: TokenInfo
+    uid: '@azure/event-hubs.TokenInfo'
