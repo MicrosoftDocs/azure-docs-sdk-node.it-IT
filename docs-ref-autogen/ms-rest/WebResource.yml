@@ -1,0 +1,206 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 779ee5e566ab6a1ff0f8ca534626ea75dc3211a9
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52021765"
+items:
+- uid: ms-rest.WebResource
+  name: WebResource
+  fullName: WebResource
+  children:
+  - ms-rest.WebResource.body
+  - ms-rest.WebResource.formData
+  - ms-rest.WebResource.headers
+  - ms-rest.WebResource.method
+  - ms-rest.WebResource.pipeInput
+  - ms-rest.WebResource.prepare
+  - ms-rest.WebResource.query
+  - ms-rest.WebResource.rawResponse
+  - ms-rest.WebResource.url
+  - ms-rest.WebResource.validateRequestProperties
+  langs:
+  - typeScript
+  type: class
+  summary: Questa classe fornisce un'astrazione su una chiamata REST perché libreria / indipendente dall'implementazione e ritorno a capo le proprietà necessarie per avviare una richiesta.
+  package: ms-rest
+- uid: ms-rest.WebResource.body
+  name: body
+  fullName: body
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{qualsiasi} [body] Il corpo della richiesta'
+  optional: true
+  syntax:
+    content: 'public body?: any'
+    return:
+      type:
+      - any
+  package: ms-rest
+- uid: ms-rest.WebResource.formData
+  name: formData
+  fullName: formData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{qualsiasi} [formData] Parametri del form-data.'
+  optional: true
+  syntax:
+    content: 'public formData?: any'
+    return:
+      type:
+      - any
+  package: ms-rest
+- uid: ms-rest.WebResource.headers
+  name: headers
+  fullName: headers
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Accesso alle intestazioni delle richieste non elaborate per le richieste. È utile quando è necessario impostare un'intestazione in ogni richiesta (come in un oggetto credenziale) in cui il metodo di preparazione non troppo lavoro.
+  syntax:
+    content: 'public headers: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: ms-rest
+- uid: ms-rest.WebResource.method
+  name: method
+  fullName: method
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: metodo {stringa} il metodo di richiesta
+  syntax:
+    content: 'public method: HttpMethods'
+    return:
+      type:
+      - ms-rest.HttpMethods
+  package: ms-rest
+- uid: ms-rest.WebResource.pipeInput
+  name: pipeInput(stream.Readable, stream.Writable)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Associare il flusso di input specificato in un flusso di output di destinazione se il metodo WebResource richiede un corpo della richiesta e un corpo non è già impostato.
+  syntax:
+    content: 'function pipeInput(inputStream: stream.Readable, destStream: stream.Writable)'
+    parameters:
+    - id: inputStream
+      type:
+      - stream.Readable
+      description: il flusso sulla pipe da
+    - id: destStream
+      type:
+      - stream.Writable
+      description: ''
+    return:
+      type:
+      - stream.Writable
+  package: ms-rest
+- uid: ms-rest.WebResource.prepare
+  name: prepare(PathTemplateBasedRequestPrepareOptions | UrlBasedRequestPrepareOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Prepara la richiesta.
+  syntax:
+    content: 'function prepare(options?: PathTemplateBasedRequestPrepareOptions | UrlBasedRequestPrepareOptions)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest.PathTemplateBasedRequestPrepareOptions | ms-rest.UrlBasedRequestPrepareOptions
+      description: >
+        Le opzioni di richiesta che devono essere fornite per inviare una richiesta completata
+      optional: true
+    return:
+      type:
+      - ms-rest.WebResource
+  package: ms-rest
+- uid: ms-rest.WebResource.query
+  name: query
+  fullName: query
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{qualsiasi} [query] Parametri di query'
+  optional: true
+  syntax:
+    content: 'public query?: [key: string]: any'
+    return:
+      type:
+      - '[key: string]: any'
+  package: ms-rest
+- uid: ms-rest.WebResource.rawResponse
+  name: rawResponse
+  fullName: rawResponse
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: rawResponse {boolean} indica se il client deve restituire la risposta come-è. (Utile per scenari di flusso).
+  optional: true
+  syntax:
+    content: 'public rawResponse?: boolean'
+    return:
+      type:
+      - boolean
+  package: ms-rest
+- uid: ms-rest.WebResource.url
+  name: url
+  fullName: url
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{stringa} url della richiesta url'
+  syntax:
+    content: 'public url: string'
+    return:
+      type:
+      - string
+  package: ms-rest
+- uid: ms-rest.WebResource.validateRequestProperties
+  name: validateRequestProperties()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Verifica che siano definite le proprietà necessarie, ad esempio, url, le intestazioni dei metodi ['Content-Type'], intestazioni ['accept-language']. Genererà un errore se una delle proprietà citato in precedenza non è definita.
+  syntax:
+    content: function validateRequestProperties()
+    parameters: []
+  package: ms-rest
+references:
+- uid: ms-rest.HttpMethods
+  name: HttpMethods
+  spec.typeScript:
+  - name: HttpMethods
+    fullName: HttpMethods
+    uid: ms-rest.HttpMethods
+- uid: ms-rest.PathTemplateBasedRequestPrepareOptions | ms-rest.UrlBasedRequestPrepareOptions
+  name: UrlBasedRequestPrepareOptions
+  spec.typeScript:
+  - name: PathTemplateBasedRequestPrepareOptions
+    fullName: PathTemplateBasedRequestPrepareOptions
+    uid: ms-rest.PathTemplateBasedRequestPrepareOptions
+  - name: " | "
+    fullName: " | "
+  - name: UrlBasedRequestPrepareOptions
+    fullName: UrlBasedRequestPrepareOptions
+    uid: ms-rest.UrlBasedRequestPrepareOptions
+- uid: ms-rest.WebResource
+  name: WebResource
+  spec.typeScript:
+  - name: WebResource
+    fullName: WebResource
+    uid: ms-rest.WebResource
