@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c560df5ddc88945feac73c922c7e297a4e89ca44
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53665905"
+items:
+- uid: azure-batch.LinuxUserConfiguration
+  name: LinuxUserConfiguration
+  fullName: LinuxUserConfiguration
+  children:
+  - azure-batch.LinuxUserConfiguration.gid
+  - azure-batch.LinuxUserConfiguration.sshPrivateKey
+  - azure-batch.LinuxUserConfiguration.uid
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.LinuxUserConfiguration.gid
+  name: gid
+  fullName: gid
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Specificare le proprietà uid e un gid insieme o non ereditarli affatto. Se non è specificato il funzionamento sottostante sistema sceglie il gid.
+  optional: true
+  syntax:
+    content: 'gid?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.LinuxUserConfiguration.sshPrivateKey
+  name: sshPrivateKey
+  fullName: sshPrivateKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La chiave privata non deve essere protetto da password. La chiave privata viene usata per configurare automaticamente l'autenticazione basata su chiave asimmetrica per SSH tra i nodi in un pool Linux quando enableInterNodeCommunication proprietà il pool è true (viene ignorato se enableInterNodeCommunication è false). Ciò avviene inserendo la coppia di chiavi nella directory. SSH dell'utente. Se non specificato, senza password SSH non è configurata tra i nodi (non viene eseguita alcuna modifica della directory. SSH dell'utente).
+  optional: true
+  syntax:
+    content: 'sshPrivateKey?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.LinuxUserConfiguration.uid
+  name: uid
+  fullName: uid
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Specificare le proprietà uid e un gid insieme o non ereditarli affatto. Se non è specificato il funzionamento sottostante sistema sceglie l'uid.
+  optional: true
+  syntax:
+    content: 'uid?: number'
+    return:
+      type:
+      - number
+  package: azure-batch

@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f19f6f1eac3271e19e2c465fb09b8d418f95aa0f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52092465"
+items:
+- uid: azure-servicefabric.GetBackupByStorageQueryDescription
+  name: GetBackupByStorageQueryDescription
+  fullName: GetBackupByStorageQueryDescription
+  children:
+  - azure-servicefabric.GetBackupByStorageQueryDescription.backupEntity
+  - azure-servicefabric.GetBackupByStorageQueryDescription.endDateTimeFilter
+  - azure-servicefabric.GetBackupByStorageQueryDescription.latest
+  - azure-servicefabric.GetBackupByStorageQueryDescription.startDateTimeFilter
+  - azure-servicefabric.GetBackupByStorageQueryDescription.storage
+  langs:
+  - typeScript
+  type: interface
+  summary: Vengono descritti i filtri aggiuntivi per essere applicato, mentre l'elenco di backup e i dettagli di archiviazione di backup da cui recuperare i backup.
+  package: azure-servicefabric
+- uid: azure-servicefabric.GetBackupByStorageQueryDescription.backupEntity
+  name: backupEntity
+  fullName: backupEntity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Indica l'entità per cui si desidera enumerare i backup.
+  syntax:
+    content: 'backupEntity: BackupEntity'
+    return:
+      type:
+      - azure-servicefabric.BackupEntity
+  package: azure-servicefabric
+- uid: azure-servicefabric.GetBackupByStorageQueryDescription.endDateTimeFilter
+  name: endDateTimeFilter
+  fullName: endDateTimeFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Specifica la fine data/ora in ISO8601 fino a cui si desidera ottenere i backup. Se non specificato, i backup vengono enumerati fino alla fine.
+  optional: true
+  syntax:
+    content: 'endDateTimeFilter?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.GetBackupByStorageQueryDescription.latest
+  name: latest
+  fullName: latest
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se specificato come true, ottiene il backup più recente (all'interno dell'intervallo di tempo specificato) per ogni partizione sotto l'entità di backup specificato.
+  optional: true
+  syntax:
+    content: 'latest?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.GetBackupByStorageQueryDescription.startDateTimeFilter
+  name: startDateTimeFilter
+  fullName: startDateTimeFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Specifica l'inizio data/ora in ISO8601 da cui si desidera ottenere i backup. Se non specificato, i backup vengono enumerati a partire dall'inizio.
+  optional: true
+  syntax:
+    content: 'startDateTimeFilter?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.GetBackupByStorageQueryDescription.storage
+  name: storage
+  fullName: storage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Vengono descritti i parametri per l'archiviazione dei backup da cui si desidera enumerare i backup. Questa operazione è facoltativa e per impostazione predefinita, i backup vengono enumerati dall'archivio di backup in cui questa entità di backup attualmente sottoposti a backup (come specificato in Criteri di backup). Questo parametro è utile essere in grado di enumerare i backup da un altro cluster in cui si desidera ripristinare.
+  syntax:
+    content: 'storage: BackupStorageDescription'
+    return:
+      type:
+      - azure-servicefabric.BackupStorageDescription
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.BackupEntity
+  name: BackupEntity
+  spec.typeScript:
+  - name: BackupEntity
+    fullName: BackupEntity
+    uid: azure-servicefabric.BackupEntity
+- uid: azure-servicefabric.BackupStorageDescription
+  name: BackupStorageDescription
+  spec.typeScript:
+  - name: BackupStorageDescription
+    fullName: BackupStorageDescription
+    uid: azure-servicefabric.BackupStorageDescription

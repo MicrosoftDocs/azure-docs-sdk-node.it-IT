@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8c8588649c89c7b6e03617078edef832eebd5f1b
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53678765"
+items:
+- uid: azure-arm-network.PublicIPAddressDnsSettings
+  name: PublicIPAddressDnsSettings
+  fullName: PublicIPAddressDnsSettings
+  children:
+  - azure-arm-network.PublicIPAddressDnsSettings.domainNameLabel
+  - azure-arm-network.PublicIPAddressDnsSettings.fqdn
+  - azure-arm-network.PublicIPAddressDnsSettings.reverseFqdn
+  langs:
+  - typeScript
+  type: interface
+  summary: Contiene nome di dominio completo del record DNS associati con l'indirizzo IP pubblico
+  package: azure-arm-network
+- uid: azure-arm-network.PublicIPAddressDnsSettings.domainNameLabel
+  name: domainNameLabel
+  fullName: domainNameLabel
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ottiene o imposta l'etichetta del nome di dominio. Concatenazione dell'etichetta del nome di dominio e della zona DNS localizzata costituiscono il nome di dominio completo associato l'indirizzo IP pubblico. Se viene specificata un'etichetta di nome di dominio, viene creato un record A DNS per l'indirizzo IP pubblico nel sistema DNS di Microsoft Azure.
+  optional: true
+  syntax:
+    content: 'domainNameLabel?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.PublicIPAddressDnsSettings.fqdn
+  name: fqdn
+  fullName: fqdn
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Ottiene il nome di dominio completo, nome di dominio completo del record DNS a associato all'indirizzo IP pubblico.
+
+    Si tratta della concatenazione di domainNameLabel e della zona DNS localizzata.
+  optional: true
+  syntax:
+    content: 'fqdn?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.PublicIPAddressDnsSettings.reverseFqdn
+  name: reverseFqdn
+  fullName: reverseFqdn
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ottiene o imposta il nome di dominio completo inverso. Un visibile all'utente, nome di dominio completo che viene risolto in questo indirizzo IP pubblico. Se è specificato reverseFqdn, viene creato un record DNS PTR che punta dall'indirizzo IP nel dominio in-addr. arpa al FQDN inverso.
+  optional: true
+  syntax:
+    content: 'reverseFqdn?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
