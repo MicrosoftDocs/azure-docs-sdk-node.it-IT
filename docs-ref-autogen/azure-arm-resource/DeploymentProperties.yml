@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d3e75182e570626c77183494aebb37f3ae54a77c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52170016"
+items:
+- uid: azure-arm-resource.DeploymentProperties
+  name: DeploymentProperties
+  fullName: DeploymentProperties
+  children:
+  - azure-arm-resource.DeploymentProperties.debugSetting
+  - azure-arm-resource.DeploymentProperties.mode
+  - azure-arm-resource.DeploymentProperties.onErrorDeployment
+  - azure-arm-resource.DeploymentProperties.parameters
+  - azure-arm-resource.DeploymentProperties.parametersLink
+  - azure-arm-resource.DeploymentProperties.template
+  - azure-arm-resource.DeploymentProperties.templateLink
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="af223-101">Proprietà di distribuzione.</span><span class="sxs-lookup"><span data-stu-id="af223-101">Deployment properties.</span></span>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.debugSetting
+  name: debugSetting
+  fullName: debugSetting
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="af223-102">L'impostazione di debug della distribuzione.</span><span class="sxs-lookup"><span data-stu-id="af223-102">The debug setting of the deployment.</span></span>
+  optional: true
+  syntax:
+    content: 'debugSetting?: DebugSetting'
+    return:
+      type:
+      - azure-arm-resource.DebugSetting
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.mode
+  name: mode
+  fullName: mode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="af223-103">La modalità che consente di distribuire le risorse.</span><span class="sxs-lookup"><span data-stu-id="af223-103">The mode that is used to deploy resources.</span></span> <span data-ttu-id="af223-104">Questo valore può essere incrementale o completo.</span><span class="sxs-lookup"><span data-stu-id="af223-104">This value can be either Incremental or Complete.</span></span>
+
+    <span data-ttu-id="af223-105">Nella modalità incrementale, le risorse vengono distribuite senza eliminare le risorse esistenti non sono incluse nel modello.</span><span class="sxs-lookup"><span data-stu-id="af223-105">In Incremental mode, resources are deployed without deleting existing resources that are not included in the template.</span></span> <span data-ttu-id="af223-106">Nella modalità di completamento, le risorse vengono distribuite e le risorse esistenti nel gruppo di risorse che non sono incluse nel modello vengono eliminate.</span><span class="sxs-lookup"><span data-stu-id="af223-106">In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted.</span></span> <span data-ttu-id="af223-107">Prestare attenzione quando si usa la modalità completa potrebbe non eliminare inavvertitamente le risorse.</span><span class="sxs-lookup"><span data-stu-id="af223-107">Be careful when using Complete mode as you may unintentionally delete resources.</span></span> <span data-ttu-id="af223-108">Possibili valori: 'Incrementale', 'Complete'</span><span class="sxs-lookup"><span data-stu-id="af223-108">Possible values include: 'Incremental', 'Complete'</span></span>
+  syntax:
+    content: 'mode: string'
+    return:
+      type:
+      - string
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.onErrorDeployment
+  name: onErrorDeployment
+  fullName: onErrorDeployment
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="af223-109">La distribuzione sul comportamento di errore.</span><span class="sxs-lookup"><span data-stu-id="af223-109">The deployment on error behavior.</span></span>
+  optional: true
+  syntax:
+    content: 'onErrorDeployment?: OnErrorDeployment'
+    return:
+      type:
+      - azure-arm-resource.OnErrorDeployment
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.parameters
+  name: parameters
+  fullName: parameters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="af223-110">Coppie nome / valore che definiscono i parametri di distribuzione per il modello.</span><span class="sxs-lookup"><span data-stu-id="af223-110">Name and value pairs that define the deployment parameters for the template.</span></span> <span data-ttu-id="af223-111">Questo elemento è utilizzato quando si desidera fornire i valori dei parametri direttamente nella richiesta anziché collegamento a un file di parametro esistente.</span><span class="sxs-lookup"><span data-stu-id="af223-111">You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file.</span></span> <span data-ttu-id="af223-112">Usare la proprietà parametersLink o la proprietà parameters, ma non entrambi.</span><span class="sxs-lookup"><span data-stu-id="af223-112">Use either the parametersLink property or the parameters property, but not both.</span></span> <span data-ttu-id="af223-113">Può essere JObject o una stringa JSON ben formata.</span><span class="sxs-lookup"><span data-stu-id="af223-113">It can be a JObject or a well formed JSON string.</span></span>
+  optional: true
+  syntax:
+    content: 'parameters?: any'
+    return:
+      type:
+      - any
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.parametersLink
+  name: parametersLink
+  fullName: parametersLink
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="af223-114">URI del file dei parametri.</span><span class="sxs-lookup"><span data-stu-id="af223-114">The URI of parameters file.</span></span> <span data-ttu-id="af223-115">Questo elemento è usare il collegamento a un file di parametri esistente.</span><span class="sxs-lookup"><span data-stu-id="af223-115">You use this element to link to an existing parameters file.</span></span> <span data-ttu-id="af223-116">Usare la proprietà parametersLink o la proprietà parameters, ma non entrambi.</span><span class="sxs-lookup"><span data-stu-id="af223-116">Use either the parametersLink property or the parameters property, but not both.</span></span>
+  optional: true
+  syntax:
+    content: 'parametersLink?: ParametersLink'
+    return:
+      type:
+      - azure-arm-resource.ParametersLink
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.template
+  name: template
+  fullName: template
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="af223-117">Il contenuto del modello.</span><span class="sxs-lookup"><span data-stu-id="af223-117">The template content.</span></span> <span data-ttu-id="af223-118">Questo elemento viene utilizzato quando si desidera passare la sintassi del modello direttamente nella richiesta anziché collegamento a un modello esistente.</span><span class="sxs-lookup"><span data-stu-id="af223-118">You use this element when you want to pass the template syntax directly in the request rather than link to an existing template.</span></span> <span data-ttu-id="af223-119">Può essere un JObject o una stringa JSON ben formato.</span><span class="sxs-lookup"><span data-stu-id="af223-119">It can be a JObject or well-formed JSON string.</span></span> <span data-ttu-id="af223-120">Usare la proprietà templateLink o la proprietà del modello, ma non entrambi.</span><span class="sxs-lookup"><span data-stu-id="af223-120">Use either the templateLink property or the template property, but not both.</span></span>
+  optional: true
+  syntax:
+    content: 'template?: any'
+    return:
+      type:
+      - any
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.templateLink
+  name: templateLink
+  fullName: templateLink
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="af223-121">L'URI del modello.</span><span class="sxs-lookup"><span data-stu-id="af223-121">The URI of the template.</span></span> <span data-ttu-id="af223-122">Usare la proprietà templateLink o la proprietà del modello, ma non entrambi.</span><span class="sxs-lookup"><span data-stu-id="af223-122">Use either the templateLink property or the template property, but not both.</span></span>
+  optional: true
+  syntax:
+    content: 'templateLink?: TemplateLink'
+    return:
+      type:
+      - azure-arm-resource.TemplateLink
+  package: azure-arm-resource
+references:
+- uid: azure-arm-resource.DebugSetting
+  name: DebugSetting
+  spec.typeScript:
+  - name: DebugSetting
+    fullName: DebugSetting
+    uid: azure-arm-resource.DebugSetting
+- uid: azure-arm-resource.OnErrorDeployment
+  name: OnErrorDeployment
+  spec.typeScript:
+  - name: OnErrorDeployment
+    fullName: OnErrorDeployment
+    uid: azure-arm-resource.OnErrorDeployment
+- uid: azure-arm-resource.ParametersLink
+  name: ParametersLink
+  spec.typeScript:
+  - name: ParametersLink
+    fullName: ParametersLink
+    uid: azure-arm-resource.ParametersLink
+- uid: azure-arm-resource.TemplateLink
+  name: TemplateLink
+  spec.typeScript:
+  - name: TemplateLink
+    fullName: TemplateLink
+    uid: azure-arm-resource.TemplateLink
