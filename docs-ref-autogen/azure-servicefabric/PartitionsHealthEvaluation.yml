@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 87f9b035a1047c3d6889528fc305e711aba1b96d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52101702"
+items:
+- uid: azure-servicefabric.PartitionsHealthEvaluation
+  name: PartitionsHealthEvaluation
+  fullName: PartitionsHealthEvaluation
+  children:
+  - azure-servicefabric.PartitionsHealthEvaluation.maxPercentUnhealthyPartitionsPerService
+  - azure-servicefabric.PartitionsHealthEvaluation.totalCount
+  - azure-servicefabric.PartitionsHealthEvaluation.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="ec73b-101">Rappresenta la valutazione dell'integrità per le partizioni di un servizio, che contiene le valutazioni dell'integrità per ogni partizione di tipo non integro con impatto sui corrente dello stato di integrità aggregato.</span><span class="sxs-lookup"><span data-stu-id="ec73b-101">Represents health evaluation for the partitions of a service, containing health evaluations for each unhealthy partition that impacts current aggregated health state.</span></span> <span data-ttu-id="ec73b-102">Può essere restituito quando la valutazione dell'integrità del servizio e lo stato di integrità aggregato è errore o avviso.</span><span class="sxs-lookup"><span data-stu-id="ec73b-102">Can be returned when evaluating service health and the aggregated health state is either Error or Warning.</span></span>
+  extends:
+    name: azure-servicefabric.HealthEvaluation
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionsHealthEvaluation.maxPercentUnhealthyPartitionsPerService
+  name: maxPercentUnhealthyPartitionsPerService
+  fullName: maxPercentUnhealthyPartitionsPerService
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="ec73b-103">Percentuale massima consentita di partizioni non integre per ogni servizio dal ServiceTypeHealthPolicy.</span><span class="sxs-lookup"><span data-stu-id="ec73b-103">Maximum allowed percentage of unhealthy partitions per service from the ServiceTypeHealthPolicy.</span></span>
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyPartitionsPerService?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionsHealthEvaluation.totalCount
+  name: totalCount
+  fullName: totalCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="ec73b-104">Numero totale di partizioni del servizio dall'archivio integrità.</span><span class="sxs-lookup"><span data-stu-id="ec73b-104">Total number of partitions of the service from the health store.</span></span>
+  optional: true
+  syntax:
+    content: 'totalCount?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionsHealthEvaluation.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="ec73b-105">Elenco di valutazioni non integre che ha causato lo stato di integrità aggregato.</span><span class="sxs-lookup"><span data-stu-id="ec73b-105">List of unhealthy evaluations that led to the aggregated health state.</span></span> <span data-ttu-id="ec73b-106">Include tutte le PartitionHealthEvaluation non integro su cui influisce l'integrità aggregata.</span><span class="sxs-lookup"><span data-stu-id="ec73b-106">Includes all the unhealthy PartitionHealthEvaluation that impacted the aggregated health.</span></span>
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvaluation
+  name: HealthEvaluation
+  spec.typeScript:
+  - name: HealthEvaluation
+    fullName: HealthEvaluation
+    uid: azure-servicefabric.HealthEvaluation
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'
