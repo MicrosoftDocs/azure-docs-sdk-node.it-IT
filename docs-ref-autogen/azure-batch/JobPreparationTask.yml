@@ -1,0 +1,207 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3feb423c429ae16cad12fcaa2b6cc97c0ca2e24a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53660536"
+items:
+- uid: azure-batch.JobPreparationTask
+  name: JobPreparationTask
+  fullName: JobPreparationTask
+  children:
+  - azure-batch.JobPreparationTask.commandLine
+  - azure-batch.JobPreparationTask.constraints
+  - azure-batch.JobPreparationTask.containerSettings
+  - azure-batch.JobPreparationTask.environmentSettings
+  - azure-batch.JobPreparationTask.id
+  - azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+  - azure-batch.JobPreparationTask.resourceFiles
+  - azure-batch.JobPreparationTask.userIdentity
+  - azure-batch.JobPreparationTask.waitForSuccess
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Preparazione del processo è possibile usare per la preparazione di un nodo di calcolo per eseguire attività per il processo.
+
+    Le attività comunemente eseguite negli preparazione del processo includono: Download di file di risorse comuni usati da tutte le attività nel processo. L'attività di preparazione del processo è possibile scaricare questi file di risorse comuni per la posizione condivisa nel nodo di calcolo. (AZ_BATCH_NODE_ROOT_DIR\shared), o l'avvio di un servizio locale nel nodo di calcolo in modo che tutte le attività del processo possono comunicare con esso. Se la preparazione del processo di attività ha esito negativo (vale a dire, scarico contare la ripetizione dei tentativi prima di uscire con codice di uscita 0), Batch non eseguirà le attività del processo nel nodo di calcolo. Il nodo rimane non idoneo a eseguire le attività di questo processo fino a quando non è assimilabile. Il nodo rimane attivo e può essere usato per altri processi.
+
+    L'attività di preparazione del processo può eseguire più volte nello stesso nodo di calcolo. Pertanto, è consigliabile scrivere l'attività di preparazione del processo per gestire nuova esecuzione. Se il nodo di calcolo viene riavviato, l'attività di preparazione del processo viene eseguito nuovamente nel nodo prima di pianificare altre attività del processo, se è true rerunOnNodeRebootAfterSuccess o se l'attività di preparazione non è stata completata in precedenza. Se viene ricreata l'immagine del nodo di calcolo, l'attività di preparazione del processo viene eseguito nuovamente prima di qualsiasi attività del processo di pianificazione. Batch verrà effettuati tentativi attività quando viene attivata un'operazione di ripristino in un nodo di calcolo. Esempi di operazioni di ripristino includono (ma non sono limitati a) quando un nodo di calcolo non integro viene riavviato o un nodo di calcolo è scomparso a causa dell'errore dell'host. Ritenta l'esecuzione a causa di un ripristino operazioni sono indipendenti e non vengono conteggiate rispetto al limite in maxTaskRetryCount.
+
+    Anche se il maxTaskRetryCount è 0, può verificarsi una ripetizione dei tentativi interni a causa di un'operazione di ripristino.
+
+    Per questo motivo, tutte le attività devono essere idempotenti. Ciò significa attività necessario tollerare viene interrotto e riavviato senza causare alcun danneggiamento o dei dati duplicati. La migliore pratica per le attività a esecuzione prolungata è usare qualche forma di checkpoint.
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La riga di comando non viene eseguito con una shell e pertanto non possono sfruttare le funzionalità della shell, ad esempio l'espansione della variabile di ambiente. Se si desidera sfruttare i vantaggi di queste funzionalità, è necessario richiamare la shell nella riga di comando, usando ad esempio "cmd /c nomecomando" in Windows o "/ bin/sh - c nomecomando" in Linux. Se la riga di comando fa riferimento ai percorsi del file, deve usare un percorso relativo (relativo alla directory di lavoro) o usare la variabile di ambiente specificato di Batch (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).
+  syntax:
+    content: 'commandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'constraints?: TaskConstraints'
+    return:
+      type:
+      - azure-batch.TaskConstraints
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Quando viene specificato, tutte le directory in modo ricorsivo sotto il AZ_BATCH_NODE_ROOT_DIR (la radice della directory di Azure Batch nel nodo) vengono mappate nel contenitore, le variabili di ambiente tutte le attività vengono mappate nel contenitore e la riga di comando di attività eseguita nel contenitore.
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: L'ID può contenere qualsiasi combinazione di caratteri alfanumerici, inclusi trattini e caratteri di sottolineatura e non può contenere più di 64 caratteri. Se non si specifica questa proprietà, il servizio Batch assegna un valore predefinito di 'jobpreparation'. Nessuna altra attività del processo può avere lo stesso ID di attività di preparazione del processo. Se si tenta di inviare un'attività con lo stesso id, il servizio Batch rifiuta la richiesta con codice di errore TaskIdSameAsJobPreparationTask; Se si chiama direttamente l'API REST, il codice di stato HTTP è 409 (conflitto).
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+  name: rerunOnNodeRebootAfterSuccess
+  fullName: rerunOnNodeRebootAfterSuccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: L'attività di preparazione del processo viene rieseguita sempre se viene ricreata l'immagine di un nodo di calcolo o se l'attività di preparazione non è stata completata (ad esempio, in quanto il riavvio si è verificato durante l'esecuzione dell'attività). Pertanto, è necessario scrivere sempre un'attività di preparazione del processo siano idempotenti e funzionino correttamente se eseguite più volte. Il valore predefinito è true.
+  optional: true
+  syntax:
+    content: 'rerunOnNodeRebootAfterSuccess?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    I file elencati sotto questo elemento si trovano nella directory di lavoro dell'attività.
+
+    È una dimensione massima per un elenco di file di risorse.  Quando viene superata la dimensione massima, la richiesta avrà esito negativo e il codice di errore della risposta sarà RequestEntityTooLarge. In questo caso, la raccolta di ResourceFiles deve essere ridotte. Ciò può essere ottenuto tramite file ZIP, i pacchetti dell'applicazione o i contenitori Docker.
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se omesso, l'attività viene eseguita come un utente non amministratore univoco per l'attività nei nodi Windows o un utente non amministratore univoco per il pool in nodi Linux.
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.waitForSuccess
+  name: waitForSuccess
+  fullName: waitForSuccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se true e l'attività di preparazione del processo non riesce in un nodo di calcolo, il servizio Batch ripete le attività di preparazione del processo fino al relativo numero massimo di tentativi (come specificato nell'elemento vincoli). Se l'attività è ancora non completata dopo tutti i tentativi, quindi il servizio Batch non pianificherà l'attività del processo nel nodo di calcolo. Il nodo di calcolo rimane attivo e sono idonei per l'esecuzione di attività di altri processi. Se false, il servizio Batch non attenderà il completamento dell'attività di preparazione del processo. In questo caso, altre attività del processo di avvio dell'esecuzione nel nodo di calcolo durante l'attività di preparazione del processo è ancora in esecuzione; e anche se l'attività di preparazione del processo non riesce, le nuove attività continuerà a essere pianificata nel nodo. Il valore predefinito è true.
+  optional: true
+  syntax:
+    content: 'waitForSuccess?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+references:
+- uid: azure-batch.TaskConstraints
+  name: TaskConstraints
+  spec.typeScript:
+  - name: TaskConstraints
+    fullName: TaskConstraints
+    uid: azure-batch.TaskConstraints
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity
