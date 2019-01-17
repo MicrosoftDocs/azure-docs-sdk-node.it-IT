@@ -1,6 +1,6 @@
 ---
-title: Moduli di Registro contenitori di Azure per Node.js
-description: Informazioni di riferimento sui moduli di Registro contenitori di Azure per Node.js
+title: Moduli di Registro Azure Container per Node.js
+description: Informazioni di riferimento sui moduli di Registro Azure Container per Node.js
 author: mmacy
 ms.author: marsma
 manager: jeconnoc
@@ -17,15 +17,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/22/2018
 ms.locfileid: "52155016"
 ---
-# <a name="azure-container-registry-modules-for-nodejs"></a>Moduli di Registro contenitori di Azure per Node.js
+# <a name="azure-container-registry-modules-for-nodejs"></a>Moduli di Registro Azure Container per Node.js
 
-Registro contenitori di Azure è un servizio gestito di registri Docker basato sull'applicazione open source Docker Registry 2.0. Creare e gestire registri contenitori di Azure per archiviare e gestire immagini contenitore Docker private. È possibile usare i registri contenitori in Azure con la pipeline di sviluppo e distribuzione di contenitori esistente e attingere alle competenze della community Docker.
+Registro Azure Container è un servizio gestito di registri Docker basato sull'applicazione open source Docker Registry 2.0. Creare e gestire registri contenitori di Azure per archiviare e gestire immagini contenitore Docker private. È possibile usare i registri contenitori in Azure con la pipeline di sviluppo e distribuzione di contenitori esistente e attingere alle competenze della community Docker.
 
 ## <a name="management-package"></a>Pacchetto di gestione
 
 ### <a name="install-the-npm-module"></a>Installare il modulo npm
 
-Installare il modulo npm di Registro contenitori di Azure
+Installare il modulo npm di Registro Azure Container
 
 ```bash
 npm install azure-arm-containerregistry
