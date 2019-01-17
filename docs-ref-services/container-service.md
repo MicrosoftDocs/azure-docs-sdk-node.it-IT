@@ -1,6 +1,6 @@
 ---
-title: Moduli del servizio contenitore di Azure per Node.js
-description: Informazioni di riferimento sui moduli del servizio contenitore di Azure per Node.js
+title: Moduli del servizio Azure Container per Node.js
+description: Informazioni di riferimento sui moduli del servizio Azure Container per Node.js
 author: mmacy
 ms.author: marsma
 manager: jeconnoc
