@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 22f4b966773a544c98b2dbcfa308a56b7b2afb94
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55061839"
+items:
+- uid: azure-iot-provisioning-service.AllocationPolicyType
+  name: AllocationPolicyType
+  fullName: AllocationPolicyType
+  children: []
+  langs:
+  - typeScript
+  type: type alias
+  summary: >-
+    I criteri di allocazione di questa registrazione singola. Questi criteri prevale sui criteri di allocazione a livello di tenant.
+
+    - 'hash': Hub IoT collegati sono stesse probabili di avere dispositivi sottoposti a provisioning.
+
+    - 'geoLatency':  I dispositivi vengono effettuato il provisioning a un hub IoT con latenza minima per il dispositivo. Se più hub IoT collegati fornisce la stessa latenza minima, il servizio di provisioning suddivide i dispositivi tra gli hub.
+
+    - 'static': Specifica dell'hub IoT desiderato nell'elenco di registrazione ha priorità rispetto al criterio di allocazione a livello di servizio.
+
+    - 'custom': Vengono effettuato il provisioning di dispositivi a un hub IoT basato su logica personalizzata. Il servizio di provisioning passa le informazioni sul dispositivo per la logica e la logica restituisce l'hub IoT desiderato, nonché la configurazione iniziale desiderata. È consigliabile usare funzioni di Azure per ospitare la logica.
+  syntax:
+    content: type AllocationPolicyType = "hashed" | "geoLatency" | "static" | "custom"
+  package: azure-iot-provisioning-service

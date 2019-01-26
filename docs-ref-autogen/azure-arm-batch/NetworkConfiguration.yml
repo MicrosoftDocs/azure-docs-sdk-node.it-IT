@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a9f71af819e984aff15e0a57f968ec78e2dc79d8
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55054742"
+items:
+- uid: azure-arm-batch.NetworkConfiguration
+  name: NetworkConfiguration
+  fullName: NetworkConfiguration
+  children:
+  - azure-arm-batch.NetworkConfiguration.endpointConfiguration
+  - azure-arm-batch.NetworkConfiguration.subnetId
+  langs:
+  - typeScript
+  type: interface
+  summary: La configurazione di rete per un pool.
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkConfiguration.endpointConfiguration
+  name: endpointConfiguration
+  fullName: endpointConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Configurazione endpoint del pool è supportata solo nei pool con la proprietà virtualMachineConfiguration.
+  optional: true
+  syntax:
+    content: 'endpointConfiguration?: PoolEndpointConfiguration'
+    return:
+      type:
+      - azure-arm-batch.PoolEndpointConfiguration
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkConfiguration.subnetId
+  name: subnetId
+  fullName: subnetId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    La rete virtuale deve trovarsi nella stessa area e sottoscrizione dell'account Azure Batch. La subnet specificata deve avere sufficienti indirizzi IP liberi per contenere il numero di nodi nel pool. Se la subnet non dispone di indirizzi IP disponibile sufficiente, il pool dovrà allocare parzialmente i nodi di calcolo e si verificherà un errore di ridimensionamento. L'entità servizio "MicrosoftAzureBatch" deve avere il 'collaboratore macchina virtuale classica' ruolo di controllo di accesso basato sui ruoli (RBAC) per la rete virtuale specificata. La subnet specificata deve consentire la comunicazione dal servizio Azure Batch per essere in grado di pianificare le attività nei nodi di calcolo.
+
+    Ciò può essere verificato controllando se la rete virtuale specificata dispone di eventuali gruppi di sicurezza di rete (NSG) associati. Se la comunicazione ai nodi di calcolo nella subnet specificata viene rifiutata da un gruppo di sicurezza, il servizio Batch imposterà lo stato dei nodi di calcolo su inutilizzabile. Per i pool creati tramite virtualMachineConfiguration Batch account deve disporre poolAllocationMode userSubscription per poter usare una rete virtuale. Se la rete virtuale specificata ha gruppi di sicurezza di rete associati, è necessario abilitare alcune porte di sistema riservate per le comunicazioni in ingresso. Per i pool creati con una configurazione di macchina virtuale, abilitare le porte 29876 e 29877, nonché la porta 22 per Linux e la porta 3389 per Windows. Per i pool creati con una configurazione di servizio cloud, abilitare le porte 10100, 20100 e 30100. Anche abilitare le connessioni in uscita verso archiviazione di Azure sulla porta 443. Per altre informazioni, vedere: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+  optional: true
+  syntax:
+    content: 'subnetId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.PoolEndpointConfiguration
+  name: PoolEndpointConfiguration
+  spec.typeScript:
+  - name: PoolEndpointConfiguration
+    fullName: PoolEndpointConfiguration
+    uid: azure-arm-batch.PoolEndpointConfiguration

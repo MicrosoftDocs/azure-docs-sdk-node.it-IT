@@ -1,0 +1,113 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c43c4837ab8b753a732a3cc48105c596904c7baf
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55048581"
+items:
+- uid: azure-arm-batch.ResourceFile
+  name: ResourceFile
+  fullName: ResourceFile
+  children:
+  - azure-arm-batch.ResourceFile.autoStorageContainerName
+  - azure-arm-batch.ResourceFile.blobPrefix
+  - azure-arm-batch.ResourceFile.fileMode
+  - azure-arm-batch.ResourceFile.filePath
+  - azure-arm-batch.ResourceFile.httpUrl
+  - azure-arm-batch.ResourceFile.storageContainerUrl
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.autoStorageContainerName
+  name: autoStorageContainerName
+  fullName: autoStorageContainerName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le proprietà autoStorageContainerName, storageContainerUrl e httpUrl si escludono a vicenda e uno di essi deve essere specificato.
+  optional: true
+  syntax:
+    content: 'autoStorageContainerName?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.blobPrefix
+  name: blobPrefix
+  fullName: blobPrefix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La proprietà è valida solo quando viene usato autoStorageContainerName o storageContainerUrl. Questo prefisso può essere un nome di file parziale o una sottodirectory. Se non viene specificato un prefisso, verranno scaricati tutti i file nel contenitore.
+  optional: true
+  syntax:
+    content: 'blobPrefix?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.fileMode
+  name: fileMode
+  fullName: fileMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Questa proprietà si applica solo ai file viene scaricati nei nodi di calcolo Linux. Verrà ignorato se è stato specificato per un resourceFile che verrà scaricato in un nodo di Windows. Se questa proprietà non è specificata per un nodo Linux, un valore predefinito 0770 viene applicato al file.
+  optional: true
+  syntax:
+    content: 'fileMode?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.filePath
+  name: filePath
+  fullName: filePath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se la proprietà httpUrl è specificata, il percorso file è obbligatorio e viene descritto il percorso che il file verrà scaricato, inclusi il nome del file. In caso contrario, se viene specificata la proprietà autoStorageContainerName o storageContainerUrl, filePath è facoltativo ed è la directory per scaricare i file. Nel caso in cui filePath viene usato come una directory, verrà mantenuta in modo completo qualsiasi struttura di directory già associata a dati di input e aggiunti alla directory di percorso file specificato. Il percorso relativo specificato non è possibile interrompere la directory di lavoro dell'attività (ad esempio usando '.. ').
+  optional: true
+  syntax:
+    content: 'filePath?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.httpUrl
+  name: httpUrl
+  fullName: httpUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Le proprietà autoStorageContainerName, storageContainerUrl e httpUrl si escludono a vicenda e uno di essi deve essere specificato. Se l'URL è l'archivio Blob di Azure, deve essere leggibile con l'accesso anonimo; ovvero il servizio Batch non ha le credenziali quando si scaricano i blob. Esistono due modi per ottenere un URL di questo tipo per un blob in archiviazione di Azure: includere un (firma di accesso) concessione di autorizzazioni di lettura nel blob o impostare l'ACL per il blob o il contenitore per consentire l'accesso pubblico."
+  optional: true
+  syntax:
+    content: 'httpUrl?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.storageContainerUrl
+  name: storageContainerUrl
+  fullName: storageContainerUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Le proprietà autoStorageContainerName, storageContainerUrl e httpUrl si escludono a vicenda e uno di essi deve essere specificato. Questo URL deve essere leggibile e listable usando l'accesso anonimo; ovvero il servizio Batch non ha le credenziali quando si scaricano i blob. Esistono due modi per ottenere un URL di questo tipo per un blob in archiviazione di Azure: includere un (firma di accesso) concessione di autorizzazioni di lettura ed elenco per il blob o impostare l'ACL per il blob o il contenitore per consentire l'accesso pubblico."
+  optional: true
+  syntax:
+    content: 'storageContainerUrl?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch

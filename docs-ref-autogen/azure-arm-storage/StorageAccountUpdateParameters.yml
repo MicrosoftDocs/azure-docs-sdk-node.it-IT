@@ -1,0 +1,211 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4e999454c5b13a2f039084b9b2ed8eb260b143d3
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55050192"
+items:
+- uid: azure-arm-storage.StorageAccountUpdateParameters
+  name: StorageAccountUpdateParameters
+  fullName: StorageAccountUpdateParameters
+  children:
+  - azure-arm-storage.StorageAccountUpdateParameters.accessTier
+  - azure-arm-storage.StorageAccountUpdateParameters.customDomain
+  - azure-arm-storage.StorageAccountUpdateParameters.enableAzureFilesAadIntegration
+  - azure-arm-storage.StorageAccountUpdateParameters.enableHttpsTrafficOnly
+  - azure-arm-storage.StorageAccountUpdateParameters.encryption
+  - azure-arm-storage.StorageAccountUpdateParameters.identity
+  - azure-arm-storage.StorageAccountUpdateParameters.kind
+  - azure-arm-storage.StorageAccountUpdateParameters.networkRuleSet
+  - azure-arm-storage.StorageAccountUpdateParameters.sku
+  - azure-arm-storage.StorageAccountUpdateParameters.tags
+  langs:
+  - typeScript
+  type: interface
+  summary: I parametri che possono essere specificati durante l'aggiornamento di proprietà dell'account di archiviazione.
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountUpdateParameters.accessTier
+  name: accessTier
+  fullName: accessTier
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Obbligatorio per gli account di archiviazione in cui kind = BlobStorage. Il livello di accesso utilizzato per la fatturazione.
+
+    I valori possibili sono: 'Hot', 'Cool'
+  optional: true
+  syntax:
+    content: 'accessTier?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountUpdateParameters.customDomain
+  name: customDomain
+  fullName: customDomain
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Dominio personalizzato assegnato all'account di archiviazione dall'utente. Name è l'origine CNAME. Ogni account di archiviazione è supportato solo un dominio personalizzato in questo momento. Per cancellare il dominio personalizzato esistente, usare una stringa vuota per la proprietà nome di dominio personalizzato.
+  optional: true
+  syntax:
+    content: 'customDomain?: CustomDomain'
+    return:
+      type:
+      - azure-arm-storage.CustomDomain
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountUpdateParameters.enableAzureFilesAadIntegration
+  name: enableAzureFilesAadIntegration
+  fullName: enableAzureFilesAadIntegration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Abilita l'integrazione di AAD di file di Azure per SMB se viene impostata su true.
+  optional: true
+  syntax:
+    content: 'enableAzureFilesAadIntegration?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountUpdateParameters.enableHttpsTrafficOnly
+  name: enableHttpsTrafficOnly
+  fullName: enableHttpsTrafficOnly
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Consente il traffico https solo al servizio di archiviazione, se impostato su true.
+  optional: true
+  syntax:
+    content: 'enableHttpsTrafficOnly?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountUpdateParameters.encryption
+  name: encryption
+  fullName: encryption
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Fornisce le impostazioni di crittografia per l'account. L'impostazione predefinita è non crittografata.
+  optional: true
+  syntax:
+    content: 'encryption?: Encryption'
+    return:
+      type:
+      - azure-arm-storage.Encryption
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountUpdateParameters.identity
+  name: identity
+  fullName: identity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: L'identità della risorsa.
+  optional: true
+  syntax:
+    content: 'identity?: Identity'
+    return:
+      type:
+      - azure-arm-storage.Identity
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountUpdateParameters.kind
+  name: kind
+  fullName: kind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "facoltativo. Indica il tipo di account di archiviazione. Attualmente solo archiviazione v2 valore supportate dal server. I valori possibili sono: 'Storage', 'StorageV2', 'BlobStorage', 'FileStorage', 'BlockBlobStorage'"
+  optional: true
+  syntax:
+    content: 'kind?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountUpdateParameters.networkRuleSet
+  name: networkRuleSet
+  fullName: networkRuleSet
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Set di regole di rete
+  optional: true
+  syntax:
+    content: 'networkRuleSet?: NetworkRuleSet'
+    return:
+      type:
+      - azure-arm-storage.NetworkRuleSet
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountUpdateParameters.sku
+  name: sku
+  fullName: sku
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ottiene o imposta il nome SKU. Si noti che il nome SKU non è possibile aggiornare zrs standard, Premium_LRS o Premium_ZRS né qualsiasi altro valore possono essere aggiornati gli account di tali nomi SKU.
+  optional: true
+  syntax:
+    content: 'sku?: Sku'
+    return:
+      type:
+      - azure-arm-storage.Sku
+  package: azure-arm-storage
+- uid: azure-arm-storage.StorageAccountUpdateParameters.tags
+  name: tags
+  fullName: tags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ottiene o imposta un elenco di coppie chiave-valore che descrivono la risorsa. Questi tag possono essere utilizzati nella visualizzazione e nel raggruppamento di questa risorsa (tra gruppi di risorse). Per una risorsa, è possibile specificare un massimo di 15 tag consentiti. Ogni tag deve contenere una chiave non superiore la lunghezza di 128 caratteri e un valore di lunghezza non superiore a 256 caratteri.
+  optional: true
+  syntax:
+    content: 'tags?: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: azure-arm-storage
+references:
+- uid: azure-arm-storage.CustomDomain
+  name: CustomDomain
+  spec.typeScript:
+  - name: CustomDomain
+    fullName: CustomDomain
+    uid: azure-arm-storage.CustomDomain
+- uid: azure-arm-storage.Encryption
+  name: Encryption
+  spec.typeScript:
+  - name: Encryption
+    fullName: Encryption
+    uid: azure-arm-storage.Encryption
+- uid: azure-arm-storage.Identity
+  name: Identity
+  spec.typeScript:
+  - name: Identity
+    fullName: Identity
+    uid: azure-arm-storage.Identity
+- uid: azure-arm-storage.NetworkRuleSet
+  name: NetworkRuleSet
+  spec.typeScript:
+  - name: NetworkRuleSet
+    fullName: NetworkRuleSet
+    uid: azure-arm-storage.NetworkRuleSet
+- uid: azure-arm-storage.Sku
+  name: Sku
+  spec.typeScript:
+  - name: Sku
+    fullName: Sku
+    uid: azure-arm-storage.Sku

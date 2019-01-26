@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: aa68703453f331e36ff26d7b9358199b37436807
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55057352"
+items:
+- uid: azure-arm-batch.DataDisk
+  name: DataDisk
+  fullName: DataDisk
+  children:
+  - azure-arm-batch.DataDisk.caching
+  - azure-arm-batch.DataDisk.diskSizeGB
+  - azure-arm-batch.DataDisk.lun
+  - azure-arm-batch.DataDisk.storageAccountType
+  langs:
+  - typeScript
+  type: interface
+  summary: Impostazioni del disco dati che verranno usate dai dischi dati associati ai nodi di calcolo nel pool.
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.caching
+  name: caching
+  fullName: caching
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    I valori sono:
+
+
+    None: la modalità di memorizzazione nella cache per il disco non è abilitato.
+
+    readOnly - la modalità di memorizzazione nella cache per il disco è di sola lettura.
+
+    lettura/scrittura - la modalità di memorizzazione nella cache per il disco è di lettura e scrittura.
+
+
+    Il valore predefinito per la memorizzazione nella cache è none. Per informazioni sulle opzioni di memorizzazione nella cache, vedere: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+
+    I valori possibili sono: 'None', 'ReadOnly', 'ReadWrite'
+  optional: true
+  syntax:
+    content: 'caching?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.diskSizeGB
+  name: diskSizeGB
+  fullName: diskSizeGB
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'diskSizeGB: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.lun
+  name: lun
+  fullName: lun
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Il lun viene utilizzato per identificare in modo univoco ogni disco dati. Se l'associazione di più dischi, ognuno deve avere un lun distinto.
+  syntax:
+    content: 'lun: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.storageAccountType
+  name: storageAccountType
+  fullName: storageAccountType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Se omesso, il valore predefinito è "Standard_LRS". I valori sono:
+
+
+    Standard_LRS - il disco di dati deve usare l'archiviazione con ridondanza locale standard.
+
+    Premium_LRS - il disco di dati deve usare l'archiviazione con ridondanza locale premium. I valori possibili sono: 'Standard_LRS', 'Premium_LRS'
+  optional: true
+  syntax:
+    content: 'storageAccountType?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch

@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 90753b01e2312768c1dfbab870657d2d41e807c9
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55060002"
+items:
+- uid: azure-arm-storage.Restriction
+  name: Restriction
+  fullName: Restriction
+  children:
+  - azure-arm-storage.Restriction.reasonCode
+  - azure-arm-storage.Restriction.type
+  - azure-arm-storage.Restriction.values
+  langs:
+  - typeScript
+  type: interface
+  summary: La restrizione a causa della quale non è possibile usare lo SKU.
+  package: azure-arm-storage
+- uid: azure-arm-storage.Restriction.reasonCode
+  name: reasonCode
+  fullName: reasonCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Il motivo per la restrizione. A partire da ora può essere \"l'ID quota\" o \"NotAvailableForSubscription\". Id quota viene impostato quando lo SKU è requiredQuotas parametro perché la sottoscrizione appartiene a tale quota. \"NotAvailableForSubscription\" corrisponde alla capacità al Data Center. I valori possibili sono: 'QuotaId', 'NotAvailableForSubscription'"
+  optional: true
+  syntax:
+    content: 'reasonCode?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.Restriction.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Il tipo di restrizioni. Al momento solo un valore possibile per questo oggetto è percorso.
+  optional: true
+  syntax:
+    content: 'type?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.Restriction.values
+  name: values
+  fullName: values
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Il valore di restrizioni. Se il tipo di restrizione è impostato in posizione. Ciò potrebbe essere percorsi diversi in cui lo SKU è limitato.
+  optional: true
+  syntax:
+    content: 'values?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-arm-storage
