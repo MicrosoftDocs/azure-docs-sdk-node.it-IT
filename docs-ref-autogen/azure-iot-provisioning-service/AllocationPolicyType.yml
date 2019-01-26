@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 22f4b966773a544c98b2dbcfa308a56b7b2afb94
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55061839"
+items:
+- uid: azure-iot-provisioning-service.AllocationPolicyType
+  name: AllocationPolicyType
+  fullName: AllocationPolicyType
+  children: []
+  langs:
+  - typeScript
+  type: type alias
+  summary: >-
+    <span data-ttu-id="d45af-101">I criteri di allocazione di questa registrazione singola.</span><span class="sxs-lookup"><span data-stu-id="d45af-101">The allocation policy of this individual enrollment.</span></span> <span data-ttu-id="d45af-102">Questi criteri prevale sui criteri di allocazione a livello di tenant.</span><span class="sxs-lookup"><span data-stu-id="d45af-102">This policy overrides the tenant-level allocation policy.</span></span>
+
+    - <span data-ttu-id="d45af-103">'hash': Hub IoT collegati sono stesse probabili di avere dispositivi sottoposti a provisioning.</span><span class="sxs-lookup"><span data-stu-id="d45af-103">'hashed': Linked IoT hubs are equally likely to have devices provisioned to them.</span></span>
+
+    - <span data-ttu-id="d45af-104">'geoLatency':  I dispositivi vengono effettuato il provisioning a un hub IoT con latenza minima per il dispositivo. Se più hub IoT collegati fornisce la stessa latenza minima, il servizio di provisioning suddivide i dispositivi tra gli hub.</span><span class="sxs-lookup"><span data-stu-id="d45af-104">'geoLatency':  Devices are provisioned to an IoT hub with the lowest latency to the device.If multiple linked IoT hubs would provide the same lowest latency, the provisioning service hashes devices across those hubs.</span></span>
+
+    - <span data-ttu-id="d45af-105">'static': Specifica dell'hub IoT desiderato nell'elenco di registrazione ha priorità rispetto al criterio di allocazione a livello di servizio.</span><span class="sxs-lookup"><span data-stu-id="d45af-105">'static' : Specification of the desired IoT hub in the enrollment list takes priority over the service-level allocation policy.</span></span>
+
+    - <span data-ttu-id="d45af-106">'custom': Vengono effettuato il provisioning di dispositivi a un hub IoT basato su logica personalizzata.</span><span class="sxs-lookup"><span data-stu-id="d45af-106">'custom': Devices are provisioned to an IoT hub based on your own custom logic.</span></span> <span data-ttu-id="d45af-107">Il servizio di provisioning passa le informazioni sul dispositivo per la logica e la logica restituisce l'hub IoT desiderato, nonché la configurazione iniziale desiderata.</span><span class="sxs-lookup"><span data-stu-id="d45af-107">The provisioning service passes information about the device to the logic, and the logic returns the desired IoT hub as well as the desired initial configuration.</span></span> <span data-ttu-id="d45af-108">È consigliabile usare funzioni di Azure per ospitare la logica.</span><span class="sxs-lookup"><span data-stu-id="d45af-108">We recommend using Azure Functions to host your logic.</span></span>
+  syntax:
+    content: type AllocationPolicyType = "hashed" | "geoLatency" | "static" | "custom"
+  package: azure-iot-provisioning-service

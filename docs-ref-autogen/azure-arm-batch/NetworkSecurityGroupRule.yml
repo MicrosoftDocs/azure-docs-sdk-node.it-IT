@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 50b9106c48b95d21155c7b4eef8ce30bb31c71e9
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55054722"
+items:
+- uid: azure-arm-batch.NetworkSecurityGroupRule
+  name: NetworkSecurityGroupRule
+  fullName: NetworkSecurityGroupRule
+  children:
+  - azure-arm-batch.NetworkSecurityGroupRule.access
+  - azure-arm-batch.NetworkSecurityGroupRule.priority
+  - azure-arm-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkSecurityGroupRule.access
+  name: access
+  fullName: access
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"0b1c8-101\">I valori possibili sono: 'Consenti', 'Deny'</span><span class=\"sxs-lookup\"><span data-stu-id=\"0b1c8-101\">Possible values include: 'Allow', 'Deny'</span></span>"
+  syntax:
+    content: 'access: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkSecurityGroupRule.priority
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="0b1c8-102">Priorità all'interno di un pool devono essere univoche e vengono valutate in ordine di priorità.</span><span class="sxs-lookup"><span data-stu-id="0b1c8-102">Priorities within a pool must be unique and are evaluated in order of priority.</span></span>
+
+    <span data-ttu-id="0b1c8-103">Più è basso il numero, maggiore sarà la priorità.</span><span class="sxs-lookup"><span data-stu-id="0b1c8-103">The lower the number the higher the priority.</span></span> <span data-ttu-id="0b1c8-104">Ad esempio, è stato possibile specificare regole con numeri di ordine pari a 150, 250 e 350.</span><span class="sxs-lookup"><span data-stu-id="0b1c8-104">For example, rules could be specified with order numbers of 150, 250, and 350.</span></span> <span data-ttu-id="0b1c8-105">La regola con il numero di ordine pari a 150 ha la precedenza sulla regola che ha un ordine pari a 250.</span><span class="sxs-lookup"><span data-stu-id="0b1c8-105">The rule with the order number of 150 takes precedence over the rule that has an order of 250.</span></span> <span data-ttu-id="0b1c8-106">La priorità consentita è 150 per 3500.</span><span class="sxs-lookup"><span data-stu-id="0b1c8-106">Allowed priorities are 150 to 3500.</span></span> <span data-ttu-id="0b1c8-107">Se i valori riservati o duplicati vengono forniti che la richiesta ha esito negativo con codice di stato HTTP 400.</span><span class="sxs-lookup"><span data-stu-id="0b1c8-107">If any reserved or duplicate values are provided the request fails with HTTP status code 400.</span></span>
+  syntax:
+    content: 'priority: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+  name: sourceAddressPrefix
+  fullName: sourceAddressPrefix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0b1c8-108">I valori validi sono un singolo indirizzo IP (ad esempio, 10.10.10.10), subnet IP (ad esempio 192.168.1.0/24), tag, predefinito o \* (per tutti gli indirizzi).</span><span class="sxs-lookup"><span data-stu-id="0b1c8-108">Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or \* (for all addresses).</span></span>  <span data-ttu-id="0b1c8-109">Se altri valori vengono forniti che la richiesta ha esito negativo con codice di stato HTTP 400.</span><span class="sxs-lookup"><span data-stu-id="0b1c8-109">If any other values are provided the request fails with HTTP status code 400.</span></span>
+  syntax:
+    content: 'sourceAddressPrefix: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
