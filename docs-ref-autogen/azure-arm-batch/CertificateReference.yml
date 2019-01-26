@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5aa33014edb63420f85edc96ebd43866313a3094
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55054162"
+items:
+- uid: azure-arm-batch.CertificateReference
+  name: CertificateReference
+  fullName: CertificateReference
+  children:
+  - azure-arm-batch.CertificateReference.id
+  - azure-arm-batch.CertificateReference.storeLocation
+  - azure-arm-batch.CertificateReference.storeName
+  - azure-arm-batch.CertificateReference.visibility
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.CertificateReference.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'id: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.CertificateReference.storeLocation
+  name: storeLocation
+  fullName: storeLocation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Il valore predefinito è currentUser. Questa proprietà è applicabile solo per i pool configurati con nodi di Windows (vale a dire, creati con cloudServiceConfiguration o con virtualMachineConfiguration utilizzando un Windows riferimento immagine). Per i nodi di calcolo Linux, i certificati vengono archiviati in una directory all'interno di un ambiente che az_batch_certificates_dir variabile viene fornito per l'attività di query per questa posizione e la directory di lavoro attività. Per i certificati con visibilità "remoteuser", viene creata una directory "certs" nella directory home dell'utente (ad esempio, /home/ {nome_utente} / certs) e i certificati vengono posizionati in tale directory.
+
+    I valori possibili sono: 'CurrentUser', 'LocalMachine'
+  optional: true
+  syntax:
+    content: 'storeLocation?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.CertificateReference.storeName
+  name: storeName
+  fullName: storeName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Questa proprietà è applicabile solo per i pool configurati con nodi di Windows (vale a dire, creati con cloudServiceConfiguration o con virtualMachineConfiguration utilizzando un Windows riferimento immagine). I nomi di archivio comuni includono: My, CA radice, Trust, non consentito, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, ma qualsiasi nome di archivio personalizzato possa anche essere usato. Il valore predefinito è My.'
+  optional: true
+  syntax:
+    content: 'storeName?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.CertificateReference.visibility
+  name: visibility
+  fullName: visibility
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'visibility?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-arm-batch

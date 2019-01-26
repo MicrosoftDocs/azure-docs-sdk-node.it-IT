@@ -1,0 +1,188 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 78f30927c4742799bcb7585bbcc4006de8ac42f3
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55057532"
+items:
+- uid: '@azure/arm-network.Probe'
+  name: Probe
+  fullName: Probe
+  children:
+  - '@azure/arm-network.Probe.etag'
+  - '@azure/arm-network.Probe.intervalInSeconds'
+  - '@azure/arm-network.Probe.loadBalancingRules'
+  - '@azure/arm-network.Probe.name'
+  - '@azure/arm-network.Probe.numberOfProbes'
+  - '@azure/arm-network.Probe.port'
+  - '@azure/arm-network.Probe.protocol'
+  - '@azure/arm-network.Probe.provisioningState'
+  - '@azure/arm-network.Probe.requestPath'
+  langs:
+  - typeScript
+  type: interface
+  summary: Un probe di bilanciamento del carico.
+  extends:
+    name: '@azure/arm-network.SubResource'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.etag'
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Stringa univoca di sola lettura che cambia ogni volta che la risorsa viene aggiornata.
+  optional: true
+  syntax:
+    content: 'etag?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.intervalInSeconds'
+  name: intervalInSeconds
+  fullName: intervalInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Intervallo, in secondi, per la frequenza con cui controllare lo stato di integrità dell'endpoint.
+
+    L'intervallo è in genere leggermente inferiore alla metà del periodo di timeout allocato (in secondi) il che consente due probe completi prima di escludere l'istanza dalla rotazione. Il valore predefinito è 15, il valore minimo è 5.
+  optional: true
+  syntax:
+    content: 'intervalInSeconds?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.loadBalancingRules'
+  name: loadBalancingRules
+  fullName: loadBalancingRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Le regole di bilanciamento del carico che usano questo probe.
+
+    **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+  optional: true
+  syntax:
+    content: 'loadBalancingRules?: SubResource[]'
+    return:
+      type:
+      - '@azure/arm-network.SubResource[]'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.name'
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Ottiene nome della risorsa che è univoca all'interno di un gruppo di risorse. Questo nome è utilizzabile per accedere alla risorsa.
+  optional: true
+  syntax:
+    content: 'name?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.numberOfProbes'
+  name: numberOfProbes
+  fullName: numberOfProbes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Il numero di probe where se alcuna risposta, non comporterà l'arresto di ulteriore traffico vengano recapitati all'endpoint. Questi valori consente agli endpoint di essere eseguite dalla rotazione velocità superiore o inferiore rispetto a volte tipici utilizzato in Azure.
+  optional: true
+  syntax:
+    content: 'numberOfProbes?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.port'
+  name: port
+  fullName: port
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Porta per la comunicazione del probe. L'intervallo di valori possibili è compresa tra 1 e 65535 inclusi.
+  syntax:
+    content: 'port: number'
+    return:
+      type:
+      - number
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.protocol'
+  name: protocol
+  fullName: protocol
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Il protocollo del punto finale. I valori possibili sono: 'Http', 'Tcp' o 'Https'. Se viene specificato 'Tcp', è necessario per il probe abbia esito positivo un ACK ricevuto. Se viene specificato 'Http' o 'Https', una risposta 200 OK dalla specifica l'URI è obbligatorio per il probe abbia esito positivo. I valori possibili sono: 'Http', 'Tcp', 'Https'"
+  syntax:
+    content: 'protocol: ProbeProtocol'
+    return:
+      type:
+      - '@azure/arm-network.ProbeProtocol'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.provisioningState'
+  name: provisioningState
+  fullName: provisioningState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Ottiene lo stato di provisioning della risorsa IP pubblico. I valori possibili sono: 'Aggiornamento di', 'Eliminazione' e 'Failed'."
+  optional: true
+  syntax:
+    content: 'provisioningState?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.requestPath'
+  name: requestPath
+  fullName: requestPath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: URI usato per richiedere lo stato di integrità alla macchina virtuale. Se un protocollo è impostato su http, è necessario percorso. In caso contrario, non è consentito. Non esistono valori predefiniti.
+  optional: true
+  syntax:
+    content: 'requestPath?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+references:
+- uid: '@azure/arm-network.SubResource'
+  name: SubResource
+  spec.typeScript:
+  - name: SubResource
+    fullName: SubResource
+    uid: '@azure/arm-network.SubResource'
+- uid: '@azure/arm-network.SubResource[]'
+  name: SubResource[]
+  spec.typeScript:
+  - name: SubResource
+    fullName: SubResource
+    uid: '@azure/arm-network.SubResource'
+  - name: '[]'
+    fullName: '[]'
+- uid: '@azure/arm-network.ProbeProtocol'
+  name: ProbeProtocol
+  spec.typeScript:
+  - name: ProbeProtocol
+    fullName: ProbeProtocol
+    uid: '@azure/arm-network.ProbeProtocol'

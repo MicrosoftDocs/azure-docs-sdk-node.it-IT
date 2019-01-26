@@ -1,0 +1,147 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 305d9f1170cdaeaa7972e21eaeeb94849d453c47
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55060327"
+items:
+- uid: azure-arm-batch.VirtualMachineConfiguration
+  name: VirtualMachineConfiguration
+  fullName: VirtualMachineConfiguration
+  children:
+  - azure-arm-batch.VirtualMachineConfiguration.containerConfiguration
+  - azure-arm-batch.VirtualMachineConfiguration.dataDisks
+  - azure-arm-batch.VirtualMachineConfiguration.imageReference
+  - azure-arm-batch.VirtualMachineConfiguration.licenseType
+  - azure-arm-batch.VirtualMachineConfiguration.nodeAgentSkuId
+  - azure-arm-batch.VirtualMachineConfiguration.windowsConfiguration
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.containerConfiguration
+  name: containerConfiguration
+  fullName: containerConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se specificato, il programma di installazione viene eseguita in ogni nodo nel pool per consentire alle attività per l'esecuzione nei contenitori. Tutte le normali attività e le attività di gestione eseguite in questo pool devono specificare la proprietà containerSettings e tutte le altre attività possono specificarlo.
+  optional: true
+  syntax:
+    content: 'containerConfiguration?: ContainerConfiguration'
+    return:
+      type:
+      - azure-arm-batch.ContainerConfiguration
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.dataDisks
+  name: dataDisks
+  fullName: dataDisks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Questa proprietà deve essere specificato se i nodi di calcolo nel pool di devono sono collegati dischi dati vuoti.
+  optional: true
+  syntax:
+    content: 'dataDisks?: DataDisk[]'
+    return:
+      type:
+      - azure-arm-batch.DataDisk[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.imageReference
+  name: imageReference
+  fullName: imageReference
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'imageReference: ImageReference'
+    return:
+      type:
+      - azure-arm-batch.ImageReference
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.licenseType
+  name: licenseType
+  fullName: licenseType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Si applica solo alle immagini che contengono il sistema operativo Windows e devono essere utilizzate solo quando si possiedono licenze locale valido per i nodi che verranno distribuiti. Se non omesso, in locale viene applicato lo sconto sulle licenze. I valori sono:
+
+
+    Windows_Server - la licenza in locale sia per Windows Server.
+
+    Windows_Client - la licenza in locale sia per Client Windows.
+  optional: true
+  syntax:
+    content: 'licenseType?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.nodeAgentSkuId
+  name: nodeAgentSkuId
+  fullName: nodeAgentSkuId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    L'agente del nodo Batch è un programma che viene eseguito in ogni nodo nel pool e fornisce l'interfaccia di comando e controllo tra il nodo e il servizio Batch. Sono disponibili diverse implementazioni dell'agente del nodo, definite SKU, per sistemi operativi diversi.
+
+    È necessario specificare un agente del nodo SKU che corrisponde al riferimento all'immagine selezionata. Per ottenere l'elenco degli SKU agente nodo supportati insieme ai relativi elenco di riferimenti a immagini verificati, vedere l'operazione 'Elenco supportati gli SKU agente nodo'.
+  syntax:
+    content: 'nodeAgentSkuId: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.windowsConfiguration
+  name: windowsConfiguration
+  fullName: windowsConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Questa proprietà non deve essere specificata se imageReference specifica un'immagine del sistema operativo Linux.
+  optional: true
+  syntax:
+    content: 'windowsConfiguration?: WindowsConfiguration'
+    return:
+      type:
+      - azure-arm-batch.WindowsConfiguration
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.ContainerConfiguration
+  name: ContainerConfiguration
+  spec.typeScript:
+  - name: ContainerConfiguration
+    fullName: ContainerConfiguration
+    uid: azure-arm-batch.ContainerConfiguration
+- uid: azure-arm-batch.DataDisk[]
+  name: DataDisk[]
+  spec.typeScript:
+  - name: DataDisk
+    fullName: DataDisk
+    uid: azure-arm-batch.DataDisk
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.ImageReference
+  name: ImageReference
+  spec.typeScript:
+  - name: ImageReference
+    fullName: ImageReference
+    uid: azure-arm-batch.ImageReference
+- uid: azure-arm-batch.WindowsConfiguration
+  name: WindowsConfiguration
+  spec.typeScript:
+  - name: WindowsConfiguration
+    fullName: WindowsConfiguration
+    uid: azure-arm-batch.WindowsConfiguration

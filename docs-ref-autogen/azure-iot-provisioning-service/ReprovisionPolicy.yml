@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ede64883f1ec60cb487bb7278c4dbd33b5b26d86
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55061809"
+items:
+- uid: azure-iot-provisioning-service.ReprovisionPolicy
+  name: ReprovisionPolicy
+  fullName: ReprovisionPolicy
+  children:
+  - azure-iot-provisioning-service.ReprovisionPolicy.migrateDeviceData
+  - azure-iot-provisioning-service.ReprovisionPolicy.updateHubAssignment
+  langs:
+  - typeScript
+  type: interface
+  summary: Il comportamento è consigliabile adottare il servizio quando un dispositivo è di nuovo effettuato il provisioning a un altro IoT Hub.
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ReprovisionPolicy.migrateDeviceData
+  name: migrateDeviceData
+  fullName: migrateDeviceData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se impostato su true (impostazione predefinita) il servizio Device Provisioning verrà eseguita la migrazione i dati del dispositivo (dispositivo gemello, funzionalità del dispositivo e id dispositivo) da un unico hub a altro durante un aggiornamento di assegnazione dell'hub IoT. Se impostata su false il servizio Device Provisioning reimposterà i dati del dispositivo per la configurazione iniziale archiviata nella relativa registrazione corrispondente.
+  syntax:
+    content: 'migrateDeviceData: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ReprovisionPolicy.updateHubAssignment
+  name: updateHubAssignment
+  fullName: updateHubAssignment
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Quando impostato su true (impostazione predefinita) il servizio Device Provisioning esaminerà assegnazione hub del dispositivo e aggiornarla, se necessario per qualsiasi richiesta di provisioning oltre la prima da un determinato dispositivo. Se impostata su false il dispositivo resta assegnato relativo corrente dell'hub IoT.
+  syntax:
+    content: 'updateHubAssignment: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iot-provisioning-service
