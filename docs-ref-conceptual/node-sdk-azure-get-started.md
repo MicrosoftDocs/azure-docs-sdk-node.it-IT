@@ -5,25 +5,25 @@ author: rloutlaw
 manager: routlaw
 ms.author: routlaw
 ms.date: 06/17/2017
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 072574c70b658806cd998dc0af8a81be3ea56bb4
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 73f115373c33423b7ad8895e73f5a2170b753f8f
+ms.sourcegitcommit: 8c9462a8538ea3d7d3fbb27454d26755abbad001
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220583"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57327372"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Introduzione ai moduli di Azure per Node.js
 
 Questa guida illustra l'installazione dei moduli di Azure per Node.js, l'autenticazione in Azure con un'entità servizio e l'esecuzione del codice di esempio che crea le risorse nella sottoscrizione di Azure e si connette ai servizi cloud di Azure.
 
-## <a name="prerequisites"></a>prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 - Un account Azure. Se non è disponibile, [ottenere una versione di valutazione gratuita](https://azure.microsoft.com/free/)
-- [Node.JS](https://nodejs.org)
+- [Node.js](https://nodejs.org)
 - [Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) o [interfaccia della riga di comando di Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).
 
 [!INCLUDE [azure-cloud-shell](../docs-ref-conceptual/includes/cloud-shell-try-it.md)]
@@ -262,7 +262,7 @@ az group delete --name myResourceGroup
 
 Esplorare altro [codice Node.js di esempio](https://azure.microsoft.com/resources/samples/?platform=nodejs) da usare nelle app.
 
-## <a name="reference"></a>Riferimenti 
+## <a name="reference"></a>riferimento 
 
 Le [informazioni di riferimento](/javascript/api/overview/azure/) sono disponibili per tutti i pacchetti.
 
