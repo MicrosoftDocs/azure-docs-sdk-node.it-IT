@@ -1,0 +1,496 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters
+    name: ApiManagementServiceUpdateParameters
+    fullName: ApiManagementServiceUpdateParameters
+    children:
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.additionalLocations
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.certificates
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.createdAtUtc
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.customProperties
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.enableClientCertificate
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.etag
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.gatewayRegionalUrl
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.gatewayUrl
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.hostnameConfigurations
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.id
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.identity
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.managementApiUrl
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.name
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.notificationSenderEmail
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.portalUrl
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.privateIPAddresses
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.provisioningState
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.publicIPAddresses
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.publisherEmail
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.publisherName
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.scmUrl
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.sku
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.tags
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.targetProvisioningState
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.type
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.virtualNetworkConfiguration
+      - azure-arm-apimanagement.ApiManagementServiceUpdateParameters.virtualNetworkType
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="d8112-101">Parametro fornito al servizio Gestione Api di aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="d8112-101">Parameter supplied to Update Api Management Service.</span></span>
+    extends:
+      name: azure-arm-apimanagement.ApimResource
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.additionalLocations
+    name: additionalLocations
+    fullName: additionalLocations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-102">Posizioni dei Data Center aggiuntivi del servizio Gestione API.</span><span class="sxs-lookup"><span data-stu-id="d8112-102">Additional datacenter locations of the API Management service.</span></span>
+    optional: true
+    syntax:
+      content: 'additionalLocations?: AdditionalLocation[]'
+      return:
+        type:
+          - 'azure-arm-apimanagement.AdditionalLocation[]'
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.certificates
+    name: certificates
+    fullName: certificates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-103">Elenco di certificati che devono essere installati nel servizio Gestione API.</span><span class="sxs-lookup"><span data-stu-id="d8112-103">List of Certificates that need to be installed in the API Management service.</span></span> <span data-ttu-id="d8112-104">Max certificati supportati che possono essere installati è 10.</span><span class="sxs-lookup"><span data-stu-id="d8112-104">Max supported certificates that can be installed is 10.</span></span>
+    optional: true
+    syntax:
+      content: 'certificates?: CertificateConfiguration[]'
+      return:
+        type:
+          - 'azure-arm-apimanagement.CertificateConfiguration[]'
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.createdAtUtc
+    name: createdAtUtc
+    fullName: createdAtUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d8112-105">Data UTC di creazione del servizio Gestione API. La data è conforme al formato seguente: `yyyy-MM-ddTHH:mm:ssZ` come specificato dallo standard ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="d8112-105">Creation UTC date of the API Management service.The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.</span></span>'
+    optional: true
+    syntax:
+      content: 'createdAtUtc?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.customProperties
+    name: customProperties
+    fullName: customProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d8112-106">Proprietà personalizzate del servizio Gestione API.</span><span class="sxs-lookup"><span data-stu-id="d8112-106">Custom properties of the API Management service.</span></span> <span data-ttu-id="d8112-107">Impostazione `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` disabiliterà la crittografia TLS_RSA_WITH_3DES_EDE_CBC_SHA per tutti i TLS (1.0, 1.1 e 1.2).</span><span class="sxs-lookup"><span data-stu-id="d8112-107">Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</span></span> <span data-ttu-id="d8112-108">L''impostazione `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` può essere usato per disabilitare solo TLS 1.1 e impostazione `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` può essere utilizzato per disabilitare TLS 1.0 in un servizio Gestione API.</span><span class="sxs-lookup"><span data-stu-id="d8112-108">Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1 and setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</span></span>'
+    optional: true
+    syntax:
+      content: 'customProperties?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.enableClientCertificate
+    name: enableClientCertificate
+    fullName: enableClientCertificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-109">Proprietà solo concepite per essere utilizzate per il servizio di utilizzo dello SKU.</span><span class="sxs-lookup"><span data-stu-id="d8112-109">Property only meant to be used for Consumption SKU Service.</span></span> <span data-ttu-id="d8112-110">In questo modo viene applicato un certificato client da presentare a ogni richiesta al gateway.</span><span class="sxs-lookup"><span data-stu-id="d8112-110">This enforces a client certificate to be presented on each request to the gateway.</span></span> <span data-ttu-id="d8112-111">Ciò consente inoltre la possibilità di autenticare il certificato nel criterio nel gateway.</span><span class="sxs-lookup"><span data-stu-id="d8112-111">This also enables the ability to authenticate the certificate in the policy on the gateway.</span></span>
+    optional: true
+    syntax:
+      content: 'enableClientCertificate?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.etag
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-112">Valore ETag della risorsa.</span><span class="sxs-lookup"><span data-stu-id="d8112-112">ETag of the resource.</span></span>
+    optional: true
+    syntax:
+      content: 'etag?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.gatewayRegionalUrl
+    name: gatewayRegionalUrl
+    fullName: gatewayRegionalUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-113">URL del gateway del servizio Gestione API nell'area predefinita.</span><span class="sxs-lookup"><span data-stu-id="d8112-113">Gateway URL of the API Management service in the Default Region.</span></span>
+    optional: true
+    syntax:
+      content: 'gatewayRegionalUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.gatewayUrl
+    name: gatewayUrl
+    fullName: gatewayUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-114">URL del gateway del servizio Gestione API.</span><span class="sxs-lookup"><span data-stu-id="d8112-114">Gateway URL of the API Management service.</span></span>
+    optional: true
+    syntax:
+      content: 'gatewayUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.hostnameConfigurations
+    name: hostnameConfigurations
+    fullName: hostnameConfigurations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-115">Configurazione del nome host personalizzato del servizio Gestione API.</span><span class="sxs-lookup"><span data-stu-id="d8112-115">Custom hostname configuration of the API Management service.</span></span>
+    optional: true
+    syntax:
+      content: 'hostnameConfigurations?: HostnameConfiguration[]'
+      return:
+        type:
+          - 'azure-arm-apimanagement.HostnameConfiguration[]'
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-116">ID risorsa.</span><span class="sxs-lookup"><span data-stu-id="d8112-116">Resource ID.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.identity
+    name: identity
+    fullName: identity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-117">Identità del servizio del servizio Gestione Api gestita.</span><span class="sxs-lookup"><span data-stu-id="d8112-117">Managed service identity of the Api Management service.</span></span>
+    optional: true
+    syntax:
+      content: 'identity?: ApiManagementServiceIdentity'
+      return:
+        type:
+          - azure-arm-apimanagement.ApiManagementServiceIdentity
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.managementApiUrl
+    name: managementApiUrl
+    fullName: managementApiUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-118">URL dell'endpoint API di gestione del servizio Gestione API.</span><span class="sxs-lookup"><span data-stu-id="d8112-118">Management API endpoint URL of the API Management service.</span></span>
+    optional: true
+    syntax:
+      content: 'managementApiUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-119">Nome della risorsa.</span><span class="sxs-lookup"><span data-stu-id="d8112-119">Resource name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.notificationSenderEmail
+    name: notificationSenderEmail
+    fullName: notificationSenderEmail
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-120">Indirizzo di posta elettronica da cui verrà inviate le notifiche.</span><span class="sxs-lookup"><span data-stu-id="d8112-120">Email address from which the notification will be sent.</span></span>
+    optional: true
+    syntax:
+      content: 'notificationSenderEmail?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.portalUrl
+    name: portalUrl
+    fullName: portalUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-121">Url endpoint del portale di server di pubblicazione del servizio Gestione API.</span><span class="sxs-lookup"><span data-stu-id="d8112-121">Publisher portal endpoint Url of the API Management service.</span></span>
+    optional: true
+    syntax:
+      content: 'portalUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.privateIPAddresses
+    name: privateIPAddresses
+    fullName: privateIPAddresses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d8112-122">Indirizzi IP con bilanciamento del carico statico privati del servizio Gestione API nell''area primaria a cui viene distribuito in una rete virtuale interna.</span><span class="sxs-lookup"><span data-stu-id="d8112-122">Private Static Load Balanced IP addresses of the API Management service in Primary region which is deployed in an Internal Virtual Network.</span></span> <span data-ttu-id="d8112-123">Disponibile solo per lo SKU Basic, Standard e Premium.</span><span class="sxs-lookup"><span data-stu-id="d8112-123">Available only for Basic, Standard and Premium SKU.</span></span>'
+    optional: true
+    syntax:
+      content: 'privateIPAddresses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d8112-124">Lo stato di provisioning corrente del servizio Gestione API che può essere uno dei seguenti: Creata/attivazione/ha avuto esito positivo/aggiornamento/non riuscita/arrestato/terminazione/TerminationFailed/eliminata.</span><span class="sxs-lookup"><span data-stu-id="d8112-124">The current provisioning state of the API Management service which can be one of the following: Created/Activating/Succeeded/Updating/Failed/Stopped/Terminating/TerminationFailed/Deleted.</span></span>'
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.publicIPAddresses
+    name: publicIPAddresses
+    fullName: publicIPAddresses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="d8112-125">Indirizzi IP con bilanciamento del carico statico pubblici del servizio Gestione API nell'area primaria.</span><span class="sxs-lookup"><span data-stu-id="d8112-125">Public Static Load Balanced IP addresses of the API Management service in Primary region.</span></span>
+      <span data-ttu-id="d8112-126">Disponibile solo per lo SKU Basic, Standard e Premium.</span><span class="sxs-lookup"><span data-stu-id="d8112-126">Available only for Basic, Standard and Premium SKU.</span></span>
+    optional: true
+    syntax:
+      content: 'publicIPAddresses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.publisherEmail
+    name: publisherEmail
+    fullName: publisherEmail
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-127">Messaggio di posta elettronica di server di pubblicazione.</span><span class="sxs-lookup"><span data-stu-id="d8112-127">Publisher email.</span></span>
+    optional: true
+    syntax:
+      content: 'publisherEmail?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.publisherName
+    name: publisherName
+    fullName: publisherName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-128">Nome del server di pubblicazione.</span><span class="sxs-lookup"><span data-stu-id="d8112-128">Publisher name.</span></span>
+    optional: true
+    syntax:
+      content: 'publisherName?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.scmUrl
+    name: scmUrl
+    fullName: scmUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-129">SCM URL dell'endpoint del servizio Gestione API.</span><span class="sxs-lookup"><span data-stu-id="d8112-129">SCM endpoint URL of the API Management service.</span></span>
+    optional: true
+    syntax:
+      content: 'scmUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.sku
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-130">Proprietà SKU del servizio Gestione API.</span><span class="sxs-lookup"><span data-stu-id="d8112-130">SKU properties of the API Management service.</span></span>
+    optional: true
+    syntax:
+      content: 'sku?: ApiManagementServiceSkuProperties'
+      return:
+        type:
+          - azure-arm-apimanagement.ApiManagementServiceSkuProperties
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-131">Tag delle risorse.</span><span class="sxs-lookup"><span data-stu-id="d8112-131">Resource tags.</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.targetProvisioningState
+    name: targetProvisioningState
+    fullName: targetProvisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d8112-132">Lo stato di provisioning del servizio Gestione API, che viene indirizzato per l''operazione a esecuzione prolungata avviata sul servizio.</span><span class="sxs-lookup"><span data-stu-id="d8112-132">The provisioning state of the API Management service, which is targeted by the long running operation started on the service.</span></span>'
+    optional: true
+    syntax:
+      content: 'targetProvisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-133">Tipo di risorsa per la risorsa di gestione API è impostato su Microsoft. apimanagement.</span><span class="sxs-lookup"><span data-stu-id="d8112-133">Resource type for API Management resource is set to Microsoft.ApiManagement.</span></span>
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.virtualNetworkConfiguration
+    name: virtualNetworkConfiguration
+    fullName: virtualNetworkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d8112-134">Configurazione della rete virtuale del servizio Gestione API.</span><span class="sxs-lookup"><span data-stu-id="d8112-134">Virtual network configuration of the API Management service.</span></span>
+    optional: true
+    syntax:
+      content: 'virtualNetworkConfiguration?: VirtualNetworkConfiguration'
+      return:
+        type:
+          - azure-arm-apimanagement.VirtualNetworkConfiguration
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiManagementServiceUpdateParameters.virtualNetworkType
+    name: virtualNetworkType
+    fullName: virtualNetworkType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d8112-135">Il tipo di VPN in Gestione API di cui deve essere configurato nel servizio.</span><span class="sxs-lookup"><span data-stu-id="d8112-135">The type of VPN in which API Management service needs to be configured in.</span></span> <span data-ttu-id="d8112-136">Nessuno (valore predefinito) indica che il servizio Gestione API non fa parte di qualsiasi rete virtuale esterna si intende il servizio Gestione API la distribuzione è configurata all''interno di una rete virtuale con un Endpoint con connessione Internet e interno significa che la distribuzione di gestione API è il programma di installazione all''interno di una rete virtuale con una rete Intranet Facing Endpoint solo.</span><span class="sxs-lookup"><span data-stu-id="d8112-136">None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.</span></span> <span data-ttu-id="d8112-137">I valori possibili sono: ''None'', ''Esterno'', ''Internal''</span><span class="sxs-lookup"><span data-stu-id="d8112-137">Possible values include: ''None'', ''External'', ''Internal''</span></span>'
+    optional: true
+    syntax:
+      content: 'virtualNetworkType?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+references:
+  - uid: azure-arm-apimanagement.ApimResource
+    name: ApimResource
+    spec.typeScript:
+      - name: ApimResource
+        fullName: ApimResource
+        uid: azure-arm-apimanagement.ApimResource
+  - uid: 'azure-arm-apimanagement.AdditionalLocation[]'
+    name: 'AdditionalLocation[]'
+    spec.typeScript:
+      - name: AdditionalLocation
+        fullName: AdditionalLocation
+        uid: azure-arm-apimanagement.AdditionalLocation
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-arm-apimanagement.CertificateConfiguration[]'
+    name: 'CertificateConfiguration[]'
+    spec.typeScript:
+      - name: CertificateConfiguration
+        fullName: CertificateConfiguration
+        uid: azure-arm-apimanagement.CertificateConfiguration
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-arm-apimanagement.HostnameConfiguration[]'
+    name: 'HostnameConfiguration[]'
+    spec.typeScript:
+      - name: HostnameConfiguration
+        fullName: HostnameConfiguration
+        uid: azure-arm-apimanagement.HostnameConfiguration
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-arm-apimanagement.ApiManagementServiceIdentity
+    name: ApiManagementServiceIdentity
+    spec.typeScript:
+      - name: ApiManagementServiceIdentity
+        fullName: ApiManagementServiceIdentity
+        uid: azure-arm-apimanagement.ApiManagementServiceIdentity
+  - uid: azure-arm-apimanagement.ApiManagementServiceSkuProperties
+    name: ApiManagementServiceSkuProperties
+    spec.typeScript:
+      - name: ApiManagementServiceSkuProperties
+        fullName: ApiManagementServiceSkuProperties
+        uid: azure-arm-apimanagement.ApiManagementServiceSkuProperties
+  - uid: azure-arm-apimanagement.VirtualNetworkConfiguration
+    name: VirtualNetworkConfiguration
+    spec.typeScript:
+      - name: VirtualNetworkConfiguration
+        fullName: VirtualNetworkConfiguration
+        uid: azure-arm-apimanagement.VirtualNetworkConfiguration

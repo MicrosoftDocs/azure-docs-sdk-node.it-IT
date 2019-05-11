@@ -1,0 +1,154 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.PngImage
+    name: PngImage
+    fullName: PngImage
+    children:
+      - azure-arm-mediaservices.PngImage.keyFrameInterval
+      - azure-arm-mediaservices.PngImage.label
+      - azure-arm-mediaservices.PngImage.layers
+      - azure-arm-mediaservices.PngImage.odatatype
+      - azure-arm-mediaservices.PngImage.range
+      - azure-arm-mediaservices.PngImage.start
+      - azure-arm-mediaservices.PngImage.step
+      - azure-arm-mediaservices.PngImage.stretchMode
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="b38c2-101">Vengono descritte le proprietà per la creazione di una serie di immagini PNG del video di input.</span><span class="sxs-lookup"><span data-stu-id="b38c2-101">Describes the properties for producing a series of PNG images from the input video.</span></span>
+    extends:
+      name: azure-arm-mediaservices.Image
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.keyFrameInterval
+    name: keyFrameInterval
+    fullName: keyFrameInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b38c2-102">La distanza tra due fotogrammi chiave, definendo group of pictures (GOP).</span><span class="sxs-lookup"><span data-stu-id="b38c2-102">The distance between two key frames, thereby defining a group of pictures (GOP).</span></span> <span data-ttu-id="b38c2-103">Il valore deve essere un intero diverso da zero l''intervallo [1, 30] secondi, specificato nel formato ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="b38c2-103">The value should be a non-zero integer in the range [1, 30] seconds, specified in ISO 8601 format.</span></span> <span data-ttu-id="b38c2-104">Il valore predefinito è 2 secondi (PT2S).</span><span class="sxs-lookup"><span data-stu-id="b38c2-104">The default is 2 seconds (PT2S).</span></span>'
+    optional: true
+    syntax:
+      content: 'keyFrameInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b38c2-105">Un'etichetta facoltativa per il codec.</span><span class="sxs-lookup"><span data-stu-id="b38c2-105">An optional label for the codec.</span></span> <span data-ttu-id="b38c2-106">L'etichetta può essere utilizzata per controllare il comportamento muxing.</span><span class="sxs-lookup"><span data-stu-id="b38c2-106">The label can be used to control muxing behavior.</span></span>
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.layers
+    name: layers
+    fullName: layers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b38c2-107">Raccolta di livelli di immagine PNG di output per essere prodotte dal codificatore.</span><span class="sxs-lookup"><span data-stu-id="b38c2-107">A collection of output PNG image layers to be produced by the encoder.</span></span>
+    optional: true
+    syntax:
+      content: 'layers?: PngLayer[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.PngLayer[]'
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b38c2-108">Discriminatore polimorfiche</span><span class="sxs-lookup"><span data-stu-id="b38c2-108">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.range
+    name: range
+    fullName: range
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b38c2-109">La posizione in corrispondenza del quale arrestare la generazione di anteprime video di input.</span><span class="sxs-lookup"><span data-stu-id="b38c2-109">The position in the input video at which to stop generating thumbnails.</span></span> <span data-ttu-id="b38c2-110">Il valore può essere assoluto timestamp (ISO 8601, ad esempio: PT5M30S venga interrotto in corrispondenza di 5 minuti e 30 secondi), o un numero di frame (ad esempio, 300 per arrestare il fotogramma 300th), oppure un valore relativo (ad esempio, 100% ").</span><span class="sxs-lookup"><span data-stu-id="b38c2-110">The value can be in absolute timestamp (ISO 8601, e.g: PT5M30S to stop at 5 minutes and 30 seconds), or a frame count (For example, 300 to stop at the 300th frame), or a relative value (For example, 100%).</span></span>'
+    optional: true
+    syntax:
+      content: 'range?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.start
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b38c2-111">Posizione nel video di input da cui avviare la generazione di anteprime.</span><span class="sxs-lookup"><span data-stu-id="b38c2-111">The position in the input video from where to start generating thumbnails.</span></span> <span data-ttu-id="b38c2-112">Il valore può essere assoluto timestamp (ISO 8601, ad esempio: PT05S), o un numero di frame (ad esempio, 10 per il frame di 10th), oppure un valore relativo (ad esempio, % 1).</span><span class="sxs-lookup"><span data-stu-id="b38c2-112">The value can be in absolute timestamp (ISO 8601, e.g: PT05S), or a frame count (For example, 10 for the 10th frame), or a relative value (For example, 1%).</span></span> <span data-ttu-id="b38c2-113">Supporta anche una macro {Best}, che indica al codificatore per l''anteprima migliore, selezionarne i primi secondi del video.</span><span class="sxs-lookup"><span data-stu-id="b38c2-113">Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video.</span></span>'
+    syntax:
+      content: 'start: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.step
+    name: step
+    fullName: step
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b38c2-114">Gli intervalli in corrispondenza del quale vengono generate le anteprime.</span><span class="sxs-lookup"><span data-stu-id="b38c2-114">The intervals at which thumbnails are generated.</span></span> <span data-ttu-id="b38c2-115">Il valore può essere assoluto timestamp (ISO 8601, ad esempio: PT05S per una delle immagini ogni 5 secondi), o un numero di frame (ad esempio, 30 per ogni 30 fotogrammi), oppure un valore relativo (ad esempio, % 1).</span><span class="sxs-lookup"><span data-stu-id="b38c2-115">The value can be in absolute timestamp (ISO 8601, e.g: PT05S for one image every 5 seconds), or a frame count (For example, 30 for every 30 frames), or a relative value (For example, 1%).</span></span>'
+    optional: true
+    syntax:
+      content: 'step?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.PngImage.stretchMode
+    name: stretchMode
+    fullName: stretchMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b38c2-116">La modalità di ridimensionamento - come il video di input verrà ridimensionato per adattarsi Investigate l''output desiderato.</span><span class="sxs-lookup"><span data-stu-id="b38c2-116">The resizing mode - how the input video will be resized to fit the desired output resolution(s).</span></span> <span data-ttu-id="b38c2-117">Il valore predefinito è la proprietà AutoSize.</span><span class="sxs-lookup"><span data-stu-id="b38c2-117">Default is AutoSize.</span></span> <span data-ttu-id="b38c2-118">I valori possibili sono: ''None'', ''AutoSize'', ''AutoFit''</span><span class="sxs-lookup"><span data-stu-id="b38c2-118">Possible values include: ''None'', ''AutoSize'', ''AutoFit''</span></span>'
+    optional: true
+    syntax:
+      content: 'stretchMode?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Image
+    name: Image
+    spec.typeScript:
+      - name: Image
+        fullName: Image
+        uid: azure-arm-mediaservices.Image
+  - uid: 'azure-arm-mediaservices.PngLayer[]'
+    name: 'PngLayer[]'
+    spec.typeScript:
+      - name: PngLayer
+        fullName: PngLayer
+        uid: azure-arm-mediaservices.PngLayer
+      - name: '[]'
+        fullName: '[]'
