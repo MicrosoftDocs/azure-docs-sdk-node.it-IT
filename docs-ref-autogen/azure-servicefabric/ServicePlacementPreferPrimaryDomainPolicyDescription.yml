@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription
+    name: ServicePlacementPreferPrimaryDomainPolicyDescription
+    fullName: ServicePlacementPreferPrimaryDomainPolicyDescription
+    children:
+      - azure-servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName
+      - azure-servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Descrive i criteri da utilizzare per la selezione host di un servizio di Service Fabric in cui repliche primarie del servizio devono essere posizionate in un particolare dominio.
+      Questo criterio di selezione host viene utilizzato generalmente con domini di errore negli scenari in cui il cluster di Service Fabric viene distribuito geograficamente per indicare che la replica primaria di un servizio deve trovarsi in un particolare dominio di errore, che nella distribuzione geografica gli scenari in genere viene allineato confini internazionali o Data Center. Si noti che poiché si tratta di un'ottimizzazione è possibile che la replica primaria potrebbe non finire che si trova nel dominio a causa di errori, i limiti della capacità o altri vincoli.
+    extends:
+      name: azure-servicefabric.ServicePlacementPolicyDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il nome del dominio che deve essere usato per la selezione host in base ai criteri.
+    optional: true
+    syntax:
+      content: 'domainName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'type: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServicePlacementPolicyDescription
+    name: ServicePlacementPolicyDescription
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescription
+        fullName: ServicePlacementPolicyDescription
+        uid: azure-servicefabric.ServicePlacementPolicyDescription

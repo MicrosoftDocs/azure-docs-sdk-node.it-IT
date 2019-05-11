@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription
+    name: TimeBasedBackupScheduleDescription
+    fullName: TimeBasedBackupScheduleDescription
+    children:
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.runDays
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.runTimes
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType
+      - azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleKind
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrive la pianificazione del backup basato sul tempo.
+    extends:
+      name: azure-servicefabric.BackupScheduleDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.runDays
+    name: runDays
+    fullName: runDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco dei giorni della settimana in cui attivare il backup periodico. Ciò è valido solo quando il tipo di frequenza di pianificazione dei backup è settimanale.
+    optional: true
+    syntax:
+      content: 'runDays?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.runTimes
+    name: runTimes
+    fullName: runTimes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Rappresenta l''elenco di ora esatta del giorno nel formato ISO8601. Ad esempio "19: 00:00'' rappresenta ''7 PM'' durante la giornata. Data specificato insieme a tempo verranno ignorati.'
+    syntax:
+      content: 'runTimes: Date[]'
+      return:
+        type:
+          - 'Date[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType
+    name: scheduleFrequencyType
+    fullName: scheduleFrequencyType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Descrive la frequenza con cui eseguire il tempo basato su pianificazione del backup. I valori possibili sono: ''Invalid'', ''Giornaliera'', ''Settimanale'''
+    syntax:
+      content: 'scheduleFrequencyType: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleKind
+    name: scheduleKind
+    fullName: scheduleKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'scheduleKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.BackupScheduleDescription
+    name: BackupScheduleDescription
+    spec.typeScript:
+      - name: BackupScheduleDescription
+        fullName: BackupScheduleDescription
+        uid: azure-servicefabric.BackupScheduleDescription

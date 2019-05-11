@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse'
+    name: EntireDetectResponse
+    fullName: EntireDetectResponse
+    children:
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.expectedValues'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isNegativeAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isPositiveAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.lowerMargins'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.period'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.upperMargins'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta EntireDetectResponse.
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.expectedValues'
+    name: expectedValues
+    fullName: expectedValues
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ExpectedValues contengono il valore previsto per ogni punto di ingresso. L'indice della matrice è coerenza con la serie di input.
+    syntax:
+      content: 'expectedValues: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isAnomaly'
+    name: isAnomaly
+    fullName: isAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IsAnomaly contiene le proprietà delle anomalie per ogni punto di ingresso. True indica che è stata rilevata un'anomalia negativa o positiva. L'indice della matrice è coerenza con la serie di input.
+    syntax:
+      content: 'isAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isNegativeAnomaly'
+    name: isNegativeAnomaly
+    fullName: isNegativeAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IsNegativeAnomaly contiene lo stato delle anomalie in direzione negativa per ogni punto di ingresso. True indica che è stata rilevata un'anomalia negativa. Un'anomalia negativa significa che il punto viene rilevato un'anomalia e il valore reale è inferiore a quello previsto. L'indice della matrice è coerenza con la serie di input.
+    syntax:
+      content: 'isNegativeAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isPositiveAnomaly'
+    name: isPositiveAnomaly
+    fullName: isPositiveAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IsPositiveAnomaly contengono lo stato delle anomalie in direzione positiva per ogni punto di ingresso. True indica che è stata rilevata un'anomalia positiva. Un'anomalia positiva indica che il punto viene rilevato un'anomalia e il valore reale è maggiore di quello previsto. L'indice della matrice è coerenza con la serie di input.
+    syntax:
+      content: 'isPositiveAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.lowerMargins'
+    name: lowerMargins
+    fullName: lowerMargins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'LowerMargins contengono margine inferiore di ogni punto di ingresso. LowerMargin viene usato per calcolare lowerBoundary, che è uguale a expectedValue - (100 - marginScale) * lowerMargin. I punti tra il limite possono essere contrassegnati come quelli normale sul lato client. L''indice della matrice è coerenza con la serie di input.'
+    syntax:
+      content: 'lowerMargins: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.period'
+    name: period
+    fullName: period
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Frequenza estratta dalla serie, zero indica che non è stato trovato alcun modello ricorrente.'
+    syntax:
+      content: 'period: number'
+      return:
+        type:
+          - number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.upperMargins'
+    name: upperMargins
+    fullName: upperMargins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'UpperMargins contengono margine superiore di ogni punto di ingresso. UpperMargin viene usato per calcolare upperBoundary, ovvero % expectedValue + (100 - marginScale) * upperMargin. Anomalie nella risposta possono essere filtrate in base upperBoundary e lowerBoundary. Regolando marginScale valore, meno significative anomalie possono essere filtrate sul lato client. L''indice della matrice è coerenza con la serie di input.'
+    syntax:
+      content: 'upperMargins: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'

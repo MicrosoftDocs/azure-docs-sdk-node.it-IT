@@ -1,0 +1,346 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-sb.SBSubscription
+    name: SBSubscription
+    fullName: SBSubscription
+    children:
+      - azure-arm-sb.SBSubscription.accessedAt
+      - azure-arm-sb.SBSubscription.autoDeleteOnIdle
+      - azure-arm-sb.SBSubscription.countDetails
+      - azure-arm-sb.SBSubscription.createdAt
+      - azure-arm-sb.SBSubscription.deadLetteringOnFilterEvaluationExceptions
+      - azure-arm-sb.SBSubscription.deadLetteringOnMessageExpiration
+      - azure-arm-sb.SBSubscription.defaultMessageTimeToLive
+      - azure-arm-sb.SBSubscription.duplicateDetectionHistoryTimeWindow
+      - azure-arm-sb.SBSubscription.enableBatchedOperations
+      - azure-arm-sb.SBSubscription.forwardDeadLetteredMessagesTo
+      - azure-arm-sb.SBSubscription.forwardTo
+      - azure-arm-sb.SBSubscription.id
+      - azure-arm-sb.SBSubscription.lockDuration
+      - azure-arm-sb.SBSubscription.maxDeliveryCount
+      - azure-arm-sb.SBSubscription.messageCount
+      - azure-arm-sb.SBSubscription.name
+      - azure-arm-sb.SBSubscription.requiresSession
+      - azure-arm-sb.SBSubscription.status
+      - azure-arm-sb.SBSubscription.type
+      - azure-arm-sb.SBSubscription.updatedAt
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrizione della risorsa di sottoscrizione.
+    extends:
+      name: azure-arm-sb.Resource
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.accessedAt
+    name: accessedAt
+    fullName: accessedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ultima volta durante una richiesta di ricezione per questa sottoscrizione.
+    optional: true
+    syntax:
+      content: 'accessedAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.autoDeleteOnIdle
+    name: autoDeleteOnIdle
+    fullName: autoDeleteOnIdle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Compatibile con ISO 8061 timeSpan intervallo di inattività dopo il quale l'argomento viene eliminato automaticamente. La durata minima è 5 minuti.
+    optional: true
+    syntax:
+      content: 'autoDeleteOnIdle?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.countDetails
+    name: countDetails
+    fullName: countDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dettagli conteggio dei messaggi
+    optional: true
+    syntax:
+      content: 'countDetails?: MessageCountDetails'
+      return:
+        type:
+          - azure-arm-sb.MessageCountDetails
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.createdAt
+    name: createdAt
+    fullName: createdAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ora esatta in cui è stato creato il messaggio.
+    optional: true
+    syntax:
+      content: 'createdAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.deadLetteringOnFilterEvaluationExceptions
+    name: deadLetteringOnFilterEvaluationExceptions
+    fullName: deadLetteringOnFilterEvaluationExceptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valore che indica se una sottoscrizione ha lettera dead supportano le eccezioni di valutazione di filtro.
+    optional: true
+    syntax:
+      content: 'deadLetteringOnFilterEvaluationExceptions?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.deadLetteringOnMessageExpiration
+    name: deadLetteringOnMessageExpiration
+    fullName: deadLetteringOnMessageExpiration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valore che indica se una sottoscrizione dispone di supporto di lettera non consegnata quando un messaggio scade.
+    optional: true
+    syntax:
+      content: 'deadLetteringOnMessageExpiration?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.defaultMessageTimeToLive
+    name: defaultMessageTimeToLive
+    fullName: defaultMessageTimeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Messaggio di ISO 8061 predefinito timespan valore di durata. Si tratta della durata dopo la quale il messaggio scade, a partire da quando il messaggio viene inviato al Bus di servizio. Questo è il valore predefinito utilizzato quando non TimeToLive è impostata su un messaggio stesso.'
+    optional: true
+    syntax:
+      content: 'defaultMessageTimeToLive?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.duplicateDetectionHistoryTimeWindow
+    name: duplicateDetectionHistoryTimeWindow
+    fullName: duplicateDetectionHistoryTimeWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Struttura timeSpan ISO 8601 che definisce la durata della cronologia di rilevamento dei duplicati. Il valore predefinito è 10 minuti.
+    optional: true
+    syntax:
+      content: 'duplicateDetectionHistoryTimeWindow?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.enableBatchedOperations
+    name: enableBatchedOperations
+    fullName: enableBatchedOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valore che indica se sono abilitate le operazioni in batch sul lato server.
+    optional: true
+    syntax:
+      content: 'enableBatchedOperations?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.forwardDeadLetteredMessagesTo
+    name: forwardDeadLetteredMessagesTo
+    fullName: forwardDeadLetteredMessagesTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome coda/argomento per inoltrare il messaggio di lettera non consegnata
+    optional: true
+    syntax:
+      content: 'forwardDeadLetteredMessagesTo?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.forwardTo
+    name: forwardTo
+    fullName: forwardTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome coda/argomento per inoltrare i messaggi
+    optional: true
+    syntax:
+      content: 'forwardTo?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID risorsa
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.lockDuration
+    name: lockDuration
+    fullName: lockDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Compatibile con ISO 8061 blocco durata intervallo di tempo per la sottoscrizione. Il valore predefinito è 1 minuto.
+    optional: true
+    syntax:
+      content: 'lockDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.maxDeliveryCount
+    name: maxDeliveryCount
+    fullName: maxDeliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Numero di recapiti massimi.
+    optional: true
+    syntax:
+      content: 'maxDeliveryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.messageCount
+    name: messageCount
+    fullName: messageCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Numero di messaggi.
+    optional: true
+    syntax:
+      content: 'messageCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome risorsa
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.requiresSession
+    name: requiresSession
+    fullName: requiresSession
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valore che indica se una sottoscrizione supporta il concetto di sessione.
+    optional: true
+    syntax:
+      content: 'requiresSession?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Enumera i valori possibili per lo stato di un''entità di messaggistica. I valori possibili sono: ''Active'', ''Disabled'', ''Restoring'', ''SendDisabled'', ''ReceiveDisabled'', ''Creating'', ''Deleting'', ''Renaming'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'status?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tipo di risorsa
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBSubscription.updatedAt
+    name: updatedAt
+    fullName: updatedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'ora esatta il messaggio è stato aggiornato.
+    optional: true
+    syntax:
+      content: 'updatedAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+references:
+  - uid: azure-arm-sb.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-sb.Resource
+  - uid: azure-arm-sb.MessageCountDetails
+    name: MessageCountDetails
+    spec.typeScript:
+      - name: MessageCountDetails
+        fullName: MessageCountDetails
+        uid: azure-arm-sb.MessageCountDetails
