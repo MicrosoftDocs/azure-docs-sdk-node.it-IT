@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServicePartitionInfo
+    name: StatelessServicePartitionInfo
+    fullName: StatelessServicePartitionInfo
+    children:
+      - azure-servicefabric.StatelessServicePartitionInfo.healthState
+      - azure-servicefabric.StatelessServicePartitionInfo.instanceCount
+      - azure-servicefabric.StatelessServicePartitionInfo.partitionInformation
+      - azure-servicefabric.StatelessServicePartitionInfo.partitionStatus
+      - azure-servicefabric.StatelessServicePartitionInfo.serviceKind
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="a2e90-101">Informazioni su una partizione di un servizio di Service Fabric senza stato.</span><span class="sxs-lookup"><span data-stu-id="a2e90-101">Information about a partition of a stateless Service Fabric service.</span></span>
+    extends:
+      name: azure-servicefabric.ServicePartitionInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a2e90-102">Lo stato di integrità di un''entità di Service Fabric come Cluster di nodo, applicazione, servizio, partizione, Replica e così via. I valori possibili sono: ''Invalid'', ''Ok'', ''Warning'', ''Error'', "Unknown".</span><span class="sxs-lookup"><span data-stu-id="a2e90-102">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.instanceCount
+    name: instanceCount
+    fullName: instanceCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a2e90-103">Numero di istanze di questa partizione.</span><span class="sxs-lookup"><span data-stu-id="a2e90-103">Number of instances of this partition.</span></span>
+    optional: true
+    syntax:
+      content: 'instanceCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.partitionInformation
+    name: partitionInformation
+    fullName: partitionInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a2e90-104">Informazioni relative all''identità di partizione, lo schema e le chiavi supportate dalla funzione di partizionamento.</span><span class="sxs-lookup"><span data-stu-id="a2e90-104">Information about the partition identity, partitioning scheme and keys supported by it.</span></span>'
+    optional: true
+    syntax:
+      content: 'partitionInformation?: PartitionInformation'
+      return:
+        type:
+          - azure-servicefabric.PartitionInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.partitionStatus
+    name: partitionStatus
+    fullName: partitionStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a2e90-105">Lo stato della partizione del servizio service fabric.</span><span class="sxs-lookup"><span data-stu-id="a2e90-105">The status of the service fabric service partition.</span></span> <span data-ttu-id="a2e90-106">I valori possibili sono: ''Invalid'', ''Ready'', ''NotReady'', ''InQuorumLoss'', ''Reconfiguring'', ''Deleting''</span><span class="sxs-lookup"><span data-stu-id="a2e90-106">Possible values include: ''Invalid'', ''Ready'', ''NotReady'', ''InQuorumLoss'', ''Reconfiguring'', ''Deleting''</span></span>'
+    optional: true
+    syntax:
+      content: 'partitionStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a2e90-107">Discriminatore polimorfiche</span><span class="sxs-lookup"><span data-stu-id="a2e90-107">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServicePartitionInfo
+    name: ServicePartitionInfo
+    spec.typeScript:
+      - name: ServicePartitionInfo
+        fullName: ServicePartitionInfo
+        uid: azure-servicefabric.ServicePartitionInfo
+  - uid: azure-servicefabric.PartitionInformation
+    name: PartitionInformation
+    spec.typeScript:
+      - name: PartitionInformation
+        fullName: PartitionInformation
+        uid: azure-servicefabric.PartitionInformation

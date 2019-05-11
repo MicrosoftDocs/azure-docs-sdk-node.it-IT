@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaHealthEvaluation
+    name: ReplicaHealthEvaluation
+    fullName: ReplicaHealthEvaluation
+    children:
+      - azure-servicefabric.ReplicaHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.ReplicaHealthEvaluation.description
+      - azure-servicefabric.ReplicaHealthEvaluation.kind
+      - azure-servicefabric.ReplicaHealthEvaluation.partitionId
+      - azure-servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId
+      - azure-servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="c4f96-101">Rappresenta la valutazione dell''integrità per una replica, che contiene le informazioni sui dati e l''algoritmo usato dall''archivio integrità per valutare l''integrità.</span><span class="sxs-lookup"><span data-stu-id="c4f96-101">Represents health evaluation for a replica, containing information about the data and the algorithm used by health store to evaluate health.</span></span> <span data-ttu-id="c4f96-102">La versione di valutazione viene restituita solo quando lo stato di integrità aggregato è errore o avviso.</span><span class="sxs-lookup"><span data-stu-id="c4f96-102">The evaluation is returned only when the aggregated health state is either Error or Warning.</span></span>'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c4f96-103">Lo stato di integrità di un''entità di Service Fabric come Cluster di nodo, applicazione, servizio, partizione, Replica e così via. I valori possibili sono: ''Invalid'', ''Ok'', ''Warning'', ''Error'', "Unknown".</span><span class="sxs-lookup"><span data-stu-id="c4f96-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c4f96-104">Descrizione della valutazione dell''integrità, che rappresenta un riepilogo del processo di valutazione.</span><span class="sxs-lookup"><span data-stu-id="c4f96-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c4f96-105">Discriminatore polimorfiche</span><span class="sxs-lookup"><span data-stu-id="c4f96-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c4f96-106">ID della partizione a cui appartiene la replica.</span><span class="sxs-lookup"><span data-stu-id="c4f96-106">Id of the partition to which the replica belongs.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId
+    name: replicaOrInstanceId
+    fullName: replicaOrInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c4f96-107">ID replica di un servizio con stato o un''istanza del servizio senza stato.</span><span class="sxs-lookup"><span data-stu-id="c4f96-107">Id of a stateful service replica or a stateless service instance.</span></span> <span data-ttu-id="c4f96-108">Questo ID viene usato nelle query che si applicano ai servizi con stati sia senza stati.</span><span class="sxs-lookup"><span data-stu-id="c4f96-108">This ID is used in the queries that apply to both stateful and stateless services.</span></span> <span data-ttu-id="c4f96-109">Utilizzato da Service Fabric per identificare in modo univoco una replica di una partizione di un servizio con stato a un''istanza di una partizione del servizio senza stato.</span><span class="sxs-lookup"><span data-stu-id="c4f96-109">It is used by Service Fabric to uniquely identify a replica of a partition of a stateful service or an instance of a stateless service partition.</span></span> <span data-ttu-id="c4f96-110">È univoco all''interno di una partizione e non viene modificato per la durata della replica o istanza.</span><span class="sxs-lookup"><span data-stu-id="c4f96-110">It is unique within a partition and does not change for the lifetime of the replica or the instance.</span></span> <span data-ttu-id="c4f96-111">Se una replica con stato Ottiene eliminata e un''altra replica viene creata nello stesso nodo per la stessa partizione, otterrà un valore diverso per l''ID.</span><span class="sxs-lookup"><span data-stu-id="c4f96-111">If a stateful replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the ID.</span></span> <span data-ttu-id="c4f96-112">Se un''istanza senza stato viene eseguita il failover sul nodo stesso o diverso verrà visualizzato un valore diverso per l''ID.</span><span class="sxs-lookup"><span data-stu-id="c4f96-112">If a stateless instance is failed over on the same or different node it will get a different value for the ID.</span></span>'
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="c4f96-113">Elenco di valutazioni non integre che ha causato lo stato di integrità aggregato corrente della replica.</span><span class="sxs-lookup"><span data-stu-id="c4f96-113">List of unhealthy evaluations that led to the current aggregated health state of the replica.</span></span>
+      <span data-ttu-id="c4f96-114">I tipi delle valutazioni non integre possono essere EventHealthEvaluation.</span><span class="sxs-lookup"><span data-stu-id="c4f96-114">The types of the unhealthy evaluations can be EventHealthEvaluation.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

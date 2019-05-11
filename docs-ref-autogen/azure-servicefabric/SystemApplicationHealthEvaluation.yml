@@ -1,0 +1,91 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.SystemApplicationHealthEvaluation
+    name: SystemApplicationHealthEvaluation
+    fullName: SystemApplicationHealthEvaluation
+    children:
+      - azure-servicefabric.SystemApplicationHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.SystemApplicationHealthEvaluation.description
+      - azure-servicefabric.SystemApplicationHealthEvaluation.kind
+      - azure-servicefabric.SystemApplicationHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="367bf-101">Rappresenta la valutazione dell''integrità di fabric: / applicazione di sistema, che contiene le informazioni sui dati e l''algoritmo usato dall''archivio integrità per valutare l''integrità.</span><span class="sxs-lookup"><span data-stu-id="367bf-101">Represents health evaluation for the fabric:/System application, containing information about the data and the algorithm used by health store to evaluate health.</span></span> <span data-ttu-id="367bf-102">La versione di valutazione viene restituita solo quando lo stato di integrità aggregato del cluster è errore o avviso.</span><span class="sxs-lookup"><span data-stu-id="367bf-102">The evaluation is returned only when the aggregated health state of the cluster is either Error or Warning.</span></span>'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SystemApplicationHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="367bf-103">Lo stato di integrità di un''entità di Service Fabric come Cluster di nodo, applicazione, servizio, partizione, Replica e così via. I valori possibili sono: ''Invalid'', ''Ok'', ''Warning'', ''Error'', "Unknown".</span><span class="sxs-lookup"><span data-stu-id="367bf-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SystemApplicationHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="367bf-104">Descrizione della valutazione dell''integrità, che rappresenta un riepilogo del processo di valutazione.</span><span class="sxs-lookup"><span data-stu-id="367bf-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SystemApplicationHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="367bf-105">Discriminatore polimorfiche</span><span class="sxs-lookup"><span data-stu-id="367bf-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SystemApplicationHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="367bf-106">Elenco di valutazioni non integre che ha causato lo stato corrente di integrità aggregato dell''applicazione di sistema.</span><span class="sxs-lookup"><span data-stu-id="367bf-106">List of unhealthy evaluations that led to the current aggregated health state of the system application.</span></span> <span data-ttu-id="367bf-107">I tipi delle valutazioni non integre possono essere DeployedApplicationsHealthEvaluation, ServicesHealthEvaluation o EventHealthEvaluation.</span><span class="sxs-lookup"><span data-stu-id="367bf-107">The types of the unhealthy evaluations can be DeployedApplicationsHealthEvaluation, ServicesHealthEvaluation or EventHealthEvaluation.</span></span>'
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

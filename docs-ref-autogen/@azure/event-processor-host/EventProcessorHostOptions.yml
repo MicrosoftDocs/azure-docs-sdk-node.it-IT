@@ -1,0 +1,337 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions'
+    name: EventProcessorHostOptions
+    fullName: EventProcessorHostOptions
+    children:
+      - '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+      - '@azure/event-processor-host.EventProcessorHostOptions.consumerGroup'
+      - '@azure/event-processor-host.EventProcessorHostOptions.dataTransformer'
+      - '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+      - '@azure/event-processor-host.EventProcessorHostOptions.eventHubPath'
+      - '@azure/event-processor-host.EventProcessorHostOptions.fastScanInterval'
+      - '@azure/event-processor-host.EventProcessorHostOptions.initialOffset'
+      - '@azure/event-processor-host.EventProcessorHostOptions.leaseDuration'
+      - '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+      - '@azure/event-processor-host.EventProcessorHostOptions.leaseRenewInterval'
+      - '@azure/event-processor-host.EventProcessorHostOptions.onEphError'
+      - '@azure/event-processor-host.EventProcessorHostOptions.slowScanInterval'
+      - '@azure/event-processor-host.EventProcessorHostOptions.startupScanDelay'
+      - '@azure/event-processor-host.EventProcessorHostOptions.storageBlobPrefix'
+      - '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+      - '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+      - '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+      - '@azure/event-processor-host.EventProcessorHostOptions.userAgent'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ccb0b-101">Descrive i parametri facoltativi che possono essere specificati per la creazione di un EventProcessorHost.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-101">Describes the optional parameters that can be provided for creating an EventProcessorHost.</span></span>
+    extends:
+      name: '@azure/event-processor-host.FromConnectionStringOptions'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+    name: checkpointManager
+    fullName: checkpointManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ccb0b-102">{CheckpointManager} [checkpointManager] Gestore per gestire i checkpoint.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-102">{CheckpointManager} [checkpointManager] A manager to manage checkpoints.</span></span>
+      <span data-ttu-id="ccb0b-103">Valore predefinito: \*\* `AzureStorageCheckpointLeaseManager` \*\*.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-103">Default: **`AzureStorageCheckpointLeaseManager`**.</span></span>
+    optional: true
+    syntax:
+      content: 'checkpointManager?: CheckpointManager'
+      return:
+        type:
+          - '@azure/event-processor-host.CheckpointManager'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.consumerGroup'
+    name: consumerGroup
+    fullName: consumerGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-104">{string} [gruppo di consumer] Il nome del gruppo di consumer all''interno dell''Hub eventi.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-104">{string} [consumerGroup] The name of the consumer group within the Event Hub.</span></span> <span data-ttu-id="ccb0b-105">Il valore predefinito: \*\* `"$default"` \*\*.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-105">Default value: **`"$default"`**.</span></span>'
+    optional: true
+    syntax:
+      content: 'consumerGroup?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.dataTransformer'
+    name: dataTransformer
+    fullName: dataTransformer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-106">{DataTransformer} [dataTransformer] Il convertitore di dati che verrà utilizzato per codificare e decodificare i messaggi inviati e ricevuti, rispettivamente.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-106">{DataTransformer} [dataTransformer] The data transformer that will be used to encode and decode the sent and received messages respectively.</span></span> <span data-ttu-id="ccb0b-107">Se non specificato, si userà il DefaultDataTransformer.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-107">If not provided then we will use the DefaultDataTransformer.</span></span> <span data-ttu-id="ccb0b-108">Il convertitore predefinito consente di gestire maggioranza dei casi.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-108">The default transformer should handle majority of the cases.</span></span> <span data-ttu-id="ccb0b-109">Questa opzione deve essere usato solo per scenari specializzati.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-109">This option needs to be used only for specialized scenarios.</span></span>'
+    optional: true
+    syntax:
+      content: 'dataTransformer?: DataTransformer'
+      return:
+        type:
+          - DataTransformer
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+    name: eventHubConnectionString
+    fullName: eventHubConnectionString
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-110">{string} [valori eventHubConnectionString] Stringa di connessione per l''Hub eventi ricevere da.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-110">{string} [eventHubConnectionString] Connection string for the Event Hub to receive from.</span></span> <span data-ttu-id="ccb0b-111">Esempio: "Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key".</span><span class="sxs-lookup"><span data-stu-id="ccb0b-111">Example: "Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key".</span></span>'
+    optional: true
+    syntax:
+      content: 'eventHubConnectionString?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.eventHubPath'
+    name: eventHubPath
+    fullName: eventHubPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-112">{string} [eventHubPath] Nome dell''hub eventi.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-112">{string} [eventHubPath] The name of the EventHub.</span></span> <span data-ttu-id="ccb0b-113">Questa operazione è facoltativa se la stringa di connessione dell''hub eventi contiene EntityPath = nome dell''hub da altro verrà generato un errore.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-113">This is optional if the EventHub connection string contains EntityPath=hub-name else an Error will be thrown.</span></span>'
+    optional: true
+    syntax:
+      content: 'eventHubPath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.fastScanInterval'
+    name: fastScanInterval
+    fullName: fastScanInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ccb0b-114">{number} [fastScanInterval] Esistono due possibili intervallo volte tra le analisi per le partizioni disponibili, veloci e lente.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-114">{number} [fastScanInterval] There are two possible interval times between scans for available partitions, fast and slow.</span></span> <span data-ttu-id="ccb0b-115">L'intervallo di fast (breve) \*\* `in seconds` \*\* viene utilizzata dopo un'analisi in cui lease furto è stata eseguita, per alzare di livello il ribilanciamento più veloce.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-115">The fast (short) interval **`in seconds`** is used after a scan in which lease stealing has occurred, to promote quicker rebalancing.</span></span>
+      <span data-ttu-id="ccb0b-116">Valore predefinito: \*\* `3` secondi\*\*.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-116">Default: **`3` seconds**.</span></span>
+    optional: true
+    syntax:
+      content: 'fastScanInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.initialOffset'
+    name: initialOffset
+    fullName: initialOffset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-117">{EventPosition} initialOffset solo quando utilizzato quindi ricevitore viene creato per la prima volta e non sono presenti dati di checkpoint nel blob.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-117">{EventPosition} initialOffset This is only used when then receiver is being created for the very first time and there is no checkpoint data in the blob.</span></span> <span data-ttu-id="ccb0b-118">Per questa opzione per essere efficace, assicurarsi di fornire un nuovo nome host che non è stato usato in precedenza.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-118">For this option to be effective please make sure to provide a new hostName that was not used previously.</span></span>'
+    optional: true
+    syntax:
+      content: 'initialOffset?: EventPosition'
+      return:
+        type:
+          - EventPosition
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseDuration'
+    name: leaseDuration
+    fullName: leaseDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-119">{number} [leaseDuration] Durata del lease \*\* `in seconds` \*\* prima della scadenza, a meno che rinnovato.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-119">{number} [leaseDuration] Duration of a lease **`in seconds`** before it expires unless renewed.</span></span> <span data-ttu-id="ccb0b-120">Valore predefinito: \*\* `30` secondi**, il valore minimo: \*\* `15` secondi**, il valore massimo: \*\* `60` secondi\*\*.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-120">Default: **`30` seconds**, Min Value: **`15` seconds**, Max value: **`60` seconds**.</span></span>'
+    optional: true
+    syntax:
+      content: 'leaseDuration?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+    name: leaseManager
+    fullName: leaseManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-121">{LeaseManager} [LeaseManager] Gestore per la gestione dei lease.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-121">{LeaseManager} [LeaseManager] A manager to manage leases.</span></span> <span data-ttu-id="ccb0b-122">Valore predefinito: \*\* `AzureStorageCheckpointLeaseManager` \*\*.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-122">Default: **`AzureStorageCheckpointLeaseManager`**.</span></span>'
+    optional: true
+    syntax:
+      content: 'leaseManager?: LeaseManager'
+      return:
+        type:
+          - '@azure/event-processor-host.LeaseManager'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseRenewInterval'
+    name: leaseRenewInterval
+    fullName: leaseRenewInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ccb0b-123">{number} [leaseRenewInterval] L'intervallo di sospensione \*\* `in seconds` \*\* tra le analisi.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-123">{number} [leaseRenewInterval] The sleep interval **`in seconds`** between scans.</span></span>
+      <span data-ttu-id="ccb0b-124">Valore predefinito: \*\* `10` secondi\*\*.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-124">Default: **`10` seconds**.</span></span>
+
+      <span data-ttu-id="ccb0b-125">Consente a un'implementazione di manager di lease specificare a PartitionManager frequenza dovrebbe analizzare i lease e rinnovarli.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-125">Allows a lease manager implementation to specify to PartitionManager how often it should scan leases and renew them.</span></span> <span data-ttu-id="ccb0b-126">Per ridistribuire i lease in modo tempestivo dopo che un host non è più operativo, è consigliabile un intervallo relativamente breve, ad esempio dieci secondi.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-126">In order to redistribute leases in a timely fashion after a host ceases operating, we recommend a relatively short interval, such as ten seconds.</span></span> <span data-ttu-id="ccb0b-127">Ovviamente è necessario renderla meno della metà della lunghezza del lease, per impedire la scadenza accidentale.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-127">Obviously it should be less than half of the lease length, to prevent accidental expiration.</span></span>
+    optional: true
+    syntax:
+      content: 'leaseRenewInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.onEphError'
+    name: onEphError
+    fullName: onEphError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ccb0b-128">{OnEphError} [onEphError] Gestore degli errori che può essere fornite per la ricezione di notifica per gli errori generali.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-128">{OnEphError} [onEphError] Error handler that can be provided to receive notifcation for general errors.</span></span>
+
+      <span data-ttu-id="ccb0b-129">Errori che si verificano durante l'elaborazione di eventi da una determinata partizione di hub eventi vengono recapitati al `onError` gestori forniti nel `start()` (metodo).</span><span class="sxs-lookup"><span data-stu-id="ccb0b-129">Errors which occur while processing events from a particular EventHub partition are delivered to the `onError` handler provided in the `start()` method.</span></span> <span data-ttu-id="ccb0b-130">Questo gestore viene chiamato in occasioni, quando si verifica un errore durante la gestione di partizioni o dei lease per le partizioni.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-130">This handler is called on occasions when an error occurs while managing partitions or leases for the partitions.</span></span>
+    optional: true
+    syntax:
+      content: 'onEphError?: OnEphError'
+      return:
+        type:
+          - '@azure/event-processor-host.OnEphError'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.slowScanInterval'
+    name: slowScanInterval
+    fullName: slowScanInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-131">{number} [slowScanInterval] L''intervallo (long) lenta \*\* `in seconds` \*\* viene utilizzata dopo un''analisi in cui lease stealing non si è verificato, per ridurre l''analisi non necessarie quando il sistema è in stato stabile.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-131">{number} [slowScanInterval] The slow (long) interval **`in seconds`** is used after a scan in which lease stealing did not occur, to reduce unnecessary scanning when the system is in steady state.</span></span> <span data-ttu-id="ccb0b-132">Valore predefinito: \*\* `5` secondi\*\*.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-132">Default: **`5` seconds**.</span></span>'
+    optional: true
+    syntax:
+      content: 'slowScanInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.startupScanDelay'
+    name: startupScanDelay
+    fullName: startupScanDelay
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-133">{number} [startupScanDelay] Il tempo di ritardo \*\* `in seconds` \*\* tra la prima analisi per le partizioni disponibili e il secondo.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-133">{number} [startupScanDelay] The delay time **`in seconds`** between the first scan for available partitions and the second.</span></span> <span data-ttu-id="ccb0b-134">Ciò fa parte di un''ottimizzazione di avvio che consente a singoli host diventano visibili ad altri host e in tal modo ottenere un conteggio più preciso del numero di host nel sistema, prima che tentano di stimare il numero di partizioni che dovrebbero disporre.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-134">This is part of a startup optimization which allows individual hosts to become visible to other hosts, and thereby get a more accurate count of the number of hosts in the system, before they try to estimate how many partitions they should own.</span></span> <span data-ttu-id="ccb0b-135">Valore predefinito: \*\* `30` secondi\*\*.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-135">Default: **`30` seconds**.</span></span>'
+    optional: true
+    syntax:
+      content: 'startupScanDelay?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.storageBlobPrefix'
+    name: storageBlobPrefix
+    fullName: storageBlobPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-136">{string} [storageBlobPrefix] Prefisso usato per la denominazione dei blob all''interno del contenitore di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-136">{string} [storageBlobPrefix] Prefix used when naming blobs within the storage container.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageBlobPrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+    name: storageConnectionString
+    fullName: storageConnectionString
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-137">{string} [storageConnectionString] Stringa di connessione all''account di archiviazione di Azure usato per i lease e creazione di checkpoint.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-137">{string} [storageConnectionString] Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="ccb0b-138">Example "DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net"</span><span class="sxs-lookup"><span data-stu-id="ccb0b-138">Example "DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net"</span></span>'
+    optional: true
+    syntax:
+      content: 'storageConnectionString?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+    name: storageContainerName
+    fullName: storageContainerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-139">{string} [storageContainerName] Nome del contenitore archiviazione Azure per l''utilizzo dal gestore di lease e dei checkpoint predefinito.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-139">{string} [storageContainerName] Azure Storage container name for use by built-in lease and checkpoint manager.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageContainerName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+    name: tokenProvider
+    fullName: tokenProvider
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-140">{TokenProvider} [tokenProvider] Un''istanza dell''interfaccia di provider di token che include il token per l''autenticazione.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-140">{TokenProvider} [tokenProvider] An instance of the token provider interface that provides the token for authentication.</span></span> <span data-ttu-id="ccb0b-141">Il valore predefinito: \*\* `SasTokenProvider` \*\*.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-141">Default value: **`SasTokenProvider`**.</span></span>'
+    optional: true
+    syntax:
+      content: 'tokenProvider?: TokenProvider'
+      return:
+        type:
+          - TokenProvider
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.userAgent'
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ccb0b-142">{string} [userAgent] L''agente utente che è necessario aggiungere all''utente compilato nella stringa dell''agente.</span><span class="sxs-lookup"><span data-stu-id="ccb0b-142">{string} [userAgent] The user agent that needs to be appended to the built in user agent string.</span></span>'
+    optional: true
+    syntax:
+      content: 'userAgent?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+references:
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions'
+    name: FromConnectionStringOptions
+    spec.typeScript:
+      - name: FromConnectionStringOptions
+        fullName: FromConnectionStringOptions
+        uid: '@azure/event-processor-host.FromConnectionStringOptions'
+  - uid: '@azure/event-processor-host.CheckpointManager'
+    name: CheckpointManager
+    spec.typeScript:
+      - name: CheckpointManager
+        fullName: CheckpointManager
+        uid: '@azure/event-processor-host.CheckpointManager'
+  - uid: '@azure/event-processor-host.LeaseManager'
+    name: LeaseManager
+    spec.typeScript:
+      - name: LeaseManager
+        fullName: LeaseManager
+        uid: '@azure/event-processor-host.LeaseManager'
+  - uid: '@azure/event-processor-host.OnEphError'
+    name: OnEphError
+    spec.typeScript:
+      - name: OnEphError
+        fullName: OnEphError
+        uid: '@azure/event-processor-host.OnEphError'

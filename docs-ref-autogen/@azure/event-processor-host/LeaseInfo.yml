@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-processor-host.LeaseInfo'
+    name: LeaseInfo
+    fullName: LeaseInfo
+    children:
+      - '@azure/event-processor-host.LeaseInfo.epoch'
+      - '@azure/event-processor-host.LeaseInfo.offset'
+      - '@azure/event-processor-host.LeaseInfo.owner'
+      - '@azure/event-processor-host.LeaseInfo.partitionId'
+      - '@azure/event-processor-host.LeaseInfo.sequenceNumber'
+      - '@azure/event-processor-host.LeaseInfo.token'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="1aaaf-101">Vengono descritte le proprietà di un lease.</span><span class="sxs-lookup"><span data-stu-id="1aaaf-101">Describes the properties of a lease.</span></span>
+    extends:
+      name: '@azure/event-processor-host.CompleteLeaseInfo'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.epoch'
+    name: epoch
+    fullName: epoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1aaaf-102">come valore epoch {number} epoch(time) del lease, che è un valore che è possibile usare per determinare il proprietario di una partizione tra i nodi concorrenti più recente.</span><span class="sxs-lookup"><span data-stu-id="1aaaf-102">{number} epoch The epoch(time) of the lease, which is a value you can use to determine the most recent owner of a partition between competing nodes.</span></span>'
+    syntax:
+      content: 'epoch: number'
+      return:
+        type:
+          - number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.offset'
+    name: offset
+    fullName: offset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1aaaf-103">L''offset dell''evento da controllare dell''offset {stringa}.</span><span class="sxs-lookup"><span data-stu-id="1aaaf-103">{string} offset The offset of the event to be checked in.</span></span>'
+    optional: true
+    syntax:
+      content: 'offset?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.owner'
+    name: owner
+    fullName: owner
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1aaaf-104">proprietario {stringa} il proprietario per la partizione.</span><span class="sxs-lookup"><span data-stu-id="1aaaf-104">{string} owner The host owner for the partition.</span></span>'
+    syntax:
+      content: 'owner: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1aaaf-105">{stringa} partitionId partitionId associato per la quale il lease viene mantenuto.</span><span class="sxs-lookup"><span data-stu-id="1aaaf-105">{string} partitionId The associated partitionId for which the lease is held.</span></span>'
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1aaaf-106">sequenceNumber {stringa} il numero di sequenza dell''evento da archiviare.</span><span class="sxs-lookup"><span data-stu-id="1aaaf-106">{string} sequenceNumber The sequence number of the event to be checked in.</span></span>'
+    syntax:
+      content: 'sequenceNumber: number'
+      return:
+        type:
+          - number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.token'
+    name: token
+    fullName: token
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1aaaf-107">token {stringa} il token di lease che gestisce la concorrenza tra gli host.</span><span class="sxs-lookup"><span data-stu-id="1aaaf-107">{string} token The lease token that manages concurrency between hosts.</span></span> <span data-ttu-id="1aaaf-108">È possibile usare questo token per garantire un accesso singolo a qualsiasi risorsa necessaria per il EPH.</span><span class="sxs-lookup"><span data-stu-id="1aaaf-108">You can use this token to guarantee single access to any resource needed by the EPH.</span></span>'
+    syntax:
+      content: 'token: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+references:
+  - uid: '@azure/event-processor-host.CompleteLeaseInfo'
+    name: CompleteLeaseInfo
+    spec.typeScript:
+      - name: CompleteLeaseInfo
+        fullName: CompleteLeaseInfo
+        uid: '@azure/event-processor-host.CompleteLeaseInfo'

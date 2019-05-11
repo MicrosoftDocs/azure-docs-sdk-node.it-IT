@@ -1,0 +1,180 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoLayer
+    name: VideoLayer
+    fullName: VideoLayer
+    children:
+      - azure-arm-mediaservices.VideoLayer.adaptiveBFrame
+      - azure-arm-mediaservices.VideoLayer.bFrames
+      - azure-arm-mediaservices.VideoLayer.bitrate
+      - azure-arm-mediaservices.VideoLayer.frameRate
+      - azure-arm-mediaservices.VideoLayer.height
+      - azure-arm-mediaservices.VideoLayer.label
+      - azure-arm-mediaservices.VideoLayer.maxBitrate
+      - azure-arm-mediaservices.VideoLayer.odatatype
+      - azure-arm-mediaservices.VideoLayer.slices
+      - azure-arm-mediaservices.VideoLayer.width
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="9409d-101">Descrive le impostazioni da utilizzare durante la codifica di video di input a un livello di velocità in bit di output desiderato.</span><span class="sxs-lookup"><span data-stu-id="9409d-101">Describes the settings to be used when encoding the input video into a desired output bitrate layer.</span></span>
+    extends:
+      name: azure-arm-mediaservices.Layer
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.adaptiveBFrame
+    name: adaptiveBFrame
+    fullName: adaptiveBFrame
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9409d-102">Se sono o meno fotogrammi B adattivi per essere usata per la codifica di questo livello.</span><span class="sxs-lookup"><span data-stu-id="9409d-102">Whether or not adaptive B-frames are to be used when encoding this layer.</span></span> <span data-ttu-id="9409d-103">Se non specificato, il codificatore verrà convertito ogni volta che il profilo video consente l''uso.</span><span class="sxs-lookup"><span data-stu-id="9409d-103">If not specified, the encoder will turn it on whenever the video profile permits its use.</span></span>'
+    optional: true
+    syntax:
+      content: 'adaptiveBFrame?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.bFrames
+    name: bFrames
+    fullName: bFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9409d-104">Il numero di fotogrammi B da utilizzare quando questo livello di codifica.</span><span class="sxs-lookup"><span data-stu-id="9409d-104">The number of B-frames to be used when encoding this layer.</span></span>  <span data-ttu-id="9409d-105">Se non specificato, il codificatore sceglie un numero appropriato in base al profilo video e livello.</span><span class="sxs-lookup"><span data-stu-id="9409d-105">If not specified, the encoder chooses an appropriate number based on the video profile and level.</span></span>'
+    optional: true
+    syntax:
+      content: 'bFrames?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.bitrate
+    name: bitrate
+    fullName: bitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9409d-106">La velocità in bit media in bit al secondo in cui codificare il video di input durante la generazione di questo livello.</span><span class="sxs-lookup"><span data-stu-id="9409d-106">The average bitrate in bits per second at which to encode the input video when generating this layer.</span></span> <span data-ttu-id="9409d-107">Questo è un campo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="9409d-107">This is a required field.</span></span>
+    syntax:
+      content: 'bitrate: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.frameRate
+    name: frameRate
+    fullName: frameRate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9409d-108">Il frame frequenza (in fotogrammi al secondo) per la codifica di questo livello.</span><span class="sxs-lookup"><span data-stu-id="9409d-108">The frame rate (in frames per second) at which to encode this layer.</span></span> <span data-ttu-id="9409d-109">Il valore può essere nel formato M/N dove M e N sono numeri interi (ad esempio, 30000/1001) o sotto forma di un numero (ad esempio, 30 o 29,97).</span><span class="sxs-lookup"><span data-stu-id="9409d-109">The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97).</span></span> <span data-ttu-id="9409d-110">Il codificatore applica vincoli sulle frequenze di fotogrammi consentiti in base al profilo e un livello.</span><span class="sxs-lookup"><span data-stu-id="9409d-110">The encoder enforces constraints on allowed frame rates based on the profile and level.</span></span> <span data-ttu-id="9409d-111">Se non è specificato, il codificatore utilizzerà la stessa frequenza dei fotogrammi del video di input.</span><span class="sxs-lookup"><span data-stu-id="9409d-111">If it is not specified, the encoder will use the same frame rate as the input video.</span></span>'
+    optional: true
+    syntax:
+      content: 'frameRate?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.height
+    name: height
+    fullName: height
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9409d-112">L'altezza del video di output per questo livello.</span><span class="sxs-lookup"><span data-stu-id="9409d-112">The height of the output video for this layer.</span></span> <span data-ttu-id="9409d-113">Il valore può essere relativo (in percentuale) o assoluto (in pixel).</span><span class="sxs-lookup"><span data-stu-id="9409d-113">The value can be absolute (in pixels) or relative (in percentage).</span></span> <span data-ttu-id="9409d-114">Ad esempio 50% indica che il video di output è metà come numero di pixel in altezza come input.</span><span class="sxs-lookup"><span data-stu-id="9409d-114">For example 50% means the output video has half as many pixels in height as the input.</span></span>
+    optional: true
+    syntax:
+      content: 'height?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9409d-115">L''etichetta alfanumerico per questo livello, che può essere usato in multiplexing livelli diversi video e audio o in un nome al file di output.</span><span class="sxs-lookup"><span data-stu-id="9409d-115">The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.</span></span>'
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.maxBitrate
+    name: maxBitrate
+    fullName: maxBitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9409d-116">La velocità in bit massima (in bit al secondo), in corrispondenza del quale deve essere presupposto buffer VBV per ricaricare.</span><span class="sxs-lookup"><span data-stu-id="9409d-116">The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill.</span></span>
+      <span data-ttu-id="9409d-117">Se non specificato, valore predefinito è lo stesso valore di velocità in bit.</span><span class="sxs-lookup"><span data-stu-id="9409d-117">If not specified, defaults to the same value as bitrate.</span></span>
+    optional: true
+    syntax:
+      content: 'maxBitrate?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9409d-118">Discriminatore polimorfiche</span><span class="sxs-lookup"><span data-stu-id="9409d-118">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.slices
+    name: slices
+    fullName: slices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9409d-119">Il numero di sezioni da utilizzare quando questo livello di codifica.</span><span class="sxs-lookup"><span data-stu-id="9409d-119">The number of slices to be used when encoding this layer.</span></span> <span data-ttu-id="9409d-120">Se non specificato, il valore predefinito è zero, ovvero che tale codificatore userà un''unica sezione per ogni fotogramma.</span><span class="sxs-lookup"><span data-stu-id="9409d-120">If not specified, default is zero, which means that encoder will use a single slice for each frame.</span></span>'
+    optional: true
+    syntax:
+      content: 'slices?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.width
+    name: width
+    fullName: width
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9409d-121">La larghezza del video di output per questo livello.</span><span class="sxs-lookup"><span data-stu-id="9409d-121">The width of the output video for this layer.</span></span> <span data-ttu-id="9409d-122">Il valore può essere relativo (in percentuale) o assoluto (in pixel).</span><span class="sxs-lookup"><span data-stu-id="9409d-122">The value can be absolute (in pixels) or relative (in percentage).</span></span> <span data-ttu-id="9409d-123">Ad esempio 50% indica che il video di output ha metà come numero di pixel in larghezza come input.</span><span class="sxs-lookup"><span data-stu-id="9409d-123">For example 50% means the output video has half as many pixels in width as the input.</span></span>
+    optional: true
+    syntax:
+      content: 'width?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Layer
+    name: Layer
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-arm-mediaservices.Layer

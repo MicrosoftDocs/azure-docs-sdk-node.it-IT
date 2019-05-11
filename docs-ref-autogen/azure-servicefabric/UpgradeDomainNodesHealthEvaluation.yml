@@ -1,0 +1,139 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation
+    name: UpgradeDomainNodesHealthEvaluation
+    fullName: UpgradeDomainNodesHealthEvaluation
+    children:
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.description
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.kind
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.maxPercentUnhealthyNodes
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.totalCount
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.unhealthyEvaluations
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.upgradeDomainName
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="04f5d-101">Rappresenta la valutazione dell''integrità per i nodi del cluster in un dominio di aggiornamento, che contiene le valutazioni dell''integrità per ogni nodo non integro su cui influisce corrente dello stato di integrità aggregato.</span><span class="sxs-lookup"><span data-stu-id="04f5d-101">Represents health evaluation for cluster nodes in an upgrade domain, containing health evaluations for each unhealthy node that impacted current aggregated health state.</span></span> <span data-ttu-id="04f5d-102">Può essere restituito quando la valutazione dell''integrità del cluster durante l''aggiornamento del cluster e lo stato di integrità aggregato è errore o avviso.</span><span class="sxs-lookup"><span data-stu-id="04f5d-102">Can be returned when evaluating cluster health during cluster upgrade and the aggregated health state is either Error or Warning.</span></span>'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="04f5d-103">Lo stato di integrità di un''entità di Service Fabric come Cluster di nodo, applicazione, servizio, partizione, Replica e così via. I valori possibili sono: ''Invalid'', ''Ok'', ''Warning'', ''Error'', "Unknown".</span><span class="sxs-lookup"><span data-stu-id="04f5d-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="04f5d-104">Descrizione della valutazione dell''integrità, che rappresenta un riepilogo del processo di valutazione.</span><span class="sxs-lookup"><span data-stu-id="04f5d-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="04f5d-105">Discriminatore polimorfiche</span><span class="sxs-lookup"><span data-stu-id="04f5d-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.maxPercentUnhealthyNodes
+    name: maxPercentUnhealthyNodes
+    fullName: maxPercentUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="04f5d-106">Percentuale massima consentita di nodi non integri dal ClusterHealthPolicy.</span><span class="sxs-lookup"><span data-stu-id="04f5d-106">Maximum allowed percentage of unhealthy nodes from the ClusterHealthPolicy.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.totalCount
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="04f5d-107">Numero totale di nodi nel dominio di aggiornamento corrente.</span><span class="sxs-lookup"><span data-stu-id="04f5d-107">Total number of nodes in the current upgrade domain.</span></span>
+    optional: true
+    syntax:
+      content: 'totalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="04f5d-108">Elenco di valutazioni non integre che ha causato lo stato di integrità aggregato.</span><span class="sxs-lookup"><span data-stu-id="04f5d-108">List of unhealthy evaluations that led to the aggregated health state.</span></span> <span data-ttu-id="04f5d-109">Include tutte le NodeHealthEvaluation non integro su cui influisce l'integrità aggregata.</span><span class="sxs-lookup"><span data-stu-id="04f5d-109">Includes all the unhealthy NodeHealthEvaluation that impacted the aggregated health.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.upgradeDomainName
+    name: upgradeDomainName
+    fullName: upgradeDomainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="04f5d-110">Nome del dominio di aggiornamento in cui in valutazione dell'integrità di nodi.</span><span class="sxs-lookup"><span data-stu-id="04f5d-110">Name of the upgrade domain where nodes health is currently evaluated.</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeDomainName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

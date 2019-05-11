@@ -1,0 +1,410 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-sb.SBQueue
+    name: SBQueue
+    fullName: SBQueue
+    children:
+      - azure-arm-sb.SBQueue.accessedAt
+      - azure-arm-sb.SBQueue.autoDeleteOnIdle
+      - azure-arm-sb.SBQueue.countDetails
+      - azure-arm-sb.SBQueue.createdAt
+      - azure-arm-sb.SBQueue.deadLetteringOnMessageExpiration
+      - azure-arm-sb.SBQueue.defaultMessageTimeToLive
+      - azure-arm-sb.SBQueue.duplicateDetectionHistoryTimeWindow
+      - azure-arm-sb.SBQueue.enableBatchedOperations
+      - azure-arm-sb.SBQueue.enableExpress
+      - azure-arm-sb.SBQueue.enablePartitioning
+      - azure-arm-sb.SBQueue.forwardDeadLetteredMessagesTo
+      - azure-arm-sb.SBQueue.forwardTo
+      - azure-arm-sb.SBQueue.id
+      - azure-arm-sb.SBQueue.lockDuration
+      - azure-arm-sb.SBQueue.maxDeliveryCount
+      - azure-arm-sb.SBQueue.maxSizeInMegabytes
+      - azure-arm-sb.SBQueue.messageCount
+      - azure-arm-sb.SBQueue.name
+      - azure-arm-sb.SBQueue.requiresDuplicateDetection
+      - azure-arm-sb.SBQueue.requiresSession
+      - azure-arm-sb.SBQueue.sizeInBytes
+      - azure-arm-sb.SBQueue.status
+      - azure-arm-sb.SBQueue.type
+      - azure-arm-sb.SBQueue.updatedAt
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="706a6-101">Descrizione della coda Resource.</span><span class="sxs-lookup"><span data-stu-id="706a6-101">Description of queue Resource.</span></span>
+    extends:
+      name: azure-arm-sb.Resource
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.accessedAt
+    name: accessedAt
+    fullName: accessedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="706a6-102">Ora ultimo stato inviato un messaggio o l''ultima volta durante una richiesta di ricezione per questa coda.</span><span class="sxs-lookup"><span data-stu-id="706a6-102">Last time a message was sent, or the last time there was a receive request to this queue.</span></span>'
+    optional: true
+    syntax:
+      content: 'accessedAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.autoDeleteOnIdle
+    name: autoDeleteOnIdle
+    fullName: autoDeleteOnIdle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-103">Compatibile con ISO 8061 timeSpan intervallo di inattività dopo il quale la coda viene eliminata automaticamente.</span><span class="sxs-lookup"><span data-stu-id="706a6-103">ISO 8061 timeSpan idle interval after which the queue is automatically deleted.</span></span> <span data-ttu-id="706a6-104">La durata minima è 5 minuti.</span><span class="sxs-lookup"><span data-stu-id="706a6-104">The minimum duration is 5 minutes.</span></span>
+    optional: true
+    syntax:
+      content: 'autoDeleteOnIdle?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.countDetails
+    name: countDetails
+    fullName: countDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-105">Dettagli conteggio dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="706a6-105">Message Count Details.</span></span>
+    optional: true
+    syntax:
+      content: 'countDetails?: MessageCountDetails'
+      return:
+        type:
+          - azure-arm-sb.MessageCountDetails
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.createdAt
+    name: createdAt
+    fullName: createdAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-106">L'ora esatta in cui è stato creato il messaggio.</span><span class="sxs-lookup"><span data-stu-id="706a6-106">The exact time the message was created.</span></span>
+    optional: true
+    syntax:
+      content: 'createdAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.deadLetteringOnMessageExpiration
+    name: deadLetteringOnMessageExpiration
+    fullName: deadLetteringOnMessageExpiration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-107">Un valore che indica se la coda ha il supporto di lettera non consegnata quando un messaggio scade.</span><span class="sxs-lookup"><span data-stu-id="706a6-107">A value that indicates whether this queue has dead letter support when a message expires.</span></span>
+    optional: true
+    syntax:
+      content: 'deadLetteringOnMessageExpiration?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.defaultMessageTimeToLive
+    name: defaultMessageTimeToLive
+    fullName: defaultMessageTimeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="706a6-108">ISO 8601 messaggio intervallo di tempo predefinito valore di durata.</span><span class="sxs-lookup"><span data-stu-id="706a6-108">ISO 8601 default message timespan to live value.</span></span> <span data-ttu-id="706a6-109">Si tratta della durata dopo la quale il messaggio scade, a partire da quando il messaggio viene inviato al Bus di servizio.</span><span class="sxs-lookup"><span data-stu-id="706a6-109">This is the duration after which the message expires, starting from when the message is sent to Service Bus.</span></span> <span data-ttu-id="706a6-110">Questo è il valore predefinito utilizzato quando non TimeToLive è impostata su un messaggio stesso.</span><span class="sxs-lookup"><span data-stu-id="706a6-110">This is the default value used when TimeToLive is not set on a message itself.</span></span>'
+    optional: true
+    syntax:
+      content: 'defaultMessageTimeToLive?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.duplicateDetectionHistoryTimeWindow
+    name: duplicateDetectionHistoryTimeWindow
+    fullName: duplicateDetectionHistoryTimeWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-111">Struttura timeSpan ISO 8601 che definisce la durata della cronologia di rilevamento dei duplicati.</span><span class="sxs-lookup"><span data-stu-id="706a6-111">ISO 8601 timeSpan structure that defines the duration of the duplicate detection history.</span></span> <span data-ttu-id="706a6-112">Il valore predefinito è 10 minuti.</span><span class="sxs-lookup"><span data-stu-id="706a6-112">The default value is 10 minutes.</span></span>
+    optional: true
+    syntax:
+      content: 'duplicateDetectionHistoryTimeWindow?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enableBatchedOperations
+    name: enableBatchedOperations
+    fullName: enableBatchedOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-113">Valore che indica se sono abilitate le operazioni in batch sul lato server.</span><span class="sxs-lookup"><span data-stu-id="706a6-113">Value that indicates whether server-side batched operations are enabled.</span></span>
+    optional: true
+    syntax:
+      content: 'enableBatchedOperations?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enableExpress
+    name: enableExpress
+    fullName: enableExpress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-114">Un valore che indica se le entità Express sono abilitate.</span><span class="sxs-lookup"><span data-stu-id="706a6-114">A value that indicates whether Express Entities are enabled.</span></span> <span data-ttu-id="706a6-115">Una coda di tipo express contiene un messaggio in memoria temporaneamente prima di scriverlo nell'archivio permanente.</span><span class="sxs-lookup"><span data-stu-id="706a6-115">An express queue holds a message in memory temporarily before writing it to persistent storage.</span></span>
+    optional: true
+    syntax:
+      content: 'enableExpress?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enablePartitioning
+    name: enablePartitioning
+    fullName: enablePartitioning
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-116">Un valore che indica se la coda deve essere partizionato tra più Broker messaggi.</span><span class="sxs-lookup"><span data-stu-id="706a6-116">A value that indicates whether the queue is to be partitioned across multiple message brokers.</span></span>
+    optional: true
+    syntax:
+      content: 'enablePartitioning?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.forwardDeadLetteredMessagesTo
+    name: forwardDeadLetteredMessagesTo
+    fullName: forwardDeadLetteredMessagesTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-117">Nome coda/argomento per inoltrare il messaggio di lettera non consegnata</span><span class="sxs-lookup"><span data-stu-id="706a6-117">Queue/Topic name to forward the Dead Letter message</span></span>
+    optional: true
+    syntax:
+      content: 'forwardDeadLetteredMessagesTo?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.forwardTo
+    name: forwardTo
+    fullName: forwardTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-118">Nome coda/argomento per inoltrare i messaggi</span><span class="sxs-lookup"><span data-stu-id="706a6-118">Queue/Topic name to forward the messages</span></span>
+    optional: true
+    syntax:
+      content: 'forwardTo?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-119">ID risorsa</span><span class="sxs-lookup"><span data-stu-id="706a6-119">Resource Id</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.lockDuration
+    name: lockDuration
+    fullName: lockDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="706a6-120">Durata ISO 8601 di un blocco di visualizzazione; vale a dire, la quantità di tempo che il messaggio è bloccato per altri ricevitori.</span><span class="sxs-lookup"><span data-stu-id="706a6-120">ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers.</span></span> <span data-ttu-id="706a6-121">Il valore massimo per LockDuration è 5 minuti; il valore predefinito è 1 minuto.</span><span class="sxs-lookup"><span data-stu-id="706a6-121">The maximum value for LockDuration is 5 minutes; the default value is 1 minute.</span></span>'
+    optional: true
+    syntax:
+      content: 'lockDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.maxDeliveryCount
+    name: maxDeliveryCount
+    fullName: maxDeliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-122">Il numero massimo di recapiti.</span><span class="sxs-lookup"><span data-stu-id="706a6-122">The maximum delivery count.</span></span> <span data-ttu-id="706a6-123">Un messaggio viene automaticamente non recapitabile dopo questo numero di recapiti.</span><span class="sxs-lookup"><span data-stu-id="706a6-123">A message is automatically deadlettered after this number of deliveries.</span></span> <span data-ttu-id="706a6-124">Valore predefinito è 10.</span><span class="sxs-lookup"><span data-stu-id="706a6-124">default value is 10.</span></span>
+    optional: true
+    syntax:
+      content: 'maxDeliveryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.maxSizeInMegabytes
+    name: maxSizeInMegabytes
+    fullName: maxSizeInMegabytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="706a6-125">Le dimensioni massime della coda in megabyte, ovvero le dimensioni della memoria allocata per la coda.</span><span class="sxs-lookup"><span data-stu-id="706a6-125">The maximum size of the queue in megabytes, which is the size of memory allocated for the queue.</span></span> <span data-ttu-id="706a6-126">Valore predefinito è 1024.</span><span class="sxs-lookup"><span data-stu-id="706a6-126">Default is 1024.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxSizeInMegabytes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.messageCount
+    name: messageCount
+    fullName: messageCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-127">Il numero di messaggi nella coda.</span><span class="sxs-lookup"><span data-stu-id="706a6-127">The number of messages in the queue.</span></span>
+    optional: true
+    syntax:
+      content: 'messageCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-128">Nome risorsa</span><span class="sxs-lookup"><span data-stu-id="706a6-128">Resource name</span></span>
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.requiresDuplicateDetection
+    name: requiresDuplicateDetection
+    fullName: requiresDuplicateDetection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-129">Un valore che indica se questa coda richiede il rilevamento dei duplicati.</span><span class="sxs-lookup"><span data-stu-id="706a6-129">A value indicating if this queue requires duplicate detection.</span></span>
+    optional: true
+    syntax:
+      content: 'requiresDuplicateDetection?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.requiresSession
+    name: requiresSession
+    fullName: requiresSession
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-130">Un valore che indica se la coda supporta il concetto di sessione.</span><span class="sxs-lookup"><span data-stu-id="706a6-130">A value that indicates whether the queue supports the concept of sessions.</span></span>
+    optional: true
+    syntax:
+      content: 'requiresSession?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.sizeInBytes
+    name: sizeInBytes
+    fullName: sizeInBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="706a6-131">Le dimensioni della coda, in byte.</span><span class="sxs-lookup"><span data-stu-id="706a6-131">The size of the queue, in bytes.</span></span>'
+    optional: true
+    syntax:
+      content: 'sizeInBytes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="706a6-132">Enumera i valori possibili per lo stato di un''entità di messaggistica.</span><span class="sxs-lookup"><span data-stu-id="706a6-132">Enumerates the possible values for the status of a messaging entity.</span></span> <span data-ttu-id="706a6-133">I valori possibili sono: ''Active'', ''Disabled'', ''Restoring'', ''SendDisabled'', ''ReceiveDisabled'', ''Creating'', ''Deleting'', ''Renaming'', ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="706a6-133">Possible values include: ''Active'', ''Disabled'', ''Restoring'', ''SendDisabled'', ''ReceiveDisabled'', ''Creating'', ''Deleting'', ''Renaming'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'status?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-134">Tipo di risorsa</span><span class="sxs-lookup"><span data-stu-id="706a6-134">Resource type</span></span>
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.updatedAt
+    name: updatedAt
+    fullName: updatedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="706a6-135">L'ora esatta il messaggio è stato aggiornato.</span><span class="sxs-lookup"><span data-stu-id="706a6-135">The exact time the message was updated.</span></span>
+    optional: true
+    syntax:
+      content: 'updatedAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+references:
+  - uid: azure-arm-sb.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-sb.Resource
+  - uid: azure-arm-sb.MessageCountDetails
+    name: MessageCountDetails
+    spec.typeScript:
+      - name: MessageCountDetails
+        fullName: MessageCountDetails
+        uid: azure-arm-sb.MessageCountDetails
