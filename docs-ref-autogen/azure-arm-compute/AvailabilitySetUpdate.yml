@@ -1,0 +1,140 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-compute.AvailabilitySetUpdate
+    name: AvailabilitySetUpdate
+    fullName: AvailabilitySetUpdate
+    children:
+      - azure-arm-compute.AvailabilitySetUpdate.platformFaultDomainCount
+      - azure-arm-compute.AvailabilitySetUpdate.platformUpdateDomainCount
+      - azure-arm-compute.AvailabilitySetUpdate.sku
+      - azure-arm-compute.AvailabilitySetUpdate.statuses
+      - azure-arm-compute.AvailabilitySetUpdate.tags
+      - azure-arm-compute.AvailabilitySetUpdate.virtualMachines
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Specifica le informazioni sul set di disponibilità che deve essere assegnata alla macchina virtuale.
+      Solo i tag possono essere aggiornati.
+    extends:
+      name: azure-arm-compute.UpdateResource
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySetUpdate.platformFaultDomainCount
+    name: platformFaultDomainCount
+    fullName: platformFaultDomainCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Numero di domini di errore.
+    optional: true
+    syntax:
+      content: 'platformFaultDomainCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySetUpdate.platformUpdateDomainCount
+    name: platformUpdateDomainCount
+    fullName: platformUpdateDomainCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Numero di domini di aggiornamento.
+    optional: true
+    syntax:
+      content: 'platformUpdateDomainCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySetUpdate.sku
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: SKU del set di disponibilità
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - azure-arm-compute.Sku
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySetUpdate.statuses
+    name: statuses
+    fullName: statuses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Informazioni di stato della risorsa.
+    optional: true
+    syntax:
+      content: 'statuses?: InstanceViewStatus[]'
+      return:
+        type:
+          - 'azure-arm-compute.InstanceViewStatus[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySetUpdate.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tag delle risorse
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySetUpdate.virtualMachines
+    name: virtualMachines
+    fullName: virtualMachines
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un elenco di riferimenti a tutte le macchine virtuali la disponibilità del set.
+    optional: true
+    syntax:
+      content: 'virtualMachines?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-compute.SubResource[]'
+    package: azure-arm-compute
+references:
+  - uid: azure-arm-compute.UpdateResource
+    name: UpdateResource
+    spec.typeScript:
+      - name: UpdateResource
+        fullName: UpdateResource
+        uid: azure-arm-compute.UpdateResource
+  - uid: azure-arm-compute.Sku
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: azure-arm-compute.Sku
+  - uid: 'azure-arm-compute.InstanceViewStatus[]'
+    name: 'InstanceViewStatus[]'
+    spec.typeScript:
+      - name: InstanceViewStatus
+        fullName: InstanceViewStatus
+        uid: azure-arm-compute.InstanceViewStatus
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-arm-compute.SubResource[]'
+    name: 'SubResource[]'
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-compute.SubResource
+      - name: '[]'
+        fullName: '[]'

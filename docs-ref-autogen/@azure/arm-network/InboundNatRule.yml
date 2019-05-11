@@ -1,0 +1,228 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-network.InboundNatRule'
+    name: InboundNatRule
+    fullName: InboundNatRule
+    children:
+      - '@azure/arm-network.InboundNatRule.backendIPConfiguration'
+      - '@azure/arm-network.InboundNatRule.backendPort'
+      - '@azure/arm-network.InboundNatRule.enableFloatingIP'
+      - '@azure/arm-network.InboundNatRule.enableTcpReset'
+      - '@azure/arm-network.InboundNatRule.etag'
+      - '@azure/arm-network.InboundNatRule.frontendIPConfiguration'
+      - '@azure/arm-network.InboundNatRule.frontendPort'
+      - '@azure/arm-network.InboundNatRule.id'
+      - '@azure/arm-network.InboundNatRule.idleTimeoutInMinutes'
+      - '@azure/arm-network.InboundNatRule.name'
+      - '@azure/arm-network.InboundNatRule.protocol'
+      - '@azure/arm-network.InboundNatRule.provisioningState'
+    langs:
+      - typeScript
+    type: interface
+    summary: Regola NAT in ingresso di bilanciamento del carico.
+    extends:
+      name: '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.backendIPConfiguration'
+    name: backendIPConfiguration
+    fullName: backendIPConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Un riferimento a un indirizzo IP privato definito in un'interfaccia di rete di una macchina virtuale. Il traffico inviato alla porta front-end di ciascuna delle configurazioni IP front-end viene inoltrato all'IP back-end.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'backendIPConfiguration?: NetworkInterfaceIPConfiguration'
+      return:
+        type:
+          - '@azure/arm-network.NetworkInterfaceIPConfiguration'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.backendPort'
+    name: backendPort
+    fullName: backendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La porta usata per l'endpoint interno. Intervallo accettabile è compreso tra 1 e 65535.
+    optional: true
+    syntax:
+      content: 'backendPort?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.enableFloatingIP'
+    name: enableFloatingIP
+    fullName: enableFloatingIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Consente di configurare endpoint di una macchina virtuale per la funzionalità di IP mobile necessaria per configurare un gruppo di disponibilità SQL AlwaysOn. Questa impostazione è necessaria quando si usano i gruppi di disponibilità SQL AlwaysOn in SQL server. Questa impostazione non può essere modificata dopo aver creato l'endpoint.
+    optional: true
+    syntax:
+      content: 'enableFloatingIP?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.enableTcpReset'
+    name: enableTcpReset
+    fullName: enableTcpReset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Ricezione bidirezionali TCP reimpostato sul timeout di inattività del flusso TCP o interruzioni di connessione imprevisto.
+      Questo elemento viene usato solo quando il protocollo è impostato su TCP.
+    optional: true
+    syntax:
+      content: 'enableTcpReset?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.etag'
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Stringa univoca di sola lettura che cambia ogni volta che la risorsa viene aggiornata.
+    optional: true
+    syntax:
+      content: 'etag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.frontendIPConfiguration'
+    name: frontendIPConfiguration
+    fullName: frontendIPConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Riferimento agli indirizzi IP front-end.
+    optional: true
+    syntax:
+      content: 'frontendIPConfiguration?: SubResource'
+      return:
+        type:
+          - '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.frontendPort'
+    name: frontendPort
+    fullName: frontendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Porta per l'endpoint esterno. Numeri di porta per ogni regola devono essere univoci all'interno di bilanciamento del carico. Intervallo accettabile è compreso tra 1 e 65534.
+    optional: true
+    syntax:
+      content: 'frontendPort?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID risorsa.
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.idleTimeoutInMinutes'
+    name: idleTimeoutInMinutes
+    fullName: idleTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il timeout per la connessione TCP inattiva. Il valore può essere impostato tra 4 e 30 minuti. Il valore predefinito è 4 minuti. Questo elemento viene usato solo quando il protocollo è impostato su TCP.
+    optional: true
+    syntax:
+      content: 'idleTimeoutInMinutes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ottiene nome della risorsa che è univoca all'interno di un gruppo di risorse. Questo nome è utilizzabile per accedere alla risorsa.
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il riferimento al protocollo di trasporto usato dalla regola di bilanciamento del carico. I valori possibili sono: ''Udp'', ''Tcp'', ''All'''
+    optional: true
+    syntax:
+      content: 'protocol?: TransportProtocol'
+      return:
+        type:
+          - '@azure/arm-network.TransportProtocol'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.InboundNatRule.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ottiene lo stato di provisioning della risorsa IP pubblico. I valori possibili sono: ''Aggiornamento di'', ''Eliminazione'' e ''Failed''.'
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+references:
+  - uid: '@azure/arm-network.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.NetworkInterfaceIPConfiguration'
+    name: NetworkInterfaceIPConfiguration
+    spec.typeScript:
+      - name: NetworkInterfaceIPConfiguration
+        fullName: NetworkInterfaceIPConfiguration
+        uid: '@azure/arm-network.NetworkInterfaceIPConfiguration'
+  - uid: '@azure/arm-network.TransportProtocol'
+    name: TransportProtocol
+    spec.typeScript:
+      - name: TransportProtocol
+        fullName: TransportProtocol
+        uid: '@azure/arm-network.TransportProtocol'
