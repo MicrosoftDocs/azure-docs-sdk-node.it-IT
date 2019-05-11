@@ -1,0 +1,149 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties
+    name: ProductTagResourceContractProperties
+    fullName: ProductTagResourceContractProperties
+    children:
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.approvalRequired
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.description
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.id
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.name
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.state
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.subscriptionRequired
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.subscriptionsLimit
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.terms
+    langs:
+      - typeScript
+    type: interface
+    summary: Profilo di prodotto.
+    extends:
+      name: azure-arm-apimanagement.ProductEntityBaseParameters
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.approvalRequired
+    name: approvalRequired
+    fullName: approvalRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'indica se l''approvazione della sottoscrizione è obbligatorio. Se false, le nuove sottoscrizioni verranno approvate automaticamente, consentendo agli sviluppatori di chiamare le API del prodotto immediatamente dopo la sottoscrizione. Se true, gli amministratori devono approvare manualmente la sottoscrizione prima che lo sviluppatore possa chiamare una delle API del prodotto. Possono essere presenti solo se la proprietà subscriptionRequired presente e ha un valore false.'
+    optional: true
+    syntax:
+      content: 'approvalRequired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descrizione del prodotto. Può includere tag di formattazione HTML.
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Identificatore del prodotto sotto forma di /products/ {productId}'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome del prodotto.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'indica se prodotto è pubblicato o No. I prodotti pubblicati possono essere individuati dagli utenti del portale per sviluppatori. I prodotti non pubblicati sono visibili solo agli amministratori. Stato predefinito del prodotto è notPublished. I valori possibili sono: ''notPublished'', ''pubblicato'''
+    optional: true
+    syntax:
+      content: 'state?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.subscriptionRequired
+    name: subscriptionRequired
+    fullName: subscriptionRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Se è necessaria una sottoscrizione del prodotto per l'accesso alle API incluse in questo prodotto. Se true, il prodotto viene definito "protetto" e una chiave di sottoscrizione valido è necessaria per una richiesta a un'API inclusa nel prodotto abbia esito positivo. Se false, il prodotto viene detto "open" e le richieste a un'API inclusa nel prodotto possono essere eseguite senza una chiave di sottoscrizione.
+      Se proprietà viene omessa quando si crea un nuovo prodotto presuppone il valore su true.
+    optional: true
+    syntax:
+      content: 'subscriptionRequired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.subscriptionsLimit
+    name: subscriptionsLimit
+    fullName: subscriptionsLimit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indica se il numero di sottoscrizioni di un utente può avere contemporaneamente a questo prodotto. Impostare su null o ometterla per consentire illimitato per sottoscrizioni utente. Possono essere presenti solo se la proprietà subscriptionRequired presente e ha un valore false.
+    optional: true
+    syntax:
+      content: 'subscriptionsLimit?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.terms
+    name: terms
+    fullName: terms
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Condizioni per l'utilizzo del prodotto. Gli sviluppatori che tentano di sottoscrivere il prodotto vengono presentati e devono accettare queste condizioni prima di poter completare il processo di sottoscrizione.
+    optional: true
+    syntax:
+      content: 'terms?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+references:
+  - uid: azure-arm-apimanagement.ProductEntityBaseParameters
+    name: ProductEntityBaseParameters
+    spec.typeScript:
+      - name: ProductEntityBaseParameters
+        fullName: ProductEntityBaseParameters
+        uid: azure-arm-apimanagement.ProductEntityBaseParameters

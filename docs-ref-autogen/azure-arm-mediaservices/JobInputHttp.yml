@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.JobInputHttp
+    name: JobInputHttp
+    fullName: JobInputHttp
+    children:
+      - azure-arm-mediaservices.JobInputHttp.baseUri
+      - azure-arm-mediaservices.JobInputHttp.files
+      - azure-arm-mediaservices.JobInputHttp.label
+      - azure-arm-mediaservices.JobInputHttp.odatatype
+    langs:
+      - typeScript
+    type: interface
+    summary: Rappresenta l'input del processo HTTPS.
+    extends:
+      name: azure-arm-mediaservices.JobInputClip
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.baseUri
+    name: baseUri
+    fullName: baseUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'URI di base per l''input del processo HTTPS. Si saranno concatenato con i nomi di file fornito. Se viene specificato alcun uri di base, quindi l''elenco di file fornito si presuppone essere completamente qualificati URI. Lunghezza massima di 4000 caratteri.'
+    optional: true
+    syntax:
+      content: 'baseUri?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.files
+    name: files
+    fullName: files
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco di file. Obbligatorio per JobInputHttp. Massimo 4000 caratteri.
+    optional: true
+    syntax:
+      content: 'files?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un''etichetta che viene assegnata a un JobInputClip, che viene utilizzato per soddisfare un riferimento usato nella trasformazione. Ad esempio, una trasformazione può essere creata in modo da richiedere un file di immagine con l''etichetta ''xyz'' e applicarlo come sovrimpressione nel video di input prima della codifica. Durante l''invio di un processo, esattamente uno del JobInputs deve essere il file di immagine e deve avere l''etichetta ''xyz''.'
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputHttp.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.JobInputClip
+    name: JobInputClip
+    spec.typeScript:
+      - name: JobInputClip
+        fullName: JobInputClip
+        uid: azure-arm-mediaservices.JobInputClip

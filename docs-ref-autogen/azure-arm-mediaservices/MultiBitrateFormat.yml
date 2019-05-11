@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.MultiBitrateFormat
+    name: MultiBitrateFormat
+    fullName: MultiBitrateFormat
+    children:
+      - azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+      - azure-arm-mediaservices.MultiBitrateFormat.odatatype
+      - azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Vengono descritte le proprietà per la creazione di una raccolta di file a più bitrate GOP allineati. Il comportamento predefinito è per produrre un file di output per ogni livello video, ovvero muxed insieme a tutti i file l''audio. I file di output esatto generati possono essere controllati specificando la raccolta outputFiles.'
+    extends:
+      name: azure-arm-mediaservices.Format
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il modello dei nomi file per i file di output generato. Le macro seguenti sono supportate nel nome del file: {Basename} - il nome di base del video di input {Extension} - l'estensione corretta per questo formato. {Label} - l'etichetta assegnata al codec/livello.
+      {Index}: un indice univoco per le anteprime. Applicabile solo alle anteprime. {Velocità in bit}: la velocità in bit audio/video. Non è applicabile alle anteprime. {Codec} - il tipo del codec audio/video. Eventuali macro arilici verrà compresso e rimossi dal nome del file.
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'elenco dei file di output da produrre.  Ogni voce nell'elenco è un set di etichette di livello audio e video per essere muxed tra loro.
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.OutputFile[]'
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Format
+    name: Format
+    spec.typeScript:
+      - name: Format
+        fullName: Format
+        uid: azure-arm-mediaservices.Format
+  - uid: 'azure-arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-arm-mediaservices.OutputFile
+      - name: '[]'
+        fullName: '[]'
