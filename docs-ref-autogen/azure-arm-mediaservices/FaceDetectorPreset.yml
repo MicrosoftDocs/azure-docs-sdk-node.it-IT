@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.FaceDetectorPreset
+    name: FaceDetectorPreset
+    fullName: FaceDetectorPreset
+    children:
+      - azure-arm-mediaservices.FaceDetectorPreset.odatatype
+      - azure-arm-mediaservices.FaceDetectorPreset.resolution
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="9bb85-101">Descrive tutte le impostazioni da utilizzare durante l'analisi di un video per rilevare i visi presenti.</span><span class="sxs-lookup"><span data-stu-id="9bb85-101">Describes all the settings to be used when analyzing a video in order to detect all the faces present.</span></span>
+    extends:
+      name: azure-arm-mediaservices.Preset
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.FaceDetectorPreset.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9bb85-102">Discriminatore polimorfiche</span><span class="sxs-lookup"><span data-stu-id="9bb85-102">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.FaceDetectorPreset.resolution
+    name: resolution
+    fullName: resolution
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9bb85-103">Specifica la risoluzione massima, in corrispondenza del quale viene analizzato il video.</span><span class="sxs-lookup"><span data-stu-id="9bb85-103">Specifies the maximum resolution at which your video is analyzed.</span></span> <span data-ttu-id="9bb85-104">Il comportamento predefinito è "SourceResolution", in modo che l'input video con la risoluzione originale durante l'analisi.</span><span class="sxs-lookup"><span data-stu-id="9bb85-104">The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed.</span></span>
+      <span data-ttu-id="9bb85-105">Utilizzando "StandardDefinition" ridimensionerà video di input alla definizione standard mantenendo le proporzioni appropriate.</span><span class="sxs-lookup"><span data-stu-id="9bb85-105">Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio.</span></span> <span data-ttu-id="9bb85-106">Ridimensionerà solo se il video è di una risoluzione superiore.</span><span class="sxs-lookup"><span data-stu-id="9bb85-106">It will only resize if the video is of higher resolution.</span></span> <span data-ttu-id="9bb85-107">Ad esempio, potrebbe essere ridimensionato un 1920x1080 input 640x360 prima dell'elaborazione.</span><span class="sxs-lookup"><span data-stu-id="9bb85-107">For example, a 1920x1080 input would be scaled to 640x360 before processing.</span></span> <span data-ttu-id="9bb85-108">Passare a "StandardDefinition" riduce il tempo che necessario al processo ad alta risoluzione video.</span><span class="sxs-lookup"><span data-stu-id="9bb85-108">Switching to "StandardDefinition" will reduce the time it takes to process high resolution video.</span></span> <span data-ttu-id="9bb85-109">Può anche ridurre il costo dell'uso di questo componente (vedere https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics per informazioni dettagliate).</span><span class="sxs-lookup"><span data-stu-id="9bb85-109">It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details).</span></span>
+      <span data-ttu-id="9bb85-110">Tuttavia, non possono essere rilevati volti che finiscono troppo piccolo nel video ridimensionato.</span><span class="sxs-lookup"><span data-stu-id="9bb85-110">However, faces that end up being too small in the resized video may not be detected.</span></span> <span data-ttu-id="9bb85-111">I valori possibili sono: 'SourceResolution', 'StandardDefinition'</span><span class="sxs-lookup"><span data-stu-id="9bb85-111">Possible values include: 'SourceResolution', 'StandardDefinition'</span></span>
+    optional: true
+    syntax:
+      content: 'resolution?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Preset
+    name: Preset
+    spec.typeScript:
+      - name: Preset
+        fullName: Preset
+        uid: azure-arm-mediaservices.Preset
