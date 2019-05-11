@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.SingletonPartitionInformation
+    name: SingletonPartitionInformation
+    fullName: SingletonPartitionInformation
+    children:
+      - azure-servicefabric.SingletonPartitionInformation.id
+      - azure-servicefabric.SingletonPartitionInformation.servicePartitionKind
+    langs:
+      - typeScript
+    type: interface
+    summary: Informazioni su una partizione singleton. I servizi con lo schema di partizionamento singleton sono effettivamente non partizionata. Hanno solo un'unica partizione.
+    extends:
+      name: azure-servicefabric.PartitionInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SingletonPartitionInformation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un ID interno usato da Service Fabric per identificare in modo univoco una partizione. Questo è un GUID generato in modo casuale quando il servizio è stato creato. L'ID di partizione è univoca e non cambia per tutta la durata del servizio. Se il servizio stesso è stato eliminato e ricreata gli ID delle partizioni potrebbe essere diversa.
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SingletonPartitionInformation.servicePartitionKind
+    name: servicePartitionKind
+    fullName: servicePartitionKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'servicePartitionKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PartitionInformation
+    name: PartitionInformation
+    spec.typeScript:
+      - name: PartitionInformation
+        fullName: PartitionInformation
+        uid: azure-servicefabric.PartitionInformation

@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription
+    name: ProvisionApplicationTypeDescription
+    fullName: ProvisionApplicationTypeDescription
+    children:
+      - azure-servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy
+      - azure-servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath
+      - azure-servicefabric.ProvisionApplicationTypeDescription.async
+      - azure-servicefabric.ProvisionApplicationTypeDescription.kind
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrive l'operazione per registrare o eseguire il provisioning di un tipo di applicazione usando un pacchetto dell'applicazione caricato nell'archivio di immagini di Service Fabric.
+    extends:
+      name: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy
+    name: applicationPackageCleanupPolicy
+    fullName: applicationPackageCleanupPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il tipo di azione da intraprendere per la pulizia del pacchetto dell''applicazione dopo il provisioning ha esito positivo. I valori possibili sono: ''Invalid'', ''Default'', ''Automatico'', ''Manual'''
+    optional: true
+    syntax:
+      content: 'applicationPackageCleanupPolicy?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath
+    name: applicationTypeBuildPath
+    fullName: applicationTypeBuildPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Percorso relativo del pacchetto dell'applicazione nell'archivio immagini specificato durante l'operazione di caricamento precedente.
+    syntax:
+      content: 'applicationTypeBuildPath: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.async
+    name: async
+    fullName: async
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indica se il provisioning deve essere eseguito o meno in modo asincrono. Se impostato su true, l''operazione di provisioning restituisce una valore quando la richiesta viene accettata dal sistema e l''operazione di provisioning continua senza alcun limite di timeout. Il valore predefinito è False. Per i pacchetti dell''applicazione di grandi dimensioni, è consigliabile impostare il valore su true.'
+    syntax:
+      content: 'async: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    name: ProvisionApplicationTypeDescriptionBase
+    spec.typeScript:
+      - name: ProvisionApplicationTypeDescriptionBase
+        fullName: ProvisionApplicationTypeDescriptionBase
+        uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase

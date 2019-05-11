@@ -1,0 +1,89 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.PutPropertyBatchOperation
+    name: PutPropertyBatchOperation
+    fullName: PutPropertyBatchOperation
+    children:
+      - azure-servicefabric.PutPropertyBatchOperation.customTypeId
+      - azure-servicefabric.PutPropertyBatchOperation.kind
+      - azure-servicefabric.PutPropertyBatchOperation.propertyName
+      - azure-servicefabric.PutPropertyBatchOperation.value
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Inserisce la proprietà specificata sotto il nome specificato.
+      Si noti che se uno PropertyBatchOperation in un PropertyBatch non riesce, l'intero batch avrà esito negativo e non può essere eseguito il commit in modo transazionale.
+    extends:
+      name: azure-servicefabric.PropertyBatchOperation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PutPropertyBatchOperation.customTypeId
+    name: customTypeId
+    fullName: customTypeId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ID del tipo personalizzato della proprietà. Usando questa proprietà, l''utente può contrassegnare il tipo del valore della proprietà.'
+    optional: true
+    syntax:
+      content: 'customTypeId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PutPropertyBatchOperation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PutPropertyBatchOperation.propertyName
+    name: propertyName
+    fullName: propertyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome della proprietà di Service Fabric.
+    syntax:
+      content: 'propertyName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PutPropertyBatchOperation.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descrive un valore della proprietà di Service Fabric.
+    syntax:
+      content: 'value: PropertyValue'
+      return:
+        type:
+          - azure-servicefabric.PropertyValue
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PropertyBatchOperation
+    name: PropertyBatchOperation
+    spec.typeScript:
+      - name: PropertyBatchOperation
+        fullName: PropertyBatchOperation
+        uid: azure-servicefabric.PropertyBatchOperation
+  - uid: azure-servicefabric.PropertyValue
+    name: PropertyValue
+    spec.typeScript:
+      - name: PropertyValue
+        fullName: PropertyValue
+        uid: azure-servicefabric.PropertyValue

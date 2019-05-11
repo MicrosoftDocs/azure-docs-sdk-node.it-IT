@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.PartitionHealthStateChunk
+    name: PartitionHealthStateChunk
+    fullName: PartitionHealthStateChunk
+    children:
+      - azure-servicefabric.PartitionHealthStateChunk.healthState
+      - azure-servicefabric.PartitionHealthStateChunk.partitionId
+      - azure-servicefabric.PartitionHealthStateChunk.replicaHealthStateChunks
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Rappresenta il blocco dello stato di integrità di una partizione, che contiene l''ID di partizione, lo stato di integrità aggregato e tutte le repliche che rispettano i filtri nella descrizione di query blocco di integrità del cluster.'
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato di integrità di un''entità di Service Fabric come Cluster di nodo, applicazione, servizio, partizione, Replica e così via. I valori possibili sono: ''Invalid'', ''Ok'', ''Warning'', ''Error'', "Unknown".'
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionHealthStateChunk.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'Id della partizione.
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionHealthStateChunk.replicaHealthStateChunks
+    name: replicaHealthStateChunks
+    fullName: replicaHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'elenco di repliche integrità stato blocchi che appartengono alla partizione che rispettano i filtri dell'integrità di cluster chunk descrizione della query.
+    optional: true
+    syntax:
+      content: 'replicaHealthStateChunks?: ReplicaHealthStateChunkList'
+      return:
+        type:
+          - azure-servicefabric.ReplicaHealthStateChunkList
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk
+  - uid: azure-servicefabric.ReplicaHealthStateChunkList
+    name: ReplicaHealthStateChunkList
+    spec.typeScript:
+      - name: ReplicaHealthStateChunkList
+        fullName: ReplicaHealthStateChunkList
+        uid: azure-servicefabric.ReplicaHealthStateChunkList

@@ -1,0 +1,157 @@
+### YamlMime:UniversalReference
+items:
+  - uid: ms-rest-azure.InteractiveLoginOptions
+    name: InteractiveLoginOptions
+    fullName: InteractiveLoginOptions
+    children:
+      - ms-rest-azure.InteractiveLoginOptions.authorizationScheme
+      - ms-rest-azure.InteractiveLoginOptions.clientId
+      - ms-rest-azure.InteractiveLoginOptions.domain
+      - ms-rest-azure.InteractiveLoginOptions.environment
+      - ms-rest-azure.InteractiveLoginOptions.language
+      - ms-rest-azure.InteractiveLoginOptions.tokenAudience
+      - ms-rest-azure.InteractiveLoginOptions.tokenCache
+      - ms-rest-azure.InteractiveLoginOptions.username
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: ms-rest-azure.DeviceTokenCredentialsOptions
+    package: ms-rest-azure
+  - uid: ms-rest-azure.InteractiveLoginOptions.authorizationScheme
+    name: authorizationScheme
+    fullName: authorizationScheme
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lo schema di autorizzazione. Valore predefinito è 'Bearer'.
+    optional: true
+    syntax:
+      content: 'authorizationScheme?: string'
+      return:
+        type:
+          - string
+    package: ms-rest-azure
+  - uid: ms-rest-azure.InteractiveLoginOptions.clientId
+    name: clientId
+    fullName: clientId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''id client dell''applicazione di active directory. Visualizzare [Active Directory Guida introduttiva per .net](https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-dotnet/) per un esempio.'
+    optional: true
+    syntax:
+      content: 'clientId?: string'
+      return:
+        type:
+          - string
+    package: ms-rest-azure
+  - uid: ms-rest-azure.InteractiveLoginOptions.domain
+    name: domain
+    fullName: domain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'id tenant o di dominio che contiene questa applicazione. Valore predefinito è "common".
+    optional: true
+    syntax:
+      content: 'domain?: string'
+      return:
+        type:
+          - string
+    package: ms-rest-azure
+  - uid: ms-rest-azure.InteractiveLoginOptions.environment
+    name: environment
+    fullName: environment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'ambiente di Azure per l'autenticazione con.
+    optional: true
+    syntax:
+      content: 'environment?: AzureEnvironment'
+      return:
+        type:
+          - ms-rest-azure.AzureEnvironment
+    package: ms-rest-azure
+  - uid: ms-rest-azure.InteractiveLoginOptions.language
+    name: language
+    fullName: language
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Che specifica come il messaggio deve essere localizzato per il codice di lingua. Il valore predefinito ' en-us'.
+    optional: true
+    syntax:
+      content: 'language?: string'
+      return:
+        type:
+          - string
+    package: ms-rest-azure
+  - uid: ms-rest-azure.InteractiveLoginOptions.tokenAudience
+    name: tokenAudience
+    fullName: tokenAudience
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Gruppo di destinatari per la quale viene richiesto il token. I valori validi sono 'grafico', 'batch' o qualsiasi altra risorsa, ad esempio 'https://vault.azure.com'.
+      Se tokenAudience è 'grafico' quindi dominio deve essere inoltre fornito e il relativo valore non deve essere il tenant 'comuni' predefinito.
+      Deve essere una stringa (preferibilmente in un formato guid).
+    optional: true
+    syntax:
+      content: 'tokenAudience?: "graph" | "batch" | string'
+      return:
+        type:
+          - '"graph" | "batch" | string'
+    package: ms-rest-azure
+  - uid: ms-rest-azure.InteractiveLoginOptions.tokenCache
+    name: tokenCache
+    fullName: tokenCache
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La cache dei token. Valore predefinito è MemoryCache da adal.
+    optional: true
+    syntax:
+      content: 'tokenCache?: any'
+      return:
+        type:
+          - any
+    package: ms-rest-azure
+  - uid: ms-rest-azure.InteractiveLoginOptions.username
+    name: username
+    fullName: username
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il nome utente per l''account nel formato: ''user@example.com''. Valore predefinito è ''user@example.com''.'
+    optional: true
+    syntax:
+      content: 'username?: string'
+      return:
+        type:
+          - string
+    package: ms-rest-azure
+references:
+  - uid: ms-rest-azure.DeviceTokenCredentialsOptions
+    name: DeviceTokenCredentialsOptions
+    spec.typeScript:
+      - name: DeviceTokenCredentialsOptions
+        fullName: DeviceTokenCredentialsOptions
+        uid: ms-rest-azure.DeviceTokenCredentialsOptions
+  - uid: ms-rest-azure.AzureEnvironment
+    name: AzureEnvironment
+    spec.typeScript:
+      - name: AzureEnvironment
+        fullName: AzureEnvironment
+        uid: ms-rest-azure.AzureEnvironment

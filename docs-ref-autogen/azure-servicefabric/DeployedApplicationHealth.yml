@@ -1,0 +1,165 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedApplicationHealth
+    name: DeployedApplicationHealth
+    fullName: DeployedApplicationHealth
+    children:
+      - azure-servicefabric.DeployedApplicationHealth.aggregatedHealthState
+      - azure-servicefabric.DeployedApplicationHealth.deployedServicePackageHealthStates
+      - azure-servicefabric.DeployedApplicationHealth.healthEvents
+      - azure-servicefabric.DeployedApplicationHealth.healthStatistics
+      - azure-servicefabric.DeployedApplicationHealth.name
+      - azure-servicefabric.DeployedApplicationHealth.nodeName
+      - azure-servicefabric.DeployedApplicationHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: Informazioni sull'integrità di un'applicazione distribuita in un nodo di Service Fabric.
+    extends:
+      name: azure-servicefabric.EntityHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Stato di integrità che rappresenta lo stato di integrità aggregato dell'entità calcolato da Health Manager.
+      La valutazione dell'integrità dell'entità riflette tutti gli eventi segnalati sull'entità e relativi elementi figlio (se presente).
+      L'aggregazione viene eseguita applicando i criteri di integrità desiderate. I valori possibili sono: 'Invalid', 'Ok', 'Warning', 'Error', "Unknown".
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.deployedServicePackageHealthStates
+    name: deployedServicePackageHealthStates
+    fullName: deployedServicePackageHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Distribuire gli stati di integrità del pacchetto di servizio per l'applicazione distribuita corrente come individuato nell'archivio integrità.
+    optional: true
+    syntax:
+      content: 'deployedServicePackageHealthStates?: DeployedServicePackageHealthState[]'
+      return:
+        type:
+          - 'azure-servicefabric.DeployedServicePackageHealthState[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'elenco degli eventi di integrità segnalati nell'entità.
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostra le statistiche di integrità per tutti i tipi di elementi figlio dell'entità sottoposti a query.
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome dell'applicazione distribuita sul nodo descritto da questo oggetto le cui informazioni di integrità.
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.nodeName
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome del nodo in cui viene distribuita questa applicazione.
+    optional: true
+    syntax:
+      content: 'nodeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le valutazioni non integre indicanti il motivo per cui lo stato di integrità aggregato è stato restituito dal gestore integrità.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealth
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: azure-servicefabric.EntityHealth
+  - uid: 'azure-servicefabric.DeployedServicePackageHealthState[]'
+    name: 'DeployedServicePackageHealthState[]'
+    spec.typeScript:
+      - name: DeployedServicePackageHealthState
+        fullName: DeployedServicePackageHealthState
+        uid: azure-servicefabric.DeployedServicePackageHealthState
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

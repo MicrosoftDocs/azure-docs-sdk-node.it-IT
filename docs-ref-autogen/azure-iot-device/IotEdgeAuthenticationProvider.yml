@@ -1,0 +1,126 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider
+    name: IotEdgeAuthenticationProvider
+    fullName: IotEdgeAuthenticationProvider
+    children:
+      - azure-iot-device.IotEdgeAuthenticationProvider.fromConnectionString
+      - azure-iot-device.IotEdgeAuthenticationProvider.getDeviceCredentials_1
+      - azure-iot-device.IotEdgeAuthenticationProvider.getDeviceCredentials
+      - azure-iot-device.IotEdgeAuthenticationProvider.getTrustBundle
+      - azure-iot-device.IotEdgeAuthenticationProvider.stop
+      - azure-iot-device.IotEdgeAuthenticationProvider.type
+    langs:
+      - typeScript
+    type: class
+    summary: |
+      Fornisce un `AuthenticationProvider` implementazione che delega la generazione di token a iotedged. Questa implementazione è destinata a essere utilizzato quando si usa il client di modulo con Azure IoT Edge.
+      Questo tipo eredita da `SharedAccessKeyAuthenticationProvider` ed è funzionalmente identico al tipo ad eccezione della parte di generazione dei token che viene eseguito l'override tramite l'implementazione di `_sign` (metodo).
+    extends:
+      name: azure-iot-device.SharedAccessKeyAuthenticationProvider
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.fromConnectionString
+    name: 'fromConnectionString(string, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un nuovo `SharedAccessKeyAuthenticationProvider` da una stringa di connessione
+    syntax:
+      content: 'static function fromConnectionString(connectionString: string, tokenValidTimeInSeconds?: number, tokenRenewalMarginInSeconds?: number)'
+      parameters:
+        - id: connectionString
+          type:
+            - string
+          description: Una stringa di connessione di dispositivi contenente i parametri obbligatori per l'autenticazione con l'hub IoT.
+        - id: tokenValidTimeInSeconds
+          type:
+            - number
+          description: Il numero di secondi per cui si suppone che un token sia valido.
+          optional: true
+        - id: tokenRenewalMarginInSeconds
+          type:
+            - number
+          description: |
+            Il numero di secondi prima della fine del periodo di validità durante il quale il `SharedAccessKeyAuthenticationProvider` deve rinnovare il token.
+          optional: true
+      return:
+        type:
+          - azure-iot-device.SharedAccessKeyAuthenticationProvider
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.getDeviceCredentials_1
+    name: getDeviceCredentials()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Questo metodo viene utilizzato per i trasporti a ottenere il dispositivo più recente delle credenziali sotto forma di un `TransportConfig` oggetto.
+    syntax:
+      content: function getDeviceCredentials()
+      parameters: []
+      return:
+        type:
+          - Promise<TransportConfig>
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.getDeviceCredentials
+    name: getDeviceCredentials(Callback<TransportConfig>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Questo metodo viene utilizzato per i trasporti a ottenere il dispositivo più recente delle credenziali sotto forma di un `TransportConfig` oggetto.
+    syntax:
+      content: 'function getDeviceCredentials(callback: Callback<TransportConfig>)'
+      parameters:
+        - id: callback
+          type:
+            - Callback<TransportConfig>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.getTrustBundle
+    name: 'getTrustBundle((err?: Error, ca?: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTrustBundle(callback: (err?: Error, ca?: string) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error, ca?: string) => void'
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.stop
+    name: stop()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Arresta il timer usato per rinnovare il token di firma di accesso condiviso.
+    syntax:
+      content: function stop()
+      parameters: []
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'type: AuthenticationType'
+      return:
+        type:
+          - AuthenticationType
+    package: azure-iot-device
+references:
+  - uid: azure-iot-device.SharedAccessKeyAuthenticationProvider
+    name: SharedAccessKeyAuthenticationProvider
+    spec.typeScript:
+      - name: SharedAccessKeyAuthenticationProvider
+        fullName: SharedAccessKeyAuthenticationProvider
+        uid: azure-iot-device.SharedAccessKeyAuthenticationProvider

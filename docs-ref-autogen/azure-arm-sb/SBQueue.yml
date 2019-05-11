@@ -1,0 +1,410 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-sb.SBQueue
+    name: SBQueue
+    fullName: SBQueue
+    children:
+      - azure-arm-sb.SBQueue.accessedAt
+      - azure-arm-sb.SBQueue.autoDeleteOnIdle
+      - azure-arm-sb.SBQueue.countDetails
+      - azure-arm-sb.SBQueue.createdAt
+      - azure-arm-sb.SBQueue.deadLetteringOnMessageExpiration
+      - azure-arm-sb.SBQueue.defaultMessageTimeToLive
+      - azure-arm-sb.SBQueue.duplicateDetectionHistoryTimeWindow
+      - azure-arm-sb.SBQueue.enableBatchedOperations
+      - azure-arm-sb.SBQueue.enableExpress
+      - azure-arm-sb.SBQueue.enablePartitioning
+      - azure-arm-sb.SBQueue.forwardDeadLetteredMessagesTo
+      - azure-arm-sb.SBQueue.forwardTo
+      - azure-arm-sb.SBQueue.id
+      - azure-arm-sb.SBQueue.lockDuration
+      - azure-arm-sb.SBQueue.maxDeliveryCount
+      - azure-arm-sb.SBQueue.maxSizeInMegabytes
+      - azure-arm-sb.SBQueue.messageCount
+      - azure-arm-sb.SBQueue.name
+      - azure-arm-sb.SBQueue.requiresDuplicateDetection
+      - azure-arm-sb.SBQueue.requiresSession
+      - azure-arm-sb.SBQueue.sizeInBytes
+      - azure-arm-sb.SBQueue.status
+      - azure-arm-sb.SBQueue.type
+      - azure-arm-sb.SBQueue.updatedAt
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrizione della coda Resource.
+    extends:
+      name: azure-arm-sb.Resource
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.accessedAt
+    name: accessedAt
+    fullName: accessedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ora ultimo stato inviato un messaggio o l'ultima volta durante una richiesta di ricezione per questa coda.
+    optional: true
+    syntax:
+      content: 'accessedAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.autoDeleteOnIdle
+    name: autoDeleteOnIdle
+    fullName: autoDeleteOnIdle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Compatibile con ISO 8061 timeSpan intervallo di inattività dopo il quale la coda viene eliminata automaticamente. La durata minima è 5 minuti.
+    optional: true
+    syntax:
+      content: 'autoDeleteOnIdle?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.countDetails
+    name: countDetails
+    fullName: countDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dettagli conteggio dei messaggi.
+    optional: true
+    syntax:
+      content: 'countDetails?: MessageCountDetails'
+      return:
+        type:
+          - azure-arm-sb.MessageCountDetails
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.createdAt
+    name: createdAt
+    fullName: createdAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'ora esatta in cui è stato creato il messaggio.
+    optional: true
+    syntax:
+      content: 'createdAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.deadLetteringOnMessageExpiration
+    name: deadLetteringOnMessageExpiration
+    fullName: deadLetteringOnMessageExpiration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un valore che indica se la coda ha il supporto di lettera non consegnata quando un messaggio scade.
+    optional: true
+    syntax:
+      content: 'deadLetteringOnMessageExpiration?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.defaultMessageTimeToLive
+    name: defaultMessageTimeToLive
+    fullName: defaultMessageTimeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ISO 8601 messaggio intervallo di tempo predefinito valore di durata. Si tratta della durata dopo la quale il messaggio scade, a partire da quando il messaggio viene inviato al Bus di servizio. Questo è il valore predefinito utilizzato quando non TimeToLive è impostata su un messaggio stesso.'
+    optional: true
+    syntax:
+      content: 'defaultMessageTimeToLive?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.duplicateDetectionHistoryTimeWindow
+    name: duplicateDetectionHistoryTimeWindow
+    fullName: duplicateDetectionHistoryTimeWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Struttura timeSpan ISO 8601 che definisce la durata della cronologia di rilevamento dei duplicati. Il valore predefinito è 10 minuti.
+    optional: true
+    syntax:
+      content: 'duplicateDetectionHistoryTimeWindow?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enableBatchedOperations
+    name: enableBatchedOperations
+    fullName: enableBatchedOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valore che indica se sono abilitate le operazioni in batch sul lato server.
+    optional: true
+    syntax:
+      content: 'enableBatchedOperations?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enableExpress
+    name: enableExpress
+    fullName: enableExpress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un valore che indica se le entità Express sono abilitate. Una coda di tipo express contiene un messaggio in memoria temporaneamente prima di scriverlo nell'archivio permanente.
+    optional: true
+    syntax:
+      content: 'enableExpress?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enablePartitioning
+    name: enablePartitioning
+    fullName: enablePartitioning
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un valore che indica se la coda deve essere partizionato tra più Broker messaggi.
+    optional: true
+    syntax:
+      content: 'enablePartitioning?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.forwardDeadLetteredMessagesTo
+    name: forwardDeadLetteredMessagesTo
+    fullName: forwardDeadLetteredMessagesTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome coda/argomento per inoltrare il messaggio di lettera non consegnata
+    optional: true
+    syntax:
+      content: 'forwardDeadLetteredMessagesTo?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.forwardTo
+    name: forwardTo
+    fullName: forwardTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome coda/argomento per inoltrare i messaggi
+    optional: true
+    syntax:
+      content: 'forwardTo?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID risorsa
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.lockDuration
+    name: lockDuration
+    fullName: lockDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Durata ISO 8601 di un blocco di visualizzazione; vale a dire, la quantità di tempo che il messaggio è bloccato per altri ricevitori. Il valore massimo per LockDuration è 5 minuti; il valore predefinito è 1 minuto.'
+    optional: true
+    syntax:
+      content: 'lockDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.maxDeliveryCount
+    name: maxDeliveryCount
+    fullName: maxDeliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il numero massimo di recapiti. Un messaggio viene automaticamente non recapitabile dopo questo numero di recapiti. Valore predefinito è 10.
+    optional: true
+    syntax:
+      content: 'maxDeliveryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.maxSizeInMegabytes
+    name: maxSizeInMegabytes
+    fullName: maxSizeInMegabytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le dimensioni massime della coda in megabyte, ovvero le dimensioni della memoria allocata per la coda. Valore predefinito è 1024.'
+    optional: true
+    syntax:
+      content: 'maxSizeInMegabytes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.messageCount
+    name: messageCount
+    fullName: messageCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il numero di messaggi nella coda.
+    optional: true
+    syntax:
+      content: 'messageCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome risorsa
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.requiresDuplicateDetection
+    name: requiresDuplicateDetection
+    fullName: requiresDuplicateDetection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un valore che indica se questa coda richiede il rilevamento dei duplicati.
+    optional: true
+    syntax:
+      content: 'requiresDuplicateDetection?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.requiresSession
+    name: requiresSession
+    fullName: requiresSession
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un valore che indica se la coda supporta il concetto di sessione.
+    optional: true
+    syntax:
+      content: 'requiresSession?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.sizeInBytes
+    name: sizeInBytes
+    fullName: sizeInBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le dimensioni della coda, in byte.'
+    optional: true
+    syntax:
+      content: 'sizeInBytes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Enumera i valori possibili per lo stato di un''entità di messaggistica. I valori possibili sono: ''Active'', ''Disabled'', ''Restoring'', ''SendDisabled'', ''ReceiveDisabled'', ''Creating'', ''Deleting'', ''Renaming'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'status?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tipo di risorsa
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.updatedAt
+    name: updatedAt
+    fullName: updatedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'ora esatta il messaggio è stato aggiornato.
+    optional: true
+    syntax:
+      content: 'updatedAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+references:
+  - uid: azure-arm-sb.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-sb.Resource
+  - uid: azure-arm-sb.MessageCountDetails
+    name: MessageCountDetails
+    spec.typeScript:
+      - name: MessageCountDetails
+        fullName: MessageCountDetails
+        uid: azure-arm-sb.MessageCountDetails

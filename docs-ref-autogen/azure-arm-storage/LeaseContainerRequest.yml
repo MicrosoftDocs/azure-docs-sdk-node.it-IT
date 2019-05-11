@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-storage.LeaseContainerRequest
+    name: LeaseContainerRequest
+    fullName: LeaseContainerRequest
+    children:
+      - azure-arm-storage.LeaseContainerRequest.action
+      - azure-arm-storage.LeaseContainerRequest.breakPeriod
+      - azure-arm-storage.LeaseContainerRequest.leaseDuration
+      - azure-arm-storage.LeaseContainerRequest.leaseId
+      - azure-arm-storage.LeaseContainerRequest.proposedLeaseId
+    langs:
+      - typeScript
+    type: interface
+    summary: Schema di richiesta di lease contenitore.
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.action
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Specifica l''azione di lease. Può essere una delle azioni disponibili. I valori possibili sono: ''Acquisire'', ''Renew'', ''Modifica'', ''Release'', ''Break'''
+    syntax:
+      content: 'action: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.breakPeriod
+    name: breakPeriod
+    fullName: breakPeriod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'facoltativo. Per un''azione di interruzione, proposta durata il lease continua prima che venga interrotto, in secondi, compreso tra 0 e 60.'
+    optional: true
+    syntax:
+      content: 'breakPeriod?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.leaseDuration
+    name: leaseDuration
+    fullName: leaseDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Obbligatorio per l''acquisizione. Specifica la durata del lease, in secondi, o uno negativo (-1) per ottenere un lease che non scade mai.'
+    optional: true
+    syntax:
+      content: 'leaseDuration?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.leaseId
+    name: leaseId
+    fullName: leaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Identifica il lease. È possibile specificare qualsiasi formato di stringa GUID valido.
+    optional: true
+    syntax:
+      content: 'leaseId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.proposedLeaseId
+    name: proposedLeaseId
+    fullName: proposedLeaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Facoltativo per l''acquisizione, necessario per la modifica. ID lease proposto, in un formato di stringa GUID.'
+    optional: true
+    syntax:
+      content: 'proposedLeaseId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage

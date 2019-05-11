@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.WaitForPrimarySwapSafetyCheck
+    name: WaitForPrimarySwapSafetyCheck
+    fullName: WaitForPrimarySwapSafetyCheck
+    children:
+      - azure-servicefabric.WaitForPrimarySwapSafetyCheck.kind
+      - azure-servicefabric.WaitForPrimarySwapSafetyCheck.partitionId
+    langs:
+      - typeScript
+    type: interface
+    summary: Controllo di sicurezza che rimane in attesa per la replica primaria venga spostata fuori dal nodo prima di avviare un aggiornamento per garantire la disponibilità della replica primaria per la partizione.
+    extends:
+      name: azure-servicefabric.PartitionSafetyCheck
+    package: azure-servicefabric
+  - uid: azure-servicefabric.WaitForPrimarySwapSafetyCheck.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.WaitForPrimarySwapSafetyCheck.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID della partizione di cui è in corso il controllo di sicurezza.
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PartitionSafetyCheck
+    name: PartitionSafetyCheck
+    spec.typeScript:
+      - name: PartitionSafetyCheck
+        fullName: PartitionSafetyCheck
+        uid: azure-servicefabric.PartitionSafetyCheck
