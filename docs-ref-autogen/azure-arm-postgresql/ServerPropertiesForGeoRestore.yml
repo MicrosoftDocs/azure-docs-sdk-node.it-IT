@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-postgresql.ServerPropertiesForGeoRestore
+    name: ServerPropertiesForGeoRestore
+    fullName: ServerPropertiesForGeoRestore
+    children:
+      - azure-arm-postgresql.ServerPropertiesForGeoRestore.createMode
+      - azure-arm-postgresql.ServerPropertiesForGeoRestore.sourceServerId
+      - azure-arm-postgresql.ServerPropertiesForGeoRestore.sslEnforcement
+      - azure-arm-postgresql.ServerPropertiesForGeoRestore.storageProfile
+      - azure-arm-postgresql.ServerPropertiesForGeoRestore.version
+    langs:
+      - typeScript
+    type: interface
+    summary: Le proprietà utilizzate per creare un nuovo server tramite il ripristino in un'area diversa da un'area geografica replicati backup.
+    extends:
+      name: azure-arm-postgresql.ServerPropertiesForCreate
+    package: azure-arm-postgresql
+  - uid: azure-arm-postgresql.ServerPropertiesForGeoRestore.createMode
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'createMode: string'
+      return:
+        type:
+          - string
+    package: azure-arm-postgresql
+  - uid: azure-arm-postgresql.ServerPropertiesForGeoRestore.sourceServerId
+    name: sourceServerId
+    fullName: sourceServerId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID del server di origine per il ripristino.
+    syntax:
+      content: 'sourceServerId: string'
+      return:
+        type:
+          - string
+    package: azure-arm-postgresql
+  - uid: azure-arm-postgresql.ServerPropertiesForGeoRestore.sslEnforcement
+    name: sslEnforcement
+    fullName: sslEnforcement
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Attiva imposizione ssl o non quando la connessione al server. I valori possibili sono: ''Enabled'', ''Disabilitato'''
+    optional: true
+    syntax:
+      content: 'sslEnforcement?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-postgresql
+  - uid: azure-arm-postgresql.ServerPropertiesForGeoRestore.storageProfile
+    name: storageProfile
+    fullName: storageProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Profilo di archiviazione di un server.
+    optional: true
+    syntax:
+      content: 'storageProfile?: StorageProfile'
+      return:
+        type:
+          - azure-arm-postgresql.StorageProfile
+    package: azure-arm-postgresql
+  - uid: azure-arm-postgresql.ServerPropertiesForGeoRestore.version
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Versione del server. I valori possibili sono: ''9.5'', ''9.6'', ''10'', ''10.0'', ''10.2'''
+    optional: true
+    syntax:
+      content: 'version?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-postgresql
+references:
+  - uid: azure-arm-postgresql.ServerPropertiesForCreate
+    name: ServerPropertiesForCreate
+    spec.typeScript:
+      - name: ServerPropertiesForCreate
+        fullName: ServerPropertiesForCreate
+        uid: azure-arm-postgresql.ServerPropertiesForCreate
+  - uid: azure-arm-postgresql.StorageProfile
+    name: StorageProfile
+    spec.typeScript:
+      - name: StorageProfile
+        fullName: StorageProfile
+        uid: azure-arm-postgresql.StorageProfile

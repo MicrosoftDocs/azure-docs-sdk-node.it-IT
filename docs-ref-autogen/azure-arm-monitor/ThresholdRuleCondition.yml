@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.ThresholdRuleCondition
+    name: ThresholdRuleCondition
+    fullName: ThresholdRuleCondition
+    children:
+      - azure-arm-monitor.ThresholdRuleCondition.dataSource
+      - azure-arm-monitor.ThresholdRuleCondition.odatatype
+      - azure-arm-monitor.ThresholdRuleCondition.operator
+      - azure-arm-monitor.ThresholdRuleCondition.threshold
+      - azure-arm-monitor.ThresholdRuleCondition.timeAggregation
+      - azure-arm-monitor.ThresholdRuleCondition.windowSize
+    langs:
+      - typeScript
+    type: interface
+    summary: Una condizione della regola basata su una metrica che supera una soglia.
+    extends:
+      name: azure-arm-monitor.RuleCondition
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.dataSource
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: la risorsa da cui la regola raccoglie i dati. Per questo tipo di origine dati sarà sempre di tipo RuleMetricDataSource.
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSource'
+      return:
+        type:
+          - azure-arm-monitor.RuleDataSource
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.operator
+    name: operator
+    fullName: operator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'l''operatore usato per confrontare i dati e la soglia. I valori possibili sono: ''GreaterThan'', ''GreaterThanOrEqual'', ''LessThan'', ''LessThanOrEqual'''
+    syntax:
+      content: 'operator: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.threshold
+    name: threshold
+    fullName: threshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: il valore di soglia che attiva l'avviso.
+    syntax:
+      content: 'threshold: number'
+      return:
+        type:
+          - number
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.timeAggregation
+    name: timeAggregation
+    fullName: timeAggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      operatore dell'aggregazione temporale. Modo in cui i dati raccolti devono essere combinati nel tempo.
+      Il valore predefinito è il PrimaryAggregationType della metrica. I valori possibili sono: 'Media', 'Minimum', 'Maximum', 'Total,' 'Last'
+    optional: true
+    syntax:
+      content: 'timeAggregation?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.windowSize
+    name: windowSize
+    fullName: windowSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'il periodo di tempo (in formato durata ISO 8601) che consente di monitorare l''attività degli avvisi in base alla soglia. Se non specificata, ma deve essere compresa tra 5 minuti e 1 giorno.'
+    optional: true
+    syntax:
+      content: 'windowSize?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleCondition
+    name: RuleCondition
+    spec.typeScript:
+      - name: RuleCondition
+        fullName: RuleCondition
+        uid: azure-arm-monitor.RuleCondition
+  - uid: azure-arm-monitor.RuleDataSource
+    name: RuleDataSource
+    spec.typeScript:
+      - name: RuleDataSource
+        fullName: RuleDataSource
+        uid: azure-arm-monitor.RuleDataSource

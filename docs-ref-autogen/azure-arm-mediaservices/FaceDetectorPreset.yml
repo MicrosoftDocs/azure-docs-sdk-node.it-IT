@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.FaceDetectorPreset
+    name: FaceDetectorPreset
+    fullName: FaceDetectorPreset
+    children:
+      - azure-arm-mediaservices.FaceDetectorPreset.odatatype
+      - azure-arm-mediaservices.FaceDetectorPreset.resolution
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrive tutte le impostazioni da utilizzare durante l'analisi di un video per rilevare i visi presenti.
+    extends:
+      name: azure-arm-mediaservices.Preset
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.FaceDetectorPreset.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.FaceDetectorPreset.resolution
+    name: resolution
+    fullName: resolution
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Specifica la risoluzione massima, in corrispondenza del quale viene analizzato il video. Il comportamento predefinito è "SourceResolution", in modo che l'input video con la risoluzione originale durante l'analisi.
+      Utilizzando "StandardDefinition" ridimensionerà video di input alla definizione standard mantenendo le proporzioni appropriate. Ridimensionerà solo se il video è di una risoluzione superiore. Ad esempio, potrebbe essere ridimensionato un 1920x1080 input 640x360 prima dell'elaborazione. Passare a "StandardDefinition" riduce il tempo che necessario al processo ad alta risoluzione video. Può anche ridurre il costo dell'uso di questo componente (vedere https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics per informazioni dettagliate).
+      Tuttavia, non possono essere rilevati volti che finiscono troppo piccolo nel video ridimensionato. I valori possibili sono: 'SourceResolution', 'StandardDefinition'
+    optional: true
+    syntax:
+      content: 'resolution?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Preset
+    name: Preset
+    spec.typeScript:
+      - name: Preset
+        fullName: Preset
+        uid: azure-arm-mediaservices.Preset
