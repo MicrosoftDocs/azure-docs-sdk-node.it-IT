@@ -1,0 +1,20 @@
+### YamlMime:UniversalReference
+items:
+  - uid: msal.AuthOptions
+    name: AuthOptions
+    fullName: AuthOptions
+    children: []
+    langs:
+      - typeScript
+    type: type alias
+    summary: |2+
+       ClientId opzioni di autenticazione - ID Client assegnato all'app da autorità di Azure Active Directory - per gli sviluppatori possono scegliere di inviare un'autorità, il valore predefinito è "" (TODO: Procedere con la discussione autorità con i responsabili di progetto - fino a questo commento è un segnaposto) validateAuthority - usato per la convalida dell'autorità di attivare/disattivare. Se impostato su true (impostazione predefinita), MSAL confronterà autorità dell'applicazione con modelli di URL noti che rappresentano autorità ben formata.
+      È utile quando l'autorità viene ottenuta in fase di esecuzione per impedire la visualizzazione di richieste di autenticazione da pagine dannose MSAL.
+      URI di reindirizzamento - l'URI di reindirizzamento dell'applicazione, deve essere uguale al valore nel portale di registrazione dell'applicazione.
+      Il valore predefinito è `window.location.href`.
+      postLogoutRedirectUri - usato per reindirizzare l'utente a questo percorso dopo la disconnessione. Il valore predefinito è `window.location.href`.
+      stato: usare per inviare il parametro di stato con l'autenticazione richiesta navigateToLoginRequestUrl - utilizzata per disattivare la navigazione predefinito alla pagina iniziale dopo l'accesso. Il valore predefinito è true. Viene utilizzato solo per i flussi di reindirizzamento.
+
+    syntax:
+      content: 'type AuthOptions = { authority:string, clientId:string, navigateToLoginRequestUrl:boolean, postLogoutRedirectUri:Object, redirectUri:Object, validateAuthority:boolean }'
+    package: msal
