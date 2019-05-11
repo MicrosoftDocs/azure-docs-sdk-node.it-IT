@@ -1,0 +1,184 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoOverlay
+    name: VideoOverlay
+    fullName: VideoOverlay
+    children:
+      - azure-arm-mediaservices.VideoOverlay.audioGainLevel
+      - azure-arm-mediaservices.VideoOverlay.cropRectangle
+      - azure-arm-mediaservices.VideoOverlay.end
+      - azure-arm-mediaservices.VideoOverlay.fadeInDuration
+      - azure-arm-mediaservices.VideoOverlay.fadeOutDuration
+      - azure-arm-mediaservices.VideoOverlay.inputLabel
+      - azure-arm-mediaservices.VideoOverlay.odatatype
+      - azure-arm-mediaservices.VideoOverlay.opacity
+      - azure-arm-mediaservices.VideoOverlay.position
+      - azure-arm-mediaservices.VideoOverlay.start
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="af9c1-101">Vengono descritte le proprietà di una sovrimpressione video.</span><span class="sxs-lookup"><span data-stu-id="af9c1-101">Describes the properties of a video overlay.</span></span>
+    extends:
+      name: azure-arm-mediaservices.Overlay
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.audioGainLevel
+    name: audioGainLevel
+    fullName: audioGainLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="af9c1-102">Il livello di guadagno audio nella sovrapposizione.</span><span class="sxs-lookup"><span data-stu-id="af9c1-102">The gain level of audio in the overlay.</span></span> <span data-ttu-id="af9c1-103">Il valore deve essere compreso nell''intervallo [0, 1.0].</span><span class="sxs-lookup"><span data-stu-id="af9c1-103">The value should be in the range [0, 1.0].</span></span> <span data-ttu-id="af9c1-104">Il valore predefinito è 1.0.</span><span class="sxs-lookup"><span data-stu-id="af9c1-104">The default is 1.0.</span></span>'
+    optional: true
+    syntax:
+      content: 'audioGainLevel?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.cropRectangle
+    name: cropRectangle
+    fullName: cropRectangle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af9c1-105">Una finestra rettangolare facoltativa usata per ritagliare l'immagine sovrapposta o video.</span><span class="sxs-lookup"><span data-stu-id="af9c1-105">An optional rectangular window used to crop the overlay image or video.</span></span>
+    optional: true
+    syntax:
+      content: 'cropRectangle?: Rectangle'
+      return:
+        type:
+          - azure-arm-mediaservices.Rectangle
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.end
+    name: end
+    fullName: end
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="af9c1-106">La posizione del video di input in corrispondenza del quale termina la sovrimpressione.</span><span class="sxs-lookup"><span data-stu-id="af9c1-106">The position in the input video at which the overlay ends.</span></span> <span data-ttu-id="af9c1-107">Il valore deve essere nel formato durata ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="af9c1-107">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="af9c1-108">Ad esempio, PT30S al fine di sovrapposizione a 30 secondi nel video di input.</span><span class="sxs-lookup"><span data-stu-id="af9c1-108">For example, PT30S to end the overlay at 30 seconds in to the input video.</span></span> <span data-ttu-id="af9c1-109">Se non è specificata la sovrimpressione verrà applicata fino alla fine del video di input se inputLoop è true.</span><span class="sxs-lookup"><span data-stu-id="af9c1-109">If not specified the overlay will be applied until the end of the input video if inputLoop is true.</span></span> <span data-ttu-id="af9c1-110">In caso contrario, se inputLoop è false, quindi sovrimpressione durerà fino a quando la durata del supporto di sovrapposizione.</span><span class="sxs-lookup"><span data-stu-id="af9c1-110">Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.</span></span>'
+    optional: true
+    syntax:
+      content: 'end?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.fadeInDuration
+    name: fadeInDuration
+    fullName: fadeInDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af9c1-111">La durata in cui la sovrapposizione con dissolvenza in entrata nel video di input.</span><span class="sxs-lookup"><span data-stu-id="af9c1-111">The duration over which the overlay fades in onto the input video.</span></span> <span data-ttu-id="af9c1-112">Il valore deve essere nel formato durata ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="af9c1-112">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="af9c1-113">Se non è specificato il comportamento predefinito deve non avere alcun effetto di dissolvenza in (uguale a PT0S).</span><span class="sxs-lookup"><span data-stu-id="af9c1-113">If not specified the default behavior is to have no fade in (same as PT0S).</span></span>
+    optional: true
+    syntax:
+      content: 'fadeInDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.fadeOutDuration
+    name: fadeOutDuration
+    fullName: fadeOutDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af9c1-114">La durata in cui la sovrimpressione viene applicata la dissolvenza all'esterno di video di input.</span><span class="sxs-lookup"><span data-stu-id="af9c1-114">The duration over which the overlay fades out of the input video.</span></span> <span data-ttu-id="af9c1-115">Il valore deve essere nel formato durata ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="af9c1-115">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="af9c1-116">Se non è specificato il comportamento predefinito prevede di non avere alcuna dissolvenza (uguale a PT0S).</span><span class="sxs-lookup"><span data-stu-id="af9c1-116">If not specified the default behavior is to have no fade out (same as PT0S).</span></span>
+    optional: true
+    syntax:
+      content: 'fadeOutDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.inputLabel
+    name: inputLabel
+    fullName: inputLabel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="af9c1-117">Etichetta dell''input del processo che deve essere utilizzato come un controllo overlay.</span><span class="sxs-lookup"><span data-stu-id="af9c1-117">The label of the job input which is to be used as an overlay.</span></span> <span data-ttu-id="af9c1-118">L''Input deve specificare esattamente un file.</span><span class="sxs-lookup"><span data-stu-id="af9c1-118">The Input must specify exactly one file.</span></span> <span data-ttu-id="af9c1-119">È possibile specificare un file di immagine in formato JPG o PNG, o un file audio (ad esempio un file WAV, MP3, WMA o M4A) o un file video.</span><span class="sxs-lookup"><span data-stu-id="af9c1-119">You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file.</span></span> <span data-ttu-id="af9c1-120">Vedere https://aka.ms/mesformats per l''elenco completo dei formati di file video e audio supportato.</span><span class="sxs-lookup"><span data-stu-id="af9c1-120">See https://aka.ms/mesformats for the complete list of supported audio and video file formats.</span></span>'
+    syntax:
+      content: 'inputLabel: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af9c1-121">Discriminatore polimorfiche</span><span class="sxs-lookup"><span data-stu-id="af9c1-121">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.opacity
+    name: opacity
+    fullName: opacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="af9c1-122">L''opacità della sovrimpressione.</span><span class="sxs-lookup"><span data-stu-id="af9c1-122">The opacity of the overlay.</span></span> <span data-ttu-id="af9c1-123">Si tratta di un valore compreso nell''intervallo [0 - 1,0].</span><span class="sxs-lookup"><span data-stu-id="af9c1-123">This is a value in the range [0 - 1.0].</span></span> <span data-ttu-id="af9c1-124">Valore predefinito è 1,0, vale a dire la sovrimpressione è opaca.</span><span class="sxs-lookup"><span data-stu-id="af9c1-124">Default is 1.0 which mean the overlay is opaque.</span></span>'
+    optional: true
+    syntax:
+      content: 'opacity?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="af9c1-125">La posizione nel video di input in cui viene applicata la sovrimpressione.</span><span class="sxs-lookup"><span data-stu-id="af9c1-125">The location in the input video where the overlay is applied.</span></span>
+    optional: true
+    syntax:
+      content: 'position?: Rectangle'
+      return:
+        type:
+          - azure-arm-mediaservices.Rectangle
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.start
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="af9c1-126">Posizione iniziale, fa riferimento al video di input, in corrispondenza del quale inizia la sovrimpressione.</span><span class="sxs-lookup"><span data-stu-id="af9c1-126">The start position, with reference to the input video, at which the overlay starts.</span></span> <span data-ttu-id="af9c1-127">Il valore deve essere nel formato ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="af9c1-127">The value should be in ISO 8601 format.</span></span> <span data-ttu-id="af9c1-128">Ad esempio, PT05S per avviare il controllo overlay a 5 secondi per il video di input.</span><span class="sxs-lookup"><span data-stu-id="af9c1-128">For example, PT05S to start the overlay at 5 seconds in to the input video.</span></span> <span data-ttu-id="af9c1-129">Se non è specificata la sovrimpressione parte dall''inizio del video di input.</span><span class="sxs-lookup"><span data-stu-id="af9c1-129">If not specified the overlay starts from the beginning of the input video.</span></span>'
+    optional: true
+    syntax:
+      content: 'start?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Overlay
+    name: Overlay
+    spec.typeScript:
+      - name: Overlay
+        fullName: Overlay
+        uid: azure-arm-mediaservices.Overlay
+  - uid: azure-arm-mediaservices.Rectangle
+    name: Rectangle
+    spec.typeScript:
+      - name: Rectangle
+        fullName: Rectangle
+        uid: azure-arm-mediaservices.Rectangle

@@ -1,0 +1,228 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy
+    name: ServerBlobAuditingPolicy
+    fullName: ServerBlobAuditingPolicy
+    children:
+      - azure-arm-sql.ServerBlobAuditingPolicy.auditActionsAndGroups
+      - azure-arm-sql.ServerBlobAuditingPolicy.id
+      - azure-arm-sql.ServerBlobAuditingPolicy.isAzureMonitorTargetEnabled
+      - azure-arm-sql.ServerBlobAuditingPolicy.isStorageSecondaryKeyInUse
+      - azure-arm-sql.ServerBlobAuditingPolicy.name
+      - azure-arm-sql.ServerBlobAuditingPolicy.retentionDays
+      - azure-arm-sql.ServerBlobAuditingPolicy.state
+      - azure-arm-sql.ServerBlobAuditingPolicy.storageAccountAccessKey
+      - azure-arm-sql.ServerBlobAuditingPolicy.storageAccountSubscriptionId
+      - azure-arm-sql.ServerBlobAuditingPolicy.storageEndpoint
+      - azure-arm-sql.ServerBlobAuditingPolicy.type
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="00b83-101">I criteri di controllo blob a un server.</span><span class="sxs-lookup"><span data-stu-id="00b83-101">A server blob auditing policy.</span></span>
+    extends:
+      name: azure-arm-sql.ProxyResource
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy.auditActionsAndGroups
+    name: auditActionsAndGroups
+    fullName: auditActionsAndGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="00b83-102">Specifica i gruppi di azioni e le azioni da controllare.</span><span class="sxs-lookup"><span data-stu-id="00b83-102">Specifies the Actions-Groups and Actions to audit.</span></span>
+      <span data-ttu-id="00b83-103">Il set di gruppi di azioni da utilizzare è la seguente combinazione - controllerà tutte le query e stored procedure eseguite su database, nonché gli account di accesso riusciti e non:</span><span class="sxs-lookup"><span data-stu-id="00b83-103">The recommended set of action groups to use is the following combination - this will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:</span></span>
+
+      <span data-ttu-id="00b83-104">BATCH_COMPLETED_GROUP, SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP.</span><span class="sxs-lookup"><span data-stu-id="00b83-104">BATCH_COMPLETED_GROUP, SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP.</span></span>
+
+      <span data-ttu-id="00b83-105">Questa precedenza combinazione è anche il set di è configurato per impostazione predefinita quando si abilita il controllo dal portale di Azure.</span><span class="sxs-lookup"><span data-stu-id="00b83-105">This above combination is also the set that is configured by default when enabling auditing from the Azure portal.</span></span>
+
+      <span data-ttu-id="00b83-106">I gruppi di azione supportata da controllare sono (Nota: scegliere gruppi specifici che coprono le esigenze di controllo.</span><span class="sxs-lookup"><span data-stu-id="00b83-106">The supported action groups to audit are (note: choose only specific groups that cover your auditing needs.</span></span> <span data-ttu-id="00b83-107">Uso dei gruppi non necessari potrebbe provocare quantità molto elevate di record di controllo):</span><span class="sxs-lookup"><span data-stu-id="00b83-107">Using unnecessary groups could lead to very large quantities of audit records):</span></span>
+
+      <span data-ttu-id="00b83-108">APPLICATION_ROLE_CHANGE_PASSWORD_GROUP BACKUP_RESTORE_GROUP DATABASE_LOGOUT_GROUP DATABASE_OBJECT_CHANGE_GROUP DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP DATABASE_OBJECT_PERMISSION_CHANGE_GROUP DATABASE_OPERATION_GROUP DATABASE_ PERMISSION_CHANGE_GROUP DATABASE_PRINCIPAL_CHANGE_GROUP DATABASE_PRINCIPAL_IMPERSONATION_GROUP DATABASE_ROLE_MEMBER_CHANGE_GROUP FAILED_DATABASE_AUTHENTICATION_GROUP SCHEMA_OBJECT_ACCESS_GROUP SCHEMA_OBJECT_CHANGE_GROUP SCHEMA_ OBJECT_OWNERSHIP_CHANGE_GROUP SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP USER_CHANGE_PASSWORD_GROUP BATCH_STARTED_GROUP BATCH_COMPLETED_GROUP</span><span class="sxs-lookup"><span data-stu-id="00b83-108">APPLICATION_ROLE_CHANGE_PASSWORD_GROUP BACKUP_RESTORE_GROUP DATABASE_LOGOUT_GROUP DATABASE_OBJECT_CHANGE_GROUP DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP DATABASE_OBJECT_PERMISSION_CHANGE_GROUP DATABASE_OPERATION_GROUP DATABASE_PERMISSION_CHANGE_GROUP DATABASE_PRINCIPAL_CHANGE_GROUP DATABASE_PRINCIPAL_IMPERSONATION_GROUP DATABASE_ROLE_MEMBER_CHANGE_GROUP FAILED_DATABASE_AUTHENTICATION_GROUP SCHEMA_OBJECT_ACCESS_GROUP SCHEMA_OBJECT_CHANGE_GROUP SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP USER_CHANGE_PASSWORD_GROUP BATCH_STARTED_GROUP BATCH_COMPLETED_GROUP</span></span>
+
+      <span data-ttu-id="00b83-109">Si tratta di gruppi che coprono tutte le istruzioni sql e stored procedure eseguite sul database e non devono essere utilizzate in combinazione con altri gruppi poiché ciò comporterà i log di controllo duplicati.</span><span class="sxs-lookup"><span data-stu-id="00b83-109">These are groups that cover all sql statements and stored procedures executed against the database, and should not be used in combination with other groups as this will result in duplicate audit logs.</span></span>
+
+      <span data-ttu-id="00b83-110">Per altre informazioni, vedere [gruppi di azioni di controllo a livello di Database](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups).</span><span class="sxs-lookup"><span data-stu-id="00b83-110">For more information, see [Database-Level Audit Action Groups](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups).</span></span>
+
+      <span data-ttu-id="00b83-111">Per criteri di controllo del Database, azioni specifiche possono anche essere specificato (si noti che non è possibile specificare le azioni per i criteri di controllo Server).</span><span class="sxs-lookup"><span data-stu-id="00b83-111">For Database auditing policy, specific Actions can also be specified (note that Actions cannot be specified for Server auditing policy).</span></span> <span data-ttu-id="00b83-112">Le azioni supportate da controllare sono: ESEGUI AGGIORNAMENTO SELECT INSERT ELIMINAZIONE RIFERIMENTI DI RICEZIONE</span><span class="sxs-lookup"><span data-stu-id="00b83-112">The supported actions to audit are: SELECT UPDATE INSERT DELETE EXECUTE RECEIVE REFERENCES</span></span>
+
+      <span data-ttu-id="00b83-113">Il formato generale per la definizione di un'azione da controllare è: {action} ON {oggetto} da {principale}</span><span class="sxs-lookup"><span data-stu-id="00b83-113">The general form for defining an action to be audited is: {action} ON {object} BY {principal}</span></span>
+
+      <span data-ttu-id="00b83-114">Si noti che <object> nel formato riportato sopra può fare riferimento a un oggetto, ad esempio una tabella, vista, o stored procedure o un database intero o dello schema.</span><span class="sxs-lookup"><span data-stu-id="00b83-114">Note that <object> in the above format can refer to an object like a table, view, or stored procedure, or an entire database or schema.</span></span> <span data-ttu-id="00b83-115">Per i casi quest'ultimi, moduli di DATABASE: {db_name} e lo SCHEMA:: {schema_name} vengono usati, rispettivamente.</span><span class="sxs-lookup"><span data-stu-id="00b83-115">For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively.</span></span>
+
+      <span data-ttu-id="00b83-116">Ad esempio: Selezionare su MyTable SELECT pubblico su DATABASE::myDatabase da SELECT pubblico su SCHEMA::mySchema pubblico</span><span class="sxs-lookup"><span data-stu-id="00b83-116">For example: SELECT on dbo.myTable by public SELECT on DATABASE::myDatabase by public SELECT on SCHEMA::mySchema by public</span></span>
+
+      <span data-ttu-id="00b83-117">Per altre informazioni, vedere [le azioni di controllo a livello di Database](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)</span><span class="sxs-lookup"><span data-stu-id="00b83-117">For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)</span></span>
+    optional: true
+    syntax:
+      content: 'auditActionsAndGroups?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="00b83-118">ID risorsa.</span><span class="sxs-lookup"><span data-stu-id="00b83-118">Resource ID.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy.isAzureMonitorTargetEnabled
+    name: isAzureMonitorTargetEnabled
+    fullName: isAzureMonitorTargetEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |+
+      <span data-ttu-id="00b83-119">Specifica se gli eventi di controllo vengono inviati a monitoraggio di Azure.</span><span class="sxs-lookup"><span data-stu-id="00b83-119">Specifies whether audit events are sent to Azure Monitor.</span></span>
+      <span data-ttu-id="00b83-120">Per gli eventi inviati a monitoraggio di Azure, specificare 'State' come 'Enabled' e 'IsAzureMonitorTargetEnabled' come true.</span><span class="sxs-lookup"><span data-stu-id="00b83-120">In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.</span></span>
+      <span data-ttu-id="00b83-121">Quando si usa l'API REST per configurare il controllo, le impostazioni di diagnostica con categoria di log di diagnostica 'SQLSecurityAuditEvents' per il database deve essere create anche.</span><span class="sxs-lookup"><span data-stu-id="00b83-121">When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.</span></span>
+      <span data-ttu-id="00b83-122">Si noti che per il livello di server di controllo è consigliabile usare il database 'master' come {databaseName}.</span><span class="sxs-lookup"><span data-stu-id="00b83-122">Note that for server level audit you should use the 'master' database as {databaseName}.</span></span>
+
+      <span data-ttu-id="00b83-123">Formato delle impostazioni di diagnostica URI: PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview</span><span class="sxs-lookup"><span data-stu-id="00b83-123">Diagnostic Settings URI format: PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview</span></span>
+
+      <span data-ttu-id="00b83-124">Per altre informazioni, vedere [API REST di impostazioni di diagnostica](https://go.microsoft.com/fwlink/?linkid=2033207) o [PowerShell le impostazioni di diagnostica](https://go.microsoft.com/fwlink/?linkid=2033043)</span><span class="sxs-lookup"><span data-stu-id="00b83-124">For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207) or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)</span></span>
+
+    optional: true
+    syntax:
+      content: 'isAzureMonitorTargetEnabled?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy.isStorageSecondaryKeyInUse
+    name: isStorageSecondaryKeyInUse
+    fullName: isStorageSecondaryKeyInUse
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="00b83-125">Specifica se il valore storageAccountAccessKey chiave secondaria dell'archiviazione.</span><span class="sxs-lookup"><span data-stu-id="00b83-125">Specifies whether storageAccountAccessKey value is the storage's secondary key.</span></span>
+    optional: true
+    syntax:
+      content: 'isStorageSecondaryKeyInUse?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="00b83-126">Nome della risorsa.</span><span class="sxs-lookup"><span data-stu-id="00b83-126">Resource name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy.retentionDays
+    name: retentionDays
+    fullName: retentionDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="00b83-127">Specifica il numero di giorni di conservazione nel controllo log nell'account di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="00b83-127">Specifies the number of days to keep in the audit logs in the storage account.</span></span>
+    optional: true
+    syntax:
+      content: 'retentionDays?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="00b83-128">Specifica lo stato dei criteri.</span><span class="sxs-lookup"><span data-stu-id="00b83-128">Specifies the state of the policy.</span></span> <span data-ttu-id="00b83-129">Se lo stato è attivato, sono necessari storageEndpoint o isAzureMonitorTargetEnabled.</span><span class="sxs-lookup"><span data-stu-id="00b83-129">If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.</span></span> <span data-ttu-id="00b83-130">I valori possibili sono: ''Enabled'', ''Disabilitato''</span><span class="sxs-lookup"><span data-stu-id="00b83-130">Possible values include: ''Enabled'', ''Disabled''</span></span>'
+    syntax:
+      content: 'state: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy.storageAccountAccessKey
+    name: storageAccountAccessKey
+    fullName: storageAccountAccessKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="00b83-131">Specifica la chiave di identificatore di controllo dell''account di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="00b83-131">Specifies the identifier key of the auditing storage account.</span></span> <span data-ttu-id="00b83-132">Se lo stato è attivato e storageEndpoint viene specificata, storageAccountAccessKey è obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="00b83-132">If state is Enabled and storageEndpoint is specified, storageAccountAccessKey is required.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageAccountAccessKey?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy.storageAccountSubscriptionId
+    name: storageAccountSubscriptionId
+    fullName: storageAccountSubscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="00b83-133">Specifica l'ID sottoscrizione di archiviazione blob</span><span class="sxs-lookup"><span data-stu-id="00b83-133">Specifies the blob storage subscription Id.</span></span>
+    optional: true
+    syntax:
+      content: 'storageAccountSubscriptionId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy.storageEndpoint
+    name: storageEndpoint
+    fullName: storageEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="00b83-134">Specifica l''endpoint di archiviazione blob (ad esempio https://MyAccount.blob.core.windows.net).</span><span class="sxs-lookup"><span data-stu-id="00b83-134">Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).</span></span> <span data-ttu-id="00b83-135">Se lo stato è attivato, è necessario storageEndpoint.</span><span class="sxs-lookup"><span data-stu-id="00b83-135">If state is Enabled, storageEndpoint is required.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageEndpoint?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ServerBlobAuditingPolicy.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="00b83-136">Tipo di risorsa.</span><span class="sxs-lookup"><span data-stu-id="00b83-136">Resource type.</span></span>
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+references:
+  - uid: azure-arm-sql.ProxyResource
+    name: ProxyResource
+    spec.typeScript:
+      - name: ProxyResource
+        fullName: ProxyResource
+        uid: azure-arm-sql.ProxyResource
