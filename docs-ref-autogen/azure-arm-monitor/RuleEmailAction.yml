@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.RuleEmailAction
+    name: RuleEmailAction
+    fullName: RuleEmailAction
+    children:
+      - azure-arm-monitor.RuleEmailAction.customEmails
+      - azure-arm-monitor.RuleEmailAction.odatatype
+      - azure-arm-monitor.RuleEmailAction.sendToServiceOwners
+    langs:
+      - typeScript
+    type: interface
+    summary: Specifica l'azione per l'invio di posta elettronica quando viene valutata la condizione della regola. Il discriminatore è sempre RuleEmailAction in questo caso.
+    extends:
+      name: azure-arm-monitor.RuleAction
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.RuleEmailAction.customEmails
+    name: customEmails
+    fullName: customEmails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: l'elenco di indirizzi di posta elettronica personalizzati dell'amministratore per inviare una notifica dell'attivazione dell'avviso.
+    optional: true
+    syntax:
+      content: 'customEmails?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.RuleEmailAction.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.RuleEmailAction.sendToServiceOwners
+    name: sendToServiceOwners
+    fullName: sendToServiceOwners
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indica se gli amministratori del servizio (servizio e coamministratori) devono ricevere notifica quando viene attivato l'avviso.
+    optional: true
+    syntax:
+      content: 'sendToServiceOwners?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleAction
+    name: RuleAction
+    spec.typeScript:
+      - name: RuleAction
+        fullName: RuleAction
+        uid: azure-arm-monitor.RuleAction
