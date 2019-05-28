@@ -29,7 +29,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '{string} [gruppo di consumer] Il nome del gruppo di consumer all''interno dell''Hub eventi. Il valore predefinito: ** `"$default"` **.'
+    summary: '{string} [gruppo di consumer] Il nome del gruppo di consumer all''interno dell''Hub eventi. Il valore predefinito: **`"$default"`**.'
     optional: true
     syntax:
       content: 'consumerGroup?: undefined | string'
@@ -60,8 +60,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      {number} [fastScanInterval] Esistono due possibili intervallo volte tra le analisi per le partizioni disponibili, veloci e lente. L'intervallo di fast (breve) ** `in seconds` ** viene utilizzata dopo un'analisi in cui lease furto è stata eseguita, per alzare di livello il ribilanciamento più veloce.
-      Valore predefinito: ** `3` secondi**.
+      {number} [fastScanInterval] Esistono due possibili intervallo volte tra le analisi per le partizioni disponibili, veloci e lente. L'intervallo di fast (breve) **`in seconds`** viene utilizzata dopo un'analisi in cui lease furto è stata eseguita, per alzare di livello il ribilanciamento più veloce.
+      Valore predefinito: **`3` secondi**.
     optional: true
     syntax:
       content: 'fastScanInterval?: undefined | number'
@@ -91,7 +91,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '{number} [leaseDuration] Durata del lease ** `in seconds` ** prima della scadenza, a meno che rinnovato. Valore predefinito: ** `30` secondi**, il valore minimo: ** `15` secondi**, il valore massimo: ** `60` secondi**.'
+    summary: '{number} [leaseDuration] Durata del lease **`in seconds`** prima della scadenza, a meno che rinnovato. Valore predefinito: **`30` secondi**, il valore minimo: **`15` secondi**, il valore massimo: **`60` secondi**.'
     optional: true
     syntax:
       content: 'leaseDuration?: undefined | number'
@@ -107,8 +107,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      {number} [leaseRenewInterval] L'intervallo di sospensione ** `in seconds` ** tra le analisi.
-      Valore predefinito: ** `10` secondi**.
+      {number} [leaseRenewInterval] L'intervallo di sospensione **`in seconds`** tra le analisi.
+      Valore predefinito: **`10` secondi**.
 
       Consente a un'implementazione di manager di lease specificare a PartitionManager frequenza dovrebbe analizzare i lease e rinnovarli. Per ridistribuire i lease in modo tempestivo dopo che un host non è più operativo, è consigliabile un intervallo relativamente breve, ad esempio dieci secondi. Ovviamente è necessario renderla meno della metà della lunghezza del lease, per impedire la scadenza accidentale.
     optional: true
@@ -143,7 +143,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '{number} [slowScanInterval] L''intervallo (long) lenta ** `in seconds` ** viene utilizzata dopo un''analisi in cui lease stealing non si è verificato, per ridurre l''analisi non necessarie quando il sistema è in stato stabile. Valore predefinito: ** `5` secondi**.'
+    summary: '{number} [slowScanInterval] L''intervallo (long) lenta **`in seconds`** viene utilizzata dopo un''analisi in cui lease stealing non si è verificato, per ridurre l''analisi non necessarie quando il sistema è in stato stabile. Valore predefinito: **`5` secondi**.'
     optional: true
     syntax:
       content: 'slowScanInterval?: undefined | number'
@@ -158,7 +158,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '{number} [startupScanDelay] Il tempo di ritardo ** `in seconds` ** tra la prima analisi per le partizioni disponibili e il secondo. Ciò fa parte di un''ottimizzazione di avvio che consente a singoli host diventano visibili ad altri host e in tal modo ottenere un conteggio più preciso del numero di host nel sistema, prima che tentano di stimare il numero di partizioni che dovrebbero disporre. Valore predefinito: ** `30` secondi**.'
+    summary: '{number} [startupScanDelay] Il tempo di ritardo **`in seconds`** tra la prima analisi per le partizioni disponibili e il secondo. Ciò fa parte di un''ottimizzazione di avvio che consente a singoli host diventano visibili ad altri host e in tal modo ottenere un conteggio più preciso del numero di host nel sistema, prima che tentano di stimare il numero di partizioni che dovrebbero disporre. Valore predefinito: **`30` secondi**.'
     optional: true
     syntax:
       content: 'startupScanDelay?: undefined | number'
