@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    fullName: WindowsConfiguration
+    children:
+      - '@azure/arm-compute.WindowsConfiguration.additionalUnattendContent'
+      - '@azure/arm-compute.WindowsConfiguration.enableAutomaticUpdates'
+      - '@azure/arm-compute.WindowsConfiguration.provisionVMAgent'
+      - '@azure/arm-compute.WindowsConfiguration.timeZone'
+      - '@azure/arm-compute.WindowsConfiguration.winRM'
+    langs:
+      - typeScript
+    type: interface
+    summary: Specifica le impostazioni del sistema operativo Windows nella macchina virtuale.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.additionalUnattendContent'
+    name: additionalUnattendContent
+    fullName: additionalUnattendContent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Specifica base 64 codificata in formato XML informazioni aggiuntiva che può essere inclusi nel file Unattend. XML, che viene usato dal programma di installazione di Windows.'
+    optional: true
+    syntax:
+      content: 'additionalUnattendContent?: AdditionalUnattendContent[]'
+      return:
+        type:
+          - '@azure/arm-compute.AdditionalUnattendContent[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.enableAutomaticUpdates'
+    name: enableAutomaticUpdates
+    fullName: enableAutomaticUpdates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indica se la macchina virtuale è abilitata per gli aggiornamenti automatici.
+    optional: true
+    syntax:
+      content: 'enableAutomaticUpdates?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.provisionVMAgent'
+    name: provisionVMAgent
+    fullName: provisionVMAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica se deve essere effettuato il provisioning di agente di macchine virtuali nella macchina virtuale. <br><br>
+      Quando questa proprietà non è specificata nel corpo della richiesta, il comportamento predefinito è di impostarla su true.  Ciò garantisce che l'agente di macchine Virtuali sia installato nella macchina virtuale in modo che le estensioni possono essere aggiunte alla macchina virtuale in un secondo momento.
+    optional: true
+    syntax:
+      content: 'provisionVMAgent?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.timeZone'
+    name: timeZone
+    fullName: timeZone
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specifica il fuso orario della macchina virtuale. Ad esempio "Ora solare Pacifico"
+    optional: true
+    syntax:
+      content: 'timeZone?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.winRM'
+    name: winRM
+    fullName: winRM
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specifica i listener di gestione remota Windows. In questo modo remoto Windows PowerShell.
+    optional: true
+    syntax:
+      content: 'winRM?: WinRMConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WinRMConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.AdditionalUnattendContent[]'
+    name: 'AdditionalUnattendContent[]'
+    spec.typeScript:
+      - name: AdditionalUnattendContent
+        fullName: AdditionalUnattendContent
+        uid: '@azure/arm-compute.AdditionalUnattendContent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WinRMConfiguration'
+    name: WinRMConfiguration
+    spec.typeScript:
+      - name: WinRMConfiguration
+        fullName: WinRMConfiguration
+        uid: '@azure/arm-compute.WinRMConfiguration'

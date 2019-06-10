@@ -1,0 +1,226 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ServiceBusClient'
+    name: ServiceBusClient
+    fullName: ServiceBusClient
+    children:
+      - '@azure/service-bus.ServiceBusClient.close'
+      - '@azure/service-bus.ServiceBusClient.createFromAadTokenCredentials'
+      - '@azure/service-bus.ServiceBusClient.createFromConnectionString'
+      - '@azure/service-bus.ServiceBusClient.createFromTokenProvider'
+      - '@azure/service-bus.ServiceBusClient.createQueueClient'
+      - '@azure/service-bus.ServiceBusClient.createSubscriptionClient'
+      - '@azure/service-bus.ServiceBusClient.createTopicClient'
+      - '@azure/service-bus.ServiceBusClient.name'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Vengono descritti il client che consente l'interazione con un'istanza del Bus di servizio.
+      Mantiene la connessione AMQP per il Namespace del Bus di servizio ed è il punto di ingresso per l'uso di code, argomenti e sottoscrizioni.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Chiude la connessione AMQP creata da questo ServiceBusClient oltre a collegamenti AMQP per creato da coda/argomento/sottoscrizione client creati da questo ServiceBusClient mittente/destinatari.
+      Una volta chiusa,
+      - client creati da questo ServiceBusClient non può essere utilizzato per inviare e ricevere messaggi di più.
+      - Questo ServiceBusClient non può essere utilizzato per creare eventuali nuovi client di code, argomenti e sottoscrizioni.
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<any>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createFromAadTokenCredentials'
+    name: 'createFromAadTokenCredentials(string, ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, ServiceBusClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un ServiceBusClient per il Namespace del Bus di servizio rappresentato dall'host specificato tramite la TokenCredentials generato usando il `@azure/ms-rest-nodeauth` libreria.
+    syntax:
+      content: 'static function createFromAadTokenCredentials(host: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: ServiceBusClientOptions)'
+      parameters:
+        - id: host
+          type:
+            - string
+          description: |-
+            Nome di dominio completo per bus di servizio.
+            Molto probabilmente, {yournamespace}. servicebus.windows .net
+        - id: credentials
+          type:
+            - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+          description: |-
+            Le credenziali di Token generate usando il `@azure/ms-rest-nodeauth` libreria. Può essere uno dei seguenti:
+             - ApplicationTokenCredentials
+             - UserTokenCredentials
+             - DeviceTokenCredentials
+             - MSITokenCredentials.
+        - id: options
+          type:
+            - '@azure/service-bus.ServiceBusClientOptions'
+          description: Opzioni per controllare la modalità di interazione con il Namespace del Bus di servizio.
+          optional: true
+      return:
+        type:
+          - '@azure/service-bus.ServiceBusClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createFromConnectionString'
+    name: 'createFromConnectionString(string, ServiceBusClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un ServiceBusClient per il Namespace del Bus di servizio rappresentato nella stringa di connessione specificata.
+    syntax:
+      content: 'static function createFromConnectionString(connectionString: string, options?: ServiceBusClientOptions)'
+      parameters:
+        - id: connectionString
+          type:
+            - string
+          description: 'Stringa di connessione nel formato '' Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName = my-SA-name; SharedAccessKey = my-SA-key'''
+        - id: options
+          type:
+            - '@azure/service-bus.ServiceBusClientOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@azure/service-bus.ServiceBusClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createFromTokenProvider'
+    name: 'createFromTokenProvider(string, TokenProvider, ServiceBusClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un ServiceBusClient per il Namespace del Bus di servizio rappresentato dall'host specificato tramite la TokenProvider specificato.
+    syntax:
+      content: 'static function createFromTokenProvider(host: string, tokenProvider: TokenProvider, options?: ServiceBusClientOptions)'
+      parameters:
+        - id: host
+          type:
+            - string
+          description: 'Nome di dominio completo per bus di servizio. Molto probabilmente, `<yournamespace>.servicebus.windows.net`.'
+        - id: tokenProvider
+          type:
+            - TokenProvider
+          description: 'L''implementazione personalizzata del [Provider di Token](https://github.com/Azure/amqp-common-js/blob/master/lib/auth/token.ts) interfaccia.'
+        - id: options
+          type:
+            - '@azure/service-bus.ServiceBusClientOptions'
+          description: Opzioni per controllare la modalità di interazione con il Namespace del Bus di servizio.
+          optional: true
+      return:
+        type:
+          - '@azure/service-bus.ServiceBusClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createQueueClient'
+    name: createQueueClient(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un QueueClient per una coda del Bus di servizio esistente.
+    syntax:
+      content: 'function createQueueClient(queueName: string)'
+      parameters:
+        - id: queueName
+          type:
+            - string
+          description: Il nome della coda.
+      return:
+        type:
+          - '@azure/service-bus.QueueClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createSubscriptionClient'
+    name: 'createSubscriptionClient(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un SubscriptionClient per una sottoscrizione del Bus di servizio esistente.
+    syntax:
+      content: 'function createSubscriptionClient(topicName: string, subscriptionName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: Nome dell'argomento.
+        - id: subscriptionName
+          type:
+            - string
+          description: Il nome della sottoscrizione.
+      return:
+        type:
+          - '@azure/service-bus.SubscriptionClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createTopicClient'
+    name: createTopicClient(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un TopicClient per un argomento del Bus di servizio esistente.
+    syntax:
+      content: 'function createTopicClient(topicName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: Nome dell'argomento.
+      return:
+        type:
+          - '@azure/service-bus.TopicClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il nome del Namespace Bus di servizio.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.QueueClient'
+    name: QueueClient
+    spec.typeScript:
+      - name: QueueClient
+        fullName: QueueClient
+        uid: '@azure/service-bus.QueueClient'
+  - uid: '@azure/service-bus.SubscriptionClient'
+    name: SubscriptionClient
+    spec.typeScript:
+      - name: SubscriptionClient
+        fullName: SubscriptionClient
+        uid: '@azure/service-bus.SubscriptionClient'
+  - uid: '@azure/service-bus.TopicClient'
+    name: TopicClient
+    spec.typeScript:
+      - name: TopicClient
+        fullName: TopicClient
+        uid: '@azure/service-bus.TopicClient'
+  - uid: '@azure/service-bus.ServiceBusClientOptions'
+    name: ServiceBusClientOptions
+    spec.typeScript:
+      - name: ServiceBusClientOptions
+        fullName: ServiceBusClientOptions
+        uid: '@azure/service-bus.ServiceBusClientOptions'
+  - uid: '@azure/service-bus.ServiceBusClient'
+    name: ServiceBusClient
+    spec.typeScript:
+      - name: ServiceBusClient
+        fullName: ServiceBusClient
+        uid: '@azure/service-bus.ServiceBusClient'

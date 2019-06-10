@@ -1,0 +1,915 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-labservices.GlobalUsers'
+    name: GlobalUsers
+    fullName: GlobalUsers
+    children:
+      - '@azure/arm-labservices.GlobalUsers.beginResetPassword'
+      - '@azure/arm-labservices.GlobalUsers.beginStartEnvironment'
+      - '@azure/arm-labservices.GlobalUsers.beginStopEnvironment'
+      - '@azure/arm-labservices.GlobalUsers.getEnvironment_2'
+      - '@azure/arm-labservices.GlobalUsers.getEnvironment'
+      - '@azure/arm-labservices.GlobalUsers.getEnvironment_1'
+      - '@azure/arm-labservices.GlobalUsers.getOperationBatchStatus'
+      - '@azure/arm-labservices.GlobalUsers.getOperationBatchStatus_2'
+      - '@azure/arm-labservices.GlobalUsers.getOperationBatchStatus_1'
+      - '@azure/arm-labservices.GlobalUsers.getOperationStatus'
+      - '@azure/arm-labservices.GlobalUsers.getOperationStatus_2'
+      - '@azure/arm-labservices.GlobalUsers.getOperationStatus_1'
+      - '@azure/arm-labservices.GlobalUsers.getPersonalPreferences'
+      - '@azure/arm-labservices.GlobalUsers.getPersonalPreferences_2'
+      - '@azure/arm-labservices.GlobalUsers.getPersonalPreferences_1'
+      - '@azure/arm-labservices.GlobalUsers.constructor'
+      - '@azure/arm-labservices.GlobalUsers.listEnvironments'
+      - '@azure/arm-labservices.GlobalUsers.listEnvironments_2'
+      - '@azure/arm-labservices.GlobalUsers.listEnvironments_1'
+      - '@azure/arm-labservices.GlobalUsers.listLabs'
+      - '@azure/arm-labservices.GlobalUsers.listLabs_2'
+      - '@azure/arm-labservices.GlobalUsers.listLabs_1'
+      - '@azure/arm-labservices.GlobalUsers.register'
+      - '@azure/arm-labservices.GlobalUsers.register_2'
+      - '@azure/arm-labservices.GlobalUsers.register_1'
+      - '@azure/arm-labservices.GlobalUsers.resetPassword'
+      - '@azure/arm-labservices.GlobalUsers.startEnvironment'
+      - '@azure/arm-labservices.GlobalUsers.stopEnvironment'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe che rappresenta un GlobalUsers.
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.beginResetPassword'
+    name: 'beginResetPassword(string, ResetPasswordPayload, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Reimposta la password dell'utente in un ambiente che questa operazione può richiedere alcuni minuti
+    syntax:
+      content: 'function beginResetPassword(userName: string, resetPasswordPayload: ResetPasswordPayload, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: resetPasswordPayload
+          type:
+            - '@azure/arm-labservices.ResetPasswordPayload'
+          description: Rappresenta il payload per la reimpostazione delle password.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.beginStartEnvironment'
+    name: 'beginStartEnvironment(string, EnvironmentOperationsPayload, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Avvia un ambiente avviando tutte le risorse all'interno di esso. Questa operazione può richiedere alcuni minuti
+    syntax:
+      content: 'function beginStartEnvironment(userName: string, environmentOperationsPayload: EnvironmentOperationsPayload, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: environmentOperationsPayload
+          type:
+            - '@azure/arm-labservices.EnvironmentOperationsPayload'
+          description: 'Rappresenta il payload per le operazioni nell''ambiente, ad esempio get, avvio, arresto, connessione'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.beginStopEnvironment'
+    name: 'beginStopEnvironment(string, EnvironmentOperationsPayload, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Arresta un ambiente mediante l'arresto di tutte le risorse all'interno dell'ambiente che questa operazione può richiedere alcuni minuti
+    syntax:
+      content: 'function beginStopEnvironment(userName: string, environmentOperationsPayload: EnvironmentOperationsPayload, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: environmentOperationsPayload
+          type:
+            - '@azure/arm-labservices.EnvironmentOperationsPayload'
+          description: 'Rappresenta il payload per le operazioni nell''ambiente, ad esempio get, avvio, arresto, connessione'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getEnvironment_2'
+    name: 'getEnvironment(string, EnvironmentOperationsPayload, GlobalUsersGetEnvironmentOptionalParams, ServiceCallback<GetEnvironmentResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getEnvironment(userName: string, environmentOperationsPayload: EnvironmentOperationsPayload, options: GlobalUsersGetEnvironmentOptionalParams, callback: ServiceCallback<GetEnvironmentResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: environmentOperationsPayload
+          type:
+            - '@azure/arm-labservices.EnvironmentOperationsPayload'
+          description: 'Rappresenta il payload per le operazioni nell''ambiente, ad esempio get, avvio, arresto, connessione'
+        - id: options
+          type:
+            - '@azure/arm-labservices.GlobalUsersGetEnvironmentOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.GetEnvironmentResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetEnvironmentResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getEnvironment'
+    name: 'getEnvironment(string, EnvironmentOperationsPayload, Models.GlobalUsersGetEnvironmentOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Recupera i dettagli delle macchine virtuali.
+    syntax:
+      content: 'function getEnvironment(userName: string, environmentOperationsPayload: EnvironmentOperationsPayload, options?: Models.GlobalUsersGetEnvironmentOptionalParams)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: environmentOperationsPayload
+          type:
+            - '@azure/arm-labservices.EnvironmentOperationsPayload'
+          description: 'Rappresenta il payload per le operazioni nell''ambiente, ad esempio get, avvio, arresto, connessione'
+        - id: options
+          type:
+            - Models.GlobalUsersGetEnvironmentOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetEnvironmentResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getEnvironment_1'
+    name: 'getEnvironment(string, EnvironmentOperationsPayload, ServiceCallback<GetEnvironmentResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getEnvironment(userName: string, environmentOperationsPayload: EnvironmentOperationsPayload, callback: ServiceCallback<GetEnvironmentResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: environmentOperationsPayload
+          type:
+            - '@azure/arm-labservices.EnvironmentOperationsPayload'
+          description: 'Rappresenta il payload per le operazioni nell''ambiente, ad esempio get, avvio, arresto, connessione'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.GetEnvironmentResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetEnvironmentResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getOperationBatchStatus'
+    name: 'getOperationBatchStatus(string, OperationBatchStatusPayload, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Recupera lo stato dell'operazione batch
+    syntax:
+      content: 'function getOperationBatchStatus(userName: string, operationBatchStatusPayload: OperationBatchStatusPayload, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: operationBatchStatusPayload
+          type:
+            - '@azure/arm-labservices.OperationBatchStatusPayload'
+          description: Payload per ottenere lo stato di un'operazione
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetOperationBatchStatusResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getOperationBatchStatus_2'
+    name: 'getOperationBatchStatus(string, OperationBatchStatusPayload, RequestOptionsBase, ServiceCallback<OperationBatchStatusResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationBatchStatus(userName: string, operationBatchStatusPayload: OperationBatchStatusPayload, options: RequestOptionsBase, callback: ServiceCallback<OperationBatchStatusResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: operationBatchStatusPayload
+          type:
+            - '@azure/arm-labservices.OperationBatchStatusPayload'
+          description: Payload per ottenere lo stato di un'operazione
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.OperationBatchStatusResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetOperationBatchStatusResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getOperationBatchStatus_1'
+    name: 'getOperationBatchStatus(string, OperationBatchStatusPayload, ServiceCallback<OperationBatchStatusResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationBatchStatus(userName: string, operationBatchStatusPayload: OperationBatchStatusPayload, callback: ServiceCallback<OperationBatchStatusResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: operationBatchStatusPayload
+          type:
+            - '@azure/arm-labservices.OperationBatchStatusPayload'
+          description: Payload per ottenere lo stato di un'operazione
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.OperationBatchStatusResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetOperationBatchStatusResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getOperationStatus'
+    name: 'getOperationStatus(string, OperationStatusPayload, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ottiene lo stato di un'operazione a esecuzione prolungata
+    syntax:
+      content: 'function getOperationStatus(userName: string, operationStatusPayload: OperationStatusPayload, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: operationStatusPayload
+          type:
+            - '@azure/arm-labservices.OperationStatusPayload'
+          description: Payload per ottenere lo stato di un'operazione
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetOperationStatusResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getOperationStatus_2'
+    name: 'getOperationStatus(string, OperationStatusPayload, RequestOptionsBase, ServiceCallback<OperationStatusResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(userName: string, operationStatusPayload: OperationStatusPayload, options: RequestOptionsBase, callback: ServiceCallback<OperationStatusResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: operationStatusPayload
+          type:
+            - '@azure/arm-labservices.OperationStatusPayload'
+          description: Payload per ottenere lo stato di un'operazione
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.OperationStatusResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetOperationStatusResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getOperationStatus_1'
+    name: 'getOperationStatus(string, OperationStatusPayload, ServiceCallback<OperationStatusResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(userName: string, operationStatusPayload: OperationStatusPayload, callback: ServiceCallback<OperationStatusResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: operationStatusPayload
+          type:
+            - '@azure/arm-labservices.OperationStatusPayload'
+          description: Payload per ottenere lo stato di un'operazione
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.OperationStatusResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetOperationStatusResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getPersonalPreferences'
+    name: 'getPersonalPreferences(string, PersonalPreferencesOperationsPayload, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Recupera le preferenze personali per un utente
+    syntax:
+      content: 'function getPersonalPreferences(userName: string, personalPreferencesOperationsPayload: PersonalPreferencesOperationsPayload, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: personalPreferencesOperationsPayload
+          type:
+            - '@azure/arm-labservices.PersonalPreferencesOperationsPayload'
+          description: 'Rappresenta il payload per le operazioni nell''ambiente, ad esempio get, avvio, arresto, connessione'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetPersonalPreferencesResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getPersonalPreferences_2'
+    name: 'getPersonalPreferences(string, PersonalPreferencesOperationsPayload, RequestOptionsBase, ServiceCallback<GetPersonalPreferencesResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getPersonalPreferences(userName: string, personalPreferencesOperationsPayload: PersonalPreferencesOperationsPayload, options: RequestOptionsBase, callback: ServiceCallback<GetPersonalPreferencesResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: personalPreferencesOperationsPayload
+          type:
+            - '@azure/arm-labservices.PersonalPreferencesOperationsPayload'
+          description: 'Rappresenta il payload per le operazioni nell''ambiente, ad esempio get, avvio, arresto, connessione'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.GetPersonalPreferencesResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetPersonalPreferencesResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.getPersonalPreferences_1'
+    name: 'getPersonalPreferences(string, PersonalPreferencesOperationsPayload, ServiceCallback<GetPersonalPreferencesResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getPersonalPreferences(userName: string, personalPreferencesOperationsPayload: PersonalPreferencesOperationsPayload, callback: ServiceCallback<GetPersonalPreferencesResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: personalPreferencesOperationsPayload
+          type:
+            - '@azure/arm-labservices.PersonalPreferencesOperationsPayload'
+          description: 'Rappresenta il payload per le operazioni nell''ambiente, ad esempio get, avvio, arresto, connessione'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.GetPersonalPreferencesResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersGetPersonalPreferencesResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.constructor'
+    name: GlobalUsers(ManagedLabsClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creare un GlobalUsers.
+    syntax:
+      content: 'new GlobalUsers(client: ManagedLabsClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-labservices.ManagedLabsClientContext'
+          description: |
+            Riferimento al client del servizio.
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.listEnvironments'
+    name: 'listEnvironments(string, ListEnvironmentsPayload, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elenca gli ambienti per l'utente.
+    syntax:
+      content: 'function listEnvironments(userName: string, listEnvironmentsPayload: ListEnvironmentsPayload, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: listEnvironmentsPayload
+          type:
+            - '@azure/arm-labservices.ListEnvironmentsPayload'
+          description: Rappresenta il payload per gli ambienti di elenco proprietà di un utente
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GlobalUsersListEnvironmentsResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.listEnvironments_2'
+    name: 'listEnvironments(string, ListEnvironmentsPayload, RequestOptionsBase, ServiceCallback<ListEnvironmentsResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listEnvironments(userName: string, listEnvironmentsPayload: ListEnvironmentsPayload, options: RequestOptionsBase, callback: ServiceCallback<ListEnvironmentsResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: listEnvironmentsPayload
+          type:
+            - '@azure/arm-labservices.ListEnvironmentsPayload'
+          description: Rappresenta il payload per gli ambienti di elenco proprietà di un utente
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.ListEnvironmentsResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersListEnvironmentsResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.listEnvironments_1'
+    name: 'listEnvironments(string, ListEnvironmentsPayload, ServiceCallback<ListEnvironmentsResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listEnvironments(userName: string, listEnvironmentsPayload: ListEnvironmentsPayload, callback: ServiceCallback<ListEnvironmentsResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: listEnvironmentsPayload
+          type:
+            - '@azure/arm-labservices.ListEnvironmentsPayload'
+          description: Rappresenta il payload per gli ambienti di elenco proprietà di un utente
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.ListEnvironmentsResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersListEnvironmentsResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.listLabs'
+    name: 'listLabs(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elenca i lab per l'utente.
+    syntax:
+      content: 'function listLabs(userName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GlobalUsersListLabsResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.listLabs_2'
+    name: 'listLabs(string, RequestOptionsBase, ServiceCallback<ListLabsResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listLabs(userName: string, options: RequestOptionsBase, callback: ServiceCallback<ListLabsResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.ListLabsResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersListLabsResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.listLabs_1'
+    name: 'listLabs(string, ServiceCallback<ListLabsResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listLabs(userName: string, callback: ServiceCallback<ListLabsResponse>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-labservices.ListLabsResponse>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.GlobalUsersListLabsResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.register'
+    name: 'register(string, RegisterPayload, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Effettua la registrazione di un utente a un lab gestito.
+    syntax:
+      content: 'function register(userName: string, registerPayload: RegisterPayload, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: registerPayload
+          type:
+            - '@azure/arm-labservices.RegisterPayload'
+          description: Rappresenta il payload per l'azione di registrazione.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.register_2'
+    name: 'register(string, RegisterPayload, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function register(userName: string, registerPayload: RegisterPayload, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: registerPayload
+          type:
+            - '@azure/arm-labservices.RegisterPayload'
+          description: Rappresenta il payload per l'azione di registrazione.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.register_1'
+    name: 'register(string, RegisterPayload, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function register(userName: string, registerPayload: RegisterPayload, callback: ServiceCallback<void>)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: registerPayload
+          type:
+            - '@azure/arm-labservices.RegisterPayload'
+          description: Rappresenta il payload per l'azione di registrazione.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.resetPassword'
+    name: 'resetPassword(string, ResetPasswordPayload, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Reimposta la password dell'utente in un ambiente che questa operazione può richiedere alcuni minuti
+    syntax:
+      content: 'function resetPassword(userName: string, resetPasswordPayload: ResetPasswordPayload, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: resetPasswordPayload
+          type:
+            - '@azure/arm-labservices.ResetPasswordPayload'
+          description: Rappresenta il payload per la reimpostazione delle password.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.startEnvironment'
+    name: 'startEnvironment(string, EnvironmentOperationsPayload, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Avvia un ambiente avviando tutte le risorse all'interno di esso. Questa operazione può richiedere alcuni minuti
+    syntax:
+      content: 'function startEnvironment(userName: string, environmentOperationsPayload: EnvironmentOperationsPayload, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: environmentOperationsPayload
+          type:
+            - '@azure/arm-labservices.EnvironmentOperationsPayload'
+          description: 'Rappresenta il payload per le operazioni nell''ambiente, ad esempio get, avvio, arresto, connessione'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-labservices'
+  - uid: '@azure/arm-labservices.GlobalUsers.stopEnvironment'
+    name: 'stopEnvironment(string, EnvironmentOperationsPayload, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Arresta un ambiente mediante l'arresto di tutte le risorse all'interno dell'ambiente che questa operazione può richiedere alcuni minuti
+    syntax:
+      content: 'function stopEnvironment(userName: string, environmentOperationsPayload: EnvironmentOperationsPayload, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: userName
+          type:
+            - string
+          description: Il nome dell'utente.
+        - id: environmentOperationsPayload
+          type:
+            - '@azure/arm-labservices.EnvironmentOperationsPayload'
+          description: 'Rappresenta il payload per le operazioni nell''ambiente, ad esempio get, avvio, arresto, connessione'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-labservices'
+references:
+  - uid: '@azure/arm-labservices.ManagedLabsClientContext'
+    name: ManagedLabsClientContext
+    spec.typeScript:
+      - name: ManagedLabsClientContext
+        fullName: ManagedLabsClientContext
+        uid: '@azure/arm-labservices.ManagedLabsClientContext'
+  - uid: '@azure/arm-labservices.ResetPasswordPayload'
+    name: ResetPasswordPayload
+    spec.typeScript:
+      - name: ResetPasswordPayload
+        fullName: ResetPasswordPayload
+        uid: '@azure/arm-labservices.ResetPasswordPayload'
+  - uid: '@azure/arm-labservices.EnvironmentOperationsPayload'
+    name: EnvironmentOperationsPayload
+    spec.typeScript:
+      - name: EnvironmentOperationsPayload
+        fullName: EnvironmentOperationsPayload
+        uid: '@azure/arm-labservices.EnvironmentOperationsPayload'
+  - uid: ServiceCallback<@azure/arm-labservices.GetEnvironmentResponse>
+    name: GetEnvironmentResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GetEnvironmentResponse
+        fullName: GetEnvironmentResponse
+        uid: '@azure/arm-labservices.GetEnvironmentResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-labservices.GlobalUsersGetEnvironmentOptionalParams'
+    name: GlobalUsersGetEnvironmentOptionalParams
+    spec.typeScript:
+      - name: GlobalUsersGetEnvironmentOptionalParams
+        fullName: GlobalUsersGetEnvironmentOptionalParams
+        uid: '@azure/arm-labservices.GlobalUsersGetEnvironmentOptionalParams'
+  - uid: '@azure/arm-labservices.OperationBatchStatusPayload'
+    name: OperationBatchStatusPayload
+    spec.typeScript:
+      - name: OperationBatchStatusPayload
+        fullName: OperationBatchStatusPayload
+        uid: '@azure/arm-labservices.OperationBatchStatusPayload'
+  - uid: ServiceCallback<@azure/arm-labservices.OperationBatchStatusResponse>
+    name: OperationBatchStatusResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationBatchStatusResponse
+        fullName: OperationBatchStatusResponse
+        uid: '@azure/arm-labservices.OperationBatchStatusResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-labservices.OperationStatusPayload'
+    name: OperationStatusPayload
+    spec.typeScript:
+      - name: OperationStatusPayload
+        fullName: OperationStatusPayload
+        uid: '@azure/arm-labservices.OperationStatusPayload'
+  - uid: ServiceCallback<@azure/arm-labservices.OperationStatusResponse>
+    name: OperationStatusResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationStatusResponse
+        fullName: OperationStatusResponse
+        uid: '@azure/arm-labservices.OperationStatusResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-labservices.PersonalPreferencesOperationsPayload'
+    name: PersonalPreferencesOperationsPayload
+    spec.typeScript:
+      - name: PersonalPreferencesOperationsPayload
+        fullName: PersonalPreferencesOperationsPayload
+        uid: '@azure/arm-labservices.PersonalPreferencesOperationsPayload'
+  - uid: ServiceCallback<@azure/arm-labservices.GetPersonalPreferencesResponse>
+    name: GetPersonalPreferencesResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GetPersonalPreferencesResponse
+        fullName: GetPersonalPreferencesResponse
+        uid: '@azure/arm-labservices.GetPersonalPreferencesResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-labservices.ListEnvironmentsPayload'
+    name: ListEnvironmentsPayload
+    spec.typeScript:
+      - name: ListEnvironmentsPayload
+        fullName: ListEnvironmentsPayload
+        uid: '@azure/arm-labservices.ListEnvironmentsPayload'
+  - uid: ServiceCallback<@azure/arm-labservices.ListEnvironmentsResponse>
+    name: ListEnvironmentsResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListEnvironmentsResponse
+        fullName: ListEnvironmentsResponse
+        uid: '@azure/arm-labservices.ListEnvironmentsResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-labservices.ListLabsResponse>
+    name: ListLabsResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListLabsResponse
+        fullName: ListLabsResponse
+        uid: '@azure/arm-labservices.ListLabsResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-labservices.RegisterPayload'
+    name: RegisterPayload
+    spec.typeScript:
+      - name: RegisterPayload
+        fullName: RegisterPayload
+        uid: '@azure/arm-labservices.RegisterPayload'

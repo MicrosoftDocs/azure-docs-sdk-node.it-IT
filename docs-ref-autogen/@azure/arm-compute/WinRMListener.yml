@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.WinRMListener'
+    name: WinRMListener
+    fullName: WinRMListener
+    children:
+      - '@azure/arm-compute.WinRMListener.certificateUrl'
+      - '@azure/arm-compute.WinRMListener.protocol'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrive protocollo e l'identificazione personale del listener di gestione remota Windows
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Si tratta dell'URL di un certificato che è stato caricato in insieme di credenziali delle chiavi come segreto. Per l'aggiunta di un segreto all'insieme di credenziali chiave, vedere [aggiungere una chiave o un segreto all'insieme di credenziali chiave](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In questo caso, il certificato dovrà essere è la codifica Base64 del JSON seguente di oggetto che viene codificato in UTF-8: <br><br> {<br>  "dati": "< Base64-certificato con codifica->",<br>
+      "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Specifica il protocollo del listener. <br><br> I valori possibili sono: <br>**http** <br><br>
+      **HTTPS**. I valori possibili sono: 'Http', 'Https'
+    optional: true
+    syntax:
+      content: 'protocol?: ProtocolTypes'
+      return:
+        type:
+          - '@azure/arm-compute.ProtocolTypes'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ProtocolTypes'
+    name: ProtocolTypes
+    spec.typeScript:
+      - name: ProtocolTypes
+        fullName: ProtocolTypes
+        uid: '@azure/arm-compute.ProtocolTypes'
