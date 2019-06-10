@@ -1,0 +1,238 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-js.ServiceClientOptions'
+    name: ServiceClientOptions
+    fullName: ServiceClientOptions
+    children:
+      - '@azure/ms-rest-js.ServiceClientOptions.clientRequestIdHeaderName'
+      - '@azure/ms-rest-js.ServiceClientOptions.deserializationContentTypes'
+      - '@azure/ms-rest-js.ServiceClientOptions.generateClientRequestIdHeader'
+      - '@azure/ms-rest-js.ServiceClientOptions.httpClient'
+      - '@azure/ms-rest-js.ServiceClientOptions.httpPipelineLogger'
+      - '@azure/ms-rest-js.ServiceClientOptions.noRetryPolicy'
+      - '@azure/ms-rest-js.ServiceClientOptions.proxySettings'
+      - '@azure/ms-rest-js.ServiceClientOptions.requestPolicyFactories'
+      - '@azure/ms-rest-js.ServiceClientOptions.rpRegistrationRetryTimeout'
+      - '@azure/ms-rest-js.ServiceClientOptions.userAgent'
+      - '@azure/ms-rest-js.ServiceClientOptions.userAgentHeaderName'
+      - '@azure/ms-rest-js.ServiceClientOptions.withCredentials'
+    langs:
+      - typeScript
+    type: interface
+    summary: Opzioni da specificare durante la creazione del client.
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.clientRequestIdHeaderName'
+    name: clientRequestIdHeaderName
+    fullName: clientRequestIdHeaderName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se specificato, verrà aggiunto un GenerateRequestIdPolicy alla pipeline HTTP che verrà aggiunta un''intestazione a tutte le richieste in uscita con questo nome di intestazione e un valore UUID casuale come ID di richiesta.'
+    optional: true
+    syntax:
+      content: 'clientRequestIdHeaderName?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.deserializationContentTypes'
+    name: deserializationContentTypes
+    fullName: deserializationContentTypes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: I tipi di contenuto che verranno associati con la serializzazione JSON o XML.
+    optional: true
+    syntax:
+      content: 'deserializationContentTypes?: DeserializationContentTypes'
+      return:
+        type:
+          - '@azure/ms-rest-js.DeserializationContentTypes'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.generateClientRequestIdHeader'
+    name: generateClientRequestIdHeader
+    fullName: generateClientRequestIdHeader
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Intestazione di ID per ogni richiesta HTTP o meno generare un client della richiesta.
+    optional: true
+    syntax:
+      content: 'generateClientRequestIdHeader?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.httpClient'
+    name: httpClient
+    fullName: httpClient
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: HttpClient che verrà usato per inviare richieste HTTP.
+    optional: true
+    syntax:
+      content: 'httpClient?: HttpClient'
+      return:
+        type:
+          - '@azure/ms-rest-js.HttpClient'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.httpPipelineLogger'
+    name: httpPipelineLogger
+    fullName: httpPipelineLogger
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: HttpPipelineLogger che può essere utilizzato per eseguire il debug RequestPolicies all'interno della pipeline HTTP.
+    optional: true
+    syntax:
+      content: 'httpPipelineLogger?: HttpPipelineLogger'
+      return:
+        type:
+          - '@azure/ms-rest-js.HttpPipelineLogger'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.noRetryPolicy'
+    name: noRetryPolicy
+    fullName: noRetryPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se impostato su true, disattivare i criteri di ripetizione dei tentativi predefiniti.'
+    optional: true
+    syntax:
+      content: 'noRetryPolicy?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.proxySettings'
+    name: proxySettings
+    fullName: proxySettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Impostazioni di proxy che verranno usate per ogni richiesta HTTP (solo Node. js).
+    optional: true
+    syntax:
+      content: 'proxySettings?: ProxySettings'
+      return:
+        type:
+          - '@azure/ms-rest-js.ProxySettings'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.requestPolicyFactories'
+    name: requestPolicyFactories
+    fullName: requestPolicyFactories
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Matrice di factory che viene chiamata per creare la pipeline RequestPolicy usata per inviare una richiesta HTTP in rete o una funzione che accetta il defaultRequestPolicyFactories e restituisce il requestPolicyFactories che verrà utilizzato.
+    optional: true
+    syntax:
+      content: 'requestPolicyFactories?: RequestPolicyFactory[] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]'
+      return:
+        type:
+          - '@azure/ms-rest-js.RequestPolicyFactory[] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.rpRegistrationRetryTimeout'
+    name: rpRegistrationRetryTimeout
+    fullName: rpRegistrationRetryTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ottiene o imposta il timeout dei tentativi in secondi per AutomaticRPRegistration. Il valore predefinito è 30.
+    optional: true
+    syntax:
+      content: 'rpRegistrationRetryTimeout?: number'
+      return:
+        type:
+          - number
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.userAgent'
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La stringa da impostare per l'intestazione di dati di telemetria durante l'invio della richiesta o una funzione che accetta la stringa agente utente predefinita e restituisce la stringa agente utente che verrà utilizzata.
+    optional: true
+    syntax:
+      content: 'userAgent?: string | (defaultUserAgent: string) => string'
+      return:
+        type:
+          - 'string | (defaultUserAgent: string) => string'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.userAgentHeaderName'
+    name: userAgentHeaderName
+    fullName: userAgentHeaderName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il nome di intestazione da utilizzare per l''intestazione di dati di telemetria durante l''invio della richiesta. Se non viene specificato, verrà utilizzato durante l''esecuzione in Node. js "User-Agent" e "x-ms-comando-name" verrà utilizzato durante l''esecuzione in un browser.'
+    optional: true
+    syntax:
+      content: 'userAgentHeaderName?: string | (defaultUserAgentHeaderName: string) => string'
+      return:
+        type:
+          - 'string | (defaultUserAgentHeaderName: string) => string'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.ServiceClientOptions.withCredentials'
+    name: withCredentials
+    fullName: withCredentials
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica se includere le credenziali nelle richieste CORS nel browser.
+      Per altre informazioni, vedere https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/withCredentials .
+    optional: true
+    syntax:
+      content: 'withCredentials?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+references:
+  - uid: '@azure/ms-rest-js.DeserializationContentTypes'
+    name: DeserializationContentTypes
+    spec.typeScript:
+      - name: DeserializationContentTypes
+        fullName: DeserializationContentTypes
+        uid: '@azure/ms-rest-js.DeserializationContentTypes'
+  - uid: '@azure/ms-rest-js.HttpClient'
+    name: HttpClient
+    spec.typeScript:
+      - name: HttpClient
+        fullName: HttpClient
+        uid: '@azure/ms-rest-js.HttpClient'
+  - uid: '@azure/ms-rest-js.HttpPipelineLogger'
+    name: HttpPipelineLogger
+    spec.typeScript:
+      - name: HttpPipelineLogger
+        fullName: HttpPipelineLogger
+        uid: '@azure/ms-rest-js.HttpPipelineLogger'
+  - uid: '@azure/ms-rest-js.ProxySettings'
+    name: ProxySettings
+    spec.typeScript:
+      - name: ProxySettings
+        fullName: ProxySettings
+        uid: '@azure/ms-rest-js.ProxySettings'
+  - uid: '@azure/ms-rest-js.RequestPolicyFactory[] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]'
+    name: 'RequestPolicyFactory[] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]'
+    spec.typeScript:
+      - name: RequestPolicyFactory
+        fullName: RequestPolicyFactory
+        uid: '@azure/ms-rest-js.RequestPolicyFactory'
+      - name: '[] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]'
+        fullName: '[] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void | Object[]'
