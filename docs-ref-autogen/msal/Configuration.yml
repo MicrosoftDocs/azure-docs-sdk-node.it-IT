@@ -7,7 +7,13 @@ items:
     langs:
       - typeScript
     type: type alias
-    summary: Oggetto di configurazione
+    summary: |
+      Utilizzare l'oggetto di configurazione per configurare MSAL e inizializzare l'UserAgentApplication.
+      Questo oggetto consente di configurare gli elementi importanti funzionalità di MSAL:
+      - autenticazione: questo è possibile configurare gli elementi di autenticazione come clientID, autorità utilizzato per l'autenticazione con la piattaforma delle identità Microsoft
+      - cache: si tratta in cui si configura la posizione della cache e se si desidera archiviare cache di cookie
+      - System: si tratta in cui è possibile configurare il logger, timeout di frame e così via.
+      - Framework: si tratta in cui è possibile configurare la modalità di esecuzione di angular. Altre informazioni sono riportate qui a breve.
     syntax:
-      content: 'type Configuration = { auth:AuthOptions, cache:CacheOptions, framework:FrameworkOptions, system:SystemOptions }'
+      content: 'type Configuration = { auth: AuthOptions, cache: CacheOptions, framework: FrameworkOptions, system: SystemOptions }'
     package: msal

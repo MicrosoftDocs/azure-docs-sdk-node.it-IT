@@ -1,0 +1,263 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys'
+    name: QuotaByCounterKeys
+    fullName: QuotaByCounterKeys
+    children:
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_2'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_1'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.constructor'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update_2'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe che rappresenta un QuotaByCounterKeys.
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService'
+    name: 'listByService(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elenca una raccolta di punti di contatore quota corrente associato alla chiave contromisure configurata nei criteri nell'istanza del servizio specificato. L'api non supporta ancora il paging.
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse.
+        - id: serviceName
+          type:
+            - string
+          description: Il nome del servizio Gestione API.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Identificatore di chiave del contatore di quote. Questo è il risultato dell''espressione definiti nell''attributo controfirmato chiave dei criteri di quota-by-key. Ad esempio, se si specifica contatore-key = "boo" nel criterio, è accessibile da "boo" chiave del contatore. Tuttavia, se è definito come counter-key="@("b"+"a")" sarà accessibile dalla chiave "ba"'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_2'
+    name: 'listByService(string, string, string, RequestOptionsBase, ServiceCallback<QuotaCounterCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options: RequestOptionsBase, callback: ServiceCallback<QuotaCounterCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse.
+        - id: serviceName
+          type:
+            - string
+          description: Il nome del servizio Gestione API.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Identificatore di chiave del contatore di quote. Questo è il risultato dell''espressione definiti nell''attributo controfirmato chiave dei criteri di quota-by-key. Ad esempio, se si specifica contatore-key = "boo" nel criterio, è accessibile da "boo" chiave del contatore. Tuttavia, se è definito come counter-key="@("b"+"a")" sarà accessibile dalla chiave "ba"'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_1'
+    name: 'listByService(string, string, string, ServiceCallback<QuotaCounterCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, callback: ServiceCallback<QuotaCounterCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse.
+        - id: serviceName
+          type:
+            - string
+          description: Il nome del servizio Gestione API.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Identificatore di chiave del contatore di quote. Questo è il risultato dell''espressione definiti nell''attributo controfirmato chiave dei criteri di quota-by-key. Ad esempio, se si specifica contatore-key = "boo" nel criterio, è accessibile da "boo" chiave del contatore. Tuttavia, se è definito come counter-key="@("b"+"a")" sarà accessibile dalla chiave "ba"'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.constructor'
+    name: QuotaByCounterKeys(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creare un QuotaByCounterKeys.
+    syntax:
+      content: 'new QuotaByCounterKeys(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            Riferimento al client del servizio.
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Aggiorna tutti i valori del contatore quota specificati con la chiave di contatore quota esistente a un valore nell'istanza del servizio specificata. Usare per la reimpostazione dei valori quota di contatore.
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse.
+        - id: serviceName
+          type:
+            - string
+          description: Il nome del servizio Gestione API.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Identificatore di chiave del contatore di quote. Questo è il risultato dell''espressione definiti nell''attributo controfirmato chiave dei criteri di quota-by-key. Ad esempio, se si specifica contatore-key = "boo" nel criterio, è accessibile da "boo" chiave del contatore. Tuttavia, se è definito come counter-key="@("b"+"a")" sarà accessibile dalla chiave "ba"'
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: Il valore del contatore quota da applicare a tutti i periodi di contatore di quote.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update_2'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse.
+        - id: serviceName
+          type:
+            - string
+          description: Il nome del servizio Gestione API.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Identificatore di chiave del contatore di quote. Questo è il risultato dell''espressione definiti nell''attributo controfirmato chiave dei criteri di quota-by-key. Ad esempio, se si specifica contatore-key = "boo" nel criterio, è accessibile da "boo" chiave del contatore. Tuttavia, se è definito come counter-key="@("b"+"a")" sarà accessibile dalla chiave "ba"'
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: Il valore del contatore quota da applicare a tutti i periodi di contatore di quote.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update_1'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse.
+        - id: serviceName
+          type:
+            - string
+          description: Il nome del servizio Gestione API.
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 'Identificatore di chiave del contatore di quote. Questo è il risultato dell''espressione definiti nell''attributo controfirmato chiave dei criteri di quota-by-key. Ad esempio, se si specifica contatore-key = "boo" nel criterio, è accessibile da "boo" chiave del contatore. Tuttavia, se è definito come counter-key="@("b"+"a")" sarà accessibile dalla chiave "ba"'
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: Il valore del contatore quota da applicare a tutti i periodi di contatore di quote.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+    name: QuotaCounterCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: QuotaCounterCollection
+        fullName: QuotaCounterCollection
+        uid: '@azure/arm-apimanagement.QuotaCounterCollection'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+    name: QuotaCounterValueContractProperties
+    spec.typeScript:
+      - name: QuotaCounterValueContractProperties
+        fullName: QuotaCounterValueContractProperties
+        uid: '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
