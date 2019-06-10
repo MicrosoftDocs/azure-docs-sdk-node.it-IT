@@ -1,0 +1,429 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.Origins'
+    name: Origins
+    fullName: Origins
+    children:
+      - '@azure/arm-cdn.Origins.beginUpdate'
+      - '@azure/arm-cdn.Origins.get'
+      - '@azure/arm-cdn.Origins.get_2'
+      - '@azure/arm-cdn.Origins.get_1'
+      - '@azure/arm-cdn.Origins.listByEndpoint'
+      - '@azure/arm-cdn.Origins.listByEndpoint_2'
+      - '@azure/arm-cdn.Origins.listByEndpoint_1'
+      - '@azure/arm-cdn.Origins.listByEndpointNext'
+      - '@azure/arm-cdn.Origins.listByEndpointNext_2'
+      - '@azure/arm-cdn.Origins.listByEndpointNext_1'
+      - '@azure/arm-cdn.Origins.constructor'
+      - '@azure/arm-cdn.Origins.update'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe che rappresenta un entità Origin.
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.beginUpdate'
+    name: 'beginUpdate(string, string, string, string, OriginUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Aggiorna un'entità origin esistente all'interno di un endpoint.
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, profileName: string, endpointName: string, originName: string, originUpdateProperties: OriginUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse nella sottoscrizione di Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome del profilo della rete CDN che è univoco all'interno del gruppo di risorse.
+        - id: endpointName
+          type:
+            - string
+          description: Nome dell'endpoint del profilo che è univoco a livello globale.
+        - id: originName
+          type:
+            - string
+          description: Nome dell'origine che è univoco all'interno dell'endpoint.
+        - id: originUpdateProperties
+          type:
+            - '@azure/arm-cdn.OriginUpdateParameters'
+          description: Proprietà dell'origine
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ottiene un'entità origin esistente all'interno di un endpoint.
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, originName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse nella sottoscrizione di Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome del profilo della rete CDN che è univoco all'interno del gruppo di risorse.
+        - id: endpointName
+          type:
+            - string
+          description: Nome dell'endpoint del profilo che è univoco a livello globale.
+        - id: originName
+          type:
+            - string
+          description: Nome dell'origine che è univoco all'interno dell'endpoint.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OriginsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<Origin>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, originName: string, options: RequestOptionsBase, callback: ServiceCallback<Origin>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse nella sottoscrizione di Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome del profilo della rete CDN che è univoco all'interno del gruppo di risorse.
+        - id: endpointName
+          type:
+            - string
+          description: Nome dell'endpoint del profilo che è univoco a livello globale.
+        - id: originName
+          type:
+            - string
+          description: Nome dell'origine che è univoco all'interno dell'endpoint.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Origin>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.OriginsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<Origin>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, originName: string, callback: ServiceCallback<Origin>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse nella sottoscrizione di Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome del profilo della rete CDN che è univoco all'interno del gruppo di risorse.
+        - id: endpointName
+          type:
+            - string
+          description: Nome dell'endpoint del profilo che è univoco a livello globale.
+        - id: originName
+          type:
+            - string
+          description: Nome dell'origine che è univoco all'interno dell'endpoint.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Origin>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.OriginsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpoint'
+    name: 'listByEndpoint(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elenca tutte le origini esistenti all'interno di un endpoint.
+    syntax:
+      content: 'function listByEndpoint(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse nella sottoscrizione di Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome del profilo della rete CDN che è univoco all'interno del gruppo di risorse.
+        - id: endpointName
+          type:
+            - string
+          description: Nome dell'endpoint del profilo che è univoco a livello globale.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpoint_2'
+    name: 'listByEndpoint(string, string, string, RequestOptionsBase, ServiceCallback<OriginListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByEndpoint(resourceGroupName: string, profileName: string, endpointName: string, options: RequestOptionsBase, callback: ServiceCallback<OriginListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse nella sottoscrizione di Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome del profilo della rete CDN che è univoco all'interno del gruppo di risorse.
+        - id: endpointName
+          type:
+            - string
+          description: Nome dell'endpoint del profilo che è univoco a livello globale.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.OriginListResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpoint_1'
+    name: 'listByEndpoint(string, string, string, ServiceCallback<OriginListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByEndpoint(resourceGroupName: string, profileName: string, endpointName: string, callback: ServiceCallback<OriginListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse nella sottoscrizione di Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome del profilo della rete CDN che è univoco all'interno del gruppo di risorse.
+        - id: endpointName
+          type:
+            - string
+          description: Nome dell'endpoint del profilo che è univoco a livello globale.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.OriginListResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpointNext'
+    name: 'listByEndpointNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elenca tutte le origini esistenti all'interno di un endpoint.
+    syntax:
+      content: 'function listByEndpointNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpointNext_2'
+    name: 'listByEndpointNext(string, RequestOptionsBase, ServiceCallback<OriginListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByEndpointNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<OriginListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.OriginListResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpointNext_1'
+    name: 'listByEndpointNext(string, ServiceCallback<OriginListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByEndpointNext(nextPageLink: string, callback: ServiceCallback<OriginListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.OriginListResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.constructor'
+    name: Origins(CdnManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creare un entità Origin.
+    syntax:
+      content: 'new Origins(client: CdnManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cdn.CdnManagementClientContext'
+          description: |
+            Riferimento al client del servizio.
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.update'
+    name: 'update(string, string, string, string, OriginUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Aggiorna un'entità origin esistente all'interno di un endpoint.
+    syntax:
+      content: 'function update(resourceGroupName: string, profileName: string, endpointName: string, originName: string, originUpdateProperties: OriginUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse nella sottoscrizione di Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome del profilo della rete CDN che è univoco all'interno del gruppo di risorse.
+        - id: endpointName
+          type:
+            - string
+          description: Nome dell'endpoint del profilo che è univoco a livello globale.
+        - id: originName
+          type:
+            - string
+          description: Nome dell'origine che è univoco all'interno dell'endpoint.
+        - id: originUpdateProperties
+          type:
+            - '@azure/arm-cdn.OriginUpdateParameters'
+          description: Proprietà dell'origine
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OriginsUpdateResponse>
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.CdnManagementClientContext'
+    name: CdnManagementClientContext
+    spec.typeScript:
+      - name: CdnManagementClientContext
+        fullName: CdnManagementClientContext
+        uid: '@azure/arm-cdn.CdnManagementClientContext'
+  - uid: '@azure/arm-cdn.OriginUpdateParameters'
+    name: OriginUpdateParameters
+    spec.typeScript:
+      - name: OriginUpdateParameters
+        fullName: OriginUpdateParameters
+        uid: '@azure/arm-cdn.OriginUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-cdn.Origin>
+    name: Origin>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Origin
+        fullName: Origin
+        uid: '@azure/arm-cdn.Origin'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.OriginListResult>
+    name: OriginListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OriginListResult
+        fullName: OriginListResult
+        uid: '@azure/arm-cdn.OriginListResult'
+      - name: '>'
+        fullName: '>'
