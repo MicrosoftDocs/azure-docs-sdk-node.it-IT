@@ -1,0 +1,182 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.DataDisk'
+    name: DataDisk
+    fullName: DataDisk
+    children:
+      - '@azure/arm-compute.DataDisk.caching'
+      - '@azure/arm-compute.DataDisk.createOption'
+      - '@azure/arm-compute.DataDisk.diskSizeGB'
+      - '@azure/arm-compute.DataDisk.image'
+      - '@azure/arm-compute.DataDisk.lun'
+      - '@azure/arm-compute.DataDisk.managedDisk'
+      - '@azure/arm-compute.DataDisk.name'
+      - '@azure/arm-compute.DataDisk.vhd'
+      - '@azure/arm-compute.DataDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="a3fa2-101">Descrive un disco dati.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-101">Describes a data disk.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a3fa2-102">Specifica i requisiti di memorizzazione nella cache.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-102">Specifies the caching requirements.</span></span> <br><br> <span data-ttu-id="a3fa2-103">I valori possibili sono:</span><span class="sxs-lookup"><span data-stu-id="a3fa2-103">Possible values are:</span></span> <br><br> <span data-ttu-id="a3fa2-104">**None**</span><span class="sxs-lookup"><span data-stu-id="a3fa2-104">**None**</span></span> <br><br>
+      <span data-ttu-id="a3fa2-105">**ReadOnly**</span><span class="sxs-lookup"><span data-stu-id="a3fa2-105">**ReadOnly**</span></span> <br><br> <span data-ttu-id="a3fa2-106">**ReadWrite**</span><span class="sxs-lookup"><span data-stu-id="a3fa2-106">**ReadWrite**</span></span> <br><br> <span data-ttu-id="a3fa2-107">Predefinito: **None per l'archiviazione Standard. Sola lettura per l'archiviazione Premium**.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-107">Default: **None for Standard storage. ReadOnly for Premium storage**.</span></span> <span data-ttu-id="a3fa2-108">I valori possibili sono: 'None', 'ReadOnly', 'ReadWrite'</span><span class="sxs-lookup"><span data-stu-id="a3fa2-108">Possible values include: 'None', 'ReadOnly', 'ReadWrite'</span></span>
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a3fa2-109">Specifica come deve essere creata la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-109">Specifies how the virtual machine should be created.</span></span><br><br> <span data-ttu-id="a3fa2-110">I valori possibili sono:</span><span class="sxs-lookup"><span data-stu-id="a3fa2-110">Possible values are:</span></span><br><br>
+      <span data-ttu-id="a3fa2-111">**Collegare** \u2013 questo valore viene usato quando si usa un disco specializzato per creare la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-111">**Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.</span></span><br><br> <span data-ttu-id="a3fa2-112">**FromImage** \u2013 questo valore viene usato quando si usa un'immagine per creare la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-112">**FromImage** \u2013 This value is used when you are using an image to create the virtual machine.</span></span> <span data-ttu-id="a3fa2-113">Se si usa un'immagine della piattaforma, anche possibile usare l'elemento imageReference descritto in precedenza.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-113">If you are using a platform image, you also use the imageReference element described above.</span></span> <span data-ttu-id="a3fa2-114">Se si usa un'immagine del marketplace, è inoltre possibile utilizzare l'elemento piano descritto in precedenza.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-114">If you are using a marketplace image, you  also use the plan element previously described.</span></span> <span data-ttu-id="a3fa2-115">I valori possibili sono: 'FromImage', 'Empty', 'Attach'</span><span class="sxs-lookup"><span data-stu-id="a3fa2-115">Possible values include: 'FromImage', 'Empty', 'Attach'</span></span>
+    syntax:
+      content: 'createOption: DiskCreateOptionTypes'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOptionTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fa2-116">Specifica le dimensioni di un disco dati vuoto in gigabyte.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-116">Specifies the size of an empty data disk in gigabytes.</span></span> <span data-ttu-id="a3fa2-117">Questo elemento è utilizzabile per sovrascrivere le dimensioni del disco in un'immagine di macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-117">This element can be used to overwrite the size of the disk in a virtual machine image.</span></span> <br><br> <span data-ttu-id="a3fa2-118">Questo valore non può essere superiore a 1023 GB</span><span class="sxs-lookup"><span data-stu-id="a3fa2-118">This value cannot be larger than 1023 GB</span></span>
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.image'
+    name: image
+    fullName: image
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a3fa2-119">L''utente di origine immagine disco rigido virtuale.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-119">The source user image virtual hard disk.</span></span> <span data-ttu-id="a3fa2-120">Prima di essere collegato alla macchina virtuale verrà copiato il disco rigido virtuale.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-120">The virtual hard disk will be copied before being attached to the virtual machine.</span></span> <span data-ttu-id="a3fa2-121">Se viene fornito SourceImage, l''unità disco rigido virtuale di destinazione non deve esistere.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-121">If SourceImage is provided, the destination virtual hard drive must not exist.</span></span>'
+    optional: true
+    syntax:
+      content: 'image?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fa2-122">Specifica il numero di unità logica del disco dati.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-122">Specifies the logical unit number of the data disk.</span></span> <span data-ttu-id="a3fa2-123">Questo valore viene usato per identificare i dischi dati all'interno della macchina virtuale e pertanto deve essere univoco per ogni disco dati collegato a una macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-123">This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.</span></span>
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fa2-124">I parametri di disco gestito.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-124">The managed disk parameters.</span></span>
+    optional: true
+    syntax:
+      content: 'managedDisk?: ManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.ManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fa2-125">Il nome del disco.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-125">The disk name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.vhd'
+    name: vhd
+    fullName: vhd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fa2-126">Il disco rigido virtuale.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-126">The virtual hard disk.</span></span>
+    optional: true
+    syntax:
+      content: 'vhd?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fa2-127">Specifica se writeAccelerator deve essere abilitato o disabilitato sul disco.</span><span class="sxs-lookup"><span data-stu-id="a3fa2-127">Specifies whether writeAccelerator should be enabled or disabled on the disk.</span></span>
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.DiskCreateOptionTypes'
+    name: DiskCreateOptionTypes
+    spec.typeScript:
+      - name: DiskCreateOptionTypes
+        fullName: DiskCreateOptionTypes
+        uid: '@azure/arm-compute.DiskCreateOptionTypes'
+  - uid: '@azure/arm-compute.VirtualHardDisk'
+    name: VirtualHardDisk
+    spec.typeScript:
+      - name: VirtualHardDisk
+        fullName: VirtualHardDisk
+        uid: '@azure/arm-compute.VirtualHardDisk'
+  - uid: '@azure/arm-compute.ManagedDiskParameters'
+    name: ManagedDiskParameters
+    spec.typeScript:
+      - name: ManagedDiskParameters
+        fullName: ManagedDiskParameters
+        uid: '@azure/arm-compute.ManagedDiskParameters'
