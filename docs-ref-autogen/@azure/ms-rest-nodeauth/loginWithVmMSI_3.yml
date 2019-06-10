@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.loginWithVmMSI_3'
+    name: loginWithVmMSI(Callback<MSIVmTokenCredentials>)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Prima di questo metodo, installare az cli dal https://github.com/Azure/azure-cli/releases.
+      Se si dispone di una macchina virtuale di Azure eseguito il provisioning con az cli e dispone di identità del servizio gestito abilitata, è quindi possibile usare questo metodo per ottenere i token di autenticazione dalla macchina virtuale.
+      Per creare una nuova macchina virtuale, abilitare identità del servizio gestito, eseguire questo comando: creare -g < nome_gruppo_di_risorse > - n < vm_name > - az vm assign-identity - immagine < os_image_name > Nota: il comando precedente consente a un endpoint del servizio nell'host, con la porta predefinita 50342
+
+      Per abilitare l'identità del servizio gestito in una VM già sottoposte a provisioning, eseguire il comando seguente: az vm - assign-identity - g < nome_gruppo_di_risorse > -n < vm_name >, porta < custom_port_number >
+
+      Per altre informazioni su questo comando, eseguire: az vm - assign-identity - h
+
+      Esegue l'autenticazione usando il servizio di identità in esecuzione in una macchina virtuale di Azure.
+      Questo metodo effettua una richiesta al servizio di autenticazione ospitato nella macchina virtuale e consente di ottenere un token di accesso.
+    syntax:
+      content: 'function loginWithVmMSI(callback: Callback<MSIVmTokenCredentials>)'
+      parameters:
+        - id: callback
+          type:
+            - '@azure/ms-rest-nodeauth.Callback<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>'
+          description: ''
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.Callback<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>'
+    name: MSIVmTokenCredentials>
+    spec.typeScript:
+      - name: Callback
+        fullName: Callback
+        uid: '@azure/ms-rest-nodeauth.Callback'
+      - name: <
+        fullName: <
+      - name: MSIVmTokenCredentials
+        fullName: MSIVmTokenCredentials
+        uid: '@azure/ms-rest-nodeauth.MSIVmTokenCredentials'
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    name: MSIVmTokenCredentials>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: MSIVmTokenCredentials
+        fullName: MSIVmTokenCredentials
+        uid: '@azure/ms-rest-nodeauth.MSIVmTokenCredentials'
+      - name: '>'
+        fullName: '>'
