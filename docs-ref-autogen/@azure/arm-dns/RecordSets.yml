@@ -1,0 +1,1073 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-dns.RecordSets'
+    name: RecordSets
+    fullName: RecordSets
+    children:
+      - '@azure/arm-dns.RecordSets.createOrUpdate'
+      - '@azure/arm-dns.RecordSets.createOrUpdate_2'
+      - '@azure/arm-dns.RecordSets.createOrUpdate_1'
+      - '@azure/arm-dns.RecordSets.deleteMethod'
+      - '@azure/arm-dns.RecordSets.deleteMethod_2'
+      - '@azure/arm-dns.RecordSets.deleteMethod_1'
+      - '@azure/arm-dns.RecordSets.get'
+      - '@azure/arm-dns.RecordSets.get_2'
+      - '@azure/arm-dns.RecordSets.get_1'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZone'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZone_2'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZone_1'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZoneNext'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_2'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_1'
+      - '@azure/arm-dns.RecordSets.listByDnsZone'
+      - '@azure/arm-dns.RecordSets.listByDnsZone_2'
+      - '@azure/arm-dns.RecordSets.listByDnsZone_1'
+      - '@azure/arm-dns.RecordSets.listByDnsZoneNext'
+      - '@azure/arm-dns.RecordSets.listByDnsZoneNext_2'
+      - '@azure/arm-dns.RecordSets.listByDnsZoneNext_1'
+      - '@azure/arm-dns.RecordSets.listByType'
+      - '@azure/arm-dns.RecordSets.listByType_2'
+      - '@azure/arm-dns.RecordSets.listByType_1'
+      - '@azure/arm-dns.RecordSets.listByTypeNext'
+      - '@azure/arm-dns.RecordSets.listByTypeNext_2'
+      - '@azure/arm-dns.RecordSets.listByTypeNext_1'
+      - '@azure/arm-dns.RecordSets.constructor'
+      - '@azure/arm-dns.RecordSets.update'
+      - '@azure/arm-dns.RecordSets.update_2'
+      - '@azure/arm-dns.RecordSets.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="90590-101">Classe che rappresenta un set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-101">Class representing a RecordSets.</span></span>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, Models.RecordType, RecordSet, Models.RecordSetsCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90590-102">Crea o aggiorna un record impostato all'interno di una zona DNS.</span><span class="sxs-lookup"><span data-stu-id="90590-102">Creates or updates a record set within a DNS zone.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options?: Models.RecordSetsCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-103">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-103">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-104">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-104">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-105">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-105">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-106">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-106">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-107">Set di record di tipo SOA può essere aggiornato ma non creata (vengono creati quando viene creata la zona DNS).</span><span class="sxs-lookup"><span data-stu-id="90590-107">Record sets of type SOA can be updated but not created (they are created when the DNS zone is created).</span></span> <span data-ttu-id="90590-108">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-108">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="90590-109">Parametri forniti all'operazione CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="90590-109">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - Models.RecordSetsCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, Models.RecordType, RecordSet, RecordSetsCreateOrUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options: RecordSetsCreateOrUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-110">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-110">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-111">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-111">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-112">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-112">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-113">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-113">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-114">Set di record di tipo SOA può essere aggiornato ma non creata (vengono creati quando viene creata la zona DNS).</span><span class="sxs-lookup"><span data-stu-id="90590-114">Record sets of type SOA can be updated but not created (they are created when the DNS zone is created).</span></span> <span data-ttu-id="90590-115">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-115">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="90590-116">Parametri forniti all'operazione CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="90590-116">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsCreateOrUpdateOptionalParams'
+          description: <span data-ttu-id="90590-117">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="90590-117">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="90590-118">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-118">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, Models.RecordType, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-119">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-119">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-120">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-120">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-121">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-121">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-122">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-122">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-123">Set di record di tipo SOA può essere aggiornato ma non creata (vengono creati quando viene creata la zona DNS).</span><span class="sxs-lookup"><span data-stu-id="90590-123">Record sets of type SOA can be updated but not created (they are created when the DNS zone is created).</span></span> <span data-ttu-id="90590-124">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-124">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="90590-125">Parametri forniti all'operazione CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="90590-125">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="90590-126">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.deleteMethod'
+    name: 'deleteMethod(string, string, string, Models.RecordType, Models.RecordSetsDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90590-127">Elimina un set di record da una zona DNS.</span><span class="sxs-lookup"><span data-stu-id="90590-127">Deletes a record set from a DNS zone.</span></span> <span data-ttu-id="90590-128">Questa operazione non può essere annullata.</span><span class="sxs-lookup"><span data-stu-id="90590-128">This operation cannot be undone.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options?: Models.RecordSetsDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-129">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-129">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-130">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-130">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-131">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-131">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-132">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-132">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-133">Set di record di tipo SOA non può essere eliminato (vengono eliminate quando viene eliminata la zona DNS).</span><span class="sxs-lookup"><span data-stu-id="90590-133">Record sets of type SOA cannot be deleted (they are deleted when the DNS zone is deleted).</span></span> <span data-ttu-id="90590-134">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-134">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - Models.RecordSetsDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, Models.RecordType, RecordSetsDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options: RecordSetsDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-135">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-135">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-136">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-136">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-137">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-137">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-138">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-138">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-139">Set di record di tipo SOA non può essere eliminato (vengono eliminate quando viene eliminata la zona DNS).</span><span class="sxs-lookup"><span data-stu-id="90590-139">Record sets of type SOA cannot be deleted (they are deleted when the DNS zone is deleted).</span></span> <span data-ttu-id="90590-140">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-140">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsDeleteMethodOptionalParams'
+          description: <span data-ttu-id="90590-141">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="90590-141">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="90590-142">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-142">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, Models.RecordType, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-143">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-143">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-144">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-144">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-145">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-145">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-146">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-146">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-147">Set di record di tipo SOA non può essere eliminato (vengono eliminate quando viene eliminata la zona DNS).</span><span class="sxs-lookup"><span data-stu-id="90590-147">Record sets of type SOA cannot be deleted (they are deleted when the DNS zone is deleted).</span></span> <span data-ttu-id="90590-148">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-148">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="90590-149">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-149">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.get'
+    name: 'get(string, string, string, Models.RecordType, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90590-150">Ottiene un set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-150">Gets a record set.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-151">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-151">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-152">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-152">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-153">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-153">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-154">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-154">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-155">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-155">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.get_2'
+    name: 'get(string, string, string, Models.RecordType, RequestOptionsBase, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options: RequestOptionsBase, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-156">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-156">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-157">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-157">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-158">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-158">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-159">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-159">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-160">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-160">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="90590-161">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="90590-161">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="90590-162">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.get_1'
+    name: 'get(string, string, string, Models.RecordType, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-163">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-163">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-164">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-164">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-165">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-165">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-166">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-166">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-167">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-167">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="90590-168">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZone'
+    name: 'listAllByDnsZone(string, string, Models.RecordSetsListAllByDnsZoneOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90590-169">Elenca tutti i set di record in una zona DNS.</span><span class="sxs-lookup"><span data-stu-id="90590-169">Lists all record sets in a DNS zone.</span></span>
+    syntax:
+      content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, options?: Models.RecordSetsListAllByDnsZoneOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-170">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-170">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-171">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-171">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - Models.RecordSetsListAllByDnsZoneOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZone_2'
+    name: 'listAllByDnsZone(string, string, RecordSetsListAllByDnsZoneOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, options: RecordSetsListAllByDnsZoneOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-172">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-172">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-173">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-173">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsListAllByDnsZoneOptionalParams'
+          description: <span data-ttu-id="90590-174">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="90590-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-175">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZone_1'
+    name: 'listAllByDnsZone(string, string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-176">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-176">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-177">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-177">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-178">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZoneNext'
+    name: 'listAllByDnsZoneNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90590-179">Elenca tutti i set di record in una zona DNS.</span><span class="sxs-lookup"><span data-stu-id="90590-179">Lists all record sets in a DNS zone.</span></span>
+    syntax:
+      content: 'function listAllByDnsZoneNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="90590-180">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="90590-180">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_2'
+    name: 'listAllByDnsZoneNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZoneNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="90590-181">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="90590-181">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="90590-182">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="90590-182">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-183">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_1'
+    name: 'listAllByDnsZoneNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZoneNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="90590-184">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="90590-184">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-185">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-185">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZone'
+    name: 'listByDnsZone(string, string, Models.RecordSetsListByDnsZoneOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90590-186">Elenca tutti i set di record in una zona DNS.</span><span class="sxs-lookup"><span data-stu-id="90590-186">Lists all record sets in a DNS zone.</span></span>
+    syntax:
+      content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, options?: Models.RecordSetsListByDnsZoneOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-187">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-187">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-188">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-188">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - Models.RecordSetsListByDnsZoneOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZone_2'
+    name: 'listByDnsZone(string, string, RecordSetsListByDnsZoneOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, options: RecordSetsListByDnsZoneOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-189">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-189">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-190">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-190">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsListByDnsZoneOptionalParams'
+          description: <span data-ttu-id="90590-191">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="90590-191">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-192">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-192">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZone_1'
+    name: 'listByDnsZone(string, string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-193">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-193">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-194">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-194">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-195">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZoneNext'
+    name: 'listByDnsZoneNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90590-196">Elenca tutti i set di record in una zona DNS.</span><span class="sxs-lookup"><span data-stu-id="90590-196">Lists all record sets in a DNS zone.</span></span>
+    syntax:
+      content: 'function listByDnsZoneNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="90590-197">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="90590-197">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZoneNext_2'
+    name: 'listByDnsZoneNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZoneNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="90590-198">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="90590-198">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="90590-199">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="90590-199">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-200">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-200">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZoneNext_1'
+    name: 'listByDnsZoneNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZoneNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="90590-201">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="90590-201">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-202">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-202">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByType'
+    name: 'listByType(string, string, Models.RecordType, Models.RecordSetsListByTypeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90590-203">Elenca i set di record di un tipo specificato in una zona DNS.</span><span class="sxs-lookup"><span data-stu-id="90590-203">Lists the record sets of a specified type in a DNS zone.</span></span>
+    syntax:
+      content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: Models.RecordType, options?: Models.RecordSetsListByTypeOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-204">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-204">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-205">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-205">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-206">Il tipo di set di record da enumerare.</span><span class="sxs-lookup"><span data-stu-id="90590-206">The type of record sets to enumerate.</span></span> <span data-ttu-id="90590-207">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-207">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - Models.RecordSetsListByTypeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByType_2'
+    name: 'listByType(string, string, Models.RecordType, RecordSetsListByTypeOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: Models.RecordType, options: RecordSetsListByTypeOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-208">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-208">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-209">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-209">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-210">Il tipo di set di record da enumerare.</span><span class="sxs-lookup"><span data-stu-id="90590-210">The type of record sets to enumerate.</span></span> <span data-ttu-id="90590-211">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-211">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsListByTypeOptionalParams'
+          description: <span data-ttu-id="90590-212">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="90590-212">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-213">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-213">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByType_1'
+    name: 'listByType(string, string, Models.RecordType, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: Models.RecordType, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-214">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-214">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-215">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-215">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-216">Il tipo di set di record da enumerare.</span><span class="sxs-lookup"><span data-stu-id="90590-216">The type of record sets to enumerate.</span></span> <span data-ttu-id="90590-217">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-217">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-218">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-218">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByTypeNext'
+    name: 'listByTypeNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90590-219">Elenca i set di record di un tipo specificato in una zona DNS.</span><span class="sxs-lookup"><span data-stu-id="90590-219">Lists the record sets of a specified type in a DNS zone.</span></span>
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="90590-220">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="90590-220">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByTypeNext_2'
+    name: 'listByTypeNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="90590-221">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="90590-221">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="90590-222">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="90590-222">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-223">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-223">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByTypeNext_1'
+    name: 'listByTypeNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="90590-224">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="90590-224">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="90590-225">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-225">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.constructor'
+    name: RecordSets(DnsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90590-226">Creare un recordset.</span><span class="sxs-lookup"><span data-stu-id="90590-226">Create a RecordSets.</span></span>
+    syntax:
+      content: 'new RecordSets(client: DnsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-dns.DnsManagementClientContext'
+          description: |
+            <span data-ttu-id="90590-227">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="90590-227">Reference to the service client.</span></span>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.update'
+    name: 'update(string, string, string, Models.RecordType, RecordSet, Models.RecordSetsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90590-228">Aggiorna un record impostato all'interno di una zona DNS.</span><span class="sxs-lookup"><span data-stu-id="90590-228">Updates a record set within a DNS zone.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options?: Models.RecordSetsUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-229">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-229">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-230">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-230">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-231">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-231">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-232">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-232">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-233">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-233">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="90590-234">Parametri forniti all'operazione di aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="90590-234">Parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - Models.RecordSetsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.update_2'
+    name: 'update(string, string, string, Models.RecordType, RecordSet, RecordSetsUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options: RecordSetsUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-235">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-235">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-236">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-236">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-237">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-237">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-238">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-238">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-239">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-239">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="90590-240">Parametri forniti all'operazione di aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="90590-240">Parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsUpdateOptionalParams'
+          description: <span data-ttu-id="90590-241">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="90590-241">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="90590-242">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-242">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.update_1'
+    name: 'update(string, string, string, Models.RecordType, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="90590-243">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="90590-243">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="90590-244">Il nome della zona DNS (senza un punto di interruzione).</span><span class="sxs-lookup"><span data-stu-id="90590-244">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="90590-245">Imposta il nome del record, relativo al nome della zona.</span><span class="sxs-lookup"><span data-stu-id="90590-245">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="90590-246">Il tipo di record DNS in questo set di record.</span><span class="sxs-lookup"><span data-stu-id="90590-246">The type of DNS record in this record set.</span></span> <span data-ttu-id="90590-247">I valori possibili sono: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span><span class="sxs-lookup"><span data-stu-id="90590-247">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="90590-248">Parametri forniti all'operazione di aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="90590-248">Parameters supplied to the Update operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="90590-249">Il callback</span><span class="sxs-lookup"><span data-stu-id="90590-249">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-dns'
+references:
+  - uid: '@azure/arm-dns.DnsManagementClientContext'
+    name: DnsManagementClientContext
+    spec.typeScript:
+      - name: DnsManagementClientContext
+        fullName: DnsManagementClientContext
+        uid: '@azure/arm-dns.DnsManagementClientContext'
+  - uid: '@azure/arm-dns.RecordSet'
+    name: RecordSet
+    spec.typeScript:
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-dns.RecordSet'
+  - uid: ServiceCallback<@azure/arm-dns.RecordSet>
+    name: RecordSet>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-dns.RecordSet'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-dns.RecordSetsCreateOrUpdateOptionalParams'
+    name: RecordSetsCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsCreateOrUpdateOptionalParams
+        fullName: RecordSetsCreateOrUpdateOptionalParams
+        uid: '@azure/arm-dns.RecordSetsCreateOrUpdateOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsDeleteMethodOptionalParams'
+    name: RecordSetsDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: RecordSetsDeleteMethodOptionalParams
+        fullName: RecordSetsDeleteMethodOptionalParams
+        uid: '@azure/arm-dns.RecordSetsDeleteMethodOptionalParams'
+  - uid: ServiceCallback<@azure/arm-dns.RecordSetListResult>
+    name: RecordSetListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSetListResult
+        fullName: RecordSetListResult
+        uid: '@azure/arm-dns.RecordSetListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-dns.RecordSetsListAllByDnsZoneOptionalParams'
+    name: RecordSetsListAllByDnsZoneOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListAllByDnsZoneOptionalParams
+        fullName: RecordSetsListAllByDnsZoneOptionalParams
+        uid: '@azure/arm-dns.RecordSetsListAllByDnsZoneOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsListByDnsZoneOptionalParams'
+    name: RecordSetsListByDnsZoneOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListByDnsZoneOptionalParams
+        fullName: RecordSetsListByDnsZoneOptionalParams
+        uid: '@azure/arm-dns.RecordSetsListByDnsZoneOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsListByTypeOptionalParams'
+    name: RecordSetsListByTypeOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListByTypeOptionalParams
+        fullName: RecordSetsListByTypeOptionalParams
+        uid: '@azure/arm-dns.RecordSetsListByTypeOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsUpdateOptionalParams'
+    name: RecordSetsUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsUpdateOptionalParams
+        fullName: RecordSetsUpdateOptionalParams
+        uid: '@azure/arm-dns.RecordSetsUpdateOptionalParams'
