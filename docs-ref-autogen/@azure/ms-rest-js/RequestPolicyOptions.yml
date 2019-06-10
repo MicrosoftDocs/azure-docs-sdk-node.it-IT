@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-js.RequestPolicyOptions'
+    name: RequestPolicyOptions
+    fullName: RequestPolicyOptions
+    children:
+      - '@azure/ms-rest-js.RequestPolicyOptions.log'
+      - '@azure/ms-rest-js.RequestPolicyOptions.constructor'
+      - '@azure/ms-rest-js.RequestPolicyOptions.shouldLog'
+    langs:
+      - typeScript
+    type: class
+    summary: Proprietà facoltativa che può essere utilizzata durante la creazione di un RequestPolicy.
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPolicyOptions.log'
+    name: 'log(HttpPipelineLogLevel, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Tentativo di registrare il messaggio specificato per il logger specificato. Se è stato fornito alcun logger o se il livello di registrazione non carne soglia del logger, quindi non verrà registrato.'
+    syntax:
+      content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
+      parameters:
+        - id: logLevel
+          type:
+            - '@azure/ms-rest-js.HttpPipelineLogLevel'
+          description: Il livello di registrazione di questo file di registro.
+        - id: message
+          type:
+            - string
+          description: |
+            Il messaggio di questo file di registro.
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPolicyOptions.constructor'
+    name: RequestPolicyOptions(HttpPipelineLogger | undefined)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new RequestPolicyOptions(_logger?: HttpPipelineLogger | undefined)'
+      parameters:
+        - id: _logger
+          type:
+            - '@azure/ms-rest-js.HttpPipelineLogger | undefined'
+          description: ''
+          optional: true
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPolicyOptions.shouldLog'
+    name: shouldLog(HttpPipelineLogLevel)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ottenere un log con il livello di registrazione fornito deve essere registrato o meno.
+    syntax:
+      content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
+      parameters:
+        - id: logLevel
+          type:
+            - '@azure/ms-rest-js.HttpPipelineLogLevel'
+          description: Il livello di registrazione del log che verranno registrati.
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+references:
+  - uid: '@azure/ms-rest-js.HttpPipelineLogger | undefined'
+    name: HttpPipelineLogger | undefined
+    spec.typeScript:
+      - name: HttpPipelineLogger
+        fullName: HttpPipelineLogger
+        uid: '@azure/ms-rest-js.HttpPipelineLogger'
+      - name: ' | undefined'
+        fullName: ' | undefined'
+  - uid: '@azure/ms-rest-js.HttpPipelineLogLevel'
+    name: HttpPipelineLogLevel
+    spec.typeScript:
+      - name: HttpPipelineLogLevel
+        fullName: HttpPipelineLogLevel
+        uid: '@azure/ms-rest-js.HttpPipelineLogLevel'
