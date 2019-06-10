@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.RollingUpgradePolicy'
+    name: RollingUpgradePolicy
+    fullName: RollingUpgradePolicy
+    children:
+      - '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    langs:
+      - typeScript
+    type: interface
+    summary: I parametri di configurazione usati durante l'esecuzione di un aggiornamento in sequenza.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+    name: maxBatchInstancePercent
+    fullName: maxBatchInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La percentuale massima di istanze di totale macchine virtuali che verranno aggiornate contemporaneamente in seguito all''aggiornamento in sequenza in un unico batch. Poiché si tratta di un massimo, le istanze danneggiate in batch precedente o successiva possono causare la percentuale di istanze in un batch per diminuire per garantire una maggiore affidabilità. Il valore predefinito per questo parametro è 20%.'
+    optional: true
+    syntax:
+      content: 'maxBatchInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+    name: maxUnhealthyInstancePercent
+    fullName: maxUnhealthyInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La percentuale massima di istanze di macchine virtuali totali nel set di scalabilità che può essere contemporaneamente non integro, in seguito a in corso l''aggiornamento oppure da trovare in uno stato non integro per i controlli di integrità della macchina virtuale prima che interrompe l''aggiornamento in sequenza. Questo vincolo verrà verificato prima dell''avvio di un batch. Il valore predefinito per questo parametro è 20%.'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+    name: maxUnhealthyUpgradedInstancePercent
+    fullName: maxUnhealthyUpgradedInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La percentuale massima di istanze di macchina virtuale aggiornata che può trovarsi in uno stato non integro. Questo controllo verrà eseguito dopo l''aggiornamento di ogni batch. Se mai viene superata questa percentuale, viene interrotta l''aggiornamento in sequenza. Il valore predefinito per questo parametro è 20%.'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyUpgradedInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    name: pauseTimeBetweenBatches
+    fullName: pauseTimeBetweenBatches
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tempo di attesa tra il completamento dell'aggiornamento per tutte le macchine virtuali in un unico batch e l'avvio del batch successivo. La durata deve essere specificata nel formato ISO 8601. Il valore predefinito è 0 secondi (PT0S).
+    optional: true
+    syntax:
+      content: 'pauseTimeBetweenBatches?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
