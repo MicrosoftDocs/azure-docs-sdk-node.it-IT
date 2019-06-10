@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.MessageHandlerOptions'
+    name: MessageHandlerOptions
+    fullName: MessageHandlerOptions
+    children:
+      - '@azure/service-bus.MessageHandlerOptions.autoComplete'
+      - '@azure/service-bus.MessageHandlerOptions.maxConcurrentCalls'
+      - '@azure/service-bus.MessageHandlerOptions.maxMessageAutoRenewLockDurationInSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: Vengono descritte le opzioni passate al `registerMessageHandler` metodo quando si ricevono messaggi da una coda/sottoscrizione che non ha abilitate le sessioni.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.autoComplete'
+    name: autoComplete
+    fullName: autoComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica se il `complete()` metodo nel messaggio deve essere chiamato automaticamente dal sdk dopo che l'utente ha specificato il gestore onMessage è stato eseguito.
+      La chiamata a `complete()` su un messaggio lo rimuove dalla coda/sottoscrizione.
+      - **Default**: `true`.
+    optional: true
+    syntax:
+      content: 'autoComplete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.maxConcurrentCalls'
+    name: maxConcurrentCalls
+    fullName: maxConcurrentCalls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il numero massimo di chiamate simultanee che il sdk è possibile apportare al gestore di messaggi dell'utente. Una volta raggiunto questo limite, ulteriormente i messaggi non verranno ricevuti finché almeno una delle chiamate al gestore di messaggi dell'utente è stata completata.
+      - **Default**: `1`.
+    optional: true
+    syntax:
+      content: 'maxConcurrentCalls?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.maxMessageAutoRenewLockDurationInSeconds'
+    name: maxMessageAutoRenewLockDurationInSeconds
+    fullName: maxMessageAutoRenewLockDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La durata massima in secondi fino alla quale il blocco sul messaggio venga rinnovato dal sdk automaticamente. Il rinnovo automatico si interrompe dopo che il messaggio viene finalizzato o dopo aver specificato l'utente gestore onMessage ricovery venga completata.
+
+      - **Default**: `300` secondi (5 minuti).
+      - **Per disabilitare il rinnovo autolock**, impostare questa proprietà su `0`.
+    optional: true
+    syntax:
+      content: 'maxMessageAutoRenewLockDurationInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
