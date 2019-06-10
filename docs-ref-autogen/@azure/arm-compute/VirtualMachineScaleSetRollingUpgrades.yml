@@ -1,0 +1,301 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades'
+    name: VirtualMachineScaleSetRollingUpgrades
+    fullName: VirtualMachineScaleSetRollingUpgrades
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.beginCancel'
+      - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.beginStartExtensionUpgrade'
+      - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.beginStartOSUpgrade'
+      - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.cancel'
+      - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.getLatest'
+      - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.getLatest_2'
+      - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.getLatest_1'
+      - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.startExtensionUpgrade'
+      - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.startOSUpgrade'
+      - '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="6ba04-101">Classe che rappresenta un VirtualMachineScaleSetRollingUpgrades.</span><span class="sxs-lookup"><span data-stu-id="6ba04-101">Class representing a VirtualMachineScaleSetRollingUpgrades.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.beginCancel'
+    name: 'beginCancel(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ba04-102">Eseguire l'aggiornamento in sequenza dei set di scalabilità di macchine virtuali corrente verrà annullata.</span><span class="sxs-lookup"><span data-stu-id="6ba04-102">Cancels the current virtual machine scale set rolling upgrade.</span></span>
+    syntax:
+      content: 'function beginCancel(resourceGroupName: string, vmScaleSetName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-103">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="6ba04-103">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-104">Il nome del set di scalabilità di macchine Virtuali.</span><span class="sxs-lookup"><span data-stu-id="6ba04-104">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.beginStartExtensionUpgrade'
+    name: 'beginStartExtensionUpgrade(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ba04-105">Viene avviato un aggiornamento in sequenza per spostare tutte le estensioni per la scalabilità di macchine virtuali tutte le istanze del set all'ultima versione estensione disponibile.</span><span class="sxs-lookup"><span data-stu-id="6ba04-105">Starts a rolling upgrade to move all extensions for all virtual machine scale set instances to the latest available extension version.</span></span> <span data-ttu-id="6ba04-106">Le istanze che eseguono già le versioni più recenti di estensione non sono interessate.</span><span class="sxs-lookup"><span data-stu-id="6ba04-106">Instances which are already running the latest extension versions are not affected.</span></span>
+    syntax:
+      content: 'function beginStartExtensionUpgrade(resourceGroupName: string, vmScaleSetName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-107">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="6ba04-107">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-108">Il nome del set di scalabilità di macchine Virtuali.</span><span class="sxs-lookup"><span data-stu-id="6ba04-108">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.beginStartOSUpgrade'
+    name: 'beginStartOSUpgrade(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ba04-109">Avvia un aggiornamento in sequenza per spostare che istanze del set di scalabilità di macchine virtuali tutte all'ultima versione del sistema operativo immagine di piattaforma disponibile.</span><span class="sxs-lookup"><span data-stu-id="6ba04-109">Starts a rolling upgrade to move all virtual machine scale set instances to the latest available Platform Image OS version.</span></span> <span data-ttu-id="6ba04-110">Le istanze che sono già in esecuzione la versione più recente del sistema operativo non sono interessate.</span><span class="sxs-lookup"><span data-stu-id="6ba04-110">Instances which are already running the latest available OS version are not affected.</span></span>
+    syntax:
+      content: 'function beginStartOSUpgrade(resourceGroupName: string, vmScaleSetName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-111">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="6ba04-111">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-112">Il nome del set di scalabilità di macchine Virtuali.</span><span class="sxs-lookup"><span data-stu-id="6ba04-112">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.cancel'
+    name: 'cancel(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ba04-113">Eseguire l'aggiornamento in sequenza dei set di scalabilità di macchine virtuali corrente verrà annullata.</span><span class="sxs-lookup"><span data-stu-id="6ba04-113">Cancels the current virtual machine scale set rolling upgrade.</span></span>
+    syntax:
+      content: 'function cancel(resourceGroupName: string, vmScaleSetName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-114">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="6ba04-114">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-115">Il nome del set di scalabilità di macchine Virtuali.</span><span class="sxs-lookup"><span data-stu-id="6ba04-115">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.getLatest'
+    name: 'getLatest(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ba04-116">Ottiene lo stato del set di scalabilità di macchine virtuali più recente aggiornamento in sequenza.</span><span class="sxs-lookup"><span data-stu-id="6ba04-116">Gets the status of the latest virtual machine scale set rolling upgrade.</span></span>
+    syntax:
+      content: 'function getLatest(resourceGroupName: string, vmScaleSetName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-117">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="6ba04-117">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-118">Il nome del set di scalabilità di macchine Virtuali.</span><span class="sxs-lookup"><span data-stu-id="6ba04-118">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetRollingUpgradesGetLatestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.getLatest_2'
+    name: 'getLatest(string, string, RequestOptionsBase, ServiceCallback<RollingUpgradeStatusInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getLatest(resourceGroupName: string, vmScaleSetName: string, options: RequestOptionsBase, callback: ServiceCallback<RollingUpgradeStatusInfo>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-119">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="6ba04-119">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-120">Il nome del set di scalabilità di macchine Virtuali.</span><span class="sxs-lookup"><span data-stu-id="6ba04-120">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6ba04-121">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="6ba04-121">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.RollingUpgradeStatusInfo>
+          description: |
+            <span data-ttu-id="6ba04-122">Il callback</span><span class="sxs-lookup"><span data-stu-id="6ba04-122">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetRollingUpgradesGetLatestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.getLatest_1'
+    name: 'getLatest(string, string, ServiceCallback<RollingUpgradeStatusInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getLatest(resourceGroupName: string, vmScaleSetName: string, callback: ServiceCallback<RollingUpgradeStatusInfo>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-123">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="6ba04-123">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-124">Il nome del set di scalabilità di macchine Virtuali.</span><span class="sxs-lookup"><span data-stu-id="6ba04-124">The name of the VM scale set.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.RollingUpgradeStatusInfo>
+          description: |
+            <span data-ttu-id="6ba04-125">Il callback</span><span class="sxs-lookup"><span data-stu-id="6ba04-125">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetRollingUpgradesGetLatestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.startExtensionUpgrade'
+    name: 'startExtensionUpgrade(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ba04-126">Viene avviato un aggiornamento in sequenza per spostare tutte le estensioni per la scalabilità di macchine virtuali tutte le istanze del set all'ultima versione estensione disponibile.</span><span class="sxs-lookup"><span data-stu-id="6ba04-126">Starts a rolling upgrade to move all extensions for all virtual machine scale set instances to the latest available extension version.</span></span> <span data-ttu-id="6ba04-127">Le istanze che eseguono già le versioni più recenti di estensione non sono interessate.</span><span class="sxs-lookup"><span data-stu-id="6ba04-127">Instances which are already running the latest extension versions are not affected.</span></span>
+    syntax:
+      content: 'function startExtensionUpgrade(resourceGroupName: string, vmScaleSetName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-128">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="6ba04-128">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-129">Il nome del set di scalabilità di macchine Virtuali.</span><span class="sxs-lookup"><span data-stu-id="6ba04-129">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.startOSUpgrade'
+    name: 'startOSUpgrade(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ba04-130">Avvia un aggiornamento in sequenza per spostare che istanze del set di scalabilità di macchine virtuali tutte all'ultima versione del sistema operativo immagine di piattaforma disponibile.</span><span class="sxs-lookup"><span data-stu-id="6ba04-130">Starts a rolling upgrade to move all virtual machine scale set instances to the latest available Platform Image OS version.</span></span> <span data-ttu-id="6ba04-131">Le istanze che sono già in esecuzione la versione più recente del sistema operativo non sono interessate.</span><span class="sxs-lookup"><span data-stu-id="6ba04-131">Instances which are already running the latest available OS version are not affected.</span></span>
+    syntax:
+      content: 'function startOSUpgrade(resourceGroupName: string, vmScaleSetName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-132">Nome del gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="6ba04-132">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="6ba04-133">Il nome del set di scalabilità di macchine Virtuali.</span><span class="sxs-lookup"><span data-stu-id="6ba04-133">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetRollingUpgrades.constructor'
+    name: VirtualMachineScaleSetRollingUpgrades(ComputeManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ba04-134">Creare un VirtualMachineScaleSetRollingUpgrades.</span><span class="sxs-lookup"><span data-stu-id="6ba04-134">Create a VirtualMachineScaleSetRollingUpgrades.</span></span>
+    syntax:
+      content: 'new VirtualMachineScaleSetRollingUpgrades(client: ComputeManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-compute.ComputeManagementClientContext'
+          description: |
+            <span data-ttu-id="6ba04-135">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="6ba04-135">Reference to the service client.</span></span>
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComputeManagementClientContext'
+    name: ComputeManagementClientContext
+    spec.typeScript:
+      - name: ComputeManagementClientContext
+        fullName: ComputeManagementClientContext
+        uid: '@azure/arm-compute.ComputeManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-compute.RollingUpgradeStatusInfo>
+    name: RollingUpgradeStatusInfo>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RollingUpgradeStatusInfo
+        fullName: RollingUpgradeStatusInfo
+        uid: '@azure/arm-compute.RollingUpgradeStatusInfo'
+      - name: '>'
+        fullName: '>'

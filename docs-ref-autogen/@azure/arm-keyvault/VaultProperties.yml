@@ -1,0 +1,212 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.VaultProperties'
+    name: VaultProperties
+    fullName: VaultProperties
+    children:
+      - '@azure/arm-keyvault.VaultProperties.accessPolicies'
+      - '@azure/arm-keyvault.VaultProperties.createMode'
+      - '@azure/arm-keyvault.VaultProperties.enabledForDeployment'
+      - '@azure/arm-keyvault.VaultProperties.enabledForDiskEncryption'
+      - '@azure/arm-keyvault.VaultProperties.enabledForTemplateDeployment'
+      - '@azure/arm-keyvault.VaultProperties.enablePurgeProtection'
+      - '@azure/arm-keyvault.VaultProperties.enableSoftDelete'
+      - '@azure/arm-keyvault.VaultProperties.networkAcls'
+      - '@azure/arm-keyvault.VaultProperties.sku'
+      - '@azure/arm-keyvault.VaultProperties.tenantId'
+      - '@azure/arm-keyvault.VaultProperties.vaultUri'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="5da44-101">Proprietà dell'insieme di credenziali</span><span class="sxs-lookup"><span data-stu-id="5da44-101">Properties of the vault</span></span>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.accessPolicies'
+    name: accessPolicies
+    fullName: accessPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5da44-102">Matrice di identità da 0 a 16 che hanno accesso a key vault.</span><span class="sxs-lookup"><span data-stu-id="5da44-102">An array of 0 to 16 identities that have access to the key vault.</span></span> <span data-ttu-id="5da44-103">Tutte le identità nella matrice devono utilizzare lo stesso ID tenant come ID del tenant. dell''insieme di credenziali chiave</span><span class="sxs-lookup"><span data-stu-id="5da44-103">All identities in the array must use the same tenant ID as the key vault''s tenant ID.</span></span> <span data-ttu-id="5da44-104">Quando `createMode` è impostata su `recover`, i criteri di accesso non sono necessari.</span><span class="sxs-lookup"><span data-stu-id="5da44-104">When `createMode` is set to `recover`, access policies are not required.</span></span> <span data-ttu-id="5da44-105">In caso contrario, i criteri di accesso sono necessari.</span><span class="sxs-lookup"><span data-stu-id="5da44-105">Otherwise, access policies are required.</span></span>'
+    optional: true
+    syntax:
+      content: 'accessPolicies?: AccessPolicyEntry[]'
+      return:
+        type:
+          - '@azure/arm-keyvault.AccessPolicyEntry[]'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5da44-106">Modalità per indicare se l''insieme di credenziali devono essere ripristinati o non di creazione dell''insieme di credenziali.</span><span class="sxs-lookup"><span data-stu-id="5da44-106">The vault''s create mode to indicate whether the vault need to be recovered or not.</span></span> <span data-ttu-id="5da44-107">I valori possibili sono: ''Ripristina'', ''default''</span><span class="sxs-lookup"><span data-stu-id="5da44-107">Possible values include: ''recover'', ''default''</span></span>'
+    optional: true
+    syntax:
+      content: 'createMode?: CreateMode'
+      return:
+        type:
+          - '@azure/arm-keyvault.CreateMode'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.enabledForDeployment'
+    name: enabledForDeployment
+    fullName: enabledForDeployment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5da44-108">Proprietà per specificare se le macchine virtuali di Azure sono autorizzate a recuperare certificati archiviati come segreti dall'insieme di credenziali chiave.</span><span class="sxs-lookup"><span data-stu-id="5da44-108">Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.</span></span>
+    optional: true
+    syntax:
+      content: 'enabledForDeployment?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.enabledForDiskEncryption'
+    name: enabledForDiskEncryption
+    fullName: enabledForDiskEncryption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5da44-109">Proprietà per specificare se crittografia dischi di Azure è la possibilità di recuperare i segreti dall'insieme di credenziali e annullamento del wrapping delle chiavi.</span><span class="sxs-lookup"><span data-stu-id="5da44-109">Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.</span></span>
+    optional: true
+    syntax:
+      content: 'enabledForDiskEncryption?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.enabledForTemplateDeployment'
+    name: enabledForTemplateDeployment
+    fullName: enabledForTemplateDeployment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5da44-110">Proprietà per specificare se è consentita recuperare segreti dall'insieme di credenziali di Azure Resource Manager.</span><span class="sxs-lookup"><span data-stu-id="5da44-110">Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.</span></span>
+    optional: true
+    syntax:
+      content: 'enabledForTemplateDeployment?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.enablePurgeProtection'
+    name: enablePurgeProtection
+    fullName: enablePurgeProtection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5da44-111">Proprietà che specifica se la protezione contro ripulire è abilitato per questo insieme di credenziali.</span><span class="sxs-lookup"><span data-stu-id="5da44-111">Property specifying whether protection against purge is enabled for this vault.</span></span> <span data-ttu-id="5da44-112">Impostando questa proprietà su true attiva la protezione contro purge per questo insieme di credenziali e il relativo contenuto, solo il servizio Key Vault può avviare un''operazione di eliminazione dura, irreversibile.</span><span class="sxs-lookup"><span data-stu-id="5da44-112">Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion.</span></span> <span data-ttu-id="5da44-113">L''impostazione è efficace solo se l''eliminazione temporanea è abilitata.</span><span class="sxs-lookup"><span data-stu-id="5da44-113">The setting is effective only if soft delete is also enabled.</span></span> <span data-ttu-id="5da44-114">Abilitazione di questa funzionalità non può essere annullata: vale a dire, la proprietà non accetta false come relativo valore.</span><span class="sxs-lookup"><span data-stu-id="5da44-114">Enabling this functionality is irreversible - that is, the property does not accept false as its value.</span></span>'
+    optional: true
+    syntax:
+      content: 'enablePurgeProtection?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.enableSoftDelete'
+    name: enableSoftDelete
+    fullName: enableSoftDelete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5da44-115">Proprietà per specificare se la funzionalità di 'eliminazione temporanea' è abilitata per questo insieme di credenziali delle chiavi.</span><span class="sxs-lookup"><span data-stu-id="5da44-115">Property to specify whether the 'soft delete' functionality is enabled for this key vault.</span></span> <span data-ttu-id="5da44-116">Non accetta il valore false.</span><span class="sxs-lookup"><span data-stu-id="5da44-116">It does not accept false value.</span></span>
+    optional: true
+    syntax:
+      content: 'enableSoftDelete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.networkAcls'
+    name: networkAcls
+    fullName: networkAcls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5da44-117">Una raccolta di regole che regolano l'accessibilità dell'insieme di credenziali da percorsi di rete specifici.</span><span class="sxs-lookup"><span data-stu-id="5da44-117">A collection of rules governing the accessibility of the vault from specific network locations.</span></span>
+    optional: true
+    syntax:
+      content: 'networkAcls?: NetworkRuleSet'
+      return:
+        type:
+          - '@azure/arm-keyvault.NetworkRuleSet'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5da44-118">Dettagli SKU</span><span class="sxs-lookup"><span data-stu-id="5da44-118">SKU details</span></span>
+    syntax:
+      content: 'sku: Sku'
+      return:
+        type:
+          - '@azure/arm-keyvault.Sku'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5da44-119">L'ID tenant di Azure Active Directory che deve essere utilizzato per autenticare le richieste all'insieme di credenziali chiave.</span><span class="sxs-lookup"><span data-stu-id="5da44-119">The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.</span></span>
+    syntax:
+      content: 'tenantId: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultProperties.vaultUri'
+    name: vaultUri
+    fullName: vaultUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5da44-120">L'URI dell'insieme di credenziali per l'esecuzione di operazioni sulle chiavi e segreti.</span><span class="sxs-lookup"><span data-stu-id="5da44-120">The URI of the vault for performing operations on keys and secrets.</span></span>
+    optional: true
+    syntax:
+      content: 'vaultUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry[]'
+    name: 'AccessPolicyEntry[]'
+    spec.typeScript:
+      - name: AccessPolicyEntry
+        fullName: AccessPolicyEntry
+        uid: '@azure/arm-keyvault.AccessPolicyEntry'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-keyvault.CreateMode'
+    name: CreateMode
+    spec.typeScript:
+      - name: CreateMode
+        fullName: CreateMode
+        uid: '@azure/arm-keyvault.CreateMode'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet'
+    name: NetworkRuleSet
+    spec.typeScript:
+      - name: NetworkRuleSet
+        fullName: NetworkRuleSet
+        uid: '@azure/arm-keyvault.NetworkRuleSet'
+  - uid: '@azure/arm-keyvault.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-keyvault.Sku'
