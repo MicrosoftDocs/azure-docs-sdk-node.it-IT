@@ -1,0 +1,399 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ReceivedMessageInfo'
+    name: ReceivedMessageInfo
+    fullName: ReceivedMessageInfo
+    children:
+      - '@azure/service-bus.ReceivedMessageInfo.body'
+      - '@azure/service-bus.ReceivedMessageInfo.contentType'
+      - '@azure/service-bus.ReceivedMessageInfo.correlationId'
+      - '@azure/service-bus.ReceivedMessageInfo.deadLetterSource'
+      - '@azure/service-bus.ReceivedMessageInfo.deliveryCount'
+      - '@azure/service-bus.ReceivedMessageInfo.enqueuedSequenceNumber'
+      - '@azure/service-bus.ReceivedMessageInfo.enqueuedTimeUtc'
+      - '@azure/service-bus.ReceivedMessageInfo.expiresAtUtc'
+      - '@azure/service-bus.ReceivedMessageInfo.label'
+      - '@azure/service-bus.ReceivedMessageInfo.lockedUntilUtc'
+      - '@azure/service-bus.ReceivedMessageInfo.lockToken'
+      - '@azure/service-bus.ReceivedMessageInfo.messageId'
+      - '@azure/service-bus.ReceivedMessageInfo.partitionKey'
+      - '@azure/service-bus.ReceivedMessageInfo.replyTo'
+      - '@azure/service-bus.ReceivedMessageInfo.replyToSessionId'
+      - '@azure/service-bus.ReceivedMessageInfo.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.ReceivedMessageInfo.sequenceNumber'
+      - '@azure/service-bus.ReceivedMessageInfo.sessionId'
+      - '@azure/service-bus.ReceivedMessageInfo.timeToLive'
+      - '@azure/service-bus.ReceivedMessageInfo.to'
+      - '@azure/service-bus.ReceivedMessageInfo.userProperties'
+      - '@azure/service-bus.ReceivedMessageInfo.viaPartitionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrive il messaggio ricevuto dal Bus di servizio durante le operazioni di lettura e pertanto non possano essere risolte.
+    extends:
+      name: '@azure/service-bus.SendableMessageInfo'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il corpo del messaggio deve essere inviato o ricevuto è.
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il tipo di contenuto del messaggio. Descrive facoltativamente il payload del messaggio, con un descrittore che segue il formato rfc2045, sezione 5, ad esempio "application/json".'
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L'identificatore di correlazione che consente a un'applicazione di specificare un contesto del messaggio per finalità di correlazione, ad esempio rispecchiando il MessageId di un messaggio in cui si risponde.
+      Visualizzare [Routing dei messaggi e la correlazione](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.deadLetterSource'
+    name: deadLetterSource
+    fullName: deadLetterSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string} [deadLetterSource] Il nome della coda o sottoscrizione in cui questo messaggio è stato accodato, prima che fosse non recapitabile. Viene configurata solo nei messaggi impostati come non recapitabili e quindi inoltrati automaticamente dalla coda di messaggi non recapitabili a un''altra entità. Indica l''entità in cui il messaggio è stato impostato come non recapitabile.'
+    optional: true
+    syntax:
+      content: 'deadLetterSource?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.deliveryCount'
+    name: deliveryCount
+    fullName: deliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Numero di tentativi di recapito per questo messaggio. Il conteggio viene incrementato quando un blocco del messaggio scade o se il messaggio viene abbandonato in modo esplicito usando la `abandon()` metodo sul messaggio.
+    optional: true
+    syntax:
+      content: 'deliveryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.enqueuedSequenceNumber'
+    name: enqueuedSequenceNumber
+    fullName: enqueuedSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Numero di sequenza del messaggio originale. Per i messaggi inoltrati automaticamente questa proprietà rispecchia il numero di sequenza assegnato inizialmente al messaggio nel punto di invio originale.
+    optional: true
+    syntax:
+      content: 'enqueuedSequenceNumber?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.enqueuedTimeUtc'
+    name: enqueuedTimeUtc
+    fullName: enqueuedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Istante UTC in corrispondenza del quale il messaggio ha stato accettato e archiviato nel Bus di servizio.
+    optional: true
+    syntax:
+      content: 'enqueuedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.expiresAtUtc'
+    name: expiresAtUtc
+    fullName: expiresAtUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Istante UTC in cui il messaggio viene contrassegnato per la rimozione e non risulta più disponibile per il recupero dall''entità a causa della scadenza. Questa proprietà viene calcolata da 2 altre proprietà del messaggio: `enqueuedTimeUtc`  +  `timeToLive`.'
+    optional: true
+    syntax:
+      content: 'expiresAtUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''etichetta specifica dell''applicazione. Questa proprietà consente all''applicazione di indicare lo scopo del messaggio al ricevitore in un modello standardizzato. moda, simile a una riga dell''oggetto messaggio di posta elettronica. La proprietà AMQP mappata è "soggetta".'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.lockedUntilUtc'
+    name: lockedUntilUtc
+    fullName: lockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Istante UTC fino alla quale viene mantenuto il messaggio bloccato nella coda/sottoscrizione.
+      Alla scadenza del blocco, il `deliveryCount` viene incrementata e il messaggio è nuovamente disponibile per il recupero.
+      - Non applicabile quando il messaggio viene ricevuto in `ReceiveMode.receiveAndDelete` modalità.
+    optional: true
+    syntax:
+      content: 'lockedUntilUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.lockToken'
+    name: lockToken
+    fullName: lockToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il token di blocco è un riferimento al blocco mantenuto dal broker in `ReceiveMode.PeekLock` modalità. I blocchi vengono utilizzati internamente finalizzazione dei messaggi, come spiegato nel [documentazione del prodotto in modo più dettagliato](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)
+      - Non applicabile quando il messaggio viene ricevuto in `ReceiveMode.receiveAndDelete` modalità.
+    optional: true
+    syntax:
+      content: 'lockToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Questo identificatore di messaggio è un valore definito dall'applicazione che identifica in modo univoco il messaggio e il rispettivo payload.
+
+      Note: Non sono consentiti i numeri non interi.
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La chiave di partizione per l'invio di un messaggio a una tabella partizionata.
+      Lunghezza massima è 128 caratteri. Per le [entità partizionate](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning), la configurazione di questo valore consente di assegnare i messaggi correlati alla stessa partizione interna, in modo che l'ordine della sequenza di invio sia registrato correttamente. La partizione viene scelta in base a una funzione hash su questo valore e non può essere scelta direttamente.
+      - Per le entità con riconoscimento della sessione, il `sessionId` proprietà esegue l'override di questo valore.
+      - Per le entità non partizionate, chiave di partizione verrà ignorata
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''indirizzo di un''entità per l''invio di risposte da. Questo valore facoltativo e definito dall''applicazione è un modo standard per esprimere un percorso di risposta verso il ricevitore del messaggio. Quando un mittente si aspetta una risposta, imposta il valore sul percorso assoluto o relativo della coda o dell''argomento a cui si prevede che venga inviata la risposta. Visualizzare [Routing dei messaggi e la correlazione](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L'identificatore di sessione aumentando il `replyTo` indirizzo.
+      Lunghezza massima è 128 caratteri. Questo valore aumenta le informazioni di ReplyTo e specifica l'ID sessione deve essere impostato per la risposta quando inviato all'entità di risposta.
+      Visualizzare [Routing dei messaggi e la correlazione](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Data e ora in formato UTC in cui il messaggio verrà accodato. Questa proprietà restituisce l'ora in formato UTC; Quando si imposta la proprietà, il valore di data/ora fornito deve essere anche in formato UTC. Questo valore è per l'invio messaggio ritardato.
+      Si è usato per ritardare l'invio a un momento specifico in futuro i messaggi. Tempo di accodamento dei messaggi non significa che i messaggi verranno inviati nello stesso momento. Otterrà accodati, ma ora di invio effettiva varia a seconda del carico di lavoro della coda e il relativo stato.
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il numero univoco assegnato a un messaggio dal Bus di servizio.
+      Il numero di sequenza è un numero intero univoco a 64 bit assegnato a un messaggio quando viene accettato e archiviato dal broker. Viene usato come identificatore effettivo del messaggio. Per le entità partizionate, i primi 16 bit rispecchiano l'identificatore della partizione. Numeri di sequenza aumentano progressivo costante.
+      Viene eseguito il rollover a 0 all'esaurimento dell'intervallo compreso tra 48 e 64 bit.
+
+      **Max sicure su numeri interi** che Javascript attualmente supporta sia `2^53 - 1`. Il numero di sequenza è un AMQP `Long` tipo che può essere fino a 64 bit. Per rappresentare che si sta usando una libreria denominata [long.js](https://github.com/dcodeIO/long.js). Si prevede che i clienti a usare il ** `Long` ** tipo esportato da questa libreria.
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: Long'
+      return:
+        type:
+          - Long
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Identificatore di sessione per un'entità con riconoscimento della sessione. Lunghezza massima è 128 caratteri. Per le entità con riconoscimento della sessione, questo valore definito dall'applicazione specifica l'affiliazione di sessione del messaggio. I messaggi con lo stesso identificatore di sessione sono soggetti al blocco di riepilogo e consentono l'elaborazione esatta in ordine e il demultiplexing. Per le entità senza riconoscimento della sessione, questo valore viene ignorato.
+      [Sessioni di messaggi](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Valore time il messaggio ha to live. Questo valore indica la durata relativa dopo cui il messaggio scade, a partire da nel momento in cui il messaggio è stato accettato e archiviato dal broker, acquisite `enqueuedTimeUtc`. Se non impostato in modo esplicito, il valore è il DefaultTimeToLive per la rispettiva coda o argomento. Un livello di messaggio `timeToLive` valore non può contenere più lungo dell''impostazione DefaultTimeToLive dell''entità e viene modificato automaticamente in caso affermativo. Visualizzare [scadenza](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''indirizzo "to". Questa proprietà è riservata per l''uso futuro negli scenari di routing e viene attualmente ignorata dal broker. Le applicazioni possono usare questo valore nella regola-driven [concatenamento di inoltro automatico](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) scenari per indicare la destinazione logica prevista del messaggio.'
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le proprietà specifiche dell'applicazione che possono essere utilizzate per i metadati di messaggio personalizzato.
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessageInfo.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La chiave di partizione per l'invio di un messaggio in un'entità tramite una coda partizionata trasferimento. Lunghezza massima è 128 caratteri. Se un messaggio viene inviato tramite una coda di trasferimento nell'ambito di una transazione, questo valore seleziona la partizione della coda di trasferimento: Questa funzionalità equivale a `partitionKey` proprietà e assicura che i messaggi vengono mantenuti insieme e ordinati vengono trasferiti.
+      Visualizzare [trasferisce e invia tramite](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via).
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
