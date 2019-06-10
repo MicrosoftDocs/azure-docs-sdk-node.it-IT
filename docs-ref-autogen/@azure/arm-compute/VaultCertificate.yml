@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VaultCertificate'
+    name: VaultCertificate
+    fullName: VaultCertificate
+    children:
+      - '@azure/arm-compute.VaultCertificate.certificateStore'
+      - '@azure/arm-compute.VaultCertificate.certificateUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrive un riferimento al certificato singolo in un insieme di credenziali chiave e in cui il certificato deve trovarsi nella macchina virtuale.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateStore'
+    name: certificateStore
+    fullName: certificateStore
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Per le macchine virtuali Windows, specifica l''archivio certificati nella macchina virtuale in cui deve essere aggiunto il certificato. L''archivio certificati specificato in modo implicito è incluso nell''account di LocalMachine. <br><br>Per le macchine virtuali Linux, il file di certificato si trova sotto la directory /var/lib/waagent, con il nome del file &lt;UppercaseThumbprint&gt;CRT per X509 file del certificato e &lt;UppercaseThumbprint&gt;.prv per chiave privata. Entrambi questi file vengono formattati con estensione PEM.'
+    optional: true
+    syntax:
+      content: 'certificateStore?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Si tratta dell'URL di un certificato che è stato caricato in insieme di credenziali delle chiavi come segreto. Per l'aggiunta di un segreto all'insieme di credenziali chiave, vedere [aggiungere una chiave o un segreto all'insieme di credenziali chiave](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In questo caso, il certificato dovrà essere è la codifica Base64 del JSON seguente di oggetto che viene codificato in UTF-8: <br><br> {<br>  "dati": "< Base64-certificato con codifica->",<br>
+      "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

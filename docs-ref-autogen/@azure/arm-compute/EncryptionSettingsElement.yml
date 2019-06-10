@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.EncryptionSettingsElement'
+    name: EncryptionSettingsElement
+    fullName: EncryptionSettingsElement
+    children:
+      - '@azure/arm-compute.EncryptionSettingsElement.diskEncryptionKey'
+      - '@azure/arm-compute.EncryptionSettingsElement.keyEncryptionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: Impostazioni di crittografia per un volume.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.EncryptionSettingsElement.diskEncryptionKey'
+    name: diskEncryptionKey
+    fullName: diskEncryptionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id di Url segreto del key Vault e insieme di credenziali della chiave di crittografia del disco
+    optional: true
+    syntax:
+      content: 'diskEncryptionKey?: KeyVaultAndSecretReference'
+      return:
+        type:
+          - '@azure/arm-compute.KeyVaultAndSecretReference'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.EncryptionSettingsElement.keyEncryptionKey'
+    name: keyEncryptionKey
+    fullName: keyEncryptionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id chiave dell'insieme di credenziali chiave di Url e dell'insieme di credenziali della chiave di crittografia della chiave. KeyEncryptionKey è facoltativo e quando viene fornito viene usato per annullare il wrapping della chiave di crittografia del disco.
+    optional: true
+    syntax:
+      content: 'keyEncryptionKey?: KeyVaultAndKeyReference'
+      return:
+        type:
+          - '@azure/arm-compute.KeyVaultAndKeyReference'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.KeyVaultAndSecretReference'
+    name: KeyVaultAndSecretReference
+    spec.typeScript:
+      - name: KeyVaultAndSecretReference
+        fullName: KeyVaultAndSecretReference
+        uid: '@azure/arm-compute.KeyVaultAndSecretReference'
+  - uid: '@azure/arm-compute.KeyVaultAndKeyReference'
+    name: KeyVaultAndKeyReference
+    spec.typeScript:
+      - name: KeyVaultAndKeyReference
+        fullName: KeyVaultAndKeyReference
+        uid: '@azure/arm-compute.KeyVaultAndKeyReference'
