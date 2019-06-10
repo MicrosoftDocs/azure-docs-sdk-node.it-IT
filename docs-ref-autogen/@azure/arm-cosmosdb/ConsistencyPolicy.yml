@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy'
+    name: ConsistencyPolicy
+    fullName: ConsistencyPolicy
+    children:
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.defaultConsistencyLevel'
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.maxIntervalInSeconds'
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.maxStalenessPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: I criteri di coerenza per l'account del database Cosmos DB.
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.defaultConsistencyLevel'
+    name: defaultConsistencyLevel
+    fullName: defaultConsistencyLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''impostazione predefinita la coerenza a livello di e impostazioni di configurazione dell''account Cosmos DB. I valori possibili sono: ''Eventual'', ''Session'', ''BoundedStaleness'', ''Strong'', ''ConsistentPrefix'''
+    syntax:
+      content: 'defaultConsistencyLevel: DefaultConsistencyLevel'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.DefaultConsistencyLevel'
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.maxIntervalInSeconds'
+    name: maxIntervalInSeconds
+    fullName: maxIntervalInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se usato con il livello di coerenza decadimento ristretto, questo valore rappresenta la quantità di tempo di decadimento (in secondi) tollerata. L''intervallo consentito per questo valore è 5 86400. Obbligatorio quando defaultConsistencyPolicy è impostata su ''BoundedStaleness''.'
+    optional: true
+    syntax:
+      content: 'maxIntervalInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.maxStalenessPrefix'
+    name: maxStalenessPrefix
+    fullName: maxStalenessPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se usato con il livello di coerenza decadimento ristretto, questo valore rappresenta il numero di richieste non aggiornate tollerate. L''intervallo consentito per questo valore è compreso tra 1 e 2.147.483.647. Obbligatorio quando defaultConsistencyPolicy è impostata su ''BoundedStaleness''.'
+    optional: true
+    syntax:
+      content: 'maxStalenessPrefix?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.DefaultConsistencyLevel'
+    name: DefaultConsistencyLevel
+    spec.typeScript:
+      - name: DefaultConsistencyLevel
+        fullName: DefaultConsistencyLevel
+        uid: '@azure/arm-cosmosdb.DefaultConsistencyLevel'
