@@ -1,0 +1,483 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ReceivedMessage'
+    name: ReceivedMessage
+    fullName: ReceivedMessage
+    children:
+      - '@azure/service-bus.ReceivedMessage.abandon'
+      - '@azure/service-bus.ReceivedMessage.body'
+      - '@azure/service-bus.ReceivedMessage.complete'
+      - '@azure/service-bus.ReceivedMessage.contentType'
+      - '@azure/service-bus.ReceivedMessage.correlationId'
+      - '@azure/service-bus.ReceivedMessage.deadLetter'
+      - '@azure/service-bus.ReceivedMessage.deadLetterSource'
+      - '@azure/service-bus.ReceivedMessage.defer'
+      - '@azure/service-bus.ReceivedMessage.deliveryCount'
+      - '@azure/service-bus.ReceivedMessage.enqueuedSequenceNumber'
+      - '@azure/service-bus.ReceivedMessage.enqueuedTimeUtc'
+      - '@azure/service-bus.ReceivedMessage.expiresAtUtc'
+      - '@azure/service-bus.ReceivedMessage.label'
+      - '@azure/service-bus.ReceivedMessage.lockedUntilUtc'
+      - '@azure/service-bus.ReceivedMessage.lockToken'
+      - '@azure/service-bus.ReceivedMessage.messageId'
+      - '@azure/service-bus.ReceivedMessage.partitionKey'
+      - '@azure/service-bus.ReceivedMessage.replyTo'
+      - '@azure/service-bus.ReceivedMessage.replyToSessionId'
+      - '@azure/service-bus.ReceivedMessage.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.ReceivedMessage.sequenceNumber'
+      - '@azure/service-bus.ReceivedMessage.sessionId'
+      - '@azure/service-bus.ReceivedMessage.timeToLive'
+      - '@azure/service-bus.ReceivedMessage.to'
+      - '@azure/service-bus.ReceivedMessage.userProperties'
+      - '@azure/service-bus.ReceivedMessage.viaPartitionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="be163-101">Descrive il messaggio ricevuto dal Bus di servizio.</span><span class="sxs-lookup"><span data-stu-id="be163-101">Describes the message received from Service Bus.</span></span>
+    extends:
+      name: '@azure/service-bus.ReceivedMessageInfo'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.abandon'
+    name: 'abandon(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="be163-102">Il blocco del messaggio mantenuto dal ricevitore è consentire andare, rendendo il messaggio disponibile anche in questo caso nel Bus di servizio per un''altra operazione di ricezione.</span><span class="sxs-lookup"><span data-stu-id="be163-102">The lock held on the message by the receiver is let go, making the message available again in Service Bus for another receive operation.</span></span>'
+    syntax:
+      content: 'function abandon(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            <span data-ttu-id="be163-103">Le proprietà del messaggio da modificare durante l'abbandono del messaggio.</span><span class="sxs-lookup"><span data-stu-id="be163-103">The properties of the message to modify while abandoning the message.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="be163-104">Il corpo del messaggio deve essere inviato o ricevuto è.</span><span class="sxs-lookup"><span data-stu-id="be163-104">The message body that needs to be sent or is received.</span></span>
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.complete'
+    name: complete()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="be163-105">Rimuove il messaggio dal Bus di servizio.</span><span class="sxs-lookup"><span data-stu-id="be163-105">Removes the message from Service Bus.</span></span>
+    syntax:
+      content: function complete()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be163-106">Il tipo di contenuto del messaggio.</span><span class="sxs-lookup"><span data-stu-id="be163-106">The content type of the message.</span></span> <span data-ttu-id="be163-107">Descrive facoltativamente il payload del messaggio, con un descrittore che segue il formato rfc2045, sezione 5, ad esempio "application/json".</span><span class="sxs-lookup"><span data-stu-id="be163-107">Optionally describes the payload of the message, with a descriptor following the format of RFC2045, Section 5, for example "application/json".</span></span>'
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="be163-108">L'identificatore di correlazione che consente a un'applicazione di specificare un contesto del messaggio per finalità di correlazione, ad esempio rispecchiando il MessageId di un messaggio in cui si risponde.</span><span class="sxs-lookup"><span data-stu-id="be163-108">The correlation identifier that allows an application to specify a context for the message for the purposes of correlation, for example reflecting the MessageId of a message that is being replied to.</span></span>
+      <span data-ttu-id="be163-109">Visualizzare [Routing dei messaggi e la correlazione](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span><span class="sxs-lookup"><span data-stu-id="be163-109">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deadLetter'
+    name: deadLetter(DeadLetterOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="be163-110">Sposta il messaggio nella coda secondaria dei messaggi non recapitabili.</span><span class="sxs-lookup"><span data-stu-id="be163-110">Moves the message to the deadletter sub-queue.</span></span> <span data-ttu-id="be163-111">Per ricevere un messaggio deadletted, creare un nuovo QueueClient/SubscriptionClient utilizzando il percorso per la coda secondaria dei messaggi non recapitabili.</span><span class="sxs-lookup"><span data-stu-id="be163-111">To receive a deadletted message, create a new QueueClient/SubscriptionClient using the path for the deadletter sub-queue.</span></span>'
+    syntax:
+      content: 'function deadLetter(options?: DeadLetterOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/service-bus.DeadLetterOptions'
+          description: |
+            <span data-ttu-id="be163-112">Le opzioni dei messaggi non recapitabili che possono essere fornite e rifiutarne il messaggio.</span><span class="sxs-lookup"><span data-stu-id="be163-112">The DeadLetter options that can be provided while rejecting the message.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deadLetterSource'
+    name: deadLetterSource
+    fullName: deadLetterSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be163-113">{string} [deadLetterSource] Il nome della coda o sottoscrizione in cui questo messaggio è stato accodato, prima che fosse non recapitabile.</span><span class="sxs-lookup"><span data-stu-id="be163-113">{string} [deadLetterSource] The name of the queue or subscription that this message was enqueued on, before it was deadlettered.</span></span> <span data-ttu-id="be163-114">Viene configurata solo nei messaggi impostati come non recapitabili e quindi inoltrati automaticamente dalla coda di messaggi non recapitabili a un''altra entità.</span><span class="sxs-lookup"><span data-stu-id="be163-114">Only set in messages that have been dead-lettered and subsequently auto-forwarded from the dead-letter queue to another entity.</span></span> <span data-ttu-id="be163-115">Indica l''entità in cui il messaggio è stato impostato come non recapitabile.</span><span class="sxs-lookup"><span data-stu-id="be163-115">Indicates the entity in which the message was dead-lettered.</span></span>'
+    optional: true
+    syntax:
+      content: 'deadLetterSource?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.defer'
+    name: 'defer(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="be163-116">Posticipa l''elaborazione del messaggio.</span><span class="sxs-lookup"><span data-stu-id="be163-116">Defers the processing of the message.</span></span> <span data-ttu-id="be163-117">Salvare il `sequenceNumber` del messaggio, per ricevere il messaggio utilizzando nuovamente in futuro il `receiveDeferredMessage` (metodo).</span><span class="sxs-lookup"><span data-stu-id="be163-117">Save the `sequenceNumber` of the message, in order to receive it message again in the future using the `receiveDeferredMessage` method.</span></span>'
+    syntax:
+      content: 'function defer(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            <span data-ttu-id="be163-118">Le proprietà del messaggio da modificare durante il rinvio del messaggio</span><span class="sxs-lookup"><span data-stu-id="be163-118">The properties of the message to modify while deferring the message</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deliveryCount'
+    name: deliveryCount
+    fullName: deliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be163-119">Numero di tentativi di recapito per questo messaggio.</span><span class="sxs-lookup"><span data-stu-id="be163-119">Number of deliveries that have been attempted for this message.</span></span> <span data-ttu-id="be163-120">Il conteggio viene incrementato quando un blocco del messaggio scade o se il messaggio viene abbandonato in modo esplicito usando la `abandon()` metodo sul messaggio.</span><span class="sxs-lookup"><span data-stu-id="be163-120">The count is incremented when a message lock expires, or the message is explicitly abandoned using the `abandon()` method on the message.</span></span>'
+    optional: true
+    syntax:
+      content: 'deliveryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.enqueuedSequenceNumber'
+    name: enqueuedSequenceNumber
+    fullName: enqueuedSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be163-121">Numero di sequenza del messaggio originale.</span><span class="sxs-lookup"><span data-stu-id="be163-121">The original sequence number of the message.</span></span> <span data-ttu-id="be163-122">Per i messaggi inoltrati automaticamente questa proprietà rispecchia il numero di sequenza assegnato inizialmente al messaggio nel punto di invio originale.</span><span class="sxs-lookup"><span data-stu-id="be163-122">For messages that have been auto-forwarded, this property reflects the sequence number that had first been assigned to the message at its original point of submission.</span></span>'
+    optional: true
+    syntax:
+      content: 'enqueuedSequenceNumber?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.enqueuedTimeUtc'
+    name: enqueuedTimeUtc
+    fullName: enqueuedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="be163-123">Istante UTC in corrispondenza del quale il messaggio ha stato accettato e archiviato nel Bus di servizio.</span><span class="sxs-lookup"><span data-stu-id="be163-123">The UTC instant at which the message has been accepted and stored in Service Bus.</span></span>
+    optional: true
+    syntax:
+      content: 'enqueuedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.expiresAtUtc'
+    name: expiresAtUtc
+    fullName: expiresAtUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be163-124">Istante UTC in cui il messaggio viene contrassegnato per la rimozione e non risulta più disponibile per il recupero dall''entità a causa della scadenza.</span><span class="sxs-lookup"><span data-stu-id="be163-124">The UTC instant at which the message is marked for removal and no longer available for retrieval from the entity due to expiration.</span></span> <span data-ttu-id="be163-125">Questa proprietà viene calcolata da 2 altre proprietà del messaggio: `enqueuedTimeUtc`  +  `timeToLive`.</span><span class="sxs-lookup"><span data-stu-id="be163-125">This property is computed from 2 other properties on the message: `enqueuedTimeUtc` + `timeToLive`.</span></span>'
+    optional: true
+    syntax:
+      content: 'expiresAtUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be163-126">L''etichetta specifica dell''applicazione.</span><span class="sxs-lookup"><span data-stu-id="be163-126">The application specific label.</span></span> <span data-ttu-id="be163-127">Questa proprietà consente all''applicazione di indicare lo scopo del messaggio al ricevitore in un modello standardizzato.</span><span class="sxs-lookup"><span data-stu-id="be163-127">This property enables the application to indicate the purpose of the message to the receiver in a standardized.</span></span> <span data-ttu-id="be163-128">moda, simile a una riga dell''oggetto messaggio di posta elettronica.</span><span class="sxs-lookup"><span data-stu-id="be163-128">fashion, similar to an email subject line.</span></span> <span data-ttu-id="be163-129">La proprietà AMQP mappata è "soggetta".</span><span class="sxs-lookup"><span data-stu-id="be163-129">The mapped AMQP property is "subject".</span></span>'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.lockedUntilUtc'
+    name: lockedUntilUtc
+    fullName: lockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="be163-130">Istante UTC fino alla quale viene mantenuto il messaggio bloccato nella coda/sottoscrizione.</span><span class="sxs-lookup"><span data-stu-id="be163-130">The UTC instant until which the message is held locked in the queue/subscription.</span></span>
+      <span data-ttu-id="be163-131">Alla scadenza del blocco, il `deliveryCount` viene incrementata e il messaggio è nuovamente disponibile per il recupero.</span><span class="sxs-lookup"><span data-stu-id="be163-131">When the lock expires, the `deliveryCount` is incremented and the message is again available for retrieval.</span></span>
+      - <span data-ttu-id="be163-132">Non applicabile quando il messaggio viene ricevuto in `ReceiveMode.receiveAndDelete` modalità.</span><span class="sxs-lookup"><span data-stu-id="be163-132">Not applicable when the message is received in `ReceiveMode.receiveAndDelete` mode.</span></span>
+    optional: true
+    syntax:
+      content: 'lockedUntilUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.lockToken'
+    name: lockToken
+    fullName: lockToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="be163-133">Il token di blocco è un riferimento al blocco mantenuto dal broker in `ReceiveMode.PeekLock` modalità.</span><span class="sxs-lookup"><span data-stu-id="be163-133">The lock token is a reference to the lock that is being held by the broker in `ReceiveMode.PeekLock` mode.</span></span> <span data-ttu-id="be163-134">I blocchi vengono utilizzati internamente finalizzazione dei messaggi, come spiegato nel [documentazione del prodotto in modo più dettagliato](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)</span><span class="sxs-lookup"><span data-stu-id="be163-134">Locks are used internally settle messages as explained in the [product documentation in more detail](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)</span></span>
+      - <span data-ttu-id="be163-135">Non applicabile quando il messaggio viene ricevuto in `ReceiveMode.receiveAndDelete` modalità.</span><span class="sxs-lookup"><span data-stu-id="be163-135">Not applicable when the message is received in `ReceiveMode.receiveAndDelete` mode.</span></span>
+    optional: true
+    syntax:
+      content: 'lockToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="be163-136">Questo identificatore di messaggio è un valore definito dall'applicazione che identifica in modo univoco il messaggio e il rispettivo payload.</span><span class="sxs-lookup"><span data-stu-id="be163-136">The message identifier is an application-defined value that uniquely identifies the message and its payload.</span></span>
+
+      <span data-ttu-id="be163-137">Note: Non sono consentiti i numeri non interi.</span><span class="sxs-lookup"><span data-stu-id="be163-137">Note: Numbers that are not whole integers are not allowed.</span></span>
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="be163-138">La chiave di partizione per l'invio di un messaggio a una tabella partizionata.</span><span class="sxs-lookup"><span data-stu-id="be163-138">The partition key for sending a message to a partitioned entity.</span></span>
+      <span data-ttu-id="be163-139">Lunghezza massima è 128 caratteri.</span><span class="sxs-lookup"><span data-stu-id="be163-139">Maximum length is 128 characters.</span></span> <span data-ttu-id="be163-140">Per le [entità partizionate](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning), la configurazione di questo valore consente di assegnare i messaggi correlati alla stessa partizione interna, in modo che l'ordine della sequenza di invio sia registrato correttamente.</span><span class="sxs-lookup"><span data-stu-id="be163-140">For [partitioned entities](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning), setting this value enables assigning related messages to the same internal partition, so that submission sequence order is correctly recorded.</span></span> <span data-ttu-id="be163-141">La partizione viene scelta in base a una funzione hash su questo valore e non può essere scelta direttamente.</span><span class="sxs-lookup"><span data-stu-id="be163-141">The partition is chosen by a hash function over this value and cannot be chosen directly.</span></span>
+      - <span data-ttu-id="be163-142">Per le entità con riconoscimento della sessione, il `sessionId` proprietà esegue l'override di questo valore.</span><span class="sxs-lookup"><span data-stu-id="be163-142">For session-aware entities, the `sessionId` property overrides this value.</span></span>
+      - <span data-ttu-id="be163-143">Per le entità non partizionate, chiave di partizione verrà ignorata</span><span class="sxs-lookup"><span data-stu-id="be163-143">For non partitioned entities, partition key will be ignored</span></span>
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be163-144">L''indirizzo di un''entità per l''invio di risposte da.</span><span class="sxs-lookup"><span data-stu-id="be163-144">The address of an entity to send replies to.</span></span> <span data-ttu-id="be163-145">Questo valore facoltativo e definito dall''applicazione è un modo standard per esprimere un percorso di risposta verso il ricevitore del messaggio.</span><span class="sxs-lookup"><span data-stu-id="be163-145">This optional and application-defined value is a standard way to express a reply path to the receiver of the message.</span></span> <span data-ttu-id="be163-146">Quando un mittente si aspetta una risposta, imposta il valore sul percorso assoluto o relativo della coda o dell''argomento a cui si prevede che venga inviata la risposta.</span><span class="sxs-lookup"><span data-stu-id="be163-146">When a sender expects a reply, it sets the value to the absolute or relative path of the queue or topic it expects the reply to be sent to.</span></span> <span data-ttu-id="be163-147">Visualizzare [Routing dei messaggi e la correlazione](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span><span class="sxs-lookup"><span data-stu-id="be163-147">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="be163-148">L'identificatore di sessione aumentando il `replyTo` indirizzo.</span><span class="sxs-lookup"><span data-stu-id="be163-148">The session identifier augmenting the `replyTo` address.</span></span>
+      <span data-ttu-id="be163-149">Lunghezza massima è 128 caratteri.</span><span class="sxs-lookup"><span data-stu-id="be163-149">Maximum length is 128 characters.</span></span> <span data-ttu-id="be163-150">Questo valore aumenta le informazioni di ReplyTo e specifica l'ID sessione deve essere impostato per la risposta quando inviato all'entità di risposta.</span><span class="sxs-lookup"><span data-stu-id="be163-150">This value augments the ReplyTo information and specifies which SessionId should be set for the reply when sent to the reply entity.</span></span>
+      <span data-ttu-id="be163-151">Visualizzare [Routing dei messaggi e la correlazione](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span><span class="sxs-lookup"><span data-stu-id="be163-151">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="be163-152">Data e ora in formato UTC in cui il messaggio verrà accodato.</span><span class="sxs-lookup"><span data-stu-id="be163-152">The date and time in UTC at which the message will be enqueued.</span></span> <span data-ttu-id="be163-153">Questa proprietà restituisce l'ora in formato UTC; Quando si imposta la proprietà, il valore di data/ora fornito deve essere anche in formato UTC.</span><span class="sxs-lookup"><span data-stu-id="be163-153">This property returns the time in UTC; when setting the property, the supplied DateTime value must also be in UTC.</span></span> <span data-ttu-id="be163-154">Questo valore è per l'invio messaggio ritardato.</span><span class="sxs-lookup"><span data-stu-id="be163-154">This value is for delayed message sending.</span></span>
+      <span data-ttu-id="be163-155">Si è usato per ritardare l'invio a un momento specifico in futuro i messaggi.</span><span class="sxs-lookup"><span data-stu-id="be163-155">It is utilized to delay messages sending to a specific time in the future.</span></span> <span data-ttu-id="be163-156">Tempo di accodamento dei messaggi non significa che i messaggi verranno inviati nello stesso momento.</span><span class="sxs-lookup"><span data-stu-id="be163-156">Message enqueuing time does not mean that the message will be sent at the same time.</span></span> <span data-ttu-id="be163-157">Otterrà accodati, ma ora di invio effettiva varia a seconda del carico di lavoro della coda e il relativo stato.</span><span class="sxs-lookup"><span data-stu-id="be163-157">It will get enqueued, but the actual sending time depends on the queue's workload and its state.</span></span>
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="be163-158">Il numero univoco assegnato a un messaggio dal Bus di servizio.</span><span class="sxs-lookup"><span data-stu-id="be163-158">The unique number assigned to a message by Service Bus.</span></span>
+      <span data-ttu-id="be163-159">Il numero di sequenza è un numero intero univoco a 64 bit assegnato a un messaggio quando viene accettato e archiviato dal broker. Viene usato come identificatore effettivo del messaggio.</span><span class="sxs-lookup"><span data-stu-id="be163-159">The sequence number is a unique 64-bit integer assigned to a message as it is accepted and stored by the broker and functions as its true identifier.</span></span> <span data-ttu-id="be163-160">Per le entità partizionate, i primi 16 bit rispecchiano l'identificatore della partizione.</span><span class="sxs-lookup"><span data-stu-id="be163-160">For partitioned entities, the topmost 16 bits reflect the partition identifier.</span></span> <span data-ttu-id="be163-161">Numeri di sequenza aumentano progressivo costante.</span><span class="sxs-lookup"><span data-stu-id="be163-161">Sequence numbers monotonically increase.</span></span>
+      <span data-ttu-id="be163-162">Viene eseguito il rollover a 0 all'esaurimento dell'intervallo compreso tra 48 e 64 bit.</span><span class="sxs-lookup"><span data-stu-id="be163-162">They roll over to 0 when the 48-64 bit range is exhausted.</span></span>
+
+      <span data-ttu-id="be163-163">**Max sicure su numeri interi** che Javascript attualmente supporta sia `2^53 - 1`.</span><span class="sxs-lookup"><span data-stu-id="be163-163">**Max safe integer** that Javascript currently supports is `2^53 - 1`.</span></span> <span data-ttu-id="be163-164">Il numero di sequenza è un AMQP `Long` tipo che può essere fino a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="be163-164">The sequence number is an AMQP `Long` type which can be upto 64 bits long.</span></span> <span data-ttu-id="be163-165">Per rappresentare che si sta usando una libreria denominata [long.js](https://github.com/dcodeIO/long.js).</span><span class="sxs-lookup"><span data-stu-id="be163-165">To represent that we are using a library named [long.js](https://github.com/dcodeIO/long.js).</span></span> <span data-ttu-id="be163-166">Si prevede che i clienti a usare il \*\* `Long` \*\* tipo esportato da questa libreria.</span><span class="sxs-lookup"><span data-stu-id="be163-166">We expect customers to use the **`Long`** type exported by this library.</span></span>
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: Long'
+      return:
+        type:
+          - Long
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="be163-167">Identificatore di sessione per un'entità con riconoscimento della sessione.</span><span class="sxs-lookup"><span data-stu-id="be163-167">The session identifier for a session-aware entity.</span></span> <span data-ttu-id="be163-168">Lunghezza massima è 128 caratteri.</span><span class="sxs-lookup"><span data-stu-id="be163-168">Maximum length is 128 characters.</span></span> <span data-ttu-id="be163-169">Per le entità con riconoscimento della sessione, questo valore definito dall'applicazione specifica l'affiliazione di sessione del messaggio.</span><span class="sxs-lookup"><span data-stu-id="be163-169">For session-aware entities, this application-defined value specifies the session affiliation of the message.</span></span> <span data-ttu-id="be163-170">I messaggi con lo stesso identificatore di sessione sono soggetti al blocco di riepilogo e consentono l'elaborazione esatta in ordine e il demultiplexing.</span><span class="sxs-lookup"><span data-stu-id="be163-170">Messages with the same session identifier are subject to summary locking and enable exact in-order processing and demultiplexing.</span></span> <span data-ttu-id="be163-171">Per le entità senza riconoscimento della sessione, questo valore viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="be163-171">For session-unaware entities, this value is ignored.</span></span>
+      <span data-ttu-id="be163-172">[Sessioni di messaggi](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).</span><span class="sxs-lookup"><span data-stu-id="be163-172">[Message Sessions](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).</span></span>
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be163-173">Valore time il messaggio ha to live.</span><span class="sxs-lookup"><span data-stu-id="be163-173">The message’s time to live value.</span></span> <span data-ttu-id="be163-174">Questo valore indica la durata relativa dopo cui il messaggio scade, a partire da nel momento in cui il messaggio è stato accettato e archiviato dal broker, acquisite `enqueuedTimeUtc`.</span><span class="sxs-lookup"><span data-stu-id="be163-174">This value is the relative duration after which the message expires, starting from the instant the message has been accepted and stored by the broker, as captured in `enqueuedTimeUtc`.</span></span> <span data-ttu-id="be163-175">Se non impostato in modo esplicito, il valore è il DefaultTimeToLive per la rispettiva coda o argomento.</span><span class="sxs-lookup"><span data-stu-id="be163-175">When not set explicitly, the assumed value is the DefaultTimeToLive for the respective queue or topic.</span></span> <span data-ttu-id="be163-176">Un livello di messaggio `timeToLive` valore non può contenere più lungo dell''impostazione DefaultTimeToLive dell''entità e viene modificato automaticamente in caso affermativo.</span><span class="sxs-lookup"><span data-stu-id="be163-176">A message-level `timeToLive` value cannot be longer than the entity''s DefaultTimeToLive setting and it is silently adjusted if it does.</span></span> <span data-ttu-id="be163-177">Visualizzare [scadenza](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).</span><span class="sxs-lookup"><span data-stu-id="be163-177">See [Expiration](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).</span></span>'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be163-178">L''indirizzo "to".</span><span class="sxs-lookup"><span data-stu-id="be163-178">The "to" address.</span></span> <span data-ttu-id="be163-179">Questa proprietà è riservata per l''uso futuro negli scenari di routing e viene attualmente ignorata dal broker.</span><span class="sxs-lookup"><span data-stu-id="be163-179">This property is reserved for future use in routing scenarios and presently ignored by the broker itself.</span></span> <span data-ttu-id="be163-180">Le applicazioni possono usare questo valore nella regola-driven [concatenamento di inoltro automatico](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) scenari per indicare la destinazione logica prevista del messaggio.</span><span class="sxs-lookup"><span data-stu-id="be163-180">Applications can use this value in rule-driven [auto-forward chaining](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) scenarios to indicate the intended logical destination of the message.</span></span>'
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="be163-181">Le proprietà specifiche dell'applicazione che possono essere utilizzate per i metadati di messaggio personalizzato.</span><span class="sxs-lookup"><span data-stu-id="be163-181">The application specific properties which can be used for custom message metadata.</span></span>
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="be163-182">La chiave di partizione per l'invio di un messaggio in un'entità tramite una coda partizionata trasferimento.</span><span class="sxs-lookup"><span data-stu-id="be163-182">The partition key for sending a message into an entity via a partitioned transfer queue.</span></span> <span data-ttu-id="be163-183">Lunghezza massima è 128 caratteri.</span><span class="sxs-lookup"><span data-stu-id="be163-183">Maximum length is 128 characters.</span></span> <span data-ttu-id="be163-184">Se un messaggio viene inviato tramite una coda di trasferimento nell'ambito di una transazione, questo valore seleziona la partizione della coda di trasferimento: Questa funzionalità equivale a `partitionKey` proprietà e assicura che i messaggi vengono mantenuti insieme e ordinati vengono trasferiti.</span><span class="sxs-lookup"><span data-stu-id="be163-184">If a message is sent via a transfer queue in the scope of a transaction, this value selects the transfer queue partition: This is functionally equivalent to `partitionKey` property and ensures that messages are kept together and in order as they are transferred.</span></span>
+      <span data-ttu-id="be163-185">Visualizzare [trasferisce e invia tramite](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via).</span><span class="sxs-lookup"><span data-stu-id="be163-185">See [Transfers and Send Via](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via).</span></span>
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceivedMessageInfo'
+    name: ReceivedMessageInfo
+    spec.typeScript:
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+  - uid: '@azure/service-bus.DeadLetterOptions'
+    name: DeadLetterOptions
+    spec.typeScript:
+      - name: DeadLetterOptions
+        fullName: DeadLetterOptions
+        uid: '@azure/service-bus.DeadLetterOptions'
