@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    fullName: SessionReceiverOptions
+    children:
+      - '@azure/service-bus.SessionReceiverOptions.maxSessionAutoRenewLockDurationInSeconds'
+      - '@azure/service-bus.SessionReceiverOptions.sessionId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Vengono descritte le opzioni passate al `createReceiver` metodo quando si usa una coda o una sottoscrizione con sessioni attivate.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiverOptions.maxSessionAutoRenewLockDurationInSeconds'
+    name: maxSessionAutoRenewLockDurationInSeconds
+    fullName: maxSessionAutoRenewLockDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La durata massima in secondi fino alla quale il blocco sulla sessione verrà rinnovata automaticamente dal sdk.
+      - **Default**: `300` secondi (5 minuti).
+      - **Per disabilitare il rinnovo autolock**, impostare questa proprietà su `0`.
+    optional: true
+    syntax:
+      content: 'maxSessionAutoRenewLockDurationInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiverOptions.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''id della sessione da cui i messaggi devono essere ricevuti. Se viene specificato null o non definito, il Bus di servizio sceglie una sessione casuale da sessioni disponibili.'
+    syntax:
+      content: 'sessionId: string | undefined'
+      return:
+        type:
+          - string | undefined
+    package: '@azure/service-bus'
