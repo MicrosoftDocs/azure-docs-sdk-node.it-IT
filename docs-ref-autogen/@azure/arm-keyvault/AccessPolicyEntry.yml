@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry'
+    name: AccessPolicyEntry
+    fullName: AccessPolicyEntry
+    children:
+      - '@azure/arm-keyvault.AccessPolicyEntry.applicationId'
+      - '@azure/arm-keyvault.AccessPolicyEntry.objectId'
+      - '@azure/arm-keyvault.AccessPolicyEntry.permissions'
+      - '@azure/arm-keyvault.AccessPolicyEntry.tenantId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Un'identità che hanno accesso a key vault. Tutte le identità nella matrice devono utilizzare lo stesso ID tenant come ID del tenant. dell'insieme di credenziali chiave
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.applicationId'
+    name: applicationId
+    fullName: applicationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID dell'applicazione del client che effettua richieste per conto di un'entità
+    optional: true
+    syntax:
+      content: 'applicationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.objectId'
+    name: objectId
+    fullName: objectId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''ID di oggetto di un utente, entità servizio o gruppo di sicurezza nel tenant di Azure Active Directory per l''insieme di credenziali. L''ID oggetto deve essere univoco per l''elenco dei criteri di accesso.'
+    syntax:
+      content: 'objectId: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.permissions'
+    name: permissions
+    fullName: permissions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Autorizzazioni di cui che dispone l''identità per le chiavi, segreti e certificati.'
+    syntax:
+      content: 'permissions: Permissions'
+      return:
+        type:
+          - '@azure/arm-keyvault.Permissions'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'ID tenant di Azure Active Directory che deve essere utilizzato per autenticare le richieste all'insieme di credenziali chiave.
+    syntax:
+      content: 'tenantId: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.Permissions'
+    name: Permissions
+    spec.typeScript:
+      - name: Permissions
+        fullName: Permissions
+        uid: '@azure/arm-keyvault.Permissions'
