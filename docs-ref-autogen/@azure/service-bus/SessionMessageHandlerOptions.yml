@@ -1,0 +1,48 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions'
+    name: SessionMessageHandlerOptions
+    fullName: SessionMessageHandlerOptions
+    children:
+      - '@azure/service-bus.SessionMessageHandlerOptions.autoComplete'
+      - '@azure/service-bus.SessionMessageHandlerOptions.maxConcurrentCalls'
+    langs:
+      - typeScript
+    type: interface
+    summary: Vengono descritte le opzioni passate al `registerMessageHandler` metodo quando si ricevono messaggi da una coda/sottoscrizione con sessioni attivate.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions.autoComplete'
+    name: autoComplete
+    fullName: autoComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica se il `complete()` metodo nel messaggio deve essere chiamato automaticamente dal sdk dopo che l'utente ha specificato il gestore onMessage è stato eseguito.
+      La chiamata a `complete()` su un messaggio lo rimuove dalla coda/sottoscrizione.
+      - **Default**: `true`.
+    optional: true
+    syntax:
+      content: 'autoComplete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions.maxConcurrentCalls'
+    name: maxConcurrentCalls
+    fullName: maxConcurrentCalls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il numero massimo di chiamate simultanee che possa rendere la libreria al gestore di messaggi dell'utente. Una volta raggiunto questo limite, non più messaggi verranno ricevuti finché almeno una delle chiamate al gestore di messaggi dell'utente è stata completata.
+      - **Default**: `1`.
+    optional: true
+    syntax:
+      content: 'maxConcurrentCalls?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
