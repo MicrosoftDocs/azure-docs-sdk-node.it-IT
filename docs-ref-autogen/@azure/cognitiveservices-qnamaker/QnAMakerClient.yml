@@ -105,23 +105,23 @@ items:
           - '@azure/cognitiveservices-qnamaker.Operations'
     package: '@azure/cognitiveservices-qnamaker'
   - uid: '@azure/cognitiveservices-qnamaker.QnAMakerClient.constructor'
-    name: 'QnAMakerClient(string, ServiceClientCredentials, msRest.ServiceClientOptions)'
+    name: 'QnAMakerClient(ServiceClientCredentials, string, msRest.ServiceClientOptions)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: Inizializza una nuova istanza della classe QnAMakerClient.
     syntax:
-      content: 'new QnAMakerClient(endpoint: string, credentials: ServiceClientCredentials, options?: msRest.ServiceClientOptions)'
+      content: 'new QnAMakerClient(credentials: ServiceClientCredentials, endpoint: string, options?: msRest.ServiceClientOptions)'
       parameters:
-        - id: endpoint
-          type:
-            - string
-          description: 'Endpoint di servizi cognitivi supportati (protocollo e il nome host, ad esempio: https://westus.api.cognitive.microsoft.com).'
         - id: credentials
           type:
             - ServiceClientCredentials
           description: Credenziali della sottoscrizione che lo identificano in modo univoco la sottoscrizione client.
+        - id: endpoint
+          type:
+            - string
+          description: 'Endpoint di servizi cognitivi supportati (protocollo e il nome host, ad esempio: https://westus.api.cognitive.microsoft.com).'
         - id: options
           type:
             - msRest.ServiceClientOptions
