@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withAuthFile_1'
+    name: withAuthFile(LoginWithAuthFileOptions)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Prima di questo metodo, installare az cli dal https://github.com/Azure/azure-cli/releases. Eseguire quindi `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.
+      Se si desidera creare stored procedure per un altro cloud o ambiente, eseguire:
+      1. elenco di AZ cloud
+      2. cloud AZ set – n <name of the environment>
+      3. az ad sp create-for-rbac --sdk-auth > auth.json // create sp with secret **OR**
+      3. az ad sp create-for-rbac --create-cert --sdk-auth > auth.json // create sp with certificate If the service principal is already created then login with service principal info:
+      4. az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId>
+      5. Azure account show - sdk-auth > auth.json autentica utilizzando le informazioni dell'entità servizio fornite nel file di autenticazione. Questo metodo imposterà l'ID sottoscrizione dal file di autenticazione per l'utente specificato variabile di ambiente nel parametro options o il valore predefinito "AZURE_SUBSCRIPTION_ID".
+    syntax:
+      content: 'function withAuthFile(options: LoginWithAuthFileOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+          description: ''
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+    name: LoginWithAuthFileOptions
+    spec.typeScript:
+      - name: LoginWithAuthFileOptions
+        fullName: LoginWithAuthFileOptions
+        uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    name: TokenCredentialsBase>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TokenCredentialsBase
+        fullName: TokenCredentialsBase
+        uid: '@azure/ms-rest-nodeauth.TokenCredentialsBase'
+      - name: '>'
+        fullName: '>'
