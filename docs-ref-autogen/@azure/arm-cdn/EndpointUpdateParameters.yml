@@ -1,0 +1,232 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters'
+    name: EndpointUpdateParameters
+    fullName: EndpointUpdateParameters
+    children:
+      - '@azure/arm-cdn.EndpointUpdateParameters.contentTypesToCompress'
+      - '@azure/arm-cdn.EndpointUpdateParameters.deliveryPolicy'
+      - '@azure/arm-cdn.EndpointUpdateParameters.geoFilters'
+      - '@azure/arm-cdn.EndpointUpdateParameters.isCompressionEnabled'
+      - '@azure/arm-cdn.EndpointUpdateParameters.isHttpAllowed'
+      - '@azure/arm-cdn.EndpointUpdateParameters.isHttpsAllowed'
+      - '@azure/arm-cdn.EndpointUpdateParameters.optimizationType'
+      - '@azure/arm-cdn.EndpointUpdateParameters.originHostHeader'
+      - '@azure/arm-cdn.EndpointUpdateParameters.originPath'
+      - '@azure/arm-cdn.EndpointUpdateParameters.probePath'
+      - '@azure/arm-cdn.EndpointUpdateParameters.queryStringCachingBehavior'
+      - '@azure/arm-cdn.EndpointUpdateParameters.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: Proprietà necessarie per creare o aggiornare un endpoint.
+    extends:
+      name: BaseResource
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.contentTypesToCompress'
+    name: contentTypesToCompress
+    fullName: contentTypesToCompress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco di tipi di contenuto su cui viene applicata la compressione. Il valore deve essere un tipo MIME valido.
+    optional: true
+    syntax:
+      content: 'contentTypesToCompress?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.deliveryPolicy'
+    name: deliveryPolicy
+    fullName: deliveryPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Criteri che specificano le regole di recapito da utilizzare per un endpoint.
+    optional: true
+    syntax:
+      content: 'deliveryPolicy?: EndpointPropertiesUpdateParametersDeliveryPolicy'
+      return:
+        type:
+          - '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.geoFilters'
+    name: geoFilters
+    fullName: geoFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Elenco di regole che definiscono l''accesso dell''utente geografica all''interno di un endpoint della rete CDN. Ogni filtro geografico definisce una regola di accesso a un percorso specificato o il contenuto, ad esempio, per percorso /immagini/ blocco APAC'
+    optional: true
+    syntax:
+      content: 'geoFilters?: GeoFilter[]'
+      return:
+        type:
+          - '@azure/arm-cdn.GeoFilter[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.isCompressionEnabled'
+    name: isCompressionEnabled
+    fullName: isCompressionEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indica se è abilitata la compressione del contenuto sulla rete CDN. Il valore predefinito è False. Se la compressione è abilitata, verrà distribuito come contenuto compresso se le richieste utente per una versione compressa. Il contenuto non verrà compresso sulla rete CDN quando il contenuto richiesto è minore di 1 byte o superiori a 1 MB.'
+    optional: true
+    syntax:
+      content: 'isCompressionEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.isHttpAllowed'
+    name: isHttpAllowed
+    fullName: isHttpAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indica se è consentito il traffico HTTP nell'endpoint. Valore predefinito è true. È necessario consentire almeno un protocollo (HTTP o HTTPS).
+    optional: true
+    syntax:
+      content: 'isHttpAllowed?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.isHttpsAllowed'
+    name: isHttpsAllowed
+    fullName: isHttpsAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indica se è consentito il traffico HTTPS sull'endpoint. Valore predefinito è true. È necessario consentire almeno un protocollo (HTTP o HTTPS).
+    optional: true
+    syntax:
+      content: 'isHttpsAllowed?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.optimizationType'
+    name: optimizationType
+    fullName: optimizationType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Specifica quale scenario il cliente vuole raggiungere l''endpoint della rete CDN per ottimizzare le, ad esempio, scaricare, servizi multimediali. Con queste informazioni, della rete CDN può applicare uno scenario basato su ottimizzazione. I valori possibili sono: ''GeneralWebDelivery'', ''GeneralMediaStreaming'', ''VideoOnDemandMediaStreaming'', ''LargeFileDownload'', ''DynamicSiteAcceleration'''
+    optional: true
+    syntax:
+      content: 'optimizationType?: OptimizationType'
+      return:
+        type:
+          - '@azure/arm-cdn.OptimizationType'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.originHostHeader'
+    name: originHostHeader
+    fullName: originHostHeader
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il valore dell''intestazione host inviato all''origine con ogni richiesta. Se si omette questo, il nome host della richiesta determina il valore. Origini rete CDN Azure, ad esempio App Web, archiviazione Blob e servizi Cloud di richiedono questo valore di intestazione host corrisponda al nome di host di origine per impostazione predefinita.'
+    optional: true
+    syntax:
+      content: 'originHostHeader?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.originPath'
+    name: originPath
+    fullName: originPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un percorso di directory di origine utilizzabili per recuperare il contenuto da, ad esempio contoso.cloudapp.net/originpath della rete CDN.'
+    optional: true
+    syntax:
+      content: 'originPath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.probePath'
+    name: probePath
+    fullName: probePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Percorso di un file ospitato nell'origine che consente di accelerare la distribuzione del contenuto dinamico e calcolare le route più ottimale per la rete CDN. Ciò è relativo al percorso di origine.
+    optional: true
+    syntax:
+      content: 'probePath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.queryStringCachingBehavior'
+    name: queryStringCachingBehavior
+    fullName: queryStringCachingBehavior
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Definisce la modalità della rete CDN memorizza nella cache le richieste che includono le stringhe di query. È possibile ignorare eventuali stringhe di query quando la memorizzazione nella cache, ignorare la memorizzazione nella cache per evitare le richieste che contengono le stringhe di query da memorizzazione nella cache o memorizzare nella cache di ogni richiesta con URL univoco. I valori possibili sono: ''IgnoreQueryString'', ''BypassCaching'', ''UseQueryString'', ''NotSet'''
+    optional: true
+    syntax:
+      content: 'queryStringCachingBehavior?: QueryStringCachingBehavior'
+      return:
+        type:
+          - '@azure/arm-cdn.QueryStringCachingBehavior'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tag dell'endpoint.
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+    name: EndpointPropertiesUpdateParametersDeliveryPolicy
+    spec.typeScript:
+      - name: EndpointPropertiesUpdateParametersDeliveryPolicy
+        fullName: EndpointPropertiesUpdateParametersDeliveryPolicy
+        uid: '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+  - uid: '@azure/arm-cdn.GeoFilter[]'
+    name: 'GeoFilter[]'
+    spec.typeScript:
+      - name: GeoFilter
+        fullName: GeoFilter
+        uid: '@azure/arm-cdn.GeoFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-cdn.OptimizationType'
+    name: OptimizationType
+    spec.typeScript:
+      - name: OptimizationType
+        fullName: OptimizationType
+        uid: '@azure/arm-cdn.OptimizationType'
+  - uid: '@azure/arm-cdn.QueryStringCachingBehavior'
+    name: QueryStringCachingBehavior
+    spec.typeScript:
+      - name: QueryStringCachingBehavior
+        fullName: QueryStringCachingBehavior
+        uid: '@azure/arm-cdn.QueryStringCachingBehavior'

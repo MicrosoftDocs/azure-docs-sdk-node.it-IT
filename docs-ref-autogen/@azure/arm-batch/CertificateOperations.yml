@@ -1,0 +1,685 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batch.CertificateOperations'
+    name: CertificateOperations
+    fullName: CertificateOperations
+    children:
+      - '@azure/arm-batch.CertificateOperations.beginCreate'
+      - '@azure/arm-batch.CertificateOperations.beginDeleteMethod'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion_2'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion_1'
+      - '@azure/arm-batch.CertificateOperations.constructor'
+      - '@azure/arm-batch.CertificateOperations.create'
+      - '@azure/arm-batch.CertificateOperations.deleteMethod'
+      - '@azure/arm-batch.CertificateOperations.get'
+      - '@azure/arm-batch.CertificateOperations.get_2'
+      - '@azure/arm-batch.CertificateOperations.get_1'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount_2'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount_1'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_2'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_1'
+      - '@azure/arm-batch.CertificateOperations.update_2'
+      - '@azure/arm-batch.CertificateOperations.update'
+      - '@azure/arm-batch.CertificateOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe che rappresenta un CertificateOperations.
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.beginCreate'
+    name: 'beginCreate(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateBeginCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un nuovo certificato all'interno dell'account specificato.
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateBeginCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: Parametri aggiuntivi per la creazione del certificato.
+        - id: options
+          type:
+            - Models.CertificateBeginCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elimina il certificato specificato.
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion'
+    name: 'cancelDeletion(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Se si prova a eliminare un certificato è usato da un pool o nodo di calcolo, lo stato del certificato passa a eliminazione non riuscita. Se si decide che si desidera continuare a usare il certificato, è possibile utilizzare questa operazione per impostare lo stato del certificato su attivo. Se si intende eliminare il certificato, non devi eseguire questa operazione dopo l''eliminazione non riuscita. È necessario assicurarsi che il certificato non è utilizzato da tutte le risorse e quindi è possibile tentare nuovamente di eliminare il certificato.'
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion_2'
+    name: 'cancelDeletion(string, string, string, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion_1'
+    name: 'cancelDeletion(string, string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.constructor'
+    name: CertificateOperations(BatchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creare un CertificateOperations.
+    syntax:
+      content: 'new CertificateOperations(client: BatchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batch.BatchManagementClientContext'
+          description: |
+            Riferimento al client del servizio.
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.create'
+    name: 'create(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un nuovo certificato all'interno dell'account specificato.
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: Parametri aggiuntivi per la creazione del certificato.
+        - id: options
+          type:
+            - Models.CertificateCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateCreateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elimina il certificato specificato.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateDeleteResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ottiene informazioni sul certificato specificato.
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get_1'
+    name: 'get(string, string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount_2'
+    name: 'listByBatchAccount(string, string, CertificateListByBatchAccountOptionalParams, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options: CertificateListByBatchAccountOptionalParams, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: options
+          type:
+            - '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount'
+    name: 'listByBatchAccount(string, string, Models.CertificateListByBatchAccountOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elenca tutti i certificati nell'account specificato.
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options?: Models.CertificateListByBatchAccountOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: options
+          type:
+            - Models.CertificateListByBatchAccountOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount_1'
+    name: 'listByBatchAccount(string, string, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext'
+    name: 'listByBatchAccountNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elenca tutti i certificati nell'account specificato.
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_2'
+    name: 'listByBatchAccountNext(string, RequestOptionsBase, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_1'
+    name: 'listByBatchAccountNext(string, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update_2'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, CertificateUpdateOptionalParams, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options: CertificateUpdateOptionalParams, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: Certificati di entità da aggiornare.
+        - id: options
+          type:
+            - '@azure/arm-batch.CertificateUpdateOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Aggiorna le proprietà di un certificato esistente.
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: Certificati di entità da aggiornare.
+        - id: options
+          type:
+            - Models.CertificateUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update_1'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse che contiene l'account Batch.
+        - id: accountName
+          type:
+            - string
+          description: Nome dell'account Batch.
+        - id: certificateName
+          type:
+            - string
+          description: L'identificatore per il certificato. Questo deve essere composto da algoritmo e identificazione digitale separati da un trattino e deve corrispondere i dati del certificato nella richiesta. Ad esempio SHA1 a3d1c5.
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: Certificati di entità da aggiornare.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+references:
+  - uid: '@azure/arm-batch.BatchManagementClientContext'
+    name: BatchManagementClientContext
+    spec.typeScript:
+      - name: BatchManagementClientContext
+        fullName: BatchManagementClientContext
+        uid: '@azure/arm-batch.BatchManagementClientContext'
+  - uid: '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+    name: CertificateCreateOrUpdateParameters
+    spec.typeScript:
+      - name: CertificateCreateOrUpdateParameters
+        fullName: CertificateCreateOrUpdateParameters
+        uid: '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-batch.Certificate>
+    name: Certificate>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Certificate
+        fullName: Certificate
+        uid: '@azure/arm-batch.Certificate'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+    name: ListCertificatesResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListCertificatesResult
+        fullName: ListCertificatesResult
+        uid: '@azure/arm-batch.ListCertificatesResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+    name: CertificateListByBatchAccountOptionalParams
+    spec.typeScript:
+      - name: CertificateListByBatchAccountOptionalParams
+        fullName: CertificateListByBatchAccountOptionalParams
+        uid: '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+  - uid: '@azure/arm-batch.CertificateUpdateOptionalParams'
+    name: CertificateUpdateOptionalParams
+    spec.typeScript:
+      - name: CertificateUpdateOptionalParams
+        fullName: CertificateUpdateOptionalParams
+        uid: '@azure/arm-batch.CertificateUpdateOptionalParams'
