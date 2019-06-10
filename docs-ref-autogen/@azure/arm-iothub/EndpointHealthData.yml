@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.EndpointHealthData'
+    name: EndpointHealthData
+    fullName: EndpointHealthData
+    children:
+      - '@azure/arm-iothub.EndpointHealthData.endpointId'
+      - '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: I dati di integrità per un endpoint
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.endpointId'
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID dell'endpoint
+    optional: true
+    syntax:
+      content: 'endpointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    name: healthStatus
+    fullName: healthStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Stati di integrità con seguenti significati. Lo stato ''integro'' Mostra che l''endpoint accetta i messaggi nel modo previsto. Lo stato ''integro'' indica che l''endpoint non accetta i messaggi come previsto e nuovo tentativo dell''IoT Hub per inviare dati a questo endpoint. Lo stato di un endpoint integro verrà aggiornato in integro quando l''IoT Hub ha stabilito uno stato di integrità con coerenza finale. Lo stato "inattivo" Mostra che l''endpoint non accetta i messaggi, dopo che l''IoT Hub ritentare l''invio di messaggi per il periodo retrial. Visualizzare le metriche dell''IoT Hub per identificare gli errori e il monitoraggio dei problemi con gli endpoint. Lo stato "sconosciuto" Mostra che l''IoT Hub non ha stabilito una connessione con l''endpoint. Nessun messaggio è stato recapitato o rifiutato da questo endpoint. I valori possibili sono: ''unknown", ''integro'', ''integro'', ''dead'''
+    optional: true
+    syntax:
+      content: 'healthStatus?: EndpointHealthStatus'
+      return:
+        type:
+          - '@azure/arm-iothub.EndpointHealthStatus'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.EndpointHealthStatus'
+    name: EndpointHealthStatus
+    spec.typeScript:
+      - name: EndpointHealthStatus
+        fullName: EndpointHealthStatus
+        uid: '@azure/arm-iothub.EndpointHealthStatus'

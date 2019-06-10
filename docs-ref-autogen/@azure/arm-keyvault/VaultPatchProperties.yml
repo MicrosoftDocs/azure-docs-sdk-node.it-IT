@@ -1,0 +1,198 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.VaultPatchProperties'
+    name: VaultPatchProperties
+    fullName: VaultPatchProperties
+    children:
+      - '@azure/arm-keyvault.VaultPatchProperties.accessPolicies'
+      - '@azure/arm-keyvault.VaultPatchProperties.createMode'
+      - '@azure/arm-keyvault.VaultPatchProperties.enabledForDeployment'
+      - '@azure/arm-keyvault.VaultPatchProperties.enabledForDiskEncryption'
+      - '@azure/arm-keyvault.VaultPatchProperties.enabledForTemplateDeployment'
+      - '@azure/arm-keyvault.VaultPatchProperties.enablePurgeProtection'
+      - '@azure/arm-keyvault.VaultPatchProperties.enableSoftDelete'
+      - '@azure/arm-keyvault.VaultPatchProperties.networkAcls'
+      - '@azure/arm-keyvault.VaultPatchProperties.sku'
+      - '@azure/arm-keyvault.VaultPatchProperties.tenantId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Proprietà dell'insieme di credenziali
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.accessPolicies'
+    name: accessPolicies
+    fullName: accessPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Matrice di identità da 0 a 16 che hanno accesso a key vault. Tutte le identità nella matrice devono utilizzare lo stesso ID tenant come ID del tenant. dell'insieme di credenziali chiave
+    optional: true
+    syntax:
+      content: 'accessPolicies?: AccessPolicyEntry[]'
+      return:
+        type:
+          - '@azure/arm-keyvault.AccessPolicyEntry[]'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Modalità per indicare se l''insieme di credenziali devono essere ripristinati o non di creazione dell''insieme di credenziali. I valori possibili sono: ''Ripristina'', ''default'''
+    optional: true
+    syntax:
+      content: 'createMode?: CreateMode'
+      return:
+        type:
+          - '@azure/arm-keyvault.CreateMode'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enabledForDeployment'
+    name: enabledForDeployment
+    fullName: enabledForDeployment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Proprietà per specificare se le macchine virtuali di Azure sono autorizzate a recuperare certificati archiviati come segreti dall'insieme di credenziali chiave.
+    optional: true
+    syntax:
+      content: 'enabledForDeployment?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enabledForDiskEncryption'
+    name: enabledForDiskEncryption
+    fullName: enabledForDiskEncryption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Proprietà per specificare se crittografia dischi di Azure è la possibilità di recuperare i segreti dall'insieme di credenziali e annullamento del wrapping delle chiavi.
+    optional: true
+    syntax:
+      content: 'enabledForDiskEncryption?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enabledForTemplateDeployment'
+    name: enabledForTemplateDeployment
+    fullName: enabledForTemplateDeployment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Proprietà per specificare se è consentita recuperare segreti dall'insieme di credenziali di Azure Resource Manager.
+    optional: true
+    syntax:
+      content: 'enabledForTemplateDeployment?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enablePurgeProtection'
+    name: enablePurgeProtection
+    fullName: enablePurgeProtection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Proprietà che specifica se la protezione contro ripulire è abilitato per questo insieme di credenziali. Impostando questa proprietà su true attiva la protezione contro purge per questo insieme di credenziali e il relativo contenuto, solo il servizio Key Vault può avviare un''operazione di eliminazione dura, irreversibile. L''impostazione è efficace solo se l''eliminazione temporanea è abilitata. Abilitazione di questa funzionalità non può essere annullata: vale a dire, la proprietà non accetta false come relativo valore.'
+    optional: true
+    syntax:
+      content: 'enablePurgeProtection?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enableSoftDelete'
+    name: enableSoftDelete
+    fullName: enableSoftDelete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Proprietà per specificare se la funzionalità di 'eliminazione temporanea' è abilitata per questo insieme di credenziali delle chiavi. Non accetta il valore false.
+    optional: true
+    syntax:
+      content: 'enableSoftDelete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.networkAcls'
+    name: networkAcls
+    fullName: networkAcls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una raccolta di regole che regolano l'accessibilità dell'insieme di credenziali da percorsi di rete specifici.
+    optional: true
+    syntax:
+      content: 'networkAcls?: NetworkRuleSet'
+      return:
+        type:
+          - '@azure/arm-keyvault.NetworkRuleSet'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dettagli SKU
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-keyvault.Sku'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'ID tenant di Azure Active Directory che deve essere utilizzato per autenticare le richieste all'insieme di credenziali chiave.
+    optional: true
+    syntax:
+      content: 'tenantId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry[]'
+    name: 'AccessPolicyEntry[]'
+    spec.typeScript:
+      - name: AccessPolicyEntry
+        fullName: AccessPolicyEntry
+        uid: '@azure/arm-keyvault.AccessPolicyEntry'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-keyvault.CreateMode'
+    name: CreateMode
+    spec.typeScript:
+      - name: CreateMode
+        fullName: CreateMode
+        uid: '@azure/arm-keyvault.CreateMode'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet'
+    name: NetworkRuleSet
+    spec.typeScript:
+      - name: NetworkRuleSet
+        fullName: NetworkRuleSet
+        uid: '@azure/arm-keyvault.NetworkRuleSet'
+  - uid: '@azure/arm-keyvault.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-keyvault.Sku'
