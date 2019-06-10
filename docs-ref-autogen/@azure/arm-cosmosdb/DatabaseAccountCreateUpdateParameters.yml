@@ -1,0 +1,287 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters'
+    name: DatabaseAccountCreateUpdateParameters
+    fullName: DatabaseAccountCreateUpdateParameters
+    children:
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.capabilities'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.consistencyPolicy'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.enableAutomaticFailover'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.enableMultipleWriteLocations'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.id'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.ipRangeFilter'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.isVirtualNetworkFilterEnabled'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.kind'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.location'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.locations'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.name'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.tags'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.type'
+      - '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.virtualNetworkRules'
+    langs:
+      - typeScript
+    type: interface
+    summary: I parametri per creare e aggiornare Cosmos DB account del database.
+    extends:
+      name: '@azure/arm-cosmosdb.Resource'
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.capabilities'
+    name: capabilities
+    fullName: capabilities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco delle funzionalità di Cosmos DB per l'account
+    optional: true
+    syntax:
+      content: 'capabilities?: Capability[]'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.Capability[]'
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.consistencyPolicy'
+    name: consistencyPolicy
+    fullName: consistencyPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: I criteri di coerenza per l'account Cosmos DB.
+    optional: true
+    syntax:
+      content: 'consistencyPolicy?: ConsistencyPolicy'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.ConsistencyPolicy'
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.enableAutomaticFailover'
+    name: enableAutomaticFailover
+    fullName: enableAutomaticFailover
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Abilita il failover automatico dell'area di scrittura nel raro caso che l'area è disponibile a causa di un'interruzione del servizio. Il failover automatico comporterà una nuova area di scrittura per l'account e viene selezionato in base la priorità di failover configurate per l'account.
+    optional: true
+    syntax:
+      content: 'enableAutomaticFailover?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.enableMultipleWriteLocations'
+    name: enableMultipleWriteLocations
+    fullName: enableMultipleWriteLocations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Abilita l'account scrivere in più posizioni
+    optional: true
+    syntax:
+      content: 'enableMultipleWriteLocations?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L'identificatore di risorsa univoco dell'account del database.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.ipRangeFilter'
+    name: ipRangeFilter
+    fullName: ipRangeFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Supporto del Firewall di COSMOS DB: Questo valore specifica il set di indirizzi IP o intervalli di indirizzi IP nel formato CIDR da includere come elenco di IP client per un determinato account di database consentiti. Gli intervalli di indirizzi IP o i singoli indirizzi IP devono essere delimitati da virgole e non devono contenere spazi.'
+    optional: true
+    syntax:
+      content: 'ipRangeFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.isVirtualNetworkFilterEnabled'
+    name: isVirtualNetworkFilterEnabled
+    fullName: isVirtualNetworkFilterEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Contrassegno che indica se abilitare o disabilitare le regole ACL di rete virtuale.
+    optional: true
+    syntax:
+      content: 'isVirtualNetworkFilterEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica il tipo di account di database. Questo può essere impostato solo in fase di creazione di account di database.
+      I valori possibili sono: 'GlobalDocumentDB', 'MongoDB', 'Parse'. Valore predefinito: 'GlobalDocumentDB'.
+    optional: true
+    syntax:
+      content: 'kind?: DatabaseAccountKind'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.DatabaseAccountKind'
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il percorso del gruppo di risorse a cui appartiene la risorsa.
+    optional: true
+    syntax:
+      content: 'location?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.locations'
+    name: locations
+    fullName: locations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Matrice che contiene i percorsi di replica geografica abilitati per l'account Cosmos DB.
+    syntax:
+      content: 'locations: Location[]'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.Location[]'
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il nome dell'account del database.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il tipo di risorsa di Azure.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountCreateUpdateParameters.virtualNetworkRules'
+    name: virtualNetworkRules
+    fullName: virtualNetworkRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco di regole ACL di rete virtuale configurata per l'account Cosmos DB.
+    optional: true
+    syntax:
+      content: 'virtualNetworkRules?: VirtualNetworkRule[]'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.VirtualNetworkRule[]'
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-cosmosdb.Resource'
+  - uid: '@azure/arm-cosmosdb.Capability[]'
+    name: 'Capability[]'
+    spec.typeScript:
+      - name: Capability
+        fullName: Capability
+        uid: '@azure/arm-cosmosdb.Capability'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy'
+    name: ConsistencyPolicy
+    spec.typeScript:
+      - name: ConsistencyPolicy
+        fullName: ConsistencyPolicy
+        uid: '@azure/arm-cosmosdb.ConsistencyPolicy'
+  - uid: '@azure/arm-cosmosdb.DatabaseAccountKind'
+    name: DatabaseAccountKind
+    spec.typeScript:
+      - name: DatabaseAccountKind
+        fullName: DatabaseAccountKind
+        uid: '@azure/arm-cosmosdb.DatabaseAccountKind'
+  - uid: '@azure/arm-cosmosdb.Location[]'
+    name: 'Location[]'
+    spec.typeScript:
+      - name: Location
+        fullName: Location
+        uid: '@azure/arm-cosmosdb.Location'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-cosmosdb.VirtualNetworkRule[]'
+    name: 'VirtualNetworkRule[]'
+    spec.typeScript:
+      - name: VirtualNetworkRule
+        fullName: VirtualNetworkRule
+        uid: '@azure/arm-cosmosdb.VirtualNetworkRule'
+      - name: '[]'
+        fullName: '[]'
