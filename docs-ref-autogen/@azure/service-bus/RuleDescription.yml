@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.RuleDescription'
+    name: RuleDescription
+    fullName: RuleDescription
+    children:
+      - '@azure/service-bus.RuleDescription.action'
+      - '@azure/service-bus.RuleDescription.filter'
+      - '@azure/service-bus.RuleDescription.name'
+    langs:
+      - typeScript
+    type: interface
+    summary: Rappresenta una regola su una sottoscrizione che viene usata per filtrare il messaggio in arrivo dalla sottoscrizione.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.action'
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Azione da eseguire se il messaggio soddisfa l'espressione di filtro.
+    optional: true
+    syntax:
+      content: 'action?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.filter'
+    name: filter
+    fullName: filter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Espressione di filtro utilizzata per individuare i messaggi. Supporta 2 tipi:
+      - `string`: Espressione della condizione simile a SQL che viene valutata in proprietà definite dall'utente e le proprietà di sistema dei messaggi. Tutte le proprietà di sistema dovrà essere precedute da `sys.` nell'espressione della condizione.
+      - `CorrelationFilter`: Proprietà del filtro da utilizzare per la corrispondenza con le proprietà del messaggio.
+    optional: true
+    syntax:
+      content: 'filter?: string | CorrelationFilter'
+      return:
+        type:
+          - string | @azure/service-bus.CorrelationFilter
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Rappresenta il nome della regola.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: string | @azure/service-bus.CorrelationFilter
+    name: CorrelationFilter
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: CorrelationFilter
+        fullName: CorrelationFilter
+        uid: '@azure/service-bus.CorrelationFilter'
