@@ -1,0 +1,737 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/storage-datalake.PathOperations'
+    name: PathOperations
+    fullName: PathOperations
+    children:
+      - '@azure/storage-datalake.PathOperations.create'
+      - '@azure/storage-datalake.PathOperations.create_2'
+      - '@azure/storage-datalake.PathOperations.create_1'
+      - '@azure/storage-datalake.PathOperations.deleteMethod'
+      - '@azure/storage-datalake.PathOperations.deleteMethod_2'
+      - '@azure/storage-datalake.PathOperations.deleteMethod_1'
+      - '@azure/storage-datalake.PathOperations.getProperties'
+      - '@azure/storage-datalake.PathOperations.getProperties_2'
+      - '@azure/storage-datalake.PathOperations.getProperties_1'
+      - '@azure/storage-datalake.PathOperations.lease'
+      - '@azure/storage-datalake.PathOperations.lease_2'
+      - '@azure/storage-datalake.PathOperations.lease_1'
+      - '@azure/storage-datalake.PathOperations.list'
+      - '@azure/storage-datalake.PathOperations.list_2'
+      - '@azure/storage-datalake.PathOperations.list_1'
+      - '@azure/storage-datalake.PathOperations.constructor'
+      - '@azure/storage-datalake.PathOperations.read'
+      - '@azure/storage-datalake.PathOperations.read_2'
+      - '@azure/storage-datalake.PathOperations.read_1'
+      - '@azure/storage-datalake.PathOperations.update'
+      - '@azure/storage-datalake.PathOperations.update_2'
+      - '@azure/storage-datalake.PathOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe che rappresenta un PathOperations.
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create'
+    name: 'create(string, string, Models.PathCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Creare o rinominare un file o directory.    Per impostazione predefinita, la destinazione viene sovrascritto e se la destinazione esiste già e contiene un lease il lease viene interrotta.  Questa operazione supporta richieste HTTP condizionali.  Per altre informazioni, vedere [specifica di intestazioni condizionali per le operazioni del servizio Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).
+      Per avere esito negativo se la destinazione esiste già, usare una richiesta condizionale con If-None-Match: "*".
+    syntax:
+      content: 'function create(filesystem: string, path: string, options?: Models.PathCreateOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - Models.PathCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create_2'
+    name: 'create(string, string, PathCreateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, path: string, options: PathCreateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathCreateOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create_1'
+    name: 'create(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod'
+    name: 'deleteMethod(string, string, Models.PathDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Eliminare il file o directory. Questa operazione supporta richieste HTTP condizionali.  Per altre informazioni, vedere [specifica di intestazioni condizionali per le operazioni del servizio Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).'
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, options?: Models.PathDeleteMethodOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - Models.PathDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod_2'
+    name: 'deleteMethod(string, string, PathDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, options: PathDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties'
+    name: 'getProperties(string, string, Models.PathGetPropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Ottenere le proprietà per un file o directory e, facoltativamente, includere l'elenco di controllo di accesso.
+      Questa operazione supporta richieste HTTP condizionali.  Per altre informazioni, vedere [specifica di intestazioni condizionali per le operazioni del servizio Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, options?: Models.PathGetPropertiesOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - Models.PathGetPropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties_2'
+    name: 'getProperties(string, string, PathGetPropertiesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, options: PathGetPropertiesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties_1'
+    name: 'getProperties(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease'
+    name: 'lease(Models.PathLeaseAction, string, string, Models.PathLeaseOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Creare e gestire un lease per limitare scrittura ed eliminazione di accesso al percorso. Questa operazione supporta richieste HTTP condizionali.  Per altre informazioni, vedere [specifica di intestazioni condizionali per le operazioni del servizio Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).'
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, options?: Models.PathLeaseOptionalParams)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            Esistono cinque azioni del lease: "acquisire", "break", "Modifica", "renew" e "rilascio". Utilizzare "acquisire" e specificare la "x-ms-proposto-lease-id" e "x-ms-lease-duration" per acquisire un nuovo lease. Usare "Interrompi" per interrompere un lease esistente. Quando un lease viene interrotto, il periodo di interruzione può trascorrere, durante i quali è non possibile effettuare alcuna operazione di lease, ad eccezione di interruzione e di rilascio con il file. Quando un lease viene interrotto correttamente, la risposta indica l'intervallo in secondi fino a quando non è possibile acquisire un nuovo lease. Usare "Modifica" e specificare l'ID lease corrente in "x-ms-lease-id" e il nuovo ID lease in "x-ms-proposto-lease-id" per modificare l'ID lease di un lease attivo. Utilizzare "rinnovo" e specificare la "x-ms-lease-id" per rinnovare un lease esistente.
+            Utilizzare "rilascio" e specificare la "x-ms-lease-id" per rilasciare un lease. I valori possibili sono: 'acquisire', 'break', 'modifica', 'renew', 'release'
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - Models.PathLeaseOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease_2'
+    name: 'lease(Models.PathLeaseAction, string, string, PathLeaseOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, options: PathLeaseOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            Esistono cinque azioni del lease: "acquisire", "break", "Modifica", "renew" e "rilascio". Utilizzare "acquisire" e specificare la "x-ms-proposto-lease-id" e "x-ms-lease-duration" per acquisire un nuovo lease. Usare "Interrompi" per interrompere un lease esistente. Quando un lease viene interrotto, il periodo di interruzione può trascorrere, durante i quali è non possibile effettuare alcuna operazione di lease, ad eccezione di interruzione e di rilascio con il file. Quando un lease viene interrotto correttamente, la risposta indica l'intervallo in secondi fino a quando non è possibile acquisire un nuovo lease. Usare "Modifica" e specificare l'ID lease corrente in "x-ms-lease-id" e il nuovo ID lease in "x-ms-proposto-lease-id" per modificare l'ID lease di un lease attivo. Utilizzare "rinnovo" e specificare la "x-ms-lease-id" per rinnovare un lease esistente.
+            Utilizzare "rilascio" e specificare la "x-ms-lease-id" per rilasciare un lease. I valori possibili sono: 'acquisire', 'break', 'modifica', 'renew', 'release'
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathLeaseOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease_1'
+    name: 'lease(Models.PathLeaseAction, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            Esistono cinque azioni del lease: "acquisire", "break", "Modifica", "renew" e "rilascio". Utilizzare "acquisire" e specificare la "x-ms-proposto-lease-id" e "x-ms-lease-duration" per acquisire un nuovo lease. Usare "Interrompi" per interrompere un lease esistente. Quando un lease viene interrotto, il periodo di interruzione può trascorrere, durante i quali è non possibile effettuare alcuna operazione di lease, ad eccezione di interruzione e di rilascio con il file. Quando un lease viene interrotto correttamente, la risposta indica l'intervallo in secondi fino a quando non è possibile acquisire un nuovo lease. Usare "Modifica" e specificare l'ID lease corrente in "x-ms-lease-id" e il nuovo ID lease in "x-ms-proposto-lease-id" per modificare l'ID lease di un lease attivo. Utilizzare "rinnovo" e specificare la "x-ms-lease-id" per rinnovare un lease esistente.
+            Utilizzare "rilascio" e specificare la "x-ms-lease-id" per rilasciare un lease. I valori possibili sono: 'acquisire', 'break', 'modifica', 'renew', 'release'
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list'
+    name: 'list(boolean, string, Models.PathListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elencare i percorsi dei file System e le relative proprietà.
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, options?: Models.PathListOptionalParams)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: 'Se "true", vengono elencati tutti i percorsi di; in caso contrario, vengono elencati solo i percorsi nella radice del file System.  Se viene specificato "directory", l''elenco includerà solo i percorsi che condividono la stessa radice.'
+        - id: filesystem
+          type:
+            - string
+          description: 'L''identificatore del file System.  Il valore deve iniziare e terminare con una lettera o numeri e deve contenere solo lettere, numeri e il carattere trattino (-).  Non sono consentiti trattini consecutivi.  Tutte le lettere devono essere minuscole.  Il valore deve contenere tra 3 e 63 caratteri.'
+        - id: options
+          type:
+            - Models.PathListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list_2'
+    name: 'list(boolean, string, PathListOptionalParams, ServiceCallback<PathList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, options: PathListOptionalParams, callback: ServiceCallback<PathList>)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: 'Se "true", vengono elencati tutti i percorsi di; in caso contrario, vengono elencati solo i percorsi nella radice del file System.  Se viene specificato "directory", l''elenco includerà solo i percorsi che condividono la stessa radice.'
+        - id: filesystem
+          type:
+            - string
+          description: 'L''identificatore del file System.  Il valore deve iniziare e terminare con una lettera o numeri e deve contenere solo lettere, numeri e il carattere trattino (-).  Non sono consentiti trattini consecutivi.  Tutte le lettere devono essere minuscole.  Il valore deve contenere tra 3 e 63 caratteri.'
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathListOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.PathList>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list_1'
+    name: 'list(boolean, string, ServiceCallback<PathList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, callback: ServiceCallback<PathList>)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: 'Se "true", vengono elencati tutti i percorsi di; in caso contrario, vengono elencati solo i percorsi nella radice del file System.  Se viene specificato "directory", l''elenco includerà solo i percorsi che condividono la stessa radice.'
+        - id: filesystem
+          type:
+            - string
+          description: 'L''identificatore del file System.  Il valore deve iniziare e terminare con una lettera o numeri e deve contenere solo lettere, numeri e il carattere trattino (-).  Non sono consentiti trattini consecutivi.  Tutte le lettere devono essere minuscole.  Il valore deve contenere tra 3 e 63 caratteri.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.PathList>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.constructor'
+    name: PathOperations(DataLakeStorageClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creare un PathOperations.
+    syntax:
+      content: 'new PathOperations(client: DataLakeStorageClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/storage-datalake.DataLakeStorageClientContext'
+          description: |
+            Riferimento al client del servizio.
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read'
+    name: 'read(string, string, Models.PathReadOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Leggere il contenuto di un file.  Per operazioni di lettura, le richieste di intervalli sono supportate. Questa operazione supporta richieste HTTP condizionali.  Per altre informazioni, vedere [specifica di intestazioni condizionali per le operazioni del servizio Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).'
+    syntax:
+      content: 'function read(filesystem: string, path: string, options?: Models.PathReadOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - Models.PathReadOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read_2'
+    name: 'read(string, string, PathReadOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function read(filesystem: string, path: string, options: PathReadOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathReadOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read_1'
+    name: 'read(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function read(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update'
+    name: 'update(Models.PathUpdateAction, string, string, Models.PathUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Carica i dati da aggiungere a un file, scarica i dati caricati in precedenza (scritture) in un file, imposta le proprietà per un file o directory o imposta il controllo di accesso per un file o directory. I dati possono essere aggiunti solo in un file. Questa operazione supporta richieste HTTP condizionali. Per altre informazioni, vedere [specifica di intestazioni condizionali per le operazioni del servizio Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).'
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, options?: Models.PathUpdateOptionalParams)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: 'L''azione deve essere "Aggiungi" per caricare dati da aggiungere a un file, "cancellare" per scaricare i dati caricati in precedenza in un file, "setProperties" per impostare le proprietà di un file o directory, o "setAccessControl" per impostare il proprietario, gruppo, le autorizzazioni, o elenco di controllo di accesso un file o directory.  Si noti che Namespace gerarchico deve essere abilitata per l''account per usare il controllo di accesso.  Si noti inoltre che l''elenco di controllo di accesso (ACL) include le autorizzazioni per il proprietario, al gruppo proprietario e ad altri utenti, in modo che le intestazioni di richiesta di x-ms-permissions e x-ms-acl si escludono a vicenda. I valori possibili sono: ''Aggiungi'', ''flush'', ''setProperties'', ''setAccessControl'''
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - Models.PathUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update_2'
+    name: 'update(Models.PathUpdateAction, string, string, PathUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, options: PathUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: 'L''azione deve essere "Aggiungi" per caricare dati da aggiungere a un file, "cancellare" per scaricare i dati caricati in precedenza in un file, "setProperties" per impostare le proprietà di un file o directory, o "setAccessControl" per impostare il proprietario, gruppo, le autorizzazioni, o elenco di controllo di accesso un file o directory.  Si noti che Namespace gerarchico deve essere abilitata per l''account per usare il controllo di accesso.  Si noti inoltre che l''elenco di controllo di accesso (ACL) include le autorizzazioni per il proprietario, al gruppo proprietario e ad altri utenti, in modo che le intestazioni di richiesta di x-ms-permissions e x-ms-acl si escludono a vicenda. I valori possibili sono: ''Aggiungi'', ''flush'', ''setProperties'', ''setAccessControl'''
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathUpdateOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update_1'
+    name: 'update(Models.PathUpdateAction, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: 'L''azione deve essere "Aggiungi" per caricare dati da aggiungere a un file, "cancellare" per scaricare i dati caricati in precedenza in un file, "setProperties" per impostare le proprietà di un file o directory, o "setAccessControl" per impostare il proprietario, gruppo, le autorizzazioni, o elenco di controllo di accesso un file o directory.  Si noti che Namespace gerarchico deve essere abilitata per l''account per usare il controllo di accesso.  Si noti inoltre che l''elenco di controllo di accesso (ACL) include le autorizzazioni per il proprietario, al gruppo proprietario e ad altri utenti, in modo che le intestazioni di richiesta di x-ms-permissions e x-ms-acl si escludono a vicenda. I valori possibili sono: ''Aggiungi'', ''flush'', ''setProperties'', ''setAccessControl'''
+        - id: filesystem
+          type:
+            - string
+          description: L'identificatore del file System.
+        - id: path
+          type:
+            - string
+          description: Il percorso del file o directory.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+references:
+  - uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+    name: DataLakeStorageClientContext
+    spec.typeScript:
+      - name: DataLakeStorageClientContext
+        fullName: DataLakeStorageClientContext
+        uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+  - uid: '@azure/storage-datalake.PathCreateOptionalParams'
+    name: PathCreateOptionalParams
+    spec.typeScript:
+      - name: PathCreateOptionalParams
+        fullName: PathCreateOptionalParams
+        uid: '@azure/storage-datalake.PathCreateOptionalParams'
+  - uid: '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+    name: PathDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: PathDeleteMethodOptionalParams
+        fullName: PathDeleteMethodOptionalParams
+        uid: '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+  - uid: '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+    name: PathGetPropertiesOptionalParams
+    spec.typeScript:
+      - name: PathGetPropertiesOptionalParams
+        fullName: PathGetPropertiesOptionalParams
+        uid: '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+  - uid: '@azure/storage-datalake.PathLeaseOptionalParams'
+    name: PathLeaseOptionalParams
+    spec.typeScript:
+      - name: PathLeaseOptionalParams
+        fullName: PathLeaseOptionalParams
+        uid: '@azure/storage-datalake.PathLeaseOptionalParams'
+  - uid: ServiceCallback<@azure/storage-datalake.PathList>
+    name: PathList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PathList
+        fullName: PathList
+        uid: '@azure/storage-datalake.PathList'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/storage-datalake.PathListOptionalParams'
+    name: PathListOptionalParams
+    spec.typeScript:
+      - name: PathListOptionalParams
+        fullName: PathListOptionalParams
+        uid: '@azure/storage-datalake.PathListOptionalParams'
+  - uid: '@azure/storage-datalake.PathReadOptionalParams'
+    name: PathReadOptionalParams
+    spec.typeScript:
+      - name: PathReadOptionalParams
+        fullName: PathReadOptionalParams
+        uid: '@azure/storage-datalake.PathReadOptionalParams'
+  - uid: '@azure/storage-datalake.PathUpdateOptionalParams'
+    name: PathUpdateOptionalParams
+    spec.typeScript:
+      - name: PathUpdateOptionalParams
+        fullName: PathUpdateOptionalParams
+        uid: '@azure/storage-datalake.PathUpdateOptionalParams'
