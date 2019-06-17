@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkSecurityGroupRule'
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - '@azure/batch.NetworkSecurityGroupRule.access'
+      - '@azure/batch.NetworkSecurityGroupRule.priority'
+      - '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta NetworkSecurityGroupRule.
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.access'
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''azione da intraprendere per specificato IP indirizzo, intervallo di subnet o tag. I valori possibili sono: ''Consenti'', ''deny'''
+    syntax:
+      content: 'access: NetworkSecurityGroupRuleAccess'
+      return:
+        type:
+          - '@azure/batch.NetworkSecurityGroupRuleAccess'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La priorità per la regola. Priorità all''interno di un pool devono essere univoche e vengono valutate in ordine di priorità. Più è basso il numero, maggiore sarà la priorità. Ad esempio, è stato possibile specificare regole con numeri di ordine pari a 150, 250 e 350. La regola con il numero di ordine pari a 150 ha la precedenza sulla regola che ha un ordine pari a 250. La priorità consentita è 150 per 3500. Se i valori riservati o duplicati vengono forniti che la richiesta ha esito negativo con codice di stato HTTP 400.'
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il prefisso dell'indirizzo di origine o un tag per la regola. I valori validi sono un singolo indirizzo IP (ad esempio, 10.10.10.10), subnet IP (ad esempio 192.168.1.0/24), tag, predefinito o * (per tutti gli indirizzi).
+      Se altri valori vengono forniti che la richiesta ha esito negativo con codice di stato HTTP 400.
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
+    name: NetworkSecurityGroupRuleAccess
+    spec.typeScript:
+      - name: NetworkSecurityGroupRuleAccess
+        fullName: NetworkSecurityGroupRuleAccess
+        uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
