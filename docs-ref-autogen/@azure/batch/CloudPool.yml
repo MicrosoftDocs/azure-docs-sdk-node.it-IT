@@ -1,0 +1,654 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CloudPool'
+    name: CloudPool
+    fullName: CloudPool
+    children:
+      - '@azure/batch.CloudPool.allocationState'
+      - '@azure/batch.CloudPool.allocationStateTransitionTime'
+      - '@azure/batch.CloudPool.applicationLicenses'
+      - '@azure/batch.CloudPool.applicationPackageReferences'
+      - '@azure/batch.CloudPool.autoScaleEvaluationInterval'
+      - '@azure/batch.CloudPool.autoScaleFormula'
+      - '@azure/batch.CloudPool.autoScaleRun'
+      - '@azure/batch.CloudPool.certificateReferences'
+      - '@azure/batch.CloudPool.cloudServiceConfiguration'
+      - '@azure/batch.CloudPool.creationTime'
+      - '@azure/batch.CloudPool.currentDedicatedNodes'
+      - '@azure/batch.CloudPool.currentLowPriorityNodes'
+      - '@azure/batch.CloudPool.displayName'
+      - '@azure/batch.CloudPool.enableAutoScale'
+      - '@azure/batch.CloudPool.enableInterNodeCommunication'
+      - '@azure/batch.CloudPool.eTag'
+      - '@azure/batch.CloudPool.id'
+      - '@azure/batch.CloudPool.lastModified'
+      - '@azure/batch.CloudPool.maxTasksPerNode'
+      - '@azure/batch.CloudPool.metadata'
+      - '@azure/batch.CloudPool.networkConfiguration'
+      - '@azure/batch.CloudPool.resizeErrors'
+      - '@azure/batch.CloudPool.resizeTimeout'
+      - '@azure/batch.CloudPool.startTask'
+      - '@azure/batch.CloudPool.state'
+      - '@azure/batch.CloudPool.stateTransitionTime'
+      - '@azure/batch.CloudPool.stats'
+      - '@azure/batch.CloudPool.targetDedicatedNodes'
+      - '@azure/batch.CloudPool.targetLowPriorityNodes'
+      - '@azure/batch.CloudPool.taskSchedulingPolicy'
+      - '@azure/batch.CloudPool.url'
+      - '@azure/batch.CloudPool.userAccounts'
+      - '@azure/batch.CloudPool.virtualMachineConfiguration'
+      - '@azure/batch.CloudPool.vmSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="69c87-101">Interfaccia che rappresenta CloudPool.</span><span class="sxs-lookup"><span data-stu-id="69c87-101">An interface representing CloudPool.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.allocationState'
+    name: allocationState
+    fullName: allocationState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-102">Indica se il ridimensionamento del pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-102">Whether the pool is resizing.</span></span> <span data-ttu-id="69c87-103">I valori possibili sono: ''luce'', ''ridimensionamento'', ''stopping''</span><span class="sxs-lookup"><span data-stu-id="69c87-103">Possible values include: ''steady'', ''resizing'', ''stopping''</span></span>'
+    optional: true
+    syntax:
+      content: 'allocationState?: AllocationState'
+      return:
+        type:
+          - '@azure/batch.AllocationState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.allocationStateTransitionTime'
+    name: allocationStateTransitionTime
+    fullName: allocationStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-104">Ora in cui il pool è passato allo stato di allocazione corrente.</span><span class="sxs-lookup"><span data-stu-id="69c87-104">The time at which the pool entered its current allocation state.</span></span>
+    optional: true
+    syntax:
+      content: 'allocationStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.applicationLicenses'
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-105">L''elenco di applicazioni, licenze servizio verrà rese disponibile in ogni nodo di calcolo nel pool di Batch.</span><span class="sxs-lookup"><span data-stu-id="69c87-105">The list of application licenses the Batch service will make available on each compute node in the pool.</span></span> <span data-ttu-id="69c87-106">L''elenco di licenze di applicazioni deve essere un subset di disponibili licenze di applicazioni del servizio Batch.</span><span class="sxs-lookup"><span data-stu-id="69c87-106">The list of application licenses must be a subset of available Batch service application licenses.</span></span> <span data-ttu-id="69c87-107">Se viene richiesta una licenza che non è supportato, la creazione del pool avrà esito negativo.</span><span class="sxs-lookup"><span data-stu-id="69c87-107">If a license is requested which is not supported, pool creation will fail.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-108">L''elenco dei pacchetti di applicazione da installare in ogni nodo di calcolo nel pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-108">The list of application packages to be installed on each compute node in the pool.</span></span> <span data-ttu-id="69c87-109">Modifiche ai riferimenti al pacchetto dell''applicazione influiscono su tutti i nuovi nodi di calcolo aggiunta di pool, ma non influiscono sui nodi di calcolo che si trovano già nel pool finché vengono riavviati o ricreare l''immagine.</span><span class="sxs-lookup"><span data-stu-id="69c87-109">Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged.</span></span> <span data-ttu-id="69c87-110">È presente un massimo di 10 riferimenti al pacchetto di applicazione in qualsiasi pool specificato.</span><span class="sxs-lookup"><span data-stu-id="69c87-110">There is a maximum of 10 application package references on any given pool.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-111">L''intervallo di tempo in cui regolare automaticamente le dimensioni del pool in base alla formula di scalabilità automatica.</span><span class="sxs-lookup"><span data-stu-id="69c87-111">The time interval at which to automatically adjust the pool size according to the autoscale formula.</span></span> <span data-ttu-id="69c87-112">Questa proprietà è impostata solo se il pool viene ridimensionato automaticamente, vale a dire enableAutoScale è true.</span><span class="sxs-lookup"><span data-stu-id="69c87-112">This property is set only if the pool automatically scales, i.e. enableAutoScale is true.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-113">Una formula per il numero desiderato di nodi di calcolo nel pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-113">A formula for the desired number of compute nodes in the pool.</span></span> <span data-ttu-id="69c87-114">Questa proprietà è impostata solo se il pool viene ridimensionato automaticamente, vale a dire enableAutoScale è true.</span><span class="sxs-lookup"><span data-stu-id="69c87-114">This property is set only if the pool automatically scales, i.e. enableAutoScale is true.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.autoScaleRun'
+    name: autoScaleRun
+    fullName: autoScaleRun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-115">I risultati e gli errori dall''ultima esecuzione della formula di scalabilità automatica.</span><span class="sxs-lookup"><span data-stu-id="69c87-115">The results and errors from the last execution of the autoscale formula.</span></span> <span data-ttu-id="69c87-116">Questa proprietà è impostata solo se il pool viene ridimensionato automaticamente, vale a dire enableAutoScale è true.</span><span class="sxs-lookup"><span data-stu-id="69c87-116">This property is set only if the pool automatically scales, i.e. enableAutoScale is true.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleRun?: AutoScaleRun'
+      return:
+        type:
+          - '@azure/batch.AutoScaleRun'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-117">L''elenco di certificati da installare in ogni nodo di calcolo nel pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-117">The list of certificates to be installed on each compute node in the pool.</span></span> <span data-ttu-id="69c87-118">Per i nodi di calcolo Windows, il servizio Batch installa i certificati all''archivio certificati specificato e alla posizione.</span><span class="sxs-lookup"><span data-stu-id="69c87-118">For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location.</span></span> <span data-ttu-id="69c87-119">Per i nodi di calcolo Linux, i certificati vengono archiviati in una directory all''interno di un ambiente che az_batch_certificates_dir variabile viene fornito per l''attività di query per questa posizione e la directory di lavoro attività.</span><span class="sxs-lookup"><span data-stu-id="69c87-119">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id="69c87-120">Per i certificati con visibilità "remoteuser", viene creata una directory "certs" nella directory home dell''utente (ad esempio, /home/ {nome_utente} / certs) e i certificati vengono posizionati in tale directory.</span><span class="sxs-lookup"><span data-stu-id="69c87-120">For certificates with visibility of ''remoteUser'', a ''certs'' directory is created in the user''s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.cloudServiceConfiguration'
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-121">La configurazione del servizio cloud per il pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-121">The cloud service configuration for the pool.</span></span> <span data-ttu-id="69c87-122">Questa proprietà e virtualMachineConfiguration si escludono a vicenda e una delle proprietà deve essere specificata.</span><span class="sxs-lookup"><span data-stu-id="69c87-122">This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified.</span></span> <span data-ttu-id="69c87-123">Questa proprietà non può essere specificato se l'account Batch è stato creato con la proprietà poolAllocationMode impostata su 'UserSubscription'.</span><span class="sxs-lookup"><span data-stu-id="69c87-123">This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.</span></span>
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - '@azure/batch.CloudServiceConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.creationTime'
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-124">Ora di creazione del pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-124">The creation time of the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.currentDedicatedNodes'
+    name: currentDedicatedNodes
+    fullName: currentDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-125">Il numero di calcolo dedicati nodi nel pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-125">The number of dedicated compute nodes currently in the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'currentDedicatedNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.currentLowPriorityNodes'
+    name: currentLowPriorityNodes
+    fullName: currentLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-126">Nodi nel pool di calcolo il numero di priorità bassa.</span><span class="sxs-lookup"><span data-stu-id="69c87-126">The number of low-priority compute nodes currently in the pool.</span></span> <span data-ttu-id="69c87-127">In questo conteggio vengono inclusi i nodi di calcolo con priorità bassa che sono stati superati.</span><span class="sxs-lookup"><span data-stu-id="69c87-127">Low-priority compute nodes which have been preempted are included in this count.</span></span>
+    optional: true
+    syntax:
+      content: 'currentLowPriorityNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-128">Il nome visualizzato per il pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-128">The display name for the pool.</span></span> <span data-ttu-id="69c87-129">Il nome visualizzato non deve essere univoco e può contenere qualsiasi carattere Unicode fino alla lunghezza massima pari a 1024.</span><span class="sxs-lookup"><span data-stu-id="69c87-129">The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.enableAutoScale'
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-130">Indica se le dimensioni del pool necessario regolare automaticamente nel corso del tempo.</span><span class="sxs-lookup"><span data-stu-id="69c87-130">Whether the pool size should automatically adjust over time.</span></span> <span data-ttu-id="69c87-131">Se false, almeno uno dei targetDedicateNodes e targetLowPriorityNodes deve essere specificato.</span><span class="sxs-lookup"><span data-stu-id="69c87-131">If false, at least one of targetDedicateNodes and targetLowPriorityNodes must be specified.</span></span> <span data-ttu-id="69c87-132">Se true, la proprietà autoScaleFormula è obbligatoria e il pool viene ridimensionato automaticamente in base alla formula.</span><span class="sxs-lookup"><span data-stu-id="69c87-132">If true, the autoScaleFormula property is required and the pool automatically resizes according to the formula.</span></span> <span data-ttu-id="69c87-133">Il valore predefinito è False.</span><span class="sxs-lookup"><span data-stu-id="69c87-133">The default value is false.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.enableInterNodeCommunication'
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-134">Indica se il pool consente la comunicazione diretta tra nodi.</span><span class="sxs-lookup"><span data-stu-id="69c87-134">Whether the pool permits direct communication between nodes.</span></span> <span data-ttu-id="69c87-135">Ciò impone restrizioni in cui i nodi possono essere assegnati al pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-135">This imposes restrictions on which nodes can be assigned to the pool.</span></span> <span data-ttu-id="69c87-136">Se si specifica questo valore può ridurre le probabilità del numero di nodi richiesti da allocare nel pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-136">Specifying this value can reduce the chance of the requested number of nodes to be allocated in the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-137">Il valore ETag del pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-137">The ETag of the pool.</span></span> <span data-ttu-id="69c87-138">Si tratta di una stringa opaca.</span><span class="sxs-lookup"><span data-stu-id="69c87-138">This is an opaque string.</span></span> <span data-ttu-id="69c87-139">È possibile usarlo per rilevare se il pool è stato modificato tra le richieste.</span><span class="sxs-lookup"><span data-stu-id="69c87-139">You can use it to detect whether the pool has changed between requests.</span></span> <span data-ttu-id="69c87-140">In particolare, è possibile passare il valore ETag quando si aggiorna un pool per specificare che le modifiche avranno effetto solo se nessun altro stato modificato nel frattempo il pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-140">In particular, you can be pass the ETag when updating a pool to specify that your changes should take effect only if nobody else has modified the pool in the meantime.</span></span>'
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-141">Stringa che identifica in modo univoco il pool nell''account.</span><span class="sxs-lookup"><span data-stu-id="69c87-141">A string that uniquely identifies the pool within the account.</span></span> <span data-ttu-id="69c87-142">L''ID può contenere qualsiasi combinazione di caratteri alfanumerici, inclusi trattini e caratteri di sottolineatura e non può contenere più di 64 caratteri.</span><span class="sxs-lookup"><span data-stu-id="69c87-142">The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters.</span></span> <span data-ttu-id="69c87-143">L''ID è a mantenimento del case e tra maiuscole e minuscole (ovvero, non è possibile due ID all''interno di un account che differiscono solo per i casi).</span><span class="sxs-lookup"><span data-stu-id="69c87-143">The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-144">L''ultima volta del pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-144">The last modified time of the pool.</span></span> <span data-ttu-id="69c87-145">Questo è l''ultima volta in corrispondenza del quale i dati a livello di pool, ad esempio le impostazioni targetDedicatedNodes o enableAutoscale, modificata.</span><span class="sxs-lookup"><span data-stu-id="69c87-145">This is the last time at which the pool level data, such as the targetDedicatedNodes or enableAutoscale settings, changed.</span></span> <span data-ttu-id="69c87-146">Non vengono presi in modifiche a livello di nodo, ad esempio una modifica dello stato del nodo di calcolo.</span><span class="sxs-lookup"><span data-stu-id="69c87-146">It does not factor in node-level changes such as a compute node changing state.</span></span>'
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.maxTasksPerNode'
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="69c87-147">Numero massimo di attività che possono essere eseguite simultaneamente in un singolo nodo di calcolo nel pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-147">The maximum number of tasks that can run concurrently on a single compute node in the pool.</span></span>
+      <span data-ttu-id="69c87-148">Il valore predefinito è 1.</span><span class="sxs-lookup"><span data-stu-id="69c87-148">The default value is 1.</span></span> <span data-ttu-id="69c87-149">Il valore massimo è il minore di 4 volte il numero di core di vmSize del pool o 256.</span><span class="sxs-lookup"><span data-stu-id="69c87-149">The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.</span></span>
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-150">Elenco di coppie nome-valore associate al pool come metadati.</span><span class="sxs-lookup"><span data-stu-id="69c87-150">A list of name-value pairs associated with the pool as metadata.</span></span>
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-151">La configurazione della rete per il pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-151">The network configuration for the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.NetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.resizeErrors'
+    name: resizeErrors
+    fullName: resizeErrors
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-152">Un elenco di errori rilevati durante l''esecuzione dell''ultimo ridimensionamento sul pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-152">A list of errors encountered while performing the last resize on the pool.</span></span> <span data-ttu-id="69c87-153">Questa proprietà è impostata solo se si sono verificati uno o più errori durante l''ultimo ridimensionamento del pool e solo quando il valore di allocationState del pool è stabile.</span><span class="sxs-lookup"><span data-stu-id="69c87-153">This property is set only if one or more errors occurred during the last pool resize, and only when the pool allocationState is Steady.</span></span>'
+    optional: true
+    syntax:
+      content: 'resizeErrors?: ResizeError[]'
+      return:
+        type:
+          - '@azure/batch.ResizeError[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-154">Il timeout per l''allocazione dei nodi di calcolo nel pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-154">The timeout for allocation of compute nodes to the pool.</span></span> <span data-ttu-id="69c87-155">Questo è il timeout per l''operazione di ridimensionamento più recente.</span><span class="sxs-lookup"><span data-stu-id="69c87-155">This is the timeout for the most recent resize operation.</span></span> <span data-ttu-id="69c87-156">L''impostazione iniziale delle dimensioni, eseguita quando si crea il pool, viene considerata come un ridimensionamento. Il valore predefinito è 15 minuti.</span><span class="sxs-lookup"><span data-stu-id="69c87-156">(The initial sizing when the pool is created counts as a resize.) The default value is 15 minutes.</span></span>'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-157">Un'attività specificata per l'esecuzione in ogni nodo di calcolo non appena viene aggiungo il pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-157">A task specified to run on each compute node as it joins the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-158">Lo stato corrente del pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-158">The current state of the pool.</span></span> <span data-ttu-id="69c87-159">I valori possibili sono: ''active'', ''eliminazione''</span><span class="sxs-lookup"><span data-stu-id="69c87-159">Possible values include: ''active'', ''deleting''</span></span>'
+    optional: true
+    syntax:
+      content: 'state?: PoolState'
+      return:
+        type:
+          - '@azure/batch.PoolState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-160">Ora in cui il pool è passato allo stato corrente.</span><span class="sxs-lookup"><span data-stu-id="69c87-160">The time at which the pool entered its current state.</span></span>
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.stats'
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-161">Risorse e utilizzo delle statistiche di utilizzo per l'intera durata del pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-161">Utilization and resource usage statistics for the entire lifetime of the pool.</span></span> <span data-ttu-id="69c87-162">Questa proprietà viene popolata solo se è stata recuperata la CloudPool con una clausola expand incluso l'attributo "stats"; in caso contrario è null.</span><span class="sxs-lookup"><span data-stu-id="69c87-162">This property is populated only if the CloudPool was retrieved with an expand clause including the 'stats' attribute; otherwise it is null.</span></span> <span data-ttu-id="69c87-163">Le statistiche potrebbero non essere immediatamente disponibili.</span><span class="sxs-lookup"><span data-stu-id="69c87-163">The statistics may not be immediately available.</span></span> <span data-ttu-id="69c87-164">Il servizio Batch esegue rollup periodici delle statistiche.</span><span class="sxs-lookup"><span data-stu-id="69c87-164">The Batch service performs periodic roll-up of statistics.</span></span> <span data-ttu-id="69c87-165">Il ritardo tipico è di circa 30 minuti.</span><span class="sxs-lookup"><span data-stu-id="69c87-165">The typical delay is about 30 minutes.</span></span>
+    optional: true
+    syntax:
+      content: 'stats?: PoolStatistics'
+      return:
+        type:
+          - '@azure/batch.PoolStatistics'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.targetDedicatedNodes'
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-166">Il numero desiderato di dedicato nodi di calcolo nel pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-166">The desired number of dedicated compute nodes in the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.targetLowPriorityNodes'
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-167">Il numero desiderato di nodi di calcolo con priorità bassa in pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-167">The desired number of low-priority compute nodes in the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.taskSchedulingPolicy'
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="69c87-168">Come le attività vengono distribuite tra i nodi di calcolo in un pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-168">How tasks are distributed across compute nodes in a pool.</span></span> <span data-ttu-id="69c87-169">Se non specificato, viene distribuito il valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="69c87-169">If not specified, the default is spread.</span></span>'
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - '@azure/batch.TaskSchedulingPolicy'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-170">L'URL del pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-170">The URL of the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.userAccounts'
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-171">L'elenco degli account utente da creare in ogni nodo nel pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-171">The list of user accounts to be created on each node in the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - '@azure/batch.UserAccount[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.virtualMachineConfiguration'
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="69c87-172">La configurazione della macchina virtuale per il pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-172">The virtual machine configuration for the pool.</span></span> <span data-ttu-id="69c87-173">Questa proprietà e cloudServiceConfiguration si escludono a vicenda e una delle proprietà deve essere specificata.</span><span class="sxs-lookup"><span data-stu-id="69c87-173">This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.</span></span>
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - '@azure/batch.VirtualMachineConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudPool.vmSize'
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="69c87-174">Le dimensioni delle macchine virtuali nel pool.</span><span class="sxs-lookup"><span data-stu-id="69c87-174">The size of virtual machines in the pool.</span></span> <span data-ttu-id="69c87-175">Le macchine virtuali di un pool hanno tutte le stesse dimensioni.</span><span class="sxs-lookup"><span data-stu-id="69c87-175">All virtual machines in a pool are the same size.</span></span>
+      <span data-ttu-id="69c87-176">Per informazioni sulle dimensioni disponibili delle macchine virtuali in pool, vedere scegliere una dimensione di VM per i nodi di calcolo in un pool di Batch di Azure (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).</span><span class="sxs-lookup"><span data-stu-id="69c87-176">For information about available sizes of virtual machines in pools, see Choose a VM size for compute nodes in an Azure Batch pool (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).</span></span>
+    optional: true
+    syntax:
+      content: 'vmSize?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.AllocationState'
+    name: AllocationState
+    spec.typeScript:
+      - name: AllocationState
+        fullName: AllocationState
+        uid: '@azure/batch.AllocationState'
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AutoScaleRun'
+    name: AutoScaleRun
+    spec.typeScript:
+      - name: AutoScaleRun
+        fullName: AutoScaleRun
+        uid: '@azure/batch.AutoScaleRun'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CloudServiceConfiguration'
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: '@azure/batch.CloudServiceConfiguration'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: '@azure/batch.NetworkConfiguration'
+  - uid: '@azure/batch.ResizeError[]'
+    name: 'ResizeError[]'
+    spec.typeScript:
+      - name: ResizeError
+        fullName: ResizeError
+        uid: '@azure/batch.ResizeError'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
+  - uid: '@azure/batch.PoolState'
+    name: PoolState
+    spec.typeScript:
+      - name: PoolState
+        fullName: PoolState
+        uid: '@azure/batch.PoolState'
+  - uid: '@azure/batch.PoolStatistics'
+    name: PoolStatistics
+    spec.typeScript:
+      - name: PoolStatistics
+        fullName: PoolStatistics
+        uid: '@azure/batch.PoolStatistics'
+  - uid: '@azure/batch.TaskSchedulingPolicy'
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: '@azure/batch.TaskSchedulingPolicy'
+  - uid: '@azure/batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: '@azure/batch.UserAccount'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.VirtualMachineConfiguration'
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: '@azure/batch.VirtualMachineConfiguration'
