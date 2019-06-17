@@ -1,0 +1,42 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.AudioAnalyzerPreset'
+    name: AudioAnalyzerPreset
+    fullName: AudioAnalyzerPreset
+    children:
+      - '@azure/arm-mediaservices.AudioAnalyzerPreset.audioLanguage'
+      - '@azure/arm-mediaservices.AudioAnalyzerPreset.odatatype'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Il set di impostazioni Audio Analyzer applica un set predefinito di operazioni di analisi basata su intelligenza artificiale, tra cui la trascrizione vocale. Attualmente il set di impostazioni supporta l''elaborazione del contenuto con una singola traccia audio.'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.AudioAnalyzerPreset.audioLanguage'
+    name: audioLanguage
+    fullName: audioLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La lingua per il payload audio di input in formato BCP-47 di ''tag di lingua-region'' (ad esempio: ''en-US'').  L''elenco delle lingue supportate sono inglese ("en-US" e "en-GB"), spagnolo ("es-ES" e "es-MX"), francese ("fr-FR"), italiano (''it-IT''), giapponese ("ja-JP"), portoghese ("pt-BR"), cinese (''zh-CN"), tedesco (''de-DE''), arabo (''ar-EG'' e ''ar-SY''), russo ('' ru-RU''), Hindi ("salve-IN'') e coreano (''ko-KR"). Se si conosce il linguaggio del contenuto, è consigliabile che si specificarlo. Se la lingua non è specificata o impostata su Null, il rilevamento automatico della lingua sceglierà la prima lingua rilevata e utilizzerà la lingua selezionata per la durata del file. Questa funzionalità di rilevamento di linguaggio supporta attualmente l''inglese, cinese, francese, tedesco, italiano, giapponese, spagnolo, russo e portoghese. Attualmente non supporta il passaggio dinamico tra lingue dopo il rilevamento della prima lingua. Il rilevamento automatico funziona meglio con le registrazioni audio con il riconoscimento vocale in modo chiaro percepibile. Se il rilevamento automatico non riesce a trovare la lingua, la trascrizione sarà il fallback a ''en-US''."'
+    optional: true
+    syntax:
+      content: 'audioLanguage?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.AudioAnalyzerPreset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.AudioAnalyzerPreset"'
+      return:
+        type:
+          - '"#Microsoft.Media.AudioAnalyzerPreset"'
+    package: '@azure/arm-mediaservices'

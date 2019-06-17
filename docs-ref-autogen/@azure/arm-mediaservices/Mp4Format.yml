@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.Mp4Format'
+    name: Mp4Format
+    fullName: Mp4Format
+    children:
+      - '@azure/arm-mediaservices.Mp4Format.filenamePattern'
+      - '@azure/arm-mediaservices.Mp4Format.odatatype'
+      - '@azure/arm-mediaservices.Mp4Format.outputFiles'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrive le proprietà per un file ISO MP4 di output.
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Mp4Format.filenamePattern'
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il modello dei nomi file per i file di output generato. Le macro seguenti sono supportate nel nome del file: {Basename} - il nome di base del video di input {Extension} - l'estensione corretta per questo formato. {Label} - l'etichetta assegnata al codec/livello.
+      {Index}: un indice univoco per le anteprime. Applicabile solo alle anteprime. {Velocità in bit}: la velocità in bit audio/video. Non è applicabile alle anteprime. {Codec} - il tipo del codec audio/video. Eventuali macro arilici verrà compresso e rimossi dal nome del file.
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Mp4Format.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.Mp4Format"'
+      return:
+        type:
+          - '"#Microsoft.Media.Mp4Format"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Mp4Format.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'elenco dei file di output da produrre.  Ogni voce nell'elenco è un set di etichette di livello audio e video per essere muxed tra loro.
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/arm-mediaservices.OutputFile[]'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/arm-mediaservices.OutputFile'
+      - name: '[]'
+        fullName: '[]'
