@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.LegalHold'
+    name: LegalHold
+    fullName: LegalHold
+    children:
+      - '@azure/arm-storage.LegalHold.hasLegalHold'
+      - '@azure/arm-storage.LegalHold.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: La proprietà LegalHold di un contenitore blob.
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LegalHold.hasLegalHold'
+    name: hasLegalHold
+    fullName: hasLegalHold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La proprietà pubblica hasLegalHold è impostata su true per criteri di restrizione software se sono presenti almeno un tag esistente.
+      La proprietà pubblica hasLegalHold è impostata su false da criteri di restrizione software se tutti esistente legali contengono i tag vengono eliminati. Può esistere un massimo di contenitori blob 1000 con hasLegalHold = true per un determinato account.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'hasLegalHold?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LegalHold.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ogni tag deve essere compreso tra 3 e 23 caratteri alfanumerici e viene normalizzata in lettere minuscole in Criteri di restrizione software.
+    syntax:
+      content: 'tags: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-storage'

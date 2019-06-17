@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.AutoPoolSpecification'
+    name: AutoPoolSpecification
+    fullName: AutoPoolSpecification
+    children:
+      - '@azure/batch.AutoPoolSpecification.autoPoolIdPrefix'
+      - '@azure/batch.AutoPoolSpecification.keepAlive'
+      - '@azure/batch.AutoPoolSpecification.pool'
+      - '@azure/batch.AutoPoolSpecification.poolLifetimeOption'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta AutoPoolSpecification.
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.autoPoolIdPrefix'
+    name: autoPoolIdPrefix
+    fullName: autoPoolIdPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un prefisso da aggiungere all''identificatore univoco quando viene creato automaticamente un pool. Il servizio Batch assegna ogni pool automatico di un identificatore univoco al momento della creazione. Per distinguere tra i pool creati per scopi diversi, è possibile specificare questo elemento per aggiungere un prefisso per l''ID assegnato. Il prefisso può essere fino a 20 caratteri.'
+    optional: true
+    syntax:
+      content: 'autoPoolIdPrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.keepAlive'
+    name: keepAlive
+    fullName: keepAlive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indica se mantenere attivo un pool automatico dopo la scadenza della relativa durata. Se false, il servizio Batch consente di eliminare il pool dopo la scadenza relativa durata (come determinato dall''impostazione poolLifetimeOption); ovvero, quando il processo o il processo di pianificazione completa. Se true, il servizio Batch non elimina automaticamente il pool. Spetta all''utente di eliminare il pool automatico creato con questa opzione.'
+    optional: true
+    syntax:
+      content: 'keepAlive?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.pool'
+    name: pool
+    fullName: pool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La specifica del pool per il pool automatico.
+    optional: true
+    syntax:
+      content: 'pool?: PoolSpecification'
+      return:
+        type:
+          - '@azure/batch.PoolSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.poolLifetimeOption'
+    name: poolLifetimeOption
+    fullName: poolLifetimeOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Durata minima del pool automatico creato e modo in cui più processi in base alla pianificazione vengono assegnati ai pool. I valori possibili sono: ''jobSchedule'', ''processo'''
+    syntax:
+      content: 'poolLifetimeOption: PoolLifetimeOption'
+      return:
+        type:
+          - '@azure/batch.PoolLifetimeOption'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.PoolSpecification'
+    name: PoolSpecification
+    spec.typeScript:
+      - name: PoolSpecification
+        fullName: PoolSpecification
+        uid: '@azure/batch.PoolSpecification'
+  - uid: '@azure/batch.PoolLifetimeOption'
+    name: PoolLifetimeOption
+    spec.typeScript:
+      - name: PoolLifetimeOption
+        fullName: PoolLifetimeOption
+        uid: '@azure/batch.PoolLifetimeOption'

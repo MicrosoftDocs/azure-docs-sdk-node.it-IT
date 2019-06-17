@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobScheduleExecutionInformation'
+    name: JobScheduleExecutionInformation
+    fullName: JobScheduleExecutionInformation
+    children:
+      - '@azure/batch.JobScheduleExecutionInformation.endTime'
+      - '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+      - '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta JobScheduleExecutionInformation.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'ora di fine della pianificazione. Questa proprietà è impostata solo se la pianificazione del processo è nello stato completato.
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+    name: nextRunTime
+    fullName: nextRunTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La volta successiva in corrispondenza del quale verrà creato un processo in questa pianificazione. Questa proprietà è significativa solo se la pianificazione si trova nello stato attivo al momento opportuno. Ad esempio, se la pianificazione viene disabilitata, nessun processo verrà creato in nextRunTime, a meno che il processo è abilitato prima di allora.'
+    optional: true
+    syntax:
+      content: 'nextRunTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    name: recentJob
+    fullName: recentJob
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Informazioni sul processo più recente con la pianificazione del processo. Questa proprietà è presente solo se almeno un processo viene eseguito con la pianificazione.
+    optional: true
+    syntax:
+      content: 'recentJob?: RecentJob'
+      return:
+        type:
+          - '@azure/batch.RecentJob'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.RecentJob'
+    name: RecentJob
+    spec.typeScript:
+      - name: RecentJob
+        fullName: RecentJob
+        uid: '@azure/batch.RecentJob'
