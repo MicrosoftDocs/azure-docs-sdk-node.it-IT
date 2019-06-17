@@ -1,0 +1,1429 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Job'
+    name: Job
+    fullName: Job
+    children:
+      - '@azure/batch.Job.add_2'
+      - '@azure/batch.Job.add'
+      - '@azure/batch.Job.add_1'
+      - '@azure/batch.Job.deleteMethod_2'
+      - '@azure/batch.Job.deleteMethod'
+      - '@azure/batch.Job.deleteMethod_1'
+      - '@azure/batch.Job.disable_2'
+      - '@azure/batch.Job.disable'
+      - '@azure/batch.Job.disable_1'
+      - '@azure/batch.Job.enable_2'
+      - '@azure/batch.Job.enable'
+      - '@azure/batch.Job.enable_1'
+      - '@azure/batch.Job.get_2'
+      - '@azure/batch.Job.get'
+      - '@azure/batch.Job.get_1'
+      - '@azure/batch.Job.getAllLifetimeStatistics_2'
+      - '@azure/batch.Job.getAllLifetimeStatistics'
+      - '@azure/batch.Job.getAllLifetimeStatistics_1'
+      - '@azure/batch.Job.getTaskCounts_2'
+      - '@azure/batch.Job.getTaskCounts'
+      - '@azure/batch.Job.getTaskCounts_1'
+      - '@azure/batch.Job.constructor'
+      - '@azure/batch.Job.list_2'
+      - '@azure/batch.Job.list'
+      - '@azure/batch.Job.list_1'
+      - '@azure/batch.Job.listFromJobSchedule_2'
+      - '@azure/batch.Job.listFromJobSchedule'
+      - '@azure/batch.Job.listFromJobSchedule_1'
+      - '@azure/batch.Job.listFromJobScheduleNext_2'
+      - '@azure/batch.Job.listFromJobScheduleNext'
+      - '@azure/batch.Job.listFromJobScheduleNext_1'
+      - '@azure/batch.Job.listNext_2'
+      - '@azure/batch.Job.listNext'
+      - '@azure/batch.Job.listNext_1'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatus_2'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatus'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatus_1'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_2'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_1'
+      - '@azure/batch.Job.patch_2'
+      - '@azure/batch.Job.patch'
+      - '@azure/batch.Job.patch_1'
+      - '@azure/batch.Job.terminate_2'
+      - '@azure/batch.Job.terminate'
+      - '@azure/batch.Job.terminate_1'
+      - '@azure/batch.Job.update_2'
+      - '@azure/batch.Job.update'
+      - '@azure/batch.Job.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="50d31-101">Classe che rappresenta un processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-101">Class representing a Job.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.add_2'
+    name: 'add(JobAddParameter, JobAddOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(job: JobAddParameter, options: JobAddOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: job
+          type:
+            - '@azure/batch.JobAddParameter'
+          description: <span data-ttu-id="50d31-102">Il processo da aggiungere.</span><span class="sxs-lookup"><span data-stu-id="50d31-102">The job to be added.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobAddOptionalParams'
+          description: <span data-ttu-id="50d31-103">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-103">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-104">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-104">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.add'
+    name: 'add(JobAddParameter, Models.JobAddOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="50d31-105">Il servizio Batch supporta due modi per controllare le operazioni eseguite come parte di un processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-105">The Batch service supports two ways to control the work done as part of a job.</span></span> <span data-ttu-id="50d31-106">Il primo approccio, l''utente specifica un''attività del gestore di processi.</span><span class="sxs-lookup"><span data-stu-id="50d31-106">In the first approach, the user specifies a Job Manager task.</span></span> <span data-ttu-id="50d31-107">Il servizio Batch consente di avviare questa attività quando è pronto per avviare il processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-107">The Batch service launches this task when it is ready to start the job.</span></span> <span data-ttu-id="50d31-108">L''attività del gestore di processi controlla tutte le altre attività che vengono eseguiti in questo processo, usando le API di attività.</span><span class="sxs-lookup"><span data-stu-id="50d31-108">The Job Manager task controls all other tasks that run under this job, by using the Task APIs.</span></span> <span data-ttu-id="50d31-109">Nel secondo approccio, l''utente controlla direttamente l''esecuzione di attività in un processo attivo, tramite le API di attività.</span><span class="sxs-lookup"><span data-stu-id="50d31-109">In the second approach, the user directly controls the execution of tasks under an active job, by using the Task APIs.</span></span> <span data-ttu-id="50d31-110">Si noti inoltre: durante la denominazione dei processi, evitare di includere informazioni riservate, ad esempio nomi utente o i nomi dei progetti secret.</span><span class="sxs-lookup"><span data-stu-id="50d31-110">Also note: when naming jobs, avoid including sensitive information such as user names or secret project names.</span></span> <span data-ttu-id="50d31-111">Queste informazioni sembrano nei log di dati di telemetria accessibile ai tecnici del supporto tecnico Microsoft.</span><span class="sxs-lookup"><span data-stu-id="50d31-111">This information may appear in telemetry logs accessible to Microsoft Support engineers.</span></span>'
+    syntax:
+      content: 'function add(job: JobAddParameter, options?: Models.JobAddOptionalParams)'
+      parameters:
+        - id: job
+          type:
+            - '@azure/batch.JobAddParameter'
+          description: <span data-ttu-id="50d31-112">Il processo da aggiungere.</span><span class="sxs-lookup"><span data-stu-id="50d31-112">The job to be added.</span></span>
+        - id: options
+          type:
+            - Models.JobAddOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.add_1'
+    name: 'add(JobAddParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(job: JobAddParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: job
+          type:
+            - '@azure/batch.JobAddParameter'
+          description: <span data-ttu-id="50d31-113">Il processo da aggiungere.</span><span class="sxs-lookup"><span data-stu-id="50d31-113">The job to be added.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-114">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.deleteMethod_2'
+    name: 'deleteMethod(string, JobDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobId: string, options: JobDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-115">ID del processo da eliminare.</span><span class="sxs-lookup"><span data-stu-id="50d31-115">The ID of the job to delete.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobDeleteMethodOptionalParams'
+          description: <span data-ttu-id="50d31-116">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-116">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-117">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-117">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.deleteMethod'
+    name: 'deleteMethod(string, Models.JobDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="50d31-118">Eliminazione di un processo elimina anche tutte le attività che fanno parte del processo e tutte le statistiche del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-118">Deleting a job also deletes all tasks that are part of that job, and all job statistics.</span></span> <span data-ttu-id="50d31-119">Sostituisce anche il periodo di conservazione per i dati di attività. vale a dire, se il processo contiene attività che vengono mantenute nei nodi di calcolo, i servizi Batch Elimina tutto il contenuto e le cartelle di lavoro degli tali attività.</span><span class="sxs-lookup"><span data-stu-id="50d31-119">This also overrides the retention period for task data; that is, if the job contains tasks which are still retained on compute nodes, the Batch services deletes those tasks'' working directories and all their contents.</span></span>  <span data-ttu-id="50d31-120">Quando viene ricevuta una richiesta di processo di eliminazione, il servizio Batch imposta il processo per lo stato di eliminazione.</span><span class="sxs-lookup"><span data-stu-id="50d31-120">When a Delete Job request is received, the Batch service sets the job to the deleting state.</span></span> <span data-ttu-id="50d31-121">Tutte le operazioni di aggiornamento su un processo che si trova in stato di eliminazione avrà esito negativo con codice di stato 409 (conflitto), con informazioni aggiuntive che indicano che il processo è in corso di eliminazione.</span><span class="sxs-lookup"><span data-stu-id="50d31-121">All update operations on a job that is in deleting state will fail with status code 409 (Conflict), with additional information indicating that the job is being deleted.</span></span>'
+    syntax:
+      content: 'function deleteMethod(jobId: string, options?: Models.JobDeleteMethodOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-122">ID del processo da eliminare.</span><span class="sxs-lookup"><span data-stu-id="50d31-122">The ID of the job to delete.</span></span>
+        - id: options
+          type:
+            - Models.JobDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-123">ID del processo da eliminare.</span><span class="sxs-lookup"><span data-stu-id="50d31-123">The ID of the job to delete.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-124">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-124">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.disable_2'
+    name: 'disable(string, Models.DisableJobOption, JobDisableOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disable(jobId: string, disableTasks: Models.DisableJobOption, options: JobDisableOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-125">ID del processo da disabilitare.</span><span class="sxs-lookup"><span data-stu-id="50d31-125">The ID of the job to disable.</span></span>
+        - id: disableTasks
+          type:
+            - Models.DisableJobOption
+          description: '<span data-ttu-id="50d31-126">Cosa fare con attività attive associate al processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-126">What to do with active tasks associated with the job.</span></span> <span data-ttu-id="50d31-127">I valori possibili sono: ''reinserimenti nella coda'', ''terminate'', ''wait''</span><span class="sxs-lookup"><span data-stu-id="50d31-127">Possible values include: ''requeue'', ''terminate'', ''wait''</span></span>'
+        - id: options
+          type:
+            - '@azure/batch.JobDisableOptionalParams'
+          description: <span data-ttu-id="50d31-128">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-128">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-129">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-129">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.disable'
+    name: 'disable(string, Models.DisableJobOption, Models.JobDisableOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="50d31-130">Il servizio Batch imposta immediatamente il processo per lo stato di disabilitazione.</span><span class="sxs-lookup"><span data-stu-id="50d31-130">The Batch Service immediately moves the job to the disabling state.</span></span> <span data-ttu-id="50d31-131">Batch Usa quindi il parametro disableTasks per determinare cosa fare con le attività attualmente in esecuzione del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-131">Batch then uses the disableTasks parameter to determine what to do with the currently running tasks of the job.</span></span> <span data-ttu-id="50d31-132">Il processo rimane nello stato di disattivazione fino a quando non viene completata l'operazione di disabilitazione e tutte le attività sono state gestite in base all'opzione disableTasks; il processo passa quindi allo stato disabilitato.</span><span class="sxs-lookup"><span data-stu-id="50d31-132">The job remains in the disabling state until the disable operation is completed and all tasks have been dealt with according to the disableTasks option; the job then moves to the disabled state.</span></span>
+      <span data-ttu-id="50d31-133">Nessuna nuova attività vengono avviate nel processo finché questo non torna allo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="50d31-133">No new tasks are started under the job until it moves back to active state.</span></span> <span data-ttu-id="50d31-134">Se si tenta di disabilitare un processo che si trova in uno stato diverso da quello attivo, si disattiva o disabilitato, la richiesta ha esito negativo con codice di stato 409.</span><span class="sxs-lookup"><span data-stu-id="50d31-134">If you try to disable a job that is in any state other than active, disabling, or disabled, the request fails with status code 409.</span></span>
+    syntax:
+      content: 'function disable(jobId: string, disableTasks: Models.DisableJobOption, options?: Models.JobDisableOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-135">ID del processo da disabilitare.</span><span class="sxs-lookup"><span data-stu-id="50d31-135">The ID of the job to disable.</span></span>
+        - id: disableTasks
+          type:
+            - Models.DisableJobOption
+          description: '<span data-ttu-id="50d31-136">Cosa fare con attività attive associate al processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-136">What to do with active tasks associated with the job.</span></span> <span data-ttu-id="50d31-137">I valori possibili sono: ''reinserimenti nella coda'', ''terminate'', ''wait''</span><span class="sxs-lookup"><span data-stu-id="50d31-137">Possible values include: ''requeue'', ''terminate'', ''wait''</span></span>'
+        - id: options
+          type:
+            - Models.JobDisableOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.disable_1'
+    name: 'disable(string, Models.DisableJobOption, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disable(jobId: string, disableTasks: Models.DisableJobOption, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-138">ID del processo da disabilitare.</span><span class="sxs-lookup"><span data-stu-id="50d31-138">The ID of the job to disable.</span></span>
+        - id: disableTasks
+          type:
+            - Models.DisableJobOption
+          description: '<span data-ttu-id="50d31-139">Cosa fare con attività attive associate al processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-139">What to do with active tasks associated with the job.</span></span> <span data-ttu-id="50d31-140">I valori possibili sono: ''reinserimenti nella coda'', ''terminate'', ''wait''</span><span class="sxs-lookup"><span data-stu-id="50d31-140">Possible values include: ''requeue'', ''terminate'', ''wait''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-141">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-141">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.enable_2'
+    name: 'enable(string, JobEnableOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enable(jobId: string, options: JobEnableOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-142">ID del processo da abilitare.</span><span class="sxs-lookup"><span data-stu-id="50d31-142">The ID of the job to enable.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobEnableOptionalParams'
+          description: <span data-ttu-id="50d31-143">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-143">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-144">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.enable'
+    name: 'enable(string, Models.JobEnableOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="50d31-145">Quando si chiama questa API, un processo disabilitato il servizio Batch imposta lo stato di abilitazione.</span><span class="sxs-lookup"><span data-stu-id="50d31-145">When you call this API, the Batch service sets a disabled job to the enabling state.</span></span> <span data-ttu-id="50d31-146">Dopo questa operazione è stata completata, il processo passa allo stato attivo e pianificazione di nuove attività nel riprende processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-146">After the this operation is completed, the job moves to the active state, and scheduling of new tasks under the job resumes.</span></span> <span data-ttu-id="50d31-147">Il servizio Batch non consente un''attività deve rimanere nello stato attivo per più di 180 giorni.</span><span class="sxs-lookup"><span data-stu-id="50d31-147">The Batch service does not allow a task to remain in the active state for more than 180 days.</span></span> <span data-ttu-id="50d31-148">Pertanto, se si abilita un processo che contiene le attività attive che sono state aggiunte più di 180 giorni fa, tali attività non verranno eseguite.</span><span class="sxs-lookup"><span data-stu-id="50d31-148">Therefore, if you enable a job containing active tasks which were added more than 180 days ago, those tasks will not run.</span></span>'
+    syntax:
+      content: 'function enable(jobId: string, options?: Models.JobEnableOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-149">ID del processo da abilitare.</span><span class="sxs-lookup"><span data-stu-id="50d31-149">The ID of the job to enable.</span></span>
+        - id: options
+          type:
+            - Models.JobEnableOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.enable_1'
+    name: 'enable(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enable(jobId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-150">ID del processo da abilitare.</span><span class="sxs-lookup"><span data-stu-id="50d31-150">The ID of the job to enable.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-151">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.get_2'
+    name: 'get(string, JobGetOptionalParams, ServiceCallback<CloudJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, options: JobGetOptionalParams, callback: ServiceCallback<CloudJob>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-152">L'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-152">The ID of the job.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobGetOptionalParams'
+          description: <span data-ttu-id="50d31-153">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-153">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJob>
+          description: |
+            <span data-ttu-id="50d31-154">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-154">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.get'
+    name: 'get(string, Models.JobGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, options?: Models.JobGetOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-155">L'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-155">The ID of the job.</span></span>
+        - id: options
+          type:
+            - Models.JobGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.get_1'
+    name: 'get(string, ServiceCallback<CloudJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, callback: ServiceCallback<CloudJob>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-156">L'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-156">The ID of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJob>
+          description: |
+            <span data-ttu-id="50d31-157">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getAllLifetimeStatistics_2'
+    name: 'getAllLifetimeStatistics(JobGetAllLifetimeStatisticsOptionalParams, ServiceCallback<JobStatistics>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(options: JobGetAllLifetimeStatisticsOptionalParams, callback: ServiceCallback<JobStatistics>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.JobGetAllLifetimeStatisticsOptionalParams'
+          description: <span data-ttu-id="50d31-158">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.JobStatistics>
+          description: |
+            <span data-ttu-id="50d31-159">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getAllLifetimeStatistics'
+    name: getAllLifetimeStatistics(Models.JobGetAllLifetimeStatisticsOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="50d31-160">Le statistiche vengono aggregate in tutti i processi che sono stata presente nell''account, dalla creazione dell''account all''ultima ora di aggiornamento delle statistiche.</span><span class="sxs-lookup"><span data-stu-id="50d31-160">Statistics are aggregated across all jobs that have ever existed in the account, from account creation to the last update time of the statistics.</span></span> <span data-ttu-id="50d31-161">Le statistiche potrebbero non essere immediatamente disponibili.</span><span class="sxs-lookup"><span data-stu-id="50d31-161">The statistics may not be immediately available.</span></span> <span data-ttu-id="50d31-162">Il servizio Batch esegue rollup periodici delle statistiche.</span><span class="sxs-lookup"><span data-stu-id="50d31-162">The Batch service performs periodic roll-up of statistics.</span></span> <span data-ttu-id="50d31-163">Il ritardo tipico è di circa 30 minuti.</span><span class="sxs-lookup"><span data-stu-id="50d31-163">The typical delay is about 30 minutes.</span></span>'
+    syntax:
+      content: 'function getAllLifetimeStatistics(options?: Models.JobGetAllLifetimeStatisticsOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.JobGetAllLifetimeStatisticsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getAllLifetimeStatistics_1'
+    name: getAllLifetimeStatistics(ServiceCallback<JobStatistics>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(callback: ServiceCallback<JobStatistics>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.JobStatistics>
+          description: |
+            <span data-ttu-id="50d31-164">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-164">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getTaskCounts_2'
+    name: 'getTaskCounts(string, JobGetTaskCountsOptionalParams, ServiceCallback<TaskCounts>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTaskCounts(jobId: string, options: JobGetTaskCountsOptionalParams, callback: ServiceCallback<TaskCounts>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-165">L'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-165">The ID of the job.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobGetTaskCountsOptionalParams'
+          description: <span data-ttu-id="50d31-166">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-166">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.TaskCounts>
+          description: |
+            <span data-ttu-id="50d31-167">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-167">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetTaskCountsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getTaskCounts'
+    name: 'getTaskCounts(string, Models.JobGetTaskCountsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="50d31-168">I conteggi delle attività forniscono un conteggio delle attività dallo stato di attività attive, in esecuzione o completato e un conteggio delle attività che ha avuto esito positivo o negativo.</span><span class="sxs-lookup"><span data-stu-id="50d31-168">Task counts provide a count of the tasks by active, running or completed task state, and a count of tasks which succeeded or failed.</span></span> <span data-ttu-id="50d31-169">Come in esecuzione vengono conteggiate le attività nello stato di preparazione.</span><span class="sxs-lookup"><span data-stu-id="50d31-169">Tasks in the preparing state are counted as running.</span></span>'
+    syntax:
+      content: 'function getTaskCounts(jobId: string, options?: Models.JobGetTaskCountsOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-170">L'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-170">The ID of the job.</span></span>
+        - id: options
+          type:
+            - Models.JobGetTaskCountsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetTaskCountsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getTaskCounts_1'
+    name: 'getTaskCounts(string, ServiceCallback<TaskCounts>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTaskCounts(jobId: string, callback: ServiceCallback<TaskCounts>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-171">L'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-171">The ID of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.TaskCounts>
+          description: |
+            <span data-ttu-id="50d31-172">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-172">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetTaskCountsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.constructor'
+    name: Job(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="50d31-173">Creare un processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-173">Create a Job.</span></span>
+    syntax:
+      content: 'new Job(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            <span data-ttu-id="50d31-174">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="50d31-174">Reference to the service client.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.list_2'
+    name: 'list(JobListOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: JobListOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.JobListOptionalParams'
+          description: <span data-ttu-id="50d31-175">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-175">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="50d31-176">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-176">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.list'
+    name: list(Models.JobListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options?: Models.JobListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.JobListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.list_1'
+    name: list(ServiceCallback<CloudJobListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="50d31-177">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobSchedule_2'
+    name: 'listFromJobSchedule(string, JobListFromJobScheduleOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobSchedule(jobScheduleId: string, options: JobListFromJobScheduleOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-178">L'ID della pianificazione del processo da cui si desidera ottenere un elenco dei processi.</span><span class="sxs-lookup"><span data-stu-id="50d31-178">The ID of the job schedule from which you want to get a list of jobs.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListFromJobScheduleOptionalParams'
+          description: <span data-ttu-id="50d31-179">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-179">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="50d31-180">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobSchedule'
+    name: 'listFromJobSchedule(string, Models.JobListFromJobScheduleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobSchedule(jobScheduleId: string, options?: Models.JobListFromJobScheduleOptionalParams)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-181">L'ID della pianificazione del processo da cui si desidera ottenere un elenco dei processi.</span><span class="sxs-lookup"><span data-stu-id="50d31-181">The ID of the job schedule from which you want to get a list of jobs.</span></span>
+        - id: options
+          type:
+            - Models.JobListFromJobScheduleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobSchedule_1'
+    name: 'listFromJobSchedule(string, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobSchedule(jobScheduleId: string, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-182">L'ID della pianificazione del processo da cui si desidera ottenere un elenco dei processi.</span><span class="sxs-lookup"><span data-stu-id="50d31-182">The ID of the job schedule from which you want to get a list of jobs.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="50d31-183">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobScheduleNext_2'
+    name: 'listFromJobScheduleNext(string, JobListFromJobScheduleNextOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobScheduleNext(nextPageLink: string, options: JobListFromJobScheduleNextOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="50d31-184">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="50d31-184">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListFromJobScheduleNextOptionalParams'
+          description: <span data-ttu-id="50d31-185">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-185">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="50d31-186">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-186">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobScheduleNext'
+    name: 'listFromJobScheduleNext(string, Models.JobListFromJobScheduleNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobScheduleNext(nextPageLink: string, options?: Models.JobListFromJobScheduleNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="50d31-187">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="50d31-187">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.JobListFromJobScheduleNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobScheduleNext_1'
+    name: 'listFromJobScheduleNext(string, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobScheduleNext(nextPageLink: string, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="50d31-188">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="50d31-188">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="50d31-189">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listNext_2'
+    name: 'listNext(string, JobListNextOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: JobListNextOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="50d31-190">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="50d31-190">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListNextOptionalParams'
+          description: <span data-ttu-id="50d31-191">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-191">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="50d31-192">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-192">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listNext'
+    name: 'listNext(string, Models.JobListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.JobListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="50d31-193">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="50d31-193">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.JobListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listNext_1'
+    name: 'listNext(string, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="50d31-194">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="50d31-194">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="50d31-195">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus_2'
+    name: 'listPreparationAndReleaseTaskStatus(string, JobListPreparationAndReleaseTaskStatusOptionalParams, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatus(jobId: string, options: JobListPreparationAndReleaseTaskStatusOptionalParams, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-196">L'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-196">The ID of the job.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListPreparationAndReleaseTaskStatusOptionalParams'
+          description: <span data-ttu-id="50d31-197">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-197">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="50d31-198">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus'
+    name: 'listPreparationAndReleaseTaskStatus(string, Models.JobListPreparationAndReleaseTaskStatusOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="50d31-199">Questa API restituisce lo stato dell''attività di preparazione e rilascio del processo su tutti i nodi di calcolo che hanno eseguito l''attività di preparazione o rilascio del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-199">This API returns the Job Preparation and Job Release task status on all compute nodes that have run the Job Preparation or Job Release task.</span></span> <span data-ttu-id="50d31-200">Sono inclusi i nodi che sono stato rimosso dal pool.</span><span class="sxs-lookup"><span data-stu-id="50d31-200">This includes nodes which have since been removed from the pool.</span></span> <span data-ttu-id="50d31-201">Se questa API viene richiamata su un processo di cui è presente alcuna attività di preparazione o rilascio del processo, il servizio Batch restituisce il codice di stato HTTP 409 (conflitto) con un codice di errore di JobPreparationTaskNotSpecified.</span><span class="sxs-lookup"><span data-stu-id="50d31-201">If this API is invoked on a job which has no Job Preparation or Job Release task, the Batch service returns HTTP status code 409 (Conflict) with an error code of JobPreparationTaskNotSpecified.</span></span>'
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatus(jobId: string, options?: Models.JobListPreparationAndReleaseTaskStatusOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-202">L'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-202">The ID of the job.</span></span>
+        - id: options
+          type:
+            - Models.JobListPreparationAndReleaseTaskStatusOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus_1'
+    name: 'listPreparationAndReleaseTaskStatus(string, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatus(jobId: string, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-203">L'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-203">The ID of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="50d31-204">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-204">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_2'
+    name: 'listPreparationAndReleaseTaskStatusNext(string, JobListPreparationAndReleaseTaskStatusNextOptionalParams, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatusNext(nextPageLink: string, options: JobListPreparationAndReleaseTaskStatusNextOptionalParams, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="50d31-205">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="50d31-205">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListPreparationAndReleaseTaskStatusNextOptionalParams'
+          description: <span data-ttu-id="50d31-206">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-206">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="50d31-207">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-207">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext'
+    name: 'listPreparationAndReleaseTaskStatusNext(string, Models.JobListPreparationAndReleaseTaskStatusNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="50d31-208">Questa API restituisce lo stato dell''attività di preparazione e rilascio del processo su tutti i nodi di calcolo che hanno eseguito l''attività di preparazione o rilascio del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-208">This API returns the Job Preparation and Job Release task status on all compute nodes that have run the Job Preparation or Job Release task.</span></span> <span data-ttu-id="50d31-209">Sono inclusi i nodi che sono stato rimosso dal pool.</span><span class="sxs-lookup"><span data-stu-id="50d31-209">This includes nodes which have since been removed from the pool.</span></span> <span data-ttu-id="50d31-210">Se questa API viene richiamata su un processo di cui è presente alcuna attività di preparazione o rilascio del processo, il servizio Batch restituisce il codice di stato HTTP 409 (conflitto) con un codice di errore di JobPreparationTaskNotSpecified.</span><span class="sxs-lookup"><span data-stu-id="50d31-210">If this API is invoked on a job which has no Job Preparation or Job Release task, the Batch service returns HTTP status code 409 (Conflict) with an error code of JobPreparationTaskNotSpecified.</span></span>'
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatusNext(nextPageLink: string, options?: Models.JobListPreparationAndReleaseTaskStatusNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="50d31-211">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="50d31-211">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.JobListPreparationAndReleaseTaskStatusNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_1'
+    name: 'listPreparationAndReleaseTaskStatusNext(string, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatusNext(nextPageLink: string, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="50d31-212">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="50d31-212">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="50d31-213">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-213">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.patch_2'
+    name: 'patch(string, JobPatchParameter, JobPatchOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(jobId: string, jobPatchParameter: JobPatchParameter, options: JobPatchOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-214">L'ID del processo di cui si desidera aggiornare le proprietà.</span><span class="sxs-lookup"><span data-stu-id="50d31-214">The ID of the job whose properties you want to update.</span></span>
+        - id: jobPatchParameter
+          type:
+            - '@azure/batch.JobPatchParameter'
+          description: <span data-ttu-id="50d31-215">I parametri per la richiesta.</span><span class="sxs-lookup"><span data-stu-id="50d31-215">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobPatchOptionalParams'
+          description: <span data-ttu-id="50d31-216">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-216">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-217">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-217">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.patch'
+    name: 'patch(string, JobPatchParameter, Models.JobPatchOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="50d31-218">Questo strumento sostituisce solo le proprietà del processo specificate nella richiesta.</span><span class="sxs-lookup"><span data-stu-id="50d31-218">This replaces only the job properties specified in the request.</span></span> <span data-ttu-id="50d31-219">Ad esempio, se il processo presenta i vincoli e una richiesta non specifica l''elemento di vincoli, il processo mantiene i vincoli esistenti.</span><span class="sxs-lookup"><span data-stu-id="50d31-219">For example, if the job has constraints, and a request does not specify the constraints element, then the job keeps the existing constraints.</span></span>'
+    syntax:
+      content: 'function patch(jobId: string, jobPatchParameter: JobPatchParameter, options?: Models.JobPatchOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-220">L'ID del processo di cui si desidera aggiornare le proprietà.</span><span class="sxs-lookup"><span data-stu-id="50d31-220">The ID of the job whose properties you want to update.</span></span>
+        - id: jobPatchParameter
+          type:
+            - '@azure/batch.JobPatchParameter'
+          description: <span data-ttu-id="50d31-221">I parametri per la richiesta.</span><span class="sxs-lookup"><span data-stu-id="50d31-221">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - Models.JobPatchOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.patch_1'
+    name: 'patch(string, JobPatchParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(jobId: string, jobPatchParameter: JobPatchParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-222">L'ID del processo di cui si desidera aggiornare le proprietà.</span><span class="sxs-lookup"><span data-stu-id="50d31-222">The ID of the job whose properties you want to update.</span></span>
+        - id: jobPatchParameter
+          type:
+            - '@azure/batch.JobPatchParameter'
+          description: <span data-ttu-id="50d31-223">I parametri per la richiesta.</span><span class="sxs-lookup"><span data-stu-id="50d31-223">The parameters for the request.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-224">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-224">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.terminate_2'
+    name: 'terminate(string, JobTerminateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobId: string, options: JobTerminateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-225">L'ID del processo da terminare.</span><span class="sxs-lookup"><span data-stu-id="50d31-225">The ID of the job to terminate.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobTerminateOptionalParams'
+          description: <span data-ttu-id="50d31-226">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-226">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-227">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-227">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.terminate'
+    name: 'terminate(string, Models.JobTerminateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="50d31-228">Quando viene ricevuta una richiesta di Termina processo, il servizio Batch imposta il processo per lo stato di terminazione.</span><span class="sxs-lookup"><span data-stu-id="50d31-228">When a Terminate Job request is received, the Batch service sets the job to the terminating state.</span></span> <span data-ttu-id="50d31-229">Quindi, il servizio Batch termina qualsiasi attività in esecuzione associate al processo ed esegue le attività di rilascio di qualsiasi processo di richiesta.</span><span class="sxs-lookup"><span data-stu-id="50d31-229">The Batch service then terminates any running tasks associated with the job and runs any required job release tasks.</span></span> <span data-ttu-id="50d31-230">Il processo passa quindi allo stato completato.</span><span class="sxs-lookup"><span data-stu-id="50d31-230">Then the job moves into the completed state.</span></span> <span data-ttu-id="50d31-231">Se sono presenti tutte le attività del processo nello stato attivo, rimangono nello stato attivo.</span><span class="sxs-lookup"><span data-stu-id="50d31-231">If there are any tasks in the job in the active state, they will remain in the active state.</span></span> <span data-ttu-id="50d31-232">Una volta che un processo viene terminato, non è possibile aggiungere nuove attività e tutte le attività attive rimanenti non verrà pianificate.</span><span class="sxs-lookup"><span data-stu-id="50d31-232">Once a job is terminated, new tasks cannot be added and any remaining active tasks will not be scheduled.</span></span>'
+    syntax:
+      content: 'function terminate(jobId: string, options?: Models.JobTerminateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-233">L'ID del processo da terminare.</span><span class="sxs-lookup"><span data-stu-id="50d31-233">The ID of the job to terminate.</span></span>
+        - id: options
+          type:
+            - Models.JobTerminateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.terminate_1'
+    name: 'terminate(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-234">L'ID del processo da terminare.</span><span class="sxs-lookup"><span data-stu-id="50d31-234">The ID of the job to terminate.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-235">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-235">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.update_2'
+    name: 'update(string, JobUpdateParameter, JobUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobId: string, jobUpdateParameter: JobUpdateParameter, options: JobUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-236">L'ID del processo di cui si desidera aggiornare le proprietà.</span><span class="sxs-lookup"><span data-stu-id="50d31-236">The ID of the job whose properties you want to update.</span></span>
+        - id: jobUpdateParameter
+          type:
+            - '@azure/batch.JobUpdateParameter'
+          description: <span data-ttu-id="50d31-237">I parametri per la richiesta.</span><span class="sxs-lookup"><span data-stu-id="50d31-237">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobUpdateOptionalParams'
+          description: <span data-ttu-id="50d31-238">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="50d31-238">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-239">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-239">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.update'
+    name: 'update(string, JobUpdateParameter, Models.JobUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="50d31-240">Questa impostazione sostituisce completamente tutte le proprietà aggiornabili del processo.</span><span class="sxs-lookup"><span data-stu-id="50d31-240">This fully replaces all the updatable properties of the job.</span></span> <span data-ttu-id="50d31-241">Ad esempio, se il processo presenta i vincoli associati e i vincoli non è specificato con questa richiesta, il servizio Batch rimuoverà i vincoli esistenti.</span><span class="sxs-lookup"><span data-stu-id="50d31-241">For example, if the job has constraints associated with it and if constraints is not specified with this request, then the Batch service will remove the existing constraints.</span></span>'
+    syntax:
+      content: 'function update(jobId: string, jobUpdateParameter: JobUpdateParameter, options?: Models.JobUpdateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-242">L'ID del processo di cui si desidera aggiornare le proprietà.</span><span class="sxs-lookup"><span data-stu-id="50d31-242">The ID of the job whose properties you want to update.</span></span>
+        - id: jobUpdateParameter
+          type:
+            - '@azure/batch.JobUpdateParameter'
+          description: <span data-ttu-id="50d31-243">I parametri per la richiesta.</span><span class="sxs-lookup"><span data-stu-id="50d31-243">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - Models.JobUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.update_1'
+    name: 'update(string, JobUpdateParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobId: string, jobUpdateParameter: JobUpdateParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="50d31-244">L'ID del processo di cui si desidera aggiornare le proprietà.</span><span class="sxs-lookup"><span data-stu-id="50d31-244">The ID of the job whose properties you want to update.</span></span>
+        - id: jobUpdateParameter
+          type:
+            - '@azure/batch.JobUpdateParameter'
+          description: <span data-ttu-id="50d31-245">I parametri per la richiesta.</span><span class="sxs-lookup"><span data-stu-id="50d31-245">The parameters for the request.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="50d31-246">Il callback</span><span class="sxs-lookup"><span data-stu-id="50d31-246">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobUpdateResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.JobAddParameter'
+    name: JobAddParameter
+    spec.typeScript:
+      - name: JobAddParameter
+        fullName: JobAddParameter
+        uid: '@azure/batch.JobAddParameter'
+  - uid: '@azure/batch.JobAddOptionalParams'
+    name: JobAddOptionalParams
+    spec.typeScript:
+      - name: JobAddOptionalParams
+        fullName: JobAddOptionalParams
+        uid: '@azure/batch.JobAddOptionalParams'
+  - uid: '@azure/batch.JobDeleteMethodOptionalParams'
+    name: JobDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: JobDeleteMethodOptionalParams
+        fullName: JobDeleteMethodOptionalParams
+        uid: '@azure/batch.JobDeleteMethodOptionalParams'
+  - uid: '@azure/batch.JobDisableOptionalParams'
+    name: JobDisableOptionalParams
+    spec.typeScript:
+      - name: JobDisableOptionalParams
+        fullName: JobDisableOptionalParams
+        uid: '@azure/batch.JobDisableOptionalParams'
+  - uid: '@azure/batch.JobEnableOptionalParams'
+    name: JobEnableOptionalParams
+    spec.typeScript:
+      - name: JobEnableOptionalParams
+        fullName: JobEnableOptionalParams
+        uid: '@azure/batch.JobEnableOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudJob>
+    name: CloudJob>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudJob
+        fullName: CloudJob
+        uid: '@azure/batch.CloudJob'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobGetOptionalParams'
+    name: JobGetOptionalParams
+    spec.typeScript:
+      - name: JobGetOptionalParams
+        fullName: JobGetOptionalParams
+        uid: '@azure/batch.JobGetOptionalParams'
+  - uid: ServiceCallback<@azure/batch.JobStatistics>
+    name: JobStatistics>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobStatistics
+        fullName: JobStatistics
+        uid: '@azure/batch.JobStatistics'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobGetAllLifetimeStatisticsOptionalParams'
+    name: JobGetAllLifetimeStatisticsOptionalParams
+    spec.typeScript:
+      - name: JobGetAllLifetimeStatisticsOptionalParams
+        fullName: JobGetAllLifetimeStatisticsOptionalParams
+        uid: '@azure/batch.JobGetAllLifetimeStatisticsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.TaskCounts>
+    name: TaskCounts>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: TaskCounts
+        fullName: TaskCounts
+        uid: '@azure/batch.TaskCounts'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobGetTaskCountsOptionalParams'
+    name: JobGetTaskCountsOptionalParams
+    spec.typeScript:
+      - name: JobGetTaskCountsOptionalParams
+        fullName: JobGetTaskCountsOptionalParams
+        uid: '@azure/batch.JobGetTaskCountsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudJobListResult>
+    name: CloudJobListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudJobListResult
+        fullName: CloudJobListResult
+        uid: '@azure/batch.CloudJobListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobListOptionalParams'
+    name: JobListOptionalParams
+    spec.typeScript:
+      - name: JobListOptionalParams
+        fullName: JobListOptionalParams
+        uid: '@azure/batch.JobListOptionalParams'
+  - uid: '@azure/batch.JobListFromJobScheduleOptionalParams'
+    name: JobListFromJobScheduleOptionalParams
+    spec.typeScript:
+      - name: JobListFromJobScheduleOptionalParams
+        fullName: JobListFromJobScheduleOptionalParams
+        uid: '@azure/batch.JobListFromJobScheduleOptionalParams'
+  - uid: '@azure/batch.JobListFromJobScheduleNextOptionalParams'
+    name: JobListFromJobScheduleNextOptionalParams
+    spec.typeScript:
+      - name: JobListFromJobScheduleNextOptionalParams
+        fullName: JobListFromJobScheduleNextOptionalParams
+        uid: '@azure/batch.JobListFromJobScheduleNextOptionalParams'
+  - uid: '@azure/batch.JobListNextOptionalParams'
+    name: JobListNextOptionalParams
+    spec.typeScript:
+      - name: JobListNextOptionalParams
+        fullName: JobListNextOptionalParams
+        uid: '@azure/batch.JobListNextOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+    name: CloudJobListPreparationAndReleaseTaskStatusResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudJobListPreparationAndReleaseTaskStatusResult
+        fullName: CloudJobListPreparationAndReleaseTaskStatusResult
+        uid: '@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusOptionalParams'
+    name: JobListPreparationAndReleaseTaskStatusOptionalParams
+    spec.typeScript:
+      - name: JobListPreparationAndReleaseTaskStatusOptionalParams
+        fullName: JobListPreparationAndReleaseTaskStatusOptionalParams
+        uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusOptionalParams'
+  - uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusNextOptionalParams'
+    name: JobListPreparationAndReleaseTaskStatusNextOptionalParams
+    spec.typeScript:
+      - name: JobListPreparationAndReleaseTaskStatusNextOptionalParams
+        fullName: JobListPreparationAndReleaseTaskStatusNextOptionalParams
+        uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusNextOptionalParams'
+  - uid: '@azure/batch.JobPatchParameter'
+    name: JobPatchParameter
+    spec.typeScript:
+      - name: JobPatchParameter
+        fullName: JobPatchParameter
+        uid: '@azure/batch.JobPatchParameter'
+  - uid: '@azure/batch.JobPatchOptionalParams'
+    name: JobPatchOptionalParams
+    spec.typeScript:
+      - name: JobPatchOptionalParams
+        fullName: JobPatchOptionalParams
+        uid: '@azure/batch.JobPatchOptionalParams'
+  - uid: '@azure/batch.JobTerminateOptionalParams'
+    name: JobTerminateOptionalParams
+    spec.typeScript:
+      - name: JobTerminateOptionalParams
+        fullName: JobTerminateOptionalParams
+        uid: '@azure/batch.JobTerminateOptionalParams'
+  - uid: '@azure/batch.JobUpdateParameter'
+    name: JobUpdateParameter
+    spec.typeScript:
+      - name: JobUpdateParameter
+        fullName: JobUpdateParameter
+        uid: '@azure/batch.JobUpdateParameter'
+  - uid: '@azure/batch.JobUpdateOptionalParams'
+    name: JobUpdateOptionalParams
+    spec.typeScript:
+      - name: JobUpdateOptionalParams
+        fullName: JobUpdateOptionalParams
+        uid: '@azure/batch.JobUpdateOptionalParams'
