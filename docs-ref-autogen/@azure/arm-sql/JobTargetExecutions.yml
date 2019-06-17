@@ -1,0 +1,627 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.JobTargetExecutions'
+    name: JobTargetExecutions
+    fullName: JobTargetExecutions
+    children:
+      - '@azure/arm-sql.JobTargetExecutions.get'
+      - '@azure/arm-sql.JobTargetExecutions.get_2'
+      - '@azure/arm-sql.JobTargetExecutions.get_1'
+      - '@azure/arm-sql.JobTargetExecutions.constructor'
+      - '@azure/arm-sql.JobTargetExecutions.listByJobExecution_2'
+      - '@azure/arm-sql.JobTargetExecutions.listByJobExecution'
+      - '@azure/arm-sql.JobTargetExecutions.listByJobExecution_1'
+      - '@azure/arm-sql.JobTargetExecutions.listByJobExecutionNext'
+      - '@azure/arm-sql.JobTargetExecutions.listByJobExecutionNext_2'
+      - '@azure/arm-sql.JobTargetExecutions.listByJobExecutionNext_1'
+      - '@azure/arm-sql.JobTargetExecutions.listByStep_2'
+      - '@azure/arm-sql.JobTargetExecutions.listByStep'
+      - '@azure/arm-sql.JobTargetExecutions.listByStep_1'
+      - '@azure/arm-sql.JobTargetExecutions.listByStepNext'
+      - '@azure/arm-sql.JobTargetExecutions.listByStepNext_2'
+      - '@azure/arm-sql.JobTargetExecutions.listByStepNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="23d82-101">Classe che rappresenta un JobTargetExecutions.</span><span class="sxs-lookup"><span data-stu-id="23d82-101">Class representing a JobTargetExecutions.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.get'
+    name: 'get(string, string, string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23d82-102">Ottiene un'esecuzione di destinazione.</span><span class="sxs-lookup"><span data-stu-id="23d82-102">Gets a target execution.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, targetId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-103">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="23d82-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23d82-104">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="23d82-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-105">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="23d82-105">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-106">Il nome dell'agente processo.</span><span class="sxs-lookup"><span data-stu-id="23d82-106">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-107">Il nome del processo da ottenere.</span><span class="sxs-lookup"><span data-stu-id="23d82-107">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-108">Id univoco dell'esecuzione del processo</span><span class="sxs-lookup"><span data-stu-id="23d82-108">The unique id of the job execution</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-109">Nome del passaggio.</span><span class="sxs-lookup"><span data-stu-id="23d82-109">The name of the step.</span></span>
+        - id: targetId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-110">L'id di destinazione.</span><span class="sxs-lookup"><span data-stu-id="23d82-110">The target id.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.get_2'
+    name: 'get(string, string, string, string, string, string, string, RequestOptionsBase, ServiceCallback<JobExecution>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, targetId: string, options: RequestOptionsBase, callback: ServiceCallback<JobExecution>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-111">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="23d82-111">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23d82-112">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="23d82-112">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-113">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="23d82-113">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-114">Il nome dell'agente processo.</span><span class="sxs-lookup"><span data-stu-id="23d82-114">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-115">Il nome del processo da ottenere.</span><span class="sxs-lookup"><span data-stu-id="23d82-115">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-116">Id univoco dell'esecuzione del processo</span><span class="sxs-lookup"><span data-stu-id="23d82-116">The unique id of the job execution</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-117">Nome del passaggio.</span><span class="sxs-lookup"><span data-stu-id="23d82-117">The name of the step.</span></span>
+        - id: targetId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-118">L'id di destinazione.</span><span class="sxs-lookup"><span data-stu-id="23d82-118">The target id.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="23d82-119">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="23d82-119">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecution>
+          description: |
+            <span data-ttu-id="23d82-120">Il callback</span><span class="sxs-lookup"><span data-stu-id="23d82-120">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.get_1'
+    name: 'get(string, string, string, string, string, string, string, ServiceCallback<JobExecution>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, targetId: string, callback: ServiceCallback<JobExecution>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-121">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="23d82-121">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23d82-122">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="23d82-122">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-123">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="23d82-123">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-124">Il nome dell'agente processo.</span><span class="sxs-lookup"><span data-stu-id="23d82-124">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-125">Il nome del processo da ottenere.</span><span class="sxs-lookup"><span data-stu-id="23d82-125">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-126">Id univoco dell'esecuzione del processo</span><span class="sxs-lookup"><span data-stu-id="23d82-126">The unique id of the job execution</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-127">Nome del passaggio.</span><span class="sxs-lookup"><span data-stu-id="23d82-127">The name of the step.</span></span>
+        - id: targetId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-128">L'id di destinazione.</span><span class="sxs-lookup"><span data-stu-id="23d82-128">The target id.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecution>
+          description: |
+            <span data-ttu-id="23d82-129">Il callback</span><span class="sxs-lookup"><span data-stu-id="23d82-129">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.constructor'
+    name: JobTargetExecutions(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23d82-130">Creare un JobTargetExecutions.</span><span class="sxs-lookup"><span data-stu-id="23d82-130">Create a JobTargetExecutions.</span></span>
+    syntax:
+      content: 'new JobTargetExecutions(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="23d82-131">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="23d82-131">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByJobExecution_2'
+    name: 'listByJobExecution(string, string, string, string, string, JobTargetExecutionsListByJobExecutionOptionalParams, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobExecution(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options: JobTargetExecutionsListByJobExecutionOptionalParams, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-132">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="23d82-132">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23d82-133">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="23d82-133">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-134">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="23d82-134">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-135">Il nome dell'agente processo.</span><span class="sxs-lookup"><span data-stu-id="23d82-135">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-136">Il nome del processo da ottenere.</span><span class="sxs-lookup"><span data-stu-id="23d82-136">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-137">L'id di esecuzione del processo</span><span class="sxs-lookup"><span data-stu-id="23d82-137">The id of the job execution</span></span>
+        - id: options
+          type:
+            - '@azure/arm-sql.JobTargetExecutionsListByJobExecutionOptionalParams'
+          description: <span data-ttu-id="23d82-138">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="23d82-138">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="23d82-139">Il callback</span><span class="sxs-lookup"><span data-stu-id="23d82-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByJobExecutionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByJobExecution'
+    name: 'listByJobExecution(string, string, string, string, string, Models.JobTargetExecutionsListByJobExecutionOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23d82-140">Elenca le esecuzioni per tutti i passaggi di esecuzione del processo di destinazione.</span><span class="sxs-lookup"><span data-stu-id="23d82-140">Lists target executions for all steps of a job execution.</span></span>
+    syntax:
+      content: 'function listByJobExecution(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: Models.JobTargetExecutionsListByJobExecutionOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-141">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="23d82-141">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23d82-142">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="23d82-142">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-143">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="23d82-143">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-144">Il nome dell'agente processo.</span><span class="sxs-lookup"><span data-stu-id="23d82-144">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-145">Il nome del processo da ottenere.</span><span class="sxs-lookup"><span data-stu-id="23d82-145">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-146">L'id di esecuzione del processo</span><span class="sxs-lookup"><span data-stu-id="23d82-146">The id of the job execution</span></span>
+        - id: options
+          type:
+            - Models.JobTargetExecutionsListByJobExecutionOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByJobExecutionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByJobExecution_1'
+    name: 'listByJobExecution(string, string, string, string, string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobExecution(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-147">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="23d82-147">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23d82-148">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="23d82-148">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-149">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="23d82-149">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-150">Il nome dell'agente processo.</span><span class="sxs-lookup"><span data-stu-id="23d82-150">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-151">Il nome del processo da ottenere.</span><span class="sxs-lookup"><span data-stu-id="23d82-151">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-152">L'id di esecuzione del processo</span><span class="sxs-lookup"><span data-stu-id="23d82-152">The id of the job execution</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="23d82-153">Il callback</span><span class="sxs-lookup"><span data-stu-id="23d82-153">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByJobExecutionResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByJobExecutionNext'
+    name: 'listByJobExecutionNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23d82-154">Elenca le esecuzioni per tutti i passaggi di esecuzione del processo di destinazione.</span><span class="sxs-lookup"><span data-stu-id="23d82-154">Lists target executions for all steps of a job execution.</span></span>
+    syntax:
+      content: 'function listByJobExecutionNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="23d82-155">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="23d82-155">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByJobExecutionNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByJobExecutionNext_2'
+    name: 'listByJobExecutionNext(string, RequestOptionsBase, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobExecutionNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="23d82-156">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="23d82-156">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="23d82-157">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="23d82-157">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="23d82-158">Il callback</span><span class="sxs-lookup"><span data-stu-id="23d82-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByJobExecutionNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByJobExecutionNext_1'
+    name: 'listByJobExecutionNext(string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobExecutionNext(nextPageLink: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="23d82-159">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="23d82-159">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="23d82-160">Il callback</span><span class="sxs-lookup"><span data-stu-id="23d82-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByJobExecutionNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByStep_2'
+    name: 'listByStep(string, string, string, string, string, string, JobTargetExecutionsListByStepOptionalParams, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStep(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, options: JobTargetExecutionsListByStepOptionalParams, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-161">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="23d82-161">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23d82-162">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="23d82-162">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-163">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="23d82-163">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-164">Il nome dell'agente processo.</span><span class="sxs-lookup"><span data-stu-id="23d82-164">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-165">Il nome del processo da ottenere.</span><span class="sxs-lookup"><span data-stu-id="23d82-165">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-166">L'id di esecuzione del processo</span><span class="sxs-lookup"><span data-stu-id="23d82-166">The id of the job execution</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-167">Nome del passaggio.</span><span class="sxs-lookup"><span data-stu-id="23d82-167">The name of the step.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-sql.JobTargetExecutionsListByStepOptionalParams'
+          description: <span data-ttu-id="23d82-168">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="23d82-168">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="23d82-169">Il callback</span><span class="sxs-lookup"><span data-stu-id="23d82-169">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByStepResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByStep'
+    name: 'listByStep(string, string, string, string, string, string, Models.JobTargetExecutionsListByStepOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23d82-170">Elenca le esecuzioni di destinazione di esecuzione del passaggio processo.</span><span class="sxs-lookup"><span data-stu-id="23d82-170">Lists the target executions of a job step execution.</span></span>
+    syntax:
+      content: 'function listByStep(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, options?: Models.JobTargetExecutionsListByStepOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-171">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="23d82-171">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23d82-172">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="23d82-172">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-173">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="23d82-173">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-174">Il nome dell'agente processo.</span><span class="sxs-lookup"><span data-stu-id="23d82-174">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-175">Il nome del processo da ottenere.</span><span class="sxs-lookup"><span data-stu-id="23d82-175">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-176">L'id di esecuzione del processo</span><span class="sxs-lookup"><span data-stu-id="23d82-176">The id of the job execution</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-177">Nome del passaggio.</span><span class="sxs-lookup"><span data-stu-id="23d82-177">The name of the step.</span></span>
+        - id: options
+          type:
+            - Models.JobTargetExecutionsListByStepOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByStepResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByStep_1'
+    name: 'listByStep(string, string, string, string, string, string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStep(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-178">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="23d82-178">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="23d82-179">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="23d82-179">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-180">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="23d82-180">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-181">Il nome dell'agente processo.</span><span class="sxs-lookup"><span data-stu-id="23d82-181">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-182">Il nome del processo da ottenere.</span><span class="sxs-lookup"><span data-stu-id="23d82-182">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="23d82-183">L'id di esecuzione del processo</span><span class="sxs-lookup"><span data-stu-id="23d82-183">The id of the job execution</span></span>
+        - id: stepName
+          type:
+            - string
+          description: <span data-ttu-id="23d82-184">Nome del passaggio.</span><span class="sxs-lookup"><span data-stu-id="23d82-184">The name of the step.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="23d82-185">Il callback</span><span class="sxs-lookup"><span data-stu-id="23d82-185">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByStepResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByStepNext'
+    name: 'listByStepNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="23d82-186">Elenca le esecuzioni di destinazione di esecuzione del passaggio processo.</span><span class="sxs-lookup"><span data-stu-id="23d82-186">Lists the target executions of a job step execution.</span></span>
+    syntax:
+      content: 'function listByStepNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="23d82-187">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="23d82-187">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByStepNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByStepNext_2'
+    name: 'listByStepNext(string, RequestOptionsBase, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStepNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="23d82-188">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="23d82-188">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="23d82-189">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="23d82-189">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="23d82-190">Il callback</span><span class="sxs-lookup"><span data-stu-id="23d82-190">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByStepNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobTargetExecutions.listByStepNext_1'
+    name: 'listByStepNext(string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStepNext(nextPageLink: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="23d82-191">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="23d82-191">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="23d82-192">Il callback</span><span class="sxs-lookup"><span data-stu-id="23d82-192">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTargetExecutionsListByStepNextResponse>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-sql.JobExecution>
+    name: JobExecution>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobExecution
+        fullName: JobExecution
+        uid: '@azure/arm-sql.JobExecution'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+    name: JobExecutionListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobExecutionListResult
+        fullName: JobExecutionListResult
+        uid: '@azure/arm-sql.JobExecutionListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-sql.JobTargetExecutionsListByJobExecutionOptionalParams'
+    name: JobTargetExecutionsListByJobExecutionOptionalParams
+    spec.typeScript:
+      - name: JobTargetExecutionsListByJobExecutionOptionalParams
+        fullName: JobTargetExecutionsListByJobExecutionOptionalParams
+        uid: '@azure/arm-sql.JobTargetExecutionsListByJobExecutionOptionalParams'
+  - uid: '@azure/arm-sql.JobTargetExecutionsListByStepOptionalParams'
+    name: JobTargetExecutionsListByStepOptionalParams
+    spec.typeScript:
+      - name: JobTargetExecutionsListByStepOptionalParams
+        fullName: JobTargetExecutionsListByStepOptionalParams
+        uid: '@azure/arm-sql.JobTargetExecutionsListByStepOptionalParams'
