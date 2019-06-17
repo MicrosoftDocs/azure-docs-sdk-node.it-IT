@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobSchedulePatchParameter'
+    name: JobSchedulePatchParameter
+    fullName: JobSchedulePatchParameter
+    children:
+      - '@azure/batch.JobSchedulePatchParameter.jobSpecification'
+      - '@azure/batch.JobSchedulePatchParameter.metadata'
+      - '@azure/batch.JobSchedulePatchParameter.schedule'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="821c2-101">Interfaccia che rappresenta JobSchedulePatchParameter.</span><span class="sxs-lookup"><span data-stu-id="821c2-101">An interface representing JobSchedulePatchParameter.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedulePatchParameter.jobSpecification'
+    name: jobSpecification
+    fullName: jobSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="821c2-102">I dettagli dei processi da creare in questa pianificazione.</span><span class="sxs-lookup"><span data-stu-id="821c2-102">The details of the jobs to be created on this schedule.</span></span> <span data-ttu-id="821c2-103">Gli aggiornamenti interessano solo i processi avviati dopo l'aggiornamento ha avuto luogo.</span><span class="sxs-lookup"><span data-stu-id="821c2-103">Updates affect only jobs that are started after the update has taken place.</span></span> <span data-ttu-id="821c2-104">Qualsiasi processo attualmente attivo continua con la specifica precedente.</span><span class="sxs-lookup"><span data-stu-id="821c2-104">Any currently active job continues with the older specification.</span></span>
+    optional: true
+    syntax:
+      content: 'jobSpecification?: JobSpecification'
+      return:
+        type:
+          - '@azure/batch.JobSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedulePatchParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="821c2-105">Elenco di coppie nome-valore associate la pianificazione del processo come metadati.</span><span class="sxs-lookup"><span data-stu-id="821c2-105">A list of name-value pairs associated with the job schedule as metadata.</span></span> <span data-ttu-id="821c2-106">Se non si specifica questo elemento di metadati esistenti rimane invariato.</span><span class="sxs-lookup"><span data-stu-id="821c2-106">If you do not specify this element, existing metadata is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedulePatchParameter.schedule'
+    name: schedule
+    fullName: schedule
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="821c2-107">La pianificazione in base al quale verranno creati processi.</span><span class="sxs-lookup"><span data-stu-id="821c2-107">The schedule according to which jobs will be created.</span></span> <span data-ttu-id="821c2-108">Se non si specifica questo elemento, la pianificazione esistente viene lasciata invariato.</span><span class="sxs-lookup"><span data-stu-id="821c2-108">If you do not specify this element, the existing schedule is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'schedule?: Schedule'
+      return:
+        type:
+          - '@azure/batch.Schedule'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.JobSpecification'
+    name: JobSpecification
+    spec.typeScript:
+      - name: JobSpecification
+        fullName: JobSpecification
+        uid: '@azure/batch.JobSpecification'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.Schedule'
+    name: Schedule
+    spec.typeScript:
+      - name: Schedule
+        fullName: Schedule
+        uid: '@azure/batch.Schedule'

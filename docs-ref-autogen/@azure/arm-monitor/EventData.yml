@@ -1,0 +1,460 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.EventData'
+    name: EventData
+    fullName: EventData
+    children:
+      - '@azure/arm-monitor.EventData.authorization'
+      - '@azure/arm-monitor.EventData.caller'
+      - '@azure/arm-monitor.EventData.category'
+      - '@azure/arm-monitor.EventData.claims'
+      - '@azure/arm-monitor.EventData.correlationId'
+      - '@azure/arm-monitor.EventData.description'
+      - '@azure/arm-monitor.EventData.eventDataId'
+      - '@azure/arm-monitor.EventData.eventName'
+      - '@azure/arm-monitor.EventData.eventTimestamp'
+      - '@azure/arm-monitor.EventData.httpRequest'
+      - '@azure/arm-monitor.EventData.id'
+      - '@azure/arm-monitor.EventData.level'
+      - '@azure/arm-monitor.EventData.operationId'
+      - '@azure/arm-monitor.EventData.operationName'
+      - '@azure/arm-monitor.EventData.properties'
+      - '@azure/arm-monitor.EventData.resourceGroupName'
+      - '@azure/arm-monitor.EventData.resourceId'
+      - '@azure/arm-monitor.EventData.resourceProviderName'
+      - '@azure/arm-monitor.EventData.resourceType'
+      - '@azure/arm-monitor.EventData.status'
+      - '@azure/arm-monitor.EventData.submissionTimestamp'
+      - '@azure/arm-monitor.EventData.subscriptionId'
+      - '@azure/arm-monitor.EventData.subStatus'
+      - '@azure/arm-monitor.EventData.tenantId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="49069-101">Le voci del registro eventi di Azure sono di tipo EventData</span><span class="sxs-lookup"><span data-stu-id="49069-101">The Azure event log entries are of type EventData</span></span>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.authorization'
+    name: authorization
+    fullName: authorization
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-102">Le informazioni di autorizzazione del mittente.</span><span class="sxs-lookup"><span data-stu-id="49069-102">The sender authorization information.</span></span>
+      <span data-ttu-id="49069-103">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'authorization?: SenderAuthorization'
+      return:
+        type:
+          - '@azure/arm-monitor.SenderAuthorization'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.caller'
+    name: caller
+    fullName: caller
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-104">l'indirizzo di posta elettronica dell'utente che ha eseguito l'operazione, attestazione UPN o attestazione SPN basata sulla disponibilità.</span><span class="sxs-lookup"><span data-stu-id="49069-104">the email address of the user who has performed the operation, the UPN claim or SPN claim based on availability.</span></span>
+      <span data-ttu-id="49069-105">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-105">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'caller?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.category'
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-106">la categoria di eventi.</span><span class="sxs-lookup"><span data-stu-id="49069-106">the event category.</span></span>
+      <span data-ttu-id="49069-107">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'category?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.claims'
+    name: claims
+    fullName: claims
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-108">coppie chiave-valore per identificare le autorizzazioni di ARM.</span><span class="sxs-lookup"><span data-stu-id="49069-108">key value pairs to identify ARM permissions.</span></span>
+      <span data-ttu-id="49069-109">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'claims?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-110">l'Id di correlazione, in genere un GUID in formato stringa.</span><span class="sxs-lookup"><span data-stu-id="49069-110">the correlation Id, usually a GUID in the string format.</span></span> <span data-ttu-id="49069-111">L'Id di correlazione è condiviso tra gli eventi che appartengono alla stessa operazione uberjar.</span><span class="sxs-lookup"><span data-stu-id="49069-111">The correlation Id is shared among the events that belong to the same uber operation.</span></span>
+      <span data-ttu-id="49069-112">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-112">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'correlationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-113">La descrizione dell'evento.</span><span class="sxs-lookup"><span data-stu-id="49069-113">the description of the event.</span></span>
+      <span data-ttu-id="49069-114">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.eventDataId'
+    name: eventDataId
+    fullName: eventDataId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-115">i dati dell'evento ID. Si tratta di un identificatore univoco per un evento.</span><span class="sxs-lookup"><span data-stu-id="49069-115">the event data Id. This is a unique identifier for an event.</span></span>
+      <span data-ttu-id="49069-116">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-116">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'eventDataId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.eventName'
+    name: eventName
+    fullName: eventName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-117">Il nome dell'evento.</span><span class="sxs-lookup"><span data-stu-id="49069-117">the event name.</span></span> <span data-ttu-id="49069-118">Questo valore non deve essere confuso con OperationName.</span><span class="sxs-lookup"><span data-stu-id="49069-118">This value should not be confused with OperationName.</span></span> <span data-ttu-id="49069-119">Ai fini pratici, OperationName potrebbe risultare più interessante per gli utenti finali.</span><span class="sxs-lookup"><span data-stu-id="49069-119">For practical purposes, OperationName might be more appealing to end users.</span></span>
+      <span data-ttu-id="49069-120">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-120">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'eventName?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.eventTimestamp'
+    name: eventTimestamp
+    fullName: eventTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-121">il timestamp di quando è stato generato l'evento dal servizio di Azure l'elaborazione della richiesta corrispondente all'evento.</span><span class="sxs-lookup"><span data-stu-id="49069-121">the timestamp of when the event was generated by the Azure service processing the request corresponding the event.</span></span> <span data-ttu-id="49069-122">È in formato ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="49069-122">It in ISO 8601 format.</span></span>
+      <span data-ttu-id="49069-123">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-123">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'eventTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.httpRequest'
+    name: httpRequest
+    fullName: httpRequest
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-124">le informazioni di richiesta HTTP.</span><span class="sxs-lookup"><span data-stu-id="49069-124">the HTTP request info.</span></span> <span data-ttu-id="49069-125">In genere include 'clientRequestId', 'clientIpAddress' (indirizzo IP dell'utente che ha avviato l'evento) e 'method' (metodo HTTP, ad esempio PUT).</span><span class="sxs-lookup"><span data-stu-id="49069-125">Usually includes the 'clientRequestId', 'clientIpAddress' (IP address of the user who initiated the event) and 'method' (HTTP method e.g. PUT).</span></span>
+      <span data-ttu-id="49069-126">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-126">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'httpRequest?: HttpRequestInfo'
+      return:
+        type:
+          - '@azure/arm-monitor.HttpRequestInfo'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-127">l'Id dell'evento come richiesto da ARM per RBAC.</span><span class="sxs-lookup"><span data-stu-id="49069-127">the Id of this event as required by ARM for RBAC.</span></span> <span data-ttu-id="49069-128">Contiene il EventDataID e un timestamp di informazioni.</span><span class="sxs-lookup"><span data-stu-id="49069-128">It contains the EventDataID and a timestamp information.</span></span>
+      <span data-ttu-id="49069-129">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-129">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.level'
+    name: level
+    fullName: level
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="49069-130">il livello evento.</span><span class="sxs-lookup"><span data-stu-id="49069-130">the event level.</span></span> <span data-ttu-id="49069-131">I valori possibili sono: ''Critical'', ''Error'', ''Warning'', ''Informational'', ''Dettagliato'' **Nota: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-131">Possible values include: ''Critical'', ''Error'', ''Warning'', ''Informational'', ''Verbose'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'level?: EventLevel'
+      return:
+        type:
+          - '@azure/arm-monitor.EventLevel'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.operationId'
+    name: operationId
+    fullName: operationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-132">È in genere un GUID condiviso tra gli eventi corrispondenti a una singola operazione.</span><span class="sxs-lookup"><span data-stu-id="49069-132">It is usually a GUID shared among the events corresponding to single operation.</span></span> <span data-ttu-id="49069-133">Questo valore non deve essere confuso con EventName.</span><span class="sxs-lookup"><span data-stu-id="49069-133">This value should not be confused with EventName.</span></span>
+      <span data-ttu-id="49069-134">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-134">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'operationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.operationName'
+    name: operationName
+    fullName: operationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-135">Il nome dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="49069-135">the operation name.</span></span>
+      <span data-ttu-id="49069-136">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-136">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'operationName?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.properties'
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-137">il set di < Key, Value > coppie, in genere un dizionario < String, String >, che include i dettagli sull'evento.</span><span class="sxs-lookup"><span data-stu-id="49069-137">the set of <Key, Value> pairs (usually a Dictionary<String, String>) that includes details about the event.</span></span>
+      <span data-ttu-id="49069-138">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-138">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'properties?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceGroupName'
+    name: resourceGroupName
+    fullName: resourceGroupName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-139">il nome del gruppo di risorse della risorsa interessata.</span><span class="sxs-lookup"><span data-stu-id="49069-139">the resource group name of the impacted resource.</span></span>
+      <span data-ttu-id="49069-140">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-140">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'resourceGroupName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceId'
+    name: resourceId
+    fullName: resourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-141">l'uri di risorsa che identifica in modo univoco la risorsa che ha causato questo evento.</span><span class="sxs-lookup"><span data-stu-id="49069-141">the resource uri that uniquely identifies the resource that caused this event.</span></span>
+      <span data-ttu-id="49069-142">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-142">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'resourceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceProviderName'
+    name: resourceProviderName
+    fullName: resourceProviderName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-143">il nome del provider di risorse della risorsa interessata.</span><span class="sxs-lookup"><span data-stu-id="49069-143">the resource provider name of the impacted resource.</span></span>
+      <span data-ttu-id="49069-144">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-144">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'resourceProviderName?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceType'
+    name: resourceType
+    fullName: resourceType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="49069-145">il tipo di risorsa **Nota: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-145">the resource type **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'resourceType?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-146">stringa che descrive lo stato dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="49069-146">a string describing the status of the operation.</span></span> <span data-ttu-id="49069-147">Alcuni valori tipici sono: Avvio In corso, Succeeded, Failed, Resolved.</span><span class="sxs-lookup"><span data-stu-id="49069-147">Some typical values are: Started, In progress, Succeeded, Failed, Resolved.</span></span>
+      <span data-ttu-id="49069-148">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-148">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'status?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.submissionTimestamp'
+    name: submissionTimestamp
+    fullName: submissionTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-149">il timestamp di quando l'evento è diventato disponibile per l'esecuzione di query tramite questa API.</span><span class="sxs-lookup"><span data-stu-id="49069-149">the timestamp of when the event became available for querying via this API.</span></span> <span data-ttu-id="49069-150">È in formato ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="49069-150">It is in ISO 8601 format.</span></span> <span data-ttu-id="49069-151">Questo valore non deve essere confuso eventTimestamp.</span><span class="sxs-lookup"><span data-stu-id="49069-151">This value should not be confused eventTimestamp.</span></span> <span data-ttu-id="49069-152">Come si potrebbe verificare un ritardo tra l'ora di occorrenza dell'evento e l'ora in cui l'evento viene inviato all'infrastruttura di registrazione di Azure.</span><span class="sxs-lookup"><span data-stu-id="49069-152">As there might be a delay between the occurrence time of the event, and the time that the event is submitted to the Azure logging infrastructure.</span></span>
+      <span data-ttu-id="49069-153">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-153">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'submissionTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.subscriptionId'
+    name: subscriptionId
+    fullName: subscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="49069-154">l'Id sottoscrizione di Azure in genere un GUID.</span><span class="sxs-lookup"><span data-stu-id="49069-154">the Azure subscription Id usually a GUID.</span></span>
+      <span data-ttu-id="49069-155">**NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-155">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'subscriptionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.subStatus'
+    name: subStatus
+    fullName: subStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="49069-156">lo stato secondario dell''evento.</span><span class="sxs-lookup"><span data-stu-id="49069-156">the event sub status.</span></span> <span data-ttu-id="49069-157">La maggior parte dei casi, se inclusa, consente di acquisire il codice di stato HTTP della chiamata REST.</span><span class="sxs-lookup"><span data-stu-id="49069-157">Most of the time, when included, this captures the HTTP status code of the REST call.</span></span> <span data-ttu-id="49069-158">I valori comuni sono: OK (codice di stato HTTP: 200), Creata (codice di stato HTTP: 201), Accettata (codice di stato HTTP: 202), Nessun contenuto (codice di stato HTTP: 204), bad Request (codice di stato HTTP: 400), Non trovata (codice di stato HTTP: 404), Conflitto (codice di stato HTTP: 409), Errore interno del server (codice di stato HTTP: 500), Service Unavailable (HTTP Status Code:503), Gateway Timeout (HTTP Status Code: 504) **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-158">Common values are: OK (HTTP Status Code: 200), Created (HTTP Status Code: 201), Accepted (HTTP Status Code: 202), No Content (HTTP Status Code: 204), Bad Request(HTTP Status Code: 400), Not Found (HTTP Status Code: 404), Conflict (HTTP Status Code: 409), Internal Server Error (HTTP Status Code: 500), Service Unavailable (HTTP Status Code:503), Gateway Timeout (HTTP Status Code: 504) **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'subStatus?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="49069-159">l''Id tenant Azure **Nota: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**</span><span class="sxs-lookup"><span data-stu-id="49069-159">the Azure tenant Id **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'tenantId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.SenderAuthorization'
+    name: SenderAuthorization
+    spec.typeScript:
+      - name: SenderAuthorization
+        fullName: SenderAuthorization
+        uid: '@azure/arm-monitor.SenderAuthorization'
+  - uid: '@azure/arm-monitor.LocalizableString'
+    name: LocalizableString
+    spec.typeScript:
+      - name: LocalizableString
+        fullName: LocalizableString
+        uid: '@azure/arm-monitor.LocalizableString'
+  - uid: '@azure/arm-monitor.HttpRequestInfo'
+    name: HttpRequestInfo
+    spec.typeScript:
+      - name: HttpRequestInfo
+        fullName: HttpRequestInfo
+        uid: '@azure/arm-monitor.HttpRequestInfo'
+  - uid: '@azure/arm-monitor.EventLevel'
+    name: EventLevel
+    spec.typeScript:
+      - name: EventLevel
+        fullName: EventLevel
+        uid: '@azure/arm-monitor.EventLevel'
