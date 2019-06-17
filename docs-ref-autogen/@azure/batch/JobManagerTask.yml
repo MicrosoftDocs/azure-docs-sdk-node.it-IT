@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    fullName: JobManagerTask
+    children:
+      - '@azure/batch.JobManagerTask.allowLowPriorityNode'
+      - '@azure/batch.JobManagerTask.applicationPackageReferences'
+      - '@azure/batch.JobManagerTask.authenticationTokenSettings'
+      - '@azure/batch.JobManagerTask.commandLine'
+      - '@azure/batch.JobManagerTask.constraints'
+      - '@azure/batch.JobManagerTask.containerSettings'
+      - '@azure/batch.JobManagerTask.displayName'
+      - '@azure/batch.JobManagerTask.environmentSettings'
+      - '@azure/batch.JobManagerTask.id'
+      - '@azure/batch.JobManagerTask.killJobOnCompletion'
+      - '@azure/batch.JobManagerTask.outputFiles'
+      - '@azure/batch.JobManagerTask.resourceFiles'
+      - '@azure/batch.JobManagerTask.runExclusive'
+      - '@azure/batch.JobManagerTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'L''attività di gestore di processi viene avviata automaticamente quando viene creato il processo. Il servizio Batch tenta di pianificare l''attività del gestore di processi prima di qualsiasi altra attività nel processo. Quando si compatta un pool, il servizio Batch provi a mantenere i nodi di calcolo in cui vengono eseguite le attività di gestore di processi per più a lungo possibile (vale a dire, i nodi in esecuzione ''normal'' attività vengono rimosse prima di nodi che eseguono le attività di gestore di processi). Quando un''attività del gestore di processi ha esito negativo e deve essere riavviata, il sistema prova a pianificarne la priorità più alta. Se non sono presenti nodi inattivi disponibile, il sistema può terminare una delle attività in esecuzione nel pool e restituirlo alla coda per liberare spazio per l''attività di gestore di processi da riavviare. Si noti che un''attività di gestore di processi in un processo non ha la priorità sulle attività negli altri processi. Tra i processi, vengono rispettate solo priorità a livello di processo. Se, ad esempio, un gestore di processi in un processo con priorità 0 deve essere riavviato, le attività di un processo con priorità 1 non verrà sovrascritto. Batch verrà effettuati tentativi attività quando viene attivata un''operazione di ripristino in un nodo di calcolo. Esempi di operazioni di ripristino includono (ma non sono limitati a) quando un nodo di calcolo non integro viene riavviato o un nodo di calcolo è scomparso a causa dell''errore dell''host. Ritenta l''esecuzione a causa di un ripristino operazioni sono indipendenti e non vengono conteggiate rispetto al limite in maxTaskRetryCount. Anche se il maxTaskRetryCount è 0, può verificarsi una ripetizione dei tentativi interni a causa di un''operazione di ripristino. Per questo motivo, tutte le attività devono essere idempotenti. Ciò significa attività necessario tollerare viene interrotto e riavviato senza causare alcun danneggiamento o dei dati duplicati. La migliore pratica per le attività a esecuzione prolungata è usare qualche forma di checkpoint.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.allowLowPriorityNode'
+    name: allowLowPriorityNode
+    fullName: allowLowPriorityNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indica se l'attività del gestore di processi possono essere eseguite in un nodo di calcolo con priorità bassa. Il valore predefinito è true.
+    optional: true
+    syntax:
+      content: 'allowLowPriorityNode?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un elenco dei pacchetti di applicazione che consentirà di distribuire il servizio Batch nel nodo di calcolo prima di eseguire la riga di comando. I pacchetti dell''applicazione vengono scaricati e distribuiti in una directory condivisa, non l''attività di directory di lavoro. Pertanto, se un pacchetto con riferimenti è già presente nel nodo di calcolo e viene aggiornato, quindi non viene nuovamente scaricata; viene utilizzata la copia esistente nel nodo di calcolo. Se un pacchetto di applicazione di riferimento non può essere installato, ad esempio perché il pacchetto è stato eliminato o poiché download non riuscito, l''attività ha esito negativo.'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.authenticationTokenSettings'
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le impostazioni per un token di autenticazione che l''attività può usare per eseguire operazioni del servizio Batch. Se questa proprietà è impostata, il servizio Batch fornisce l''attività con un token di autenticazione che può essere usato per autenticare operazioni del servizio Batch senza richiedere una chiave di accesso di account. Il token viene fornito tramite la variabile di ambiente AZ_BATCH_AUTHENTICATION_TOKEN. Le operazioni che è possibile eseguire l''attività utilizzando il token dipendono dalle impostazioni. Ad esempio, un''attività può richiedere autorizzazioni di processo per aggiungere altre attività al processo o controllare lo stato del processo o di altre attività nel processo.'
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - '@azure/batch.AuthenticationTokenSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La riga di comando dell''attività di gestore di processi. La riga di comando non viene eseguito con una shell e pertanto non possono sfruttare le funzionalità della shell, ad esempio l''espansione della variabile di ambiente. Se si desidera sfruttare i vantaggi di queste funzionalità, è necessario richiamare la shell nella riga di comando, usando ad esempio "cmd /c nomecomando" in Windows o "/ bin/sh - c nomecomando" in Linux. Se la riga di comando fa riferimento ai percorsi del file, deve usare un percorso relativo (relativo alla directory di lavoro) o usare la variabile di ambiente specificato di Batch (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Vincoli che si applicano all'attività del gestore di processi.
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le impostazioni per il contenitore con cui viene eseguito l''attività del gestore di processi. Se il pool che eseguirà questa operazione containerConfiguration impostato, deve essere impostato anche. Se il pool che eseguirà questa operazione non ha containerConfiguration impostato, questo non deve essere impostato. Quando viene specificato, tutte le directory in modo ricorsivo sotto il AZ_BATCH_NODE_ROOT_DIR (la radice della directory di Azure Batch nel nodo) vengono mappate nel contenitore, le variabili di ambiente tutte le attività vengono mappate nel contenitore e la riga di comando di attività eseguita nel contenitore.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il nome visualizzato dell'attività di gestore di processi. Non deve essere univoco e può contenere qualsiasi carattere Unicode fino alla lunghezza massima pari a 1024.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco di impostazioni delle variabili di ambiente per l'attività di gestore di processi.
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Stringa che identifica in modo univoco l''attività di gestore di processi all''interno del processo. L''ID può contenere qualsiasi combinazione di caratteri alfanumerici, inclusi trattini e caratteri di sottolineatura e non può contenere più di 64 caratteri.'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.killJobOnCompletion'
+    name: killJobOnCompletion
+    fullName: killJobOnCompletion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indica se il completamento dell''attività di gestore di processi indica il completamento dell''intero processo. Se true, al completamento dell''attività di gestore di processi, i segni di servizio Batch il processo come completato. Se tutte le attività sono ancora in esecuzione in questo momento (ad eccezione di rilascio del processo), tali attività vengono terminate. Se false, il completamento dell''attività di gestore di processi non influenza lo stato del processo. In questo caso, sarà necessario utilizzare l''attributo onAllTasksComplete per terminare il processo, o avere un client o un utente di terminare il processo in modo esplicito. Un esempio è se il gestore di processi consente di creare un set di attività ma, non assume alcun ruolo ulteriormente la loro esecuzione. Il valore predefinito è true. Se si usa gli attributi onAllTasksComplete e onTaskFailure durata processo di controllo e utilizzo dell''attività di gestore di processi solo per creare le attività per il processo (non per monitorare lo stato di avanzamento), quindi è importante impostare killJobOnCompletion su false.'
+    optional: true
+    syntax:
+      content: 'killJobOnCompletion?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un elenco di file che il servizio Batch verrà caricato dal nodo di calcolo dopo l''esecuzione riga di comando. Per attività a istanze multiple, i file verranno caricati solo dal nodo di calcolo in cui viene eseguito l''attività primaria.'
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/batch.OutputFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Un elenco di file che il servizio Batch scaricherà il nodo di calcolo prima di eseguire la riga di comando. I file elencati sotto questo elemento si trovano nella directory di lavoro dell'attività.
+      È una dimensione massima per un elenco di file di risorse.  Quando viene superata la dimensione massima, la richiesta avrà esito negativo e il codice di errore della risposta sarà RequestEntityTooLarge. In questo caso, la raccolta di ResourceFiles deve essere ridotte. Ciò può essere ottenuto tramite file ZIP, i pacchetti dell'applicazione o i contenitori Docker.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.runExclusive'
+    name: runExclusive
+    fullName: runExclusive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica se l'attività del gestore di processi richiede l'uso esclusivo del nodo di calcolo in cui viene eseguito. Se true, nessuna altra attività verrà eseguito nello stesso nodo di calcolo per fino a quando il gestore di processi è in esecuzione. Se false, altre attività eseguibili simultaneamente con il gestore di processi in un nodo di calcolo.
+      Il gestore di processi dei conteggi delle attività in genere nel limite di attività simultanee del nodo, in modo rilevante solo se il nodo consente più attività simultanee. Il valore predefinito è true.
+    optional: true
+    syntax:
+      content: 'runExclusive?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''identità dell''utente con cui viene eseguito l''attività del gestore di processi. Se omesso, l''attività viene eseguito come un utente non amministratore univoco per l''attività.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AuthenticationTokenSettings'
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: '@azure/batch.AuthenticationTokenSettings'
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/batch.OutputFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'

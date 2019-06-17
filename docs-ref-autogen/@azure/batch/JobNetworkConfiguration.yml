@@ -1,0 +1,29 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - '@azure/batch.JobNetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta JobNetworkConfiguration.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobNetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Identificatore della risorsa ARM della subnet della rete virtuale che verranno aggiunti i nodi che eseguono le attività del processo per la durata dell'attività. Questa è supportata solo per i processi in esecuzione nel pool di VirtualMachineConfiguration. Questo aspetto è il formato: /subscriptions/ {sottoscrizione} /resourceGroups/ {gruppo} /providers/ {provider} /virtualNetworks/ {network} / Subnets / {subnet}.
+      La rete virtuale deve trovarsi nella stessa area e sottoscrizione dell'account Azure Batch.
+      La subnet specificata deve avere sufficienti indirizzi IP liberi per contenere il numero di nodi che eseguirà le attività del processo. Per altre informazioni, vedere https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'

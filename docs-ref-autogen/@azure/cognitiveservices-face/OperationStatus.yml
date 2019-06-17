@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.OperationStatus'
+    name: OperationStatus
+    fullName: OperationStatus
+    children:
+      - '@azure/cognitiveservices-face.OperationStatus.createdTime'
+      - '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+      - '@azure/cognitiveservices-face.OperationStatus.message'
+      - '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+      - '@azure/cognitiveservices-face.OperationStatus.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: Oggetto stato dell'operazione. Operazione si riferisce all'attività asincrona back-end tra cui l'esecuzione di uno snapshot e applicare uno snapshot.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.createdTime'
+    name: createdTime
+    fullName: createdTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Combinati stringa di data e ora UTC in cui viene descritto il tempo durante l''operazione (richiedere o applicare uno snapshot) è richiesto. ad esempio 2018-12-25T11:41:02.2331413Z.'
+    syntax:
+      content: 'createdTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+    name: lastActionTime
+    fullName: lastActionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Data UTC combinati e stringa di tempo che descrive l''ultima ora l''operazione (richiedere o applicare uno snapshot) è la migrazione attiva dei dati. Il lastActionTime verrà mantenere ad aumentare finché non viene completata l''operazione. ad esempio 2018-12-25T11:51:27.8705696Z.'
+    optional: true
+    syntax:
+      content: 'lastActionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostra messaggio di errore quando l'operazione ha esito negativo (omesso quando l'operazione ha esito positivo).
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+    name: resourceLocation
+    fullName: resourceLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Quando l''operazione riesce correttamente, per eseguire l''operazione snapshot includerà l''id dello snapshot in questo campo e per applicare l''operazione di snapshot, verrà restituito il percorso per ottenere l''oggetto di destinazione in questo campo.'
+    optional: true
+    syntax:
+      content: 'resourceLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Stato dell'operazione: notstarted, in esecuzione, ha avuto esito positivo, non è riuscita. Se è richiesto l'operazione e in attesa di esecuzione, lo stato è notstarted. Se l'operazione è in corso nel back-end, lo stato è in esecuzione. Lo stato completato significa che l'operazione viene completata correttamente, in modo specifico per l'operazione di creazione snapshot, viene illustrato lo snapshot viene anche eseguito e pronto per applicare e per applicare l'operazione di snapshot, viene presentata la destinazione oggetto ha terminato la creazione da lo snapshot e pronto per essere utilizzato. Stato non riuscito è spesso causato modificando l'oggetto di origine durante la creazione dello snapshot o la modifica dell'oggetto di destinazione durante l'applicazione dello snapshot prima del completamento, visualizzato il campo "messaggio" per verificare il motivo dell'errore.
+      I valori possibili sono: 'notstarted', 'in esecuzione', 'riuscito', 'non riuscita'
+    syntax:
+      content: 'status: OperationStatusType'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.OperationStatusType'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.OperationStatusType'
+    name: OperationStatusType
+    spec.typeScript:
+      - name: OperationStatusType
+        fullName: OperationStatusType
+        uid: '@azure/cognitiveservices-face.OperationStatusType'

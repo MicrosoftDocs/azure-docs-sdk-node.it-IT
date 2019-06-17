@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    children:
+      - '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+      - '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+      - '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Attività a istanze multiple sono comunemente usate per supportare le attività MPI. In caso di MPI, se una delle sottoattività ha esito negativo (ad esempio a causa di uscire con un codice di uscita diverso da zero) attività a istanze multiple intero ha esito negativo. L''attività a istanze multiple viene quindi terminata e la sua esecuzione verrà ripetuta fino a raggiungere il limite di tentativi.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+    name: commonResourceFiles
+    fullName: commonResourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un elenco di file che il servizio Batch scaricherà prima di eseguire la riga di comando di coordinamento. La differenza tra i file di risorse comuni e i file di risorse di attività è che i file di risorse comuni vengono scaricati per tutte le sottoattività, inclusa quella primaria, mentre i file di risorsa attività vengono scaricati solo per il database primario. Si noti anche che questi file di risorse non vengono scaricati nella directory di lavoro, ma che invece vengono scaricati nella directory radice attività (una directory superiore a directory di lavoro).  È una dimensione massima per un elenco di file di risorse.  Quando viene superata la dimensione massima, la richiesta avrà esito negativo e il codice di errore della risposta sarà RequestEntityTooLarge. In questo caso, la raccolta di ResourceFiles deve essere ridotte. Ciò può essere ottenuto tramite file ZIP, i pacchetti dell''applicazione o i contenitori Docker.'
+    optional: true
+    syntax:
+      content: 'commonResourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+    name: coordinationCommandLine
+    fullName: coordinationCommandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La riga di comando per l'esecuzione in tutti i nodi di calcolo per consentire loro di coordinarsi quando il database primario viene eseguito il comando per l'attività principale. Una riga di comando di coordinamento tipica avvia un servizio in background e verifica che il servizio è pronto per elaborare i messaggi tra i nodi.
+    syntax:
+      content: 'coordinationCommandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    name: numberOfInstances
+    fullName: numberOfInstances
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Numero di nodi di calcolo richiesti dall''attività. Se omesso, il valore predefinito è 1.'
+    optional: true
+    syntax:
+      content: 'numberOfInstances?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
