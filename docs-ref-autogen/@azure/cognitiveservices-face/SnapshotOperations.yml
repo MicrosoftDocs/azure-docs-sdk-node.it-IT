@@ -1,0 +1,666 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations'
+    name: SnapshotOperations
+    fullName: SnapshotOperations
+    children:
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe che rappresenta un SnapshotOperations.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply'
+    name: 'apply(string, string, Models.SnapshotApplyOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Inviare un'operazione per applicare uno snapshot alla sottoscrizione corrente. Per ogni snapshot, solo le sottoscrizioni incluse in applyScope dello Snapshot - Take possibile applicarla.<br />
+      Le interfacce degli snapshot sono agli utenti di eseguire il backup e ripristinare i propri dati viso dalla sottoscrizione di una faccia a altro, all'interno di stessa area o in aree diverse. Il flusso di lavoro contiene due fasi, prima chiama utente Snapshot - Take per creare una copia dell'oggetto di origine e archiviarle come snapshot, quindi chiama Snapshot - applicare per incollare lo snapshot alla sottoscrizione di destinazione. Gli snapshot vengono archiviati in una posizione centralizzata (per ogni istanza di Azure), in modo che possono essere applicati tra aree e account.<br />
+      Applicazione dello snapshot è un'operazione asincrona. Un id operazione può essere ottenuto dal campo "Operation-Location" nell'intestazione della risposta, da utilizzare in OperationStatus - Get per lo stato dell'applicazione dello snapshot. L'id di oggetto di destinazione verrà incluso nel campo "PercorsoRisorsa" OperationStatus - risposta Get quando lo stato dell'operazione è "succeeded".<br />
+      Applica ora dello snapshot dipende dal numero di voci e facciali nell'oggetto snapshot.
+      Potrebbe essere secondi, o fino a 1 ora per 1.000.000 coloro che hanno più volti.<br />
+      Gli snapshot verranno automaticamente scaduti e puliti in 48 ore dopo averlo creato dallo Snapshot
+      - Richiedere. Pertanto, la sottoscrizione di destinazione è necessario per applicare lo snapshot in 48 ore dopo la creazione.<br />
+      Applicazione di uno snapshot verrà senza bloccare qualsiasi altra operazione rispetto alla destinazione dell'oggetto, tuttavia non è consigliabile perché la correttezza non può essere garantita durante l'applicazione dello snapshot. Dopo l'applicazione dello snapshot viene completato, tutte le operazioni verso l'oggetto di destinazione possono funzionare normalmente.
+      Snapshot includono anche i risultati di training dell'oggetto di origine, ovvero sottoscrizione di destinazione dello snapshot applicato a non necessario rieseguire il training l'oggetto di destinazione prima di chiamare Identify/FindSimilar.<br />
+      Uno snapshot può essere applicato più volte in parallelo, mentre è supportata attualmente solo la modalità applica CreateNew, che significa che l'operazione di applicazione avrà esito negativo se sottoscrizione di destinazione già contiene un oggetto dello stesso tipo e con l'ID dell'oggetto stesso. Gli utenti possono specificare il valore "objectId" nel corpo della richiesta per evitare questi conflitti.<br />
+      * Quota sottoscrizione di livello gratuito: 100 applicare operazioni al mese.
+      * Quota della sottoscrizione per livello s0: 100 applicare operazioni al giorno.
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options?: Models.SnapshotApplyOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: objectId
+          type:
+            - string
+          description: Id di oggetto di destinazione deve essere creato rispetto allo snapshot specificato dall'utente.
+        - id: options
+          type:
+            - Models.SnapshotApplyOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+    name: 'apply(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: objectId
+          type:
+            - string
+          description: Id di oggetto di destinazione deve essere creato rispetto allo snapshot specificato dall'utente.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+    name: 'apply(string, string, SnapshotApplyOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options: SnapshotApplyOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: objectId
+          type:
+            - string
+          description: Id di oggetto di destinazione deve essere creato rispetto allo snapshot specificato dall'utente.
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+    name: 'deleteMethod(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Eliminare uno snapshot esistente in base all''oggetto snapshotId. Verranno eliminati anche tutti i dati dell''oggetto e le informazioni nello snapshot. Solo la sottoscrizione di origine che ha acquisito lo snapshot è possibile eliminare lo snapshot. Se l''utente non elimina uno snapshot con questa API, comunque lo snapshot verrà eliminato automaticamente in 48 ore dopo la creazione.'
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+    name: 'deleteMethod(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get'
+    name: 'get(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Recuperare informazioni su uno snapshot. Snapshot è possibile accedere solo alla sottoscrizione di origine che ha ricevuto lo e le sottoscrizioni di destinazione incluse nel applyScope in Snapshot - richiedere.
+    syntax:
+      content: 'function get(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+    name: 'get(string, RequestOptionsBase, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+    name: 'get(string, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+    name: 'getOperationStatus(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Recuperare lo stato di un'operazione di snapshot o applicare ed esami.
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: ID riferimento take o applicare una particolare operazione di creazione snapshot.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+    name: 'getOperationStatus(string, RequestOptionsBase, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options: RequestOptionsBase, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: ID riferimento take o applicare una particolare operazione di creazione snapshot.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+    name: 'getOperationStatus(string, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: ID riferimento take o applicare una particolare operazione di creazione snapshot.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list'
+    name: list(Models.SnapshotListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Elencare tutti gli snapshot accessibili con le informazioni correlate, tra cui gli snapshot che sono stati eseguiti dall''utente o gli snapshot da applicare all''utente (id sottoscrizione è stato incluso nel applyScope nello Snapshot - portare).'
+    syntax:
+      content: 'function list(options?: Models.SnapshotListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.SnapshotListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+    name: 'list(ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+    name: 'list(SnapshotListOptionalParams, ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: SnapshotListOptionalParams, callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+    name: SnapshotOperations(FaceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creare un SnapshotOperations.
+    syntax:
+      content: 'new SnapshotOperations(client: FaceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-face.FaceClientContext'
+          description: |
+            Riferimento al client del servizio.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take'
+    name: 'take(Models.SnapshotObjectType, string, string[], Models.SnapshotTakeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Inviare un'operazione per creare uno snapshot dell'elenco di visi, elenco di visi di grandi dimensioni, gruppo di persone o gruppo di persone di grandi dimensioni, con tipo di snapshot specificato dall'utente, id di oggetto di origine, applicare l'ambito e un dati utente facoltativi.<br />
+      Le interfacce degli snapshot sono agli utenti di eseguire il backup e ripristinare i propri dati viso dalla sottoscrizione di una faccia a altro, all'interno di stessa area o in aree diverse. Il flusso di lavoro contiene due fasi, prima chiama utente Snapshot - Take per creare una copia dell'oggetto di origine e archiviarle come snapshot, quindi chiama Snapshot - applicare per incollare lo snapshot alla sottoscrizione di destinazione. Gli snapshot vengono archiviati in una posizione centralizzata (per ogni istanza di Azure), in modo che possono essere applicati tra aree e account.<br />
+      Creazione snapshot è un'operazione asincrona. Un id operazione può essere ottenuto dal campo "Operation-Location" nell'intestazione della risposta, da utilizzare in OperationStatus - Get per tenere traccia dello stato di creazione dello snapshot. L'id dello snapshot verrà inclusi nel campo "PercorsoRisorsa" OperationStatus - risposta Get quando lo stato dell'operazione è "succeeded".<br />
+      Snapshot richiede tempo dipende dal numero di voci e facciali nell'oggetto di origine. È possibile in pochi secondi o fino a diverse ore per 1.000.000 coloro che hanno più volti.<br />
+      Gli snapshot verranno automaticamente scaduti e puliti in 48 ore dopo averlo creato dallo Snapshot
+      - Richiedere. Utente può eliminare lo snapshot tramite Snapshot - Delete da soli qualsiasi momento prima della scadenza.<br />
+      Creazione di snapshot per un determinato oggetto non verrà bloccata qualsiasi altra operazione sull'oggetto. Tutte le operazioni sola lettura (Get/elenco e identificare/FindSimilar/Verify) possono essere eseguite come di consueto. Per tutte le operazioni di scrittura, inclusi Add, aggiornare o eliminare l'oggetto di origine o il/i visi di persone e Train, non sono bloccati ma sconsigliati, perché gli aggiornamenti scrivibili potrebbero non essere disponibili nello snapshot durante la relativa creazione. Al termine dello snapshot richiede, tutte le operazioni di lettura e scrittura possono funzionare normalmente. Snapshot includono anche i risultati di training dell'oggetto di origine, ovvero sottoscrizione di destinazione dello snapshot applicato a non necessario rieseguire il training l'oggetto di destinazione prima di chiamare Identify/FindSimilar.<br />
+      * Quota sottoscrizione di livello gratuito: 100 richiedere operazioni al mese.
+      * Quota della sottoscrizione per livello s0: 100 richiedere operazioni al giorno.
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options?: Models.SnapshotTakeOptionalParams)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: 'Tipo dell''oggetto di origine per eseguire uno snapshot da specificato dall''utente. FaceList, gruppo di persone, LargeFaceList e LargePersonGroup sono attualmente supportati. I valori possibili sono: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup'''
+        - id: objectId
+          type:
+            - string
+          description: Id di oggetto di origine per eseguire uno snapshot da specificato dall'utente.
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 'Matrice di ID di sottoscrizione di destinazione viso per lo snapshot specificato dall''utente. Per ogni snapshot, solo le sottoscrizioni incluse in applyScope dello Snapshot - Take possibile applicarla.'
+        - id: options
+          type:
+            - Models.SnapshotTakeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+    name: 'take(Models.SnapshotObjectType, string, string[], ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: 'Tipo dell''oggetto di origine per eseguire uno snapshot da specificato dall''utente. FaceList, gruppo di persone, LargeFaceList e LargePersonGroup sono attualmente supportati. I valori possibili sono: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup'''
+        - id: objectId
+          type:
+            - string
+          description: Id di oggetto di origine per eseguire uno snapshot da specificato dall'utente.
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 'Matrice di ID di sottoscrizione di destinazione viso per lo snapshot specificato dall''utente. Per ogni snapshot, solo le sottoscrizioni incluse in applyScope dello Snapshot - Take possibile applicarla.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+    name: 'take(Models.SnapshotObjectType, string, string[], SnapshotTakeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options: SnapshotTakeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: 'Tipo dell''oggetto di origine per eseguire uno snapshot da specificato dall''utente. FaceList, gruppo di persone, LargeFaceList e LargePersonGroup sono attualmente supportati. I valori possibili sono: ''FaceList'', ''LargeFaceList'', ''LargePersonGroup'', ''PersonGroup'''
+        - id: objectId
+          type:
+            - string
+          description: Id di oggetto di origine per eseguire uno snapshot da specificato dall'utente.
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 'Matrice di ID di sottoscrizione di destinazione viso per lo snapshot specificato dall''utente. Per ogni snapshot, solo le sottoscrizioni incluse in applyScope dello Snapshot - Take possibile applicarla.'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update'
+    name: 'update(string, Models.SnapshotUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Aggiornare le informazioni di uno snapshot. Solo la sottoscrizione di origine che ha acquisito lo snapshot è possibile aggiornare lo snapshot.
+    syntax:
+      content: 'function update(snapshotId: string, options?: Models.SnapshotUpdateOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: options
+          type:
+            - Models.SnapshotUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+    name: 'update(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    name: 'update(string, SnapshotUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, options: SnapshotUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID che fanno riferimento a un determinato snapshot.
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FaceClientContext'
+    name: FaceClientContext
+    spec.typeScript:
+      - name: FaceClientContext
+        fullName: FaceClientContext
+        uid: '@azure/cognitiveservices-face.FaceClientContext'
+  - uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+    name: SnapshotApplyOptionalParams
+    spec.typeScript:
+      - name: SnapshotApplyOptionalParams
+        fullName: SnapshotApplyOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+    name: Snapshot>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+    name: OperationStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationStatus
+        fullName: OperationStatus
+        uid: '@azure/cognitiveservices-face.OperationStatus'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+    name: 'Snapshot[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+    name: SnapshotListOptionalParams
+    spec.typeScript:
+      - name: SnapshotListOptionalParams
+        fullName: SnapshotListOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+    name: SnapshotTakeOptionalParams
+    spec.typeScript:
+      - name: SnapshotTakeOptionalParams
+        fullName: SnapshotTakeOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+    name: SnapshotUpdateOptionalParams
+    spec.typeScript:
+      - name: SnapshotUpdateOptionalParams
+        fullName: SnapshotUpdateOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'

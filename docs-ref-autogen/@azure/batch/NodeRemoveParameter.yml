@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeRemoveParameter'
+    name: NodeRemoveParameter
+    fullName: NodeRemoveParameter
+    children:
+      - '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+      - '@azure/batch.NodeRemoveParameter.nodeList'
+      - '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta NodeRemoveParameter.
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+    name: nodeDeallocationOption
+    fullName: nodeDeallocationOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Determina quali azioni eseguire con un nodo e le attività in esecuzione dopo che è stato selezionato per la deallocazione. Il valore predefinito è requeue. I valori possibili sono: ''requeue'', ''terminate'', ''taskCompletion'', ''retainedData'''
+    optional: true
+    syntax:
+      content: 'nodeDeallocationOption?: ComputeNodeDeallocationOption'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeDeallocationOption'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeList'
+    name: nodeList
+    fullName: nodeList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un elenco contenente gli ID dei nodi di calcolo da rimuovere dal pool specificato.
+    syntax:
+      content: 'nodeList: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il timeout per la rimozione di nodi di calcolo nel pool. Il valore predefinito è 15 minuti. Il valore minimo è 5 minuti. Se si specifica un valore minore di 5 minuti, il servizio Batch restituisce un errore. Se si chiama direttamente l''API REST, il codice di stato HTTP è 400 (richiesta non valida).'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ComputeNodeDeallocationOption'
+    name: ComputeNodeDeallocationOption
+    spec.typeScript:
+      - name: ComputeNodeDeallocationOption
+        fullName: ComputeNodeDeallocationOption
+        uid: '@azure/batch.ComputeNodeDeallocationOption'
