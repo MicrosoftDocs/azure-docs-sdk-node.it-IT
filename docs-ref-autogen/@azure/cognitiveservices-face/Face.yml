@@ -1,0 +1,706 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.Face'
+    name: Face
+    fullName: Face
+    children:
+      - '@azure/cognitiveservices-face.Face.detectWithStream_2'
+      - '@azure/cognitiveservices-face.Face.detectWithStream'
+      - '@azure/cognitiveservices-face.Face.detectWithStream_1'
+      - '@azure/cognitiveservices-face.Face.detectWithUrl_2'
+      - '@azure/cognitiveservices-face.Face.detectWithUrl'
+      - '@azure/cognitiveservices-face.Face.detectWithUrl_1'
+      - '@azure/cognitiveservices-face.Face.constructor'
+      - '@azure/cognitiveservices-face.Face.findSimilar_2'
+      - '@azure/cognitiveservices-face.Face.findSimilar'
+      - '@azure/cognitiveservices-face.Face.findSimilar_1'
+      - '@azure/cognitiveservices-face.Face.group'
+      - '@azure/cognitiveservices-face.Face.group_2'
+      - '@azure/cognitiveservices-face.Face.group_1'
+      - '@azure/cognitiveservices-face.Face.identify_2'
+      - '@azure/cognitiveservices-face.Face.identify'
+      - '@azure/cognitiveservices-face.Face.identify_1'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToFace'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToFace_2'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToFace_1'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToPerson_2'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToPerson'
+      - '@azure/cognitiveservices-face.Face.verifyFaceToPerson_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe che rappresenta un carattere tipografico.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithStream_2'
+    name: 'detectWithStream(msRest.HttpRequestBody, FaceDetectWithStreamOptionalParams, ServiceCallback<DetectedFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function detectWithStream(image: msRest.HttpRequestBody, options: FaceDetectWithStreamOptionalParams, callback: ServiceCallback<DetectedFace[]>)'
+      parameters:
+        - id: image
+          type:
+            - msRest.HttpRequestBody
+          description: Un flusso dell'immagine.
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceDetectWithStreamResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithStream'
+    name: 'detectWithStream(msRest.HttpRequestBody, Models.FaceDetectWithStreamOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Rileva i visi in un''immagine e restituisce le posizioni viso e, facoltativamente con faceIds, punti di riferimento e gli attributi.'
+    syntax:
+      content: 'function detectWithStream(image: msRest.HttpRequestBody, options?: Models.FaceDetectWithStreamOptionalParams)'
+      parameters:
+        - id: image
+          type:
+            - msRest.HttpRequestBody
+          description: Un flusso dell'immagine.
+        - id: options
+          type:
+            - Models.FaceDetectWithStreamOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceDetectWithStreamResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithStream_1'
+    name: 'detectWithStream(msRest.HttpRequestBody, ServiceCallback<DetectedFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function detectWithStream(image: msRest.HttpRequestBody, callback: ServiceCallback<DetectedFace[]>)'
+      parameters:
+        - id: image
+          type:
+            - msRest.HttpRequestBody
+          description: Un flusso dell'immagine.
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceDetectWithStreamResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithUrl_2'
+    name: 'detectWithUrl(string, FaceDetectWithUrlOptionalParams, ServiceCallback<DetectedFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function detectWithUrl(url: string, options: FaceDetectWithUrlOptionalParams, callback: ServiceCallback<DetectedFace[]>)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: Raggiungibile pubblicamente URL di un'immagine
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceDetectWithUrlResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithUrl'
+    name: 'detectWithUrl(string, Models.FaceDetectWithUrlOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Rileva i visi in un'immagine, rettangoli restituito e, facoltativamente, con faceIds, punti di riferimento e gli attributi.<br />
+      * Parametri facoltativi come faceId, punti di riferimento e gli attributi. Gli attributi includono età, sesso, headPose, smile, facialHair, bicchieri, emozioni, sorriso, composizione, relative all'occlusione, Accessori, Sfocatura, l'esposizione e rumore.
+      * La funzionalità di volti estratti, anziché l'immagine effettiva, verrà archiviata nel server. Il faceId è un identificatore della funzionalità di visi e verrà usata in [affrontano: identificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [affrontano: verificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [viso
+      - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237). Scadenza 24 ore dopo la chiamata di rilevamento.
+      * Qualità dell'immagine superiore viso significa rilevamento migliorato e una precisione di riconoscimento. Prendere in considerazione i volti di alta qualità: volti frontali e clear dimensioni sono 200 x 200 pixel (100 pixel tra gli occhi) o più grandi.
+      * Sono supportati JPEG, PNG, GIF (il primo fotogramma) e formato BMP. Le dimensioni del file immagine consentito va da 1KB a 6MB.
+      * I volti sono rilevabili quando la dimensione pari a 36 x 36 per 4096x4096 pixel. Se è necessario rilevare i visi molto piccoli, ma non crittografati, provare a ingrandire l'immagine di input.
+      * Fino a 64 volti possono essere restituiti per un'immagine. I volti vengono classificati in base a dimensioni del riquadro viso dalla grande al più piccolo.
+      * Rilevamento volti preferisce volti frontali e quasi frontali. Esistono casi in cui i visi non possono essere angoli del volto rilevati, ad esempio eccezionalmente grandi (head-posa) o in corso bloccati o orientamento dell'immagine non corretto.
+      * Attributi (età, sesso, headPose, smile, facialHair, bicchieri, emozioni, selettore di precisione, struttura, relative all'occlusione, Accessori, Sfocatura, l'esposizione e rumore) potrebbero non essere perfettamente accurati. Valore di passi del HeadPose è un campo riservato e restituirà sempre 0.
+      * Vengono forniti diversi 'recognitionModel' valori. Se le operazioni di follow-up, Verify, identificare, trovare simili sono necessari, specificare il modello di riconoscimento con il parametro 'recognitionModel'. Il valore predefinito per 'recognitionModel' è 'recognition_01', se più recente modello necessarie, specificare in modo esplicito il modello che è necessario in questo parametro. Una volta specificate, il faceIds rilevato sarà associata al modello di riconoscimento specificato. Altri dettagli, consultare [come specificare un modello di riconoscimento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+    syntax:
+      content: 'function detectWithUrl(url: string, options?: Models.FaceDetectWithUrlOptionalParams)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: Raggiungibile pubblicamente URL di un'immagine
+        - id: options
+          type:
+            - Models.FaceDetectWithUrlOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceDetectWithUrlResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.detectWithUrl_1'
+    name: 'detectWithUrl(string, ServiceCallback<DetectedFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function detectWithUrl(url: string, callback: ServiceCallback<DetectedFace[]>)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: Raggiungibile pubblicamente URL di un'immagine
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceDetectWithUrlResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.constructor'
+    name: Face(FaceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creare un viso.
+    syntax:
+      content: 'new Face(client: FaceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-face.FaceClientContext'
+          description: |
+            Riferimento al client del servizio.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.findSimilar_2'
+    name: 'findSimilar(string, FaceFindSimilarOptionalParams, ServiceCallback<SimilarFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function findSimilar(faceId: string, options: FaceFindSimilarOptionalParams, callback: ServiceCallback<SimilarFace[]>)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: 'FaceId della faccia di query. Utente deve chiamare viso: rilevare prima per ottenere un faceId valido. Si noti che questo faceId non è persistente e scadrà tra 24 ore dopo la chiamata di rilevamento'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.FaceFindSimilarOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.SimilarFace[]>'
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceFindSimilarResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.findSimilar'
+    name: 'findSimilar(string, Models.FaceFindSimilarOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Dato faceId del viso, per la ricerca di visi somiglianti da una matrice di faceId, un elenco di visi o un elenco di visi di grandi dimensioni. faceId matrice contiene i volti creati [affrontano: rilevare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), che scadrà tra 24 ore dopo la creazione. Un "faceListId" creato da [FaceList - creare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b) contenente persistedFaceIds che non scada mai. E viene creato un "largeFaceListId" dallo [LargeFaceList - creare](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) contenente persistedFaceIds che inoltre non scadranno. In base all'input nell'elenco di visi simili restituito contiene faceIds o persistedFaceIds classificati in base alla similitudine.
+      <br/>Argomenti correlati ha due modalità di utilizzo "matchPerson" e "matchFace". "matchPerson" è la modalità predefinita che tenta di trovare le facce della stessa persona come possibili con soglie interne stessa persona. È utile trovare un noto altri foto dell'utente. Si noti che verrà restituito un elenco vuoto se nessun visi supera le soglie interne. la modalità "matchFace" Ignora le soglie stessa persona e restituisce classificati comunque visi simili, anche la somiglianza è bassa. Può essere utilizzato nei casi come la ricerca di visi dall'aspetto relativo alle celebrità.
+      <br/>'RecognitionModel' associato faceId del viso query deve essere lo stesso come il recognitionModel usata dalla matrice di destinazione faceId, viso elenco o nell'elenco viso di grandi dimensioni.
+    syntax:
+      content: 'function findSimilar(faceId: string, options?: Models.FaceFindSimilarOptionalParams)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: 'FaceId della faccia di query. Utente deve chiamare viso: rilevare prima per ottenere un faceId valido. Si noti che questo faceId non è persistente e scadrà tra 24 ore dopo la chiamata di rilevamento'
+        - id: options
+          type:
+            - Models.FaceFindSimilarOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceFindSimilarResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.findSimilar_1'
+    name: 'findSimilar(string, ServiceCallback<SimilarFace[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function findSimilar(faceId: string, callback: ServiceCallback<SimilarFace[]>)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: 'FaceId della faccia di query. Utente deve chiamare viso: rilevare prima per ottenere un faceId valido. Si noti che questo faceId non è persistente e scadrà tra 24 ore dopo la chiamata di rilevamento'
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.SimilarFace[]>'
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceFindSimilarResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.group'
+    name: 'group(string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Dividere candidato visi in gruppi basati sulla somiglianza viso.<br />
+      * L'output è un messyGroup e uno o più gruppi di volti indipendente. Un gruppo di volti contiene i volti con simile alla ricerca, spesso della stessa persona. Dalla dimensione di gruppo, cioè il numero di volti vengono classificati in gruppi. Si noti che le facce che appartengono a una stessa persona potrebbero essere suddiviso in diversi gruppi nel risultato.
+      * MessyGroup è un gruppo di volti speciale che contiene i volti che non sono stato trovato alcun faccia controparte simili da visi originali. Il messyGroup non verrà visualizzato nel risultato se tutti i volti trovati le relative controparti.
+      * API dei gruppi deve avere almeno 2 candidato visi e 1000 al massimo. È consigliabile per provare [affrontano: verificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a) quando si dispone solamente i visi candidate 2.
+      * 'RecognitionModel' associato faceIds delle facce query deve essere uguale.
+    syntax:
+      content: 'function group(faceIds: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: 'Matrice di faceId candidato creato da viso: rilevare. Il valore massimo è 1000 visi'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceGroupResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.group_2'
+    name: 'group(string[], RequestOptionsBase, ServiceCallback<GroupResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function group(faceIds: string[], options: RequestOptionsBase, callback: ServiceCallback<GroupResult>)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: 'Matrice di faceId candidato creato da viso: rilevare. Il valore massimo è 1000 visi'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.GroupResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceGroupResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.group_1'
+    name: 'group(string[], ServiceCallback<GroupResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function group(faceIds: string[], callback: ServiceCallback<GroupResult>)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: 'Matrice di faceId candidato creato da viso: rilevare. Il valore massimo è 1000 visi'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.GroupResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceGroupResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.identify_2'
+    name: 'identify(string[], FaceIdentifyOptionalParams, ServiceCallback<IdentifyResult[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function identify(faceIds: string[], options: FaceIdentifyOptionalParams, callback: ServiceCallback<IdentifyResult[]>)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: 'Matrice di query deve affrontare faceIds, creato per il viso: rilevare. Ognuna delle facce sono identificati in modo indipendente. Il numero di faceIds valido è compreso tra [1, 10].'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.FaceIdentifyOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.IdentifyResult[]>'
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceIdentifyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.identify'
+    name: 'identify(string[], Models.FaceIdentifyOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      identificazione di 1-a-molti per trovare le corrispondenze più vicine della faccia di persona di query specifico da un gruppo di persone o gruppo di persone di grandi dimensioni.
+      <br/> Per ogni viso nella matrice faceIds, identificazione viso calcolerà analogie tra il viso e tutti i volti nel gruppo di persona (specificato da personGroupId) o persona di grandi dimensioni di gruppo (specificato da largePersonGroupId) e restituire persone candidate per il viso classificata per confidenza somiglianza. Il gruppo di persone o grandi dimensioni gruppo persona deve essere addestrato per renderlo pronto per l'identificazione. Altre informazioni, vedere [gruppo di persone - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) e [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4).
+      <br/>
+      Osservazioni:<br />
+      * L'algoritmo consente più di un viso per essere identificata in modo indipendente nella stessa richiesta, ma non più di 10 facce.
+      * Ogni persona del gruppo di persona o grandi dimensioni gruppo persona potrebbe avere più di un viso, ma non più di 248 facce.
+      * Qualità dell'immagine superiore viso significa maggiore precisione di identificazione. Prendere in considerazione i volti di alta qualità: volti frontali e clear dimensioni sono 200 x 200 pixel (100 pixel tra gli occhi) o più grandi.
+      * Numero di candidati restituiti è limitata maxNumOfCandidatesReturned e confidenceThreshold. Se nessuna persona viene identificata, i candidati restituiti sarà una matrice vuota.
+      * Provare [volto - ricerca simile](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) quando è necessario trovare visi simili da un elenco di visi elenco/grande viso anziché un gruppo di persone o grandi dimensioni gruppo persona.
+      * 'RecognitionModel' associato faceIds delle facce query deve essere identico 'recognitionModel' utilizzato dal gruppo di destinazione persona o gruppo di persone di grandi dimensioni.
+    syntax:
+      content: 'function identify(faceIds: string[], options?: Models.FaceIdentifyOptionalParams)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: 'Matrice di query deve affrontare faceIds, creato per il viso: rilevare. Ognuna delle facce sono identificati in modo indipendente. Il numero di faceIds valido è compreso tra [1, 10].'
+        - id: options
+          type:
+            - Models.FaceIdentifyOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceIdentifyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.identify_1'
+    name: 'identify(string[], ServiceCallback<IdentifyResult[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function identify(faceIds: string[], callback: ServiceCallback<IdentifyResult[]>)'
+      parameters:
+        - id: faceIds
+          type:
+            - 'string[]'
+          description: 'Matrice di query deve affrontare faceIds, creato per il viso: rilevare. Ognuna delle facce sono identificati in modo indipendente. Il numero di faceIds valido è compreso tra [1, 10].'
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.IdentifyResult[]>'
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceIdentifyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToFace'
+    name: 'verifyFaceToFace(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Verificare che due visi appartengano a un utente stesso o se un volto appartiene a una persona.
+      <br/>
+      Osservazioni:<br />
+      * Qualità dell'immagine superiore viso significa maggiore precisione di identificazione. Prendere in considerazione i volti di alta qualità: volti frontali e clear dimensioni sono 200 x 200 pixel (100 pixel tra gli occhi) o più grandi.
+      * Per gli scenari che sono sensibili accuratezza verificare il proprio giudizio.
+      * 'RecognitionModel' associato faceIds delle facce query deve essere lo stesso come il recognitionModel utilizzato per la destinazione faccia, gruppo di persone o il gruppo di persone di grandi dimensioni.
+    syntax:
+      content: 'function verifyFaceToFace(faceId1: string, faceId2: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: faceId1
+          type:
+            - string
+          description: 'faceId del volto prima, proviene da viso: rilevare'
+        - id: faceId2
+          type:
+            - string
+          description: 'faceId della faccia di secondo, proviene da viso: rilevare'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToFaceResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToFace_2'
+    name: 'verifyFaceToFace(string, string, RequestOptionsBase, ServiceCallback<VerifyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function verifyFaceToFace(faceId1: string, faceId2: string, options: RequestOptionsBase, callback: ServiceCallback<VerifyResult>)'
+      parameters:
+        - id: faceId1
+          type:
+            - string
+          description: 'faceId del volto prima, proviene da viso: rilevare'
+        - id: faceId2
+          type:
+            - string
+          description: 'faceId della faccia di secondo, proviene da viso: rilevare'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToFaceResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToFace_1'
+    name: 'verifyFaceToFace(string, string, ServiceCallback<VerifyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function verifyFaceToFace(faceId1: string, faceId2: string, callback: ServiceCallback<VerifyResult>)'
+      parameters:
+        - id: faceId1
+          type:
+            - string
+          description: 'faceId del volto prima, proviene da viso: rilevare'
+        - id: faceId2
+          type:
+            - string
+          description: 'faceId della faccia di secondo, proviene da viso: rilevare'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToFaceResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToPerson_2'
+    name: 'verifyFaceToPerson(string, string, FaceVerifyFaceToPersonOptionalParams, ServiceCallback<VerifyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function verifyFaceToPerson(faceId: string, personId: string, options: FaceVerifyFaceToPersonOptionalParams, callback: ServiceCallback<VerifyResult>)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: 'FaceId del volto, proviene da viso: rilevare'
+        - id: personId
+          type:
+            - string
+          description: 'Specificare una determinata persona in un gruppo di persone o un gruppo di persone di grandi dimensioni. personId viene creata nel gruppo di persone persona: creare o creare di persona LargePersonGroup.'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.FaceVerifyFaceToPersonOptionalParams'
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToPersonResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToPerson'
+    name: 'verifyFaceToPerson(string, string, Models.FaceVerifyFaceToPersonOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Verificare se due visi appartengono a una stessa persona. Confronta un viso Id con un Id persona
+    syntax:
+      content: 'function verifyFaceToPerson(faceId: string, personId: string, options?: Models.FaceVerifyFaceToPersonOptionalParams)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: 'FaceId del volto, proviene da viso: rilevare'
+        - id: personId
+          type:
+            - string
+          description: 'Specificare una determinata persona in un gruppo di persone o un gruppo di persone di grandi dimensioni. personId viene creata nel gruppo di persone persona: creare o creare di persona LargePersonGroup.'
+        - id: options
+          type:
+            - Models.FaceVerifyFaceToPersonOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToPersonResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.Face.verifyFaceToPerson_1'
+    name: 'verifyFaceToPerson(string, string, ServiceCallback<VerifyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function verifyFaceToPerson(faceId: string, personId: string, callback: ServiceCallback<VerifyResult>)'
+      parameters:
+        - id: faceId
+          type:
+            - string
+          description: 'FaceId del volto, proviene da viso: rilevare'
+        - id: personId
+          type:
+            - string
+          description: 'Specificare una determinata persona in un gruppo di persone o un gruppo di persone di grandi dimensioni. personId viene creata nel gruppo di persone persona: creare o creare di persona LargePersonGroup.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.FaceVerifyFaceToPersonResponse>
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FaceClientContext'
+    name: FaceClientContext
+    spec.typeScript:
+      - name: FaceClientContext
+        fullName: FaceClientContext
+        uid: '@azure/cognitiveservices-face.FaceClientContext'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
+    name: 'DetectedFace[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DetectedFace
+        fullName: DetectedFace
+        uid: '@azure/cognitiveservices-face.DetectedFace'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams'
+    name: FaceDetectWithStreamOptionalParams
+    spec.typeScript:
+      - name: FaceDetectWithStreamOptionalParams
+        fullName: FaceDetectWithStreamOptionalParams
+        uid: '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams'
+  - uid: '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams'
+    name: FaceDetectWithUrlOptionalParams
+    spec.typeScript:
+      - name: FaceDetectWithUrlOptionalParams
+        fullName: FaceDetectWithUrlOptionalParams
+        uid: '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.SimilarFace[]>'
+    name: 'SimilarFace[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SimilarFace
+        fullName: SimilarFace
+        uid: '@azure/cognitiveservices-face.SimilarFace'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.FaceFindSimilarOptionalParams'
+    name: FaceFindSimilarOptionalParams
+    spec.typeScript:
+      - name: FaceFindSimilarOptionalParams
+        fullName: FaceFindSimilarOptionalParams
+        uid: '@azure/cognitiveservices-face.FaceFindSimilarOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.GroupResult>
+    name: GroupResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GroupResult
+        fullName: GroupResult
+        uid: '@azure/cognitiveservices-face.GroupResult'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.IdentifyResult[]>'
+    name: 'IdentifyResult[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: IdentifyResult
+        fullName: IdentifyResult
+        uid: '@azure/cognitiveservices-face.IdentifyResult'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.FaceIdentifyOptionalParams'
+    name: FaceIdentifyOptionalParams
+    spec.typeScript:
+      - name: FaceIdentifyOptionalParams
+        fullName: FaceIdentifyOptionalParams
+        uid: '@azure/cognitiveservices-face.FaceIdentifyOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
+    name: VerifyResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VerifyResult
+        fullName: VerifyResult
+        uid: '@azure/cognitiveservices-face.VerifyResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-face.FaceVerifyFaceToPersonOptionalParams'
+    name: FaceVerifyFaceToPersonOptionalParams
+    spec.typeScript:
+      - name: FaceVerifyFaceToPersonOptionalParams
+        fullName: FaceVerifyFaceToPersonOptionalParams
+        uid: '@azure/cognitiveservices-face.FaceVerifyFaceToPersonOptionalParams'
