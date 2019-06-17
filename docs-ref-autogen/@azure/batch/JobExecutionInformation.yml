@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobExecutionInformation'
+    name: JobExecutionInformation
+    fullName: JobExecutionInformation
+    children:
+      - '@azure/batch.JobExecutionInformation.endTime'
+      - '@azure/batch.JobExecutionInformation.poolId'
+      - '@azure/batch.JobExecutionInformation.schedulingError'
+      - '@azure/batch.JobExecutionInformation.startTime'
+      - '@azure/batch.JobExecutionInformation.terminateReason'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="71fea-101">Interfaccia che rappresenta JobExecutionInformation.</span><span class="sxs-lookup"><span data-stu-id="71fea-101">An interface representing JobExecutionInformation.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="71fea-102">Il tempo di completamento del processo.</span><span class="sxs-lookup"><span data-stu-id="71fea-102">The completion time of the job.</span></span> <span data-ttu-id="71fea-103">Questa proprietà è impostata solo se il processo è in stato completato.</span><span class="sxs-lookup"><span data-stu-id="71fea-103">This property is set only if the job is in the completed state.</span></span>
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.poolId'
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="71fea-104">L'ID del pool in cui è assegnato il processo.</span><span class="sxs-lookup"><span data-stu-id="71fea-104">The ID of the pool to which this job is assigned.</span></span> <span data-ttu-id="71fea-105">Questo elemento contiene il pool effettivo in cui il processo è assegnato.</span><span class="sxs-lookup"><span data-stu-id="71fea-105">This element contains the actual pool where the job is assigned.</span></span> <span data-ttu-id="71fea-106">Quando si ottengono i dettagli del processo dal servizio, contengono anche un elemento poolInfo, che contiene i dati di configurazione del pool quando il processo è stato aggiunto o aggiornato.</span><span class="sxs-lookup"><span data-stu-id="71fea-106">When you get job details from the service, they also contain a poolInfo element, which contains the pool configuration data from when the job was added or updated.</span></span>
+      <span data-ttu-id="71fea-107">Tale elemento poolInfo può contenere anche un elemento poolId.</span><span class="sxs-lookup"><span data-stu-id="71fea-107">That poolInfo element may also contain a poolId element.</span></span> <span data-ttu-id="71fea-108">In caso affermativo, i due ID sono uguali.</span><span class="sxs-lookup"><span data-stu-id="71fea-108">If it does, the two IDs are the same.</span></span>
+      <span data-ttu-id="71fea-109">Se non è presente, significa che è stato eseguito il processo in un pool automatico e questa proprietà contiene l'ID del pool automatico.</span><span class="sxs-lookup"><span data-stu-id="71fea-109">If it does not, it means the job ran on an auto pool, and this property contains the ID of that auto pool.</span></span>
+    optional: true
+    syntax:
+      content: 'poolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.schedulingError'
+    name: schedulingError
+    fullName: schedulingError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="71fea-110">Dettagli di qualsiasi errore rilevato dal servizio di avvio del processo.</span><span class="sxs-lookup"><span data-stu-id="71fea-110">Details of any error encountered by the service in starting the job.</span></span> <span data-ttu-id="71fea-111">Questa proprietà non è impostata se si è verificato alcun errore di avvio del processo.</span><span class="sxs-lookup"><span data-stu-id="71fea-111">This property is not set if there was no error starting the job.</span></span>
+    optional: true
+    syntax:
+      content: 'schedulingError?: JobSchedulingError'
+      return:
+        type:
+          - '@azure/batch.JobSchedulingError'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="71fea-112">L'ora di inizio del processo.</span><span class="sxs-lookup"><span data-stu-id="71fea-112">The start time of the job.</span></span> <span data-ttu-id="71fea-113">Questo è il tempo in cui è stato creato il processo.</span><span class="sxs-lookup"><span data-stu-id="71fea-113">This is the time at which the job was created.</span></span>
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.terminateReason'
+    name: terminateReason
+    fullName: terminateReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="71fea-114">Stringa che descrive il motivo per il processo è terminato.</span><span class="sxs-lookup"><span data-stu-id="71fea-114">A string describing the reason the job ended.</span></span> <span data-ttu-id="71fea-115">Questa proprietà è impostata solo se il processo è in stato completato.</span><span class="sxs-lookup"><span data-stu-id="71fea-115">This property is set only if the job is in the completed state.</span></span> <span data-ttu-id="71fea-116">Se il servizio Batch termina il processo, imposta il motivo, come indicato di seguito: JMComplete - completamento dell'attività di gestore di processi e killJobOnCompletion è stata impostata su true.</span><span class="sxs-lookup"><span data-stu-id="71fea-116">If the Batch service terminates the job, it sets the reason as follows: JMComplete - the Job Manager task completed, and killJobOnCompletion was set to true.</span></span>
+      <span data-ttu-id="71fea-117">MaxWallClockTimeExpiry - il processo ha raggiunto il vincolo maxWallClockTime.</span><span class="sxs-lookup"><span data-stu-id="71fea-117">MaxWallClockTimeExpiry - the job reached its maxWallClockTime constraint.</span></span> <span data-ttu-id="71fea-118">TerminateJobSchedule</span><span class="sxs-lookup"><span data-stu-id="71fea-118">TerminateJobSchedule</span></span>
+      - <span data-ttu-id="71fea-119">il processo è stato eseguito come parte di una pianificazione e la pianificazione è terminata.</span><span class="sxs-lookup"><span data-stu-id="71fea-119">the job ran as part of a schedule, and the schedule terminated.</span></span> <span data-ttu-id="71fea-120">AllTasksComplete - attributo onAllTasksComplete del processo è impostato su terminatejob e tutte le attività nel processo sono state completate.</span><span class="sxs-lookup"><span data-stu-id="71fea-120">AllTasksComplete - the job's onAllTasksComplete attribute is set to terminatejob, and all tasks in the job are complete.</span></span>
+      <span data-ttu-id="71fea-121">Operazionenon riuscita - attributo onTaskFailure del processo è impostata su performExitOptionsJobAction e un'attività del processo non riuscito con una condizione di uscita specificato un jobAction di terminatejob.</span><span class="sxs-lookup"><span data-stu-id="71fea-121">TaskFailed - the job's onTaskFailure attribute is set to performExitOptionsJobAction, and a task in the job failed with an exit condition that specified a jobAction of terminatejob.</span></span> <span data-ttu-id="71fea-122">Qualsiasi altra stringa è un motivo definito dall'utente specificato in una chiamata all'operazione 'Terminare un processo'.</span><span class="sxs-lookup"><span data-stu-id="71fea-122">Any other string is a user-defined reason specified in a call to the 'Terminate a job' operation.</span></span>
+    optional: true
+    syntax:
+      content: 'terminateReason?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.JobSchedulingError'
+    name: JobSchedulingError
+    spec.typeScript:
+      - name: JobSchedulingError
+        fullName: JobSchedulingError
+        uid: '@azure/batch.JobSchedulingError'
