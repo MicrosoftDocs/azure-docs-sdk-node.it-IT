@@ -1,0 +1,264 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.H264Layer'
+    name: H264Layer
+    fullName: H264Layer
+    children:
+      - '@azure/arm-mediaservices.H264Layer.adaptiveBFrame'
+      - '@azure/arm-mediaservices.H264Layer.bFrames'
+      - '@azure/arm-mediaservices.H264Layer.bitrate'
+      - '@azure/arm-mediaservices.H264Layer.bufferWindow'
+      - '@azure/arm-mediaservices.H264Layer.entropyMode'
+      - '@azure/arm-mediaservices.H264Layer.frameRate'
+      - '@azure/arm-mediaservices.H264Layer.height'
+      - '@azure/arm-mediaservices.H264Layer.label'
+      - '@azure/arm-mediaservices.H264Layer.level'
+      - '@azure/arm-mediaservices.H264Layer.maxBitrate'
+      - '@azure/arm-mediaservices.H264Layer.odatatype'
+      - '@azure/arm-mediaservices.H264Layer.profile'
+      - '@azure/arm-mediaservices.H264Layer.referenceFrames'
+      - '@azure/arm-mediaservices.H264Layer.slices'
+      - '@azure/arm-mediaservices.H264Layer.width'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrive le impostazioni da utilizzare durante la codifica di video di input a un livello di velocità in bit di output desiderato con il codec video H.264.
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.adaptiveBFrame'
+    name: adaptiveBFrame
+    fullName: adaptiveBFrame
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se sono o meno fotogrammi B adattivi per essere usata per la codifica di questo livello. Se non specificato, il codificatore verrà convertito ogni volta che il profilo video consente l''uso.'
+    optional: true
+    syntax:
+      content: 'adaptiveBFrame?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.bFrames'
+    name: bFrames
+    fullName: bFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il numero di fotogrammi B da utilizzare quando questo livello di codifica.  Se non specificato, il codificatore sceglie un numero appropriato in base al profilo video e livello.'
+    optional: true
+    syntax:
+      content: 'bFrames?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.bitrate'
+    name: bitrate
+    fullName: bitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La velocità in bit media in bit al secondo in cui codificare il video di input durante la generazione di questo livello. Si tratta di un campo obbligatorio.
+    syntax:
+      content: 'bitrate: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.bufferWindow'
+    name: bufferWindow
+    fullName: bufferWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La lunghezza dell''intervallo VBV buffer. Il valore deve essere nel formato ISO 8601. Il valore deve essere di secondi di intervallo [0,1-100]. Il valore predefinito è 5 secondi (ad esempio, PT5S).'
+    optional: true
+    syntax:
+      content: 'bufferWindow?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.entropyMode'
+    name: entropyMode
+    fullName: entropyMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La modalità di entropia da utilizzare per questo livello. Se non specificato, il codificatore sceglie la modalità appropriata per il profilo e il livello. I valori possibili sono: ''Cabac'', ''Cavlc'''
+    optional: true
+    syntax:
+      content: 'entropyMode?: EntropyMode'
+      return:
+        type:
+          - '@azure/arm-mediaservices.EntropyMode'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.frameRate'
+    name: frameRate
+    fullName: frameRate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il frame frequenza (in fotogrammi al secondo) per la codifica di questo livello. Il valore può essere nel formato M/N dove M e N sono numeri interi (ad esempio, 30000/1001) o sotto forma di un numero (ad esempio, 30 o 29,97). Il codificatore applica vincoli sulle frequenze di fotogrammi consentiti in base al profilo e un livello. Se non è specificato, il codificatore utilizzerà la stessa frequenza dei fotogrammi del video di input.'
+    optional: true
+    syntax:
+      content: 'frameRate?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.height'
+    name: height
+    fullName: height
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'altezza del video di output per questo livello. Il valore può essere relativo (in percentuale) o assoluto (in pixel). Ad esempio 50% indica che il video di output è metà come numero di pixel in altezza come input.
+    optional: true
+    syntax:
+      content: 'height?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''etichetta alfanumerico per questo livello, che può essere usato in multiplexing livelli diversi video e audio o in un nome al file di output.'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.level'
+    name: level
+    fullName: level
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Attualmente Supportiamo livello fino a 6.2. Il valore può essere automatico o un numero che corrisponde al profilo H.264. Se non specificato, il valore predefinito è automatico, che consente il codificatore di scegliere il livello appropriato per questo livello.'
+    optional: true
+    syntax:
+      content: 'level?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.maxBitrate'
+    name: maxBitrate
+    fullName: maxBitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La velocità in bit massima (in bit al secondo), in corrispondenza del quale deve essere presupposto buffer VBV per ricaricare.
+      Se non specificato, valore predefinito è lo stesso valore di velocità in bit.
+    optional: true
+    syntax:
+      content: 'maxBitrate?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.H264Layer"'
+      return:
+        type:
+          - '"#Microsoft.Media.H264Layer"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.profile'
+    name: profile
+    fullName: profile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Attualmente Supportiamo Baseline, Main, alta, High422, High444. Valore predefinito è automatico. I valori possibili sono: ''Auto'', ''Base'', ''Main'', ''Alta'', ''High422'', ''High444'''
+    optional: true
+    syntax:
+      content: 'profile?: H264VideoProfile'
+      return:
+        type:
+          - '@azure/arm-mediaservices.H264VideoProfile'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.referenceFrames'
+    name: referenceFrames
+    fullName: referenceFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il numero di frame di riferimento da utilizzare quando questo livello di codifica. Se non specificato, il codificatore determina un numero appropriato in base all''impostazione di complessità del codificatore.'
+    optional: true
+    syntax:
+      content: 'referenceFrames?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.slices'
+    name: slices
+    fullName: slices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il numero di sezioni da utilizzare quando questo livello di codifica. Se non specificato, il valore predefinito è zero, ovvero che tale codificatore userà un''unica sezione per ogni fotogramma.'
+    optional: true
+    syntax:
+      content: 'slices?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.width'
+    name: width
+    fullName: width
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La larghezza del video di output per questo livello. Il valore può essere relativo (in percentuale) o assoluto (in pixel). Ad esempio 50% indica che il video di output ha metà come numero di pixel in larghezza come input.
+    optional: true
+    syntax:
+      content: 'width?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.EntropyMode'
+    name: EntropyMode
+    spec.typeScript:
+      - name: EntropyMode
+        fullName: EntropyMode
+        uid: '@azure/arm-mediaservices.EntropyMode'
+  - uid: '@azure/arm-mediaservices.H264VideoProfile'
+    name: H264VideoProfile
+    spec.typeScript:
+      - name: H264VideoProfile
+        fullName: H264VideoProfile
+        uid: '@azure/arm-mediaservices.H264VideoProfile'
