@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.TrainingStatus'
+    name: TrainingStatus
+    fullName: TrainingStatus
+    children:
+      - '@azure/cognitiveservices-face.TrainingStatus.created'
+      - '@azure/cognitiveservices-face.TrainingStatus.lastAction'
+      - '@azure/cognitiveservices-face.TrainingStatus.lastSuccessfulTraining'
+      - '@azure/cognitiveservices-face.TrainingStatus.message'
+      - '@azure/cognitiveservices-face.TrainingStatus.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: Oggetto di stato di training.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.TrainingStatus.created'
+    name: created
+    fullName: created
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Combinato UTC data e ora di stringa che descrive l''ora di creazione del gruppo di persone, gruppo di persone di grandi dimensioni o elenco di visi di grandi dimensioni.'
+    syntax:
+      content: 'created: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.TrainingStatus.lastAction'
+    name: lastAction
+    fullName: lastAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Combinato UTC data e ora di stringa che descrive l''ultimo modificare l''ora del gruppo di persone, gruppo di persone di grandi dimensioni o elenco di visi di grandi dimensioni, potrebbe essere un valore null quando il gruppo non è stato eseguito il training.'
+    optional: true
+    syntax:
+      content: 'lastAction?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.TrainingStatus.lastSuccessfulTraining'
+    name: lastSuccessfulTraining
+    fullName: lastSuccessfulTraining
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Combinato UTC data e ora di stringa che descrive l''ultima volta la formazione corretta del gruppo di persone, gruppo di persone di grandi dimensioni o elenco di visi di grandi dimensioni.'
+    optional: true
+    syntax:
+      content: 'lastSuccessfulTraining?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.TrainingStatus.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostra messaggio di errore durante il training non riuscita (omesso quando training abbia esito positivo).
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.TrainingStatus.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato di training: notstarted, in esecuzione, ha avuto esito positivo, non è riuscita. Se il processo di training è in attesa di esecuzione, lo stato è notstarted. Se è in corso di formazione, lo stato è in esecuzione. Lo stato di esito positivo significa che questo gruppo di persone o gruppo di persone di grandi dimensioni è pronto per affrontare: consente di identificare, o questo elenco di visi di grandi dimensioni è pronto per volto - ricerca simile. Stato non riuscito è spesso causato da nessuna persona o nessun visi persistenti esiste nel gruppo di persone o gruppo di persone di grandi dimensioni o nessun visi persistenti esiste nell''elenco di visi di grandi dimensioni. I valori possibili sono: ''nonstarted'', ''con'', ''riuscito'', ''non riuscita'''
+    syntax:
+      content: 'status: TrainingStatusType'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.TrainingStatusType'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.TrainingStatusType'
+    name: TrainingStatusType
+    spec.typeScript:
+      - name: TrainingStatusType
+        fullName: TrainingStatusType
+        uid: '@azure/cognitiveservices-face.TrainingStatusType'

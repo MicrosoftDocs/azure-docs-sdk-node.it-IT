@@ -1,0 +1,609 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ManagedDatabases'
+    name: ManagedDatabases
+    fullName: ManagedDatabases
+    children:
+      - '@azure/arm-sql.ManagedDatabases.beginCompleteRestore'
+      - '@azure/arm-sql.ManagedDatabases.beginCreateOrUpdate'
+      - '@azure/arm-sql.ManagedDatabases.beginDeleteMethod'
+      - '@azure/arm-sql.ManagedDatabases.beginUpdate'
+      - '@azure/arm-sql.ManagedDatabases.completeRestore'
+      - '@azure/arm-sql.ManagedDatabases.createOrUpdate'
+      - '@azure/arm-sql.ManagedDatabases.deleteMethod'
+      - '@azure/arm-sql.ManagedDatabases.get'
+      - '@azure/arm-sql.ManagedDatabases.get_2'
+      - '@azure/arm-sql.ManagedDatabases.get_1'
+      - '@azure/arm-sql.ManagedDatabases.listByInstance'
+      - '@azure/arm-sql.ManagedDatabases.listByInstance_2'
+      - '@azure/arm-sql.ManagedDatabases.listByInstance_1'
+      - '@azure/arm-sql.ManagedDatabases.listByInstanceNext'
+      - '@azure/arm-sql.ManagedDatabases.listByInstanceNext_2'
+      - '@azure/arm-sql.ManagedDatabases.listByInstanceNext_1'
+      - '@azure/arm-sql.ManagedDatabases.constructor'
+      - '@azure/arm-sql.ManagedDatabases.update'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe che rappresenta un ManagedDatabases.
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.beginCompleteRestore'
+    name: 'beginCompleteRestore(string, string, CompleteDatabaseRestoreDefinition, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Completa l'operazione di ripristino in un database gestito.
+    syntax:
+      content: 'function beginCompleteRestore(locationName: string, operationId: string, parameters: CompleteDatabaseRestoreDefinition, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: locationName
+          type:
+            - string
+          description: Il nome dell'area in cui si trova la risorsa.
+        - id: operationId
+          type:
+            - string
+          description: Id di operazione di gestione che tenta di completare questa richiesta.
+        - id: parameters
+          type:
+            - '@azure/arm-sql.CompleteDatabaseRestoreDefinition'
+          description: La definizione per il completamento del ripristino di questo database gestito.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, ManagedDatabase, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un nuovo database o ne aggiorna uno esistente.
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, managedInstanceName: string, databaseName: string, parameters: ManagedDatabase, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: databaseName
+          type:
+            - string
+          description: Il nome del database.
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ManagedDatabase'
+          description: Lo stato delle risorse database richiesto.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elimina un database gestito.
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, managedInstanceName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: databaseName
+          type:
+            - string
+          description: Il nome del database.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.beginUpdate'
+    name: 'beginUpdate(string, string, string, ManagedDatabaseUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Aggiorna un database esistente.
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, managedInstanceName: string, databaseName: string, parameters: ManagedDatabaseUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: databaseName
+          type:
+            - string
+          description: Il nome del database.
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ManagedDatabaseUpdate'
+          description: Lo stato delle risorse database richiesto.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.completeRestore'
+    name: 'completeRestore(string, string, CompleteDatabaseRestoreDefinition, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Completa l'operazione di ripristino in un database gestito.
+    syntax:
+      content: 'function completeRestore(locationName: string, operationId: string, parameters: CompleteDatabaseRestoreDefinition, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: locationName
+          type:
+            - string
+          description: Il nome dell'area in cui si trova la risorsa.
+        - id: operationId
+          type:
+            - string
+          description: Id di operazione di gestione che tenta di completare questa richiesta.
+        - id: parameters
+          type:
+            - '@azure/arm-sql.CompleteDatabaseRestoreDefinition'
+          description: La definizione per il completamento del ripristino di questo database gestito.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, ManagedDatabase, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crea un nuovo database o ne aggiorna uno esistente.
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, managedInstanceName: string, databaseName: string, parameters: ManagedDatabase, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: databaseName
+          type:
+            - string
+          description: Il nome del database.
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ManagedDatabase'
+          description: Lo stato delle risorse database richiesto.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ManagedDatabasesCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Elimina un database gestito.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, managedInstanceName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: databaseName
+          type:
+            - string
+          description: Il nome del database.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ottiene un database gestito.
+    syntax:
+      content: 'function get(resourceGroupName: string, managedInstanceName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: databaseName
+          type:
+            - string
+          description: Il nome del database.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ManagedDatabasesGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<ManagedDatabase>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, managedInstanceName: string, databaseName: string, options: RequestOptionsBase, callback: ServiceCallback<ManagedDatabase>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: databaseName
+          type:
+            - string
+          description: Il nome del database.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ManagedDatabase>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.ManagedDatabasesGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.get_1'
+    name: 'get(string, string, string, ServiceCallback<ManagedDatabase>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, managedInstanceName: string, databaseName: string, callback: ServiceCallback<ManagedDatabase>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: databaseName
+          type:
+            - string
+          description: Il nome del database.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ManagedDatabase>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.ManagedDatabasesGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.listByInstance'
+    name: 'listByInstance(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ottiene un elenco di database gestiti.
+    syntax:
+      content: 'function listByInstance(resourceGroupName: string, managedInstanceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ManagedDatabasesListByInstanceResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.listByInstance_2'
+    name: 'listByInstance(string, string, RequestOptionsBase, ServiceCallback<ManagedDatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByInstance(resourceGroupName: string, managedInstanceName: string, options: RequestOptionsBase, callback: ServiceCallback<ManagedDatabaseListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ManagedDatabaseListResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.ManagedDatabasesListByInstanceResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.listByInstance_1'
+    name: 'listByInstance(string, string, ServiceCallback<ManagedDatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByInstance(resourceGroupName: string, managedInstanceName: string, callback: ServiceCallback<ManagedDatabaseListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ManagedDatabaseListResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.ManagedDatabasesListByInstanceResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.listByInstanceNext'
+    name: 'listByInstanceNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ottiene un elenco di database gestiti.
+    syntax:
+      content: 'function listByInstanceNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ManagedDatabasesListByInstanceNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.listByInstanceNext_2'
+    name: 'listByInstanceNext(string, RequestOptionsBase, ServiceCallback<ManagedDatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByInstanceNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ManagedDatabaseListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ManagedDatabaseListResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.ManagedDatabasesListByInstanceNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.listByInstanceNext_1'
+    name: 'listByInstanceNext(string, ServiceCallback<ManagedDatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByInstanceNext(nextPageLink: string, callback: ServiceCallback<ManagedDatabaseListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ManagedDatabaseListResult>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.ManagedDatabasesListByInstanceNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.constructor'
+    name: ManagedDatabases(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creare un ManagedDatabases.
+    syntax:
+      content: 'new ManagedDatabases(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            Riferimento al client del servizio.
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabases.update'
+    name: 'update(string, string, string, ManagedDatabaseUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Aggiorna un database esistente.
+    syntax:
+      content: 'function update(resourceGroupName: string, managedInstanceName: string, databaseName: string, parameters: ManagedDatabaseUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome del gruppo di risorse contenente la risorsa. È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.
+        - id: managedInstanceName
+          type:
+            - string
+          description: Il nome dell'istanza gestita.
+        - id: databaseName
+          type:
+            - string
+          description: Il nome del database.
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ManagedDatabaseUpdate'
+          description: Lo stato delle risorse database richiesto.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ManagedDatabasesUpdateResponse>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: '@azure/arm-sql.CompleteDatabaseRestoreDefinition'
+    name: CompleteDatabaseRestoreDefinition
+    spec.typeScript:
+      - name: CompleteDatabaseRestoreDefinition
+        fullName: CompleteDatabaseRestoreDefinition
+        uid: '@azure/arm-sql.CompleteDatabaseRestoreDefinition'
+  - uid: '@azure/arm-sql.ManagedDatabase'
+    name: ManagedDatabase
+    spec.typeScript:
+      - name: ManagedDatabase
+        fullName: ManagedDatabase
+        uid: '@azure/arm-sql.ManagedDatabase'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate'
+    name: ManagedDatabaseUpdate
+    spec.typeScript:
+      - name: ManagedDatabaseUpdate
+        fullName: ManagedDatabaseUpdate
+        uid: '@azure/arm-sql.ManagedDatabaseUpdate'
+  - uid: ServiceCallback<@azure/arm-sql.ManagedDatabase>
+    name: ManagedDatabase>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ManagedDatabase
+        fullName: ManagedDatabase
+        uid: '@azure/arm-sql.ManagedDatabase'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.ManagedDatabaseListResult>
+    name: ManagedDatabaseListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ManagedDatabaseListResult
+        fullName: ManagedDatabaseListResult
+        uid: '@azure/arm-sql.ManagedDatabaseListResult'
+      - name: '>'
+        fullName: '>'
