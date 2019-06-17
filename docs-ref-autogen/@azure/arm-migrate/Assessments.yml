@@ -1,0 +1,717 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-migrate.Assessments'
+    name: Assessments
+    fullName: Assessments
+    children:
+      - '@azure/arm-migrate.Assessments.constructor'
+      - '@azure/arm-migrate.Assessments.create_2'
+      - '@azure/arm-migrate.Assessments.create'
+      - '@azure/arm-migrate.Assessments.create_1'
+      - '@azure/arm-migrate.Assessments.deleteMethod'
+      - '@azure/arm-migrate.Assessments.deleteMethod_2'
+      - '@azure/arm-migrate.Assessments.deleteMethod_1'
+      - '@azure/arm-migrate.Assessments.get'
+      - '@azure/arm-migrate.Assessments.get_2'
+      - '@azure/arm-migrate.Assessments.get_1'
+      - '@azure/arm-migrate.Assessments.getReportDownloadUrl'
+      - '@azure/arm-migrate.Assessments.getReportDownloadUrl_2'
+      - '@azure/arm-migrate.Assessments.getReportDownloadUrl_1'
+      - '@azure/arm-migrate.Assessments.listByGroup'
+      - '@azure/arm-migrate.Assessments.listByGroup_2'
+      - '@azure/arm-migrate.Assessments.listByGroup_1'
+      - '@azure/arm-migrate.Assessments.listByProject'
+      - '@azure/arm-migrate.Assessments.listByProject_2'
+      - '@azure/arm-migrate.Assessments.listByProject_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="3f9b8-101">Classe che rappresenta delle valutazioni.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-101">Class representing a Assessments.</span></span>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.constructor'
+    name: Assessments(AzureMigrateContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3f9b8-102">Creare una valutazione.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-102">Create a Assessments.</span></span>
+    syntax:
+      content: 'new Assessments(client: AzureMigrateContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-migrate.AzureMigrateContext'
+          description: |
+            <span data-ttu-id="3f9b8-103">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-103">Reference to the service client.</span></span>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.create_2'
+    name: 'create(string, string, string, string, AssessmentsCreateOptionalParams, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: AssessmentsCreateOptionalParams, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-104">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-104">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-105">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-105">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-106">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-106">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-107">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-107">Unique name of an assessment within a project.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-migrate.AssessmentsCreateOptionalParams'
+          description: <span data-ttu-id="3f9b8-108">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="3f9b8-108">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            <span data-ttu-id="3f9b8-109">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-109">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.create'
+    name: 'create(string, string, string, string, Models.AssessmentsCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="3f9b8-110">Creare una nuova valutazione con il nome specificato e le impostazioni specificate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-110">Create a new assessment with the given name and the specified settings.</span></span> <span data-ttu-id="3f9b8-111">Nome di una valutazione in un progetto è un identiefier univoco, se una valutazione con il nome fornito già esiste, la valutazione esistente viene aggiornata.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-111">Since name of an assessment in a project is a unique identiefier, if an assessment with the name provided already exists, then the existing assessment is updated.</span></span>
+      <span data-ttu-id="3f9b8-112">Qualsiasi operazione PUT, causando una creare o aggiornare a una valutazione, provocherà la valutazione passare in uno stato "InProgress".</span><span class="sxs-lookup"><span data-stu-id="3f9b8-112">Any PUT operation, resulting in either create or update on an assessment, will cause the assessment to go in a "InProgress" state.</span></span> <span data-ttu-id="3f9b8-113">Ciò verrà indicato dal campo 'computationState' sull'oggetto della valutazione.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-113">This will be indicated by the field 'computationState' on the Assessment object.</span></span> <span data-ttu-id="3f9b8-114">Durante questo periodo nessun altra operazione PUT potrà essere su tale oggetto assessment, né sarà un'operazione di eliminazione.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-114">During this time no other PUT operation will be allowed on that assessment object, nor will a Delete operation.</span></span> <span data-ttu-id="3f9b8-115">Dopo il calcolo per la valutazione è stato completato, verrà aggiornato il campo 'computationState' in 'Pronto' e quindi altri PUT o DELETE possono verificarsi operazioni sulla valutazione.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-115">Once the computation for the assessment is complete, the field 'computationState' will be updated to 'Ready', and then other PUT or DELETE operations can happen on the assessment.</span></span>
+
+      <span data-ttu-id="3f9b8-116">Quando assessment è incluso nel calcolo, qualsiasi PUT causerà un errore 400 - richiesta non valida.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-116">When assessment is under computation, any PUT will lead to a 400 - Bad Request error.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: Models.AssessmentsCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-117">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-117">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-118">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-118">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-119">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-119">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-120">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-120">Unique name of an assessment within a project.</span></span>
+        - id: options
+          type:
+            - Models.AssessmentsCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.create_1'
+    name: 'create(string, string, string, string, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-121">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-121">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-122">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-122">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-123">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-123">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-124">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-124">Unique name of an assessment within a project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            <span data-ttu-id="3f9b8-125">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-125">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="3f9b8-126">Eliminare una valutazione dal progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-126">Delete an assessment from the project.</span></span> <span data-ttu-id="3f9b8-127">I computer rimangono nella valutazione.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-127">The machines remain in the assessment.</span></span> <span data-ttu-id="3f9b8-128">L'eliminazione di una valutazione non esistente comporta un'operazione di no.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-128">Deleting a non-existent assessment results in a no-operation.</span></span>
+      <span data-ttu-id="3f9b8-129">Quando una valutazione è incluso nel calcolo, come indicato dal campo 'computationState', non può essere eliminata.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-129">When an assessment is under computation, as indicated by the 'computationState' field, it cannot be deleted.</span></span> <span data-ttu-id="3f9b8-130">Qualsiasi tentativo di questo tipo verrà restituito un 400 - richiesta non valida.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-130">Any such attempt will return a 400 - Bad Request.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-131">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-131">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-132">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-132">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-133">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-133">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-134">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-134">Unique name of an assessment within a project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-135">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-135">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-136">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-136">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-137">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-137">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-138">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-138">Unique name of an assessment within a project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="3f9b8-139">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="3f9b8-139">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="3f9b8-140">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-140">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-141">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-141">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-142">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-142">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-143">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-143">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-144">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-144">Unique name of an assessment within a project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="3f9b8-145">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-145">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3f9b8-146">Ottenere una valutazione esistente con il nome specificato.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-146">Get an existing assessment with the specified name.</span></span> <span data-ttu-id="3f9b8-147">Restituisce un oggetto json del tipo 'della valutazione' come specificata nella sezione modelli.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-147">Returns a json object of type 'assessment' as specified in Models section.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-148">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-148">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-149">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-149">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-150">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-150">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-151">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-151">Unique name of an assessment within a project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-152">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-152">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-153">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-153">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-154">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-154">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-155">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-155">Unique name of an assessment within a project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="3f9b8-156">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="3f9b8-156">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            <span data-ttu-id="3f9b8-157">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<Assessment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<Assessment>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-158">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-158">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-159">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-159">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-160">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-160">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-161">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-161">Unique name of an assessment within a project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Assessment>
+          description: |
+            <span data-ttu-id="3f9b8-162">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.getReportDownloadUrl'
+    name: 'getReportDownloadUrl(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3f9b8-163">Ottenere l'URL per il download della valutazione in un formato di report.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-163">Get the URL for downloading the assessment in a report format.</span></span>
+    syntax:
+      content: 'function getReportDownloadUrl(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-164">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-164">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-165">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-165">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-166">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-166">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-167">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-167">Unique name of an assessment within a project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsGetReportDownloadUrlResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.getReportDownloadUrl_2'
+    name: 'getReportDownloadUrl(string, string, string, string, RequestOptionsBase, ServiceCallback<DownloadUrl>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getReportDownloadUrl(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<DownloadUrl>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-168">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-168">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-169">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-169">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-170">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-170">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-171">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-171">Unique name of an assessment within a project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="3f9b8-172">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="3f9b8-172">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.DownloadUrl>
+          description: |
+            <span data-ttu-id="3f9b8-173">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-173">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsGetReportDownloadUrlResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.getReportDownloadUrl_1'
+    name: 'getReportDownloadUrl(string, string, string, string, ServiceCallback<DownloadUrl>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getReportDownloadUrl(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<DownloadUrl>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-174">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-174">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-175">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-175">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-176">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-176">Unique name of a group within a project.</span></span>
+        - id: assessmentName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-177">Nome univoco di una valutazione in un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-177">Unique name of an assessment within a project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.DownloadUrl>
+          description: |
+            <span data-ttu-id="3f9b8-178">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsGetReportDownloadUrlResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByGroup'
+    name: 'listByGroup(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="3f9b8-179">Ottenere tutte le valutazioni create per il gruppo specificato.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-179">Get all assessments created for the specified group.</span></span>
+      <span data-ttu-id="3f9b8-180">Restituisce una matrice json di oggetti di tipo 'della valutazione' come specificata nella sezione modelli.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-180">Returns a json array of objects of type 'assessment' as specified in Models section.</span></span>
+    syntax:
+      content: 'function listByGroup(resourceGroupName: string, projectName: string, groupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-181">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-181">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-182">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-182">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-183">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-183">Unique name of a group within a project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsListByGroupResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByGroup_2'
+    name: 'listByGroup(string, string, string, RequestOptionsBase, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGroup(resourceGroupName: string, projectName: string, groupName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-184">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-184">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-185">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-185">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-186">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-186">Unique name of a group within a project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="3f9b8-187">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="3f9b8-187">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            <span data-ttu-id="3f9b8-188">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsListByGroupResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByGroup_1'
+    name: 'listByGroup(string, string, string, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGroup(resourceGroupName: string, projectName: string, groupName: string, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-189">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-189">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-190">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-190">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-191">Nome univoco di un gruppo all'interno di un progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-191">Unique name of a group within a project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            <span data-ttu-id="3f9b8-192">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-192">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsListByGroupResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByProject'
+    name: 'listByProject(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="3f9b8-193">Ottenere tutte le valutazioni create nel progetto.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-193">Get all assessments created in the project.</span></span>
+      <span data-ttu-id="3f9b8-194">Restituisce una matrice json di oggetti di tipo 'della valutazione' come specificata nella sezione modelli.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-194">Returns a json array of objects of type 'assessment' as specified in Models section.</span></span>
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-195">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-195">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-196">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-196">Name of the Azure Migrate project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessmentsListByProjectResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByProject_2'
+    name: 'listByProject(string, string, RequestOptionsBase, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-197">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-197">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-198">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-198">Name of the Azure Migrate project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="3f9b8-199">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="3f9b8-199">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            <span data-ttu-id="3f9b8-200">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-200">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsListByProjectResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Assessments.listByProject_1'
+    name: 'listByProject(string, string, ServiceCallback<AssessmentResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, callback: ServiceCallback<AssessmentResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="3f9b8-201">Nome del gruppo di risorse di Azure, tale progetto fa parte di.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-201">Name of the Azure Resource Group that project is part of.</span></span>'
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="3f9b8-202">Nome del progetto Azure Migrate.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-202">Name of the Azure Migrate project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+          description: |
+            <span data-ttu-id="3f9b8-203">Il callback</span><span class="sxs-lookup"><span data-stu-id="3f9b8-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.AssessmentsListByProjectResponse>
+    package: '@azure/arm-migrate'
+references:
+  - uid: '@azure/arm-migrate.AzureMigrateContext'
+    name: AzureMigrateContext
+    spec.typeScript:
+      - name: AzureMigrateContext
+        fullName: AzureMigrateContext
+        uid: '@azure/arm-migrate.AzureMigrateContext'
+  - uid: ServiceCallback<@azure/arm-migrate.Assessment>
+    name: Assessment>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Assessment
+        fullName: Assessment
+        uid: '@azure/arm-migrate.Assessment'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-migrate.AssessmentsCreateOptionalParams'
+    name: AssessmentsCreateOptionalParams
+    spec.typeScript:
+      - name: AssessmentsCreateOptionalParams
+        fullName: AssessmentsCreateOptionalParams
+        uid: '@azure/arm-migrate.AssessmentsCreateOptionalParams'
+  - uid: ServiceCallback<@azure/arm-migrate.DownloadUrl>
+    name: DownloadUrl>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DownloadUrl
+        fullName: DownloadUrl
+        uid: '@azure/arm-migrate.DownloadUrl'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-migrate.AssessmentResultList>
+    name: AssessmentResultList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AssessmentResultList
+        fullName: AssessmentResultList
+        uid: '@azure/arm-migrate.AssessmentResultList'
+      - name: '>'
+        fullName: '>'
