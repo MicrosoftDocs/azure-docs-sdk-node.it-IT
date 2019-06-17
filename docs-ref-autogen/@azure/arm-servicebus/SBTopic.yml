@@ -1,0 +1,346 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-servicebus.SBTopic'
+    name: SBTopic
+    fullName: SBTopic
+    children:
+      - '@azure/arm-servicebus.SBTopic.accessedAt'
+      - '@azure/arm-servicebus.SBTopic.autoDeleteOnIdle'
+      - '@azure/arm-servicebus.SBTopic.countDetails'
+      - '@azure/arm-servicebus.SBTopic.createdAt'
+      - '@azure/arm-servicebus.SBTopic.defaultMessageTimeToLive'
+      - '@azure/arm-servicebus.SBTopic.duplicateDetectionHistoryTimeWindow'
+      - '@azure/arm-servicebus.SBTopic.enableBatchedOperations'
+      - '@azure/arm-servicebus.SBTopic.enableExpress'
+      - '@azure/arm-servicebus.SBTopic.enablePartitioning'
+      - '@azure/arm-servicebus.SBTopic.id'
+      - '@azure/arm-servicebus.SBTopic.maxSizeInMegabytes'
+      - '@azure/arm-servicebus.SBTopic.name'
+      - '@azure/arm-servicebus.SBTopic.requiresDuplicateDetection'
+      - '@azure/arm-servicebus.SBTopic.sizeInBytes'
+      - '@azure/arm-servicebus.SBTopic.status'
+      - '@azure/arm-servicebus.SBTopic.subscriptionCount'
+      - '@azure/arm-servicebus.SBTopic.supportOrdering'
+      - '@azure/arm-servicebus.SBTopic.type'
+      - '@azure/arm-servicebus.SBTopic.updatedAt'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrizione della risorsa di argomento.
+    extends:
+      name: '@azure/arm-servicebus.Resource'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.accessedAt'
+    name: accessedAt
+    fullName: accessedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Ora ultimo invio del messaggio, o è stata ricevuta una richiesta, in questo argomento.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'accessedAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.autoDeleteOnIdle'
+    name: autoDeleteOnIdle
+    fullName: autoDeleteOnIdle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ISO 8601 timespan intervallo di inattività dopo il quale l'argomento viene eliminato automaticamente. La durata minima è 5 minuti.
+    optional: true
+    syntax:
+      content: 'autoDeleteOnIdle?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.countDetails'
+    name: countDetails
+    fullName: countDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Conteggio dettagli messaggio **Nota: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**'
+    optional: true
+    syntax:
+      content: 'countDetails?: MessageCountDetails'
+      return:
+        type:
+          - '@azure/arm-servicebus.MessageCountDetails'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.createdAt'
+    name: createdAt
+    fullName: createdAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Ora esatta in cui è stato creato il messaggio.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'createdAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.defaultMessageTimeToLive'
+    name: defaultMessageTimeToLive
+    fullName: defaultMessageTimeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ISO 8601 predefinito timespan messaggio valore di durata. Si tratta della durata dopo la quale il messaggio scade, a partire da quando il messaggio viene inviato al Bus di servizio. Questo è il valore predefinito utilizzato quando non TimeToLive è impostata su un messaggio stesso.'
+    optional: true
+    syntax:
+      content: 'defaultMessageTimeToLive?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.duplicateDetectionHistoryTimeWindow'
+    name: duplicateDetectionHistoryTimeWindow
+    fullName: duplicateDetectionHistoryTimeWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Struttura timespan ISO8601 che definisce la durata della cronologia di rilevamento dei duplicati. Il valore predefinito è 10 minuti.
+    optional: true
+    syntax:
+      content: 'duplicateDetectionHistoryTimeWindow?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.enableBatchedOperations'
+    name: enableBatchedOperations
+    fullName: enableBatchedOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valore che indica se sono abilitate le operazioni in batch sul lato server.
+    optional: true
+    syntax:
+      content: 'enableBatchedOperations?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.enableExpress'
+    name: enableExpress
+    fullName: enableExpress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valore che indica se le entità Express sono abilitate. Un argomento rapido contiene un messaggio in memoria temporaneamente prima di scriverlo nell'archivio permanente.
+    optional: true
+    syntax:
+      content: 'enableExpress?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.enablePartitioning'
+    name: enablePartitioning
+    fullName: enablePartitioning
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valore che indica se l'argomento di essere partizionato tra più Broker dei messaggi è abilitata.
+    optional: true
+    syntax:
+      content: 'enablePartitioning?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Id risorsa **Nota: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.maxSizeInMegabytes'
+    name: maxSizeInMegabytes
+    fullName: maxSizeInMegabytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Dimensione massima dell''argomento in megabyte, ovvero le dimensioni della memoria allocata per l''argomento. Valore predefinito è 1024.'
+    optional: true
+    syntax:
+      content: 'maxSizeInMegabytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Nome della risorsa **Nota: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.requiresDuplicateDetection'
+    name: requiresDuplicateDetection
+    fullName: requiresDuplicateDetection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valore che indica se questo argomento è necessario il rilevamento dei duplicati.
+    optional: true
+    syntax:
+      content: 'requiresDuplicateDetection?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.sizeInBytes'
+    name: sizeInBytes
+    fullName: sizeInBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Dimensione dell'argomento, in byte.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'sizeInBytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Enumera i valori possibili per lo stato di un''entità di messaggistica. I valori possibili sono: ''Active'', ''Disabled'', ''Restoring'', ''SendDisabled'', ''ReceiveDisabled'', ''Creating'', ''Deleting'', ''Renaming'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'status?: EntityStatus'
+      return:
+        type:
+          - '@azure/arm-servicebus.EntityStatus'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.subscriptionCount'
+    name: subscriptionCount
+    fullName: subscriptionCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Numero di sottoscrizioni.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'subscriptionCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.supportOrdering'
+    name: supportOrdering
+    fullName: supportOrdering
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valore che indica se l'argomento supporta l'ordinamento.
+    optional: true
+    syntax:
+      content: 'supportOrdering?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Tipo di risorsa **Nota: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**'
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBTopic.updatedAt'
+    name: updatedAt
+    fullName: updatedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L'ora esatta il messaggio è stato aggiornato.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'updatedAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+references:
+  - uid: '@azure/arm-servicebus.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-servicebus.Resource'
+  - uid: '@azure/arm-servicebus.MessageCountDetails'
+    name: MessageCountDetails
+    spec.typeScript:
+      - name: MessageCountDetails
+        fullName: MessageCountDetails
+        uid: '@azure/arm-servicebus.MessageCountDetails'
+  - uid: '@azure/arm-servicebus.EntityStatus'
+    name: EntityStatus
+    spec.typeScript:
+      - name: EntityStatus
+        fullName: EntityStatus
+        uid: '@azure/arm-servicebus.EntityStatus'
