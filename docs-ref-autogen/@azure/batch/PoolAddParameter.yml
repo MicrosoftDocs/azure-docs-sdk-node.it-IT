@@ -1,0 +1,414 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolAddParameter'
+    name: PoolAddParameter
+    fullName: PoolAddParameter
+    children:
+      - '@azure/batch.PoolAddParameter.applicationLicenses'
+      - '@azure/batch.PoolAddParameter.applicationPackageReferences'
+      - '@azure/batch.PoolAddParameter.autoScaleEvaluationInterval'
+      - '@azure/batch.PoolAddParameter.autoScaleFormula'
+      - '@azure/batch.PoolAddParameter.certificateReferences'
+      - '@azure/batch.PoolAddParameter.cloudServiceConfiguration'
+      - '@azure/batch.PoolAddParameter.displayName'
+      - '@azure/batch.PoolAddParameter.enableAutoScale'
+      - '@azure/batch.PoolAddParameter.enableInterNodeCommunication'
+      - '@azure/batch.PoolAddParameter.id'
+      - '@azure/batch.PoolAddParameter.maxTasksPerNode'
+      - '@azure/batch.PoolAddParameter.metadata'
+      - '@azure/batch.PoolAddParameter.networkConfiguration'
+      - '@azure/batch.PoolAddParameter.resizeTimeout'
+      - '@azure/batch.PoolAddParameter.startTask'
+      - '@azure/batch.PoolAddParameter.targetDedicatedNodes'
+      - '@azure/batch.PoolAddParameter.targetLowPriorityNodes'
+      - '@azure/batch.PoolAddParameter.taskSchedulingPolicy'
+      - '@azure/batch.PoolAddParameter.userAccounts'
+      - '@azure/batch.PoolAddParameter.virtualMachineConfiguration'
+      - '@azure/batch.PoolAddParameter.vmSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta PoolAddParameter.
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.applicationLicenses'
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''elenco di applicazioni, licenze servizio verrà rese disponibile in ogni nodo di calcolo nel pool di Batch. L''elenco di licenze di applicazioni deve essere un subset di disponibili licenze di applicazioni del servizio Batch. Se viene richiesta una licenza che non è supportato, la creazione del pool avrà esito negativo.'
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''elenco dei pacchetti di applicazione da installare in ogni nodo di calcolo nel pool. Modifiche ai riferimenti al pacchetto dell''applicazione influiscono su tutti i nuovi nodi di calcolo aggiunta di pool, ma non influiscono sui nodi di calcolo che si trovano già nel pool finché vengono riavviati o ricreare l''immagine. È presente un massimo di 10 riferimenti al pacchetto di applicazione in qualsiasi pool specificato.'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''intervallo di tempo in cui regolare automaticamente le dimensioni del pool in base alla formula di scalabilità automatica. Il valore predefinito è 15 minuti. Il valore minimo e massimo sono rispettivamente 5 minuti e 168 ore. Se si specifica un valore minore di 5 minuti o più di 168 ore, il servizio Batch restituisce un errore. Se si chiama direttamente l''API REST, il codice di stato HTTP è 400 (richiesta non valida).'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Una formula per il numero desiderato di nodi di calcolo nel pool. Questa proprietà non deve essere specificato se enableAutoScale è impostato su false. È obbligatorio se enableAutoScale è impostato su true. La formula viene verificata la validità prima della creazione di pool. Se la formula non è valida, il servizio Batch respinge la richiesta con informazioni dettagliate sull''errore. Per altre informazioni su come specificare questa formula, vedere ''Scalabilità automatica'' nodi di calcolo in un pool di Batch di Azure (https://azure.microsoft.com/documentation/articles/batch-automatic-scaling/).'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''elenco di certificati da installare in ogni nodo di calcolo nel pool. Per i nodi di calcolo Windows, il servizio Batch installa i certificati all''archivio certificati specificato e alla posizione. Per i nodi di calcolo Linux, i certificati vengono archiviati in una directory all''interno di un ambiente che az_batch_certificates_dir variabile viene fornito per l''attività di query per questa posizione e la directory di lavoro attività. Per i certificati con visibilità "remoteuser", viene creata una directory "certs" nella directory home dell''utente (ad esempio, /home/ {nome_utente} / certs) e i certificati vengono posizionati in tale directory.'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.cloudServiceConfiguration'
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La configurazione del servizio cloud per il pool. Questa proprietà e virtualMachineConfiguration si escludono a vicenda e una delle proprietà deve essere specificata. Questa proprietà non può essere specificato se l'account Batch è stato creato con la proprietà poolAllocationMode impostata su 'UserSubscription'.
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - '@azure/batch.CloudServiceConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il nome visualizzato per il pool. Il nome visualizzato non deve essere univoco e può contenere qualsiasi carattere Unicode fino alla lunghezza massima pari a 1024.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.enableAutoScale'
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indica se le dimensioni del pool necessario regolare automaticamente nel corso del tempo. Se false, almeno uno dei targetDedicateNodes e targetLowPriorityNodes deve essere specificato. Se true, la proprietà autoScaleFormula è obbligatoria e il pool viene ridimensionato automaticamente in base alla formula. Il valore predefinito è False.'
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.enableInterNodeCommunication'
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica se il pool consente la comunicazione diretta tra nodi. L'abilitazione della comunicazione tra nodi limita le dimensioni massime del pool a causa delle limitazioni di distribuzione nei nodi del pool.
+      Questo può comportare il pool non raggiunge la dimensione desiderata. Il valore predefinito è False.
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Stringa che identifica in modo univoco il pool nell''account. L''ID può contenere qualsiasi combinazione di caratteri alfanumerici, inclusi trattini e caratteri di sottolineatura e non può contenere più di 64 caratteri. L''ID è a mantenimento del case e tra maiuscole e minuscole (ovvero, non è possibile due ID pool all''interno di un account che differiscono solo per i casi).'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.maxTasksPerNode'
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Numero massimo di attività che possono essere eseguite simultaneamente in un singolo nodo di calcolo nel pool.
+      Il valore predefinito è 1. Il valore massimo è il minore di 4 volte il numero di core di vmSize del pool o 256.
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco di coppie nome-valore associate al pool come metadati. Il servizio Batch non assegna alcun significato ai metadati. si tratta esclusivamente per l'uso del codice utente.
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La configurazione della rete per il pool.
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.NetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il timeout per l''allocazione dei nodi di calcolo nel pool. Questo timeout si applica solo a scalabilità manuale; non ha alcun effetto quando enableAutoScale è impostato su true. Il valore predefinito è 15 minuti. Il valore minimo è 5 minuti. Se si specifica un valore minore di 5 minuti, il servizio Batch restituisce un errore. Se si chiama direttamente l''API REST, il codice di stato HTTP è 400 (richiesta non valida).'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un'attività specificata per l'esecuzione in ogni nodo di calcolo non appena viene aggiungo il pool. L'attività viene eseguita quando il nodo viene aggiunto al pool o quando il nodo viene riavviato.
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.targetDedicatedNodes'
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il numero desiderato di dedicato nodi di calcolo nel pool. Questa proprietà non deve essere specificato se enableAutoScale è impostato su true. Se enableAutoScale è impostato su false, è necessario impostare targetDedicatedNodes, targetLowPriorityNodes o entrambi.'
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.targetLowPriorityNodes'
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il numero desiderato di nodi di calcolo con priorità bassa in pool. Questa proprietà non deve essere specificato se enableAutoScale è impostato su true. Se enableAutoScale è impostato su false, è necessario impostare targetDedicatedNodes, targetLowPriorityNodes o entrambi.'
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.taskSchedulingPolicy'
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Come le attività vengono distribuite tra i nodi di calcolo in un pool. Se non specificato, viene distribuito il valore predefinito.'
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - '@azure/batch.TaskSchedulingPolicy'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.userAccounts'
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'elenco degli account utente da creare in ogni nodo nel pool.
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - '@azure/batch.UserAccount[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.virtualMachineConfiguration'
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La configurazione della macchina virtuale per il pool. Questa proprietà e cloudServiceConfiguration si escludono a vicenda e una delle proprietà deve essere specificata.
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - '@azure/batch.VirtualMachineConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.vmSize'
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le dimensioni delle macchine virtuali nel pool. Le macchine virtuali di un pool hanno tutte le stesse dimensioni.
+      Per informazioni sulle dimensioni disponibili delle macchine virtuali per i servizi Cloud pool (pool creati con cloudServiceConfiguration), vedere le dimensioni per i servizi Cloud (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supporta tutte le dimensioni di macchina virtuale di servizi Cloud tranne ExtraSmall, A1V2 e A2V2. Per informazioni sulla macchina virtuale a disponibilità dimensioni per i pool usando immagini dal Marketplace di macchine virtuali (pool creati con virtualMachineConfiguration) vedere dimensioni per le macchine virtuali (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) o dimensioni delle macchine virtuali (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supporta tutte le dimensioni di macchina virtuale di Azure, ad eccezione STANDARD_A0 e quelli con archiviazione premium (serie STANDARD_GS STANDARD_DS e STANDARD_DSV2).
+    syntax:
+      content: 'vmSize: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CloudServiceConfiguration'
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: '@azure/batch.CloudServiceConfiguration'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: '@azure/batch.NetworkConfiguration'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
+  - uid: '@azure/batch.TaskSchedulingPolicy'
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: '@azure/batch.TaskSchedulingPolicy'
+  - uid: '@azure/batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: '@azure/batch.UserAccount'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.VirtualMachineConfiguration'
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: '@azure/batch.VirtualMachineConfiguration'

@@ -13,6 +13,7 @@ items:
       - '@azure/arm-network.ApplicationGatewayProbe.name'
       - '@azure/arm-network.ApplicationGatewayProbe.path'
       - '@azure/arm-network.ApplicationGatewayProbe.pickHostNameFromBackendHttpSettings'
+      - '@azure/arm-network.ApplicationGatewayProbe.port'
       - '@azure/arm-network.ApplicationGatewayProbe.protocol'
       - '@azure/arm-network.ApplicationGatewayProbe.provisioningState'
       - '@azure/arm-network.ApplicationGatewayProbe.timeout'
@@ -139,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: 'Percorso relativo del probe. Percorso valido inizia da ''/''. Probe viene inviato a <Protocol>://<host>:<port><path>'
+    summary: 'Percorso relativo del probe. Percorso valido inizia da ''/''. Probe viene inviato a <Protocol>://<host>:<port><path>.'
     optional: true
     syntax:
       content: 'path?: undefined | string'
@@ -161,6 +162,21 @@ items:
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayProbe.port'
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Porta personalizzata che verrà usata per i server back-end di probe. Il valore valido è compreso da 1 a 65535. Impostazioni verranno utilizzate nel caso non impostato, la porta da http. Questa proprietà è valida per Standard_v2 e WAF_v2 solo.'
+    optional: true
+    syntax:
+      content: 'port?: undefined | number'
+      return:
+        type:
+          - undefined | number
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayProbe.protocol'
     name: protocol
