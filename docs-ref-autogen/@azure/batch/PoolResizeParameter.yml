@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolResizeParameter'
+    name: PoolResizeParameter
+    fullName: PoolResizeParameter
+    children:
+      - '@azure/batch.PoolResizeParameter.nodeDeallocationOption'
+      - '@azure/batch.PoolResizeParameter.resizeTimeout'
+      - '@azure/batch.PoolResizeParameter.targetDedicatedNodes'
+      - '@azure/batch.PoolResizeParameter.targetLowPriorityNodes'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta PoolResizeParameter.
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolResizeParameter.nodeDeallocationOption'
+    name: nodeDeallocationOption
+    fullName: nodeDeallocationOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Determina quali azioni eseguire con un nodo e le attività in esecuzione se le dimensioni del pool sono decrescente. Il valore predefinito è requeue. I valori possibili sono: ''requeue'', ''terminate'', ''taskCompletion'', ''retainedData'''
+    optional: true
+    syntax:
+      content: 'nodeDeallocationOption?: ComputeNodeDeallocationOption'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeDeallocationOption'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolResizeParameter.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Timeout per l''allocazione dei nodi di calcolo nel pool o la rimozione di nodi di calcolo del pool. Il valore predefinito è 15 minuti. Il valore minimo è 5 minuti. Se si specifica un valore minore di 5 minuti, il servizio Batch restituisce un errore. Se si chiama direttamente l''API REST, il codice di stato HTTP è 400 (richiesta non valida).'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolResizeParameter.targetDedicatedNodes'
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il numero desiderato di dedicato nodi di calcolo nel pool.
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolResizeParameter.targetLowPriorityNodes'
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il numero desiderato di nodi di calcolo con priorità bassa in pool.
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ComputeNodeDeallocationOption'
+    name: ComputeNodeDeallocationOption
+    spec.typeScript:
+      - name: ComputeNodeDeallocationOption
+        fullName: ComputeNodeDeallocationOption
+        uid: '@azure/batch.ComputeNodeDeallocationOption'
