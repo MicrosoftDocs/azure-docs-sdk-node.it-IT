@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.JobOutput'
+    name: JobOutput
+    fullName: JobOutput
+    children:
+      - '@azure/arm-mediaservices.JobOutput.error'
+      - '@azure/arm-mediaservices.JobOutput.label'
+      - '@azure/arm-mediaservices.JobOutput.odatatype'
+      - '@azure/arm-mediaservices.JobOutput.progress'
+      - '@azure/arm-mediaservices.JobOutput.state'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrive tutte le proprietà di un JobOutput.
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutput.error'
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Se il JobOutput è nello stato di errore, contiene i dettagli dell'errore.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'error?: JobError'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JobError'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutput.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un''etichetta che viene assegnata a un JobOutput per identificarlo in modo univoco. Ciò è utile quando la trasformazione ha più TransformOutput, in base al quale il processo ha più JobOutput. In questi casi, quando si invia il processo, si aggiungerà JobOutputs due o più, nello stesso ordine TransformOutputs nella trasformazione. Successivamente, quando si recupera il processo tramite gli eventi o in una richiesta GET, è possibile utilizzare l''etichetta per identificare facilmente il JobOutput. Se non viene specificata un''etichetta, valore predefinito è ''{presetName} _ {outputIndex}'' verrà utilizzato, dove il nome predefinito è il nome del set di impostazioni di TransformOutput corrispondente e dell''indice di output corrisponde all''indice relativo di questa JobOutput all''interno del processo. Si noti che questo indice è identico all''indice relativo del TransformOutput corrispondente all''interno la trasformazione relativa.'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutput.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'odatatype: "JobOutput"'
+      return:
+        type:
+          - '"JobOutput"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutput.progress'
+    name: progress
+    fullName: progress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Se il JobOutput si trova in uno stato di elaborazione, contiene la percentuale di completamento del processo. Il valore è una stima e non può essere utilizzato per stimare i tempi di completamento processo. Per determinare se il JobOutput è stata completata, utilizzare la proprietà State.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'progress?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutput.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Descrive lo stato del JobOutput. I valori possibili sono: ''Canceled'', ''Canceling'', ''Error'', ''Finished'', ''Processing'', ''Queued'', ''Scheduled'' **NOTE: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**'
+    optional: true
+    syntax:
+      content: 'state?: JobState'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JobState'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.JobError'
+    name: JobError
+    spec.typeScript:
+      - name: JobError
+        fullName: JobError
+        uid: '@azure/arm-mediaservices.JobError'
+  - uid: '@azure/arm-mediaservices.JobState'
+    name: JobState
+    spec.typeScript:
+      - name: JobState
+        fullName: JobState
+        uid: '@azure/arm-mediaservices.JobState'

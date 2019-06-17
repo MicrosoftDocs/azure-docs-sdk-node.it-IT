@@ -1,0 +1,152 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.JpgImage'
+    name: JpgImage
+    fullName: JpgImage
+    children:
+      - '@azure/arm-mediaservices.JpgImage.keyFrameInterval'
+      - '@azure/arm-mediaservices.JpgImage.label'
+      - '@azure/arm-mediaservices.JpgImage.layers'
+      - '@azure/arm-mediaservices.JpgImage.odatatype'
+      - '@azure/arm-mediaservices.JpgImage.range'
+      - '@azure/arm-mediaservices.JpgImage.start'
+      - '@azure/arm-mediaservices.JpgImage.step'
+      - '@azure/arm-mediaservices.JpgImage.stretchMode'
+    langs:
+      - typeScript
+    type: interface
+    summary: Vengono descritte le proprietà per la creazione di una serie di immagini JPEG dal video di input.
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JpgImage.keyFrameInterval'
+    name: keyFrameInterval
+    fullName: keyFrameInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La distanza tra due fotogrammi chiave, definendo group of pictures (GOP). Il valore deve essere un intero diverso da zero l''intervallo [1, 30] secondi, specificato nel formato ISO 8601. Il valore predefinito è 2 secondi (PT2S).'
+    optional: true
+    syntax:
+      content: 'keyFrameInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JpgImage.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un'etichetta facoltativa per il codec. L'etichetta può essere utilizzata per controllare il comportamento muxing.
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JpgImage.layers'
+    name: layers
+    fullName: layers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Raccolta di livelli di immagine JPEG di output per essere prodotte dal codificatore.
+    optional: true
+    syntax:
+      content: 'layers?: JpgLayer[]'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JpgLayer[]'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JpgImage.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.JpgImage"'
+      return:
+        type:
+          - '"#Microsoft.Media.JpgImage"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JpgImage.range'
+    name: range
+    fullName: range
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La posizione in corrispondenza del quale arrestare la generazione di anteprime video di input. Il valore può essere assoluto timestamp (ISO 8601, ad esempio: PT5M30S venga interrotto in corrispondenza di 5 minuti e 30 secondi), o un numero di frame (ad esempio, 300 per arrestare il fotogramma 300th), oppure un valore relativo (ad esempio, 100% ").'
+    optional: true
+    syntax:
+      content: 'range?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JpgImage.start'
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Posizione nel video di input da cui avviare la generazione di anteprime. Il valore può essere assoluto timestamp (ISO 8601, ad esempio: PT05S), o un numero di frame (ad esempio, 10 per il frame di 10th), oppure un valore relativo (ad esempio, % 1). Supporta anche una macro {Best}, che indica al codificatore per l''anteprima migliore, selezionarne i primi secondi del video.'
+    syntax:
+      content: 'start: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JpgImage.step'
+    name: step
+    fullName: step
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Gli intervalli in corrispondenza del quale vengono generate le anteprime. Il valore può essere assoluto timestamp (ISO 8601, ad esempio: PT05S per una delle immagini ogni 5 secondi), o un numero di frame (ad esempio, 30 per ogni 30 fotogrammi), oppure un valore relativo (ad esempio, % 1).'
+    optional: true
+    syntax:
+      content: 'step?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JpgImage.stretchMode'
+    name: stretchMode
+    fullName: stretchMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La modalità di ridimensionamento - come il video di input verrà ridimensionato per adattarsi Investigate l''output desiderato. Il valore predefinito è la proprietà AutoSize. I valori possibili sono: ''None'', ''AutoSize'', ''AutoFit'''
+    optional: true
+    syntax:
+      content: 'stretchMode?: StretchMode'
+      return:
+        type:
+          - '@azure/arm-mediaservices.StretchMode'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.JpgLayer[]'
+    name: 'JpgLayer[]'
+    spec.typeScript:
+      - name: JpgLayer
+        fullName: JpgLayer
+        uid: '@azure/arm-mediaservices.JpgLayer'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-mediaservices.StretchMode'
+    name: StretchMode
+    spec.typeScript:
+      - name: StretchMode
+        fullName: StretchMode
+        uid: '@azure/arm-mediaservices.StretchMode'
