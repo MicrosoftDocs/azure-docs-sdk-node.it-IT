@@ -1,0 +1,1516 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews'
+    name: Reviews
+    fullName: Reviews
+    children:
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createJob'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createJob_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createJob_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createReviews'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createReviews_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createReviews_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getReview'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getReview_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getReview_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="37d51-101">Classe che rappresenta un revisioni.</span><span class="sxs-lookup"><span data-stu-id="37d51-101">Class representing a Reviews.</span></span>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame'
+    name: 'addVideoFrame(string, string, Models.ReviewsAddVideoFrameOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="37d51-102">Le verifiche create verrebbe visualizzata per i revisori del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-102">The reviews created would show up for Reviewers on your team.</span></span> <span data-ttu-id="37d51-103">Come revisori di completare la revisione, risultati della verifica viene inviati (ad esempio HTTP POST) sul CallBackEndpoint specificato.</span><span class="sxs-lookup"><span data-stu-id="37d51-103">As Reviewers complete reviewing, results of the Review would be POSTED (i.e. HTTP POST) on the specified CallBackEndpoint.</span></span>
+      <h3><span data-ttu-id="37d51-104">Schemi di callBack</span><span class="sxs-lookup"><span data-stu-id="37d51-104">CallBack Schemas</span></span> </h3>
+      <h4><span data-ttu-id="37d51-105">Esempio di CallBack di completamento di revisione</span><span class="sxs-lookup"><span data-stu-id="37d51-105">Review Completion CallBack Sample</span></span></h4>
+      <p>
+      <span data-ttu-id="37d51-106">{</span><span class="sxs-lookup"><span data-stu-id="37d51-106">{</span></span><br/>
+      <span data-ttu-id="37d51-107">"ReviewId": "<Review Id>",</span><span class="sxs-lookup"><span data-stu-id="37d51-107">"ReviewId": "<Review Id>",</span></span><br/>
+      <span data-ttu-id="37d51-108">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span><span class="sxs-lookup"><span data-stu-id="37d51-108">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span></span><br/>
+      <span data-ttu-id="37d51-109">"ModifiedBy": "<Name of the Reviewer>",</span><span class="sxs-lookup"><span data-stu-id="37d51-109">"ModifiedBy": "<Name of the Reviewer>",</span></span><br/>
+      <span data-ttu-id="37d51-110">"CallBackType": "Verifica",</span><span class="sxs-lookup"><span data-stu-id="37d51-110">"CallBackType": "Review",</span></span><br/>
+      <span data-ttu-id="37d51-111">"ContentId": "<The ContentId that was specified input>",</span><span class="sxs-lookup"><span data-stu-id="37d51-111">"ContentId": "<The ContentId that was specified input>",</span></span><br/>
+      <span data-ttu-id="37d51-112">"Metadati": {</span><span class="sxs-lookup"><span data-stu-id="37d51-112">"Metadata": {</span></span><br/>
+      <span data-ttu-id="37d51-113">"adultscore": "0.xxx",</span><span class="sxs-lookup"><span data-stu-id="37d51-113">"adultscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="37d51-114">"a": "False",</span><span class="sxs-lookup"><span data-stu-id="37d51-114">"a": "False",</span></span><br/>
+      <span data-ttu-id="37d51-115">"racyscore": "0.xxx",</span><span class="sxs-lookup"><span data-stu-id="37d51-115">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="37d51-116">"r": "True"</span><span class="sxs-lookup"><span data-stu-id="37d51-116">"r": "True"</span></span><br/>
+      <span data-ttu-id="37d51-117">},</span><span class="sxs-lookup"><span data-stu-id="37d51-117">},</span></span><br/>
+      <span data-ttu-id="37d51-118">"ReviewerResultTags": {</span><span class="sxs-lookup"><span data-stu-id="37d51-118">"ReviewerResultTags": {</span></span><br/>
+      <span data-ttu-id="37d51-119">"a": "False",</span><span class="sxs-lookup"><span data-stu-id="37d51-119">"a": "False",</span></span><br/>
+      <span data-ttu-id="37d51-120">"r": "True"</span><span class="sxs-lookup"><span data-stu-id="37d51-120">"r": "True"</span></span><br/>
+      <span data-ttu-id="37d51-121">}</span><span class="sxs-lookup"><span data-stu-id="37d51-121">}</span></span><br/>
+      <span data-ttu-id="37d51-122">}</span><span class="sxs-lookup"><span data-stu-id="37d51-122">}</span></span><br/>
+
+      </p><span data-ttu-id="37d51-123">.</span><span class="sxs-lookup"><span data-stu-id="37d51-123">.</span></span>
+    syntax:
+      content: 'function addVideoFrame(teamName: string, reviewId: string, options?: Models.ReviewsAddVideoFrameOptionalParams)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-124">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-124">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-125">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-125">Id of the review.</span></span>
+        - id: options
+          type:
+            - Models.ReviewsAddVideoFrameOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame_2'
+    name: 'addVideoFrame(string, string, ReviewsAddVideoFrameOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrame(teamName: string, reviewId: string, options: ReviewsAddVideoFrameOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-126">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-126">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-127">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-127">Id of the review.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameOptionalParams'
+          description: <span data-ttu-id="37d51-128">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-128">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-129">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-129">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame_1'
+    name: 'addVideoFrame(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrame(teamName: string, reviewId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-130">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-130">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-131">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-131">Id of the review.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-132">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-132">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream'
+    name: 'addVideoFrameStream(string, string, string, msRest.HttpRequestBody, string, Models.ReviewsAddVideoFrameStreamOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="37d51-133">Utilizzare questo metodo per aggiungere un frame per una revisione del video. Scala cronologica: Questo parametro è un fattore che consente di convertire il timestamp associato a un intervallo in millisecondi.</span><span class="sxs-lookup"><span data-stu-id="37d51-133">Use this method to add frames for a video review.Timescale: This parameter is a factor which is used to convert the timestamp on a frame into milliseconds.</span></span> <span data-ttu-id="37d51-134">Valore di scala cronologica viene fornito nell''output del processore multimediale di video di Content Moderator nella piattaforma servizi multimediali di Azure. Scala cronologica nell''output di moderazione dei Video è di tick al secondo.</span><span class="sxs-lookup"><span data-stu-id="37d51-134">Timescale is provided in the output of the Content Moderator video media processor on the Azure Media Services platform.Timescale in the Video Moderation output is Ticks/Second.</span></span>'
+    syntax:
+      content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: msRest.HttpRequestBody, frameMetadata: string, options?: Models.ReviewsAddVideoFrameStreamOptionalParams)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-135">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-135">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-136">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-136">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-137">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-137">Id of the review.</span></span>
+        - id: frameImageZip
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="37d51-138">File zip contenente le immagini di frame.</span><span class="sxs-lookup"><span data-stu-id="37d51-138">Zip file containing frame images.</span></span>
+        - id: frameMetadata
+          type:
+            - string
+          description: <span data-ttu-id="37d51-139">Metadati del frame.</span><span class="sxs-lookup"><span data-stu-id="37d51-139">Metadata of the frame.</span></span>
+        - id: options
+          type:
+            - Models.ReviewsAddVideoFrameStreamOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_2'
+    name: 'addVideoFrameStream(string, string, string, msRest.HttpRequestBody, string, ReviewsAddVideoFrameStreamOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: msRest.HttpRequestBody, frameMetadata: string, options: ReviewsAddVideoFrameStreamOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-140">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-140">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-141">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-141">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-142">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-142">Id of the review.</span></span>
+        - id: frameImageZip
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="37d51-143">File zip contenente le immagini di frame.</span><span class="sxs-lookup"><span data-stu-id="37d51-143">Zip file containing frame images.</span></span>
+        - id: frameMetadata
+          type:
+            - string
+          description: <span data-ttu-id="37d51-144">Metadati del frame.</span><span class="sxs-lookup"><span data-stu-id="37d51-144">Metadata of the frame.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameStreamOptionalParams'
+          description: <span data-ttu-id="37d51-145">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-145">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-146">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-146">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_1'
+    name: 'addVideoFrameStream(string, string, string, msRest.HttpRequestBody, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: msRest.HttpRequestBody, frameMetadata: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-147">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-147">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-148">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-148">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-149">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-149">Id of the review.</span></span>
+        - id: frameImageZip
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="37d51-150">File zip contenente le immagini di frame.</span><span class="sxs-lookup"><span data-stu-id="37d51-150">Zip file containing frame images.</span></span>
+        - id: frameMetadata
+          type:
+            - string
+          description: <span data-ttu-id="37d51-151">Metadati del frame.</span><span class="sxs-lookup"><span data-stu-id="37d51-151">Metadata of the frame.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-152">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-152">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl'
+    name: 'addVideoFrameUrl(string, string, string, VideoFrameBodyItem[], Models.ReviewsAddVideoFrameUrlOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="37d51-153">Utilizzare questo metodo per aggiungere un frame per una revisione del video. Scala cronologica: Questo parametro è un fattore che consente di convertire il timestamp associato a un intervallo in millisecondi.</span><span class="sxs-lookup"><span data-stu-id="37d51-153">Use this method to add frames for a video review.Timescale: This parameter is a factor which is used to convert the timestamp on a frame into milliseconds.</span></span> <span data-ttu-id="37d51-154">Valore di scala cronologica viene fornito nell''output del processore multimediale di video di Content Moderator nella piattaforma servizi multimediali di Azure. Scala cronologica nell''output di moderazione dei Video è di tick al secondo.</span><span class="sxs-lookup"><span data-stu-id="37d51-154">Timescale is provided in the output of the Content Moderator video media processor on the Azure Media Services platform.Timescale in the Video Moderation output is Ticks/Second.</span></span>'
+    syntax:
+      content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], options?: Models.ReviewsAddVideoFrameUrlOptionalParams)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-155">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-155">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-156">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-156">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-157">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-157">Id of the review.</span></span>
+        - id: videoFrameBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.VideoFrameBodyItem[]'
+          description: <span data-ttu-id="37d51-158">Il corpo per aggiungere fotogrammi video API</span><span class="sxs-lookup"><span data-stu-id="37d51-158">Body for add video frames API</span></span>
+        - id: options
+          type:
+            - Models.ReviewsAddVideoFrameUrlOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_2'
+    name: 'addVideoFrameUrl(string, string, string, VideoFrameBodyItem[], ReviewsAddVideoFrameUrlOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], options: ReviewsAddVideoFrameUrlOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-159">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-159">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-160">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-160">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-161">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-161">Id of the review.</span></span>
+        - id: videoFrameBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.VideoFrameBodyItem[]'
+          description: <span data-ttu-id="37d51-162">Il corpo per aggiungere fotogrammi video API</span><span class="sxs-lookup"><span data-stu-id="37d51-162">Body for add video frames API</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameUrlOptionalParams'
+          description: <span data-ttu-id="37d51-163">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-163">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-164">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-164">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_1'
+    name: 'addVideoFrameUrl(string, string, string, VideoFrameBodyItem[], ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-165">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-165">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-166">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-166">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-167">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-167">Id of the review.</span></span>
+        - id: videoFrameBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.VideoFrameBodyItem[]'
+          description: <span data-ttu-id="37d51-168">Il corpo per aggiungere fotogrammi video API</span><span class="sxs-lookup"><span data-stu-id="37d51-168">Body for add video frames API</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-169">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-169">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript'
+    name: 'addVideoTranscript(string, string, msRest.HttpRequestBody, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="37d51-170">Questa API aggiunge un file di trascrizione (versione di testo di tutte le parole parlata in un video) a una revisione del video.</span><span class="sxs-lookup"><span data-stu-id="37d51-170">This API adds a transcript file (text version of all the words spoken in a video) to a video review.</span></span> <span data-ttu-id="37d51-171">Il file deve essere un formato WebVTT valido.</span><span class="sxs-lookup"><span data-stu-id="37d51-171">The file should be a valid WebVTT format.</span></span>
+    syntax:
+      content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: msRest.HttpRequestBody, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-172">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-172">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-173">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-173">Id of the review.</span></span>
+        - id: vTTfile
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="37d51-174">File di trascrizione del video.</span><span class="sxs-lookup"><span data-stu-id="37d51-174">Transcript file of the video.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript_2'
+    name: 'addVideoTranscript(string, string, msRest.HttpRequestBody, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: msRest.HttpRequestBody, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-175">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-175">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-176">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-176">Id of the review.</span></span>
+        - id: vTTfile
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="37d51-177">File di trascrizione del video.</span><span class="sxs-lookup"><span data-stu-id="37d51-177">Transcript file of the video.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="37d51-178">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-178">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-179">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-179">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript_1'
+    name: 'addVideoTranscript(string, string, msRest.HttpRequestBody, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: msRest.HttpRequestBody, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-180">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-180">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-181">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-181">Id of the review.</span></span>
+        - id: vTTfile
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="37d51-182">File di trascrizione del video.</span><span class="sxs-lookup"><span data-stu-id="37d51-182">Transcript file of the video.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-183">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-183">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult'
+    name: 'addVideoTranscriptModerationResult(string, string, string, TranscriptModerationBodyItem[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="37d51-184">Questa API aggiunge un file di risultati trascrizione testo sullo schermo per una revisione del video.</span><span class="sxs-lookup"><span data-stu-id="37d51-184">This API adds a transcript screen text result file for a video review.</span></span> <span data-ttu-id="37d51-185">File di trascrizione schermata testo risultato è il risultato dell''API traduzione testuale dello schermo.</span><span class="sxs-lookup"><span data-stu-id="37d51-185">Transcript screen text result file is a result of Screen Text API .</span></span> <span data-ttu-id="37d51-186">Per generare file di risultati di trascrizione schermata testo, un file di trascrizione deve essere vagliate per il contenuto volgare usando l''API traduzione testuale dello schermo.</span><span class="sxs-lookup"><span data-stu-id="37d51-186">In order to generate transcript screen text result file , a transcript file has to be screened for profanity using Screen Text API.</span></span>'
+    syntax:
+      content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-187">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-187">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-188">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-188">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-189">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-189">Id of the review.</span></span>
+        - id: transcriptModerationBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]'
+          description: <span data-ttu-id="37d51-190">Il corpo per aggiungere i risultati di moderazione di trascrizione del video API</span><span class="sxs-lookup"><span data-stu-id="37d51-190">Body for add video transcript moderation result API</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_2'
+    name: 'addVideoTranscriptModerationResult(string, string, string, TranscriptModerationBodyItem[], RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-191">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-191">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-192">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-192">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-193">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-193">Id of the review.</span></span>
+        - id: transcriptModerationBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]'
+          description: <span data-ttu-id="37d51-194">Il corpo per aggiungere i risultati di moderazione di trascrizione del video API</span><span class="sxs-lookup"><span data-stu-id="37d51-194">Body for add video transcript moderation result API</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="37d51-195">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-195">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-196">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-196">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_1'
+    name: 'addVideoTranscriptModerationResult(string, string, string, TranscriptModerationBodyItem[], ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-197">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-197">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-198">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-198">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-199">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-199">Id of the review.</span></span>
+        - id: transcriptModerationBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]'
+          description: <span data-ttu-id="37d51-200">Il corpo per aggiungere i risultati di moderazione di trascrizione del video API</span><span class="sxs-lookup"><span data-stu-id="37d51-200">Body for add video transcript moderation result API</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-201">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-201">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createJob'
+    name: 'createJob(string, Models.ContentType, string, string, Models.JobContentType, Content, Models.ReviewsCreateJobOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="37d51-202">Un processo che viene restituito l'Id per il contenuto pubblicato in questo endpoint.</span><span class="sxs-lookup"><span data-stu-id="37d51-202">A job Id will be returned for the content posted on this endpoint.</span></span>
+      <span data-ttu-id="37d51-203">Dopo che il contenuto viene valutato in base al flusso di lavoro fornito non verrà creata o ignorata la revisione in base l'espressione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="37d51-203">Once the content is evaluated against the Workflow provided the review will be created or ignored based on the workflow expression.</span></span>
+
+      <h3><span data-ttu-id="37d51-204">Schemi di callBack</span><span class="sxs-lookup"><span data-stu-id="37d51-204">CallBack Schemas</span></span> </h3>
+
+      <p>
+      <h4><span data-ttu-id="37d51-205">Esempio di CallBack di completamento processo</span><span class="sxs-lookup"><span data-stu-id="37d51-205">Job Completion CallBack Sample</span></span></h4><br/>
+
+      <span data-ttu-id="37d51-206">{</span><span class="sxs-lookup"><span data-stu-id="37d51-206">{</span></span><br/>
+      <span data-ttu-id="37d51-207">"JobId": "<Job Id>,</span><span class="sxs-lookup"><span data-stu-id="37d51-207">"JobId": "<Job Id>,</span></span><br/>
+      <span data-ttu-id="37d51-208">"ReviewId": "< Id revisione, se il processo ha comportato una revisione da creare >",</span><span class="sxs-lookup"><span data-stu-id="37d51-208">"ReviewId": "<Review Id, if the Job resulted in a Review to be created>",</span></span><br/>
+      <span data-ttu-id="37d51-209">"WorkFlowId": "default",</span><span class="sxs-lookup"><span data-stu-id="37d51-209">"WorkFlowId": "default",</span></span><br/>
+      <span data-ttu-id="37d51-210">"Status": "< possibile scegliere di errore completa, in corso, >",</span><span class="sxs-lookup"><span data-stu-id="37d51-210">"Status": "<This will be one of Complete, InProgress, Error>",</span></span><br/>
+      <span data-ttu-id="37d51-211">"ContentType": "Image",</span><span class="sxs-lookup"><span data-stu-id="37d51-211">"ContentType": "Image",</span></span><br/>
+      <span data-ttu-id="37d51-212">"ContentId": "<This is the ContentId that was specified on input>",</span><span class="sxs-lookup"><span data-stu-id="37d51-212">"ContentId": "<This is the ContentId that was specified on input>",</span></span><br/>
+      <span data-ttu-id="37d51-213">"CallBackType": "Processo",</span><span class="sxs-lookup"><span data-stu-id="37d51-213">"CallBackType": "Job",</span></span><br/>
+      <span data-ttu-id="37d51-214">"Metadati": {</span><span class="sxs-lookup"><span data-stu-id="37d51-214">"Metadata": {</span></span><br/>
+      <span data-ttu-id="37d51-215">"adultscore": "0.xxx",</span><span class="sxs-lookup"><span data-stu-id="37d51-215">"adultscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="37d51-216">"a": "False",</span><span class="sxs-lookup"><span data-stu-id="37d51-216">"a": "False",</span></span><br/>
+      <span data-ttu-id="37d51-217">"racyscore": "0.xxx",</span><span class="sxs-lookup"><span data-stu-id="37d51-217">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="37d51-218">"r": "True"</span><span class="sxs-lookup"><span data-stu-id="37d51-218">"r": "True"</span></span><br/>
+      <span data-ttu-id="37d51-219">}</span><span class="sxs-lookup"><span data-stu-id="37d51-219">}</span></span><br/>
+      <span data-ttu-id="37d51-220">}</span><span class="sxs-lookup"><span data-stu-id="37d51-220">}</span></span><br/>
+
+      </p>
+      <p>
+      <h4><span data-ttu-id="37d51-221">Esempio di CallBack di completamento di revisione</span><span class="sxs-lookup"><span data-stu-id="37d51-221">Review Completion CallBack Sample</span></span></h4><br/>
+
+      <span data-ttu-id="37d51-222">{ "ReviewId": "<Review Id>",</span><span class="sxs-lookup"><span data-stu-id="37d51-222">{ "ReviewId": "<Review Id>",</span></span><br/>
+      <span data-ttu-id="37d51-223">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span><span class="sxs-lookup"><span data-stu-id="37d51-223">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span></span><br/>
+      <span data-ttu-id="37d51-224">"ModifiedBy": "<Name of the Reviewer>",</span><span class="sxs-lookup"><span data-stu-id="37d51-224">"ModifiedBy": "<Name of the Reviewer>",</span></span><br/>
+      <span data-ttu-id="37d51-225">"CallBackType": "Verifica",</span><span class="sxs-lookup"><span data-stu-id="37d51-225">"CallBackType": "Review",</span></span><br/>
+      <span data-ttu-id="37d51-226">"ContentId": "<The ContentId that was specified input>",</span><span class="sxs-lookup"><span data-stu-id="37d51-226">"ContentId": "<The ContentId that was specified input>",</span></span><br/>
+      <span data-ttu-id="37d51-227">"Metadati": {</span><span class="sxs-lookup"><span data-stu-id="37d51-227">"Metadata": {</span></span><br/>
+      <span data-ttu-id="37d51-228">"adultscore": "0.xxx", "a": "False",</span><span class="sxs-lookup"><span data-stu-id="37d51-228">"adultscore": "0.xxx", "a": "False",</span></span><br/>
+      <span data-ttu-id="37d51-229">"racyscore": "0.xxx",</span><span class="sxs-lookup"><span data-stu-id="37d51-229">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="37d51-230">"r": "True"</span><span class="sxs-lookup"><span data-stu-id="37d51-230">"r": "True"</span></span><br/>
+      <span data-ttu-id="37d51-231">},</span><span class="sxs-lookup"><span data-stu-id="37d51-231">},</span></span><br/>
+      <span data-ttu-id="37d51-232">"ReviewerResultTags": {</span><span class="sxs-lookup"><span data-stu-id="37d51-232">"ReviewerResultTags": {</span></span><br/>
+      <span data-ttu-id="37d51-233">"a": "False",</span><span class="sxs-lookup"><span data-stu-id="37d51-233">"a": "False",</span></span><br/>
+      <span data-ttu-id="37d51-234">"r": "True"</span><span class="sxs-lookup"><span data-stu-id="37d51-234">"r": "True"</span></span><br/>
+      <span data-ttu-id="37d51-235">}</span><span class="sxs-lookup"><span data-stu-id="37d51-235">}</span></span><br/>
+      <span data-ttu-id="37d51-236">}</span><span class="sxs-lookup"><span data-stu-id="37d51-236">}</span></span><br/>
+
+      </p><span data-ttu-id="37d51-237">.</span><span class="sxs-lookup"><span data-stu-id="37d51-237">.</span></span>
+    syntax:
+      content: 'function createJob(teamName: string, contentType: Models.ContentType, contentId: string, workflowName: string, jobContentType: Models.JobContentType, content: Content, options?: Models.ReviewsCreateJobOptionalParams)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-238">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-238">Your team name.</span></span>
+        - id: contentType
+          type:
+            - Models.ContentType
+          description: '<span data-ttu-id="37d51-239">Immagine, testo o Video.</span><span class="sxs-lookup"><span data-stu-id="37d51-239">Image, Text or Video.</span></span> <span data-ttu-id="37d51-240">I valori possibili sono: ''Image'', ''Text'', ''Video''</span><span class="sxs-lookup"><span data-stu-id="37d51-240">Possible values include: ''Image'', ''Text'', ''Video''</span></span>'
+        - id: contentId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-241">ID/nome per identificare il contenuto inviato.</span><span class="sxs-lookup"><span data-stu-id="37d51-241">Id/Name to identify the content submitted.</span></span>
+        - id: workflowName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-242">Nome del flusso di lavoro che si vuole richiamare.</span><span class="sxs-lookup"><span data-stu-id="37d51-242">Workflow Name that you want to invoke.</span></span>
+        - id: jobContentType
+          type:
+            - Models.JobContentType
+          description: '<span data-ttu-id="37d51-243">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-243">The content type.</span></span> <span data-ttu-id="37d51-244">Possible values include: ''application/json'', ''image/jpeg''</span><span class="sxs-lookup"><span data-stu-id="37d51-244">Possible values include: ''application/json'', ''image/jpeg''</span></span>'
+        - id: content
+          type:
+            - '@azure/cognitiveservices-contentmoderator.Content'
+          description: <span data-ttu-id="37d51-245">Contenuto da valutare.</span><span class="sxs-lookup"><span data-stu-id="37d51-245">Content to evaluate.</span></span>
+        - id: options
+          type:
+            - Models.ReviewsCreateJobOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsCreateJobResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createJob_2'
+    name: 'createJob(string, Models.ContentType, string, string, Models.JobContentType, Content, ReviewsCreateJobOptionalParams, ServiceCallback<JobId>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createJob(teamName: string, contentType: Models.ContentType, contentId: string, workflowName: string, jobContentType: Models.JobContentType, content: Content, options: ReviewsCreateJobOptionalParams, callback: ServiceCallback<JobId>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-246">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-246">Your team name.</span></span>
+        - id: contentType
+          type:
+            - Models.ContentType
+          description: '<span data-ttu-id="37d51-247">Immagine, testo o Video.</span><span class="sxs-lookup"><span data-stu-id="37d51-247">Image, Text or Video.</span></span> <span data-ttu-id="37d51-248">I valori possibili sono: ''Image'', ''Text'', ''Video''</span><span class="sxs-lookup"><span data-stu-id="37d51-248">Possible values include: ''Image'', ''Text'', ''Video''</span></span>'
+        - id: contentId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-249">ID/nome per identificare il contenuto inviato.</span><span class="sxs-lookup"><span data-stu-id="37d51-249">Id/Name to identify the content submitted.</span></span>
+        - id: workflowName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-250">Nome del flusso di lavoro che si vuole richiamare.</span><span class="sxs-lookup"><span data-stu-id="37d51-250">Workflow Name that you want to invoke.</span></span>
+        - id: jobContentType
+          type:
+            - Models.JobContentType
+          description: '<span data-ttu-id="37d51-251">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-251">The content type.</span></span> <span data-ttu-id="37d51-252">Possible values include: ''application/json'', ''image/jpeg''</span><span class="sxs-lookup"><span data-stu-id="37d51-252">Possible values include: ''application/json'', ''image/jpeg''</span></span>'
+        - id: content
+          type:
+            - '@azure/cognitiveservices-contentmoderator.Content'
+          description: <span data-ttu-id="37d51-253">Contenuto da valutare.</span><span class="sxs-lookup"><span data-stu-id="37d51-253">Content to evaluate.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsCreateJobOptionalParams'
+          description: <span data-ttu-id="37d51-254">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-254">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.JobId>
+          description: |
+            <span data-ttu-id="37d51-255">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-255">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateJobResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createJob_1'
+    name: 'createJob(string, Models.ContentType, string, string, Models.JobContentType, Content, ServiceCallback<JobId>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createJob(teamName: string, contentType: Models.ContentType, contentId: string, workflowName: string, jobContentType: Models.JobContentType, content: Content, callback: ServiceCallback<JobId>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-256">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-256">Your team name.</span></span>
+        - id: contentType
+          type:
+            - Models.ContentType
+          description: '<span data-ttu-id="37d51-257">Immagine, testo o Video.</span><span class="sxs-lookup"><span data-stu-id="37d51-257">Image, Text or Video.</span></span> <span data-ttu-id="37d51-258">I valori possibili sono: ''Image'', ''Text'', ''Video''</span><span class="sxs-lookup"><span data-stu-id="37d51-258">Possible values include: ''Image'', ''Text'', ''Video''</span></span>'
+        - id: contentId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-259">ID/nome per identificare il contenuto inviato.</span><span class="sxs-lookup"><span data-stu-id="37d51-259">Id/Name to identify the content submitted.</span></span>
+        - id: workflowName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-260">Nome del flusso di lavoro che si vuole richiamare.</span><span class="sxs-lookup"><span data-stu-id="37d51-260">Workflow Name that you want to invoke.</span></span>
+        - id: jobContentType
+          type:
+            - Models.JobContentType
+          description: '<span data-ttu-id="37d51-261">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-261">The content type.</span></span> <span data-ttu-id="37d51-262">Possible values include: ''application/json'', ''image/jpeg''</span><span class="sxs-lookup"><span data-stu-id="37d51-262">Possible values include: ''application/json'', ''image/jpeg''</span></span>'
+        - id: content
+          type:
+            - '@azure/cognitiveservices-contentmoderator.Content'
+          description: <span data-ttu-id="37d51-263">Contenuto da valutare.</span><span class="sxs-lookup"><span data-stu-id="37d51-263">Content to evaluate.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.JobId>
+          description: |
+            <span data-ttu-id="37d51-264">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-264">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateJobResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createReviews'
+    name: 'createReviews(string, string, CreateReviewBodyItem[], Models.ReviewsCreateReviewsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="37d51-265">Le verifiche create verrebbe visualizzata per i revisori del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-265">The reviews created would show up for Reviewers on your team.</span></span> <span data-ttu-id="37d51-266">Come revisori di completare la revisione, risultati della verifica viene inviati (ad esempio HTTP POST) sul CallBackEndpoint specificato.</span><span class="sxs-lookup"><span data-stu-id="37d51-266">As Reviewers complete reviewing, results of the Review would be POSTED (i.e. HTTP POST) on the specified CallBackEndpoint.</span></span>
+      <h3><span data-ttu-id="37d51-267">Schemi di callBack</span><span class="sxs-lookup"><span data-stu-id="37d51-267">CallBack Schemas</span></span> </h3>
+      <h4><span data-ttu-id="37d51-268">Esempio di CallBack di completamento di revisione</span><span class="sxs-lookup"><span data-stu-id="37d51-268">Review Completion CallBack Sample</span></span></h4>
+      <p>
+      <span data-ttu-id="37d51-269">{</span><span class="sxs-lookup"><span data-stu-id="37d51-269">{</span></span><br/>
+      <span data-ttu-id="37d51-270">"ReviewId": "<Review Id>",</span><span class="sxs-lookup"><span data-stu-id="37d51-270">"ReviewId": "<Review Id>",</span></span><br/>
+      <span data-ttu-id="37d51-271">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span><span class="sxs-lookup"><span data-stu-id="37d51-271">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span></span><br/>
+      <span data-ttu-id="37d51-272">"ModifiedBy": "<Name of the Reviewer>",</span><span class="sxs-lookup"><span data-stu-id="37d51-272">"ModifiedBy": "<Name of the Reviewer>",</span></span><br/>
+      <span data-ttu-id="37d51-273">"CallBackType": "Verifica",</span><span class="sxs-lookup"><span data-stu-id="37d51-273">"CallBackType": "Review",</span></span><br/>
+      <span data-ttu-id="37d51-274">"ContentId": "<The ContentId that was specified input>",</span><span class="sxs-lookup"><span data-stu-id="37d51-274">"ContentId": "<The ContentId that was specified input>",</span></span><br/>
+      <span data-ttu-id="37d51-275">"Metadati": {</span><span class="sxs-lookup"><span data-stu-id="37d51-275">"Metadata": {</span></span><br/>
+      <span data-ttu-id="37d51-276">"adultscore": "0.xxx",</span><span class="sxs-lookup"><span data-stu-id="37d51-276">"adultscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="37d51-277">"a": "False",</span><span class="sxs-lookup"><span data-stu-id="37d51-277">"a": "False",</span></span><br/>
+      <span data-ttu-id="37d51-278">"racyscore": "0.xxx",</span><span class="sxs-lookup"><span data-stu-id="37d51-278">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="37d51-279">"r": "True"</span><span class="sxs-lookup"><span data-stu-id="37d51-279">"r": "True"</span></span><br/>
+      <span data-ttu-id="37d51-280">},</span><span class="sxs-lookup"><span data-stu-id="37d51-280">},</span></span><br/>
+      <span data-ttu-id="37d51-281">"ReviewerResultTags": {</span><span class="sxs-lookup"><span data-stu-id="37d51-281">"ReviewerResultTags": {</span></span><br/>
+      <span data-ttu-id="37d51-282">"a": "False",</span><span class="sxs-lookup"><span data-stu-id="37d51-282">"a": "False",</span></span><br/>
+      <span data-ttu-id="37d51-283">"r": "True"</span><span class="sxs-lookup"><span data-stu-id="37d51-283">"r": "True"</span></span><br/>
+      <span data-ttu-id="37d51-284">}</span><span class="sxs-lookup"><span data-stu-id="37d51-284">}</span></span><br/>
+      <span data-ttu-id="37d51-285">}</span><span class="sxs-lookup"><span data-stu-id="37d51-285">}</span></span><br/>
+
+      </p><span data-ttu-id="37d51-286">.</span><span class="sxs-lookup"><span data-stu-id="37d51-286">.</span></span>
+    syntax:
+      content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], options?: Models.ReviewsCreateReviewsOptionalParams)'
+      parameters:
+        - id: urlContentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-287">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-287">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-288">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-288">Your team name.</span></span>
+        - id: createReviewBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateReviewBodyItem[]'
+          description: <span data-ttu-id="37d51-289">Corpo per le revisioni crea API</span><span class="sxs-lookup"><span data-stu-id="37d51-289">Body for create reviews API</span></span>
+        - id: options
+          type:
+            - Models.ReviewsCreateReviewsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsCreateReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createReviews_2'
+    name: 'createReviews(string, string, CreateReviewBodyItem[], ReviewsCreateReviewsOptionalParams, ServiceCallback<string[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], options: ReviewsCreateReviewsOptionalParams, callback: ServiceCallback<string[]>)'
+      parameters:
+        - id: urlContentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-290">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-290">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-291">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-291">Your team name.</span></span>
+        - id: createReviewBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateReviewBodyItem[]'
+          description: <span data-ttu-id="37d51-292">Corpo per le revisioni crea API</span><span class="sxs-lookup"><span data-stu-id="37d51-292">Body for create reviews API</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsCreateReviewsOptionalParams'
+          description: <span data-ttu-id="37d51-293">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-293">The optional parameters</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<string[]>'
+          description: |
+            <span data-ttu-id="37d51-294">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-294">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createReviews_1'
+    name: 'createReviews(string, string, CreateReviewBodyItem[], ServiceCallback<string[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], callback: ServiceCallback<string[]>)'
+      parameters:
+        - id: urlContentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-295">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-295">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-296">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-296">Your team name.</span></span>
+        - id: createReviewBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateReviewBodyItem[]'
+          description: <span data-ttu-id="37d51-297">Corpo per le revisioni crea API</span><span class="sxs-lookup"><span data-stu-id="37d51-297">Body for create reviews API</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<string[]>'
+          description: |
+            <span data-ttu-id="37d51-298">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-298">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews'
+    name: 'createVideoReviews(string, string, CreateVideoReviewsBodyItem[], Models.ReviewsCreateVideoReviewsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="37d51-299">Le verifiche create verrebbe visualizzata per i revisori del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-299">The reviews created would show up for Reviewers on your team.</span></span> <span data-ttu-id="37d51-300">Come revisori di completare la revisione, risultati della verifica viene inviati (ad esempio HTTP POST) sul CallBackEndpoint specificato.</span><span class="sxs-lookup"><span data-stu-id="37d51-300">As Reviewers complete reviewing, results of the Review would be POSTED (i.e. HTTP POST) on the specified CallBackEndpoint.</span></span>
+      <h3><span data-ttu-id="37d51-301">Schemi di callBack</span><span class="sxs-lookup"><span data-stu-id="37d51-301">CallBack Schemas</span></span> </h3>
+      <h4><span data-ttu-id="37d51-302">Esempio di CallBack di completamento di revisione</span><span class="sxs-lookup"><span data-stu-id="37d51-302">Review Completion CallBack Sample</span></span></h4>
+      <p>
+      <span data-ttu-id="37d51-303">{</span><span class="sxs-lookup"><span data-stu-id="37d51-303">{</span></span><br/>
+      <span data-ttu-id="37d51-304">"ReviewId": "<Review Id>",</span><span class="sxs-lookup"><span data-stu-id="37d51-304">"ReviewId": "<Review Id>",</span></span><br/>
+      <span data-ttu-id="37d51-305">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span><span class="sxs-lookup"><span data-stu-id="37d51-305">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span></span><br/>
+      <span data-ttu-id="37d51-306">"ModifiedBy": "<Name of the Reviewer>",</span><span class="sxs-lookup"><span data-stu-id="37d51-306">"ModifiedBy": "<Name of the Reviewer>",</span></span><br/>
+      <span data-ttu-id="37d51-307">"CallBackType": "Verifica",</span><span class="sxs-lookup"><span data-stu-id="37d51-307">"CallBackType": "Review",</span></span><br/>
+      <span data-ttu-id="37d51-308">"ContentId": "<The ContentId that was specified input>",</span><span class="sxs-lookup"><span data-stu-id="37d51-308">"ContentId": "<The ContentId that was specified input>",</span></span><br/>
+      <span data-ttu-id="37d51-309">"Metadati": {</span><span class="sxs-lookup"><span data-stu-id="37d51-309">"Metadata": {</span></span><br/>
+      <span data-ttu-id="37d51-310">"adultscore": "0.xxx",</span><span class="sxs-lookup"><span data-stu-id="37d51-310">"adultscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="37d51-311">"a": "False",</span><span class="sxs-lookup"><span data-stu-id="37d51-311">"a": "False",</span></span><br/>
+      <span data-ttu-id="37d51-312">"racyscore": "0.xxx",</span><span class="sxs-lookup"><span data-stu-id="37d51-312">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="37d51-313">"r": "True"</span><span class="sxs-lookup"><span data-stu-id="37d51-313">"r": "True"</span></span><br/>
+      <span data-ttu-id="37d51-314">},</span><span class="sxs-lookup"><span data-stu-id="37d51-314">},</span></span><br/>
+      <span data-ttu-id="37d51-315">"ReviewerResultTags": {</span><span class="sxs-lookup"><span data-stu-id="37d51-315">"ReviewerResultTags": {</span></span><br/>
+      <span data-ttu-id="37d51-316">"a": "False",</span><span class="sxs-lookup"><span data-stu-id="37d51-316">"a": "False",</span></span><br/>
+      <span data-ttu-id="37d51-317">"r": "True"</span><span class="sxs-lookup"><span data-stu-id="37d51-317">"r": "True"</span></span><br/>
+      <span data-ttu-id="37d51-318">}</span><span class="sxs-lookup"><span data-stu-id="37d51-318">}</span></span><br/>
+      <span data-ttu-id="37d51-319">}</span><span class="sxs-lookup"><span data-stu-id="37d51-319">}</span></span><br/>
+
+      </p><span data-ttu-id="37d51-320">.</span><span class="sxs-lookup"><span data-stu-id="37d51-320">.</span></span>
+    syntax:
+      content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], options?: Models.ReviewsCreateVideoReviewsOptionalParams)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-321">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-321">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-322">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-322">Your team name.</span></span>
+        - id: createVideoReviewsBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]'
+          description: <span data-ttu-id="37d51-323">Corpo per le revisioni crea API</span><span class="sxs-lookup"><span data-stu-id="37d51-323">Body for create reviews API</span></span>
+        - id: options
+          type:
+            - Models.ReviewsCreateVideoReviewsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsCreateVideoReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews_2'
+    name: 'createVideoReviews(string, string, CreateVideoReviewsBodyItem[], ReviewsCreateVideoReviewsOptionalParams, ServiceCallback<string[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], options: ReviewsCreateVideoReviewsOptionalParams, callback: ServiceCallback<string[]>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-324">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-324">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-325">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-325">Your team name.</span></span>
+        - id: createVideoReviewsBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]'
+          description: <span data-ttu-id="37d51-326">Corpo per le revisioni crea API</span><span class="sxs-lookup"><span data-stu-id="37d51-326">Body for create reviews API</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsCreateVideoReviewsOptionalParams'
+          description: <span data-ttu-id="37d51-327">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-327">The optional parameters</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<string[]>'
+          description: |
+            <span data-ttu-id="37d51-328">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-328">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateVideoReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews_1'
+    name: 'createVideoReviews(string, string, CreateVideoReviewsBodyItem[], ServiceCallback<string[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], callback: ServiceCallback<string[]>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="37d51-329">Il tipo di contenuto.</span><span class="sxs-lookup"><span data-stu-id="37d51-329">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-330">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-330">Your team name.</span></span>
+        - id: createVideoReviewsBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]'
+          description: <span data-ttu-id="37d51-331">Corpo per le revisioni crea API</span><span class="sxs-lookup"><span data-stu-id="37d51-331">Body for create reviews API</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<string[]>'
+          description: |
+            <span data-ttu-id="37d51-332">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-332">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateVideoReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails'
+    name: 'getJobDetails(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="37d51-333">Ottenere i dettagli del processo per un ID di processo.</span><span class="sxs-lookup"><span data-stu-id="37d51-333">Get the Job Details for a Job Id.</span></span>
+    syntax:
+      content: 'function getJobDetails(teamName: string, jobId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-334">Nome del Team.</span><span class="sxs-lookup"><span data-stu-id="37d51-334">Your Team Name.</span></span>
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-335">ID del processo.</span><span class="sxs-lookup"><span data-stu-id="37d51-335">Id of the job.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsGetJobDetailsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails_2'
+    name: 'getJobDetails(string, string, RequestOptionsBase, ServiceCallback<Job>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getJobDetails(teamName: string, jobId: string, options: RequestOptionsBase, callback: ServiceCallback<Job>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-336">Nome del Team.</span><span class="sxs-lookup"><span data-stu-id="37d51-336">Your Team Name.</span></span>
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-337">ID del processo.</span><span class="sxs-lookup"><span data-stu-id="37d51-337">Id of the job.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="37d51-338">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-338">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Job>
+          description: |
+            <span data-ttu-id="37d51-339">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-339">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetJobDetailsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails_1'
+    name: 'getJobDetails(string, string, ServiceCallback<Job>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getJobDetails(teamName: string, jobId: string, callback: ServiceCallback<Job>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-340">Nome del Team.</span><span class="sxs-lookup"><span data-stu-id="37d51-340">Your Team Name.</span></span>
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-341">ID del processo.</span><span class="sxs-lookup"><span data-stu-id="37d51-341">Id of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Job>
+          description: |
+            <span data-ttu-id="37d51-342">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-342">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetJobDetailsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getReview'
+    name: 'getReview(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="37d51-343">Restituisce esaminare i dettagli per la revisione che ID passato.</span><span class="sxs-lookup"><span data-stu-id="37d51-343">Returns review details for the review Id passed.</span></span>
+    syntax:
+      content: 'function getReview(teamName: string, reviewId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-344">Nome del Team.</span><span class="sxs-lookup"><span data-stu-id="37d51-344">Your Team Name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-345">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-345">Id of the review.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsGetReviewResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getReview_2'
+    name: 'getReview(string, string, RequestOptionsBase, ServiceCallback<Review>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getReview(teamName: string, reviewId: string, options: RequestOptionsBase, callback: ServiceCallback<Review>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-346">Nome del Team.</span><span class="sxs-lookup"><span data-stu-id="37d51-346">Your Team Name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-347">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-347">Id of the review.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="37d51-348">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-348">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Review>
+          description: |
+            <span data-ttu-id="37d51-349">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-349">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetReviewResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getReview_1'
+    name: 'getReview(string, string, ServiceCallback<Review>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getReview(teamName: string, reviewId: string, callback: ServiceCallback<Review>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-350">Nome del Team.</span><span class="sxs-lookup"><span data-stu-id="37d51-350">Your Team Name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-351">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-351">Id of the review.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Review>
+          description: |
+            <span data-ttu-id="37d51-352">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-352">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetReviewResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames'
+    name: 'getVideoFrames(string, string, Models.ReviewsGetVideoFramesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="37d51-353">Le verifiche create verrebbe visualizzata per i revisori del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-353">The reviews created would show up for Reviewers on your team.</span></span> <span data-ttu-id="37d51-354">Come revisori di completare la revisione, risultati della verifica viene inviati (ad esempio HTTP POST) sul CallBackEndpoint specificato.</span><span class="sxs-lookup"><span data-stu-id="37d51-354">As Reviewers complete reviewing, results of the Review would be POSTED (i.e. HTTP POST) on the specified CallBackEndpoint.</span></span>
+      <h3><span data-ttu-id="37d51-355">Schemi di callBack</span><span class="sxs-lookup"><span data-stu-id="37d51-355">CallBack Schemas</span></span> </h3>
+      <h4><span data-ttu-id="37d51-356">Esempio di CallBack di completamento di revisione</span><span class="sxs-lookup"><span data-stu-id="37d51-356">Review Completion CallBack Sample</span></span></h4>
+      <p>
+      <span data-ttu-id="37d51-357">{</span><span class="sxs-lookup"><span data-stu-id="37d51-357">{</span></span><br/>
+      <span data-ttu-id="37d51-358">"ReviewId": "<Review Id>",</span><span class="sxs-lookup"><span data-stu-id="37d51-358">"ReviewId": "<Review Id>",</span></span><br/>
+      <span data-ttu-id="37d51-359">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span><span class="sxs-lookup"><span data-stu-id="37d51-359">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span></span><br/>
+      <span data-ttu-id="37d51-360">"ModifiedBy": "<Name of the Reviewer>",</span><span class="sxs-lookup"><span data-stu-id="37d51-360">"ModifiedBy": "<Name of the Reviewer>",</span></span><br/>
+      <span data-ttu-id="37d51-361">"CallBackType": "Verifica",</span><span class="sxs-lookup"><span data-stu-id="37d51-361">"CallBackType": "Review",</span></span><br/>
+      <span data-ttu-id="37d51-362">"ContentId": "<The ContentId that was specified input>",</span><span class="sxs-lookup"><span data-stu-id="37d51-362">"ContentId": "<The ContentId that was specified input>",</span></span><br/>
+      <span data-ttu-id="37d51-363">"Metadati": {</span><span class="sxs-lookup"><span data-stu-id="37d51-363">"Metadata": {</span></span><br/>
+      <span data-ttu-id="37d51-364">"adultscore": "0.xxx",</span><span class="sxs-lookup"><span data-stu-id="37d51-364">"adultscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="37d51-365">"a": "False",</span><span class="sxs-lookup"><span data-stu-id="37d51-365">"a": "False",</span></span><br/>
+      <span data-ttu-id="37d51-366">"racyscore": "0.xxx",</span><span class="sxs-lookup"><span data-stu-id="37d51-366">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="37d51-367">"r": "True"</span><span class="sxs-lookup"><span data-stu-id="37d51-367">"r": "True"</span></span><br/>
+      <span data-ttu-id="37d51-368">},</span><span class="sxs-lookup"><span data-stu-id="37d51-368">},</span></span><br/>
+      <span data-ttu-id="37d51-369">"ReviewerResultTags": {</span><span class="sxs-lookup"><span data-stu-id="37d51-369">"ReviewerResultTags": {</span></span><br/>
+      <span data-ttu-id="37d51-370">"a": "False",</span><span class="sxs-lookup"><span data-stu-id="37d51-370">"a": "False",</span></span><br/>
+      <span data-ttu-id="37d51-371">"r": "True"</span><span class="sxs-lookup"><span data-stu-id="37d51-371">"r": "True"</span></span><br/>
+      <span data-ttu-id="37d51-372">}</span><span class="sxs-lookup"><span data-stu-id="37d51-372">}</span></span><br/>
+      <span data-ttu-id="37d51-373">}</span><span class="sxs-lookup"><span data-stu-id="37d51-373">}</span></span><br/>
+
+      </p><span data-ttu-id="37d51-374">.</span><span class="sxs-lookup"><span data-stu-id="37d51-374">.</span></span>
+    syntax:
+      content: 'function getVideoFrames(teamName: string, reviewId: string, options?: Models.ReviewsGetVideoFramesOptionalParams)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-375">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-375">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-376">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-376">Id of the review.</span></span>
+        - id: options
+          type:
+            - Models.ReviewsGetVideoFramesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsGetVideoFramesResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames_2'
+    name: 'getVideoFrames(string, string, ReviewsGetVideoFramesOptionalParams, ServiceCallback<Frames>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getVideoFrames(teamName: string, reviewId: string, options: ReviewsGetVideoFramesOptionalParams, callback: ServiceCallback<Frames>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-377">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-377">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-378">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-378">Id of the review.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsGetVideoFramesOptionalParams'
+          description: <span data-ttu-id="37d51-379">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-379">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Frames>
+          description: |
+            <span data-ttu-id="37d51-380">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-380">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetVideoFramesResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames_1'
+    name: 'getVideoFrames(string, string, ServiceCallback<Frames>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getVideoFrames(teamName: string, reviewId: string, callback: ServiceCallback<Frames>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-381">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-381">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-382">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-382">Id of the review.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Frames>
+          description: |
+            <span data-ttu-id="37d51-383">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-383">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetVideoFramesResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview'
+    name: 'publishVideoReview(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="37d51-384">Pubblicare la revisione di video per renderlo disponibile per la revisione.</span><span class="sxs-lookup"><span data-stu-id="37d51-384">Publish video review to make it available for review.</span></span>
+    syntax:
+      content: 'function publishVideoReview(teamName: string, reviewId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-385">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-385">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-386">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-386">Id of the review.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview_2'
+    name: 'publishVideoReview(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function publishVideoReview(teamName: string, reviewId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-387">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-387">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-388">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-388">Id of the review.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="37d51-389">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="37d51-389">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-390">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-390">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview_1'
+    name: 'publishVideoReview(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function publishVideoReview(teamName: string, reviewId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="37d51-391">Nome del team.</span><span class="sxs-lookup"><span data-stu-id="37d51-391">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="37d51-392">ID della verifica.</span><span class="sxs-lookup"><span data-stu-id="37d51-392">Id of the review.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="37d51-393">Il callback</span><span class="sxs-lookup"><span data-stu-id="37d51-393">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.constructor'
+    name: Reviews(ContentModeratorClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="37d51-394">Creare un revisioni.</span><span class="sxs-lookup"><span data-stu-id="37d51-394">Create a Reviews.</span></span>
+    syntax:
+      content: 'new Reviews(client: ContentModeratorClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ContentModeratorClientContext'
+          description: |
+            <span data-ttu-id="37d51-395">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="37d51-395">Reference to the service client.</span></span>
+    package: '@azure/cognitiveservices-contentmoderator'
+references:
+  - uid: '@azure/cognitiveservices-contentmoderator.ContentModeratorClientContext'
+    name: ContentModeratorClientContext
+    spec.typeScript:
+      - name: ContentModeratorClientContext
+        fullName: ContentModeratorClientContext
+        uid: '@azure/cognitiveservices-contentmoderator.ContentModeratorClientContext'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameOptionalParams'
+    name: ReviewsAddVideoFrameOptionalParams
+    spec.typeScript:
+      - name: ReviewsAddVideoFrameOptionalParams
+        fullName: ReviewsAddVideoFrameOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameOptionalParams'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameStreamOptionalParams'
+    name: ReviewsAddVideoFrameStreamOptionalParams
+    spec.typeScript:
+      - name: ReviewsAddVideoFrameStreamOptionalParams
+        fullName: ReviewsAddVideoFrameStreamOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameStreamOptionalParams'
+  - uid: '@azure/cognitiveservices-contentmoderator.VideoFrameBodyItem[]'
+    name: 'VideoFrameBodyItem[]'
+    spec.typeScript:
+      - name: VideoFrameBodyItem
+        fullName: VideoFrameBodyItem
+        uid: '@azure/cognitiveservices-contentmoderator.VideoFrameBodyItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameUrlOptionalParams'
+    name: ReviewsAddVideoFrameUrlOptionalParams
+    spec.typeScript:
+      - name: ReviewsAddVideoFrameUrlOptionalParams
+        fullName: ReviewsAddVideoFrameUrlOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameUrlOptionalParams'
+  - uid: '@azure/cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]'
+    name: 'TranscriptModerationBodyItem[]'
+    spec.typeScript:
+      - name: TranscriptModerationBodyItem
+        fullName: TranscriptModerationBodyItem
+        uid: '@azure/cognitiveservices-contentmoderator.TranscriptModerationBodyItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/cognitiveservices-contentmoderator.Content'
+    name: Content
+    spec.typeScript:
+      - name: Content
+        fullName: Content
+        uid: '@azure/cognitiveservices-contentmoderator.Content'
+  - uid: ServiceCallback<@azure/cognitiveservices-contentmoderator.JobId>
+    name: JobId>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobId
+        fullName: JobId
+        uid: '@azure/cognitiveservices-contentmoderator.JobId'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateJobOptionalParams'
+    name: ReviewsCreateJobOptionalParams
+    spec.typeScript:
+      - name: ReviewsCreateJobOptionalParams
+        fullName: ReviewsCreateJobOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateJobOptionalParams'
+  - uid: '@azure/cognitiveservices-contentmoderator.CreateReviewBodyItem[]'
+    name: 'CreateReviewBodyItem[]'
+    spec.typeScript:
+      - name: CreateReviewBodyItem
+        fullName: CreateReviewBodyItem
+        uid: '@azure/cognitiveservices-contentmoderator.CreateReviewBodyItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateReviewsOptionalParams'
+    name: ReviewsCreateReviewsOptionalParams
+    spec.typeScript:
+      - name: ReviewsCreateReviewsOptionalParams
+        fullName: ReviewsCreateReviewsOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateReviewsOptionalParams'
+  - uid: '@azure/cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]'
+    name: 'CreateVideoReviewsBodyItem[]'
+    spec.typeScript:
+      - name: CreateVideoReviewsBodyItem
+        fullName: CreateVideoReviewsBodyItem
+        uid: '@azure/cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateVideoReviewsOptionalParams'
+    name: ReviewsCreateVideoReviewsOptionalParams
+    spec.typeScript:
+      - name: ReviewsCreateVideoReviewsOptionalParams
+        fullName: ReviewsCreateVideoReviewsOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateVideoReviewsOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-contentmoderator.Job>
+    name: Job>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Job
+        fullName: Job
+        uid: '@azure/cognitiveservices-contentmoderator.Job'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-contentmoderator.Review>
+    name: Review>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Review
+        fullName: Review
+        uid: '@azure/cognitiveservices-contentmoderator.Review'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-contentmoderator.Frames>
+    name: Frames>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Frames
+        fullName: Frames
+        uid: '@azure/cognitiveservices-contentmoderator.Frames'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsGetVideoFramesOptionalParams'
+    name: ReviewsGetVideoFramesOptionalParams
+    spec.typeScript:
+      - name: ReviewsGetVideoFramesOptionalParams
+        fullName: ReviewsGetVideoFramesOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsGetVideoFramesOptionalParams'
