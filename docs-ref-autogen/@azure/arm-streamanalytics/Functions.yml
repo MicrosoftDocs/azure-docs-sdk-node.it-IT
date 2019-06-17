@@ -1,0 +1,837 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-streamanalytics.Functions'
+    name: Functions
+    fullName: Functions
+    children:
+      - '@azure/arm-streamanalytics.Functions.beginTest'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace_2'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace_1'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod_2'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod_1'
+      - '@azure/arm-streamanalytics.Functions.constructor'
+      - '@azure/arm-streamanalytics.Functions.get'
+      - '@azure/arm-streamanalytics.Functions.get_2'
+      - '@azure/arm-streamanalytics.Functions.get_1'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob_2'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob_1'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_2'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_1'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_2'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_1'
+      - '@azure/arm-streamanalytics.Functions.test'
+      - '@azure/arm-streamanalytics.Functions.update_2'
+      - '@azure/arm-streamanalytics.Functions.update'
+      - '@azure/arm-streamanalytics.Functions.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="4bd8e-101">Classe che rappresenta una funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-101">Class representing a Functions.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.beginTest'
+    name: 'beginTest(string, string, string, Models.FunctionsBeginTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4bd8e-102">Verifica se le informazioni fornite per una funzione sono valide.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-102">Tests if the information provided for a function is valid.</span></span> <span data-ttu-id="4bd8e-103">Questo può variare da test della connessione al servizio web sottostante dietro la funzione o assicurandosi che il codice della funzione fornito è sintatticamente corretto.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-103">This can range from testing the connection to the underlying web service behind the function or making sure the function code provided is syntactically correct.</span></span>
+    syntax:
+      content: 'function beginTest(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsBeginTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-104">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-104">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-105">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-106">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-106">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-107">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-107">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsBeginTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace_2'
+    name: 'createOrReplace(FunctionModel, string, string, string, FunctionsCreateOrReplaceOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options: FunctionsCreateOrReplaceOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="4bd8e-108">La definizione della funzione che verrà utilizzata per creare una nuova funzione o sostituire quello esistente sotto il processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-108">The definition of the function that will be used to create a new function or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-109">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-110">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-111">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-111">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-112">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-112">The name of the function.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+          description: <span data-ttu-id="4bd8e-113">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="4bd8e-113">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="4bd8e-114">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace'
+    name: 'createOrReplace(FunctionModel, string, string, string, Models.FunctionsCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4bd8e-115">Crea una funzione o sostituisce una funzione già esistente in un processo di streaming esistente.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-115">Creates a function or replaces an already existing function under an existing streaming job.</span></span>
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="4bd8e-116">La definizione della funzione che verrà utilizzata per creare una nuova funzione o sostituire quello esistente sotto il processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-116">The definition of the function that will be used to create a new function or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-117">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-117">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-118">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-118">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-119">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-119">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-120">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-120">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace_1'
+    name: 'createOrReplace(FunctionModel, string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="4bd8e-121">La definizione della funzione che verrà utilizzata per creare una nuova funzione o sostituire quello esistente sotto il processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-121">The definition of the function that will be used to create a new function or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-122">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-122">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-123">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-123">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-124">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-124">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-125">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-125">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="4bd8e-126">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4bd8e-127">Elimina una funzione dal processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-127">Deletes a function from the streaming job.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-128">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-128">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-129">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-129">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-130">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-130">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-131">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-131">The name of the function.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-132">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-132">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-133">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-133">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-134">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-134">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-135">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-135">The name of the function.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="4bd8e-136">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="4bd8e-136">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="4bd8e-137">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-137">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-138">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-138">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-139">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-139">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-140">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-140">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-141">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-141">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="4bd8e-142">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-142">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.constructor'
+    name: Functions(StreamAnalyticsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4bd8e-143">Creare una funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-143">Create a Functions.</span></span>
+    syntax:
+      content: 'new Functions(client: StreamAnalyticsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+          description: |
+            <span data-ttu-id="4bd8e-144">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-144">Reference to the service client.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4bd8e-145">Ottiene i dettagli sulla funzione specificata.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-145">Gets details about the specified function.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-146">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-146">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-147">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-147">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-148">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-148">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-149">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-149">The name of the function.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, options: RequestOptionsBase, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-150">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-150">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-151">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-151">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-152">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-152">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-153">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-153">The name of the function.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="4bd8e-154">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="4bd8e-154">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="4bd8e-155">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-155">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get_1'
+    name: 'get(string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-156">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-156">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-157">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-157">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-158">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-158">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-159">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-159">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="4bd8e-160">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob_2'
+    name: 'listByStreamingJob(string, string, FunctionsListByStreamingJobOptionalParams, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options: FunctionsListByStreamingJobOptionalParams, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-161">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-161">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-162">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-162">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-163">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-163">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+          description: <span data-ttu-id="4bd8e-164">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="4bd8e-164">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="4bd8e-165">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob'
+    name: 'listByStreamingJob(string, string, Models.FunctionsListByStreamingJobOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4bd8e-166">Elenca tutte le funzioni con il processo di streaming specificato.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-166">Lists all of the functions under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options?: Models.FunctionsListByStreamingJobOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-167">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-167">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-168">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-168">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-169">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-169">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsListByStreamingJobOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob_1'
+    name: 'listByStreamingJob(string, string, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-170">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-170">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-171">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-171">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-172">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-172">The name of the streaming job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="4bd8e-173">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-173">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext'
+    name: 'listByStreamingJobNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4bd8e-174">Elenca tutte le funzioni con il processo di streaming specificato.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-174">Lists all of the functions under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-175">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-175">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_2'
+    name: 'listByStreamingJobNext(string, RequestOptionsBase, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-176">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-176">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="4bd8e-177">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="4bd8e-177">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="4bd8e-178">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_1'
+    name: 'listByStreamingJobNext(string, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-179">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="4bd8e-180">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_2'
+    name: 'retrieveDefaultDefinition(string, string, string, FunctionsRetrieveDefaultDefinitionOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, options: FunctionsRetrieveDefaultDefinitionOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-181">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-181">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-182">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-182">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-183">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-183">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-184">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-184">The name of the function.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+          description: <span data-ttu-id="4bd8e-185">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="4bd8e-185">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="4bd8e-186">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-186">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition'
+    name: 'retrieveDefaultDefinition(string, string, string, Models.FunctionsRetrieveDefaultDefinitionOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4bd8e-187">Recupera la definizione predefinita di una funzione in base ai parametri specificati.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-187">Retrieves the default definition of a function based on the parameters specified.</span></span>
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsRetrieveDefaultDefinitionOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-188">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-188">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-189">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-189">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-190">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-190">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-191">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-191">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsRetrieveDefaultDefinitionOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_1'
+    name: 'retrieveDefaultDefinition(string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-192">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-192">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-193">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-193">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-194">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-194">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-195">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-195">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="4bd8e-196">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-196">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.test'
+    name: 'test(string, string, string, Models.FunctionsTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4bd8e-197">Verifica se le informazioni fornite per una funzione sono valide.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-197">Tests if the information provided for a function is valid.</span></span> <span data-ttu-id="4bd8e-198">Questo può variare da test della connessione al servizio web sottostante dietro la funzione o assicurandosi che il codice della funzione fornito è sintatticamente corretto.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-198">This can range from testing the connection to the underlying web service behind the function or making sure the function code provided is syntactically correct.</span></span>
+    syntax:
+      content: 'function test(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-199">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-199">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-200">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-200">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-201">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-201">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-202">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-202">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsTestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update_2'
+    name: 'update(FunctionModel, string, string, string, FunctionsUpdateOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options: FunctionsUpdateOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: '<span data-ttu-id="4bd8e-203">Oggetto funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-203">A function object.</span></span> <span data-ttu-id="4bd8e-204">Le proprietà specificate di seguito sovrascriveranno le proprietà corrispondenti nella funzione esistente (ad esempio, Queste proprietà verranno aggiornate).</span><span class="sxs-lookup"><span data-stu-id="4bd8e-204">The properties specified here will overwrite the corresponding properties in the existing function (ie. Those properties will be updated).</span></span> <span data-ttu-id="4bd8e-205">Le proprietà che vengono impostate su null significa che la proprietà corrispondente nella funzione esistente verrà rimangono invariate e non modificare in seguito a questa operazione PATCH.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-205">Any properties that are set to null here will mean that the corresponding property in the existing function will remain the same and not change as a result of this PATCH operation.</span></span>'
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-206">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-206">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-207">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-207">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-208">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-208">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-209">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-209">The name of the function.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'
+          description: <span data-ttu-id="4bd8e-210">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="4bd8e-210">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="4bd8e-211">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-211">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update'
+    name: 'update(FunctionModel, string, string, string, Models.FunctionsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="4bd8e-212">Aggiorna una funzione esistente in un processo di streaming esistente.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-212">Updates an existing function under an existing streaming job.</span></span> <span data-ttu-id="4bd8e-213">Ciò consente di aggiornare parzialmente (ad esempio,</span><span class="sxs-lookup"><span data-stu-id="4bd8e-213">This can be used to partially update (ie.</span></span> <span data-ttu-id="4bd8e-214">aggiornare le proprietà di uno o due) una funzione senza influire sul resto la definizione di processo o una funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-214">update one or two properties) a function without affecting the rest the job or function definition.</span></span>'
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsUpdateOptionalParams)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: '<span data-ttu-id="4bd8e-215">Oggetto funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-215">A function object.</span></span> <span data-ttu-id="4bd8e-216">Le proprietà specificate di seguito sovrascriveranno le proprietà corrispondenti nella funzione esistente (ad esempio, Queste proprietà verranno aggiornate).</span><span class="sxs-lookup"><span data-stu-id="4bd8e-216">The properties specified here will overwrite the corresponding properties in the existing function (ie. Those properties will be updated).</span></span> <span data-ttu-id="4bd8e-217">Le proprietà che vengono impostate su null significa che la proprietà corrispondente nella funzione esistente verrà rimangono invariate e non modificare in seguito a questa operazione PATCH.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-217">Any properties that are set to null here will mean that the corresponding property in the existing function will remain the same and not change as a result of this PATCH operation.</span></span>'
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-218">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-218">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-219">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-219">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-220">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-220">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-221">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-221">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update_1'
+    name: 'update(FunctionModel, string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: '<span data-ttu-id="4bd8e-222">Oggetto funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-222">A function object.</span></span> <span data-ttu-id="4bd8e-223">Le proprietà specificate di seguito sovrascriveranno le proprietà corrispondenti nella funzione esistente (ad esempio, Queste proprietà verranno aggiornate).</span><span class="sxs-lookup"><span data-stu-id="4bd8e-223">The properties specified here will overwrite the corresponding properties in the existing function (ie. Those properties will be updated).</span></span> <span data-ttu-id="4bd8e-224">Le proprietà che vengono impostate su null significa che la proprietà corrispondente nella funzione esistente verrà rimangono invariate e non modificare in seguito a questa operazione PATCH.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-224">Any properties that are set to null here will mean that the corresponding property in the existing function will remain the same and not change as a result of this PATCH operation.</span></span>'
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-225">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-225">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4bd8e-226">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-226">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-227">Nome del processo di streaming.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-227">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="4bd8e-228">Nome della funzione.</span><span class="sxs-lookup"><span data-stu-id="4bd8e-228">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="4bd8e-229">Il callback</span><span class="sxs-lookup"><span data-stu-id="4bd8e-229">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+references:
+  - uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+    name: StreamAnalyticsManagementClientContext
+    spec.typeScript:
+      - name: StreamAnalyticsManagementClientContext
+        fullName: StreamAnalyticsManagementClientContext
+        uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+  - uid: '@azure/arm-streamanalytics.FunctionModel'
+    name: FunctionModel
+    spec.typeScript:
+      - name: FunctionModel
+        fullName: FunctionModel
+        uid: '@azure/arm-streamanalytics.FunctionModel'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+    name: FunctionModel>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FunctionModel
+        fullName: FunctionModel
+        uid: '@azure/arm-streamanalytics.FunctionModel'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+    name: FunctionsCreateOrReplaceOptionalParams
+    spec.typeScript:
+      - name: FunctionsCreateOrReplaceOptionalParams
+        fullName: FunctionsCreateOrReplaceOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+    name: FunctionListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FunctionListResult
+        fullName: FunctionListResult
+        uid: '@azure/arm-streamanalytics.FunctionListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+    name: FunctionsListByStreamingJobOptionalParams
+    spec.typeScript:
+      - name: FunctionsListByStreamingJobOptionalParams
+        fullName: FunctionsListByStreamingJobOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+  - uid: '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+    name: FunctionsRetrieveDefaultDefinitionOptionalParams
+    spec.typeScript:
+      - name: FunctionsRetrieveDefaultDefinitionOptionalParams
+        fullName: FunctionsRetrieveDefaultDefinitionOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+  - uid: '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'
+    name: FunctionsUpdateOptionalParams
+    spec.typeScript:
+      - name: FunctionsUpdateOptionalParams
+        fullName: FunctionsUpdateOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'
