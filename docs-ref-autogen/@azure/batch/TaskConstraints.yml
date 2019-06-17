@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - '@azure/batch.TaskConstraints.maxTaskRetryCount'
+      - '@azure/batch.TaskConstraints.maxWallClockTime'
+      - '@azure/batch.TaskConstraints.retentionTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="34004-101">Interfaccia che rappresenta TaskConstraints.</span><span class="sxs-lookup"><span data-stu-id="34004-101">An interface representing TaskConstraints.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="34004-102">Numero massimo di tentativi consentiti per l''attività.</span><span class="sxs-lookup"><span data-stu-id="34004-102">The maximum number of times the task may be retried.</span></span> <span data-ttu-id="34004-103">Il servizio Batch ripete un''attività se il relativo codice di uscita è diverso da zero.</span><span class="sxs-lookup"><span data-stu-id="34004-103">The Batch service retries a task if its exit code is nonzero.</span></span> <span data-ttu-id="34004-104">Si noti che questo valore controlla specificamente il numero di tentativi per l''attività eseguibile a causa di un codice di uscita diverso da zero.</span><span class="sxs-lookup"><span data-stu-id="34004-104">Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code.</span></span> <span data-ttu-id="34004-105">Il servizio Batch eseguirà l''attività una volta e quindi ripeterà l''esecuzione fino al limite di tentativi specificato.</span><span class="sxs-lookup"><span data-stu-id="34004-105">The Batch service will try the task once, and may then retry up to this limit.</span></span> <span data-ttu-id="34004-106">Ad esempio, se il numero massimo di tentativi è 3, Batch tenterà l''attività fino a 4 volte (una iniziale e 3 ulteriori tentativi).</span><span class="sxs-lookup"><span data-stu-id="34004-106">For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="34004-107">Se il numero massimo di tentativi è 0, il servizio Batch non ripeterà l''attività dopo il primo tentativo.</span><span class="sxs-lookup"><span data-stu-id="34004-107">If the maximum retry count is 0, the Batch service does not retry the task after the first attempt.</span></span> <span data-ttu-id="34004-108">Se il valore massimo numero di tentativi è -1, i tentativi di servizio Batch l''attività senza limiti.</span><span class="sxs-lookup"><span data-stu-id="34004-108">If the maximum retry count is -1, the Batch service retries the task without limit.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="34004-109">Tempo massimo che può essere eseguito l''attività, misurato dal momento in cui l''attività viene avviata.</span><span class="sxs-lookup"><span data-stu-id="34004-109">The maximum elapsed time that the task may run, measured from the time the task starts.</span></span> <span data-ttu-id="34004-110">Se l''attività non viene completata entro il limite di tempo, il servizio Batch termina.</span><span class="sxs-lookup"><span data-stu-id="34004-110">If the task does not complete within the time limit, the Batch service terminates it.</span></span> <span data-ttu-id="34004-111">Se non viene specificato, non alcun limite di tempo in quanto tempo l''esecuzione del processo.</span><span class="sxs-lookup"><span data-stu-id="34004-111">If this is not specified, there is no time limit on how long the task may run.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.retentionTime'
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="34004-112">Il tempo minimo di mantenere la directory di attività nel nodo di calcolo in cui è stata eseguita, dal momento in cui che al completamento dell''esecuzione.</span><span class="sxs-lookup"><span data-stu-id="34004-112">The minimum time to retain the task directory on the compute node where it ran, from the time it completes execution.</span></span> <span data-ttu-id="34004-113">Trascorso questo periodo, il servizio Batch può eliminare la directory di attività e il relativo contenuto.</span><span class="sxs-lookup"><span data-stu-id="34004-113">After this time, the Batch service may delete the task directory and all its contents.</span></span> <span data-ttu-id="34004-114">Il valore predefinito è 7 giorni, vale a dire verrà mantenuta la directory di attività per 7 giorni a meno che non viene rimosso il nodo di calcolo o il processo viene eliminato.</span><span class="sxs-lookup"><span data-stu-id="34004-114">The default is 7 days, i.e. the task directory will be retained for 7 days unless the compute node is removed or the job is deleted.</span></span>'
+    optional: true
+    syntax:
+      content: 'retentionTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
