@@ -1,0 +1,460 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.EventData'
+    name: EventData
+    fullName: EventData
+    children:
+      - '@azure/arm-monitor.EventData.authorization'
+      - '@azure/arm-monitor.EventData.caller'
+      - '@azure/arm-monitor.EventData.category'
+      - '@azure/arm-monitor.EventData.claims'
+      - '@azure/arm-monitor.EventData.correlationId'
+      - '@azure/arm-monitor.EventData.description'
+      - '@azure/arm-monitor.EventData.eventDataId'
+      - '@azure/arm-monitor.EventData.eventName'
+      - '@azure/arm-monitor.EventData.eventTimestamp'
+      - '@azure/arm-monitor.EventData.httpRequest'
+      - '@azure/arm-monitor.EventData.id'
+      - '@azure/arm-monitor.EventData.level'
+      - '@azure/arm-monitor.EventData.operationId'
+      - '@azure/arm-monitor.EventData.operationName'
+      - '@azure/arm-monitor.EventData.properties'
+      - '@azure/arm-monitor.EventData.resourceGroupName'
+      - '@azure/arm-monitor.EventData.resourceId'
+      - '@azure/arm-monitor.EventData.resourceProviderName'
+      - '@azure/arm-monitor.EventData.resourceType'
+      - '@azure/arm-monitor.EventData.status'
+      - '@azure/arm-monitor.EventData.submissionTimestamp'
+      - '@azure/arm-monitor.EventData.subscriptionId'
+      - '@azure/arm-monitor.EventData.subStatus'
+      - '@azure/arm-monitor.EventData.tenantId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Le voci del registro eventi di Azure sono di tipo EventData
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.authorization'
+    name: authorization
+    fullName: authorization
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le informazioni di autorizzazione del mittente.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'authorization?: SenderAuthorization'
+      return:
+        type:
+          - '@azure/arm-monitor.SenderAuthorization'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.caller'
+    name: caller
+    fullName: caller
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      l'indirizzo di posta elettronica dell'utente che ha eseguito l'operazione, attestazione UPN o attestazione SPN basata sulla disponibilità.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'caller?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.category'
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      la categoria di eventi.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'category?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.claims'
+    name: claims
+    fullName: claims
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      coppie chiave-valore per identificare le autorizzazioni di ARM.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'claims?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      l'Id di correlazione, in genere un GUID in formato stringa. L'Id di correlazione è condiviso tra gli eventi che appartengono alla stessa operazione uberjar.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'correlationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La descrizione dell'evento.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.eventDataId'
+    name: eventDataId
+    fullName: eventDataId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      i dati dell'evento ID. Si tratta di un identificatore univoco per un evento.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'eventDataId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.eventName'
+    name: eventName
+    fullName: eventName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il nome dell'evento. Questo valore non deve essere confuso con OperationName. Ai fini pratici, OperationName potrebbe risultare più interessante per gli utenti finali.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'eventName?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.eventTimestamp'
+    name: eventTimestamp
+    fullName: eventTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      il timestamp di quando è stato generato l'evento dal servizio di Azure l'elaborazione della richiesta corrispondente all'evento. È in formato ISO 8601.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'eventTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.httpRequest'
+    name: httpRequest
+    fullName: httpRequest
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      le informazioni di richiesta HTTP. In genere include 'clientRequestId', 'clientIpAddress' (indirizzo IP dell'utente che ha avviato l'evento) e 'method' (metodo HTTP, ad esempio PUT).
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'httpRequest?: HttpRequestInfo'
+      return:
+        type:
+          - '@azure/arm-monitor.HttpRequestInfo'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      l'Id dell'evento come richiesto da ARM per RBAC. Contiene il EventDataID e un timestamp di informazioni.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.level'
+    name: level
+    fullName: level
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'il livello evento. I valori possibili sono: ''Critical'', ''Error'', ''Warning'', ''Informational'', ''Dettagliato'' **Nota: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**'
+    optional: true
+    syntax:
+      content: 'level?: EventLevel'
+      return:
+        type:
+          - '@azure/arm-monitor.EventLevel'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.operationId'
+    name: operationId
+    fullName: operationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      È in genere un GUID condiviso tra gli eventi corrispondenti a una singola operazione. Questo valore non deve essere confuso con EventName.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'operationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.operationName'
+    name: operationName
+    fullName: operationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il nome dell'operazione.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'operationName?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.properties'
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      il set di < Key, Value > coppie, in genere un dizionario < String, String >, che include i dettagli sull'evento.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'properties?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceGroupName'
+    name: resourceGroupName
+    fullName: resourceGroupName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      il nome del gruppo di risorse della risorsa interessata.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'resourceGroupName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceId'
+    name: resourceId
+    fullName: resourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      l'uri di risorsa che identifica in modo univoco la risorsa che ha causato questo evento.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'resourceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceProviderName'
+    name: resourceProviderName
+    fullName: resourceProviderName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      il nome del provider di risorse della risorsa interessata.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'resourceProviderName?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.resourceType'
+    name: resourceType
+    fullName: resourceType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'il tipo di risorsa **Nota: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**'
+    optional: true
+    syntax:
+      content: 'resourceType?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      stringa che descrive lo stato dell'operazione. Alcuni valori tipici sono: Avvio In corso, Succeeded, Failed, Resolved.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'status?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.submissionTimestamp'
+    name: submissionTimestamp
+    fullName: submissionTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      il timestamp di quando l'evento è diventato disponibile per l'esecuzione di query tramite questa API. È in formato ISO 8601. Questo valore non deve essere confuso eventTimestamp. Come si potrebbe verificare un ritardo tra l'ora di occorrenza dell'evento e l'ora in cui l'evento viene inviato all'infrastruttura di registrazione di Azure.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'submissionTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.subscriptionId'
+    name: subscriptionId
+    fullName: subscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      l'Id sottoscrizione di Azure in genere un GUID.
+      **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**
+    optional: true
+    syntax:
+      content: 'subscriptionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.subStatus'
+    name: subStatus
+    fullName: subStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'lo stato secondario dell''evento. La maggior parte dei casi, se inclusa, consente di acquisire il codice di stato HTTP della chiamata REST. I valori comuni sono: OK (codice di stato HTTP: 200), Creata (codice di stato HTTP: 201), Accettata (codice di stato HTTP: 202), Nessun contenuto (codice di stato HTTP: 204), bad Request (codice di stato HTTP: 400), Non trovata (codice di stato HTTP: 404), Conflitto (codice di stato HTTP: 409), Errore interno del server (codice di stato HTTP: 500), Service Unavailable (HTTP Status Code:503), Gateway Timeout (HTTP Status Code: 504) **NOTA: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**'
+    optional: true
+    syntax:
+      content: 'subStatus?: LocalizableString'
+      return:
+        type:
+          - '@azure/arm-monitor.LocalizableString'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.EventData.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'l''Id tenant Azure **Nota: Questa proprietà non verrà serializzata. Può essere usato solo dal server.**'
+    optional: true
+    syntax:
+      content: 'tenantId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.SenderAuthorization'
+    name: SenderAuthorization
+    spec.typeScript:
+      - name: SenderAuthorization
+        fullName: SenderAuthorization
+        uid: '@azure/arm-monitor.SenderAuthorization'
+  - uid: '@azure/arm-monitor.LocalizableString'
+    name: LocalizableString
+    spec.typeScript:
+      - name: LocalizableString
+        fullName: LocalizableString
+        uid: '@azure/arm-monitor.LocalizableString'
+  - uid: '@azure/arm-monitor.HttpRequestInfo'
+    name: HttpRequestInfo
+    spec.typeScript:
+      - name: HttpRequestInfo
+        fullName: HttpRequestInfo
+        uid: '@azure/arm-monitor.HttpRequestInfo'
+  - uid: '@azure/arm-monitor.EventLevel'
+    name: EventLevel
+    spec.typeScript:
+      - name: EventLevel
+        fullName: EventLevel
+        uid: '@azure/arm-monitor.EventLevel'

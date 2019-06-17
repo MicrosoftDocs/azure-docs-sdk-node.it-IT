@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-migrate.AssessedMachines'
+    name: AssessedMachines
+    fullName: AssessedMachines
+    children:
+      - '@azure/arm-migrate.AssessedMachines.constructor'
+      - '@azure/arm-migrate.AssessedMachines.get'
+      - '@azure/arm-migrate.AssessedMachines.get_2'
+      - '@azure/arm-migrate.AssessedMachines.get_1'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment_2'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe che rappresenta un AssessedMachines.
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.constructor'
+    name: AssessedMachines(AzureMigrateContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creare un AssessedMachines.
+    syntax:
+      content: 'new AssessedMachines(client: AzureMigrateContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-migrate.AzureMigrateContext'
+          description: |
+            Riferimento al client del servizio.
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get'
+    name: 'get(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Recupera una macchina virtuale valutata con le dimensioni e costi estimnate che è stato valutato nella valutazione specificata.
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Nome del gruppo di risorse di Azure, tale progetto fa parte di.'
+        - id: projectName
+          type:
+            - string
+          description: Nome del progetto Azure Migrate.
+        - id: groupName
+          type:
+            - string
+          description: Nome univoco di un gruppo all'interno di un progetto.
+        - id: assessmentName
+          type:
+            - string
+          description: Nome univoco di una valutazione in un progetto.
+        - id: assessedMachineName
+          type:
+            - string
+          description: Nome univoco di una macchina virtuale valutata valutata come parte di una valutazione.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get_2'
+    name: 'get(string, string, string, string, string, RequestOptionsBase, ServiceCallback<AssessedMachine>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessedMachine>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Nome del gruppo di risorse di Azure, tale progetto fa parte di.'
+        - id: projectName
+          type:
+            - string
+          description: Nome del progetto Azure Migrate.
+        - id: groupName
+          type:
+            - string
+          description: Nome univoco di un gruppo all'interno di un progetto.
+        - id: assessmentName
+          type:
+            - string
+          description: Nome univoco di una valutazione in un progetto.
+        - id: assessedMachineName
+          type:
+            - string
+          description: Nome univoco di una macchina virtuale valutata valutata come parte di una valutazione.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachine>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get_1'
+    name: 'get(string, string, string, string, string, ServiceCallback<AssessedMachine>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, callback: ServiceCallback<AssessedMachine>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Nome del gruppo di risorse di Azure, tale progetto fa parte di.'
+        - id: projectName
+          type:
+            - string
+          description: Nome del progetto Azure Migrate.
+        - id: groupName
+          type:
+            - string
+          description: Nome univoco di un gruppo all'interno di un progetto.
+        - id: assessmentName
+          type:
+            - string
+          description: Nome univoco di una valutazione in un progetto.
+        - id: assessedMachineName
+          type:
+            - string
+          description: Nome univoco di una macchina virtuale valutata valutata come parte di una valutazione.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachine>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment'
+    name: 'listByAssessment(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Ottenere l'elenco di computer che valutati nell'ambito della valutazione specificata. Restituisce una matrice json di oggetti di tipo 'la macchina virtuale valutata' come specificata nella sezione modelli.
+      Ogni volta che una valutazione viene creata o aggiornata, passa nel calcolo. Durante questa fase, il campo 'status' dell'oggetto Assessment segnala 'Computing'.
+      Durante il periodo durante la valutazione è nel calcolo, l'elenco di macchine virtuali valutate è vuoto e non le macchine virtuali valutate vengono restituite da questa chiamata.
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Nome del gruppo di risorse di Azure, tale progetto fa parte di.'
+        - id: projectName
+          type:
+            - string
+          description: Nome del progetto Azure Migrate.
+        - id: groupName
+          type:
+            - string
+          description: Nome univoco di un gruppo all'interno di un progetto.
+        - id: assessmentName
+          type:
+            - string
+          description: Nome univoco di una valutazione in un progetto.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment_2'
+    name: 'listByAssessment(string, string, string, string, RequestOptionsBase, ServiceCallback<AssessedMachineResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessedMachineResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Nome del gruppo di risorse di Azure, tale progetto fa parte di.'
+        - id: projectName
+          type:
+            - string
+          description: Nome del progetto Azure Migrate.
+        - id: groupName
+          type:
+            - string
+          description: Nome univoco di un gruppo all'interno di un progetto.
+        - id: assessmentName
+          type:
+            - string
+          description: Nome univoco di una valutazione in un progetto.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment_1'
+    name: 'listByAssessment(string, string, string, string, ServiceCallback<AssessedMachineResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<AssessedMachineResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Nome del gruppo di risorse di Azure, tale progetto fa parte di.'
+        - id: projectName
+          type:
+            - string
+          description: Nome del progetto Azure Migrate.
+        - id: groupName
+          type:
+            - string
+          description: Nome univoco di un gruppo all'interno di un progetto.
+        - id: assessmentName
+          type:
+            - string
+          description: Nome univoco di una valutazione in un progetto.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+references:
+  - uid: '@azure/arm-migrate.AzureMigrateContext'
+    name: AzureMigrateContext
+    spec.typeScript:
+      - name: AzureMigrateContext
+        fullName: AzureMigrateContext
+        uid: '@azure/arm-migrate.AzureMigrateContext'
+  - uid: ServiceCallback<@azure/arm-migrate.AssessedMachine>
+    name: AssessedMachine>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AssessedMachine
+        fullName: AssessedMachine
+        uid: '@azure/arm-migrate.AssessedMachine'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+    name: AssessedMachineResultList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AssessedMachineResultList
+        fullName: AssessedMachineResultList
+        uid: '@azure/arm-migrate.AssessedMachineResultList'
+      - name: '>'
+        fullName: '>'

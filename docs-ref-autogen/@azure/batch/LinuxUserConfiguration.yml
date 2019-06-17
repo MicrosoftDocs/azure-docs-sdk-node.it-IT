@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.LinuxUserConfiguration'
+    name: LinuxUserConfiguration
+    fullName: LinuxUserConfiguration
+    children:
+      - '@azure/batch.LinuxUserConfiguration.gid'
+      - '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+      - '@azure/batch.LinuxUserConfiguration.uid'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta LinuxUserConfiguration.
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.gid'
+    name: gid
+    fullName: gid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'ID del gruppo per l'account utente. Specificare le proprietà uid e un gid insieme o non ereditarli affatto. Se non è specificato il funzionamento sottostante sistema sceglie il gid.
+    optional: true
+    syntax:
+      content: 'gid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+    name: sshPrivateKey
+    fullName: sshPrivateKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La chiave privata SSH per l''account utente. La chiave privata non deve essere protetto da password. La chiave privata viene usata per configurare automaticamente l''autenticazione basata su chiave asimmetrica per SSH tra i nodi in un pool Linux quando enableInterNodeCommunication proprietà il pool è true (viene ignorato se enableInterNodeCommunication è false). Ciò avviene inserendo la coppia di chiavi nella directory. SSH dell''utente. Se non specificato, senza password SSH non è configurata tra i nodi (non viene eseguita alcuna modifica della directory. SSH dell''utente).'
+    optional: true
+    syntax:
+      content: 'sshPrivateKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.uid'
+    name: uid
+    fullName: uid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'ID utente dell'account utente. Specificare le proprietà uid e un gid insieme o non ereditarli affatto. Se non è specificato il funzionamento sottostante sistema sceglie l'uid.
+    optional: true
+    syntax:
+      content: 'uid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'

@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobSchedulePatchParameter'
+    name: JobSchedulePatchParameter
+    fullName: JobSchedulePatchParameter
+    children:
+      - '@azure/batch.JobSchedulePatchParameter.jobSpecification'
+      - '@azure/batch.JobSchedulePatchParameter.metadata'
+      - '@azure/batch.JobSchedulePatchParameter.schedule'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta JobSchedulePatchParameter.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedulePatchParameter.jobSpecification'
+    name: jobSpecification
+    fullName: jobSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: I dettagli dei processi da creare in questa pianificazione. Gli aggiornamenti interessano solo i processi avviati dopo l'aggiornamento ha avuto luogo. Qualsiasi processo attualmente attivo continua con la specifica precedente.
+    optional: true
+    syntax:
+      content: 'jobSpecification?: JobSpecification'
+      return:
+        type:
+          - '@azure/batch.JobSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedulePatchParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco di coppie nome-valore associate la pianificazione del processo come metadati. Se non si specifica questo elemento di metadati esistenti rimane invariato.
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedulePatchParameter.schedule'
+    name: schedule
+    fullName: schedule
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La pianificazione in base al quale verranno creati processi. Se non si specifica questo elemento, la pianificazione esistente viene lasciata invariato.'
+    optional: true
+    syntax:
+      content: 'schedule?: Schedule'
+      return:
+        type:
+          - '@azure/batch.Schedule'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.JobSpecification'
+    name: JobSpecification
+    spec.typeScript:
+      - name: JobSpecification
+        fullName: JobSpecification
+        uid: '@azure/batch.JobSpecification'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.Schedule'
+    name: Schedule
+    spec.typeScript:
+      - name: Schedule
+        fullName: Schedule
+        uid: '@azure/batch.Schedule'

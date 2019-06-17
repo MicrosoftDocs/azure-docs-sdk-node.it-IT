@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter'
+    name: PoolEnableAutoScaleParameter
+    fullName: PoolEnableAutoScaleParameter
+    children:
+      - '@azure/batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval'
+      - '@azure/batch.PoolEnableAutoScaleParameter.autoScaleFormula'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta PoolEnableAutoScaleParameter.
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''intervallo di tempo in cui regolare automaticamente le dimensioni del pool in base alla formula di scalabilità automatica. Il valore predefinito è 15 minuti. Il valore minimo e massimo sono rispettivamente 5 minuti e 168 ore. Se si specifica un valore minore di 5 minuti o più di 168 ore, il servizio Batch rifiuta la richiesta con un errore di valore della proprietà non valido. Se si chiama direttamente l''API REST, il codice di stato HTTP è 400 (richiesta non valida). Se si specifica un nuovo intervallo, quindi verrà arrestata la pianificazione di valutazione di scalabilità automatica esistenti e verrà avviata una nuova pianificazione di valutazione di scalabilità automatica, con l''ora inizia in corso l''ora di emissione questa richiesta.'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La formula per il numero desiderato di nodi di calcolo nel pool. La formula viene verificata la validità prima che venga applicata al pool. Se la formula non è valida, il servizio Batch respinge la richiesta con informazioni dettagliate sull''errore. Per altre informazioni su come specificare questa formula, vedere ridimensionare automaticamente nodi di calcolo in un pool di Batch di Azure (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling).'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
