@@ -1,0 +1,157 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses'
+    name: ProtectionPolicyOperationStatuses
+    fullName: ProtectionPolicyOperationStatuses
+    children:
+      - '@azure/arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get'
+      - '@azure/arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get_2'
+      - '@azure/arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get_1'
+      - '@azure/arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe che rappresenta un ProtectionPolicyOperationStatuses.
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Fornisce lo stato delle operazioni asincrone, ad esempio backup, ripristino. Lo stato può essere in corso, completato o non riuscito. È possibile fare riferimento all''enumerazione dello stato dell''operazione per tutti gli stati possibili di un''operazione. Alcune operazioni di creano dei processi. Questo metodo restituisce l''elenco dei processi associate all''operazione.'
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, policyName: string, operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Il nome dell'insieme di credenziali di servizi di ripristino.
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.
+        - id: policyName
+          type:
+            - string
+          description: Deve essere recuperato lo stato dell'operazione il cui nome di criterio di backup.
+        - id: operationId
+          type:
+            - string
+          description: ID operazione che rappresenta un'operazione il cui stato deve essere recuperato.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProtectionPolicyOperationStatusesGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, policyName: string, operationId: string, options: RequestOptionsBase, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Il nome dell'insieme di credenziali di servizi di ripristino.
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.
+        - id: policyName
+          type:
+            - string
+          description: Deve essere recuperato lo stato dell'operazione il cui nome di criterio di backup.
+        - id: operationId
+          type:
+            - string
+          description: ID operazione che rappresenta un'operazione il cui stato deve essere recuperato.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.OperationStatus>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.ProtectionPolicyOperationStatusesGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, policyName: string, operationId: string, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Il nome dell'insieme di credenziali di servizi di ripristino.
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.
+        - id: policyName
+          type:
+            - string
+          description: Deve essere recuperato lo stato dell'operazione il cui nome di criterio di backup.
+        - id: operationId
+          type:
+            - string
+          description: ID operazione che rappresenta un'operazione il cui stato deve essere recuperato.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.OperationStatus>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<Models.ProtectionPolicyOperationStatusesGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.constructor'
+    name: ProtectionPolicyOperationStatuses(RecoveryServicesBackupClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creare un ProtectionPolicyOperationStatuses.
+    syntax:
+      content: 'new ProtectionPolicyOperationStatuses(client: RecoveryServicesBackupClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+          description: |
+            Riferimento al client del servizio.
+    package: '@azure/arm-recoveryservicesbackup'
+references:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+    name: RecoveryServicesBackupClientContext
+    spec.typeScript:
+      - name: RecoveryServicesBackupClientContext
+        fullName: RecoveryServicesBackupClientContext
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+  - uid: ServiceCallback<@azure/arm-recoveryservicesbackup.OperationStatus>
+    name: OperationStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationStatus
+        fullName: OperationStatus
+        uid: '@azure/arm-recoveryservicesbackup.OperationStatus'
+      - name: '>'
+        fullName: '>'

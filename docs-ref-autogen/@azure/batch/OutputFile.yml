@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.OutputFile'
+    name: OutputFile
+    fullName: OutputFile
+    children:
+      - '@azure/batch.OutputFile.destination'
+      - '@azure/batch.OutputFile.filePattern'
+      - '@azure/batch.OutputFile.uploadOptions'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta OutputFile.
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFile.destination'
+    name: destination
+    fullName: destination
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La destinazione per i file di output.
+    syntax:
+      content: 'destination: OutputFileDestination'
+      return:
+        type:
+          - '@azure/batch.OutputFileDestination'
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFile.filePattern'
+    name: filePattern
+    fullName: filePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Un criterio che indica quale file da caricare. Sono supportati percorsi assoluti e relativi.
+      I percorsi relativi sono relativi alla directory di lavoro. Sono supportati i caratteri jolly seguenti: * corrisponde a 0 o più caratteri (per esempio di modello abc * corrisponderebbe abc o abcdef), * * corrisponde a qualsiasi directory? corrisponde a qualsiasi carattere singolo [abc] corrisponde a un carattere tra parentesi quadre e [a-c] corrisponde a un carattere compreso nell'intervallo. Le parentesi possono includere una negazione per corrispondenza con qualsiasi carattere non specificato (ad esempio [! abc] corrisponde a qualsiasi carattere tranne a, b o c). Se un nome di file inizia con "." viene ignorato per impostazione predefinita, ma possono essere trovato da specificandolo in modo esplicito (ad esempio *GIF non corrisponderanno. a.gif, ma.*. GIF verrà). Un semplice esempio: **\*. txt corrisponde a tutti i file che non si avvia in '.' e termina con. txt nella directory di lavoro o qualsiasi sottodirectory. Se il nome del file contiene un carattere jolly possibile eseguirne l'escape utilizzando le parentesi (ad esempio abc [*] corrisponde a un file denominato abc *). Si noti che entrambi \ e / vengono considerati come separatori di directory in Windows, ma solo / è in Linux. (% Var % su Windows) o $var in Linux le variabili di ambiente vengono espanse prima il modello in corso l'applicazione.
+    syntax:
+      content: 'filePattern: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFile.uploadOptions'
+    name: uploadOptions
+    fullName: uploadOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Opzioni aggiuntive per l''operazione di caricamento, tra cui con quali condizioni per eseguire il caricamento.'
+    syntax:
+      content: 'uploadOptions: OutputFileUploadOptions'
+      return:
+        type:
+          - '@azure/batch.OutputFileUploadOptions'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.OutputFileDestination'
+    name: OutputFileDestination
+    spec.typeScript:
+      - name: OutputFileDestination
+        fullName: OutputFileDestination
+        uid: '@azure/batch.OutputFileDestination'
+  - uid: '@azure/batch.OutputFileUploadOptions'
+    name: OutputFileUploadOptions
+    spec.typeScript:
+      - name: OutputFileUploadOptions
+        fullName: OutputFileUploadOptions
+        uid: '@azure/batch.OutputFileUploadOptions'

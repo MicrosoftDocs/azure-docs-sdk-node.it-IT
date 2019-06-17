@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ExitOptions'
+    name: ExitOptions
+    fullName: ExitOptions
+    children:
+      - '@azure/batch.ExitOptions.dependencyAction'
+      - '@azure/batch.ExitOptions.jobAction'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta ExitOptions.
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.dependencyAction'
+    name: dependencyAction
+    fullName: dependencyAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un''azione che il servizio Batch esegue le attività che dipendono da questa attività. Il valore predefinito è ''soddisfano'' per il codice di uscita 0 e ''blocco'' per tutte le altre condizioni di uscita. Se proprietà usesTaskDependencies del processo è impostata su false, specificando la proprietà dependencyAction restituisce un errore e la richiesta per l''attività aggiunta ha esito negativo con un errore di valore della proprietà non valido. Se si chiama direttamente l''API REST, il codice di stato HTTP è 400 (richiesta non valida). I valori possibili sono: ''soddisfano'', ''block'''
+    optional: true
+    syntax:
+      content: 'dependencyAction?: DependencyAction'
+      return:
+        type:
+          - '@azure/batch.DependencyAction'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.jobAction'
+    name: jobAction
+    fullName: jobAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un''azione da eseguire sul processo che contiene l''attività, se l''attività termina con la condizione di uscita specificato e la proprietà onTaskFailed del processo è ''performExitOptionsJobAction''. Il valore predefinito è none per il codice di uscita 0 e terminare per tutte le altre condizioni di uscita. Se proprietà onTaskFailed del processo è noaction, quindi specificando questa proprietà restituisce un errore e la richiesta per l''attività aggiunta ha esito negativo con un errore di valore della proprietà non valido. Se si chiama direttamente l''API REST, il codice di stato HTTP è 400 (richiesta non valida). I valori possibili sono: ''none'', ''disable'', ''terminate'''
+    optional: true
+    syntax:
+      content: 'jobAction?: JobAction'
+      return:
+        type:
+          - '@azure/batch.JobAction'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DependencyAction'
+    name: DependencyAction
+    spec.typeScript:
+      - name: DependencyAction
+        fullName: DependencyAction
+        uid: '@azure/batch.DependencyAction'
+  - uid: '@azure/batch.JobAction'
+    name: JobAction
+    spec.typeScript:
+      - name: JobAction
+        fullName: JobAction
+        uid: '@azure/batch.JobAction'
