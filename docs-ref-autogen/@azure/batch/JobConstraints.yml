@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - '@azure/batch.JobConstraints.maxTaskRetryCount'
+      - '@azure/batch.JobConstraints.maxWallClockTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta valore JobConstraints.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il numero massimo di volte in cui che possono essere ripetute in ogni attività. Il servizio Batch ripete un''attività se il relativo codice di uscita è diverso da zero. Si noti che questo valore controlla specificamente il numero di tentativi. Il servizio Batch tenterà di ogni attività una sola volta e quindi ripeterà fino a questo limite. Ad esempio, se il numero massimo di tentativi è 3, il servizio Batch eseguirà l''attività 4 volte, ovvero una iniziale e 3 ulteriori tentativi. Se il numero massimo di tentativi è 0, il servizio Batch non eseguirà ulteriori tentativi. Se il numero massimo di tentativi è -1, il servizio Batch continuerà a eseguire tentativi senza limiti. Il valore predefinito è 0, ovvero nessun tentativo.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Tempo massimo che può essere eseguito il processo, calcolato dal momento della creazione del processo. Se il processo non viene completata entro il limite di tempo, il servizio Batch termina e tutte le attività che sono ancora in esecuzione. In questo caso, il motivo dell'arresto sarà MaxWallClockTimeExpiry.
+      Se questa proprietà non è specificata, non vi è alcun limite di tempo su quanto tempo l'esecuzione del processo.
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

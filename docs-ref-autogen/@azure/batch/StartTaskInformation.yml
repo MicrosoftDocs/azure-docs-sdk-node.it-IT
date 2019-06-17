@@ -1,0 +1,179 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.StartTaskInformation'
+    name: StartTaskInformation
+    fullName: StartTaskInformation
+    children:
+      - '@azure/batch.StartTaskInformation.containerInfo'
+      - '@azure/batch.StartTaskInformation.endTime'
+      - '@azure/batch.StartTaskInformation.exitCode'
+      - '@azure/batch.StartTaskInformation.failureInfo'
+      - '@azure/batch.StartTaskInformation.lastRetryTime'
+      - '@azure/batch.StartTaskInformation.result'
+      - '@azure/batch.StartTaskInformation.retryCount'
+      - '@azure/batch.StartTaskInformation.startTime'
+      - '@azure/batch.StartTaskInformation.state'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta StartTaskInformation.
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Informazioni sul contenitore in cui è in esecuzione l'attività. Questa proprietà è impostata solo se l'attività viene eseguita in un contesto del contenitore.
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L'ora in cui l'attività di avvio arrestata l'esecuzione. Ciò è ora di fine più recente esecuzione dell'attività di avvio, se eseguiti è stata completata (anche se in esecuzione non riuscita e un nuovo tentativo è in sospeso).
+      Questo elemento non è presente se l'attività di avvio è in esecuzione.
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il codice di uscita del programma specificato nella riga di comando di attività di avvio. Questa proprietà è impostata solo se l''attività di avvio è nello stato completato. In generale, il codice di uscita per un processo riflette la convenzione specifica implementata dallo sviluppatore dell''applicazione per tale processo. Se si usa il valore di codice di uscita per prendere decisioni nel codice, assicurarsi di conoscere la convenzione di codice di uscita usata dal processo di applicazione. Tuttavia, se il servizio Batch termina l''attività di avvio (a causa di timeout o la terminazione utente tramite l''API) venga visualizzato un codice di uscita definito dal sistema operativo.'
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Informazioni che descrivono l''errore dell''attività, se presente. Questa proprietà viene impostata solo se l''attività è in stato completato e si è verificato un errore.'
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.lastRetryTime'
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''ora più recente in corrispondenza del quale una ripetizione dei tentativi dell''attività di avvio dell''esecuzione. Questo elemento è presente solo se l''attività è stata ritentata (vale a dire retryCount è diverso da zero). Se presente, questo viene in genere lo stesso come startTime, ma potrebbe essere diverso se l''attività è stato riavviato per motivi diversi da tentativi; ad esempio, se il nodo di calcolo è stato riavviato durante un tentativo, quindi ora di inizio viene aggiornato ma non la lastRetryTime.'
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il risultato dell''esecuzione dell''attività. Se il valore è "non riuscito", quindi i dettagli dell''errore sono reperibile nella proprietà failureInfo. I valori possibili sono: ''success'', ''errore'''
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.retryCount'
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Numero di tentativi di esecuzione dell''attività da parte del servizio Batch. Errori delle attività dell''applicazione (codice di uscita diverso da zero) vengono ripetuti, gli errori (l''attività non è stato possibile eseguire) di pre-elaborazione e gli errori di caricamento file non vengono ripetuti. Il servizio Batch ritenterà l''attività fino al limite specificato tramite i vincoli.'
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ora in cui l''attività di avvio iniziata l''esecuzione. Questo valore viene reimpostato ogni volta che l''attività viene riavviata o ritentata (vale a dire, questo è più recente avvio in corrispondenza del quale l''attività di avvio in esecuzione).'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato dell''attività di avvio nel nodo di calcolo. I valori possibili sono: ''in esecuzione'', ''completed'''
+    syntax:
+      content: 'state: StartTaskState'
+      return:
+        type:
+          - '@azure/batch.StartTaskState'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
+  - uid: '@azure/batch.StartTaskState'
+    name: StartTaskState
+    spec.typeScript:
+      - name: StartTaskState
+        fullName: StartTaskState
+        uid: '@azure/batch.StartTaskState'
