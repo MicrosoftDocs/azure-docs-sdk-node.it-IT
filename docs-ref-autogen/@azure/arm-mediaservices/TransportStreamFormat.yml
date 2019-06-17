@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.TransportStreamFormat'
+    name: TransportStreamFormat
+    fullName: TransportStreamFormat
+    children:
+      - '@azure/arm-mediaservices.TransportStreamFormat.filenamePattern'
+      - '@azure/arm-mediaservices.TransportStreamFormat.odatatype'
+      - '@azure/arm-mediaservices.TransportStreamFormat.outputFiles'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="e48d1-101">Vengono descritte le proprietà per la generazione di un Stream di trasporto MPEG-2 (ISO/IEC 13818 - 1) I file video di output.</span><span class="sxs-lookup"><span data-stu-id="e48d1-101">Describes the properties for generating an MPEG-2 Transport Stream (ISO/IEC 13818-1) output video file(s).</span></span>
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransportStreamFormat.filenamePattern'
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e48d1-102">Il modello dei nomi file per i file di output generato.</span><span class="sxs-lookup"><span data-stu-id="e48d1-102">The pattern of the file names for the generated output files.</span></span> <span data-ttu-id="e48d1-103">Le macro seguenti sono supportate nel nome del file: {Basename} - il nome di base del video di input {Extension} - l'estensione corretta per questo formato.</span><span class="sxs-lookup"><span data-stu-id="e48d1-103">The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format.</span></span> <span data-ttu-id="e48d1-104">{Label} - l'etichetta assegnata al codec/livello.</span><span class="sxs-lookup"><span data-stu-id="e48d1-104">{Label} - The label assigned to the codec/layer.</span></span>
+      <span data-ttu-id="e48d1-105">{Index}: un indice univoco per le anteprime.</span><span class="sxs-lookup"><span data-stu-id="e48d1-105">{Index} - A unique index for thumbnails.</span></span> <span data-ttu-id="e48d1-106">Applicabile solo alle anteprime.</span><span class="sxs-lookup"><span data-stu-id="e48d1-106">Only applicable to thumbnails.</span></span> <span data-ttu-id="e48d1-107">{Velocità in bit}: la velocità in bit audio/video.</span><span class="sxs-lookup"><span data-stu-id="e48d1-107">{Bitrate} - The audio/video bitrate.</span></span> <span data-ttu-id="e48d1-108">Non è applicabile alle anteprime.</span><span class="sxs-lookup"><span data-stu-id="e48d1-108">Not applicable to thumbnails.</span></span> <span data-ttu-id="e48d1-109">{Codec} - il tipo del codec audio/video.</span><span class="sxs-lookup"><span data-stu-id="e48d1-109">{Codec} - The type of the audio/video codec.</span></span> <span data-ttu-id="e48d1-110">Eventuali macro arilici verrà compresso e rimossi dal nome del file.</span><span class="sxs-lookup"><span data-stu-id="e48d1-110">Any unsubstituted macros will be collapsed and removed from the filename.</span></span>
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransportStreamFormat.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e48d1-111">Discriminatore polimorfiche</span><span class="sxs-lookup"><span data-stu-id="e48d1-111">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.TransportStreamFormat"'
+      return:
+        type:
+          - '"#Microsoft.Media.TransportStreamFormat"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransportStreamFormat.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e48d1-112">L'elenco dei file di output da produrre.</span><span class="sxs-lookup"><span data-stu-id="e48d1-112">The list of output files to produce.</span></span>  <span data-ttu-id="e48d1-113">Ogni voce nell'elenco è un set di etichette di livello audio e video per essere muxed tra loro.</span><span class="sxs-lookup"><span data-stu-id="e48d1-113">Each entry in the list is a set of audio and video layer labels to be muxed together .</span></span>
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/arm-mediaservices.OutputFile[]'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/arm-mediaservices.OutputFile'
+      - name: '[]'
+        fullName: '[]'
