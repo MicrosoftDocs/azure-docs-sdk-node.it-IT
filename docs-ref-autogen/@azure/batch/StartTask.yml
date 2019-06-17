@@ -1,0 +1,155 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    fullName: StartTask
+    children:
+      - '@azure/batch.StartTask.commandLine'
+      - '@azure/batch.StartTask.containerSettings'
+      - '@azure/batch.StartTask.environmentSettings'
+      - '@azure/batch.StartTask.maxTaskRetryCount'
+      - '@azure/batch.StartTask.resourceFiles'
+      - '@azure/batch.StartTask.userIdentity'
+      - '@azure/batch.StartTask.waitForSuccess'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Batch verrà effettuati tentativi attività quando viene attivata un''operazione di ripristino in un nodo di calcolo. Esempi di operazioni di ripristino includono (ma non sono limitati a) quando un nodo di calcolo non integro viene riavviato o un nodo di calcolo è scomparso a causa dell''errore dell''host. Ritenta l''esecuzione a causa di un ripristino operazioni sono indipendenti e non vengono conteggiate rispetto al limite in maxTaskRetryCount. Anche se il maxTaskRetryCount è 0, può verificarsi una ripetizione dei tentativi interni a causa di un''operazione di ripristino. Per questo motivo, tutte le attività devono essere idempotenti. Ciò significa attività necessario tollerare viene interrotto e riavviato senza causare alcun danneggiamento o dei dati duplicati. La migliore pratica per le attività a esecuzione prolungata è usare qualche forma di checkpoint. In alcuni casi l''attività di avvio può essere eseguito nuovamente, anche se il nodo non è stato riavviato. Dovrebbe prestare particolare attenzione per evitare le attività di avvio che crea processo breakaway o installare/avviare servizi dalla directory di lavoro di attività di avvio, poiché impedisce Batch in grado di eseguire nuovamente l''attività di avvio.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La riga di comando dell''attività di avvio. La riga di comando non viene eseguito con una shell e pertanto non possono sfruttare le funzionalità della shell, ad esempio l''espansione della variabile di ambiente. Se si desidera sfruttare i vantaggi di queste funzionalità, è necessario richiamare la shell nella riga di comando, usando ad esempio "cmd /c nomecomando" in Windows o "/ bin/sh - c nomecomando" in Linux. Se la riga di comando fa riferimento ai percorsi del file, deve usare un percorso relativo (relativo alla directory di lavoro) o usare la variabile di ambiente specificato di Batch (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le impostazioni per il contenitore con cui viene eseguito l''attività di avvio. Quando viene specificato, tutte le directory in modo ricorsivo sotto il AZ_BATCH_NODE_ROOT_DIR (la radice della directory di Azure Batch nel nodo) vengono mappate nel contenitore, le variabili di ambiente tutte le attività vengono mappate nel contenitore e la riga di comando di attività eseguita nel contenitore.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco di impostazioni delle variabili di ambiente per l'attività di avvio.
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Numero massimo di tentativi consentiti per l'attività. Il servizio Batch ripete un'attività se il relativo codice di uscita è diverso da zero. Si noti che questo valore controlla specificamente il numero di tentativi. Il servizio Batch eseguirà l'attività una volta e quindi ripeterà l'esecuzione fino al limite di tentativi specificato. Ad esempio, se il numero massimo di tentativi è 3, Batch tenterà l'attività fino a 4 volte (una iniziale e 3 ulteriori tentativi).
+      Se il numero massimo di tentativi è 0, il servizio Batch non ripeterà l'attività. Se il valore massimo numero di tentativi è -1, i tentativi di servizio Batch l'attività senza limiti.
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un elenco di file che il servizio Batch scaricherà il nodo di calcolo prima di eseguire la riga di comando.  È una dimensione massima per un elenco di file di risorse. Quando viene superata la dimensione massima, la richiesta avrà esito negativo e il codice di errore della risposta sarà RequestEntityTooLarge. In questo caso, la raccolta di ResourceFiles deve essere ridotte. Ciò può essere ottenuto tramite file ZIP, i pacchetti dell''applicazione o i contenitori Docker. I file elencati sotto questo elemento si trovano nella directory di lavoro dell''attività.'
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''identità dell''utente con cui viene eseguito l''attività di avvio. Se omesso, l''attività viene eseguito come un utente non amministratore univoco per l''attività.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTask.waitForSuccess'
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica se il servizio Batch deve attendere l'attività di avvio venga completato correttamente (vale a dire, viene interrotto con codice di uscita 0) prima di pianificare altre attività nel nodo di calcolo. Se true e l'attività di avvio non riesce in un nodo di calcolo, il servizio Batch ripete le attività di avvio fino al relativo numero massimo di tentativi (maxTaskRetryCount). Se l'attività è ancora non completata dopo tutti i tentativi, quindi i segni di servizio di Batch nel nodo di calcolo inutilizzabile e non verrà pianificata attività ad esso.
+      Questa condizione può essere rilevata tramite i dettagli di informazioni dello stato e di errore di nodo. Se false, il servizio Batch non attenderanno il completamento per l'attività di avvio per il completamento. In questo caso, le altre attività possa avviare l'esecuzione nel nodo di calcolo, mentre l'attività di avvio è ancora in esecuzione; e anche se l'attività di avvio non riesce, le nuove attività continuerà a essere pianificata nel nodo. Il valore predefinito è false.
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'
