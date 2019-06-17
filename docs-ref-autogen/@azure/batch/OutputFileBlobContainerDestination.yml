@@ -1,0 +1,42 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.OutputFileBlobContainerDestination'
+    name: OutputFileBlobContainerDestination
+    fullName: OutputFileBlobContainerDestination
+    children:
+      - '@azure/batch.OutputFileBlobContainerDestination.containerUrl'
+      - '@azure/batch.OutputFileBlobContainerDestination.path'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta OutputFileBlobContainerDestination.
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFileBlobContainerDestination.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'URL del contenitore di archiviazione Blob di Azure a cui verranno caricati i file. L'URL deve includere una (firma di accesso) concessione di autorizzazioni di scrittura al contenitore.
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFileBlobContainerDestination.path'
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il blob di destinazione o la directory virtuale all''interno del contenitore di archiviazione di Azure. Se filePattern fa riferimento a un file specifico (ad esempio non contiene caratteri jolly), quindi percorso è il nome del blob da cui caricare il file. Se filePattern contiene uno o più caratteri jolly e pertanto potrebbe corrispondere a più file, percorso è il nome della directory virtuale blob (che verrà anteposto a ogni nome di blob) in cui verranno caricati i file. Se omesso, vengono caricati i file nella radice del contenitore con un nome di blob corrispondenti per nome di file.'
+    optional: true
+    syntax:
+      content: 'path?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
