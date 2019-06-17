@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - '@azure/batch.TaskConstraints.maxTaskRetryCount'
+      - '@azure/batch.TaskConstraints.maxWallClockTime'
+      - '@azure/batch.TaskConstraints.retentionTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta TaskConstraints.
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Numero massimo di tentativi consentiti per l''attività. Il servizio Batch ripete un''attività se il relativo codice di uscita è diverso da zero. Si noti che questo valore controlla specificamente il numero di tentativi per l''attività eseguibile a causa di un codice di uscita diverso da zero. Il servizio Batch eseguirà l''attività una volta e quindi ripeterà l''esecuzione fino al limite di tentativi specificato. Ad esempio, se il numero massimo di tentativi è 3, Batch tenterà l''attività fino a 4 volte (una iniziale e 3 ulteriori tentativi). Se il numero massimo di tentativi è 0, il servizio Batch non ripeterà l''attività dopo il primo tentativo. Se il valore massimo numero di tentativi è -1, i tentativi di servizio Batch l''attività senza limiti.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Tempo massimo che può essere eseguito l''attività, misurato dal momento in cui l''attività viene avviata. Se l''attività non viene completata entro il limite di tempo, il servizio Batch termina. Se non viene specificato, non alcun limite di tempo in quanto tempo l''esecuzione del processo.'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.retentionTime'
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il tempo minimo di mantenere la directory di attività nel nodo di calcolo in cui è stata eseguita, dal momento in cui che al completamento dell''esecuzione. Trascorso questo periodo, il servizio Batch può eliminare la directory di attività e il relativo contenuto. Il valore predefinito è 7 giorni, vale a dire verrà mantenuta la directory di attività per 7 giorni a meno che non viene rimosso il nodo di calcolo o il processo viene eliminato.'
+    optional: true
+    syntax:
+      content: 'retentionTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

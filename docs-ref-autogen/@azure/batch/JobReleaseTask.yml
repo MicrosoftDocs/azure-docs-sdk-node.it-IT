@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    fullName: JobReleaseTask
+    children:
+      - '@azure/batch.JobReleaseTask.commandLine'
+      - '@azure/batch.JobReleaseTask.containerSettings'
+      - '@azure/batch.JobReleaseTask.environmentSettings'
+      - '@azure/batch.JobReleaseTask.id'
+      - '@azure/batch.JobReleaseTask.maxWallClockTime'
+      - '@azure/batch.JobReleaseTask.resourceFiles'
+      - '@azure/batch.JobReleaseTask.retentionTime'
+      - '@azure/batch.JobReleaseTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      L'attività di rilascio del processo viene eseguito quando il processo termina, a causa di uno dei seguenti: L'utente chiama l'API di processo termina o l'API di processo di eliminazione durante il processo è ancora attivo, vincolo del tempo di clock massima sul tempo reale del processo viene raggiunta, e il processo è ancora attivo, o attività di gestore di processi del processo completato il processo è configurato per terminare quando il processo Manag er completa. L'attività di rilascio del processo viene eseguito in ogni nodo di calcolo in cui vengono eseguite attività del processo e l'attività di preparazione del processo è stato eseguito e completato. Se si ricrea l'immagine di un nodo di calcolo dopo che è eseguito l'attività di preparazione del processo e il processo termina senza eventuali altre attività del processo in esecuzione su tale nodo di calcolo e di conseguenza l'attività di preparazione del processo non viene eseguito nuovamente, l'attività di rilascio del processo non viene eseguito su quel nodo.
+      Se un nodo di calcolo viene riavviato durante l'attività di rilascio del processo è ancora in esecuzione, l'attività di rilascio del processo viene eseguito nuovamente all'avvio del nodo di calcolo. Il processo non è contrassegnato come completo fino al completamento di tutte le attività di rilascio del processo. L'attività di rilascio del processo viene eseguito in background. Non occupa uno slot di programmazione; vale a dire non conteggiati ai fini del limite maxTasksPerNode specificato nel pool.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La riga di comando dell''attività di rilascio del processo. La riga di comando non viene eseguito con una shell e pertanto non possono sfruttare le funzionalità della shell, ad esempio l''espansione della variabile di ambiente. Se si desidera sfruttare i vantaggi di queste funzionalità, è necessario richiamare la shell nella riga di comando, usando ad esempio "cmd /c nomecomando" in Windows o "/ bin/sh - c nomecomando" in Linux. Se la riga di comando fa riferimento ai percorsi del file, deve usare un percorso relativo (relativo alla directory di lavoro) o usare la variabile di ambiente specificato di Batch (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le impostazioni per il contenitore con cui viene eseguito l''attività di rilascio del processo. Quando viene specificato, tutte le directory in modo ricorsivo sotto il AZ_BATCH_NODE_ROOT_DIR (la radice della directory di Azure Batch nel nodo) vengono mappate nel contenitore, le variabili di ambiente tutte le attività vengono mappate nel contenitore e la riga di comando di attività eseguita nel contenitore.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco di impostazioni delle variabili di ambiente per l'attività di rilascio del processo.
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Stringa che identifica in modo univoco l''attività di rilascio del processo all''interno del processo. L''ID può contenere qualsiasi combinazione di caratteri alfanumerici, inclusi trattini e caratteri di sottolineatura e non può contenere più di 64 caratteri. Se non si specifica questa proprietà, il servizio Batch assegna un valore predefinito di ''jobrelease''. Nessuna altra attività del processo può avere lo stesso ID di attività di rilascio del processo. Se si tenta di inviare un''attività con lo stesso id, il servizio Batch rifiuta la richiesta con codice di errore TaskIdSameAsJobReleaseTask; Se si chiama direttamente l''API REST, il codice di stato HTTP è 409 (conflitto).'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Tempo massimo per l''attività di rilascio del processo può eseguire in un nodo di calcolo specificato, misurato dal momento in cui l''attività viene avviata. Se l''attività non viene completata entro il limite di tempo, il servizio Batch termina. Il valore predefinito è 15 minuti. Non è possibile specificare un timeout più lungo di 15 minuti. Se esegue l''operazione, il servizio Batch la rifiuta con un errore. Se si chiama direttamente l''API REST, il codice di stato HTTP è 400 (richiesta non valida).'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un elenco di file che il servizio Batch scaricherà il nodo di calcolo prima di eseguire la riga di comando.  È una dimensione massima per un elenco di file di risorse.  Quando viene superata la dimensione massima, la richiesta avrà esito negativo e il codice di errore della risposta sarà RequestEntityTooLarge. In questo caso, la raccolta di ResourceFiles deve essere ridotte. Ciò può essere ottenuto tramite file ZIP, i pacchetti dell''applicazione o i contenitori Docker. I file elencati sotto questo elemento si trovano nella directory di lavoro dell''attività.'
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.retentionTime'
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il tempo minimo di mantenere la directory di attività per l'attività di rilascio del processo nel nodo di calcolo.
+      Trascorso questo periodo, il servizio Batch può eliminare la directory di attività e il relativo contenuto. Il valore predefinito è 7 giorni, vale a dire verrà mantenuta la directory di attività per 7 giorni a meno che non viene rimosso il nodo di calcolo o il processo viene eliminato.
+    optional: true
+    syntax:
+      content: 'retentionTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''identità dell''utente con cui viene eseguito l''attività di rilascio del processo. Se omesso, l''attività viene eseguito come un utente non amministratore univoco per l''attività.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'
