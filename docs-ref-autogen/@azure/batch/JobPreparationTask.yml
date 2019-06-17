@@ -1,0 +1,197 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    fullName: JobPreparationTask
+    children:
+      - '@azure/batch.JobPreparationTask.commandLine'
+      - '@azure/batch.JobPreparationTask.constraints'
+      - '@azure/batch.JobPreparationTask.containerSettings'
+      - '@azure/batch.JobPreparationTask.environmentSettings'
+      - '@azure/batch.JobPreparationTask.id'
+      - '@azure/batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess'
+      - '@azure/batch.JobPreparationTask.resourceFiles'
+      - '@azure/batch.JobPreparationTask.userIdentity'
+      - '@azure/batch.JobPreparationTask.waitForSuccess'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="0e2d2-101">Preparazione del processo è possibile usare per la preparazione di un nodo di calcolo per eseguire attività per il processo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-101">You can use Job Preparation to prepare a compute node to run tasks for the job.</span></span> <span data-ttu-id="0e2d2-102">Le attività comunemente eseguite negli preparazione del processo includono: Download di file di risorse comuni usati da tutte le attività nel processo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-102">Activities commonly performed in Job Preparation include: Downloading common resource files used by all the tasks in the job.</span></span> <span data-ttu-id="0e2d2-103">L'attività di preparazione del processo è possibile scaricare questi file di risorse comuni per la posizione condivisa nel nodo di calcolo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-103">The Job Preparation task can download these common resource files to the shared location on the compute node.</span></span> <span data-ttu-id="0e2d2-104">(AZ_BATCH_NODE_ROOT_DIR\shared), o l'avvio di un servizio locale nel nodo di calcolo in modo che tutte le attività del processo possono comunicare con esso.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-104">(AZ_BATCH_NODE_ROOT_DIR\shared), or starting a local service on the compute node so that all tasks of that job can communicate with it.</span></span> <span data-ttu-id="0e2d2-105">Se la preparazione del processo di attività ha esito negativo (vale a dire, scarico contare la ripetizione dei tentativi prima di uscire con codice di uscita 0), Batch non eseguirà le attività del processo nel nodo di calcolo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-105">If the Job Preparation task fails (that is, exhausts its retry count before exiting with exit code 0), Batch will not run tasks of this job on the compute node.</span></span> <span data-ttu-id="0e2d2-106">Il nodo rimane non idoneo a eseguire le attività di questo processo fino a quando non è assimilabile.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-106">The node remains ineligible to run tasks of this job until it is reimaged.</span></span> <span data-ttu-id="0e2d2-107">Il nodo rimane attivo e può essere usato per altri processi.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-107">The node remains active and can be used for other jobs.</span></span>
+      <span data-ttu-id="0e2d2-108">L'attività di preparazione del processo può eseguire più volte nello stesso nodo di calcolo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-108">The Job Preparation task can run multiple times on the same compute node.</span></span> <span data-ttu-id="0e2d2-109">Pertanto, è consigliabile scrivere l'attività di preparazione del processo per gestire nuova esecuzione.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-109">Therefore, you should write the Job Preparation task to handle re-execution.</span></span> <span data-ttu-id="0e2d2-110">Se il nodo di calcolo viene riavviato, l'attività di preparazione del processo viene eseguito nuovamente nel nodo prima di pianificare altre attività del processo, se è true rerunOnNodeRebootAfterSuccess o se l'attività di preparazione non è stata completata in precedenza.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-110">If the compute node is rebooted, the Job Preparation task is run again on the node before scheduling any other task of the job, if rerunOnNodeRebootAfterSuccess is true or if the Job Preparation task did not previously complete.</span></span> <span data-ttu-id="0e2d2-111">Se viene ricreata l'immagine del nodo di calcolo, l'attività di preparazione del processo viene eseguito nuovamente prima di qualsiasi attività del processo di pianificazione.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-111">If the compute node is reimaged, the Job Preparation task is run again before scheduling any task of the job.</span></span> <span data-ttu-id="0e2d2-112">Batch verrà effettuati tentativi attività quando viene attivata un'operazione di ripristino in un nodo di calcolo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-112">Batch will retry tasks when a recovery operation is triggered on a compute node.</span></span> <span data-ttu-id="0e2d2-113">Esempi di operazioni di ripristino includono (ma non sono limitati a) quando un nodo di calcolo non integro viene riavviato o un nodo di calcolo è scomparso a causa dell'errore dell'host.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-113">Examples of recovery operations include (but are not limited to) when an unhealthy compute node is rebooted or a compute node disappeared due to host failure.</span></span> <span data-ttu-id="0e2d2-114">Ritenta l'esecuzione a causa di un ripristino operazioni sono indipendenti e non vengono conteggiate rispetto al limite in maxTaskRetryCount.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-114">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span>
+      <span data-ttu-id="0e2d2-115">Anche se il maxTaskRetryCount è 0, può verificarsi una ripetizione dei tentativi interni a causa di un'operazione di ripristino.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-115">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span>
+      <span data-ttu-id="0e2d2-116">Per questo motivo, tutte le attività devono essere idempotenti.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-116">Because of this, all tasks should be idempotent.</span></span> <span data-ttu-id="0e2d2-117">Ciò significa attività necessario tollerare viene interrotto e riavviato senza causare alcun danneggiamento o dei dati duplicati.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-117">This means tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="0e2d2-118">La migliore pratica per le attività a esecuzione prolungata è usare qualche forma di checkpoint.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-118">The best practice for long running tasks is to use some form of checkpointing.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0e2d2-119">La riga di comando dell''attività di preparazione del processo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-119">The command line of the Job Preparation task.</span></span> <span data-ttu-id="0e2d2-120">La riga di comando non viene eseguito con una shell e pertanto non possono sfruttare le funzionalità della shell, ad esempio l''espansione della variabile di ambiente.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-120">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="0e2d2-121">Se si desidera sfruttare i vantaggi di queste funzionalità, è necessario richiamare la shell nella riga di comando, usando ad esempio "cmd /c nomecomando" in Windows o "/ bin/sh - c nomecomando" in Linux.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-121">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="0e2d2-122">Se la riga di comando fa riferimento ai percorsi del file, deve usare un percorso relativo (relativo alla directory di lavoro) o usare la variabile di ambiente specificato di Batch (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span><span class="sxs-lookup"><span data-stu-id="0e2d2-122">If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0e2d2-123">Vincoli che si applicano all'attività di preparazione del processo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-123">Constraints that apply to the Job Preparation task.</span></span>
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0e2d2-124">Le impostazioni per il contenitore con cui viene eseguito l''attività di preparazione del processo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-124">The settings for the container under which the Job Preparation task runs.</span></span> <span data-ttu-id="0e2d2-125">Quando viene specificato, tutte le directory in modo ricorsivo sotto il AZ_BATCH_NODE_ROOT_DIR (la radice della directory di Azure Batch nel nodo) vengono mappate nel contenitore, le variabili di ambiente tutte le attività vengono mappate nel contenitore e la riga di comando di attività eseguita nel contenitore.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-125">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0e2d2-126">Elenco di impostazioni delle variabili di ambiente per l'attività di preparazione del processo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-126">A list of environment variable settings for the Job Preparation task.</span></span>
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0e2d2-127">Stringa che identifica in modo univoco l''attività di preparazione del processo all''interno del processo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-127">A string that uniquely identifies the Job Preparation task within the job.</span></span> <span data-ttu-id="0e2d2-128">L''ID può contenere qualsiasi combinazione di caratteri alfanumerici, inclusi trattini e caratteri di sottolineatura e non può contenere più di 64 caratteri.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-128">The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</span></span> <span data-ttu-id="0e2d2-129">Se non si specifica questa proprietà, il servizio Batch assegna un valore predefinito di ''jobpreparation''.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-129">If you do not specify this property, the Batch service assigns a default value of ''jobpreparation''.</span></span> <span data-ttu-id="0e2d2-130">Nessuna altra attività del processo può avere lo stesso ID di attività di preparazione del processo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-130">No other task in the job can have the same ID as the Job Preparation task.</span></span> <span data-ttu-id="0e2d2-131">Se si tenta di inviare un''attività con lo stesso id, il servizio Batch rifiuta la richiesta con codice di errore TaskIdSameAsJobPreparationTask; Se si chiama direttamente l''API REST, il codice di stato HTTP è 409 (conflitto).</span><span class="sxs-lookup"><span data-stu-id="0e2d2-131">If you try to submit a task with the same id, the Batch service rejects the request with error code TaskIdSameAsJobPreparationTask; if you are calling the REST API directly, the HTTP status code is 409 (Conflict).</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess'
+    name: rerunOnNodeRebootAfterSuccess
+    fullName: rerunOnNodeRebootAfterSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="0e2d2-132">Indica se il servizio Batch deve eseguire di nuovo l'attività di preparazione del processo dopo il riavvio di un nodo di calcolo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-132">Whether the Batch service should rerun the Job Preparation task after a compute node reboots.</span></span>
+      <span data-ttu-id="0e2d2-133">L'attività di preparazione del processo viene rieseguita sempre se viene ricreata l'immagine di un nodo di calcolo o se l'attività di preparazione non è stata completata (ad esempio, in quanto il riavvio si è verificato durante l'esecuzione dell'attività).</span><span class="sxs-lookup"><span data-stu-id="0e2d2-133">The Job Preparation task is always rerun if a compute node is reimaged, or if the Job Preparation task did not complete (e.g. because the reboot occurred while the task was running).</span></span> <span data-ttu-id="0e2d2-134">Pertanto, è necessario scrivere sempre un'attività di preparazione del processo siano idempotenti e funzionino correttamente se eseguite più volte.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-134">Therefore, you should always write a Job Preparation task to be idempotent and to behave correctly if run multiple times.</span></span> <span data-ttu-id="0e2d2-135">Il valore predefinito è true.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-135">The default value is true.</span></span>
+    optional: true
+    syntax:
+      content: 'rerunOnNodeRebootAfterSuccess?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="0e2d2-136">Un elenco di file che il servizio Batch scaricherà il nodo di calcolo prima di eseguire la riga di comando.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-136">A list of files that the Batch service will download to the compute node before running the command line.</span></span> <span data-ttu-id="0e2d2-137">I file elencati sotto questo elemento si trovano nella directory di lavoro dell'attività.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-137">Files listed under this element are located in the task's working directory.</span></span>
+      <span data-ttu-id="0e2d2-138">È una dimensione massima per un elenco di file di risorse.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-138">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="0e2d2-139">Quando viene superata la dimensione massima, la richiesta avrà esito negativo e il codice di errore della risposta sarà RequestEntityTooLarge.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-139">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="0e2d2-140">In questo caso, la raccolta di ResourceFiles deve essere ridotte.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-140">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="0e2d2-141">Ciò può essere ottenuto tramite file ZIP, i pacchetti dell'applicazione o i contenitori Docker.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-141">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0e2d2-142">L''identità dell''utente con cui viene eseguito l''attività di preparazione del processo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-142">The user identity under which the Job Preparation task runs.</span></span> <span data-ttu-id="0e2d2-143">Se omesso, l''attività viene eseguita come un utente non amministratore univoco per l''attività nei nodi Windows o un utente non amministratore univoco per il pool in nodi Linux.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-143">If omitted, the task runs as a non-administrative user unique to the task on Windows nodes, or a non-administrative user unique to the pool on Linux nodes.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.waitForSuccess'
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0e2d2-144">Indica se il servizio Batch deve attendere l''attività di preparazione del processo completato correttamente prima di pianificare altre attività del processo nel nodo di calcolo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-144">Whether the Batch service should wait for the Job Preparation task to complete successfully before scheduling any other tasks of the job on the compute node.</span></span> <span data-ttu-id="0e2d2-145">Se si conclude con codice di uscita 0, un''attività di preparazione del processo è stata completata.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-145">A Job Preparation task has completed successfully if it exits with exit code 0.</span></span> <span data-ttu-id="0e2d2-146">Se true e l''attività di preparazione del processo non riesce in un nodo di calcolo, il servizio Batch ripete le attività di preparazione del processo fino al relativo numero massimo di tentativi (come specificato nell''elemento vincoli).</span><span class="sxs-lookup"><span data-stu-id="0e2d2-146">If true and the Job Preparation task fails on a compute node, the Batch service retries the Job Preparation task up to its maximum retry count (as specified in the constraints element).</span></span> <span data-ttu-id="0e2d2-147">Se l''attività è ancora non completata dopo tutti i tentativi, quindi il servizio Batch non pianificherà l''attività del processo nel nodo di calcolo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-147">If the task has still not completed successfully after all retries, then the Batch service will not schedule tasks of the job to the compute node.</span></span> <span data-ttu-id="0e2d2-148">Il nodo di calcolo rimane attivo e sono idonei per l''esecuzione di attività di altri processi.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-148">The compute node remains active and eligible to run tasks of other jobs.</span></span> <span data-ttu-id="0e2d2-149">Se false, il servizio Batch non attenderà il completamento dell''attività di preparazione del processo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-149">If false, the Batch service will not wait for the Job Preparation task to complete.</span></span> <span data-ttu-id="0e2d2-150">In questo caso, altre attività del processo di avvio dell''esecuzione nel nodo di calcolo durante l''attività di preparazione del processo è ancora in esecuzione; e anche se l''attività di preparazione del processo non riesce, le nuove attività continuerà a essere pianificata nel nodo.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-150">In this case, other tasks of the job can start executing on the compute node while the Job Preparation task is still running; and even if the Job Preparation task fails, new tasks will continue to be scheduled on the node.</span></span> <span data-ttu-id="0e2d2-151">Il valore predefinito è true.</span><span class="sxs-lookup"><span data-stu-id="0e2d2-151">The default value is true.</span></span>'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'
