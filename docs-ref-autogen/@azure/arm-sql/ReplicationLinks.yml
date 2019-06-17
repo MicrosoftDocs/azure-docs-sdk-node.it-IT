@@ -1,0 +1,523 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ReplicationLinks'
+    name: ReplicationLinks
+    fullName: ReplicationLinks
+    children:
+      - '@azure/arm-sql.ReplicationLinks.beginFailover'
+      - '@azure/arm-sql.ReplicationLinks.beginFailoverAllowDataLoss'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod_2'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod_1'
+      - '@azure/arm-sql.ReplicationLinks.failover'
+      - '@azure/arm-sql.ReplicationLinks.failoverAllowDataLoss'
+      - '@azure/arm-sql.ReplicationLinks.get'
+      - '@azure/arm-sql.ReplicationLinks.get_2'
+      - '@azure/arm-sql.ReplicationLinks.get_1'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase_2'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase_1'
+      - '@azure/arm-sql.ReplicationLinks.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="f437c-101">Classe che rappresenta un ReplicationLinks.</span><span class="sxs-lookup"><span data-stu-id="f437c-101">Class representing a ReplicationLinks.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.beginFailover'
+    name: 'beginFailover(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f437c-102">Imposta il database di replica primario eseguendo il failover dal database di replica primaria corrente.</span><span class="sxs-lookup"><span data-stu-id="f437c-102">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+    syntax:
+      content: 'function beginFailover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-103">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-104">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-105">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-105">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-106">Il nome del database con il collegamento di replica per eseguire il failover.</span><span class="sxs-lookup"><span data-stu-id="f437c-106">The name of the database that has the replication link to be failed over.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="f437c-107">L'ID del collegamento di replica per eseguire il failover.</span><span class="sxs-lookup"><span data-stu-id="f437c-107">The ID of the replication link to be failed over.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.beginFailoverAllowDataLoss'
+    name: 'beginFailoverAllowDataLoss(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f437c-108">Imposta il database di replica primario eseguendo il failover dal database di replica primaria corrente.</span><span class="sxs-lookup"><span data-stu-id="f437c-108">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="f437c-109">Questa operazione potrebbe comportare la perdita di dati.</span><span class="sxs-lookup"><span data-stu-id="f437c-109">This operation might result in data loss.</span></span>
+    syntax:
+      content: 'function beginFailoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-110">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-110">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-111">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-111">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-112">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-112">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-113">Il nome del database con il collegamento di replica per eseguire il failover.</span><span class="sxs-lookup"><span data-stu-id="f437c-113">The name of the database that has the replication link to be failed over.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="f437c-114">L'ID del collegamento di replica per eseguire il failover.</span><span class="sxs-lookup"><span data-stu-id="f437c-114">The ID of the replication link to be failed over.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f437c-115">Elimina un collegamento alla replica del database.</span><span class="sxs-lookup"><span data-stu-id="f437c-115">Deletes a database replication link.</span></span> <span data-ttu-id="f437c-116">Non può essere eseguito durante il failover.</span><span class="sxs-lookup"><span data-stu-id="f437c-116">Cannot be done during failover.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-117">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-117">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-118">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-118">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-119">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-119">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-120">Il nome del database con il collegamento di replica che si desidera eliminare.</span><span class="sxs-lookup"><span data-stu-id="f437c-120">The name of the database that has the replication link to be dropped.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="f437c-121">L'ID del collegamento di replica deve essere eliminato.</span><span class="sxs-lookup"><span data-stu-id="f437c-121">The ID of the replication link to be deleted.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-122">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-122">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-123">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-123">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-124">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-124">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-125">Il nome del database con il collegamento di replica che si desidera eliminare.</span><span class="sxs-lookup"><span data-stu-id="f437c-125">The name of the database that has the replication link to be dropped.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="f437c-126">L'ID del collegamento di replica deve essere eliminato.</span><span class="sxs-lookup"><span data-stu-id="f437c-126">The ID of the replication link to be deleted.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f437c-127">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="f437c-127">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="f437c-128">Il callback</span><span class="sxs-lookup"><span data-stu-id="f437c-128">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-129">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-129">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-130">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-130">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-131">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-131">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-132">Il nome del database con il collegamento di replica che si desidera eliminare.</span><span class="sxs-lookup"><span data-stu-id="f437c-132">The name of the database that has the replication link to be dropped.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="f437c-133">L'ID del collegamento di replica deve essere eliminato.</span><span class="sxs-lookup"><span data-stu-id="f437c-133">The ID of the replication link to be deleted.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="f437c-134">Il callback</span><span class="sxs-lookup"><span data-stu-id="f437c-134">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.failover'
+    name: 'failover(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f437c-135">Imposta il database di replica primario eseguendo il failover dal database di replica primaria corrente.</span><span class="sxs-lookup"><span data-stu-id="f437c-135">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+    syntax:
+      content: 'function failover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-136">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-136">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-137">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-137">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-138">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-138">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-139">Il nome del database con il collegamento di replica per eseguire il failover.</span><span class="sxs-lookup"><span data-stu-id="f437c-139">The name of the database that has the replication link to be failed over.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="f437c-140">L'ID del collegamento di replica per eseguire il failover.</span><span class="sxs-lookup"><span data-stu-id="f437c-140">The ID of the replication link to be failed over.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.failoverAllowDataLoss'
+    name: 'failoverAllowDataLoss(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f437c-141">Imposta il database di replica primario eseguendo il failover dal database di replica primaria corrente.</span><span class="sxs-lookup"><span data-stu-id="f437c-141">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="f437c-142">Questa operazione potrebbe comportare la perdita di dati.</span><span class="sxs-lookup"><span data-stu-id="f437c-142">This operation might result in data loss.</span></span>
+    syntax:
+      content: 'function failoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-143">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-143">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-144">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-144">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-145">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-145">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-146">Il nome del database con il collegamento di replica per eseguire il failover.</span><span class="sxs-lookup"><span data-stu-id="f437c-146">The name of the database that has the replication link to be failed over.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="f437c-147">L'ID del collegamento di replica per eseguire il failover.</span><span class="sxs-lookup"><span data-stu-id="f437c-147">The ID of the replication link to be failed over.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f437c-148">Ottiene un collegamento di replica di database.</span><span class="sxs-lookup"><span data-stu-id="f437c-148">Gets a database replication link.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-149">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-149">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-150">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-150">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-151">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-151">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-152">Il nome del database per ottenere il collegamento per.</span><span class="sxs-lookup"><span data-stu-id="f437c-152">The name of the database to get the link for.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="f437c-153">L'ID del collegamento di replica da recuperare.</span><span class="sxs-lookup"><span data-stu-id="f437c-153">The replication link ID to be retrieved.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<ReplicationLink>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: RequestOptionsBase, callback: ServiceCallback<ReplicationLink>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-154">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-154">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-155">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-155">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-156">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-156">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-157">Il nome del database per ottenere il collegamento per.</span><span class="sxs-lookup"><span data-stu-id="f437c-157">The name of the database to get the link for.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="f437c-158">L'ID del collegamento di replica da recuperare.</span><span class="sxs-lookup"><span data-stu-id="f437c-158">The replication link ID to be retrieved.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f437c-159">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="f437c-159">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLink>
+          description: |
+            <span data-ttu-id="f437c-160">Il callback</span><span class="sxs-lookup"><span data-stu-id="f437c-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<ReplicationLink>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<ReplicationLink>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-161">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-161">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-162">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-162">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-163">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-163">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-164">Il nome del database per ottenere il collegamento per.</span><span class="sxs-lookup"><span data-stu-id="f437c-164">The name of the database to get the link for.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="f437c-165">L'ID del collegamento di replica da recuperare.</span><span class="sxs-lookup"><span data-stu-id="f437c-165">The replication link ID to be retrieved.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLink>
+          description: |
+            <span data-ttu-id="f437c-166">Il callback</span><span class="sxs-lookup"><span data-stu-id="f437c-166">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase'
+    name: 'listByDatabase(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f437c-167">Elenca i collegamenti di replica del database.</span><span class="sxs-lookup"><span data-stu-id="f437c-167">Lists a database's replication links.</span></span>
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-168">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-168">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-169">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-169">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-170">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-170">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-171">Nome del database da cui recuperare i collegamenti per.</span><span class="sxs-lookup"><span data-stu-id="f437c-171">The name of the database to retrieve links for.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase_2'
+    name: 'listByDatabase(string, string, string, RequestOptionsBase, ServiceCallback<ReplicationLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options: RequestOptionsBase, callback: ServiceCallback<ReplicationLinkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-172">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-172">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-173">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-173">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-174">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-174">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-175">Nome del database da cui recuperare i collegamenti per.</span><span class="sxs-lookup"><span data-stu-id="f437c-175">The name of the database to retrieve links for.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f437c-176">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="f437c-176">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+          description: |
+            <span data-ttu-id="f437c-177">Il callback</span><span class="sxs-lookup"><span data-stu-id="f437c-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase_1'
+    name: 'listByDatabase(string, string, string, ServiceCallback<ReplicationLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<ReplicationLinkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-178">Nome del gruppo di risorse contenente la risorsa.</span><span class="sxs-lookup"><span data-stu-id="f437c-178">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f437c-179">È possibile ottenere questo valore dall'API di Gestione risorse di Azure o dal portale.</span><span class="sxs-lookup"><span data-stu-id="f437c-179">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-180">Il nome del server.</span><span class="sxs-lookup"><span data-stu-id="f437c-180">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="f437c-181">Nome del database da cui recuperare i collegamenti per.</span><span class="sxs-lookup"><span data-stu-id="f437c-181">The name of the database to retrieve links for.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+          description: |
+            <span data-ttu-id="f437c-182">Il callback</span><span class="sxs-lookup"><span data-stu-id="f437c-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.constructor'
+    name: ReplicationLinks(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f437c-183">Creare un ReplicationLinks.</span><span class="sxs-lookup"><span data-stu-id="f437c-183">Create a ReplicationLinks.</span></span>
+    syntax:
+      content: 'new ReplicationLinks(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="f437c-184">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="f437c-184">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-sql.ReplicationLink>
+    name: ReplicationLink>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ReplicationLink
+        fullName: ReplicationLink
+        uid: '@azure/arm-sql.ReplicationLink'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+    name: ReplicationLinkListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ReplicationLinkListResult
+        fullName: ReplicationLinkListResult
+        uid: '@azure/arm-sql.ReplicationLinkListResult'
+      - name: '>'
+        fullName: '>'
