@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest'
+    name: ApplySnapshotRequest
+    fullName: ApplySnapshotRequest
+    children:
+      - '@azure/cognitiveservices-face.ApplySnapshotRequest.mode'
+      - '@azure/cognitiveservices-face.ApplySnapshotRequest.objectId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Corpo per l'applicazione di operazione di creazione snapshot della richiesta.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest.mode'
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Modalità di applicazione dello snapshot. CreateNew attualmente solo è supportata, ovvero che l''operazione di applicazione avrà esito negativo se sottoscrizione di destinazione già contiene un oggetto dello stesso tipo e con l''ID dell''oggetto stesso. Gli utenti possono specificare il valore "objectId" nel corpo della richiesta per evitare questi conflitti. I valori possibili sono: ''CreateNew''. Valore predefinito: ''CreateNew''.'
+    optional: true
+    syntax:
+      content: 'mode?: SnapshotApplyMode'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.SnapshotApplyMode'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest.objectId'
+    name: objectId
+    fullName: objectId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id di oggetto di destinazione deve essere creato rispetto allo snapshot specificato dall'utente.
+    syntax:
+      content: 'objectId: string'
+      return:
+        type:
+          - string
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.SnapshotApplyMode'
+    name: SnapshotApplyMode
+    spec.typeScript:
+      - name: SnapshotApplyMode
+        fullName: SnapshotApplyMode
+        uid: '@azure/cognitiveservices-face.SnapshotApplyMode'
