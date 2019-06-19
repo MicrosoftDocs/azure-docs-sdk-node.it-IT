@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    children:
+      - '@azure/batch.TaskContainerSettings.containerRunOptions'
+      - '@azure/batch.TaskContainerSettings.imageName'
+      - '@azure/batch.TaskContainerSettings.registry'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interfaccia che rappresenta TaskContainerSettings.
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskContainerSettings.containerRunOptions'
+    name: containerRunOptions
+    fullName: containerRunOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Opzioni aggiuntive per il contenitore di creano un comando. Queste opzioni aggiuntive sono fornite come argomenti al comando "docker create", oltre a quelle controllare dal servizio Batch.'
+    optional: true
+    syntax:
+      content: 'containerRunOptions?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskContainerSettings.imageName'
+    name: imageName
+    fullName: imageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L''immagine da usare per creare il contenitore in cui verrà eseguita l''attività. Questo è il riferimento completo dell''immagine, come verrebbe specificato nel comando "docker pull". Se viene specificato alcun tag come parte del nome dell''immagine, il tag ": più recente" viene usato come impostazione predefinita.'
+    syntax:
+      content: 'imageName: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskContainerSettings.registry'
+    name: registry
+    fullName: registry
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il registro privato che contiene l'immagine del contenitore. Questa impostazione può essere omessa se è già stato fornito al momento della creazione del pool.
+    optional: true
+    syntax:
+      content: 'registry?: ContainerRegistry'
+      return:
+        type:
+          - '@azure/batch.ContainerRegistry'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ContainerRegistry'
+    name: ContainerRegistry
+    spec.typeScript:
+      - name: ContainerRegistry
+        fullName: ContainerRegistry
+        uid: '@azure/batch.ContainerRegistry'

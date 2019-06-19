@@ -1,0 +1,115 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest'
+    name: FindSimilarRequest
+    fullName: FindSimilarRequest
+    children:
+      - '@azure/cognitiveservices-face.FindSimilarRequest.faceId'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.faceIds'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.faceListId'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.largeFaceListId'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.maxNumOfCandidatesReturned'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.mode'
+    langs:
+      - typeScript
+    type: interface
+    summary: Il corpo per un'operazione simile di ricerca della richiesta.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.faceId'
+    name: faceId
+    fullName: faceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'FaceId della faccia di query. Utente deve chiamare viso: rilevare prima per ottenere un faceId valido. Si noti che questo faceId non è persistente e scadrà tra 24 ore dopo la chiamata di rilevamento'
+    syntax:
+      content: 'faceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.faceIds'
+    name: faceIds
+    fullName: faceIds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Matrice di faceIds candidato. Tutti gli elementi vengono creati da viso: rilevare e di faceIds scadrà tra 24 ore dopo la chiamata di rilevamento. Il numero di faceIds è limitato a 1000. FaceIds, largeFaceListId e parametro faceListId non devono essere forniti nello stesso momento.'
+    optional: true
+    syntax:
+      content: 'faceIds?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.faceListId'
+    name: faceListId
+    fullName: faceListId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Un elenco di visi candidato univoco specificato dall'utente esistente, creato nell'elenco di visi - creare un elenco di visi. Elenco di visi contiene un set di persistedFaceIds che vengono rese persistenti e non ha scadenza.
+      FaceIds, largeFaceListId e parametro faceListId non devono essere forniti nello stesso momento.
+    optional: true
+    syntax:
+      content: 'faceListId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.largeFaceListId'
+    name: largeFaceListId
+    fullName: largeFaceListId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un elenco di visi grandi candidato univoco specificato dall''utente esistente, creato in LargeFaceList - creazione. Elenco di visi grandi contiene un set di persistedFaceIds che vengono rese persistenti e non ha scadenza. FaceIds, largeFaceListId e parametro faceListId non devono essere forniti nello stesso momento.'
+    optional: true
+    syntax:
+      content: 'largeFaceListId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.maxNumOfCandidatesReturned'
+    name: maxNumOfCandidatesReturned
+    fullName: maxNumOfCandidatesReturned
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il numero di visi simili superiore restituiti. L''intervallo valido è [1, 1000]. Valore predefinito: 20.'
+    optional: true
+    syntax:
+      content: 'maxNumOfCandidatesReturned?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.mode'
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Modalità di ricerca visi simili. Può essere "matchPerson" o "matchFace". I valori possibili sono: ''matchPerson'', ''matchFace''. Il valore predefinito: ''matchPerson''.'
+    optional: true
+    syntax:
+      content: 'mode?: FindSimilarMatchMode'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.FindSimilarMatchMode'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FindSimilarMatchMode'
+    name: FindSimilarMatchMode
+    spec.typeScript:
+      - name: FindSimilarMatchMode
+        fullName: FindSimilarMatchMode
+        uid: '@azure/cognitiveservices-face.FindSimilarMatchMode'

@@ -1,0 +1,189 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-recoveryservicesbackup.Restores'
+    name: Restores
+    fullName: Restores
+    children:
+      - '@azure/arm-recoveryservicesbackup.Restores.constructor'
+      - '@azure/arm-recoveryservicesbackup.Restores.trigger'
+      - '@azure/arm-recoveryservicesbackup.Restores.trigger_2'
+      - '@azure/arm-recoveryservicesbackup.Restores.trigger_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe che rappresenta un ripristino.
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.Restores.constructor'
+    name: Restores(RecoveryServicesBackupClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Creare un ripristino.
+    syntax:
+      content: 'new Restores(client: RecoveryServicesBackupClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+          description: |
+            Riferimento al client del servizio.
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.Restores.trigger'
+    name: 'trigger(string, string, string, string, string, string, RestoreRequestResource, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Ripristina specificato i dati di backup. Si tratta di un''operazione asincrona. Per conoscere lo stato di questa chiamata API, usare API GetProtectedItemOperationResult.'
+    syntax:
+      content: 'function trigger(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: RestoreRequestResource, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Il nome dell'insieme di credenziali di servizi di ripristino.
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome dell'infrastruttura associato agli elementi sottoposti a backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome del contenitore associati con gli elementi sottoposti a backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Elemento da ripristinare il backup.
+        - id: recoveryPointId
+          type:
+            - string
+          description: ID del punto di ripristino che rappresenta i backup dei dati da ripristinare.
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.RestoreRequestResource'
+          description: richiesta di ripristino di risorse
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.Restores.trigger_2'
+    name: 'trigger(string, string, string, string, string, string, RestoreRequestResource, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function trigger(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: RestoreRequestResource, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Il nome dell'insieme di credenziali di servizi di ripristino.
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome dell'infrastruttura associato agli elementi sottoposti a backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome del contenitore associati con gli elementi sottoposti a backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Elemento da ripristinare il backup.
+        - id: recoveryPointId
+          type:
+            - string
+          description: ID del punto di ripristino che rappresenta i backup dei dati da ripristinare.
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.RestoreRequestResource'
+          description: richiesta di ripristino di risorse
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: I parametri facoltativi
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.Restores.trigger_1'
+    name: 'trigger(string, string, string, string, string, string, RestoreRequestResource, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function trigger(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: RestoreRequestResource, callback: ServiceCallback<void>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Il nome dell'insieme di credenziali di servizi di ripristino.
+        - id: resourceGroupName
+          type:
+            - string
+          description: Il nome del gruppo di risorse in cui il ripristino services insieme di credenziali è presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome dell'infrastruttura associato agli elementi sottoposti a backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome del contenitore associati con gli elementi sottoposti a backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Elemento da ripristinare il backup.
+        - id: recoveryPointId
+          type:
+            - string
+          description: ID del punto di ripristino che rappresenta i backup dei dati da ripristinare.
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.RestoreRequestResource'
+          description: richiesta di ripristino di risorse
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Il callback
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+references:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+    name: RecoveryServicesBackupClientContext
+    spec.typeScript:
+      - name: RecoveryServicesBackupClientContext
+        fullName: RecoveryServicesBackupClientContext
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+  - uid: '@azure/arm-recoveryservicesbackup.RestoreRequestResource'
+    name: RestoreRequestResource
+    spec.typeScript:
+      - name: RestoreRequestResource
+        fullName: RestoreRequestResource
+        uid: '@azure/arm-recoveryservicesbackup.RestoreRequestResource'

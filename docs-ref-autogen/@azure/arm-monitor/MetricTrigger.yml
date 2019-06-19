@@ -1,0 +1,150 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.MetricTrigger'
+    name: MetricTrigger
+    fullName: MetricTrigger
+    children:
+      - '@azure/arm-monitor.MetricTrigger.metricName'
+      - '@azure/arm-monitor.MetricTrigger.metricResourceUri'
+      - '@azure/arm-monitor.MetricTrigger.operator'
+      - '@azure/arm-monitor.MetricTrigger.statistic'
+      - '@azure/arm-monitor.MetricTrigger.threshold'
+      - '@azure/arm-monitor.MetricTrigger.timeAggregation'
+      - '@azure/arm-monitor.MetricTrigger.timeGrain'
+      - '@azure/arm-monitor.MetricTrigger.timeWindow'
+    langs:
+      - typeScript
+    type: interface
+    summary: il trigger che provoca un'azione di ridimensionamento.
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.metricName'
+    name: metricName
+    fullName: metricName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il nome della metrica che definisce ciò che consente di monitorare la regola.
+    syntax:
+      content: 'metricName: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.metricResourceUri'
+    name: metricResourceUri
+    fullName: metricResourceUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: l'identificatore di risorsa della risorsa della regola esegue il monitoraggio.
+    syntax:
+      content: 'metricResourceUri: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.operator'
+    name: operator
+    fullName: operator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'operatore utilizzato per confrontare i dati delle metriche e la soglia. I valori possibili sono: ''Equals'', ''NotEquals'', ''GreaterThan'', ''GreaterThanOrEqual'', ''LessThan'', ''LessThanOrEqual'''
+    syntax:
+      content: 'operator: ComparisonOperationType'
+      return:
+        type:
+          - '@azure/arm-monitor.ComparisonOperationType'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.statistic'
+    name: statistic
+    fullName: statistic
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'il tipo di statistica della metrica. Come vengono combinate le metriche da più istanze. I valori possibili sono: ''Media'', ''Minimo'', ''Max'', ''Sum'''
+    syntax:
+      content: 'statistic: MetricStatisticType'
+      return:
+        type:
+          - '@azure/arm-monitor.MetricStatisticType'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.threshold'
+    name: threshold
+    fullName: threshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: soglia della metrica che attiva l'azione di ridimensionamento.
+    syntax:
+      content: 'threshold: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.timeAggregation'
+    name: timeAggregation
+    fullName: timeAggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'tipo di aggregazione temporale. Definisce come i dati raccolti devono essere combinati nel tempo. Il valore predefinito è "Average". I valori possibili sono: ''Media'', ''Minimo'', '' il valore massimo'', ''Totale'', ''Count'', ''Last''.'
+    syntax:
+      content: 'timeAggregation: TimeAggregationType'
+      return:
+        type:
+          - '@azure/arm-monitor.TimeAggregationType'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.timeGrain'
+    name: timeGrain
+    fullName: timeGrain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: granularità delle metriche la regola esegue il monitoraggio. Deve essere uno dei valori predefiniti restituito dalle definizioni delle metriche per la metrica. Deve essere compreso tra 12 ore e 1 minuto.
+    syntax:
+      content: 'timeGrain: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MetricTrigger.timeWindow'
+    name: timeWindow
+    fullName: timeWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'l''intervallo di tempo in cui istanza vengono raccolti i dati. Questo valore deve essere superiore al ritardo nella raccolta delle metriche, che può variare da risorsa a risorsa. Deve essere compreso tra 12 ore e 5 minuti.'
+    syntax:
+      content: 'timeWindow: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.ComparisonOperationType'
+    name: ComparisonOperationType
+    spec.typeScript:
+      - name: ComparisonOperationType
+        fullName: ComparisonOperationType
+        uid: '@azure/arm-monitor.ComparisonOperationType'
+  - uid: '@azure/arm-monitor.MetricStatisticType'
+    name: MetricStatisticType
+    spec.typeScript:
+      - name: MetricStatisticType
+        fullName: MetricStatisticType
+        uid: '@azure/arm-monitor.MetricStatisticType'
+  - uid: '@azure/arm-monitor.TimeAggregationType'
+    name: TimeAggregationType
+    spec.typeScript:
+      - name: TimeAggregationType
+        fullName: TimeAggregationType
+        uid: '@azure/arm-monitor.TimeAggregationType'
