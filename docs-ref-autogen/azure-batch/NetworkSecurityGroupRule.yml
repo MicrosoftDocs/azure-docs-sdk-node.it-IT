@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkSecurityGroupRule
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - azure-batch.NetworkSecurityGroupRule.access
+      - azure-batch.NetworkSecurityGroupRule.priority
+      - azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+      - azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.access
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="83114-101">I valori possibili sono: ''Consenti'', ''deny''</span><span class="sxs-lookup"><span data-stu-id="83114-101">Possible values include: ''allow'', ''deny''</span></span>'
+    syntax:
+      content: 'access: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="83114-102">Priorità all'interno di un Pool devono essere univoche e vengono valutate in ordine di priorità.</span><span class="sxs-lookup"><span data-stu-id="83114-102">Priorities within a Pool must be unique and are evaluated in order of priority.</span></span>
+      <span data-ttu-id="83114-103">Più è basso il numero, maggiore sarà la priorità.</span><span class="sxs-lookup"><span data-stu-id="83114-103">The lower the number the higher the priority.</span></span> <span data-ttu-id="83114-104">Ad esempio, è stato possibile specificare regole con numeri di ordine pari a 150, 250 e 350.</span><span class="sxs-lookup"><span data-stu-id="83114-104">For example, rules could be specified with order numbers of 150, 250, and 350.</span></span> <span data-ttu-id="83114-105">La regola con il numero di ordine pari a 150 ha la precedenza sulla regola che ha un ordine pari a 250.</span><span class="sxs-lookup"><span data-stu-id="83114-105">The rule with the order number of 150 takes precedence over the rule that has an order of 250.</span></span> <span data-ttu-id="83114-106">La priorità consentita è 150 per 3500.</span><span class="sxs-lookup"><span data-stu-id="83114-106">Allowed priorities are 150 to 3500.</span></span> <span data-ttu-id="83114-107">Se i valori riservati o duplicati vengono forniti che la richiesta ha esito negativo con codice di stato HTTP 400.</span><span class="sxs-lookup"><span data-stu-id="83114-107">If any reserved or duplicate values are provided the request fails with HTTP status code 400.</span></span>
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="83114-108">I valori validi sono un singolo indirizzo IP (ad esempio, 10.10.10.10), subnet IP (ad esempio 192.168.1.0/24), tag, predefinito o \* (per tutti gli indirizzi).</span><span class="sxs-lookup"><span data-stu-id="83114-108">Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or \* (for all addresses).</span></span>  <span data-ttu-id="83114-109">Se altri valori vengono forniti che la richiesta ha esito negativo con codice di stato HTTP 400.</span><span class="sxs-lookup"><span data-stu-id="83114-109">If any other values are provided the request fails with HTTP status code 400.</span></span>'
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    name: sourcePortRanges
+    fullName: sourcePortRanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="83114-110">I valori validi sono ''*'' (per tutte le porte 0 - 65535), una porta specifica (ad esempio 22) o una porta di intervallo (vale a dire 100-200). Le porte devono essere nell''intervallo compreso tra 0 e 65535. Ogni voce in questa raccolta non deve sovrapporsi voce (un intervallo o una porta singola). Se altri valori vengono forniti che la richiesta ha esito negativo con codice di stato HTTP 400. Il valore predefinito è ''*''.</span><span class="sxs-lookup"><span data-stu-id="83114-110">Valid values are ''*'' (for all ports 0 - 65535), a specific port (i.e. 22), or a port range (i.e. 100-200). The ports must be in the range of 0 to 65535. Each entry in this collection must not overlap any other entry (either a range or an individual port). If any other values are provided the request fails with HTTP status code 400. The default value is ''*''.</span></span>'
+    optional: true
+    syntax:
+      content: 'sourcePortRanges?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch
