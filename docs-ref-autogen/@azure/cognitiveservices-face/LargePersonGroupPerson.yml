@@ -81,7 +81,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Aggiungere un viso rappresentativo per una persona per l'identificazione. Quadrante dell'input viene specificato come un'immagine con un rettangolo targetFace.
+    summary: |-
+      Aggiungere un volto a una persona in un gruppo di persone di grandi dimensioni per l'identificazione viso o verifica. Per gestire un'immagine contiene più volti, viso input può essere specificato come un'immagine con un rettangolo targetFace. Restituisce un persistedFaceId che rappresenta il volto aggiunto. Nessuna immagine verrà archiviata. Solo la funzionalità di volti estratti verrà archiviata nel server fino a quando [LargePersonGroup PersonFace - eliminare](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [persona LargePersonGroup - eliminare](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) o [LargePersonGroup - eliminazione](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)viene chiamato.
+      <br /> Nota persistedFaceId è diverso da faceId generato dal [affrontano: rilevare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Qualità dell'immagine superiore viso significa maggiore precisione il riconoscimento. Prendere in considerazione i volti di alta qualità: volti frontali e clear dimensioni sono 200 x 200 pixel (100 pixel tra gli occhi) o più grandi.
+      * Ogni voce di persona può contenere fino a 248 facce.
+      * Sono supportati JPEG, PNG, GIF (il primo fotogramma) e formato BMP. Le dimensioni del file immagine consentito va da 1KB a 6MB.
+      * "targetFace" rettangolo deve contenere una faccia. Zero o più visi saranno considerati come un errore. Se il rettangolo specificato "targetFace" non viene restituito da [affrontano: rilevare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), non c'è garanzia per rilevi e aggiunga correttamente il viso.
+      * All'esterno delle dimensioni rilevabili del volto (36 x 36 a 4096 x 4096 pixel), large occlusions head posa o grandi dimensioni provocherà errori.
+      * Aggiunta/eliminazione di volti da e verso una stessa persona verranno elaborato in sequenza. Aggiunta/eliminazione di volti a/da persone diverse vengono elaborati in parallelo.
+      * La dimensione minima rilevabili del volto è 36 x 36 pixel in un'immagine non maggiore di 1920 x 1080 pixel.
+      Le immagini con dimensioni superiori a 1920 x 1080 pixel necessario una dimensione minima viso proporzionalmente maggiore.
+      * È possibile specificare valori diversi 'detectionModel'. Per usare e confrontare i modelli di rilevamento diverso, fare riferimento a [come specificare un modello di rilevamento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modello | Uso consigliato-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Il modello di rilevamento predefinito per [persona LargePersonGroup - Aggiungi
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42). Consigliati per il rilevamento di volti frontali quasi. Per gli scenari con visi (head-posa) angolo eccezionalmente grandi, le facce bloccate o orientamento dell'immagine non corretto, i visi in questi casi potrebbero non essere rilevati. | | 'detection_02': | Modello di rilevamento rilasciata in 2019 potrebbe con una maggiore precisione soprattutto sui volti di piccole dimensioni, lati e sfocati. |
     syntax:
       content: 'function addFaceFromStream(largePersonGroupId: string, personId: string, image: msRest.HttpRequestBody, options?: Models.LargePersonGroupPersonAddFaceFromStreamOptionalParams)'
       parameters:
@@ -178,7 +193,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Aggiungere un viso rappresentativo per una persona per l'identificazione. Quadrante dell'input viene specificato come un'immagine con un rettangolo targetFace.
+    summary: |-
+      Aggiungere un volto a una persona in un gruppo di persone di grandi dimensioni per l'identificazione viso o verifica. Per gestire un'immagine contiene più volti, viso input può essere specificato come un'immagine con un rettangolo targetFace. Restituisce un persistedFaceId che rappresenta il volto aggiunto. Nessuna immagine verrà archiviata. Solo la funzionalità di volti estratti verrà archiviata nel server fino a quando [LargePersonGroup PersonFace - eliminare](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [persona LargePersonGroup - eliminare](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) o [LargePersonGroup - eliminazione](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)viene chiamato.
+      <br /> Nota persistedFaceId è diverso da faceId generato dal [affrontano: rilevare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Qualità dell'immagine superiore viso significa maggiore precisione il riconoscimento. Prendere in considerazione i volti di alta qualità: volti frontali e clear dimensioni sono 200 x 200 pixel (100 pixel tra gli occhi) o più grandi.
+      * Ogni voce di persona può contenere fino a 248 facce.
+      * Sono supportati JPEG, PNG, GIF (il primo fotogramma) e formato BMP. Le dimensioni del file immagine consentito va da 1KB a 6MB.
+      * "targetFace" rettangolo deve contenere una faccia. Zero o più visi saranno considerati come un errore. Se il rettangolo specificato "targetFace" non viene restituito da [affrontano: rilevare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), non c'è garanzia per rilevi e aggiunga correttamente il viso.
+      * All'esterno delle dimensioni rilevabili del volto (36 x 36 a 4096 x 4096 pixel), large occlusions head posa o grandi dimensioni provocherà errori.
+      * Aggiunta/eliminazione di volti da e verso una stessa persona verranno elaborato in sequenza. Aggiunta/eliminazione di volti a/da persone diverse vengono elaborati in parallelo.
+      * La dimensione minima rilevabili del volto è 36 x 36 pixel in un'immagine non maggiore di 1920 x 1080 pixel.
+      Le immagini con dimensioni superiori a 1920 x 1080 pixel necessario una dimensione minima viso proporzionalmente maggiore.
+      * È possibile specificare valori diversi 'detectionModel'. Per usare e confrontare i modelli di rilevamento diverso, fare riferimento a [come specificare un modello di rilevamento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modello | Uso consigliato-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Il modello di rilevamento predefinito per [persona LargePersonGroup - Aggiungi
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42). Consigliati per il rilevamento di volti frontali quasi. Per gli scenari con visi (head-posa) angolo eccezionalmente grandi, le facce bloccate o orientamento dell'immagine non corretto, i visi in questi casi potrebbero non essere rilevati. | | 'detection_02': | Modello di rilevamento rilasciata in 2019 potrebbe con una maggiore precisione soprattutto sui volti di piccole dimensioni, lati e sfocati. |
     syntax:
       content: 'function addFaceFromUrl(largePersonGroupId: string, personId: string, url: string, options?: Models.LargePersonGroupPersonAddFaceFromUrlOptionalParams)'
       parameters:
@@ -313,7 +343,10 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Eliminare una faccia da una persona. Verranno eliminati anche funzionalità relativo per il viso persistente.
+    summary: |-
+      Eliminare una faccia da una persona in un gruppo di persone di grandi dimensioni, persistedFaceId, personId e largePersonGroupId specificato.
+      <br /> Aggiunta/eliminazione di volti da e verso una stessa persona verranno elaborato in sequenza.
+      Aggiunta/eliminazione di volti a/da persone diverse vengono elaborati in parallelo.
     syntax:
       content: 'function deleteFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -410,7 +443,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Eliminare una persona esistente da un gruppo di persone di grandi dimensioni. Tutti archiviati dati utente e verranno eliminate le funzionalità di volti nella voce di persona.
+    summary: 'Eliminare una persona esistente da un gruppo di persone di grandi dimensioni. Il persistedFaceId, userData, funzionalità di nome e il face persona nella voce di persona verranno tutti eliminati.'
     syntax:
       content: 'function deleteMethod(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -495,7 +528,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Recuperare le informazioni di una persona, tra cui userData, nome e registrato i visi persistenti.'
+    summary: Recuperare il nome di una persona e userData e il faceIds persistente che rappresenta la funzionalità di volti persona registrata.
     syntax:
       content: 'function get(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:

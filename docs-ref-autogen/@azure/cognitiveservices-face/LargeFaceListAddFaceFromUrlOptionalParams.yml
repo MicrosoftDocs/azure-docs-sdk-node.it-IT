@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.abortSignal'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.customHeaders'
+      - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.detectionModel'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onDownloadProgress'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onUploadProgress'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.targetFace'
@@ -47,6 +48,21 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.detectionModel'
+    name: detectionModel
+    fullName: detectionModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Nome del modello di rilevamento. Modello di rilevamento viene utilizzato per rilevare volti nell''immagine inviato. È possibile specificare il nome di un modello di rilevamento quando si eseguono di viso - rilevare o faccia di aggiungere FaceList - aggiungere faccia o un gruppo di persone (grande) - (grande). Il valore predefinito è ''detection_01'', se è necessario un altro modello, in modo esplicito specificarla. I valori possibili sono: ''detection_01'', ''detection_02''. Il valore predefinito: ''detection_01''.'
+    optional: true
+    syntax:
+      content: 'detectionModel?: DetectionModel'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.DetectionModel'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -123,3 +139,10 @@ items:
         type:
           - undefined | string
     package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.DetectionModel'
+    name: DetectionModel
+    spec.typeScript:
+      - name: DetectionModel
+        fullName: DetectionModel
+        uid: '@azure/cognitiveservices-face.DetectionModel'

@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.Schedule
+    name: Schedule
+    fullName: Schedule
+    children:
+      - azure-batch.Schedule.doNotRunAfter
+      - azure-batch.Schedule.doNotRunUntil
+      - azure-batch.Schedule.recurrenceInterval
+      - azure-batch.Schedule.startWindow
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.Schedule.doNotRunAfter
+    name: doNotRunAfter
+    fullName: doNotRunAfter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se non si specifica un''ora e si sta creando una pianificazione processi ricorrente, la pianificazione processi rimarrà attiva fino a quando non si terminare in modo esplicito.'
+    optional: true
+    syntax:
+      content: 'doNotRunAfter?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.Schedule.doNotRunUntil
+    name: doNotRunUntil
+    fullName: doNotRunUntil
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se non si specifica un''ora doNotRunUntil, la pianificazione viene possibile creare i processi immediatamente.'
+    optional: true
+    syntax:
+      content: 'doNotRunUntil?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.Schedule.recurrenceInterval
+    name: recurrenceInterval
+    fullName: recurrenceInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Poiché una pianificazione del processo può avere al massimo un processo attivo in un determinato momento, se è possibile creare un nuovo processo in una pianificazione del processo, ma il processo precedente è ancora in esecuzione, il servizio Batch non creerà il nuovo processo fino al termine del processo precedente. Se il processo precedente non viene completata entro il periodo di startWindow di recurrenceInterval di nuovo, quindi alcun nuovo processo non verrà pianificato per tale intervallo. Per i processi ricorrenti, è necessario specificare in genere un jobManagerTask nel jobSpecification. Se non si usa jobManagerTask, è necessario un processo esterno per monitorare quando vengono creati i processi, aggiungere attività ai processi e l''arresto di processi pronti per la ricorrenza successiva. Il valore predefinito è che la pianificazione non ricorrente: viene creato un processo, entro il valore di startWindow dopo il periodo di tempo doNotRunUntil, e la pianificazione è stata completata, non appena tale processo viene completato. Il valore minimo è 1 minuto. Se si specifica un valore inferiore, il servizio Batch rifiuta la pianificazione con un errore. Se si chiama direttamente l''API REST, il codice di stato HTTP è 400 (richiesta non valida).'
+    optional: true
+    syntax:
+      content: 'recurrenceInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.Schedule.startWindow
+    name: startWindow
+    fullName: startWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se non viene creato un processo entro l''intervallo di startWindow, la possibilità di'' '' è andrà persa. non verrà creato alcun processo finché la successiva ricorrenza della pianificazione. Se la pianificazione ricorrente e il valore di startWindow è più lungo rispetto all''intervallo di ricorrenza, quindi ciò equivale a un valore di startWindow infinito, poiché il processo di scadenza in uno recurrenceInterval non viene trasferito nel successivo intervallo di ricorrenza. Il valore predefinito è infinito. Il valore minimo è 1 minuto. Se si specifica un valore inferiore, il servizio Batch rifiuta la pianificazione con un errore. Se si chiama direttamente l''API REST, il codice di stato HTTP è 400 (richiesta non valida).'
+    optional: true
+    syntax:
+      content: 'startWindow?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

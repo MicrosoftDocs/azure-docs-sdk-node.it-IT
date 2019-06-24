@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    fullName: PoolInformation
+    children:
+      - azure-batch.PoolInformation.autoPoolSpecification
+      - azure-batch.PoolInformation.poolId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolInformation.autoPoolSpecification
+    name: autoPoolSpecification
+    fullName: autoPoolSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se la creazione del Pool automatico non riesce, il servizio Batch sposta il processo in uno stato completato e l''errore di creazione di Pool è impostata nella proprietà error della pianificazione del processo. Il servizio Batch gestisce la durata (entrambi la creazione e, a meno che non viene specificato keepAlive, eliminazione) del Pool automatico. Tutte le azioni utente che influisce sulla durata del Pool automatico mentre è attivo il processo comporterà un comportamento imprevisto. È necessario specificare l''ID del Pool o la specifica del Pool automatico, ma non entrambi.'
+    optional: true
+    syntax:
+      content: 'autoPoolSpecification?: AutoPoolSpecification'
+      return:
+        type:
+          - azure-batch.AutoPoolSpecification
+    package: azure-batch
+  - uid: azure-batch.PoolInformation.poolId
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'È necessario assicurarsi che esista il Pool di cui viene fatto riferimento da questa proprietà. Se il Pool non esiste al momento che il servizio Batch tenta di pianificare un processo, non verrà eseguita alcuna attività per il processo fino a quando non si crea un Pool con tale id. Si noti che il servizio Batch non rifiuta la richiesta di processo. è sufficiente non eseguirà attività fino a quando non è presente il Pool. È necessario specificare l''ID del Pool o la specifica del Pool automatico, ma non entrambi.'
+    optional: true
+    syntax:
+      content: 'poolId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.AutoPoolSpecification
+    name: AutoPoolSpecification
+    spec.typeScript:
+      - name: AutoPoolSpecification
+        fullName: AutoPoolSpecification
+        uid: azure-batch.AutoPoolSpecification

@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-hubs.ClientOptionsBase'
+    name: ClientOptionsBase
+    fullName: ClientOptionsBase
+    children:
+      - '@azure/event-hubs.ClientOptionsBase.dataTransformer'
+      - '@azure/event-hubs.ClientOptionsBase.userAgent'
+      - '@azure/event-hubs.ClientOptionsBase.webSocket'
+      - '@azure/event-hubs.ClientOptionsBase.webSocketConstructorOptions'
+    langs:
+      - typeScript
+    type: interface
+    summary: Vengono descritte le opzioni di base di client.
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.dataTransformer'
+    name: dataTransformer
+    fullName: dataTransformer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{DataTransformer} [dataTransformer] Il convertitore di dati che verrà utilizzato per codificare e decodificare i messaggi inviati e ricevuti, rispettivamente. Se non specificato, si userà il DefaultDataTransformer. Il convertitore predefinito consente di gestire maggioranza dei casi. Questa opzione deve essere usato solo per scenari specializzati.'
+    optional: true
+    syntax:
+      content: 'dataTransformer?: DataTransformer'
+      return:
+        type:
+          - DataTransformer
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.userAgent'
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string} [userAgent] L''agente utente che è necessario aggiungere all''utente compilato nella stringa dell''agente.'
+    optional: true
+    syntax:
+      content: 'userAgent?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.webSocket'
+    name: webSocket
+    fullName: webSocket
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il costruttore di WebSocket utilizzato per creare una connessione AMQP su un WebSocket.
+      Questa opzione deve essere specificata sotto gli scenari seguenti
+      - La porta TCP 5671 che viene usata dalla connessione AMQP per hub eventi è bloccata nell'ambiente in uso.
+      - L'applicazione deve essere eseguito con un server proxy
+      - L'applicazione deve eseguire nel browser e si desidera fornire la propria scelta dell'implementazione di Websocket anziché i WebSocket incorporato nel browser.
+    optional: true
+    syntax:
+      content: 'webSocket?: WebSocketImpl'
+      return:
+        type:
+          - WebSocketImpl
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.webSocketConstructorOptions'
+    name: webSocketConstructorOptions
+    fullName: webSocketConstructorOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{webSocketConstructorOptions} - opzioni da passare al costruttore di WebSocket'
+    optional: true
+    syntax:
+      content: 'webSocketConstructorOptions?: any'
+      return:
+        type:
+          - any
+    package: '@azure/event-hubs'

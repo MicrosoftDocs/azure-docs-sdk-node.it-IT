@@ -64,7 +64,28 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Rileva i visi in un''immagine e restituisce le posizioni viso e, facoltativamente con faceIds, punti di riferimento e gli attributi.'
+    summary: |-
+      Rileva i visi in un'immagine, rettangoli restituito e, facoltativamente, con faceIds, punti di riferimento e gli attributi.<br />
+      * Nessuna immagine verrà archiviata. Solo la funzionalità di volti estratti verrà archiviata nel server. Il faceId è un identificatore della funzionalità di visi e verrà usata in [affrontano: identificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [affrontano: verificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [viso
+      - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).
+      Le funzionalità di visi archiviati scadranno e verranno eliminate 24 ore dopo la chiamata di rilevamento originale.
+      * I parametri facoltativi includono faceId, punti di riferimento e gli attributi. Gli attributi includono età, sesso, headPose, smile, facialHair, bicchieri, emozioni, sorriso, composizione, relative all'occlusione, Accessori, Sfocatura, l'esposizione e rumore. Alcuni dei risultati restituiti gli attributi specifici potrebbero non essere estremamente precisi.
+      * Sono supportati JPEG, PNG, GIF (il primo fotogramma) e formato BMP. Le dimensioni del file immagine consentito va da 1KB a 6MB.
+      * Fino a 100 facce possono essere restituite per un'immagine. I volti vengono classificati in base a dimensioni del riquadro viso dalla grande al più piccolo.
+      * Per ottenere risultati ottimali quando si eseguono query [affrontano: identificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [affrontano: verificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [viso
+      - Trovare Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' è true), usare facce: frontali, clear e con dimensioni minime pari a 200x200 pixel (100 pixel tra gli occhi).
+      * La dimensione minima rilevabili del volto è 36 x 36 pixel in un'immagine non maggiore di 1920 x 1080 pixel.
+      Le immagini con dimensioni superiori a 1920 x 1080 pixel necessario una dimensione minima viso proporzionalmente maggiore.
+      * È possibile specificare valori diversi 'detectionModel'. Per usare e confrontare i modelli di rilevamento diverso, fare riferimento a [come specificare un modello di rilevamento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modello | Uso consigliato-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Il modello di rilevamento predefinito per [viso-
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). Consigliati per il rilevamento di volti frontali quasi. Per gli scenari con visi (head-posa) angolo eccezionalmente grandi, le facce bloccate o orientamento dell'immagine non corretto, i visi in questi casi potrebbero non essere rilevati. | | 'detection_02': | Modello di rilevamento rilasciata in 2019 potrebbe con una maggiore precisione soprattutto sui volti di piccole dimensioni, lati e sfocati. |
+      * Vengono forniti diversi 'recognitionModel' valori. Se le operazioni di follow-up, Verify, identificare, trovare simili sono necessari, specificare il modello di riconoscimento con il parametro 'recognitionModel'. Il valore predefinito per 'recognitionModel' è 'recognition_01', se più recente modello necessarie, specificare in modo esplicito il modello che è necessario in questo parametro. Una volta specificate, il faceIds rilevato sarà associata al modello di riconoscimento specificato. Altri dettagli, consultare [come specificare un modello di riconoscimento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | Modello | Uso consigliato-case(s) |
+      | ---------- | -------- |
+      | 'recognition_01': | Il modello di riconoscimento predefinito per [viso-
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). Tutti questi faceIds creato prima di marzo 2019 sono associato a questo modello di riconoscimento. | | 'recognition_02': | Modello di riconoscimento rilasciata a marzo 2019. 'recognition_02' è consigliabile perché l'accuratezza complessiva è stata migliorata rispetto a 'recognition_01'. |
     syntax:
       content: 'function detectWithStream(image: msRest.HttpRequestBody, options?: Models.FaceDetectWithStreamOptionalParams)'
       parameters:
@@ -139,16 +160,26 @@ items:
       - typeScript
     summary: |-
       Rileva i visi in un'immagine, rettangoli restituito e, facoltativamente, con faceIds, punti di riferimento e gli attributi.<br />
-      * Parametri facoltativi come faceId, punti di riferimento e gli attributi. Gli attributi includono età, sesso, headPose, smile, facialHair, bicchieri, emozioni, sorriso, composizione, relative all'occlusione, Accessori, Sfocatura, l'esposizione e rumore.
-      * La funzionalità di volti estratti, anziché l'immagine effettiva, verrà archiviata nel server. Il faceId è un identificatore della funzionalità di visi e verrà usata in [affrontano: identificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [affrontano: verificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [viso
-      - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237). Scadenza 24 ore dopo la chiamata di rilevamento.
-      * Qualità dell'immagine superiore viso significa rilevamento migliorato e una precisione di riconoscimento. Prendere in considerazione i volti di alta qualità: volti frontali e clear dimensioni sono 200 x 200 pixel (100 pixel tra gli occhi) o più grandi.
+      * Nessuna immagine verrà archiviata. Solo la funzionalità di volti estratti verrà archiviata nel server. Il faceId è un identificatore della funzionalità di visi e verrà usata in [affrontano: identificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [affrontano: verificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [viso
+      - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).
+      Le funzionalità di visi archiviati scadranno e verranno eliminate 24 ore dopo la chiamata di rilevamento originale.
+      * I parametri facoltativi includono faceId, punti di riferimento e gli attributi. Gli attributi includono età, sesso, headPose, smile, facialHair, bicchieri, emozioni, sorriso, composizione, relative all'occlusione, Accessori, Sfocatura, l'esposizione e rumore. Alcuni dei risultati restituiti gli attributi specifici potrebbero non essere estremamente precisi.
       * Sono supportati JPEG, PNG, GIF (il primo fotogramma) e formato BMP. Le dimensioni del file immagine consentito va da 1KB a 6MB.
-      * I volti sono rilevabili quando la dimensione pari a 36 x 36 per 4096x4096 pixel. Se è necessario rilevare i visi molto piccoli, ma non crittografati, provare a ingrandire l'immagine di input.
-      * Fino a 64 volti possono essere restituiti per un'immagine. I volti vengono classificati in base a dimensioni del riquadro viso dalla grande al più piccolo.
-      * Rilevamento volti preferisce volti frontali e quasi frontali. Esistono casi in cui i visi non possono essere angoli del volto rilevati, ad esempio eccezionalmente grandi (head-posa) o in corso bloccati o orientamento dell'immagine non corretto.
-      * Attributi (età, sesso, headPose, smile, facialHair, bicchieri, emozioni, selettore di precisione, struttura, relative all'occlusione, Accessori, Sfocatura, l'esposizione e rumore) potrebbero non essere perfettamente accurati. Valore di passi del HeadPose è un campo riservato e restituirà sempre 0.
+      * Fino a 100 facce possono essere restituite per un'immagine. I volti vengono classificati in base a dimensioni del riquadro viso dalla grande al più piccolo.
+      * Per ottenere risultati ottimali quando si eseguono query [affrontano: identificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [affrontano: verificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [viso
+      - Trovare Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' è true), usare facce: frontali, clear e con dimensioni minime pari a 200x200 pixel (100 pixel tra gli occhi).
+      * La dimensione minima rilevabili del volto è 36 x 36 pixel in un'immagine non maggiore di 1920 x 1080 pixel.
+      Le immagini con dimensioni superiori a 1920 x 1080 pixel necessario una dimensione minima viso proporzionalmente maggiore.
+      * È possibile specificare valori diversi 'detectionModel'. Per usare e confrontare i modelli di rilevamento diverso, fare riferimento a [come specificare un modello di rilevamento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modello | Uso consigliato-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Il modello di rilevamento predefinito per [viso-
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). Consigliati per il rilevamento di volti frontali quasi. Per gli scenari con visi (head-posa) angolo eccezionalmente grandi, le facce bloccate o orientamento dell'immagine non corretto, i visi in questi casi potrebbero non essere rilevati. | | 'detection_02': | Modello di rilevamento rilasciata in 2019 potrebbe con una maggiore precisione soprattutto sui volti di piccole dimensioni, lati e sfocati. |
       * Vengono forniti diversi 'recognitionModel' valori. Se le operazioni di follow-up, Verify, identificare, trovare simili sono necessari, specificare il modello di riconoscimento con il parametro 'recognitionModel'. Il valore predefinito per 'recognitionModel' è 'recognition_01', se più recente modello necessarie, specificare in modo esplicito il modello che è necessario in questo parametro. Una volta specificate, il faceIds rilevato sarà associata al modello di riconoscimento specificato. Altri dettagli, consultare [come specificare un modello di riconoscimento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | Modello | Uso consigliato-case(s) |
+      | ---------- | -------- |
+      | 'recognition_01': | Il modello di riconoscimento predefinito per [viso-
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). Tutti questi faceIds creato prima di marzo 2019 sono associato a questo modello di riconoscimento. | | 'recognition_02': | Modello di riconoscimento rilasciata a marzo 2019. 'recognition_02' è consigliabile perché l'accuratezza complessiva è stata migliorata rispetto a 'recognition_01'. |
     syntax:
       content: 'function detectWithUrl(url: string, options?: Models.FaceDetectWithUrlOptionalParams)'
       parameters:

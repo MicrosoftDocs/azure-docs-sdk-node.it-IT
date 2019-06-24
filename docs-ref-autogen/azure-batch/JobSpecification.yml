@@ -1,0 +1,273 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobSpecification
+    name: JobSpecification
+    fullName: JobSpecification
+    children:
+      - azure-batch.JobSpecification.commonEnvironmentSettings
+      - azure-batch.JobSpecification.constraints
+      - azure-batch.JobSpecification.displayName
+      - azure-batch.JobSpecification.jobManagerTask
+      - azure-batch.JobSpecification.jobPreparationTask
+      - azure-batch.JobSpecification.jobReleaseTask
+      - azure-batch.JobSpecification.metadata
+      - azure-batch.JobSpecification.networkConfiguration
+      - azure-batch.JobSpecification.onAllTasksComplete
+      - azure-batch.JobSpecification.onTaskFailure
+      - azure-batch.JobSpecification.poolInfo
+      - azure-batch.JobSpecification.priority
+      - azure-batch.JobSpecification.usesTaskDependencies
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.commonEnvironmentSettings
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le singole attività possono eseguire l''override di un''impostazione di ambiente specificata qui, indicando lo stesso nome di impostazione con un valore diverso.'
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - azure-batch.JobConstraints
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il nome non deve essere univoco e può contenere qualsiasi carattere Unicode fino alla lunghezza massima pari a 1024.
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.jobManagerTask
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se il processo non specifica un''attività del gestore di processi, l''utente deve aggiungere in modo esplicito le attività al processo tramite l''API di attività. Se il processo specifica un''attività del gestore di processi, il servizio Batch crea l''attività di gestore di processi quando il processo viene creato e verrà effettuato un tentativo pianificare l''attività di gestore di processi prima di pianificare altre attività nel processo.'
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - azure-batch.JobManagerTask
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.jobPreparationTask
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se un processo con un''attività di preparazione del processo, il servizio Batch eseguirà l''attività di preparazione del processo in un nodo prima di avviare qualsiasi attività del processo su tale nodo di calcolo.'
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - azure-batch.JobPreparationTask
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.jobReleaseTask
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lo scopo principale dell'attività di rilascio del processo è possibile annullare le modifiche ai nodi effettuate dall'attività di preparazione del processo. Le attività di esempio includono l'eliminazione di file locali o servizi che sono stati avviati come parte della preparazione del processo in corso l'arresto. Impossibile specificare un'attività di rilascio del processo senza specificare anche un'attività di preparazione del processo per il processo. Il servizio Batch esegue le attività di rilascio del processo nei nodi di calcolo che sono state eseguite le attività di preparazione del processo.
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - azure-batch.JobReleaseTask
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il servizio Batch non assegna alcun significato ai metadati. si tratta esclusivamente per l'uso del codice utente.
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.networkConfiguration
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - azure-batch.JobNetworkConfiguration
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.onAllTasksComplete
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Si noti che se un processo non contiene attività, quindi tutte le attività vengono considerate completate.
+      Questa opzione è pertanto più comunemente utilizzata con un'attività di gestore di processi. Se si desidera utilizzare terminazione processo automatica senza un gestore di processi, è inizialmente necessario impostare onAllTasksComplete noaction e aggiornare le proprietà del processo per impostare onAllTasksComplete terminatejob dopo aver completato l'aggiunta di attività. Il valore predefinito è noaction. I valori possibili sono: 'noAction', 'terminateJob'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.onTaskFailure
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il valore predefinito è noaction. I valori possibili sono: ''noAction'', ''performExitOptionsJobAction'''
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.poolInfo
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - azure-batch.PoolInformation
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'I valori di priorità possono variare tra -1000 e 1000, dove-1000 rappresenta la priorità più bassa e 1000 la priorità più alta. Il valore predefinito è 0. Questa priorità viene usata come impostazione predefinita per tutti i processi nella pianificazione del processo. È possibile aggiornare la priorità del processo dopo che è stata creata usando l''API di processo di aggiornamento.'
+    optional: true
+    syntax:
+      content: 'priority?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.JobSpecification.usesTaskDependencies
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: azure-batch.JobConstraints
+  - uid: azure-batch.JobManagerTask
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: azure-batch.JobManagerTask
+  - uid: azure-batch.JobPreparationTask
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: azure-batch.JobPreparationTask
+  - uid: azure-batch.JobReleaseTask
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: azure-batch.JobReleaseTask
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.JobNetworkConfiguration
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: azure-batch.JobNetworkConfiguration
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: azure-batch.PoolInformation

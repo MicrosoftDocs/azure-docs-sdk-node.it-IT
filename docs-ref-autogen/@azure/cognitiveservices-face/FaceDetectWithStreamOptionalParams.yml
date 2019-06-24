@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.abortSignal'
       - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.customHeaders'
+      - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.detectionModel'
       - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.onDownloadProgress'
       - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.onUploadProgress'
       - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.recognitionModel'
@@ -50,6 +51,21 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.detectionModel'
+    name: detectionModel
+    fullName: detectionModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Nome del modello di rilevamento. Modello di rilevamento viene utilizzato per rilevare volti nell''immagine inviato. È possibile specificare il nome di un modello di rilevamento quando si eseguono di viso - rilevare o faccia di aggiungere FaceList - aggiungere faccia o un gruppo di persone (grande) - (grande). Il valore predefinito è ''detection_01'', se è necessario un altro modello, in modo esplicito specificarla. I valori possibili sono: ''detection_01'', ''detection_02''. Il valore predefinito: ''detection_01''.'
+    optional: true
+    syntax:
+      content: 'detectionModel?: DetectionModel'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.DetectionModel'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -174,6 +190,12 @@ items:
           - undefined | number
     package: '@azure/cognitiveservices-face'
 references:
+  - uid: '@azure/cognitiveservices-face.DetectionModel'
+    name: DetectionModel
+    spec.typeScript:
+      - name: DetectionModel
+        fullName: DetectionModel
+        uid: '@azure/cognitiveservices-face.DetectionModel'
   - uid: '@azure/cognitiveservices-face.RecognitionModel'
     name: RecognitionModel
     spec.typeScript:

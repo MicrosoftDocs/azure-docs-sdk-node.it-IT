@@ -86,7 +86,24 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Aggiungere un volto a un elenco di visi di grandi dimensioni. Quadrante dell'input viene specificato come un'immagine con un rettangolo targetFace. Restituisce un persistedFaceId che rappresenta il volto aggiunto e persistedFaceId non scadranno.
+    summary: |-
+      Aggiungere un volto a un elenco di visi di grandi dimensioni specificato, fino a 1.000.000 visi.
+      <br /> Per gestire un'immagine contiene più volti, viso input può essere specificato come un'immagine con un rettangolo targetFace. Restituisce un persistedFaceId che rappresenta il volto aggiunto. Nessuna immagine verrà archiviata. Solo la funzionalità di volti estratti verrà archiviata nel server fino a quando [LargeFaceList viso - eliminare](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) oppure [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) viene chiamato.
+      <br /> Nota persistedFaceId è diverso da faceId generato dal [affrontano: rilevare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Qualità dell'immagine superiore viso significa maggiore precisione il riconoscimento. Prendere in considerazione i volti di alta qualità: volti frontali e clear dimensioni sono 200 x 200 pixel (100 pixel tra gli occhi) o più grandi.
+      * Sono supportati JPEG, PNG, GIF (il primo fotogramma) e formato BMP. Le dimensioni del file immagine consentito va da 1KB a 6MB.
+      * "targetFace" rettangolo deve contenere una faccia. Zero o più visi saranno considerati come un errore. Se il rettangolo specificato "targetFace" non viene restituito da [affrontano: rilevare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), non c'è garanzia per rilevi e aggiunga correttamente il viso.
+      * All'esterno delle dimensioni rilevabili del volto (36 x 36 a 4096 x 4096 pixel), large occlusions head posa o grandi dimensioni provocherà errori.
+      * Aggiunta/eliminazione di volti a/da un elenco di visi stesso vengono elaborati in sequenza e diversi volti da e verso gli elenchi sono in parallelo.
+      * La dimensione minima rilevabili del volto è 36 x 36 pixel in un'immagine non maggiore di 1920 x 1080 pixel.
+      Le immagini con dimensioni superiori a 1920 x 1080 pixel necessario una dimensione minima viso proporzionalmente maggiore.
+      * È possibile specificare valori diversi 'detectionModel'. Per usare e confrontare i modelli di rilevamento diverso, fare riferimento a [come specificare un modello di rilevamento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modello | Uso consigliato-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Il modello di rilevamento predefinito per [LargeFaceList - Aggiungi
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3). Consigliati per il rilevamento di volti frontali quasi. Per gli scenari con visi (head-posa) angolo eccezionalmente grandi, le facce bloccate o orientamento dell'immagine non corretto, i visi in questi casi potrebbero non essere rilevati. | | 'detection_02': | Modello di rilevamento rilasciata in 2019 potrebbe con una maggiore precisione soprattutto sui volti di piccole dimensioni, lati e sfocati. | Quota:
+      * Quota sottoscrizione di livello gratuito: 1.000 visi per ogni elenco di visi di grandi dimensioni.
+      * Quota della sottoscrizione per livello s0: 1.000.000 visi per ogni elenco di visi di grandi dimensioni.
     syntax:
       content: 'function addFaceFromStream(largeFaceListId: string, image: msRest.HttpRequestBody, options?: Models.LargeFaceListAddFaceFromStreamOptionalParams)'
       parameters:
@@ -171,7 +188,24 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Aggiungere un volto a un elenco di visi di grandi dimensioni. Quadrante dell'input viene specificato come un'immagine con un rettangolo targetFace. Restituisce un persistedFaceId che rappresenta il volto aggiunto e persistedFaceId non scadranno.
+    summary: |-
+      Aggiungere un volto a un elenco di visi di grandi dimensioni specificato, fino a 1.000.000 visi.
+      <br /> Per gestire un'immagine contiene più volti, viso input può essere specificato come un'immagine con un rettangolo targetFace. Restituisce un persistedFaceId che rappresenta il volto aggiunto. Nessuna immagine verrà archiviata. Solo la funzionalità di volti estratti verrà archiviata nel server fino a quando [LargeFaceList viso - eliminare](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) oppure [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) viene chiamato.
+      <br /> Nota persistedFaceId è diverso da faceId generato dal [affrontano: rilevare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Qualità dell'immagine superiore viso significa maggiore precisione il riconoscimento. Prendere in considerazione i volti di alta qualità: volti frontali e clear dimensioni sono 200 x 200 pixel (100 pixel tra gli occhi) o più grandi.
+      * Sono supportati JPEG, PNG, GIF (il primo fotogramma) e formato BMP. Le dimensioni del file immagine consentito va da 1KB a 6MB.
+      * "targetFace" rettangolo deve contenere una faccia. Zero o più visi saranno considerati come un errore. Se il rettangolo specificato "targetFace" non viene restituito da [affrontano: rilevare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), non c'è garanzia per rilevi e aggiunga correttamente il viso.
+      * All'esterno delle dimensioni rilevabili del volto (36 x 36 a 4096 x 4096 pixel), large occlusions head posa o grandi dimensioni provocherà errori.
+      * Aggiunta/eliminazione di volti a/da un elenco di visi stesso vengono elaborati in sequenza e diversi volti da e verso gli elenchi sono in parallelo.
+      * La dimensione minima rilevabili del volto è 36 x 36 pixel in un'immagine non maggiore di 1920 x 1080 pixel.
+      Le immagini con dimensioni superiori a 1920 x 1080 pixel necessario una dimensione minima viso proporzionalmente maggiore.
+      * È possibile specificare valori diversi 'detectionModel'. Per usare e confrontare i modelli di rilevamento diverso, fare riferimento a [come specificare un modello di rilevamento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modello | Uso consigliato-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | Il modello di rilevamento predefinito per [LargeFaceList - Aggiungi
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3). Consigliati per il rilevamento di volti frontali quasi. Per gli scenari con visi (head-posa) angolo eccezionalmente grandi, le facce bloccate o orientamento dell'immagine non corretto, i visi in questi casi potrebbero non essere rilevati. | | 'detection_02': | Modello di rilevamento rilasciata in 2019 potrebbe con una maggiore precisione soprattutto sui volti di piccole dimensioni, lati e sfocati. | Quota:
+      * Quota sottoscrizione di livello gratuito: 1.000 visi per ogni elenco di visi di grandi dimensioni.
+      * Quota della sottoscrizione per livello s0: 1.000.000 visi per ogni elenco di visi di grandi dimensioni.
     syntax:
       content: 'function addFaceFromUrl(largeFaceListId: string, url: string, options?: Models.LargeFaceListAddFaceFromUrlOptionalParams)'
       parameters:
@@ -255,14 +289,15 @@ items:
     summary: |-
       Creare un elenco di visi di grandi dimensioni vuota con largeFaceListId specificato dall'utente, il nome, un userData facoltativo e recognitionModel.
       <br /> Elenco di visi di grandi dimensioni è riportato un elenco di visi, fino a 1.000.000 visi e utilizzato da [volto - ricerca simile](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).
-      <br /> Dopo la creazione, l'utente deve utilizzare [LargeFaceList viso - aggiungere](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) per importare i visi e [LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) per renderlo pronto per il [viso - FindSimilar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237). Visi archiviati nel server fino a quando [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) viene chiamato.
+      <br /> Dopo la creazione, l'utente deve utilizzare [LargeFaceList viso - aggiungere](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) per importare i visi e [LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) per renderlo pronto per il [volto - ricerca simile](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237). Nessuna immagine verrà archiviata. Solo le funzionalità di volti estratti vengono archiviate nel server fino a quando [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) viene chiamato.
       <br /> Trovare che simile viene utilizzato per lo scenario come trovare visi simili a celebrità, visi simili filtro, o come una luce modo affrontano identificazione. Ma se l'utilizzo effettivo deve identificare una persona, usare [gruppo di persone](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
       [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) e [affrontano: identificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).
-      <br />
+      <br/>'recognitionModel' deve essere specificato da associare a questo elenco di visi di grandi dimensioni. Il valore predefinito per 'recognitionModel' è 'recognition_01', se il modello più recente è necessario specificare in modo esplicito il modello che è necessario in questo parametro. Nuove icone che vengono aggiunti a un elenco di visi grandi esistente verranno utilizzato il modello di riconoscimento che ha già associato alla raccolta. Le funzionalità esistenti di visi in un elenco di visi di grandi dimensioni non è possibile aggiornare a funzionalità estratte da un'altra versione del modello di riconoscimento.
+      * 'recognition_01': Il modello di riconoscimento predefinito per [LargeFaceList - creare](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc). Tutti gli elenchi tali viso grandi creati prima 2019 marzo sono associati a questo modello di riconoscimento.
+      * 'recognition_02': Modello di riconoscimento rilasciata a marzo 2019. 'recognition_02' è consigliabile perché l'accuratezza complessiva è stata migliorata rispetto a 'recognition_01'.
+      Quota dell'elenco viso di grandi dimensioni:
       * Quota sottoscrizione di livello gratuito: 64 gli elenchi di visi di grandi dimensioni.
       * Quota della sottoscrizione per livello s0: 1.000.000 gli elenchi di visi di grandi dimensioni.
-      <br />
-      'recognitionModel' deve essere specificato da associare a questo elenco di visi di grandi dimensioni. Il valore predefinito per 'recognitionModel' è 'recognition_01', se il modello più recente è necessario specificare in modo esplicito il modello che è necessario in questo parametro. Nuove icone che vengono aggiunti a un elenco di visi grandi esistente verranno utilizzato il modello di riconoscimento che ha già associato alla raccolta. Le funzionalità esistenti di visi in un elenco di visi di grandi dimensioni non è possibile aggiornare a funzionalità estratte da un'altra versione del modello di riconoscimento.
     syntax:
       content: 'function create(largeFaceListId: string, options?: Models.LargeFaceListCreateOptionalParams)'
       parameters:
@@ -308,7 +343,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Eliminare un'immagine esistente da un elenco di visi di grandi dimensioni (specificato da un persistedFaceId e un largeFaceListId). Verrà eliminati anche immagine persistente correlati alla superficie.
+    summary: |-
+      Eliminare una faccia da un elenco di visi grandi persistedFaceId e largeFaceListId specificato.
+      <br /> Aggiunta/eliminazione di volti a/da un elenco di visi grandi stesso vengono elaborati in sequenza e da e verso diversi volti grandi gli elenchi sono in parallelo.
     syntax:
       content: 'function deleteFace(largeFaceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -393,7 +430,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Eliminare un elenco di visi grandi esistente in base a faceListId. Persistente viso verranno eliminate anche le immagini nell'elenco di visi di grandi dimensioni.
+    summary: Eliminare un elenco di visi di grandi dimensioni specificato.
     syntax:
       content: 'function deleteMethod(largeFaceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:

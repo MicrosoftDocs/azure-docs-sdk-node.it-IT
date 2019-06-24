@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - azure-batch.TaskConstraints.maxTaskRetryCount
+      - azure-batch.TaskConstraints.maxWallClockTime
+      - azure-batch.TaskConstraints.retentionTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si noti che questo valore controlla specificamente il numero di tentativi per l''eseguibile dell''attività a causa di un codice di uscita diverso da zero. Il servizio Batch tenterà di attività una sola volta e quindi ripeterà fino a questo limite. Ad esempio, se il numero massimo di tentativi è 3, Batch eseguirà l''attività fino a 4 volte (una iniziale e 3 ulteriori tentativi). Se il numero massimo di tentativi è 0, il servizio Batch non ripeterà l''attività dopo il primo tentativo. Se il numero massimo di tentativi è -1, il servizio Batch ripete le attività senza limiti.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se non viene specificato, non alcun limite di tempo in quanto tempo l''esecuzione del processo.'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il valore predefinito è 7 giorni, vale a dire verrà mantenuta la directory di attività per 7 giorni a meno che non viene rimosso il nodo di calcolo o il processo viene eliminato.'
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

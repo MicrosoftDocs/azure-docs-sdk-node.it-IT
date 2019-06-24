@@ -39,16 +39,16 @@ items:
       - typeScript
     summary: |-
       Creare un nuovo gruppo di persone con personGroupId specificato, il nome, userData fornito dall'utente e recognitionModel.
-      <br /> Un gruppo di persone è il contenitore dei dati person caricati, incluse le immagini di visi e funzionalità di riconoscimento di volti.
+      <br /> Un gruppo di persone è il contenitore dei dati person caricati, incluse le funzionalità di riconoscimento di volti.
       <br /> Dopo la creazione, usare [creare gli utenti - gruppo di persone](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c) per aggiungere persone al gruppo e quindi chiamare [gruppo di persone - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) prepararsi per questo gruppo [affrontano: identificare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).
-      <br /> Viso della persona, immagine e userData verranno archiviati nel server fino a [gruppo di persone Person
-      - DELETE](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f3039523d) oppure [gruppo di persone - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) viene chiamato.
-      <br />
+      <br /> Nessuna immagine verrà archiviata. Solo la persona estratti di un viso funzionalità e userData verrà archiviata nel server fino a quando [gruppo di persone persona - eliminare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) oppure [gruppo di persone - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) viene chiamato.
+      <br/>'recognitionModel' deve essere specificato da associare a questo gruppo di persone. Il valore predefinito per 'recognitionModel' è 'recognition_01', se il modello più recente è necessario specificare in modo esplicito il modello che è necessario in questo parametro. Nuove icone che vengono aggiunti a un gruppo di persona esistente verranno utilizzato il modello di riconoscimento che ha già associato alla raccolta. Non è possibile aggiornare le funzionalità esistenti di visi in un gruppo di persone alle funzionalità estratte da un'altra versione del modello di riconoscimento.
+      * 'recognition_01': Il modello di riconoscimento predefinito per [gruppo di persone - creare](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244). Tutti i gruppi persona creati prima di marzo 2019 sono associati a questo modello di riconoscimento.
+      * 'recognition_02': Modello di riconoscimento rilasciata a marzo 2019. 'recognition_02' è consigliabile perché l'accuratezza complessiva è stata migliorata rispetto a 'recognition_01'.
+      Quota del gruppo persona:
       * Quota sottoscrizione di livello gratuito: gruppi di persone 1.000. Ognuno contiene fino a 1.000 persone.
       * Quota della sottoscrizione per livello s0: gruppi di persone 1.000.000. Ognuno contiene fino a 10.000 persone.
       * per gestire più grande problema identificazione viso della scalabilità, provare a usare [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).
-      <br />
-      'recognitionModel' deve essere specificato da associare a questo gruppo di persone. Il valore predefinito per 'recognitionModel' è 'recognition_01', se il modello più recente è necessario specificare in modo esplicito il modello che è necessario in questo parametro. Nuove icone che vengono aggiunti a un gruppo di persona esistente verranno utilizzato il modello di riconoscimento che ha già associato alla raccolta. Non è possibile aggiornare le funzionalità esistenti di visi in un gruppo di persone alle funzionalità estratte da un'altra versione del modello di riconoscimento.
     syntax:
       content: 'function create(personGroupId: string, options?: Models.PersonGroupCreateOptionalParams)'
       parameters:

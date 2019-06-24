@@ -1,0 +1,89 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.CertificateReference
+    name: CertificateReference
+    fullName: CertificateReference
+    children:
+      - azure-batch.CertificateReference.storeLocation
+      - azure-batch.CertificateReference.storeName
+      - azure-batch.CertificateReference.thumbprint
+      - azure-batch.CertificateReference.thumbprintAlgorithm
+      - azure-batch.CertificateReference.visibility
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.storeLocation
+    name: storeLocation
+    fullName: storeLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il valore predefinito è currentuser. Questa proprietà è applicabile solo per i pool configurati con nodi di calcolo Windows (che è, creati con cloudServiceConfiguration o con virtualMachineConfiguration utilizzando un riferimento all''immagine di Windows). Per i nodi di calcolo Linux, i certificati vengono archiviati in una directory all''interno dell''attività working directory e una variabile di ambiente che az_batch_certificates_dir viene fornito per l''attività per eseguire una query per questa posizione. Per i certificati con visibilità "remoteuser", viene creata una directory "certs" nella directory home dell''utente (ad esempio, /home/ {nome_utente} / certs) e i certificati vengono posizionati in tale directory. I valori possibili sono: ''currentUser'', ''localMachine'''
+    optional: true
+    syntax:
+      content: 'storeLocation?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.storeName
+    name: storeName
+    fullName: storeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Questa proprietà è applicabile solo per i pool configurati con nodi di calcolo Windows (che è, creati con cloudServiceConfiguration o con virtualMachineConfiguration utilizzando un riferimento all''immagine di Windows). I nomi di archivio comuni includono: My, CA radice, Trust, non consentito, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, ma qualsiasi nome di archivio personalizzato possa anche essere usato. Il valore predefinito è My.'
+    optional: true
+    syntax:
+      content: 'storeName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.thumbprint
+    name: thumbprint
+    fullName: thumbprint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'thumbprint: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.thumbprintAlgorithm
+    name: thumbprintAlgorithm
+    fullName: thumbprintAlgorithm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'thumbprintAlgorithm: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.visibility
+    name: visibility
+    fullName: visibility
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: È possibile specificare più di una visibilità in questa raccolta. Il valore predefinito è tutti gli account.
+    optional: true
+    syntax:
+      content: 'visibility?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch

@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.StartTask
+    name: StartTask
+    fullName: StartTask
+    children:
+      - azure-batch.StartTask.commandLine
+      - azure-batch.StartTask.containerSettings
+      - azure-batch.StartTask.environmentSettings
+      - azure-batch.StartTask.maxTaskRetryCount
+      - azure-batch.StartTask.resourceFiles
+      - azure-batch.StartTask.userIdentity
+      - azure-batch.StartTask.waitForSuccess
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Batch verrà effettuati tentativi attività quando viene attivata un''operazione di ripristino in un nodo. Esempi di operazioni di ripristino includono (ma non sono limitati a) quando un nodo non integro viene riavviato o un nodo di calcolo è scomparso a causa dell''errore dell''host. Ritenta l''esecuzione a causa di un ripristino operazioni sono indipendenti e non vengono conteggiate rispetto al limite in maxTaskRetryCount. Anche se il maxTaskRetryCount è 0, può verificarsi una ripetizione dei tentativi interni a causa di un''operazione di ripristino. Per questo motivo, tutte le attività devono essere idempotenti. Ciò significa che attività necessario tollerare viene interrotto e riavviato senza causare alcun danneggiamento o dei dati duplicati. La migliore pratica per le attività a esecuzione prolungata è usare qualche forma di checkpoint. In alcuni casi l''inizio attività può essere nuovamente eseguito anche se il nodo di calcolo non è stato riavviato. Dovrebbe prestare particolare attenzione per evitare di avviare le attività che creano breakaway elaborano o installare/avviare servizi dall''inizio directory di lavoro attività, poiché impedisce Batch in grado di eseguire nuovamente l''attività di avvio.'
+    package: azure-batch
+  - uid: azure-batch.StartTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La riga di comando non viene eseguito con una shell e pertanto non possono sfruttare le funzionalità della shell, ad esempio l''espansione della variabile di ambiente. Se si desidera sfruttare i vantaggi di queste funzionalità, è necessario richiamare la shell nella riga di comando, usando ad esempio "cmd /c nomecomando" in Windows o "/ bin/sh - c nomecomando" in Linux. Se la riga di comando fa riferimento ai percorsi del file, deve usare un percorso relativo (relativo alla directory di lavoro) o usare la variabile di ambiente specificato di Batch (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.StartTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Quando viene specificato, tutte le directory in modo ricorsivo sotto il AZ_BATCH_NODE_ROOT_DIR (la radice della directory di Azure Batch nel nodo) vengono mappate nel contenitore, le variabili di ambiente tutte le attività vengono mappate nel contenitore e la riga di comando di attività eseguita nel contenitore. File generati nel contenitore di fuori di AZ_BATCH_NODE_ROOT_DIR non vengano riflesse nel disco host, vale a dire che le API di file Batch non sarà in grado di accedere a tali file.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.StartTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il servizio Batch ripete un''attività se il codice di uscita è diverso da zero. Si noti che questo valore controlla specificamente il numero di tentativi. Il servizio Batch tenterà di attività una sola volta e quindi ripeterà fino a questo limite. Ad esempio, se il numero massimo di tentativi è 3, Batch eseguirà l''attività fino a 4 volte (una iniziale e 3 ulteriori tentativi). Se il numero massimo di tentativi è 0, il servizio Batch non ripeterà l''attività. Se il numero massimo di tentativi è -1, il servizio Batch ripete le attività senza limiti.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.StartTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: I file elencati sotto questo elemento si trovano nella directory di lavoro dell'attività.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se omesso, l''attività viene eseguito come un utente non amministratore univoco per l''attività.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+  - uid: azure-batch.StartTask.waitForSuccess
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se true e l''inizio attività non riesce in un nodo, il servizio Batch ripete l''attività di avvio fino al relativo numero massimo di tentativi (maxTaskRetryCount). Se l''attività è ancora non completata dopo tutti i tentativi, quindi i segni di servizio Batch inutilizzabile il nodo e non verrà pianificata attività ad esso. Questa condizione può essere rilevata tramite i dettagli di informazioni sul nodo di calcolo dello stato e non riuscite. Se false, il servizio Batch non attenderà il completamento dell''attività di avvio. In questo caso, altre attività di avvio dell''esecuzione nel nodo di calcolo durante l''avvio di che attività è ancora in esecuzione; e anche se l''inizio attività non riesce, le nuove attività continuerà a essere pianificata nel nodo di calcolo. Il valore predefinito è false.'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity
