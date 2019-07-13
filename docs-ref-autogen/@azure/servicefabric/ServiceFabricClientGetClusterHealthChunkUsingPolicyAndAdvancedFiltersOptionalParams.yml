@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parametri facoltativi.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -40,7 +40,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Descrive i criteri di integrità del cluster e dell'applicazione usati per valutare l'integrità del cluster e i filtri per selezionare le entità del cluster da restituire.
+      Se i criteri di integrità del cluster sono presenti, questo viene usato per valutare gli eventi del cluster e i nodi del cluster. Se non è presente, gli utilizzi di valutazione di integrità criteri di integrità del cluster definito nel manifesto del cluster o i criteri di integrità del cluster predefinito.
+      Per impostazione predefinita, ogni applicazione viene valutato usando i relativi criteri di integrità specifiche dell'applicazione, definito nel manifesto dell'applicazione o i criteri di integrità predefinito, se è definito alcun criterio nel manifesto.
+      Se viene specificata la mappa dei criteri di integrità dell'applicazione, e ha una voce per un'applicazione, i criteri di integrità dell'applicazione specificato consente di valutare l'integrità dell'applicazione.
+      Gli utenti possono specificare i filtri molto flessibili per selezionare le entità del cluster da includere nella risposta. La selezione può essere eseguita in base a sullo stato di integrità entità e gerarchia in base.
+      La query può restituire a più livelli figlio delle entità in base ai filtri specificati. Ad esempio, può restituire un'applicazione con il nome specificato e per questa applicazione, restituire solo i servizi che sono in errore o avviso e tutte le partizioni e repliche per uno di questi servizi.
     optional: true
     syntax:
       content: 'clusterHealthChunkQueryDescription?: ClusterHealthChunkQueryDescription'
@@ -115,7 +121,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Il timeout del server per eseguire l''operazione in pochi secondi. Questo timeout specifica la durata di tempo che il client è disposto ad attendere il completamento dell''operazione richiesta. Il valore predefinito per questo parametro è 60 secondi. Valore predefinito: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

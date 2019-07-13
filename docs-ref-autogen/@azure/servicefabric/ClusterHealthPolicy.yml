@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    fullName: ClusterHealthPolicy
+    children:
+      - '@azure/servicefabric.ClusterHealthPolicy.applicationTypeHealthPolicyMap'
+      - '@azure/servicefabric.ClusterHealthPolicy.considerWarningAsError'
+      - '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyApplications'
+      - '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyNodes'
+    langs:
+      - typeScript
+    type: interface
+    summary: Definisce un criterio di integrità usato per valutare l'integrità del cluster o di un nodo del cluster.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.applicationTypeHealthPolicyMap'
+    name: applicationTypeHealthPolicyMap
+    fullName: applicationTypeHealthPolicyMap
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Definisce una mappa con una percentuale massima di applicazioni non integre per tipi di applicazione specifici.
+      Ogni voce specifica come chiave il nome del tipo di applicazione e come valore un valore intero che rappresenta la percentuale MaxPercentUnhealthyApplications usata per valutare le applicazioni del tipo di applicazione specificato.
+      La mappa dei criteri di integrità dei tipi di applicazioni può essere usata durante la valutazione dell'integrità del cluster per descrivere i tipi di applicazioni speciali.
+      I tipi di applicazioni inclusi nella mappa vengono valutati rispetto alla percentuale specificata nella mappa, non con il valore MaxPercentUnhealthyApplications globale definito nei criteri di integrità del cluster.
+      Le applicazioni dei tipi specificati nella mappa non vengono conteggiate nel pool globale di applicazioni.
+      Ad esempio, se alcune applicazioni di un tipo sono di importanza critica, l'amministratore del cluster può aggiungere una voce alla mappa per tale tipo di applicazioni e assegnarle un valore pari a 0% (ovvero, non tollerare alcun errore).
+      Tutte le altre applicazioni possono essere valutate con MaxPercentUnhealthyApplications impostato sul 20%, in modo da tollerare alcuni errori dalle migliaia di istanze dell'applicazione.
+      La mappa dei criteri di integrità dei tipi di applicazioni viene usata solo se il manifesto del cluster consente la valutazione dell'integrità dei tipi di applicazioni usando la voce di configurazione per HealthManager/EnableApplicationTypeHealthEvaluation.
+    optional: true
+    syntax:
+      content: 'applicationTypeHealthPolicyMap?: ApplicationTypeHealthPolicyMapItem[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.considerWarningAsError'
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indica se gli avvisi vengono considerati con lo stesso livello di gravità degli errori. Il valore predefinito: false.'
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyApplications'
+    name: maxPercentUnhealthyApplications
+    fullName: maxPercentUnhealthyApplications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Percentuale massima consentita di applicazioni non integre prima che venga segnalato un errore. Ad esempio, per consentire il 10% di applicazioni non integre, questo valore deve corrispondere a 10.
+      La percentuale rappresenta la percentuale massima tollerata di applicazioni che possono risultare non integre prima che per il cluster venga impostato lo stato Error.
+      Se la percentuale viene rispettata ma esiste almeno un'applicazione non integra, l'integrità viene valutata come Avviso.
+      Questa viene calcolata dividendo il numero di applicazioni non integre rispetto al numero totale di istanze dell'applicazione nel cluster, escluse le applicazioni di tipi inclusi nel parametro ApplicationTypeHealthPolicyMap.
+      Il calcolo viene arrotondato per eccesso per tollerare un errore su un numero limitato di applicazioni. La percentuale predefinita è zero. Valore predefinito: 0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyApplications?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyNodes'
+    name: maxPercentUnhealthyNodes
+    fullName: maxPercentUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Percentuale massima consentita di nodi non integri prima che venga segnalato un errore. Ad esempio, per consentire il 10% di nodi non integri, questo valore deve corrispondere a 10.
+      La percentuale rappresenta la percentuale massima tollerata di nodi che possono risultare non integri prima che per il cluster venga impostato lo stato Error.
+      Se la percentuale viene rispettata ma esiste almeno un nodo non integro, l'integrità viene valutata come Avviso.
+      Tale percentuale viene calcolata dividendo il numero dei nodi non integri per il numero totale di nodi nel cluster.
+      Il calcolo viene arrotondato per eccesso per tollerare un errore su un numero limitato di nodi. La percentuale predefinita è zero.
+
+      Questa percentuale dovrà essere configurata in modo da tenere conto del fatto che in cluster di grandi dimensioni sono sempre presenti nodi inattivi o in fase di riparazione. Valore predefinito: 0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem[]'
+    name: 'ApplicationTypeHealthPolicyMapItem[]'
+    spec.typeScript:
+      - name: ApplicationTypeHealthPolicyMapItem
+        fullName: ApplicationTypeHealthPolicyMapItem
+        uid: '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription'
+    name: ServicePlacementRequireDomainDistributionPolicyDescription
+    fullName: ServicePlacementRequireDomainDistributionPolicyDescription
+    children:
+      - '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName'
+      - '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Descrive i criteri da utilizzare per la selezione host di un servizio di Service Fabric in cui due repliche della stessa partizione non devono mai risiedere nello stesso dominio di errore o di aggiornamento.
+      Sebbene non sia più comune può esporre il servizio a un maggior rischio di errori simultanei a causa di interruzioni non pianificate o gli altri casi di errori successivi/simultanee. Ad esempio, si consideri il caso in cui le repliche vengono distribuite in diversi data center, con una replica per ogni posizione. Nel caso in cui uno dei Data Center passa alla modalità offline, in genere la replica che è stata inserita nel Data Center verrà compressi in uno dei Data Center rimanenti. Se non è opportuno quindi questo criterio deve essere impostato.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName'
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il nome del dominio che deve essere usato per la selezione host in base ai criteri.
+    optional: true
+    syntax:
+      content: 'domainName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'type: "RequireDomainDistribution"'
+      return:
+        type:
+          - '"RequireDomainDistribution"'
+    package: '@azure/servicefabric'

@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parametri facoltativi.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -55,7 +55,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Flag che indica se il report deve essere inviato immediatamente.
+      Un report sull'integrità viene inviato a un'applicazione del gateway di Service Fabric, che lo inoltra all'archivio integrità.
+      Se Immediate è impostato su True, il report viene inviato immediatamente dal gateway HTTP all'archivio integrità, indipendentemente dalle impostazioni del client Fabric usate dall'applicazione gateway HTTP.
+      Questo è utile per i report critici che devono essere inviati appena possibile.
+      A seconda della tempistica e di altre condizioni, l'invio del report può tuttavia avere esito negativo, ad esempio se il gateway HTTP è chiuso o il messaggio non raggiunge il gateway.
+      Se Immediate è impostato su False, il report viene inviato in base alle impostazioni del client di integrità dal gateway HTTP. Verrà quindi inviato in batch in base alla configurazione di HealthReportSendInterval.
+      Questa è l'impostazione consigliata perché consente al client di integrità di ottimizzare la segnalazione di messaggi sull'integrità all'archivio integrità e l'elaborazione di report sull'integrità.
+      Per impostazione predefinita, i report non vengono inviati immediatamente. Il valore predefinito: false.
     optional: true
     syntax:
       content: 'immediate?: undefined | false | true'
@@ -115,7 +123,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Il timeout del server per eseguire l''operazione in pochi secondi. Questo timeout specifica la durata di tempo che il client è disposto ad attendere il completamento dell''operazione richiesta. Il valore predefinito per questo parametro è 60 secondi. Valore predefinito: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

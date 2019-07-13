@@ -16,7 +16,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parametri facoltativi.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -87,7 +87,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Tipo di chiave per la partizione. Questo parametro è obbligatorio se lo schema di partizione per il servizio è Int64Range o Named. I valori possibili sono i seguenti.
+      - None (1) - indica che il parametro PartitionKeyValue non è specificato. È valido per le partizioni con schema di partizionamento Singleton. Si tratta del valore predefinito. Il valore è uguale a 1.
+      - Int64Range (2) - indica che il parametro PartitionKeyValue è una chiave di partizione int64.
+      È valido per le partizioni con schema di partizionamento Int64Range. Il valore è 2.
+      - Named (3) - indica che il parametro PartitionKeyValue è un nome della partizione. È valido per le partizioni con schema di partizionamento Named. Il valore è 3.
     optional: true
     syntax:
       content: 'partitionKeyType?: undefined | number'
@@ -102,7 +107,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Chiave di partizione. Questo parametro è obbligatorio se lo schema di partizione per il servizio è Int64Range o Named.
+      Non si tratta dell'ID di partizione, ma piuttosto del valore chiave intero o del nome dell'ID di partizione.
+      Se, ad esempio, il servizio usa partizioni a intervalli da 0 a 10, il valore di PartitionKeyValue sarà un numero intero compreso in tale intervallo. Eseguire una query sulla descrizione del servizio per visualizzare l'intervallo o il nome.
     optional: true
     syntax:
       content: 'partitionKeyValue?: undefined | string'
@@ -117,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Valore nel campo Version della risposta ricevuta in precedenza. È obbligatorio se l'utente riconosce che il risultato ottenuto in precedenza non è aggiornato.
     optional: true
     syntax:
       content: 'previousRspVersion?: undefined | string'
@@ -147,7 +155,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Il timeout del server per eseguire l''operazione in pochi secondi. Questo timeout specifica la durata di tempo che il client è disposto ad attendere il completamento dell''operazione richiesta. Il valore predefinito per questo parametro è 60 secondi. Valore predefinito: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

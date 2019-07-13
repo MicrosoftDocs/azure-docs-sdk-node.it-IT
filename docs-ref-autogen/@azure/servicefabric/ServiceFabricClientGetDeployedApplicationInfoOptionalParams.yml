@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parametri facoltativi.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -55,7 +55,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Include lo stato di integrità di un'entità.
+      Se questo parametro è false o non viene specificato, lo stato di integrità restituito è "Unknown".
+      Quando è impostato su true, la query passa in parallelo al nodo e al servizio di sistema di integrità prima che i risultati vengano uniti.
+      Di conseguenza, la query è più costosa e può richiedere più tempo. Il valore predefinito: false.
     optional: true
     syntax:
       content: 'includeHealthState?: undefined | false | true'
@@ -115,7 +119,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Il timeout del server per eseguire l''operazione in pochi secondi. Questo timeout specifica la durata di tempo che il client è disposto ad attendere il completamento dell''operazione richiesta. Il valore predefinito per questo parametro è 60 secondi. Valore predefinito: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

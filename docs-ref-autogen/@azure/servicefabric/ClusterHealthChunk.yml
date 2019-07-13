@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthChunk'
+    name: ClusterHealthChunk
+    fullName: ClusterHealthChunk
+    children:
+      - '@azure/servicefabric.ClusterHealthChunk.applicationHealthStateChunks'
+      - '@azure/servicefabric.ClusterHealthChunk.healthState'
+      - '@azure/servicefabric.ClusterHealthChunk.nodeHealthStateChunks'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Rappresenta il blocco di integrità del cluster.
+      Contiene lo stato di integrità aggregato del cluster e l'entità del cluster che rispettano il filtro di input.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunk.applicationHealthStateChunks'
+    name: applicationHealthStateChunks
+    fullName: applicationHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'elenco di stato di integrità dell'applicazione vengono bloccati nel cluster che rispettano i filtri nella descrizione di query blocco di integrità del cluster.
+    optional: true
+    syntax:
+      content: 'applicationHealthStateChunks?: ApplicationHealthStateChunkList'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthStateChunkList'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunk.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Stato di integrità che rappresenta lo stato di integrità aggregato del cluster calcolato da Health Manager.
+      La valutazione dell'integrità dell'entità riflette tutti gli eventi segnalati sull'entità e relativi elementi figlio (se presente).
+      L'aggregazione viene eseguita applicando i criteri di integrità del cluster desiderato e i criteri di integrità dell'applicazione. I valori possibili sono: 'Invalid', 'Ok', 'Warning', 'Error', "Unknown".
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunk.nodeHealthStateChunks'
+    name: nodeHealthStateChunks
+    fullName: nodeHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'elenco dello stato di integrità nodo suddivide in cluster che rispettano i filtri nella descrizione di query blocco di integrità del cluster.
+    optional: true
+    syntax:
+      content: 'nodeHealthStateChunks?: NodeHealthStateChunkList'
+      return:
+        type:
+          - '@azure/servicefabric.NodeHealthStateChunkList'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunkList'
+    name: ApplicationHealthStateChunkList
+    spec.typeScript:
+      - name: ApplicationHealthStateChunkList
+        fullName: ApplicationHealthStateChunkList
+        uid: '@azure/servicefabric.ApplicationHealthStateChunkList'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.NodeHealthStateChunkList'
+    name: NodeHealthStateChunkList
+    spec.typeScript:
+      - name: NodeHealthStateChunkList
+        fullName: NodeHealthStateChunkList
+        uid: '@azure/servicefabric.NodeHealthStateChunkList'

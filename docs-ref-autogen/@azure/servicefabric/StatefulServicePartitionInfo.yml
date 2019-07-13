@@ -1,0 +1,163 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo'
+    name: StatefulServicePartitionInfo
+    fullName: StatefulServicePartitionInfo
+    children:
+      - '@azure/servicefabric.StatefulServicePartitionInfo.healthState'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.minReplicaSetSize'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.partitionInformation'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.partitionStatus'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.primaryEpoch'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.serviceKind'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: Informazioni su una partizione di un servizio di Service Fabric con stato...
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato di integrità di un''entità di Service Fabric come Cluster di nodo, applicazione, servizio, partizione, Replica e così via. I valori possibili sono: ''Invalid'', ''Ok'', ''Warning'', ''Error'', "Unknown".'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration'
+    name: lastQuorumLossDuration
+    fullName: lastQuorumLossDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La durata per cui questa partizione è stata una perdita di quorum. Se la partizione è attualmente in una perdita di quorum, restituisce la durata perché è stato in tale stato. Questo campo usa il formato ISO8601 per specificare la durata.'
+    optional: true
+    syntax:
+      content: 'lastQuorumLossDuration?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.minReplicaSetSize'
+    name: minReplicaSetSize
+    fullName: minReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dimensioni minime di un set di repliche sotto forma di numero.
+    optional: true
+    syntax:
+      content: 'minReplicaSetSize?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.partitionInformation'
+    name: partitionInformation
+    fullName: partitionInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Informazioni relative all''identità di partizione, lo schema e le chiavi supportate dalla funzione di partizionamento.'
+    optional: true
+    syntax:
+      content: 'partitionInformation?: PartitionInformationUnion'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionInformationUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.partitionStatus'
+    name: partitionStatus
+    fullName: partitionStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato della partizione del servizio service fabric. I valori possibili sono: ''Invalid'', ''Ready'', ''NotReady'', ''InQuorumLoss'', ''Reconfiguring'', ''Deleting'''
+    optional: true
+    syntax:
+      content: 'partitionStatus?: ServicePartitionStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePartitionStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.primaryEpoch'
+    name: primaryEpoch
+    fullName: primaryEpoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un periodo è un numero di configurazione per la partizione nel suo complesso. La configurazione della replica impostata quando le modifiche, ad esempio quando le modifiche della replica primaria, le operazioni che vengono replicate da nuova replica primaria vengono definite un periodo nuova da quelle che sono stati inviati dalla replica primaria precedente.'
+    optional: true
+    syntax:
+      content: 'primaryEpoch?: Epoch'
+      return:
+        type:
+          - '@azure/servicefabric.Epoch'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize'
+    name: targetReplicaSetSize
+    fullName: targetReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dimensioni di un set di repliche di destinazione sotto forma di numero.
+    optional: true
+    syntax:
+      content: 'targetReplicaSetSize?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.PartitionInformationUnion'
+    name: PartitionInformationUnion
+    spec.typeScript:
+      - name: PartitionInformationUnion
+        fullName: PartitionInformationUnion
+        uid: '@azure/servicefabric.PartitionInformationUnion'
+  - uid: '@azure/servicefabric.ServicePartitionStatus'
+    name: ServicePartitionStatus
+    spec.typeScript:
+      - name: ServicePartitionStatus
+        fullName: ServicePartitionStatus
+        uid: '@azure/servicefabric.ServicePartitionStatus'
+  - uid: '@azure/servicefabric.Epoch'
+    name: Epoch
+    spec.typeScript:
+      - name: Epoch
+        fullName: Epoch
+        uid: '@azure/servicefabric.Epoch'

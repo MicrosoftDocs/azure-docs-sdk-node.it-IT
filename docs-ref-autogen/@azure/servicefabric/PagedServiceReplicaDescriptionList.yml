@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedServiceReplicaDescriptionList'
+    name: PagedServiceReplicaDescriptionList
+    fullName: PagedServiceReplicaDescriptionList
+    children:
+      - '@azure/servicefabric.PagedServiceReplicaDescriptionList.continuationToken'
+      - '@azure/servicefabric.PagedServiceReplicaDescriptionList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: L'elenco di repliche di risorsa del servizio nel cluster. L'elenco viene eseguito il paging quando tutti i risultati non può essere contenuta in un singolo messaggio. Il set successivo di risultati può essere ottenuto eseguendo la stessa query con il token di continuazione specificato in questo elenco.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedServiceReplicaDescriptionList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il parametro del token di continuazione viene utilizzato per ottenere il set di risultati successivo. Il token di continuazione è incluso nella risposta dell'API quando i risultati dal sistema non rientrano in una singola risposta. Quando questo valore viene passato alla successiva chiamata API, l'API restituisce il set di risultati successivo.
+      Se non sono presenti altri risultati, il token di continuazione non è incluso nella risposta.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedServiceReplicaDescriptionList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco risorse replica della descrizione del servizio.
+    optional: true
+    syntax:
+      content: 'items?: ServiceReplicaDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceReplicaDescription[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceReplicaDescription[]'
+    name: 'ServiceReplicaDescription[]'
+    spec.typeScript:
+      - name: ServiceReplicaDescription
+        fullName: ServiceReplicaDescription
+        uid: '@azure/servicefabric.ServiceReplicaDescription'
+      - name: '[]'
+        fullName: '[]'

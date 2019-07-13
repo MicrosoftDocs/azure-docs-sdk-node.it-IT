@@ -1,0 +1,131 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.NodeHealth'
+    name: NodeHealth
+    fullName: NodeHealth
+    children:
+      - '@azure/servicefabric.NodeHealth.aggregatedHealthState'
+      - '@azure/servicefabric.NodeHealth.healthEvents'
+      - '@azure/servicefabric.NodeHealth.healthStatistics'
+      - '@azure/servicefabric.NodeHealth.name'
+      - '@azure/servicefabric.NodeHealth.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: Informazioni sull'integrità di un nodo di Service Fabric.
+    extends:
+      name: '@azure/servicefabric.EntityHealth'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealth.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Stato di integrità che rappresenta lo stato di integrità aggregato dell'entità calcolato da Health Manager.
+      La valutazione dell'integrità dell'entità riflette tutti gli eventi segnalati sull'entità e relativi elementi figlio (se presente).
+      L'aggregazione viene eseguita applicando i criteri di integrità desiderate. I valori possibili sono: 'Invalid', 'Ok', 'Warning', 'Error', "Unknown".
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealth.healthEvents'
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'elenco degli eventi di integrità segnalati nell'entità.
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealth.healthStatistics'
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostra le statistiche di integrità per tutti i tipi di elementi figlio dell'entità sottoposti a query.
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - '@azure/servicefabric.HealthStatistics'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealth.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome del nodo il cui informazioni di integrità sono descritto da questo oggetto.
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealth.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le valutazioni non integre indicanti il motivo per cui lo stato di integrità aggregato è stato restituito dal gestore integrità.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealth'
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: '@azure/servicefabric.EntityHealth'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthStatistics'
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: '@azure/servicefabric.HealthStatistics'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

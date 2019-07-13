@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthPolicies'
+    name: ClusterHealthPolicies
+    fullName: ClusterHealthPolicies
+    children:
+      - '@azure/servicefabric.ClusterHealthPolicies.applicationHealthPolicyMap'
+      - '@azure/servicefabric.ClusterHealthPolicies.clusterHealthPolicy'
+    langs:
+      - typeScript
+    type: interface
+    summary: Criteri di integrità per valutare l'integrità del cluster.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicies.applicationHealthPolicyMap'
+    name: applicationHealthPolicyMap
+    fullName: applicationHealthPolicyMap
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Definisce una mappa che contiene i criteri di integrità specifiche dell'applicazione per applicazioni diverse.
+      Ogni voce specifica come chiave il nome dell'applicazione e come valore che un ApplicationHealthPolicy usati per valutare l'integrità dell'applicazione.
+      Se un'applicazione non viene specificata nella mappa, la valutazione dell'integrità dell'applicazione usa il ApplicationHealthPolicy trovato nel relativo manifesto dell'applicazione o i criteri di integrità dell'applicazione predefinito (se è definito alcun criterio di integrità nel manifesto).
+      Per impostazione predefinita la mappa è vuota.
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicyMap?: ApplicationHealthPolicyMapItem[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicyMapItem[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicies.clusterHealthPolicy'
+    name: clusterHealthPolicy
+    fullName: clusterHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Definisce un criterio di integrità usato per valutare l'integrità del cluster o di un nodo del cluster.
+    optional: true
+    syntax:
+      content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ClusterHealthPolicy'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthPolicyMapItem[]'
+    name: 'ApplicationHealthPolicyMapItem[]'
+    spec.typeScript:
+      - name: ApplicationHealthPolicyMapItem
+        fullName: ApplicationHealthPolicyMapItem
+        uid: '@azure/servicefabric.ApplicationHealthPolicyMapItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    spec.typeScript:
+      - name: ClusterHealthPolicy
+        fullName: ClusterHealthPolicy
+        uid: '@azure/servicefabric.ClusterHealthPolicy'

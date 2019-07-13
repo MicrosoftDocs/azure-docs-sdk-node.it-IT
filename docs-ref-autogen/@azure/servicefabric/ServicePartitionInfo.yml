@@ -1,0 +1,93 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServicePartitionInfo'
+    name: ServicePartitionInfo
+    fullName: ServicePartitionInfo
+    children:
+      - '@azure/servicefabric.ServicePartitionInfo.healthState'
+      - '@azure/servicefabric.ServicePartitionInfo.partitionInformation'
+      - '@azure/servicefabric.ServicePartitionInfo.partitionStatus'
+      - '@azure/servicefabric.ServicePartitionInfo.serviceKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: Informazioni su una partizione di un servizio di Service Fabric.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePartitionInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato di integrità di un''entità di Service Fabric come Cluster di nodo, applicazione, servizio, partizione, Replica e così via. I valori possibili sono: ''Invalid'', ''Ok'', ''Warning'', ''Error'', "Unknown".'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePartitionInfo.partitionInformation'
+    name: partitionInformation
+    fullName: partitionInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Informazioni relative all''identità di partizione, lo schema e le chiavi supportate dalla funzione di partizionamento.'
+    optional: true
+    syntax:
+      content: 'partitionInformation?: PartitionInformationUnion'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionInformationUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePartitionInfo.partitionStatus'
+    name: partitionStatus
+    fullName: partitionStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato della partizione del servizio service fabric. I valori possibili sono: ''Invalid'', ''Ready'', ''NotReady'', ''InQuorumLoss'', ''Reconfiguring'', ''Deleting'''
+    optional: true
+    syntax:
+      content: 'partitionStatus?: ServicePartitionStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePartitionStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePartitionInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'serviceKind: "ServicePartitionInfo"'
+      return:
+        type:
+          - '"ServicePartitionInfo"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.PartitionInformationUnion'
+    name: PartitionInformationUnion
+    spec.typeScript:
+      - name: PartitionInformationUnion
+        fullName: PartitionInformationUnion
+        uid: '@azure/servicefabric.PartitionInformationUnion'
+  - uid: '@azure/servicefabric.ServicePartitionStatus'
+    name: ServicePartitionStatus
+    spec.typeScript:
+      - name: ServicePartitionStatus
+        fullName: ServicePartitionStatus
+        uid: '@azure/servicefabric.ServicePartitionStatus'

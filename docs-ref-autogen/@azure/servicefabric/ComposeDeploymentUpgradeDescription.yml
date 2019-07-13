@@ -1,0 +1,185 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription'
+    name: ComposeDeploymentUpgradeDescription
+    fullName: ComposeDeploymentUpgradeDescription
+    children:
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.applicationHealthPolicy'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.composeFileContent'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.deploymentName'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.forceRestart'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.monitoringPolicy'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.registryCredential'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.rollingUpgradeMode'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.upgradeKind'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: Vengono descritti i parametri per un aggiornamento della distribuzione compose.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.applicationHealthPolicy'
+    name: applicationHealthPolicy
+    fullName: applicationHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Definisce un criterio di integrità usato per valutare l'integrità di un'applicazione o una delle relative entità figlio.
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.composeFileContent'
+    name: composeFileContent
+    fullName: composeFileContent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il contenuto del file compose che descrive la distribuzione da creare.
+    syntax:
+      content: 'composeFileContent: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.deploymentName'
+    name: deploymentName
+    fullName: deploymentName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome della distribuzione.
+    syntax:
+      content: 'deploymentName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.forceRestart'
+    name: forceRestart
+    fullName: forceRestart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se true, quindi i processi sono in modo forzato riavviati durante l''aggiornamento anche quando la versione del codice non è stato modificato (la configurazione di aggiornamento solo le modifiche apportate o dati).'
+    optional: true
+    syntax:
+      content: 'forceRestart?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.monitoringPolicy'
+    name: monitoringPolicy
+    fullName: monitoringPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Vengono descritti i parametri per il monitoraggio di un aggiornamento in modalità monitorata.
+    optional: true
+    syntax:
+      content: 'monitoringPolicy?: MonitoringPolicyDescription'
+      return:
+        type:
+          - '@azure/servicefabric.MonitoringPolicyDescription'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.registryCredential'
+    name: registryCredential
+    fullName: registryCredential
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Informazioni sulle credenziali per connettersi al registro contenitori.
+    optional: true
+    syntax:
+      content: 'registryCredential?: RegistryCredential'
+      return:
+        type:
+          - '@azure/servicefabric.RegistryCredential'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.rollingUpgradeMode'
+    name: rollingUpgradeMode
+    fullName: rollingUpgradeMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La modalità usata per monitorare l''integrità durante un aggiornamento in sequenza. I valori sono Monitored, UnmonitoredAuto e UnmonitoredManual. I valori possibili sono: ''Invalid'', ''UnmonitoredAuto'', ''UnmonitoredManual'', ''Monitorati''. Valore predefinito: ''UnmonitoredAuto''.'
+    optional: true
+    syntax:
+      content: 'rollingUpgradeMode?: UpgradeMode'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.upgradeKind'
+    name: upgradeKind
+    fullName: upgradeKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Tipo di aggiornamento all''esterno i valori possibili seguenti. I valori possibili sono: ''Invalid'', ''Rolling''. Valore predefinito: ''Rolling''.'
+    syntax:
+      content: 'upgradeKind: UpgradeKind'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeKind'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds'
+    name: upgradeReplicaSetCheckTimeoutInSeconds
+    fullName: upgradeReplicaSetCheckTimeoutInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Tempo massimo per bloccare l'elaborazione di un dominio di aggiornamento ed evitare la perdita di disponibilità quando si verificano problemi imprevisti. Quando il timeout scade, l'elaborazione del dominio di aggiornamento procede indipendentemente dai problemi di perdita di disponibilità. Il timeout viene reimpostato all'inizio di ogni dominio di aggiornamento. I valori validi sono compresi tra 0 e 42949672925 inclusi.
+      (intero senza segno a 32 bit).
+    optional: true
+    syntax:
+      content: 'upgradeReplicaSetCheckTimeoutInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy'
+    name: ApplicationHealthPolicy
+    spec.typeScript:
+      - name: ApplicationHealthPolicy
+        fullName: ApplicationHealthPolicy
+        uid: '@azure/servicefabric.ApplicationHealthPolicy'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription'
+    name: MonitoringPolicyDescription
+    spec.typeScript:
+      - name: MonitoringPolicyDescription
+        fullName: MonitoringPolicyDescription
+        uid: '@azure/servicefabric.MonitoringPolicyDescription'
+  - uid: '@azure/servicefabric.RegistryCredential'
+    name: RegistryCredential
+    spec.typeScript:
+      - name: RegistryCredential
+        fullName: RegistryCredential
+        uid: '@azure/servicefabric.RegistryCredential'
+  - uid: '@azure/servicefabric.UpgradeMode'
+    name: UpgradeMode
+    spec.typeScript:
+      - name: UpgradeMode
+        fullName: UpgradeMode
+        uid: '@azure/servicefabric.UpgradeMode'
+  - uid: '@azure/servicefabric.UpgradeKind'
+    name: UpgradeKind
+    spec.typeScript:
+      - name: UpgradeKind
+        fullName: UpgradeKind
+        uid: '@azure/servicefabric.UpgradeKind'

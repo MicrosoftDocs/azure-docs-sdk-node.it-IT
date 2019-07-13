@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.SuccessfulPropertyBatchInfo'
+    name: SuccessfulPropertyBatchInfo
+    fullName: SuccessfulPropertyBatchInfo
+    children:
+      - '@azure/servicefabric.SuccessfulPropertyBatchInfo.kind'
+      - '@azure/servicefabric.SuccessfulPropertyBatchInfo.properties'
+    langs:
+      - typeScript
+    type: interface
+    summary: Derivato da PropertyBatchInfo. Rappresenta il successivo batch di proprietà. Contiene i risultati di qualsiasi operazione "Get" nel batch.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SuccessfulPropertyBatchInfo.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'kind: "Successful"'
+      return:
+        type:
+          - '"Successful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SuccessfulPropertyBatchInfo.properties'
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Una mappa contenente le proprietà che sono stati richiesti tramite operazioni di batch per qualsiasi proprietà "Get". La chiave rappresenta l''indice dell''operazione "Get" nella richiesta originale, in formato stringa. Il valore è la proprietà. Se una proprietà non viene trovata, non sarà nella mappa.'
+    optional: true
+    syntax:
+      content: 'properties?: undefined | [key: string]: PropertyInfo'
+      return:
+        type:
+          - 'undefined | [key: string]: @azure/servicefabric.PropertyInfo'
+    package: '@azure/servicefabric'
+references:
+  - uid: 'undefined | [key: string]: @azure/servicefabric.PropertyInfo'
+    name: PropertyInfo
+    spec.typeScript:
+      - name: 'undefined | [key: string]: '
+        fullName: 'undefined | [key: string]: '
+      - name: PropertyInfo
+        fullName: PropertyInfo
+        uid: '@azure/servicefabric.PropertyInfo'

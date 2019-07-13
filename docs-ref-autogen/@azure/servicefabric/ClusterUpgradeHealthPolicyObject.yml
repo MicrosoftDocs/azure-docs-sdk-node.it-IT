@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterUpgradeHealthPolicyObject'
+    name: ClusterUpgradeHealthPolicyObject
+    fullName: ClusterUpgradeHealthPolicyObject
+    children:
+      - '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentDeltaUnhealthyNodes'
+      - '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentUpgradeDomainDeltaUnhealthyNodes'
+    langs:
+      - typeScript
+    type: interface
+    summary: Definisce un criterio di integrità usato per valutare l'integrità del cluster durante un aggiornamento del cluster.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentDeltaUnhealthyNodes'
+    name: maxPercentDeltaUnhealthyNodes
+    fullName: maxPercentDeltaUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Percentuale massima di riduzione dell'integrità dei nodi consentita durante gli aggiornamenti del cluster.
+      Il valore delta è misurato tra lo stato dei nodi e all'inizio dell'aggiornamento e lo stato dei nodi al momento della valutazione dell'integrità. Il controllo viene eseguito dopo il completamento dell'aggiornamento di ciascun dominio di aggiornamento per assicurarsi che lo stato complessivo del cluster rientri nei limiti di tolleranza. Il valore predefinito è 10%.
+    optional: true
+    syntax:
+      content: 'maxPercentDeltaUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentUpgradeDomainDeltaUnhealthyNodes'
+    name: maxPercentUpgradeDomainDeltaUnhealthyNodes
+    fullName: maxPercentUpgradeDomainDeltaUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Percentuale massima di riduzione dell'integrità dei nodi del dominio di aggiornamento consentita durante gli aggiornamenti del cluster. Il valore delta è misurato tra lo stato dei nodi di dominio all'inizio dell'aggiornamento e lo stato dei nodi di dominio al momento della valutazione dell'integrità. Il controllo viene eseguito dopo il completamento dell'aggiornamento di ciascun dominio di aggiornamento per tutti i domini di aggiornamento completati per assicurarsi che lo stato complessivo dei domini di aggiornamento rientri nei limiti di tolleranza. Il valore predefinito è 15%.
+    optional: true
+    syntax:
+      content: 'maxPercentUpgradeDomainDeltaUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
