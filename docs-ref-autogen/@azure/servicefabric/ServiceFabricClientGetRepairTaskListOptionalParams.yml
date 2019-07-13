@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parametri facoltativi.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -56,7 +56,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Il nome dell'executor di ripristino le cui attività richieste devono essere incluse nell'elenco.
     optional: true
     syntax:
       content: 'executorFilter?: undefined | string'
@@ -101,7 +101,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Un operatore OR bit per bit dei valori seguenti, che specifica gli stati delle attività che devono essere inclusi nell'elenco dei risultati.
+      - 1 - Creato
+      - 2 - richiesto
+      - 4 - Preparazione
+      - 8 - approvato
+      - 16 - esecuzione
+      - 32 - ripristino
+      - 64 - Completato
     optional: true
     syntax:
       content: 'stateFilter?: undefined | number'
@@ -116,7 +124,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Il prefisso dell'ID dell'attività di ripristino da ricercare.
     optional: true
     syntax:
       content: 'taskIdFilter?: undefined | string'

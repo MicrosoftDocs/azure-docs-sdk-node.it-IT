@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter'
+    name: ReplicaHealthStateFilter
+    fullName: ReplicaHealthStateFilter
+    children:
+      - '@azure/servicefabric.ReplicaHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Definisce i criteri di corrispondenza per determinare se una replica deve essere inclusa come elemento figlio di una partizione di blocco di integrità del cluster.
+      Se l'entità padre corrisponde al filtro specificato nella descrizione di query blocco di integrità del cluster, vengono restituite solo le repliche. La partizione padre, servizio e l'applicazione deve essere incluso nel blocco di integrità del cluster.
+      Un filtro può corrispondere a zero, uno o più repliche, a seconda delle relative proprietà.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Il filtro per lo stato di integrità delle repliche. Consente la selezione di repliche se corrispondono gli stati di integrità desiderate.
+      I valori possibili sono il valore intero di uno dei seguenti stati di integrità. Vengono restituite solo repliche che corrispondono al filtro. Tutte le repliche vengono utilizzate per valutare lo stato di integrità aggregati di partizione padre.
+      Se non specificato, valore predefinito è None, a meno che non viene specificato l'ID di replica. Se il filtro ha valore predefinito e ID replica viene specificata, viene restituita la replica corrisponda.
+      I valori dello stato sono enumerati in base al flag, pertanto il valore potrebbe essere una combinazione di questi valori ottenuti usando l'operatore "OR" bit per bit.
+      Ad esempio, se il valore fornito è 6, corrisponde a repliche con valore HealthState OK (2) e Warning (4).
+      - Default - valore predefinito. Consente di ricercare qualsiasi stato di integrità. Il valore predefinito è zero.
+      - None - filtro che non corrisponde ad alcun valore. Usato per non restituire alcun risultato in un determinato insieme di stati. Il valore è uguale a 1.
+      - OK - filtro che corrispondenze di input con valore HealthState Ok. Il valore è 2.
+      - Warning - filtro che corrispondenze di input con HealthState valore avviso. Il valore è 4.
+      - Error - filtro che corrisponde all'input con valore di HealthState errore. Il valore è 8.
+      - All - filtro che corrisponde all'input con qualsiasi valore di HealthState. Il valore è 65535. Valore predefinito: 0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter'
+    name: replicaOrInstanceIdFilter
+    fullName: replicaOrInstanceIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      ID della replica del servizio con stato o istanza del servizio senza stato che corrisponde al filtro. Il filtro viene applicato solo per la replica specificata, se presente.
+      Se la replica non esiste, non viene restituita alcun replica nel blocco di integrità del cluster in base a questo filtro.
+      Se è presente la replica, se rispetta le altre proprietà di filtro è incluso nel blocco di integrità del cluster.
+      Se non specificato, tutte le repliche che corrispondono ai filtri padre (se presenti) vengono prese in considerazione e confrontate con gli altri membri di filtro, ad esempio di filtro dello stato di integrità.
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

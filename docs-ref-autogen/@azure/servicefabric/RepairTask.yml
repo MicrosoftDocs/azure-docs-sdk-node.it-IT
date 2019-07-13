@@ -1,0 +1,357 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.RepairTask'
+    name: RepairTask
+    fullName: RepairTask
+    children:
+      - '@azure/servicefabric.RepairTask.action'
+      - '@azure/servicefabric.RepairTask.description'
+      - '@azure/servicefabric.RepairTask.executor'
+      - '@azure/servicefabric.RepairTask.executorData'
+      - '@azure/servicefabric.RepairTask.flags'
+      - '@azure/servicefabric.RepairTask.history'
+      - '@azure/servicefabric.RepairTask.impact'
+      - '@azure/servicefabric.RepairTask.performPreparingHealthCheck'
+      - '@azure/servicefabric.RepairTask.performRestoringHealthCheck'
+      - '@azure/servicefabric.RepairTask.preparingHealthCheckState'
+      - '@azure/servicefabric.RepairTask.restoringHealthCheckState'
+      - '@azure/servicefabric.RepairTask.resultCode'
+      - '@azure/servicefabric.RepairTask.resultDetails'
+      - '@azure/servicefabric.RepairTask.resultStatus'
+      - '@azure/servicefabric.RepairTask.state'
+      - '@azure/servicefabric.RepairTask.target'
+      - '@azure/servicefabric.RepairTask.taskId'
+      - '@azure/servicefabric.RepairTask.version'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Rappresenta un'attività di ripristino, che include informazioni sul tipo di ripristino è stata richiesta, che cos'è lo stato di avanzamento e qual era il risultato finale.
+      Questo tipo supporta la piattaforma Service Fabric. non deve essere utilizzato direttamente dal codice.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.action'
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'azione di ripristino richiesto. Deve essere specificato quando viene creata l'attività di ripristino e viene impostata una volta non modificabile.
+    syntax:
+      content: 'action: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Descrizione dello scopo dell'attività di ripristino o altri dettagli informativi.
+      Può essere impostato quando viene creata l'attività di ripristino e non può essere modificato dopo l'impostazione.
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.executor'
+    name: executor
+    fullName: executor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il nome dell'executor di ripristino. Deve essere specificato in richiesto e stati successivi e non è modificabile dopo l'impostazione.
+    optional: true
+    syntax:
+      content: 'executor?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.executorData'
+    name: executorData
+    fullName: executorData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Una stringa di dati che l'executor di ripristino è possibile usare per archiviare il proprio stato interno.
+    optional: true
+    syntax:
+      content: 'executorData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.flags'
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Un OR bit dei valori seguenti, che fornisce dettagli aggiuntivi sullo stato dell'attività di ripristino.
+      - 1 - annullamento del ripristino è stato richiesto
+      - 2 - interruzione del ripristino è stata richiesta
+      - 4 - approvazione del ripristino è stato forzato tramite una richiesta client
+    optional: true
+    syntax:
+      content: 'flags?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.history'
+    name: history
+    fullName: history
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Oggetto che contiene i timestamp di transizioni di stato dell'attività di ripristino.
+      Questi timestamp vengono aggiornati dal sistema e non possono essere modificati direttamente.
+    optional: true
+    syntax:
+      content: 'history?: RepairTaskHistory'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTaskHistory'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.impact'
+    name: impact
+    fullName: impact
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L'oggetto di impatto determina quali azioni il sistema richiederà per preparare l'impatto del ripristino, prima dell'approvazione di esecuzione del ripristino.
+      Specificare l'impatto dall'executor repair durante la transizione allo stato di preparazione e viene impostata una volta non modificabile.
+    optional: true
+    syntax:
+      content: 'impact?: RepairImpactDescriptionBaseUnion'
+      return:
+        type:
+          - '@azure/servicefabric.RepairImpactDescriptionBaseUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.performPreparingHealthCheck'
+    name: performPreparingHealthCheck
+    fullName: performPreparingHealthCheck
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un valore per determinare se verranno eseguiti controlli di integrità quando l'attività di ripristino passa allo stato di preparazione.
+    optional: true
+    syntax:
+      content: 'performPreparingHealthCheck?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.performRestoringHealthCheck'
+    name: performRestoringHealthCheck
+    fullName: performRestoringHealthCheck
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un valore per determinare se verranno eseguiti controlli di integrità quando l'attività di ripristino passa allo stato Restoring.
+    optional: true
+    syntax:
+      content: 'performRestoringHealthCheck?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.preparingHealthCheckState'
+    name: preparingHealthCheckState
+    fullName: preparingHealthCheckState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Lo stato del flusso di lavoro del controllo integrità quando l'attività di ripristino è in stato di preparazione.
+      I valori possibili sono: 'NotStarted', 'InProgress', 'Succeeded', 'Skipped', 'TimedOut'
+    optional: true
+    syntax:
+      content: 'preparingHealthCheckState?: RepairTaskHealthCheckState'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTaskHealthCheckState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.restoringHealthCheckState'
+    name: restoringHealthCheckState
+    fullName: restoringHealthCheckState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Lo stato del flusso di lavoro del controllo integrità quando l'attività di riparazione è nello stato Restoring.
+      I valori possibili sono: 'NotStarted', 'InProgress', 'Succeeded', 'Skipped', 'TimedOut'
+    optional: true
+    syntax:
+      content: 'restoringHealthCheckState?: RepairTaskHealthCheckState'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTaskHealthCheckState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.resultCode'
+    name: resultCode
+    fullName: resultCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Valore numerico che fornisce dettagli aggiuntivi sul risultato dell'esecuzione dell'attività di ripristino.
+      È possibile specificare il ripristino e stati successivi e non è modificabile dopo l'impostazione.
+    optional: true
+    syntax:
+      content: 'resultCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.resultDetails'
+    name: resultDetails
+    fullName: resultDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Stringa che fornisce dettagli aggiuntivi sul risultato dell'esecuzione dell'attività di ripristino.
+      È possibile specificare il ripristino e stati successivi e non è modificabile dopo l'impostazione.
+    optional: true
+    syntax:
+      content: 'resultDetails?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.resultStatus'
+    name: resultStatus
+    fullName: resultStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un valore che descrive il risultato complessivo dell''esecuzione dell''attività di ripristino. Deve essere specificato nella Restoring e stati successivi e non è modificabile dopo l''impostazione. I valori possibili sono: ''Invalid'', ''Succeeded'', ''Cancelled'', ''Interrupted'', ''Failed'', ''Pending'''
+    optional: true
+    syntax:
+      content: 'resultStatus?: ResultStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ResultStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato del flusso di lavoro dell''attività di ripristino. Gli stati iniziali validi sono Created, richiesto e preparazione. I valori possibili sono: ''Invalid'', ''Created'', ''Claimed'', ''Preparing'', ''Approved'', ''Executing'', ''Restoring'', ''Completed'''
+    syntax:
+      content: 'state: State'
+      return:
+        type:
+          - '@azure/servicefabric.State'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.target'
+    name: target
+    fullName: target
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L'oggetto di destinazione determina quali azioni il sistema richiederà per preparare l'impatto del ripristino, prima dell'approvazione di esecuzione del ripristino.
+      Può essere impostato quando viene creata l'attività di ripristino e non può essere modificato dopo l'impostazione.
+    optional: true
+    syntax:
+      content: 'target?: RepairTargetDescriptionBaseUnion'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTargetDescriptionBaseUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.taskId'
+    name: taskId
+    fullName: taskId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID dell'attività di ripristino.
+    syntax:
+      content: 'taskId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.version'
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La versione dell'attività di ripristino.
+      Quando si crea una nuova attività di correzione, la versione deve essere impostata su zero.  Quando si aggiorna un'attività di ripristino, viene utilizzata la versione per le verifiche della concorrenza ottimistica.  Se la versione è impostata su zero, l'aggiornamento non controllerà per i conflitti di scrittura.  Se la versione è impostata su un valore diverso da zero, l'aggiornamento verrà completata solo se la versione corrente effettiva dell'attività di ripristino corrisponde a questo valore.
+    optional: true
+    syntax:
+      content: 'version?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.RepairTaskHistory'
+    name: RepairTaskHistory
+    spec.typeScript:
+      - name: RepairTaskHistory
+        fullName: RepairTaskHistory
+        uid: '@azure/servicefabric.RepairTaskHistory'
+  - uid: '@azure/servicefabric.RepairImpactDescriptionBaseUnion'
+    name: RepairImpactDescriptionBaseUnion
+    spec.typeScript:
+      - name: RepairImpactDescriptionBaseUnion
+        fullName: RepairImpactDescriptionBaseUnion
+        uid: '@azure/servicefabric.RepairImpactDescriptionBaseUnion'
+  - uid: '@azure/servicefabric.RepairTaskHealthCheckState'
+    name: RepairTaskHealthCheckState
+    spec.typeScript:
+      - name: RepairTaskHealthCheckState
+        fullName: RepairTaskHealthCheckState
+        uid: '@azure/servicefabric.RepairTaskHealthCheckState'
+  - uid: '@azure/servicefabric.ResultStatus'
+    name: ResultStatus
+    spec.typeScript:
+      - name: ResultStatus
+        fullName: ResultStatus
+        uid: '@azure/servicefabric.ResultStatus'
+  - uid: '@azure/servicefabric.State'
+    name: State
+    spec.typeScript:
+      - name: State
+        fullName: State
+        uid: '@azure/servicefabric.State'
+  - uid: '@azure/servicefabric.RepairTargetDescriptionBaseUnion'
+    name: RepairTargetDescriptionBaseUnion
+    spec.typeScript:
+      - name: RepairTargetDescriptionBaseUnion
+        fullName: RepairTargetDescriptionBaseUnion
+        uid: '@azure/servicefabric.RepairTargetDescriptionBaseUnion'

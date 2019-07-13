@@ -1,0 +1,94 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReconfigurationInformation'
+    name: ReconfigurationInformation
+    fullName: ReconfigurationInformation
+    children:
+      - '@azure/servicefabric.ReconfigurationInformation.previousConfigurationRole'
+      - '@azure/servicefabric.ReconfigurationInformation.reconfigurationPhase'
+      - '@azure/servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc'
+      - '@azure/servicefabric.ReconfigurationInformation.reconfigurationType'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Informazioni sulla riconfigurazione corrente come fase, tipo, ruolo di configurazione precedente della replica e la riconfigurazione data ora di inizio.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReconfigurationInformation.previousConfigurationRole'
+    name: previousConfigurationRole
+    fullName: previousConfigurationRole
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ruolo della replica prima dell''avvio di riconfigurazione. I valori possibili sono: ''Unknown'', ''None'', ''Primary'', ''IdleSecondary'', ''ActiveSecondary'''
+    optional: true
+    syntax:
+      content: 'previousConfigurationRole?: ReplicaRole'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaRole'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReconfigurationInformation.reconfigurationPhase'
+    name: reconfigurationPhase
+    fullName: reconfigurationPhase
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Fase di riconfigurazione in corso corrente. Se nessuna riconfigurazione, questo valore sarà "None". I valori possibili sono: "Unknown", ''None'', ''Phase0'', ''Per la fase 1'', ''Phase2'', ''Phase3'', ''Phase4'', ''AbortPhaseZero'''
+    optional: true
+    syntax:
+      content: 'reconfigurationPhase?: ReconfigurationPhase'
+      return:
+        type:
+          - '@azure/servicefabric.ReconfigurationPhase'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc'
+    name: reconfigurationStartTimeUtc
+    fullName: reconfigurationStartTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Avvia ora (UTC) della riconfigurazione in corso. Se nessuna riconfigurazione, questo valore sarà zero data e ora.'
+    optional: true
+    syntax:
+      content: 'reconfigurationStartTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReconfigurationInformation.reconfigurationType'
+    name: reconfigurationType
+    fullName: reconfigurationType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Tipo di riconfigurazione in corso corrente. Se nessuna riconfigurazione, questo valore sarà "None". I valori possibili sono: ''Unknown'', ''SwapPrimary'', ''Failover'', ''Other'''
+    optional: true
+    syntax:
+      content: 'reconfigurationType?: ReconfigurationType'
+      return:
+        type:
+          - '@azure/servicefabric.ReconfigurationType'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicaRole'
+    name: ReplicaRole
+    spec.typeScript:
+      - name: ReplicaRole
+        fullName: ReplicaRole
+        uid: '@azure/servicefabric.ReplicaRole'
+  - uid: '@azure/servicefabric.ReconfigurationPhase'
+    name: ReconfigurationPhase
+    spec.typeScript:
+      - name: ReconfigurationPhase
+        fullName: ReconfigurationPhase
+        uid: '@azure/servicefabric.ReconfigurationPhase'
+  - uid: '@azure/servicefabric.ReconfigurationType'
+    name: ReconfigurationType
+    spec.typeScript:
+      - name: ReconfigurationType
+        fullName: ReconfigurationType
+        uid: '@azure/servicefabric.ReconfigurationType'

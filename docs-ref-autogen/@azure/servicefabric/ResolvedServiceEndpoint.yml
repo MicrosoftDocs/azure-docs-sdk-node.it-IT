@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ResolvedServiceEndpoint'
+    name: ResolvedServiceEndpoint
+    fullName: ResolvedServiceEndpoint
+    children:
+      - '@azure/servicefabric.ResolvedServiceEndpoint.address'
+      - '@azure/servicefabric.ResolvedServiceEndpoint.kind'
+    langs:
+      - typeScript
+    type: interface
+    summary: Endpoint di una partizione del servizio risolto.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ResolvedServiceEndpoint.address'
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'indirizzo dell'endpoint. Se l'endpoint dispone di più listener l'indirizzo è un oggetto JSON con una proprietà per ogni listener con il valore come indirizzo del listener.
+    optional: true
+    syntax:
+      content: 'address?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ResolvedServiceEndpoint.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il ruolo della replica in cui viene segnalato l''endpoint. I valori possibili sono: ''Invalid'', ''Stateless'', ''StatefulPrimary'', ''StatefulSecondary'''
+    optional: true
+    syntax:
+      content: 'kind?: ServiceEndpointRole'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceEndpointRole'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceEndpointRole'
+    name: ServiceEndpointRole
+    spec.typeScript:
+      - name: ServiceEndpointRole
+        fullName: ServiceEndpointRole
+        uid: '@azure/servicefabric.ServiceEndpointRole'

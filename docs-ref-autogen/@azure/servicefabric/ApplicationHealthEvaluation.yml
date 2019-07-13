@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthEvaluation'
+    name: ApplicationHealthEvaluation
+    fullName: ApplicationHealthEvaluation
+    children:
+      - '@azure/servicefabric.ApplicationHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.ApplicationHealthEvaluation.applicationName'
+      - '@azure/servicefabric.ApplicationHealthEvaluation.description'
+      - '@azure/servicefabric.ApplicationHealthEvaluation.kind'
+      - '@azure/servicefabric.ApplicationHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Rappresenta la valutazione dell''integrità di un''applicazione, che contiene le informazioni sui dati e l''algoritmo usato dall''archivio integrità per valutare l''integrità.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato di integrità di un''entità di Service Fabric come Cluster di nodo, applicazione, servizio, partizione, Replica e così via. I valori possibili sono: ''Invalid'', ''Ok'', ''Warning'', ''Error'', "Unknown".'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthEvaluation.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il nome dell''applicazione, incluso il '' fabric:'' schema URI "fabric".'
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Descrizione della valutazione dell''integrità, che rappresenta un riepilogo del processo di valutazione.'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'kind: "Application"'
+      return:
+        type:
+          - '"Application"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Elenco di valutazioni non integre che ha causato lo stato corrente di integrità aggregato dell''applicazione. I tipi delle valutazioni non integre possono essere DeployedApplicationsHealthEvaluation, ServicesHealthEvaluation o EventHealthEvaluation.'
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

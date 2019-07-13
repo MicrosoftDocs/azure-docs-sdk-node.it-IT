@@ -1,0 +1,152 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.RemoteReplicatorStatus'
+    name: RemoteReplicatorStatus
+    fullName: RemoteReplicatorStatus
+    children:
+      - '@azure/servicefabric.RemoteReplicatorStatus.isInBuild'
+      - '@azure/servicefabric.RemoteReplicatorStatus.lastAcknowledgementProcessedTimeUtc'
+      - '@azure/servicefabric.RemoteReplicatorStatus.lastAppliedCopySequenceNumber'
+      - '@azure/servicefabric.RemoteReplicatorStatus.lastAppliedReplicationSequenceNumber'
+      - '@azure/servicefabric.RemoteReplicatorStatus.lastReceivedCopySequenceNumber'
+      - '@azure/servicefabric.RemoteReplicatorStatus.lastReceivedReplicationSequenceNumber'
+      - '@azure/servicefabric.RemoteReplicatorStatus.remoteReplicatorAcknowledgementStatus'
+      - '@azure/servicefabric.RemoteReplicatorStatus.replicaId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Rappresenta lo stato del replicator secondario dal punto di vista del replicator primario.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RemoteReplicatorStatus.isInBuild'
+    name: isInBuild
+    fullName: isInBuild
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un valore che indica se la replica secondaria è in corso di compilazione.
+    optional: true
+    syntax:
+      content: 'isInBuild?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RemoteReplicatorStatus.lastAcknowledgementProcessedTimeUtc'
+    name: lastAcknowledgementProcessedTimeUtc
+    fullName: lastAcknowledgementProcessedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L'ultimo timestamp (in UTC) quando è stato elaborato un acknowledgement dal replicator secondario nella replica primaria.
+      UTC 0 rappresenta un valore non valido, che indica che nessun messaggio di acknowledgement elaborato che mai.
+    optional: true
+    syntax:
+      content: 'lastAcknowledgementProcessedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RemoteReplicatorStatus.lastAppliedCopySequenceNumber'
+    name: lastAppliedCopySequenceNumber
+    fullName: lastAppliedCopySequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il copia operazione numero di sequenza massimo che il database secondario ha applicato al relativo stato.
+      Il valore -1 indica che il database secondario è applicata tutte le operazioni di copia e il processo di copia è stato completato.
+    optional: true
+    syntax:
+      content: 'lastAppliedCopySequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RemoteReplicatorStatus.lastAppliedReplicationSequenceNumber'
+    name: lastAppliedReplicationSequenceNumber
+    fullName: lastAppliedReplicationSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il replica operazione numero di sequenza massimo che il database secondario ha applicato al relativo stato.
+    optional: true
+    syntax:
+      content: 'lastAppliedReplicationSequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RemoteReplicatorStatus.lastReceivedCopySequenceNumber'
+    name: lastReceivedCopySequenceNumber
+    fullName: lastReceivedCopySequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il copia operazione numero di sequenza massimo che il database secondario ha ricevuto dal server primario.
+      Il valore -1 indica che il database secondario abbia ricevuto tutte le operazioni di copia.
+    optional: true
+    syntax:
+      content: 'lastReceivedCopySequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RemoteReplicatorStatus.lastReceivedReplicationSequenceNumber'
+    name: lastReceivedReplicationSequenceNumber
+    fullName: lastReceivedReplicationSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il replica operazione numero di sequenza massimo che il database secondario ha ricevuto dal server primario.
+    optional: true
+    syntax:
+      content: 'lastReceivedReplicationSequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RemoteReplicatorStatus.remoteReplicatorAcknowledgementStatus'
+    name: remoteReplicatorAcknowledgementStatus
+    fullName: remoteReplicatorAcknowledgementStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Rappresenta lo stato di conferma per il replicator secondario remoto.
+    optional: true
+    syntax:
+      content: 'remoteReplicatorAcknowledgementStatus?: RemoteReplicatorAcknowledgementStatus'
+      return:
+        type:
+          - '@azure/servicefabric.RemoteReplicatorAcknowledgementStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RemoteReplicatorStatus.replicaId'
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Rappresenta l'ID replica del replicator secondario remoto.
+    optional: true
+    syntax:
+      content: 'replicaId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.RemoteReplicatorAcknowledgementStatus'
+    name: RemoteReplicatorAcknowledgementStatus
+    spec.typeScript:
+      - name: RemoteReplicatorAcknowledgementStatus
+        fullName: RemoteReplicatorAcknowledgementStatus
+        uid: '@azure/servicefabric.RemoteReplicatorAcknowledgementStatus'

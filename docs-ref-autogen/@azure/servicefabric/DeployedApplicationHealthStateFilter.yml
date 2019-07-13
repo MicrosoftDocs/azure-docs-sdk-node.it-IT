@@ -1,0 +1,91 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter'
+    name: DeployedApplicationHealthStateFilter
+    fullName: DeployedApplicationHealthStateFilter
+    children:
+      - '@azure/servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters'
+      - '@azure/servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Definisce i criteri di corrispondenza per determinare se un'applicazione distribuita deve essere inclusa come elemento figlio di un'applicazione durante il blocco di integrità del cluster.
+      Le applicazioni distribuite vengono restituite solo se l'applicazione padre corrisponde a un filtro specificato nella descrizione di query blocco di integrità del cluster.
+      Un filtro può corrispondere a zero, uno o più applicazioni distribuite, a seconda delle relative proprietà.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters'
+    name: deployedServicePackageFilters
+    fullName: deployedServicePackageFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Definisce un elenco di filtri che specificano quale servizio distribuito i pacchetti da includere nel blocco di integrità di cluster restituiti come elementi figlio dell'applicazione padre distribuita. I pacchetti del servizio distribuiti vengono restituiti solo se l'elemento padre distribuito dell'applicazione corrisponde a un filtro.
+      Se l'elenco è vuoto, non viene restituiti alcun pacchetto servizio distribuito. Tutti i pacchetti del servizio distribuiti vengono usati per valutare l'elemento padre distribuita dello stato di integrità aggregato dell'applicazione, indipendentemente dal fatto i filtri di input.
+      Il filtro di applicazione distribuita è possibile specificare più filtri pacchetto servizio distribuito.
+      Ad esempio, è possibile specificare un filtro per restituire tutti i pacchetti del servizio distribuiti con lo stato di integrità errore e un altro filtro per includere sempre un pacchetto del servizio distribuito in un nodo.
+    optional: true
+    syntax:
+      content: 'deployedServicePackageFilters?: DeployedServicePackageHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedServicePackageHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Il filtro per lo stato di integrità delle applicazioni distribuite. Consente la selezione delle applicazioni distribuite se corrispondono gli stati di integrità desiderate.
+      I valori possibili sono il valore intero di uno dei seguenti stati di integrità. Vengono restituite solo le applicazioni distribuite che corrispondono al filtro. Tutte le applicazioni distribuite vengono usate per valutare lo stato di integrità aggregato del cluster.
+      Se non specificato, valore predefinito è None, a meno che non viene specificato il nome del nodo. Se il filtro predefinito un valore che specifica un nome nodo, viene restituito all'applicazione distribuita corrisponda.
+      I valori dello stato sono enumerati in base al flag, pertanto il valore potrebbe essere una combinazione di questi valori ottenuti usando l'operatore "OR" bit per bit.
+      Ad esempio, se il valore fornito è 6, corrisponde alle applicazioni distribuite con valore HealthState OK (2) e Warning (4).
+      - Default - valore predefinito. Consente di ricercare qualsiasi stato di integrità. Il valore predefinito è zero.
+      - None - filtro che non corrisponde ad alcun valore. Usato per non restituire alcun risultato in un determinato insieme di stati. Il valore è uguale a 1.
+      - OK - filtro che corrispondenze di input con valore HealthState Ok. Il valore è 2.
+      - Warning - filtro che corrispondenze di input con HealthState valore avviso. Il valore è 4.
+      - Error - filtro che corrisponde all'input con valore di HealthState errore. Il valore è 8.
+      - All - filtro che corrisponde all'input con qualsiasi valore di HealthState. Il valore è 65535. Valore predefinito: 0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter'
+    name: nodeNameFilter
+    fullName: nodeNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il nome del nodo in cui l'applicazione viene distribuita per la corrispondenza con il filtro.
+      Se specificato, il filtro viene applicato solo all'applicazione distribuita nel nodo specificato.
+      Se l'applicazione non viene distribuita nel nodo con il nome specificato, nel blocco di integrità del cluster in base a questo filtro non viene restituita alcun applicazione distribuita.
+      In caso contrario, l'applicazione distribuita è incluso nel blocco di integrità del cluster se rispetta le altre proprietà di filtro.
+      Se non specificate, tutti distribuite applicazioni che corrispondono ai filtri padre (se presente) vengono prese in considerazione e confrontate con gli altri membri di filtro, ad esempio di filtro dello stato di integrità.
+    optional: true
+    syntax:
+      content: 'nodeNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter[]'
+    name: 'DeployedServicePackageHealthStateFilter[]'
+    spec.typeScript:
+      - name: DeployedServicePackageHealthStateFilter
+        fullName: DeployedServicePackageHealthStateFilter
+        uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

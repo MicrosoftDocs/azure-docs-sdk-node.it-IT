@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.EventHealthEvaluation'
+    name: EventHealthEvaluation
+    fullName: EventHealthEvaluation
+    children:
+      - '@azure/servicefabric.EventHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.EventHealthEvaluation.considerWarningAsError'
+      - '@azure/servicefabric.EventHealthEvaluation.description'
+      - '@azure/servicefabric.EventHealthEvaluation.kind'
+      - '@azure/servicefabric.EventHealthEvaluation.unhealthyEvent'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Rappresenta la valutazione dell'integrità di un HealthEvent segnalato nell'entità.
+      La valutazione dell'integrità viene restituita quando la valutazione dell'integrità di un'entità determina un errore o avviso.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato di integrità di un''entità di Service Fabric come Cluster di nodo, applicazione, servizio, partizione, Replica e così via. I valori possibili sono: ''Invalid'', ''Ok'', ''Warning'', ''Error'', "Unknown".'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.considerWarningAsError'
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indica se gli avvisi vengono considerati con lo stesso livello di gravità degli errori. Il campo è specificato nei criteri di integrità usati per valutare l'entità.
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Descrizione della valutazione dell''integrità, che rappresenta un riepilogo del processo di valutazione.'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'kind: "Event"'
+      return:
+        type:
+          - '"Event"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.unhealthyEvent'
+    name: unhealthyEvent
+    fullName: unhealthyEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Rappresenta le informazioni di integrità segnalate su un''entità di integrità, ad esempio cluster, applicazione o del nodo, con metadati aggiuntivi aggiunti da Health Manager.'
+    optional: true
+    syntax:
+      content: 'unhealthyEvent?: HealthEvent'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvent'
+    name: HealthEvent
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'

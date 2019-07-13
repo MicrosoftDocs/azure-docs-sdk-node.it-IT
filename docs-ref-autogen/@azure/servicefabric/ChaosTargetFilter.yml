@@ -1,0 +1,58 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosTargetFilter'
+    name: ChaosTargetFilter
+    fullName: ChaosTargetFilter
+    children:
+      - '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+      - '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Definisce tutti i filtri di Chaos indotti, ad esempio, generare un errore solo determinati tipi di nodo o generare un errore solo per determinate applicazioni.
+      Se non si usa ChaosTargetFilter, gli errori Chaos interessano tutte le entità del cluster. Se si usa ChaosTargetFilter, gli errori Chaos interessano solo le entità che soddisfano le specifiche di ChaosTargetFilter. NodeTypeInclusionList e ApplicationInclusionList consentono solo una semantica di unione.
+      Non è possibile specificare un'intersezione tra NodeTypeInclusionList e ApplicationInclusionList. Non è ad esempio possibile specificare "genera un errore in questa applicazione solo quando si trova in quel tipo di nodo".
+      Dopo che un'entità è stata inclusa in NodeTypeInclusionList o in ApplicationInclusionList, tale entità non può essere esclusa tramite ChaosTargetFilter. Anche se in ApplicationInclusionList non compare applicationX, in alcune iterazioni di Chaos applicationX può presentare un errore, perché si trova per caso in un nodo di tipo nodeTypeY incluso in NodeTypeInclusionList. Se NodeTypeInclusionList e ApplicationInclusionList sono entrambi Null o vuoti, viene generata un'eccezione ArgumentException.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+    name: applicationInclusionList
+    fullName: applicationInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      elenco di URI di applicazione da includere negli errori Chaos.
+      Tutte le repliche appartenenti ai servizi di queste applicazioni sono soggette a errori di replica (riavvio di replica, rimozione di replica, spostamento di replica primaria, spostamento di replica secondaria) generati da Chaos.
+      Chaos può riavviare un pacchetto di codice solo se quest'ultimo ospita solo repliche di queste applicazioni.
+      Se un'applicazione non compare in questo elenco, può comunque presentare errori in alcune iterazioni di Chaos se l'applicazione finisce per trovarsi in un nodo di un tipo incluso in NodeTypeInclusionList.
+      Se tuttavia applicationX è associata a nodeTypeY tramite vincoli di posizionamento, applicationx non è assente ApplicationInclusionList e nodetypey non è presente in NodeTypeInclusionList, quindi applicationX non presenterà mai errori.
+      In questo elenco possono essere inclusi al massimo 1000 nomi di applicazione. Per aumentare questo numero, è necessario un aggiornamento della configurazione di MaxNumberOfApplicationsInChaosEntityFilter.
+    optional: true
+    syntax:
+      content: 'applicationInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    name: nodeTypeInclusionList
+    fullName: nodeTypeInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      elenco di tipi di nodo da includere negli errori Chaos.
+      Tutti i tipi di errore (riavvio di nodo, riavvio di pacchetto di codice, rimozione di replica, riavvio di replica, spostamento di replica primaria e spostamento di replica secondaria) sono abilitati per i nodi di questi tipi di nodo.
+      Se un tipo di nodo (ad esempio NodeTypeX) non compare in NodeTypeInclusionList, quindi gli errori a livello di nodo (ad esempio NodeRestart) non verranno mai abilitati per i nodi di tipo, ma gli errori di replica e del pacchetto di codice possono comunque essere abilitati per NodeTypeX se un'applicazione di ApplicationInclusionList.
+      si trova in un nodo di tipo NodeTypeX.
+      In questo elenco possono essere inclusi al massimo 100 tipi di nodo. Per aumentare questo numero, è necessario un aggiornamento della configurazione di MaxNumberOfNodeTypesInChaosEntityFilter.
+    optional: true
+    syntax:
+      content: 'nodeTypeInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'

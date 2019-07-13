@@ -1,0 +1,58 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceHealthState'
+    name: ServiceHealthState
+    fullName: ServiceHealthState
+    children:
+      - '@azure/servicefabric.ServiceHealthState.aggregatedHealthState'
+      - '@azure/servicefabric.ServiceHealthState.serviceName'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Rappresenta lo stato di integrità di un servizio, che contiene l''identificatore del servizio e il relativo stato di integrità aggregato.'
+    extends:
+      name: '@azure/servicefabric.EntityHealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthState.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato di integrità di un''entità di Service Fabric come Cluster di nodo, applicazione, servizio, partizione, Replica e così via. I valori possibili sono: ''Invalid'', ''Ok'', ''Warning'', ''Error'', "Unknown".'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthState.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome del servizio il cui stato di integrità è rappresentato da questo oggetto.
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealthState'
+    name: EntityHealthState
+    spec.typeScript:
+      - name: EntityHealthState
+        fullName: EntityHealthState
+        uid: '@azure/servicefabric.EntityHealthState'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

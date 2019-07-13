@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.BackupConfigurationInfo'
+    name: BackupConfigurationInfo
+    fullName: BackupConfigurationInfo
+    children:
+      - '@azure/servicefabric.BackupConfigurationInfo.kind'
+      - '@azure/servicefabric.BackupConfigurationInfo.policyInheritedFrom'
+      - '@azure/servicefabric.BackupConfigurationInfo.policyName'
+      - '@azure/servicefabric.BackupConfigurationInfo.suspensionInfo'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrive le informazioni di configurazione del backup.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupConfigurationInfo.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminatore polimorfiche
+    syntax:
+      content: 'kind: "BackupConfigurationInfo"'
+      return:
+        type:
+          - '"BackupConfigurationInfo"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupConfigurationInfo.policyInheritedFrom'
+    name: policyInheritedFrom
+    fullName: policyInheritedFrom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Specifica l''ambito in cui viene applicato il criterio di backup. I valori possibili sono: ''Invalid'', ''Partition'', ''Service'', ''Application'''
+    optional: true
+    syntax:
+      content: 'policyInheritedFrom?: BackupPolicyScope'
+      return:
+        type:
+          - '@azure/servicefabric.BackupPolicyScope'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupConfigurationInfo.policyName'
+    name: policyName
+    fullName: policyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Il nome del criterio di backup che è applicabile a questa applicazione di Service Fabric o servizio o partizione.
+    optional: true
+    syntax:
+      content: 'policyName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupConfigurationInfo.suspensionInfo'
+    name: suspensionInfo
+    fullName: suspensionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descrive i dettagli di backup di sospensione.
+    optional: true
+    syntax:
+      content: 'suspensionInfo?: BackupSuspensionInfo'
+      return:
+        type:
+          - '@azure/servicefabric.BackupSuspensionInfo'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.BackupPolicyScope'
+    name: BackupPolicyScope
+    spec.typeScript:
+      - name: BackupPolicyScope
+        fullName: BackupPolicyScope
+        uid: '@azure/servicefabric.BackupPolicyScope'
+  - uid: '@azure/servicefabric.BackupSuspensionInfo'
+    name: BackupSuspensionInfo
+    spec.typeScript:
+      - name: BackupSuspensionInfo
+        fullName: BackupSuspensionInfo
+        uid: '@azure/servicefabric.BackupSuspensionInfo'

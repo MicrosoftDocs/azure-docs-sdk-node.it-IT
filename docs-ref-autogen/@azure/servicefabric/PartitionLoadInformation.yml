@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionLoadInformation'
+    name: PartitionLoadInformation
+    fullName: PartitionLoadInformation
+    children:
+      - '@azure/servicefabric.PartitionLoadInformation.partitionId'
+      - '@azure/servicefabric.PartitionLoadInformation.primaryLoadMetricReports'
+      - '@azure/servicefabric.PartitionLoadInformation.secondaryLoadMetricReports'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Rappresenta carica le informazioni per una partizione, che contiene le metriche primarie e secondarie carico segnalato.
+      Nel caso in cui non si verifica alcun carico segnalato, PartitionLoadInformation conterrà il carico predefinito per il servizio della partizione.
+      Per i carichi predefiniti, LastReportedUtc del LoadMetricReport è impostato su 0.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID della partizione.
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.primaryLoadMetricReports'
+    name: primaryLoadMetricReports
+    fullName: primaryLoadMetricReports
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Matrice dei report di carico dalla replica primaria per questa partizione.
+    optional: true
+    syntax:
+      content: 'primaryLoadMetricReports?: LoadMetricReport[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReport[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.secondaryLoadMetricReports'
+    name: secondaryLoadMetricReports
+    fullName: secondaryLoadMetricReports
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Matrice dei report di carico aggregato da tutte le repliche secondarie per questa partizione.
+      Matrice contiene solo il versione più recente carico segnalato per ogni metrica.
+    optional: true
+    syntax:
+      content: 'secondaryLoadMetricReports?: LoadMetricReport[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReport[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.LoadMetricReport[]'
+    name: 'LoadMetricReport[]'
+    spec.typeScript:
+      - name: LoadMetricReport
+        fullName: LoadMetricReport
+        uid: '@azure/servicefabric.LoadMetricReport'
+      - name: '[]'
+        fullName: '[]'

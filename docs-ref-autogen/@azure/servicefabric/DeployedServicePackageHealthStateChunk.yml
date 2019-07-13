@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateChunk'
+    name: DeployedServicePackageHealthStateChunk
+    fullName: DeployedServicePackageHealthStateChunk
+    children:
+      - '@azure/servicefabric.DeployedServicePackageHealthStateChunk.healthState'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateChunk.serviceManifestName'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateChunk.servicePackageActivationId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Rappresenta il blocco dello stato di integrità di un pacchetto servizio distribuito, che contiene il nome del manifesto del servizio e lo stato di integrità aggregato pacchetto del servizio.'
+    extends:
+      name: '@azure/servicefabric.EntityHealthStateChunk'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateChunk.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lo stato di integrità di un''entità di Service Fabric come Cluster di nodo, applicazione, servizio, partizione, Replica e così via. I valori possibili sono: ''Invalid'', ''Ok'', ''Warning'', ''Error'', "Unknown".'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateChunk.serviceManifestName'
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome del manifesto del servizio.
+    optional: true
+    syntax:
+      content: 'serviceManifestName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateChunk.servicePackageActivationId'
+    name: servicePackageActivationId
+    fullName: servicePackageActivationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ActivationId di un pacchetto del servizio distribuito. Se ServicePackageActivationMode specificato al momento della creazione del servizio è ''SharedProcess'' (o se non è specificato, nel qual caso per impostazione predefinita ''SharedProcess''), il valore di ServicePackageActivationId è sempre una stringa vuota.'
+    optional: true
+    syntax:
+      content: 'servicePackageActivationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealthStateChunk'
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: '@azure/servicefabric.EntityHealthStateChunk'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosEventsSegment'
+    name: ChaosEventsSegment
+    fullName: ChaosEventsSegment
+    children:
+      - '@azure/servicefabric.ChaosEventsSegment.continuationToken'
+      - '@azure/servicefabric.ChaosEventsSegment.history'
+    langs:
+      - typeScript
+    type: interface
+    summary: Contiene l'elenco di eventi di Chaos e il token di continuazione per ottenere il segmento successivo.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosEventsSegment.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il parametro del token di continuazione viene utilizzato per ottenere il set di risultati successivo. Il token di continuazione è incluso nella risposta dell'API quando i risultati dal sistema non rientrano in una singola risposta. Quando questo valore viene passato alla successiva chiamata API, l'API restituisce il set di risultati successivo.
+      Se non sono presenti altri risultati, il token di continuazione non è incluso nella risposta.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosEventsSegment.history'
+    name: history
+    fullName: history
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco di eventi che soddisfano i criteri specificati dall'utente.
+    optional: true
+    syntax:
+      content: 'history?: ChaosEventWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.ChaosEventWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ChaosEventWrapper[]'
+    name: 'ChaosEventWrapper[]'
+    spec.typeScript:
+      - name: ChaosEventWrapper
+        fullName: ChaosEventWrapper
+        uid: '@azure/servicefabric.ChaosEventWrapper'
+      - name: '[]'
+        fullName: '[]'

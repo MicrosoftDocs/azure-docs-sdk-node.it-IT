@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedBackupInfoList'
+    name: PagedBackupInfoList
+    fullName: PagedBackupInfoList
+    children:
+      - '@azure/servicefabric.PagedBackupInfoList.continuationToken'
+      - '@azure/servicefabric.PagedBackupInfoList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      L'elenco dei backup. L'elenco viene eseguito il paging quando tutti i risultati non può essere contenuta in un singolo messaggio.
+      Il set successivo di risultati può essere ottenuto eseguendo la stessa query con il token di continuazione specificato in questo elenco.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedBackupInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Il parametro del token di continuazione viene utilizzato per ottenere il set di risultati successivo. Il token di continuazione è incluso nella risposta dell'API quando i risultati dal sistema non rientrano in una singola risposta. Quando questo valore viene passato alla successiva chiamata API, l'API restituisce il set di risultati successivo.
+      Se non sono presenti altri risultati, il token di continuazione non è incluso nella risposta.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedBackupInfoList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Elenco delle informazioni di backup.
+    optional: true
+    syntax:
+      content: 'items?: BackupInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.BackupInfo[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.BackupInfo[]'
+    name: 'BackupInfo[]'
+    spec.typeScript:
+      - name: BackupInfo
+        fullName: BackupInfo
+        uid: '@azure/servicefabric.BackupInfo'
+      - name: '[]'
+        fullName: '[]'

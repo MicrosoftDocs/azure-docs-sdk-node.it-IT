@@ -41,7 +41,7 @@ items:
       - typeScript
     summary: |-
       La sottoscrizione del servizio di riconoscimento vocale di servizi cognitivi chiave. Se si usa un sistema di riconoscimento finalità, è necessario specificare per specificare la chiave di endpoint servizio LUIS per l'app LUIS particolare. In circostanze normali, non è necessario usare direttamente questa proprietà.
-      Usare invece @see SpeechConfig.fromSubscription.
+      In alternativa, utilizzare [[SpeechConfig.fromSubscription]].
     type: field
     numericValue: 0
     package: microsoft-cognitiveservices-speech-sdk
@@ -52,8 +52,8 @@ items:
       - typeScript
     summary: |-
       L'endpoint di servizio di riconoscimento vocale di servizi cognitivi (url). In circostanze normali, non è necessario usare direttamente questa proprietà.
-      Usare invece @see SpeechConfig.fromEndpoint.
-      NOTA: Questo endpoint non è quello utilizzato per l'endpoint usato per ottenere un token di accesso.
+      In alternativa, utilizzare [[SpeechConfig.fromEndpoint]].
+      NOTA:  Questo endpoint non è quello utilizzato per l'endpoint usato per ottenere un token di accesso.
     type: field
     numericValue: 1
     package: microsoft-cognitiveservices-speech-sdk
@@ -64,7 +64,7 @@ items:
       - typeScript
     summary: |-
       L'area del servizio di riconoscimento vocale di servizi cognitivi. In circostanze normali, non è necessario usare direttamente questa proprietà.
-      Usare invece @see SpeechConfig.fromSubscription, @see SpeechConfig.fromEndpoint, @see SpeechConfig.fromAuthorizationToken.
+      In alternativa, utilizzare [[SpeechConfig.fromSubscription]], [[SpeechConfig.fromEndpoint]], [[SpeechConfig.fromAuthorizationToken]].
     type: field
     numericValue: 2
     package: microsoft-cognitiveservices-speech-sdk
@@ -75,7 +75,7 @@ items:
       - typeScript
     summary: |-
       Il token di autorizzazione servizio riconoscimento vocale di servizi cognitivi (noto anche come token di accesso). In circostanze normali, non è necessario usare direttamente questa proprietà.
-      Usare invece @see SpeechConfig.fromAuthorizationToken,
+      Instead, use [[SpeechConfig.fromAuthorizationToken]], [[SpeechRecognizer.authorizationToken]], [[IntentRecognizer.authorizationToken]], [[TranslationRecognizer.authorizationToken]].
     type: field
     numericValue: 3
     package: microsoft-cognitiveservices-speech-sdk
@@ -95,8 +95,8 @@ items:
       - typeScript
     summary: |-
       Id endpoint servizio di riconoscimento vocale di servizi cognitivi. In circostanze normali, non è necessario usare direttamente questa proprietà.
-      Usare invece @see SpeechConfig.setEndpointId.
-      NOTA: L'id dell'endpoint è disponibile nel portale di riconoscimento vocale, elencate sotto i dettagli dell'Endpoint.
+      In alternativa, utilizzare [[SpeechConfig.endpointId]].
+      NOTA:  L'id dell'endpoint è disponibile nel portale di riconoscimento vocale, elencate sotto i dettagli dell'Endpoint.
     type: field
     numericValue: 5
     package: microsoft-cognitiveservices-speech-sdk
@@ -107,7 +107,7 @@ items:
       - typeScript
     summary: |-
       Elenco di virgole separati lingue (formato BCP-47) utilizzate come lingue di traduzione di destinazione. In circostanze normali, non è necessario usare direttamente questa proprietà.
-      Usare invece @see SpeechTranslationConfig.addTargetLanguage,
+      In alternativa usare [[SpeechTranslationConfig.addTargetLanguage]], [[SpeechTranslationConfig.targetLanguages]], [[TranslationRecognizer.targetLanguages]].
     type: field
     numericValue: 6
     package: microsoft-cognitiveservices-speech-sdk
@@ -118,8 +118,8 @@ items:
       - typeScript
     summary: |-
       Il nome del testo servizio cognitivi alla voce di servizio di riconoscimento vocale. In circostanze normali, non è necessario usare direttamente questa proprietà.
-      Usare invece @see SpeechTranslationConfig.setVoiceName.
-      NOTA: Sono disponibili i nomi validi vocali <a href="https://aka.ms/csspeech/voicenames">qui</a>.
+      In alternativa, utilizzare [[SpeechTranslationConfig.voiceName]].
+      NOTA:  Sono disponibili i nomi validi vocali <a href="https://aka.ms/csspeech/voicenames">qui</a>.
     type: field
     numericValue: 7
     package: microsoft-cognitiveservices-speech-sdk
@@ -139,7 +139,7 @@ items:
       - typeScript
     summary: |-
       L'area di Language Understanding Service. In circostanze normali, non è necessario usare direttamente questa proprietà.
-      Usare invece @see LanguageUnderstandingModel.
+      In alternativa, utilizzare [[LanguageUnderstandingModel]].
     type: field
     numericValue: 9
     package: microsoft-cognitiveservices-speech-sdk
@@ -213,7 +213,7 @@ items:
       - typeScript
     summary: |-
       La lingua parlata venga riconosciuta (in formato BCP-47). In circostanze normali, non è necessario usare direttamente questa proprietà.
-      Usare invece @see SpeechConfig.setSpeechRecognitionLanguage.
+      In alternativa, utilizzare [[SpeechConfig.speechRecognitionLanguage]].
     type: field
     numericValue: 15
     package: microsoft-cognitiveservices-speech-sdk
@@ -224,7 +224,7 @@ items:
       - typeScript
     summary: |-
       L'id di sessione. Questo id è un identificatore univoco universale (noto anche come UUID) che rappresenta un'associazione specifica di un flusso audio di input e l'istanza di riconoscimento vocale sottostante a cui è associato. In circostanze normali, non è necessario usare direttamente questa proprietà.
-      Usare invece @see SessionEventArgs.sessionId.
+      Instead use [[SessionEventArgs.sessionId]].
     type: field
     numericValue: 16
     package: microsoft-cognitiveservices-speech-sdk
@@ -235,7 +235,7 @@ items:
       - typeScript
     summary: |-
       Il servizio riconoscimento vocale di servizi cognitivi risposta output formato richiesto (semplice o dettagliato). In circostanze normali, non è necessario usare direttamente questa proprietà.
-      Usare invece @see SpeechConfig.setOutputFormat.
+      In alternativa, utilizzare [[SpeechConfig.outputFormat]].
     type: field
     numericValue: 17
     package: microsoft-cognitiveservices-speech-sdk
@@ -262,7 +262,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: 'I dettagli dell''errore servizio di riconoscimento vocale di servizi cognitivi (in formato JSON). In circostanze normali, non è necessario usare direttamente questa proprietà. Usare invece @see CancellationDetails.getErrorDetails.'
+    summary: 'I dettagli dell''errore servizio di riconoscimento vocale di servizi cognitivi (in formato JSON). In circostanze normali, non è necessario usare direttamente questa proprietà. In alternativa, utilizzare [[CancellationDetails.errorDetails]].'
     type: field
     numericValue: 20
     package: microsoft-cognitiveservices-speech-sdk
@@ -298,7 +298,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: L'output della risposta Language Understanding Service (in formato JSON). Disponibile tramite @see IntentRecognitionResult.Properties.
+    summary: 'L''output della risposta Language Understanding Service (in formato JSON). Disponibile tramite [[IntentRecognitionResult]]'
     type: field
     numericValue: 24
     package: microsoft-cognitiveservices-speech-sdk
