@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="5e796-101">Parametri facoltativi.</span><span class="sxs-lookup"><span data-stu-id="5e796-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -25,7 +25,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e55bd-101">Il segnale che può essere utilizzato per interrompere le richieste.</span><span class="sxs-lookup"><span data-stu-id="e55bd-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="5e796-102">Il segnale che può essere utilizzato per interrompere le richieste.</span><span class="sxs-lookup"><span data-stu-id="5e796-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -40,7 +40,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="e55bd-102">{oggetto} [customHeaders] Intestazioni di richiesta personalizzata che verranno applicate prima dell''invio della richiesta definito dall''utente.</span><span class="sxs-lookup"><span data-stu-id="e55bd-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="5e796-103">{oggetto} [customHeaders] Intestazioni di richiesta personalizzata che verranno applicate prima dell''invio della richiesta definito dall''utente.</span><span class="sxs-lookup"><span data-stu-id="5e796-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -55,7 +55,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="5e796-104">Consente di filtrare la raccolta di oggetti HealthEvent restituiti in base allo stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="5e796-104">Allows filtering the collection of HealthEvent objects returned based on health state.</span></span>
+      <span data-ttu-id="5e796-105">I valori possibili per questo parametro includono il valore intero di uno dei seguenti stati di integrità.</span><span class="sxs-lookup"><span data-stu-id="5e796-105">The possible values for this parameter include integer value of one of the following health states.</span></span>
+      <span data-ttu-id="5e796-106">Vengono restituiti solo gli eventi che corrispondono al filtro.</span><span class="sxs-lookup"><span data-stu-id="5e796-106">Only events that match the filter are returned.</span></span> <span data-ttu-id="5e796-107">Tutti gli eventi vengono usati per valutare lo stato di integrità aggregato.</span><span class="sxs-lookup"><span data-stu-id="5e796-107">All events are used to evaluate the aggregated health state.</span></span>
+      <span data-ttu-id="5e796-108">Se non specificato diversamente, vengono restituite tutte le voci.</span><span class="sxs-lookup"><span data-stu-id="5e796-108">If not specified, all entries are returned.</span></span> <span data-ttu-id="5e796-109">I valori dello stato sono enumerati in base al flag, pertanto il valore potrebbe essere una combinazione di questi valori ottenuti usando l'operatore "OR" bit per bit.</span><span class="sxs-lookup"><span data-stu-id="5e796-109">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using the bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="5e796-110">Ad esempio, se il valore fornito è 6, vengono restituiti tutti gli eventi con valore dello stato di integrità OK (2) e di Avviso (4).</span><span class="sxs-lookup"><span data-stu-id="5e796-110">For example, If the provided value is 6 then all of the events with HealthState value of OK (2) and Warning (4) are returned.</span></span>
+      - <span data-ttu-id="5e796-111">Default - valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="5e796-111">Default - Default value.</span></span> <span data-ttu-id="5e796-112">Consente di ricercare qualsiasi stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="5e796-112">Matches any HealthState.</span></span> <span data-ttu-id="5e796-113">Il valore predefinito è zero.</span><span class="sxs-lookup"><span data-stu-id="5e796-113">The value is zero.</span></span>
+      - <span data-ttu-id="5e796-114">None - filtro che non corrisponde ad alcun valore.</span><span class="sxs-lookup"><span data-stu-id="5e796-114">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="5e796-115">Usato per non restituire alcun risultato in un determinato insieme di stati.</span><span class="sxs-lookup"><span data-stu-id="5e796-115">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="5e796-116">Il valore è uguale a 1.</span><span class="sxs-lookup"><span data-stu-id="5e796-116">The value is 1.</span></span>
+      - <span data-ttu-id="5e796-117">OK - filtro che corrispondenze di input con valore HealthState Ok.</span><span class="sxs-lookup"><span data-stu-id="5e796-117">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="5e796-118">Il valore è 2.</span><span class="sxs-lookup"><span data-stu-id="5e796-118">The value is 2.</span></span>
+      - <span data-ttu-id="5e796-119">Warning - filtro che corrispondenze di input con HealthState valore avviso.</span><span class="sxs-lookup"><span data-stu-id="5e796-119">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="5e796-120">Il valore è 4.</span><span class="sxs-lookup"><span data-stu-id="5e796-120">The value is 4.</span></span>
+      - <span data-ttu-id="5e796-121">Error - filtro che corrisponde all'input con valore di HealthState errore.</span><span class="sxs-lookup"><span data-stu-id="5e796-121">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="5e796-122">Il valore è 8.</span><span class="sxs-lookup"><span data-stu-id="5e796-122">The value is 8.</span></span>
+      - <span data-ttu-id="5e796-123">All - filtro che corrisponde all'input con qualsiasi valore di HealthState.</span><span class="sxs-lookup"><span data-stu-id="5e796-123">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="5e796-124">Il valore è 65535.</span><span class="sxs-lookup"><span data-stu-id="5e796-124">The value is 65535.</span></span> <span data-ttu-id="5e796-125">Valore predefinito: 0.</span><span class="sxs-lookup"><span data-stu-id="5e796-125">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -70,7 +81,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e55bd-103">Callback che viene attivato al momento di avanzamento del download.</span><span class="sxs-lookup"><span data-stu-id="e55bd-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="5e796-126">Callback che viene attivato al momento di avanzamento del download.</span><span class="sxs-lookup"><span data-stu-id="5e796-126">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -85,7 +96,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e55bd-104">Callback che viene attivato al momento lo stato di caricamento.</span><span class="sxs-lookup"><span data-stu-id="e55bd-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="5e796-127">Callback che viene attivato al momento lo stato di caricamento.</span><span class="sxs-lookup"><span data-stu-id="5e796-127">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -100,7 +111,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e55bd-105">Il numero di millisecondi di che una richiesta può prendere prima di essere terminato automaticamente.</span><span class="sxs-lookup"><span data-stu-id="e55bd-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="5e796-128">Il numero di millisecondi di che una richiesta può prendere prima di essere terminato automaticamente.</span><span class="sxs-lookup"><span data-stu-id="5e796-128">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -115,7 +126,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="5e796-129">Il timeout del server per eseguire l''operazione in pochi secondi.</span><span class="sxs-lookup"><span data-stu-id="5e796-129">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="5e796-130">Questo timeout specifica la durata di tempo che il client è disposto ad attendere il completamento dell''operazione richiesta.</span><span class="sxs-lookup"><span data-stu-id="5e796-130">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="5e796-131">Il valore predefinito per questo parametro è 60 secondi.</span><span class="sxs-lookup"><span data-stu-id="5e796-131">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="5e796-132">Valore predefinito: 60.</span><span class="sxs-lookup"><span data-stu-id="5e796-132">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

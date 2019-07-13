@@ -18,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="c437b-101">Parametri facoltativi.</span><span class="sxs-lookup"><span data-stu-id="c437b-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -29,7 +29,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c9892-101">Il segnale che può essere utilizzato per interrompere le richieste.</span><span class="sxs-lookup"><span data-stu-id="c9892-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="c437b-102">Il segnale che può essere utilizzato per interrompere le richieste.</span><span class="sxs-lookup"><span data-stu-id="c437b-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -44,7 +44,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="c437b-103">Descrive i criteri di integrità usati per valutare l'integrità di un'applicazione o uno dei relativi elementi figlio.</span><span class="sxs-lookup"><span data-stu-id="c437b-103">Describes the health policies used to evaluate the health of an application or one of its children.</span></span>
+      <span data-ttu-id="c437b-104">Se non è presente, la valutazione dell'integrità Usa i criteri di integrità dal manifesto dell'applicazione o i criteri di integrità predefiniti.</span><span class="sxs-lookup"><span data-stu-id="c437b-104">If not present, the health evaluation uses the health policy from application manifest or the default health policy.</span></span>
     optional: true
     syntax:
       content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
@@ -59,7 +61,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="c9892-102">{oggetto} [customHeaders] Intestazioni di richiesta personalizzata che verranno applicate prima dell''invio della richiesta definito dall''utente.</span><span class="sxs-lookup"><span data-stu-id="c9892-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="c437b-105">{oggetto} [customHeaders] Intestazioni di richiesta personalizzata che verranno applicate prima dell''invio della richiesta definito dall''utente.</span><span class="sxs-lookup"><span data-stu-id="c437b-105">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -74,7 +76,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="c437b-106">Consente di filtrare gli oggetti dello stato di integrità delle applicazioni distribuite restituiti nel risultato della query di integrità dell'applicazione in base al relativo stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="c437b-106">Allows filtering of the deployed applications health state objects returned in the result of application health query based on their health state.</span></span>
+      <span data-ttu-id="c437b-107">I valori possibili per questo parametro includono il valore intero di uno dei seguenti stati di integrità.</span><span class="sxs-lookup"><span data-stu-id="c437b-107">The possible values for this parameter include integer value of one of the following health states.</span></span> <span data-ttu-id="c437b-108">Verranno restituite solo le applicazioni distribuite che corrispondono al filtro.</span><span class="sxs-lookup"><span data-stu-id="c437b-108">Only deployed applications that match the filter will be returned.</span></span>
+      <span data-ttu-id="c437b-109">Tutte le applicazioni distribuite vengono usate per valutare lo stato di integrità aggregato.</span><span class="sxs-lookup"><span data-stu-id="c437b-109">All deployed applications are used to evaluate the aggregated health state.</span></span> <span data-ttu-id="c437b-110">Se non specificato diversamente, vengono restituite tutte le voci.</span><span class="sxs-lookup"><span data-stu-id="c437b-110">If not specified, all entries are returned.</span></span>
+      <span data-ttu-id="c437b-111">I valori dello stato sono enumerati in base al flag, pertanto il valore potrebbe essere una combinazione di questi valori ottenuti usando l'operatore "OR" bit per bit.</span><span class="sxs-lookup"><span data-stu-id="c437b-111">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="c437b-112">Ad esempio, se il valore indicato è 6, viene restituito lo stato di integrità delle applicazioni distribuite il cui valore di HealthState è OK (2) e Avviso (4).</span><span class="sxs-lookup"><span data-stu-id="c437b-112">For example, if the provided value is 6 then health state of deployed applications with HealthState value of OK (2) and Warning (4) are returned.</span></span>
+      - <span data-ttu-id="c437b-113">Default - valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="c437b-113">Default - Default value.</span></span> <span data-ttu-id="c437b-114">Consente di ricercare qualsiasi stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="c437b-114">Matches any HealthState.</span></span> <span data-ttu-id="c437b-115">Il valore predefinito è zero.</span><span class="sxs-lookup"><span data-stu-id="c437b-115">The value is zero.</span></span>
+      - <span data-ttu-id="c437b-116">None - filtro che non corrisponde ad alcun valore.</span><span class="sxs-lookup"><span data-stu-id="c437b-116">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="c437b-117">Usato per non restituire alcun risultato in un determinato insieme di stati.</span><span class="sxs-lookup"><span data-stu-id="c437b-117">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="c437b-118">Il valore è uguale a 1.</span><span class="sxs-lookup"><span data-stu-id="c437b-118">The value is 1.</span></span>
+      - <span data-ttu-id="c437b-119">OK - filtro che corrispondenze di input con valore HealthState Ok.</span><span class="sxs-lookup"><span data-stu-id="c437b-119">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="c437b-120">Il valore è 2.</span><span class="sxs-lookup"><span data-stu-id="c437b-120">The value is 2.</span></span>
+      - <span data-ttu-id="c437b-121">Warning - filtro che corrispondenze di input con HealthState valore avviso.</span><span class="sxs-lookup"><span data-stu-id="c437b-121">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="c437b-122">Il valore è 4.</span><span class="sxs-lookup"><span data-stu-id="c437b-122">The value is 4.</span></span>
+      - <span data-ttu-id="c437b-123">Error - filtro che corrisponde all'input con valore di HealthState errore.</span><span class="sxs-lookup"><span data-stu-id="c437b-123">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="c437b-124">Il valore è 8.</span><span class="sxs-lookup"><span data-stu-id="c437b-124">The value is 8.</span></span>
+      - <span data-ttu-id="c437b-125">All - filtro che corrisponde all'input con qualsiasi valore di HealthState.</span><span class="sxs-lookup"><span data-stu-id="c437b-125">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="c437b-126">Il valore è 65535.</span><span class="sxs-lookup"><span data-stu-id="c437b-126">The value is 65535.</span></span> <span data-ttu-id="c437b-127">Valore predefinito: 0.</span><span class="sxs-lookup"><span data-stu-id="c437b-127">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'deployedApplicationsHealthStateFilter?: undefined | number'
@@ -89,7 +102,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="c437b-128">Consente di filtrare la raccolta di oggetti HealthEvent restituiti in base allo stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="c437b-128">Allows filtering the collection of HealthEvent objects returned based on health state.</span></span>
+      <span data-ttu-id="c437b-129">I valori possibili per questo parametro includono il valore intero di uno dei seguenti stati di integrità.</span><span class="sxs-lookup"><span data-stu-id="c437b-129">The possible values for this parameter include integer value of one of the following health states.</span></span>
+      <span data-ttu-id="c437b-130">Vengono restituiti solo gli eventi che corrispondono al filtro.</span><span class="sxs-lookup"><span data-stu-id="c437b-130">Only events that match the filter are returned.</span></span> <span data-ttu-id="c437b-131">Tutti gli eventi vengono usati per valutare lo stato di integrità aggregato.</span><span class="sxs-lookup"><span data-stu-id="c437b-131">All events are used to evaluate the aggregated health state.</span></span>
+      <span data-ttu-id="c437b-132">Se non specificato diversamente, vengono restituite tutte le voci.</span><span class="sxs-lookup"><span data-stu-id="c437b-132">If not specified, all entries are returned.</span></span> <span data-ttu-id="c437b-133">I valori dello stato sono enumerati in base al flag, pertanto il valore potrebbe essere una combinazione di questi valori ottenuti usando l'operatore "OR" bit per bit.</span><span class="sxs-lookup"><span data-stu-id="c437b-133">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using the bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="c437b-134">Ad esempio, se il valore fornito è 6, vengono restituiti tutti gli eventi con valore dello stato di integrità OK (2) e di Avviso (4).</span><span class="sxs-lookup"><span data-stu-id="c437b-134">For example, If the provided value is 6 then all of the events with HealthState value of OK (2) and Warning (4) are returned.</span></span>
+      - <span data-ttu-id="c437b-135">Default - valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="c437b-135">Default - Default value.</span></span> <span data-ttu-id="c437b-136">Consente di ricercare qualsiasi stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="c437b-136">Matches any HealthState.</span></span> <span data-ttu-id="c437b-137">Il valore predefinito è zero.</span><span class="sxs-lookup"><span data-stu-id="c437b-137">The value is zero.</span></span>
+      - <span data-ttu-id="c437b-138">None - filtro che non corrisponde ad alcun valore.</span><span class="sxs-lookup"><span data-stu-id="c437b-138">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="c437b-139">Usato per non restituire alcun risultato in un determinato insieme di stati.</span><span class="sxs-lookup"><span data-stu-id="c437b-139">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="c437b-140">Il valore è uguale a 1.</span><span class="sxs-lookup"><span data-stu-id="c437b-140">The value is 1.</span></span>
+      - <span data-ttu-id="c437b-141">OK - filtro che corrispondenze di input con valore HealthState Ok.</span><span class="sxs-lookup"><span data-stu-id="c437b-141">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="c437b-142">Il valore è 2.</span><span class="sxs-lookup"><span data-stu-id="c437b-142">The value is 2.</span></span>
+      - <span data-ttu-id="c437b-143">Warning - filtro che corrispondenze di input con HealthState valore avviso.</span><span class="sxs-lookup"><span data-stu-id="c437b-143">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="c437b-144">Il valore è 4.</span><span class="sxs-lookup"><span data-stu-id="c437b-144">The value is 4.</span></span>
+      - <span data-ttu-id="c437b-145">Error - filtro che corrisponde all'input con valore di HealthState errore.</span><span class="sxs-lookup"><span data-stu-id="c437b-145">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="c437b-146">Il valore è 8.</span><span class="sxs-lookup"><span data-stu-id="c437b-146">The value is 8.</span></span>
+      - <span data-ttu-id="c437b-147">All - filtro che corrisponde all'input con qualsiasi valore di HealthState.</span><span class="sxs-lookup"><span data-stu-id="c437b-147">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="c437b-148">Il valore è 65535.</span><span class="sxs-lookup"><span data-stu-id="c437b-148">The value is 65535.</span></span> <span data-ttu-id="c437b-149">Valore predefinito: 0.</span><span class="sxs-lookup"><span data-stu-id="c437b-149">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -104,7 +128,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="c437b-150">Indica se le statistiche di integrità devono essere restituite come parte del risultato della query.</span><span class="sxs-lookup"><span data-stu-id="c437b-150">Indicates whether the health statistics should be returned as part of the query result.</span></span> <span data-ttu-id="c437b-151">False per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="c437b-151">False by default.</span></span>
+      <span data-ttu-id="c437b-152">Le statistiche indicano il numero di entità figlio il cui stato di integrità è Ok, Avviso ed Errore.</span><span class="sxs-lookup"><span data-stu-id="c437b-152">The statistics show the number of children entities in health state Ok, Warning, and Error.</span></span>
+      <span data-ttu-id="c437b-153">Il valore predefinito: false.</span><span class="sxs-lookup"><span data-stu-id="c437b-153">Default value: false.</span></span>
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -119,7 +146,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c9892-103">Callback che viene attivato al momento di avanzamento del download.</span><span class="sxs-lookup"><span data-stu-id="c9892-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="c437b-154">Callback che viene attivato al momento di avanzamento del download.</span><span class="sxs-lookup"><span data-stu-id="c437b-154">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -134,7 +161,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c9892-104">Callback che viene attivato al momento lo stato di caricamento.</span><span class="sxs-lookup"><span data-stu-id="c9892-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="c437b-155">Callback che viene attivato al momento lo stato di caricamento.</span><span class="sxs-lookup"><span data-stu-id="c437b-155">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -149,7 +176,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="c437b-156">Consente di filtrare gli oggetti dello stato di integrità del servizio restituiti nel risultato della query sull'integrità del servizio in base al relativo stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="c437b-156">Allows filtering of the services health state objects returned in the result of services health query based on their health state.</span></span>
+      <span data-ttu-id="c437b-157">I valori possibili per questo parametro includono il valore intero di uno dei seguenti stati di integrità.</span><span class="sxs-lookup"><span data-stu-id="c437b-157">The possible values for this parameter include integer value of one of the following health states.</span></span>
+      <span data-ttu-id="c437b-158">Vengono restituiti solo i servizi che corrispondono al filtro.</span><span class="sxs-lookup"><span data-stu-id="c437b-158">Only services that match the filter are returned.</span></span> <span data-ttu-id="c437b-159">Tutti i servizi vengono usati per valutare lo stato di integrità aggregato.</span><span class="sxs-lookup"><span data-stu-id="c437b-159">All services are used to evaluate the aggregated health state.</span></span>
+      <span data-ttu-id="c437b-160">Se non specificato diversamente, vengono restituite tutte le voci.</span><span class="sxs-lookup"><span data-stu-id="c437b-160">If not specified, all entries are returned.</span></span> <span data-ttu-id="c437b-161">I valori dello stato sono enumerati in base al flag, pertanto il valore potrebbe essere una combinazione di questi valori ottenuti usando l'operatore "OR" bit per bit.</span><span class="sxs-lookup"><span data-stu-id="c437b-161">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using bitwise 'OR' operator.</span></span> <span data-ttu-id="c437b-162">Ad esempio, se il valore indicato è 6, viene restituito lo stato di integrità dei servizi con valore HealthState OK (2) e Warning (4).</span><span class="sxs-lookup"><span data-stu-id="c437b-162">For example, if the provided value is 6 then health state of services with HealthState value of OK (2) and Warning (4) will be returned.</span></span>
+      - <span data-ttu-id="c437b-163">Default - valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="c437b-163">Default - Default value.</span></span> <span data-ttu-id="c437b-164">Consente di ricercare qualsiasi stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="c437b-164">Matches any HealthState.</span></span> <span data-ttu-id="c437b-165">Il valore predefinito è zero.</span><span class="sxs-lookup"><span data-stu-id="c437b-165">The value is zero.</span></span>
+      - <span data-ttu-id="c437b-166">None - filtro che non corrisponde ad alcun valore.</span><span class="sxs-lookup"><span data-stu-id="c437b-166">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="c437b-167">Usato per non restituire alcun risultato in un determinato insieme di stati.</span><span class="sxs-lookup"><span data-stu-id="c437b-167">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="c437b-168">Il valore è uguale a 1.</span><span class="sxs-lookup"><span data-stu-id="c437b-168">The value is 1.</span></span>
+      - <span data-ttu-id="c437b-169">OK - filtro che corrispondenze di input con valore HealthState Ok.</span><span class="sxs-lookup"><span data-stu-id="c437b-169">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="c437b-170">Il valore è 2.</span><span class="sxs-lookup"><span data-stu-id="c437b-170">The value is 2.</span></span>
+      - <span data-ttu-id="c437b-171">Warning - filtro che corrispondenze di input con HealthState valore avviso.</span><span class="sxs-lookup"><span data-stu-id="c437b-171">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="c437b-172">Il valore è 4.</span><span class="sxs-lookup"><span data-stu-id="c437b-172">The value is 4.</span></span>
+      - <span data-ttu-id="c437b-173">Error - filtro che corrisponde all'input con valore di HealthState errore.</span><span class="sxs-lookup"><span data-stu-id="c437b-173">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="c437b-174">Il valore è 8.</span><span class="sxs-lookup"><span data-stu-id="c437b-174">The value is 8.</span></span>
+      - <span data-ttu-id="c437b-175">All - filtro che corrisponde all'input con qualsiasi valore di HealthState.</span><span class="sxs-lookup"><span data-stu-id="c437b-175">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="c437b-176">Il valore è 65535.</span><span class="sxs-lookup"><span data-stu-id="c437b-176">The value is 65535.</span></span> <span data-ttu-id="c437b-177">Valore predefinito: 0.</span><span class="sxs-lookup"><span data-stu-id="c437b-177">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'servicesHealthStateFilter?: undefined | number'
@@ -164,7 +201,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="c9892-105">Il numero di millisecondi di che una richiesta può prendere prima di essere terminato automaticamente.</span><span class="sxs-lookup"><span data-stu-id="c9892-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="c437b-178">Il numero di millisecondi di che una richiesta può prendere prima di essere terminato automaticamente.</span><span class="sxs-lookup"><span data-stu-id="c437b-178">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -179,7 +216,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="c437b-179">Il timeout del server per eseguire l''operazione in pochi secondi.</span><span class="sxs-lookup"><span data-stu-id="c437b-179">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="c437b-180">Questo timeout specifica la durata di tempo che il client è disposto ad attendere il completamento dell''operazione richiesta.</span><span class="sxs-lookup"><span data-stu-id="c437b-180">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="c437b-181">Il valore predefinito per questo parametro è 60 secondi.</span><span class="sxs-lookup"><span data-stu-id="c437b-181">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="c437b-182">Valore predefinito: 60.</span><span class="sxs-lookup"><span data-stu-id="c437b-182">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription'
+    name: ServiceLoadMetricDescription
+    fullName: ServiceLoadMetricDescription
+    children:
+      - '@azure/servicefabric.ServiceLoadMetricDescription.defaultLoad'
+      - '@azure/servicefabric.ServiceLoadMetricDescription.name'
+      - '@azure/servicefabric.ServiceLoadMetricDescription.primaryDefaultLoad'
+      - '@azure/servicefabric.ServiceLoadMetricDescription.secondaryDefaultLoad'
+      - '@azure/servicefabric.ServiceLoadMetricDescription.weight'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="5d526-101">Specifica una metrica per bilanciare il carico di un servizio in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="5d526-101">Specifies a metric to load balance a service during runtime.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription.defaultLoad'
+    name: defaultLoad
+    fullName: defaultLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5d526-102">Usato solo per i servizi senza stati.</span><span class="sxs-lookup"><span data-stu-id="5d526-102">Used only for Stateless services.</span></span> <span data-ttu-id="5d526-103">La quantità di carico, sotto forma di numero, creata dal servizio per la metrica predefinita.</span><span class="sxs-lookup"><span data-stu-id="5d526-103">The default amount of load, as a number, that this service creates for this metric.</span></span>'
+    optional: true
+    syntax:
+      content: 'defaultLoad?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5d526-104">Nome della metrica.</span><span class="sxs-lookup"><span data-stu-id="5d526-104">The name of the metric.</span></span> <span data-ttu-id="5d526-105">Se il servizio sceglie di segnalare il carico in fase di esecuzione, il nome della metrica carico deve corrispondere al nome specificato nel nome esattamente.</span><span class="sxs-lookup"><span data-stu-id="5d526-105">If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly.</span></span> <span data-ttu-id="5d526-106">Si noti che i nomi delle metriche sono tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="5d526-106">Note that metric names are case-sensitive.</span></span>'
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription.primaryDefaultLoad'
+    name: primaryDefaultLoad
+    fullName: primaryDefaultLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5d526-107">Utilizzato solo per i servizi con stato.</span><span class="sxs-lookup"><span data-stu-id="5d526-107">Used only for Stateful services.</span></span> <span data-ttu-id="5d526-108">La quantità predefinita di carico, sotto forma di numero, creata dal servizio per questa metrica quando corrisponde alla replica primaria.</span><span class="sxs-lookup"><span data-stu-id="5d526-108">The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.</span></span>'
+    optional: true
+    syntax:
+      content: 'primaryDefaultLoad?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription.secondaryDefaultLoad'
+    name: secondaryDefaultLoad
+    fullName: secondaryDefaultLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5d526-109">Utilizzato solo per i servizi con stato.</span><span class="sxs-lookup"><span data-stu-id="5d526-109">Used only for Stateful services.</span></span> <span data-ttu-id="5d526-110">La quantità predefinita di carico, sotto forma di numero, creata dal servizio per questa metrica quando corrisponde alla replica secondaria.</span><span class="sxs-lookup"><span data-stu-id="5d526-110">The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.</span></span>'
+    optional: true
+    syntax:
+      content: 'secondaryDefaultLoad?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription.weight'
+    name: weight
+    fullName: weight
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5d526-111">Il servizio load peso relativo della metrica, rispetto alle altre metriche configurate per questo servizio, sotto forma di numero.</span><span class="sxs-lookup"><span data-stu-id="5d526-111">The service load metric relative weight, compared to other metrics configured for this service, as a number.</span></span> <span data-ttu-id="5d526-112">I valori possibili sono: "Zero", "Low", "Medium", "High"</span><span class="sxs-lookup"><span data-stu-id="5d526-112">Possible values include: ''Zero'', ''Low'', ''Medium'', ''High''</span></span>'
+    optional: true
+    syntax:
+      content: 'weight?: ServiceLoadMetricWeight'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceLoadMetricWeight'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceLoadMetricWeight'
+    name: ServiceLoadMetricWeight
+    spec.typeScript:
+      - name: ServiceLoadMetricWeight
+        fullName: ServiceLoadMetricWeight
+        uid: '@azure/servicefabric.ServiceLoadMetricWeight'

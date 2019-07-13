@@ -1,0 +1,135 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus'
+    name: SecondaryIdleReplicatorStatus
+    fullName: SecondaryIdleReplicatorStatus
+    children:
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.copyQueueStatus'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.isInBuild'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.kind'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastAcknowledgementSentTimeUtc'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastCopyOperationReceivedTimeUtc'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastReplicationOperationReceivedTimeUtc'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.replicationQueueStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="5a026-101">Stato del replicator secondario quando è in modalità di inattività e viene compilato dalla replica primaria.</span><span class="sxs-lookup"><span data-stu-id="5a026-101">Status of the secondary replicator when it is in idle mode and is being built by the primary.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.copyQueueStatus'
+    name: copyQueueStatus
+    fullName: copyQueueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5a026-102">Dettagli relativi alla coda di copia per il replicator secondario.</span><span class="sxs-lookup"><span data-stu-id="5a026-102">Details about the copy queue on the secondary replicator.</span></span>
+    optional: true
+    syntax:
+      content: 'copyQueueStatus?: ReplicatorQueueStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicatorQueueStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.isInBuild'
+    name: isInBuild
+    fullName: isInBuild
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5a026-103">Valore che indica se la replica è in corso la generazione.</span><span class="sxs-lookup"><span data-stu-id="5a026-103">Value that indicates whether the replica is currently being built.</span></span>
+    optional: true
+    syntax:
+      content: 'isInBuild?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5a026-104">Discriminatore polimorfiche</span><span class="sxs-lookup"><span data-stu-id="5a026-104">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "IdleSecondary"'
+      return:
+        type:
+          - '"IdleSecondary"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastAcknowledgementSentTimeUtc'
+    name: lastAcknowledgementSentTimeUtc
+    fullName: lastAcknowledgementSentTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="5a026-105">L'ultimo timestamp (UTC) in corrispondenza del quale è stato inviato un acknowledgement per il replicatore principale.</span><span class="sxs-lookup"><span data-stu-id="5a026-105">The last time-stamp (UTC) at which an acknowledgment was sent to the primary replicator.</span></span>
+      <span data-ttu-id="5a026-106">UTC 0 rappresenta un valore non valido, che indica che un messaggio di riconoscimento non è stato inviato.</span><span class="sxs-lookup"><span data-stu-id="5a026-106">UTC 0 represents an invalid value, indicating that an acknowledgment message was never sent.</span></span>
+    optional: true
+    syntax:
+      content: 'lastAcknowledgementSentTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastCopyOperationReceivedTimeUtc'
+    name: lastCopyOperationReceivedTimeUtc
+    fullName: lastCopyOperationReceivedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="5a026-107">L'ultimo timestamp (UTC) in corrispondenza del quale un'operazione di copia è stata ricevuta dal server primario.</span><span class="sxs-lookup"><span data-stu-id="5a026-107">The last time-stamp (UTC) at which a copy operation was received from the primary.</span></span>
+      <span data-ttu-id="5a026-108">UTC 0 rappresenta un valore non valido, che indica che un messaggio di operazione di copia è stata mai ricevuto.</span><span class="sxs-lookup"><span data-stu-id="5a026-108">UTC 0 represents an invalid value, indicating that a copy operation message was never received.</span></span>
+    optional: true
+    syntax:
+      content: 'lastCopyOperationReceivedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastReplicationOperationReceivedTimeUtc'
+    name: lastReplicationOperationReceivedTimeUtc
+    fullName: lastReplicationOperationReceivedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="5a026-109">L'ultimo timestamp (UTC) in corrispondenza del quale un'operazione di replica è stata ricevuta dal server primario.</span><span class="sxs-lookup"><span data-stu-id="5a026-109">The last time-stamp (UTC) at which a replication operation was received from the primary.</span></span>
+      <span data-ttu-id="5a026-110">UTC 0 rappresenta un valore non valido, che indica che un messaggio di operazione di replica è stata mai ricevuto.</span><span class="sxs-lookup"><span data-stu-id="5a026-110">UTC 0 represents an invalid value, indicating that a replication operation message was never received.</span></span>
+    optional: true
+    syntax:
+      content: 'lastReplicationOperationReceivedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.replicationQueueStatus'
+    name: replicationQueueStatus
+    fullName: replicationQueueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5a026-111">Informazioni dettagliate sulla coda di replica per il replicator secondario.</span><span class="sxs-lookup"><span data-stu-id="5a026-111">Details about the replication queue on the secondary replicator.</span></span>
+    optional: true
+    syntax:
+      content: 'replicationQueueStatus?: ReplicatorQueueStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicatorQueueStatus'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicatorQueueStatus'
+    name: ReplicatorQueueStatus
+    spec.typeScript:
+      - name: ReplicatorQueueStatus
+        fullName: ReplicatorQueueStatus
+        uid: '@azure/servicefabric.ReplicatorQueueStatus'

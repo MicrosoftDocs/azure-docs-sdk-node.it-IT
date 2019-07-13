@@ -6,7 +6,7 @@ items:
     children:
       - '@azure/arm-machinelearningservices.MachineLearningCompute.beginCreateOrUpdate'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.beginDeleteMethod'
-      - '@azure/arm-machinelearningservices.MachineLearningCompute.beginSystemUpdate'
+      - '@azure/arm-machinelearningservices.MachineLearningCompute.beginUpdate'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.createOrUpdate'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.deleteMethod'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.get'
@@ -21,12 +21,15 @@ items:
       - '@azure/arm-machinelearningservices.MachineLearningCompute.listKeys'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.listKeys_2'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.listKeys_1'
+      - '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes'
+      - '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes_2'
+      - '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes_1'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.constructor'
-      - '@azure/arm-machinelearningservices.MachineLearningCompute.systemUpdate'
+      - '@azure/arm-machinelearningservices.MachineLearningCompute.update'
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="0c900-101">Classe che rappresenta un MachineLearningCompute.</span><span class="sxs-lookup"><span data-stu-id="0c900-101">Class representing a MachineLearningCompute.</span></span>
+    summary: <span data-ttu-id="793bd-101">Classe che rappresenta un MachineLearningCompute.</span><span class="sxs-lookup"><span data-stu-id="793bd-101">Class representing a MachineLearningCompute.</span></span>
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.beginCreateOrUpdate'
     name: 'beginCreateOrUpdate(string, string, string, ComputeResource, msRest.RequestOptionsBase)'
@@ -34,26 +37,26 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="0c900-102">Crea o aggiorna calcolo.</span><span class="sxs-lookup"><span data-stu-id="0c900-102">Creates or updates compute.</span></span> <span data-ttu-id="0c900-103">Questa chiamata sovrascriverà un calcolo, se presente.</span><span class="sxs-lookup"><span data-stu-id="0c900-103">This call will overwrite a compute if it exists.</span></span> <span data-ttu-id="0c900-104">Si tratta di un''operazione irreversibile.</span><span class="sxs-lookup"><span data-stu-id="0c900-104">This is a nonrecoverable operation.</span></span> <span data-ttu-id="0c900-105">Se si intende creare un nuovo calcolo, eseguire un''operazione GET per verificare che non esiste ancora.</span><span class="sxs-lookup"><span data-stu-id="0c900-105">If your intent is to create a new compute, do a GET first to verify that it does not exist yet.</span></span>'
+    summary: '<span data-ttu-id="793bd-102">Crea o aggiorna calcolo.</span><span class="sxs-lookup"><span data-stu-id="793bd-102">Creates or updates compute.</span></span> <span data-ttu-id="793bd-103">Questa chiamata sovrascriverà un calcolo, se presente.</span><span class="sxs-lookup"><span data-stu-id="793bd-103">This call will overwrite a compute if it exists.</span></span> <span data-ttu-id="793bd-104">Si tratta di un''operazione irreversibile.</span><span class="sxs-lookup"><span data-stu-id="793bd-104">This is a nonrecoverable operation.</span></span> <span data-ttu-id="793bd-105">Se si intende creare un nuovo calcolo, eseguire un''operazione GET per verificare che non esiste ancora.</span><span class="sxs-lookup"><span data-stu-id="793bd-105">If your intent is to create a new compute, do a GET first to verify that it does not exist yet.</span></span>'
     syntax:
       content: 'function beginCreateOrUpdate(resourceGroupName: string, workspaceName: string, computeName: string, parameters: ComputeResource, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-106">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-106">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-106">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-106">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-107">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-107">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-107">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-107">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-108">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-108">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-108">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-108">Name of the Azure Machine Learning compute.</span></span>
         - id: parameters
           type:
             - '@azure/arm-machinelearningservices.ComputeResource'
-          description: <span data-ttu-id="0c900-109">Payload con la definizione di calcolo di Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-109">Payload with Machine Learning compute definition.</span></span>
+          description: <span data-ttu-id="793bd-109">Payload con la definizione di calcolo di Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-109">Payload with Machine Learning compute definition.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -64,27 +67,31 @@ items:
           - Promise<LROPoller>
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.beginDeleteMethod'
-    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    name: 'beginDeleteMethod(string, string, string, Models.UnderlyingResourceAction, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c900-110">Elimina il calcolo di Machine Learning specificato.</span><span class="sxs-lookup"><span data-stu-id="0c900-110">Deletes specified Machine Learning compute.</span></span>
+    summary: <span data-ttu-id="793bd-110">Elimina il calcolo di Machine Learning specificato.</span><span class="sxs-lookup"><span data-stu-id="793bd-110">Deletes specified Machine Learning compute.</span></span>
     syntax:
-      content: 'function beginDeleteMethod(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
+      content: 'function beginDeleteMethod(resourceGroupName: string, workspaceName: string, computeName: string, underlyingResourceAction: Models.UnderlyingResourceAction, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-111">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-111">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-111">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-111">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-112">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-112">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-112">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-112">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-113">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-113">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-113">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-113">Name of the Azure Machine Learning compute.</span></span>
+        - id: underlyingResourceAction
+          type:
+            - Models.UnderlyingResourceAction
+          description: '<span data-ttu-id="793bd-114">Elimina l''oggetto sottostante di calcolo se ''Delete'' o scollegare le risorse di calcolo dall''area di lavoro se ''Scollega''.</span><span class="sxs-lookup"><span data-stu-id="793bd-114">Delete the underlying compute if ''Delete'', or detach the underlying compute from workspace if ''Detach''.</span></span> <span data-ttu-id="793bd-115">I valori possibili sono: ''Delete'', ''Detach''</span><span class="sxs-lookup"><span data-stu-id="793bd-115">Possible values include: ''Delete'', ''Detach''</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -94,28 +101,32 @@ items:
         type:
           - Promise<LROPoller>
     package: '@azure/arm-machinelearningservices'
-  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.beginSystemUpdate'
-    name: 'beginSystemUpdate(string, string, string, msRest.RequestOptionsBase)'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.beginUpdate'
+    name: 'beginUpdate(string, string, string, ClusterUpdateParameters, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c900-114">Calcolo di System Update in Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-114">System Update On Machine Learning compute.</span></span>
+    summary: '<span data-ttu-id="793bd-116">Aggiorna le proprietà di un calcolo.</span><span class="sxs-lookup"><span data-stu-id="793bd-116">Updates properties of a compute.</span></span> <span data-ttu-id="793bd-117">Questa chiamata sovrascriverà un calcolo, se presente.</span><span class="sxs-lookup"><span data-stu-id="793bd-117">This call will overwrite a compute if it exists.</span></span> <span data-ttu-id="793bd-118">Si tratta di un''operazione irreversibile.</span><span class="sxs-lookup"><span data-stu-id="793bd-118">This is a nonrecoverable operation.</span></span>'
     syntax:
-      content: 'function beginSystemUpdate(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
+      content: 'function beginUpdate(resourceGroupName: string, workspaceName: string, computeName: string, parameters: ClusterUpdateParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-115">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-115">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-119">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-119">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-116">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-116">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-120">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-120">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-117">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-117">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-121">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-121">Name of the Azure Machine Learning compute.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-machinelearningservices.ClusterUpdateParameters'
+          description: <span data-ttu-id="793bd-122">Parametri aggiuntivi per l'aggiornamento del cluster.</span><span class="sxs-lookup"><span data-stu-id="793bd-122">Additional parameters for cluster update.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -131,26 +142,26 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="0c900-118">Crea o aggiorna calcolo.</span><span class="sxs-lookup"><span data-stu-id="0c900-118">Creates or updates compute.</span></span> <span data-ttu-id="0c900-119">Questa chiamata sovrascriverà un calcolo, se presente.</span><span class="sxs-lookup"><span data-stu-id="0c900-119">This call will overwrite a compute if it exists.</span></span> <span data-ttu-id="0c900-120">Si tratta di un''operazione irreversibile.</span><span class="sxs-lookup"><span data-stu-id="0c900-120">This is a nonrecoverable operation.</span></span> <span data-ttu-id="0c900-121">Se si intende creare un nuovo calcolo, eseguire un''operazione GET per verificare che non esiste ancora.</span><span class="sxs-lookup"><span data-stu-id="0c900-121">If your intent is to create a new compute, do a GET first to verify that it does not exist yet.</span></span>'
+    summary: '<span data-ttu-id="793bd-123">Crea o aggiorna calcolo.</span><span class="sxs-lookup"><span data-stu-id="793bd-123">Creates or updates compute.</span></span> <span data-ttu-id="793bd-124">Questa chiamata sovrascriverà un calcolo, se presente.</span><span class="sxs-lookup"><span data-stu-id="793bd-124">This call will overwrite a compute if it exists.</span></span> <span data-ttu-id="793bd-125">Si tratta di un''operazione irreversibile.</span><span class="sxs-lookup"><span data-stu-id="793bd-125">This is a nonrecoverable operation.</span></span> <span data-ttu-id="793bd-126">Se si intende creare un nuovo calcolo, eseguire un''operazione GET per verificare che non esiste ancora.</span><span class="sxs-lookup"><span data-stu-id="793bd-126">If your intent is to create a new compute, do a GET first to verify that it does not exist yet.</span></span>'
     syntax:
       content: 'function createOrUpdate(resourceGroupName: string, workspaceName: string, computeName: string, parameters: ComputeResource, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-122">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-122">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-127">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-127">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-123">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-123">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-128">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-128">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-124">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-124">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-129">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-129">Name of the Azure Machine Learning compute.</span></span>
         - id: parameters
           type:
             - '@azure/arm-machinelearningservices.ComputeResource'
-          description: <span data-ttu-id="0c900-125">Payload con la definizione di calcolo di Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-125">Payload with Machine Learning compute definition.</span></span>
+          description: <span data-ttu-id="793bd-130">Payload con la definizione di calcolo di Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-130">Payload with Machine Learning compute definition.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -161,27 +172,31 @@ items:
           - Promise<Models.MachineLearningComputeCreateOrUpdateResponse>
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.deleteMethod'
-    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    name: 'deleteMethod(string, string, string, Models.UnderlyingResourceAction, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c900-126">Elimina il calcolo di Machine Learning specificato.</span><span class="sxs-lookup"><span data-stu-id="0c900-126">Deletes specified Machine Learning compute.</span></span>
+    summary: <span data-ttu-id="793bd-131">Elimina il calcolo di Machine Learning specificato.</span><span class="sxs-lookup"><span data-stu-id="793bd-131">Deletes specified Machine Learning compute.</span></span>
     syntax:
-      content: 'function deleteMethod(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
+      content: 'function deleteMethod(resourceGroupName: string, workspaceName: string, computeName: string, underlyingResourceAction: Models.UnderlyingResourceAction, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-127">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-127">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-132">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-132">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-128">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-128">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-133">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-133">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-129">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-129">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-134">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-134">Name of the Azure Machine Learning compute.</span></span>
+        - id: underlyingResourceAction
+          type:
+            - Models.UnderlyingResourceAction
+          description: '<span data-ttu-id="793bd-135">Elimina l''oggetto sottostante di calcolo se ''Delete'' o scollegare le risorse di calcolo dall''area di lavoro se ''Scollega''.</span><span class="sxs-lookup"><span data-stu-id="793bd-135">Delete the underlying compute if ''Delete'', or detach the underlying compute from workspace if ''Detach''.</span></span> <span data-ttu-id="793bd-136">I valori possibili sono: ''Delete'', ''Detach''</span><span class="sxs-lookup"><span data-stu-id="793bd-136">Possible values include: ''Delete'', ''Detach''</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -197,22 +212,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="0c900-130">Ottiene il calcolo definizione in base al nome.</span><span class="sxs-lookup"><span data-stu-id="0c900-130">Gets compute definition by its name.</span></span> <span data-ttu-id="0c900-131">Non vengono restituiti tutti i segreti (chiavi di archiviazione, le credenziali del servizio e così via): usare ''chiavi'' risorsa annidata per ottenerli.</span><span class="sxs-lookup"><span data-stu-id="0c900-131">Any secrets (storage keys, service credentials, etc) are not returned - use ''keys'' nested resource to get them.</span></span>'
+    summary: '<span data-ttu-id="793bd-137">Ottiene il calcolo definizione in base al nome.</span><span class="sxs-lookup"><span data-stu-id="793bd-137">Gets compute definition by its name.</span></span> <span data-ttu-id="793bd-138">Non vengono restituiti tutti i segreti (chiavi di archiviazione, le credenziali del servizio e così via): usare ''chiavi'' risorsa annidata per ottenerli.</span><span class="sxs-lookup"><span data-stu-id="793bd-138">Any secrets (storage keys, service credentials, etc) are not returned - use ''keys'' nested resource to get them.</span></span>'
     syntax:
       content: 'function get(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-132">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-132">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-139">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-139">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-133">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-133">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-140">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-140">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-134">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-134">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-141">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-141">Name of the Azure Machine Learning compute.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -235,24 +250,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-135">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-135">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-142">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-142">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-136">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-136">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-143">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-143">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-137">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-137">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-144">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-144">Name of the Azure Machine Learning compute.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="0c900-138">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="0c900-138">The optional parameters</span></span>
+          description: <span data-ttu-id="793bd-145">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="793bd-145">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-machinelearningservices.ComputeResource>
           description: |
-            <span data-ttu-id="0c900-139">Il callback</span><span class="sxs-lookup"><span data-stu-id="0c900-139">The callback</span></span>
+            <span data-ttu-id="793bd-146">Il callback</span><span class="sxs-lookup"><span data-stu-id="793bd-146">The callback</span></span>
       return:
         type:
           - Promise<Models.MachineLearningComputeGetResponse>
@@ -270,20 +285,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-140">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-140">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-147">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-147">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-141">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-141">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-148">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-148">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-142">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-142">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-149">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-149">Name of the Azure Machine Learning compute.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-machinelearningservices.ComputeResource>
           description: |
-            <span data-ttu-id="0c900-143">Il callback</span><span class="sxs-lookup"><span data-stu-id="0c900-143">The callback</span></span>
+            <span data-ttu-id="793bd-150">Il callback</span><span class="sxs-lookup"><span data-stu-id="793bd-150">The callback</span></span>
       return:
         type:
           - Promise<Models.MachineLearningComputeGetResponse>
@@ -301,20 +316,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-144">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-144">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-151">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-151">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-145">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-145">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-152">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-152">Name of Azure Machine Learning workspace.</span></span>
         - id: options
           type:
             - '@azure/arm-machinelearningservices.MachineLearningComputeListByWorkspaceOptionalParams'
-          description: <span data-ttu-id="0c900-146">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="0c900-146">The optional parameters</span></span>
+          description: <span data-ttu-id="793bd-153">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="793bd-153">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-machinelearningservices.PaginatedComputeResourcesList>
           description: |
-            <span data-ttu-id="0c900-147">Il callback</span><span class="sxs-lookup"><span data-stu-id="0c900-147">The callback</span></span>
+            <span data-ttu-id="793bd-154">Il callback</span><span class="sxs-lookup"><span data-stu-id="793bd-154">The callback</span></span>
       return:
         type:
           - Promise<Models.MachineLearningComputeListByWorkspaceResponse>
@@ -325,18 +340,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c900-148">Ottiene i servizi di calcolo nell'area di lavoro specificata.</span><span class="sxs-lookup"><span data-stu-id="0c900-148">Gets computes in specified workspace.</span></span>
+    summary: <span data-ttu-id="793bd-155">Ottiene i servizi di calcolo nell'area di lavoro specificata.</span><span class="sxs-lookup"><span data-stu-id="793bd-155">Gets computes in specified workspace.</span></span>
     syntax:
       content: 'function listByWorkspace(resourceGroupName: string, workspaceName: string, options?: Models.MachineLearningComputeListByWorkspaceOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-149">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-149">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-156">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-156">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-150">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-150">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-157">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-157">Name of Azure Machine Learning workspace.</span></span>
         - id: options
           type:
             - Models.MachineLearningComputeListByWorkspaceOptionalParams
@@ -359,16 +374,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-151">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-151">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-158">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-158">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-152">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-152">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-159">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-159">Name of Azure Machine Learning workspace.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-machinelearningservices.PaginatedComputeResourcesList>
           description: |
-            <span data-ttu-id="0c900-153">Il callback</span><span class="sxs-lookup"><span data-stu-id="0c900-153">The callback</span></span>
+            <span data-ttu-id="793bd-160">Il callback</span><span class="sxs-lookup"><span data-stu-id="793bd-160">The callback</span></span>
       return:
         type:
           - Promise<Models.MachineLearningComputeListByWorkspaceResponse>
@@ -379,14 +394,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c900-154">Ottiene i servizi di calcolo nell'area di lavoro specificata.</span><span class="sxs-lookup"><span data-stu-id="0c900-154">Gets computes in specified workspace.</span></span>
+    summary: <span data-ttu-id="793bd-161">Ottiene i servizi di calcolo nell'area di lavoro specificata.</span><span class="sxs-lookup"><span data-stu-id="793bd-161">Gets computes in specified workspace.</span></span>
     syntax:
       content: 'function listByWorkspaceNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="0c900-155">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="0c900-155">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="793bd-162">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="793bd-162">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -409,16 +424,16 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="0c900-156">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="0c900-156">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="793bd-163">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="793bd-163">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="0c900-157">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="0c900-157">The optional parameters</span></span>
+          description: <span data-ttu-id="793bd-164">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="793bd-164">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-machinelearningservices.PaginatedComputeResourcesList>
           description: |
-            <span data-ttu-id="0c900-158">Il callback</span><span class="sxs-lookup"><span data-stu-id="0c900-158">The callback</span></span>
+            <span data-ttu-id="793bd-165">Il callback</span><span class="sxs-lookup"><span data-stu-id="793bd-165">The callback</span></span>
       return:
         type:
           - Promise<Models.MachineLearningComputeListByWorkspaceNextResponse>
@@ -436,12 +451,12 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="0c900-159">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="0c900-159">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="793bd-166">Il parametro NextLink della chiamata riuscita precedente all'operazione di elenco.</span><span class="sxs-lookup"><span data-stu-id="793bd-166">The NextLink from the previous successful call to List operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-machinelearningservices.PaginatedComputeResourcesList>
           description: |
-            <span data-ttu-id="0c900-160">Il callback</span><span class="sxs-lookup"><span data-stu-id="0c900-160">The callback</span></span>
+            <span data-ttu-id="793bd-167">Il callback</span><span class="sxs-lookup"><span data-stu-id="793bd-167">The callback</span></span>
       return:
         type:
           - Promise<Models.MachineLearningComputeListByWorkspaceNextResponse>
@@ -452,22 +467,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="0c900-161">Ottiene i segreti relativi al calcolo di Machine Learning (le chiavi di archiviazione, le credenziali del servizio e così via).</span><span class="sxs-lookup"><span data-stu-id="0c900-161">Gets secrets related to Machine Learning compute (storage keys, service credentials, etc).</span></span>'
+    summary: '<span data-ttu-id="793bd-168">Ottiene i segreti relativi al calcolo di Machine Learning (le chiavi di archiviazione, le credenziali del servizio e così via).</span><span class="sxs-lookup"><span data-stu-id="793bd-168">Gets secrets related to Machine Learning compute (storage keys, service credentials, etc).</span></span>'
     syntax:
       content: 'function listKeys(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-162">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-162">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-169">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-169">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-163">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-163">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-170">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-170">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-164">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-164">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-171">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-171">Name of the Azure Machine Learning compute.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -490,24 +505,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-165">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-165">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-172">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-172">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-166">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-166">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-173">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-173">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-167">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-167">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-174">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-174">Name of the Azure Machine Learning compute.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="0c900-168">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="0c900-168">The optional parameters</span></span>
+          description: <span data-ttu-id="793bd-175">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="793bd-175">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<Models.ComputeSecretsUnion>
           description: |
-            <span data-ttu-id="0c900-169">Il callback</span><span class="sxs-lookup"><span data-stu-id="0c900-169">The callback</span></span>
+            <span data-ttu-id="793bd-176">Il callback</span><span class="sxs-lookup"><span data-stu-id="793bd-176">The callback</span></span>
       return:
         type:
           - Promise<Models.MachineLearningComputeListKeysResponse>
@@ -525,62 +540,46 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-170">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-170">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-177">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-177">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-171">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-171">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-178">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-178">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-172">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-172">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-179">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-179">Name of the Azure Machine Learning compute.</span></span>
         - id: callback
           type:
             - ServiceCallback<Models.ComputeSecretsUnion>
           description: |
-            <span data-ttu-id="0c900-173">Il callback</span><span class="sxs-lookup"><span data-stu-id="0c900-173">The callback</span></span>
+            <span data-ttu-id="793bd-180">Il callback</span><span class="sxs-lookup"><span data-stu-id="793bd-180">The callback</span></span>
       return:
         type:
           - Promise<Models.MachineLearningComputeListKeysResponse>
     package: '@azure/arm-machinelearningservices'
-  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.constructor'
-    name: MachineLearningCompute(AzureMachineLearningWorkspacesContext)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: <span data-ttu-id="0c900-174">Creare un MachineLearningCompute.</span><span class="sxs-lookup"><span data-stu-id="0c900-174">Create a MachineLearningCompute.</span></span>
-    syntax:
-      content: 'new MachineLearningCompute(client: AzureMachineLearningWorkspacesContext)'
-      parameters:
-        - id: client
-          type:
-            - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspacesContext'
-          description: |
-            <span data-ttu-id="0c900-175">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="0c900-175">Reference to the service client.</span></span>
-    package: '@azure/arm-machinelearningservices'
-  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.systemUpdate'
-    name: 'systemUpdate(string, string, string, msRest.RequestOptionsBase)'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes'
+    name: 'listNodes(string, string, string, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0c900-176">Calcolo di System Update in Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-176">System Update On Machine Learning compute.</span></span>
+    summary: '<span data-ttu-id="793bd-181">Ottenere i dettagli di tutti i nodi di calcolo (ad esempio indirizzo, porta e così via) di calcolo.</span><span class="sxs-lookup"><span data-stu-id="793bd-181">Get the details (e.g IP address, port etc) of all the compute nodes in the compute.</span></span>'
     syntax:
-      content: 'function systemUpdate(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
+      content: 'function listNodes(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="0c900-177">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="0c900-177">Name of the resource group in which workspace is located.</span></span>
+          description: <span data-ttu-id="793bd-182">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-182">Name of the resource group in which workspace is located.</span></span>
         - id: workspaceName
           type:
             - string
-          description: <span data-ttu-id="0c900-178">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-178">Name of Azure Machine Learning workspace.</span></span>
+          description: <span data-ttu-id="793bd-183">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-183">Name of Azure Machine Learning workspace.</span></span>
         - id: computeName
           type:
             - string
-          description: <span data-ttu-id="0c900-179">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="0c900-179">Name of the Azure Machine Learning compute.</span></span>
+          description: <span data-ttu-id="793bd-184">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-184">Name of the Azure Machine Learning compute.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -588,7 +587,124 @@ items:
           optional: true
       return:
         type:
-          - Promise<Models.MachineLearningComputeSystemUpdateResponse>
+          - Promise<Models.MachineLearningComputeListNodesResponse>
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes_2'
+    name: 'listNodes(string, string, string, RequestOptionsBase, ServiceCallback<AmlComputeNodesInformation>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNodes(resourceGroupName: string, workspaceName: string, computeName: string, options: RequestOptionsBase, callback: ServiceCallback<AmlComputeNodesInformation>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="793bd-185">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-185">Name of the resource group in which workspace is located.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="793bd-186">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-186">Name of Azure Machine Learning workspace.</span></span>
+        - id: computeName
+          type:
+            - string
+          description: <span data-ttu-id="793bd-187">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-187">Name of the Azure Machine Learning compute.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="793bd-188">I parametri facoltativi</span><span class="sxs-lookup"><span data-stu-id="793bd-188">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-machinelearningservices.AmlComputeNodesInformation>
+          description: |
+            <span data-ttu-id="793bd-189">Il callback</span><span class="sxs-lookup"><span data-stu-id="793bd-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.MachineLearningComputeListNodesResponse>
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes_1'
+    name: 'listNodes(string, string, string, ServiceCallback<AmlComputeNodesInformation>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNodes(resourceGroupName: string, workspaceName: string, computeName: string, callback: ServiceCallback<AmlComputeNodesInformation>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="793bd-190">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-190">Name of the resource group in which workspace is located.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="793bd-191">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-191">Name of Azure Machine Learning workspace.</span></span>
+        - id: computeName
+          type:
+            - string
+          description: <span data-ttu-id="793bd-192">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-192">Name of the Azure Machine Learning compute.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-machinelearningservices.AmlComputeNodesInformation>
+          description: |
+            <span data-ttu-id="793bd-193">Il callback</span><span class="sxs-lookup"><span data-stu-id="793bd-193">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.MachineLearningComputeListNodesResponse>
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.constructor'
+    name: MachineLearningCompute(AzureMachineLearningWorkspacesContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="793bd-194">Creare un MachineLearningCompute.</span><span class="sxs-lookup"><span data-stu-id="793bd-194">Create a MachineLearningCompute.</span></span>
+    syntax:
+      content: 'new MachineLearningCompute(client: AzureMachineLearningWorkspacesContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspacesContext'
+          description: |
+            <span data-ttu-id="793bd-195">Riferimento al client del servizio.</span><span class="sxs-lookup"><span data-stu-id="793bd-195">Reference to the service client.</span></span>
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.update'
+    name: 'update(string, string, string, ClusterUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="793bd-196">Aggiorna le proprietà di un calcolo.</span><span class="sxs-lookup"><span data-stu-id="793bd-196">Updates properties of a compute.</span></span> <span data-ttu-id="793bd-197">Questa chiamata sovrascriverà un calcolo, se presente.</span><span class="sxs-lookup"><span data-stu-id="793bd-197">This call will overwrite a compute if it exists.</span></span> <span data-ttu-id="793bd-198">Si tratta di un''operazione irreversibile.</span><span class="sxs-lookup"><span data-stu-id="793bd-198">This is a nonrecoverable operation.</span></span>'
+    syntax:
+      content: 'function update(resourceGroupName: string, workspaceName: string, computeName: string, parameters: ClusterUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="793bd-199">Nome del gruppo di risorse nell'area di lavoro si trova.</span><span class="sxs-lookup"><span data-stu-id="793bd-199">Name of the resource group in which workspace is located.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="793bd-200">Nome dell'area di lavoro di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-200">Name of Azure Machine Learning workspace.</span></span>
+        - id: computeName
+          type:
+            - string
+          description: <span data-ttu-id="793bd-201">Nome dell'attività di calcolo di Azure Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="793bd-201">Name of the Azure Machine Learning compute.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-machinelearningservices.ClusterUpdateParameters'
+          description: <span data-ttu-id="793bd-202">Parametri aggiuntivi per l'aggiornamento del cluster.</span><span class="sxs-lookup"><span data-stu-id="793bd-202">Additional parameters for cluster update.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.MachineLearningComputeUpdateResponse>
     package: '@azure/arm-machinelearningservices'
 references:
   - uid: '@azure/arm-machinelearningservices.AzureMachineLearningWorkspacesContext'
@@ -603,6 +719,12 @@ references:
       - name: ComputeResource
         fullName: ComputeResource
         uid: '@azure/arm-machinelearningservices.ComputeResource'
+  - uid: '@azure/arm-machinelearningservices.ClusterUpdateParameters'
+    name: ClusterUpdateParameters
+    spec.typeScript:
+      - name: ClusterUpdateParameters
+        fullName: ClusterUpdateParameters
+        uid: '@azure/arm-machinelearningservices.ClusterUpdateParameters'
   - uid: ServiceCallback<@azure/arm-machinelearningservices.ComputeResource>
     name: ComputeResource>
     spec.typeScript:
@@ -629,3 +751,13 @@ references:
       - name: MachineLearningComputeListByWorkspaceOptionalParams
         fullName: MachineLearningComputeListByWorkspaceOptionalParams
         uid: '@azure/arm-machinelearningservices.MachineLearningComputeListByWorkspaceOptionalParams'
+  - uid: ServiceCallback<@azure/arm-machinelearningservices.AmlComputeNodesInformation>
+    name: AmlComputeNodesInformation>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AmlComputeNodesInformation
+        fullName: AmlComputeNodesInformation
+        uid: '@azure/arm-machinelearningservices.AmlComputeNodesInformation'
+      - name: '>'
+        fullName: '>'
