@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter'
+    name: DeployedServicePackageHealthStateFilter
+    fullName: DeployedServicePackageHealthStateFilter
+    children:
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="b8c34-101">Definisce i criteri di corrispondenza per determinare se un pacchetto del servizio distribuito deve essere incluso come elemento figlio di un'applicazione distribuita nel blocco di integrità del cluster.</span><span class="sxs-lookup"><span data-stu-id="b8c34-101">Defines matching criteria to determine whether a deployed service package should be included as a child of a deployed application in the cluster health chunk.</span></span>
+      <span data-ttu-id="b8c34-102">Se l'entità padre corrisponde al filtro specificato nella descrizione di query blocco di integrità del cluster, vengono restituiti solo i pacchetti del servizio distribuito.</span><span class="sxs-lookup"><span data-stu-id="b8c34-102">The deployed service packages are only returned if the parent entities match a filter specified in the cluster health chunk query description.</span></span> <span data-ttu-id="b8c34-103">L'elemento padre distribuito dell'applicazione e applicazione padre deve essere incluso nel blocco di integrità del cluster.</span><span class="sxs-lookup"><span data-stu-id="b8c34-103">The parent deployed application and its parent application must be included in the cluster health chunk.</span></span>
+      <span data-ttu-id="b8c34-104">Un filtro può corrispondere a zero, distribuire uno o più pacchetti, a seconda delle relative proprietà del servizio.</span><span class="sxs-lookup"><span data-stu-id="b8c34-104">One filter can match zero, one or multiple deployed service packages, depending on its properties.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="b8c34-105">Il filtro per lo stato di integrità dei pacchetti servizio distribuiti.</span><span class="sxs-lookup"><span data-stu-id="b8c34-105">The filter for the health state of the deployed service packages.</span></span> <span data-ttu-id="b8c34-106">Consente la selezione di pacchetti del servizio distribuiti se corrispondono gli stati di integrità desiderate.</span><span class="sxs-lookup"><span data-stu-id="b8c34-106">It allows selecting deployed service packages if they match the desired health states.</span></span>
+      <span data-ttu-id="b8c34-107">I valori possibili sono il valore intero di uno dei seguenti stati di integrità.</span><span class="sxs-lookup"><span data-stu-id="b8c34-107">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="b8c34-108">Vengono restituiti solo i pacchetti servizio distribuiti che corrispondono al filtro.</span><span class="sxs-lookup"><span data-stu-id="b8c34-108">Only deployed service packages that match the filter are returned.</span></span> <span data-ttu-id="b8c34-109">Tutti i pacchetti del servizio distribuiti vengono utilizzati per valutare lo stato di integrità aggregato dell'applicazione padre distribuita.</span><span class="sxs-lookup"><span data-stu-id="b8c34-109">All deployed service packages are used to evaluate the parent deployed application aggregated health state.</span></span>
+      <span data-ttu-id="b8c34-110">Se non specificato, valore predefinito è None, a meno che non viene specificato l'ID del pacchetto servizio distribuito.</span><span class="sxs-lookup"><span data-stu-id="b8c34-110">If not specified, default value is None, unless the deployed service package ID is specified.</span></span>
+      <span data-ttu-id="b8c34-111">Se il filtro ha valore predefinito e ID del pacchetto servizio distribuito è specificato, viene restituito il pacchetto del servizio distribuito corrispondente.</span><span class="sxs-lookup"><span data-stu-id="b8c34-111">If the filter has default value and deployed service package ID is specified, the matching deployed service package is returned.</span></span>
+      <span data-ttu-id="b8c34-112">I valori dello stato sono enumerati in base al flag, pertanto il valore potrebbe essere una combinazione di questi valori ottenuti usando l'operatore "OR" bit per bit.</span><span class="sxs-lookup"><span data-stu-id="b8c34-112">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="b8c34-113">Ad esempio, se il valore fornito è 6, corrisponde a pacchetti del servizio distribuiti con valore HealthState OK (2) e Warning (4).</span><span class="sxs-lookup"><span data-stu-id="b8c34-113">For example, if the provided value is 6, it matches deployed service packages with HealthState value of OK (2) and Warning (4).</span></span>
+      - <span data-ttu-id="b8c34-114">Default - valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="b8c34-114">Default - Default value.</span></span> <span data-ttu-id="b8c34-115">Consente di ricercare qualsiasi stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="b8c34-115">Matches any HealthState.</span></span> <span data-ttu-id="b8c34-116">Il valore predefinito è zero.</span><span class="sxs-lookup"><span data-stu-id="b8c34-116">The value is zero.</span></span>
+      - <span data-ttu-id="b8c34-117">None - filtro che non corrisponde ad alcun valore.</span><span class="sxs-lookup"><span data-stu-id="b8c34-117">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="b8c34-118">Usato per non restituire alcun risultato in un determinato insieme di stati.</span><span class="sxs-lookup"><span data-stu-id="b8c34-118">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="b8c34-119">Il valore è uguale a 1.</span><span class="sxs-lookup"><span data-stu-id="b8c34-119">The value is 1.</span></span>
+      - <span data-ttu-id="b8c34-120">OK - filtro che corrispondenze di input con valore HealthState Ok.</span><span class="sxs-lookup"><span data-stu-id="b8c34-120">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="b8c34-121">Il valore è 2.</span><span class="sxs-lookup"><span data-stu-id="b8c34-121">The value is 2.</span></span>
+      - <span data-ttu-id="b8c34-122">Warning - filtro che corrispondenze di input con HealthState valore avviso.</span><span class="sxs-lookup"><span data-stu-id="b8c34-122">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="b8c34-123">Il valore è 4.</span><span class="sxs-lookup"><span data-stu-id="b8c34-123">The value is 4.</span></span>
+      - <span data-ttu-id="b8c34-124">Error - filtro che corrisponde all'input con valore di HealthState errore.</span><span class="sxs-lookup"><span data-stu-id="b8c34-124">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="b8c34-125">Il valore è 8.</span><span class="sxs-lookup"><span data-stu-id="b8c34-125">The value is 8.</span></span>
+      - <span data-ttu-id="b8c34-126">All - filtro che corrisponde all'input con qualsiasi valore di HealthState.</span><span class="sxs-lookup"><span data-stu-id="b8c34-126">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="b8c34-127">Il valore è 65535.</span><span class="sxs-lookup"><span data-stu-id="b8c34-127">The value is 65535.</span></span> <span data-ttu-id="b8c34-128">Valore predefinito: 0.</span><span class="sxs-lookup"><span data-stu-id="b8c34-128">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+    name: serviceManifestNameFilter
+    fullName: serviceManifestNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b8c34-129">Nome del manifesto del servizio che identifica i pacchetti del servizio distribuito che corrisponde al filtro.</span><span class="sxs-lookup"><span data-stu-id="b8c34-129">The name of the service manifest which identifies the deployed service packages that matches the filter.</span></span>
+      <span data-ttu-id="b8c34-130">Se specificato, il filtro viene applicato solo ai pacchetti servizio distribuiti specificato, se presente.</span><span class="sxs-lookup"><span data-stu-id="b8c34-130">If specified, the filter is applied only to the specified deployed service packages, if any.</span></span>
+      <span data-ttu-id="b8c34-131">Se è presente alcun pacchetto servizio distribuito con il nome di manifesto specificato, non viene restituito nel blocco di integrità del cluster in base a questo filtro.</span><span class="sxs-lookup"><span data-stu-id="b8c34-131">If no deployed service packages with specified manifest name exist, nothing is returned in the cluster health chunk based on this filter.</span></span>
+      <span data-ttu-id="b8c34-132">Se è presente alcun pacchetto del servizio distribuito, se rispetta le altre proprietà di filtro sono inclusi nel blocco di integrità del cluster.</span><span class="sxs-lookup"><span data-stu-id="b8c34-132">If any deployed service package exists, they are included in the cluster health chunk if it respects the other filter properties.</span></span>
+      <span data-ttu-id="b8c34-133">In caso contrario pacchetti del servizio specificato, tutti distribuiti che corrispondono ai filtri padre (se presenti) vengono presi in considerazione e confrontati con gli altri membri di filtro, ad esempio di filtro dello stato di integrità.</span><span class="sxs-lookup"><span data-stu-id="b8c34-133">If not specified, all deployed service packages that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceManifestNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    name: servicePackageActivationIdFilter
+    fullName: servicePackageActivationIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b8c34-134">L'ID di attivazione di un pacchetto servizio distribuito che corrisponde al filtro.</span><span class="sxs-lookup"><span data-stu-id="b8c34-134">The activation ID of a deployed service package that matches the filter.</span></span>
+      <span data-ttu-id="b8c34-135">Se non specificato, il filtro si applica a tutti i pacchetti del servizio distribuiti che soddisfano gli altri parametri.</span><span class="sxs-lookup"><span data-stu-id="b8c34-135">If not specified, the filter applies to all deployed service packages that match the other parameters.</span></span>
+      <span data-ttu-id="b8c34-136">Se specificato, il filtro corrisponde solo il pacchetto del servizio distribuito con l'ID di attivazione specificato.</span><span class="sxs-lookup"><span data-stu-id="b8c34-136">If specified, the filter matches only the deployed service package with the specified activation ID.</span></span>
+    optional: true
+    syntax:
+      content: 'servicePackageActivationIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

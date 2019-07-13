@@ -1,0 +1,42 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.SingletonPartitionInformation'
+    name: SingletonPartitionInformation
+    fullName: SingletonPartitionInformation
+    children:
+      - '@azure/servicefabric.SingletonPartitionInformation.id'
+      - '@azure/servicefabric.SingletonPartitionInformation.servicePartitionKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="a14f2-101">Informazioni su una partizione singleton.</span><span class="sxs-lookup"><span data-stu-id="a14f2-101">Information about a partition that is singleton.</span></span> <span data-ttu-id="a14f2-102">I servizi con lo schema di partizionamento singleton sono effettivamente non partizionata.</span><span class="sxs-lookup"><span data-stu-id="a14f2-102">The services with singleton partitioning scheme are effectively non-partitioned.</span></span> <span data-ttu-id="a14f2-103">Hanno solo un'unica partizione.</span><span class="sxs-lookup"><span data-stu-id="a14f2-103">They only have one partition.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SingletonPartitionInformation.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a14f2-104">Un ID interno usato da Service Fabric per identificare in modo univoco una partizione.</span><span class="sxs-lookup"><span data-stu-id="a14f2-104">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="a14f2-105">Questo è un GUID generato in modo casuale quando il servizio è stato creato.</span><span class="sxs-lookup"><span data-stu-id="a14f2-105">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="a14f2-106">L'ID di partizione è univoca e non cambia per tutta la durata del servizio.</span><span class="sxs-lookup"><span data-stu-id="a14f2-106">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="a14f2-107">Se il servizio stesso è stato eliminato e ricreata gli ID delle partizioni potrebbe essere diversa.</span><span class="sxs-lookup"><span data-stu-id="a14f2-107">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SingletonPartitionInformation.servicePartitionKind'
+    name: servicePartitionKind
+    fullName: servicePartitionKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a14f2-108">Discriminatore polimorfiche</span><span class="sxs-lookup"><span data-stu-id="a14f2-108">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'servicePartitionKind: "Singleton"'
+      return:
+        type:
+          - '"Singleton"'
+    package: '@azure/servicefabric'

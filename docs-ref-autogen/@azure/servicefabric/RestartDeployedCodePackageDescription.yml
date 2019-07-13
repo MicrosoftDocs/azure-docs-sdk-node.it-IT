@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription'
+    name: RestartDeployedCodePackageDescription
+    fullName: RestartDeployedCodePackageDescription
+    children:
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageInstanceId'
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageName'
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.serviceManifestName'
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.servicePackageActivationId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="bed58-101">Definisce la descrizione per il riavvio di un pacchetto di codice distribuito nel nodo di Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="bed58-101">Defines description for restarting a deployed code package on Service Fabric node.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageInstanceId'
+    name: codePackageInstanceId
+    fullName: codePackageInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="bed58-102">ID dell'istanza attualmente in esecuzione punto di ingresso.</span><span class="sxs-lookup"><span data-stu-id="bed58-102">The instance ID for currently running entry point.</span></span> <span data-ttu-id="bed58-103">Per una voce di programma di installazione del pacchetto di codice viene eseguito per primo punto (se specificato) e al termine della principale punto di ingresso viene avviato.</span><span class="sxs-lookup"><span data-stu-id="bed58-103">For a code package setup entry point (if specified) runs first and after it finishes main entry point is started.</span></span>
+      <span data-ttu-id="bed58-104">Eseguibile del punto di ingresso ogni ora viene eseguito, verrà modificato il relativo ID istanza.</span><span class="sxs-lookup"><span data-stu-id="bed58-104">Each time entry point executable is run, its instance ID will change.</span></span> <span data-ttu-id="bed58-105">Se 0 viene passato come l'ID dell'istanza di pacchetto di codice, l'API verrà riavviato il pacchetto di codice con qualsiasi ID istanza è in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="bed58-105">If 0 is passed in as the code package instance ID, the API will restart the code package with whatever instance ID it is currently running.</span></span>
+      <span data-ttu-id="bed58-106">Se un'istanza ID altro rispetto a 0 viene passato, l'API verrà riavviato il pacchetto di codice solo se l'ID dell'istanza corrente corrisponde al passato, ID istanza.</span><span class="sxs-lookup"><span data-stu-id="bed58-106">If an instance ID other than 0 is passed in, the API will restart the code package only if the current Instance ID matches the passed in instance ID.</span></span>
+      <span data-ttu-id="bed58-107">Si noti che, passando l'ID istanza esatti (non 0) nell'API è più sicuro, perché se garantisce al massimo un riavvio del pacchetto di codice.</span><span class="sxs-lookup"><span data-stu-id="bed58-107">Note, passing in the exact instance ID (not 0) in the API is safer, because if ensures at most one restart of the code package.</span></span>
+    syntax:
+      content: 'codePackageInstanceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageName'
+    name: codePackageName
+    fullName: codePackageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bed58-108">Il nome del pacchetto di codice definito nel manifesto del servizio.</span><span class="sxs-lookup"><span data-stu-id="bed58-108">The name of the code package defined in the service manifest.</span></span>
+    syntax:
+      content: 'codePackageName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.serviceManifestName'
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bed58-109">Nome del manifesto del servizio che questo pacchetto di codice specificato.</span><span class="sxs-lookup"><span data-stu-id="bed58-109">The name of service manifest that specified this code package.</span></span>
+    syntax:
+      content: 'serviceManifestName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.servicePackageActivationId'
+    name: servicePackageActivationId
+    fullName: servicePackageActivationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="bed58-110">ActivationId di un pacchetto del servizio distribuito.</span><span class="sxs-lookup"><span data-stu-id="bed58-110">The ActivationId of a deployed service package.</span></span> <span data-ttu-id="bed58-111">Se ServicePackageActivationMode specificato al momento della creazione del servizio è ''SharedProcess'' (o se non è specificato, nel qual caso per impostazione predefinita ''SharedProcess''), il valore di ServicePackageActivationId è sempre una stringa vuota.</span><span class="sxs-lookup"><span data-stu-id="bed58-111">If ServicePackageActivationMode specified at the time of creating the service is ''SharedProcess'' (or if it is not specified, in which case it defaults to ''SharedProcess''), then value of ServicePackageActivationId is always an empty string.</span></span>'
+    optional: true
+    syntax:
+      content: 'servicePackageActivationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
